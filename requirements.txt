@@ -1,0 +1,13 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+sqlalchemy[asyncio]>=2.0.0
+aiosqlite>=0.20.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+mistralai>=1.0.0
+openhands-ai>=0.30.0
+markdown>=3.6
+weasyprint>=62.0
+aiosmtplib>=3.0.0
+python-dotenv>=1.0.0
