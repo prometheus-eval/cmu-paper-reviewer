@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMU Paper Reviewer — View Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <img class="header-logo" src="images/cmu-lti-logo.png" alt="CMU LTI">
+    <h1>CMU Paper Reviewer</h1>
+    <nav>
+      <a href="index.html">Submit</a>
+      <a href="review.html" class="active">View Review</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>View Your Review</h2>
+      <p>Enter the submission key you received after uploading your paper.</p>
+    </div>
+
+    <div class="card">
+      <form id="lookup-form" class="inline-form">
+        <input type="text" id="key-input" placeholder="e.g. a1b2c3d4e5f6" maxlength="12" required>
+        <button type="submit" class="btn btn-primary" style="margin-top:0;">Check Status</button>
+      </form>
+
+      <div id="status-area" style="display:none;"></div>
+
+      <!-- Progress Steps -->
+      <div id="progress-steps" class="progress-steps" style="display:none;">
+        <div class="progress-step" data-step="pending">
+          <div class="step-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="step-label">Queued</span>
+        </div>
+        <div class="progress-step" data-step="ocr">
+          <div class="step-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="step-label">OCR</span>
+        </div>
+        <div class="progress-step" data-step="reviewing">
+          <div class="step-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="step-label">Reviewing</span>
+        </div>
+        <div class="progress-step" data-step="completed">
+          <div class="step-dot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="step-label">Complete</span>
+        </div>
+      </div>
+
+      <div id="progress-area" style="display:none;">
+        <div id="progress-summary"></div>
+        <button id="toggle-activity" class="btn btn-secondary btn-sm" style="display:none;">View Agent Activity</button>
+        <div id="activity-log" class="activity-log" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- Review Summary Card -->
+    <div id="review-summary-card" class="review-summary" style="display:none;"></div>
+
+    <!-- Review Items Container -->
+    <div id="review-items"></div>
+
+    <!-- Citation Card -->
+    <div id="citation-card" class="citation-card" style="display:none;"></div>
+
+    <!-- Verification Code -->
+    <div id="verification-code-section" class="verification-code-section" style="display:none;"></div>
+
+    <!-- Annotation Modal (injected by JS) -->
+    <div id="annotation-modal-root"></div>
+
+    <!-- Fallback raw review -->
+    <div class="card" id="review-card" style="display:none;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+        <h2 style="margin-bottom:0;">Review</h2>
+        <a id="pdf-download" class="btn btn-secondary btn-sm" style="display:none;">Download PDF</a>
+      </div>
+      <div class="review-content" id="review-content"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logos">
+      <img class="footer-logo" src="images/cmu-lti-logo.png" alt="CMU LTI">
+      <img class="footer-logo" src="images/openhands-logo.png" alt="OpenHands">
+    </div>
+    <p>Built at Carnegie Mellon University and backed by OpenHands SDK</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/review.js"></script>
+</body>
+</html>

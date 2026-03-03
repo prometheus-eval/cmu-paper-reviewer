@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMU Paper Reviewer — Submit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img class="header-logo" src="images/cmu-lti-logo.png" alt="CMU LTI">
+    <h1>CMU Paper Reviewer</h1>
+    <nav>
+      <a href="index.html" class="active">Submit</a>
+      <a href="review.html">View Review</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>AI-Powered Paper Review</h2>
+      <p>Upload your research paper and receive a detailed, structured critical review powered by AI agents.</p>
+    </div>
+
+    <div class="card">
+      <div class="mode-toggle">
+        <button class="mode-pill active" data-mode="queue">Submit with Email</button>
+        <button class="mode-pill" data-mode="byok">Use Your Own Keys</button>
+      </div>
+
+      <form id="upload-form">
+        <input type="hidden" id="mode" name="mode" value="queue">
+
+        <!-- Queue mode description -->
+        <div class="mode-description" id="queue-description">
+          Provide your email and we'll notify you when the review is ready. Reviews typically take 30–60 minutes depending on queue length.
+        </div>
+
+        <!-- BYOK mode description -->
+        <div class="mode-description" id="byok-description" style="display:none;">
+          Provide your own API keys for prioritized processing. Your keys are used only for this review and cleared immediately after.
+        </div>
+
+        <!-- Queue fields -->
+        <div id="queue-fields">
+          <label for="email">Email address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+
+        <!-- BYOK fields -->
+        <div id="byok-fields" style="display:none;">
+          <label for="byok-email">Email address <span class="optional">(optional)</span></label>
+          <input type="email" id="byok-email" placeholder="you@example.com">
+
+          <label for="mistral-key">Mistral API Key <span class="required">*</span></label>
+          <input type="password" id="mistral-key" placeholder="Enter your Mistral API key">
+
+          <label for="litellm-key">LiteLLM API Key <span class="required">*</span></label>
+          <input type="password" id="litellm-key" placeholder="Enter your LiteLLM API key">
+
+          <label for="litellm-url">LiteLLM Base URL <span class="optional">(optional — defaults to cmu.litellm.ai)</span></label>
+          <input type="text" id="litellm-url" placeholder="https://cmu.litellm.ai">
+
+          <label for="tavily-key">Tavily API Key <span class="optional">(optional)</span></label>
+          <input type="password" id="tavily-key" placeholder="Enter your Tavily API key">
+        </div>
+
+        <div class="drop-zone" id="drop-zone">
+          <svg class="drop-zone-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <p>Drag & drop a PDF here, or <strong>click to browse</strong></p>
+          <input type="file" id="file-input" accept=".pdf">
+        </div>
+
+        <!-- Optional uploads -->
+        <div class="optional-uploads">
+          <label class="optional-upload-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span>Code (.zip)</span>
+            <span class="optional">(optional)</span>
+            <input type="file" id="code-input" accept=".zip" style="display:none">
+            <span id="code-file-name" class="file-tag"></span>
+          </label>
+          <label class="optional-upload-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span>Supplementary (.pdf)</span>
+            <span class="optional">(optional)</span>
+            <input type="file" id="supp-input" accept=".pdf" style="display:none">
+            <span id="supp-file-name" class="file-tag"></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn" disabled>Submit Paper</button>
+      </form>
+
+      <div id="result" style="display:none;"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logos">
+      <img class="footer-logo" src="images/cmu-lti-logo.png" alt="CMU LTI">
+      <img class="footer-logo" src="images/openhands-logo.png" alt="OpenHands">
+    </div>
+    <p>Built at Carnegie Mellon University and backed by OpenHands SDK</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>
