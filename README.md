@@ -57,7 +57,7 @@ cp .env.example .env
 
 Required keys:
 - `MISTRAL_API_KEY` — for OCR
-- `OPENAI_API_KEY` — for the review agent
+- `LITELLM_API_KEY` — for the review agent
 - `TAVILY_API_KEY` — for literature search
 
 ### 3. Start the API server
