@@ -6,7 +6,7 @@ An AI-powered web service that generates critical reviews for academic research 
 
 - **Backend** — Python/FastAPI REST API + background worker
 - **Frontend** — Static HTML/CSS/JS (deployable to GitHub Pages via `docs/`)
-- **Processing pipeline** — Mistral OCR → OpenHands agent (GPT-5.2) → Markdown review → PDF
+- **Processing pipeline** — Mistral OCR → OpenHands agent (Claude-4.5-Opus) → Markdown review → PDF
 
 ## Project Structure
 
