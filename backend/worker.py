@@ -138,17 +138,49 @@ def process_submission(submission: Submission):
             logger.info("[%s] User API keys cleared.", key)
 
 
-CLEANUP_MAX_AGE = timedelta(hours=1)
+CLEANUP_MAX_AGE = timedelta(hours=24)
+
+
+def _cleanup_annotated(sub):
+    """For annotated submissions, delete uploaded PDF and non-essential files.
+
+    Keeps: OCR'd markdown, images, images_list.json, review markdown/PDF,
+           annotations JSON.
+    Deletes: uploaded PDF, code, supplementary, verification code, trajectory.
+    """
+    # Delete uploaded PDF
+    upload_f = upload_path(sub.key, sub.filename)
+    if upload_f.exists():
+        upload_f.unlink(missing_ok=True)
+        logger.info("[%s] Deleted uploaded PDF to save space.", sub.key)
+
+    # Delete code directory
+    code_d = review_dir(sub.key) / "preprint" / "code"
+    if code_d.exists():
+        shutil.rmtree(code_d, ignore_errors=True)
+
+    # Delete supplementary directory
+    supp_d = review_dir(sub.key) / "preprint" / "supplementary"
+    if supp_d.exists():
+        shutil.rmtree(supp_d, ignore_errors=True)
+
+    # Delete verification code and trajectory directories
+    review_out = review_dir(sub.key) / "review"
+    if review_out.exists():
+        for child in review_out.iterdir():
+            if child.is_dir():
+                shutil.rmtree(child, ignore_errors=True)
 
 
 def cleanup_old_submissions():
     """Delete submissions and their files older than CLEANUP_MAX_AGE.
 
-    Submissions that have annotations are preserved permanently.
+    - No annotations: delete everything (files + DB record).
+    - Has annotations: delete uploaded PDF and non-essential files, keep
+      OCR artifacts, review, and annotations.
     """
     cutoff = datetime.now(timezone.utc) - CLEANUP_MAX_AGE
     with SessionLocal() as session:
-        # Find keys that have annotations — these are preserved permanently
         annotated_keys = set(
             row[0] for row in session.execute(
                 select(Annotation.key).distinct()
@@ -165,13 +197,12 @@ def cleanup_old_submissions():
         to_delete_keys = []
         for sub in old:
             if sub.key in annotated_keys:
-                logger.info("[%s] Skipping cleanup — submission has annotations.", sub.key)
+                _cleanup_annotated(sub)
                 continue
-            # Remove review directory
+            # No annotations — delete everything
             review_d = review_dir(sub.key)
             if review_d.exists():
                 shutil.rmtree(review_d, ignore_errors=True)
-            # Remove uploaded file
             upload_f = upload_path(sub.key, sub.filename)
             if upload_f.exists():
                 upload_f.unlink(missing_ok=True)
