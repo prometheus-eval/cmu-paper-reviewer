@@ -821,6 +821,10 @@ function renderInlineMarkdown(text) {
     }
     return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
   });
+  // Auto-link plain [N] citation references that weren't already converted
+  result = result.replace(/(?<![<\w])(?<!\[)\[(\d+)\](?!\()/g, (match, num) => {
+    return `<a href="#ref${num}" class="citation-ref" style="scroll-behavior:smooth;">[${num}]</a>`;
+  });
   result = result
     .replace(/\n\n/g, "</p><p>")
     .replace(/\n/g, "<br>")
