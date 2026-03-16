@@ -12,6 +12,9 @@ class Settings(BaseSettings):
     litellm_api_key: str = ""
     litellm_base_url: str = "https://cmu.litellm.ai"
 
+    # Admin
+    admin_api_key: str = ""
+
     # Email / SMTP
     smtp_host: str = "smtp.gmail.com"
     smtp_port: int = 587

@@ -2,11 +2,12 @@
 
 import json
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Header
 from fastapi.responses import FileResponse, JSONResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from backend.config import settings
 from backend.database import get_session
 from backend.models import Annotation, Submission, SubmissionStatus
 from backend.schemas import (
@@ -148,11 +149,14 @@ async def submit_annotation(
     if body.evidence_quality and body.evidence_quality not in valid_evidence:
         raise HTTPException(status_code=400, detail=f"evidence_quality must be one of: {valid_evidence}")
 
-    # Upsert: check if annotation for this key+item already exists
+    annotator = body.annotator_id or "anonymous"
+
+    # Upsert: check if annotation for this key+item+annotator already exists
     existing = await session.execute(
         select(Annotation).where(
             Annotation.key == key,
             Annotation.item_number == body.item_number,
+            Annotation.annotator_id == annotator,
         )
     )
     annotation = existing.scalar_one_or_none()
@@ -168,6 +172,7 @@ async def submit_annotation(
         annotation = Annotation(
             key=key,
             item_number=body.item_number,
+            annotator_id=annotator,
             correctness=body.correctness,
             significance=body.significance,
             evidence_quality=body.evidence_quality,
@@ -182,6 +187,7 @@ async def submit_annotation(
     return AnnotationResponse(
         key=key,
         item_number=body.item_number,
+        annotator_id=annotator,
         correctness=annotation.correctness,
         significance=annotation.significance,
         evidence_quality=annotation.evidence_quality,
@@ -191,16 +197,21 @@ async def submit_annotation(
 @router.get("/review/{key}/annotations")
 async def get_annotations(
     key: str,
+    annotator_id: str | None = None,
     session: AsyncSession = Depends(get_session),
 ):
-    result = await session.execute(
-        select(Annotation).where(Annotation.key == key).order_by(Annotation.item_number)
-    )
+    query = select(Annotation).where(Annotation.key == key)
+    if annotator_id:
+        query = query.where(Annotation.annotator_id == annotator_id)
+    query = query.order_by(Annotation.item_number)
+
+    result = await session.execute(query)
     annotations = result.scalars().all()
     return [
         AnnotationResponse(
             key=a.key,
             item_number=a.item_number,
+            annotator_id=a.annotator_id,
             correctness=a.correctness,
             significance=a.significance,
             evidence_quality=a.evidence_quality,
@@ -211,9 +222,15 @@ async def get_annotations(
 
 @router.get("/annotations/export")
 async def export_all_annotations(
+    x_admin_key: str = Header(None),
     session: AsyncSession = Depends(get_session),
 ):
-    """Export all annotations across all submissions as JSON (for research use)."""
+    """Export all annotations across all submissions as JSON (admin only)."""
+    if not settings.admin_api_key:
+        raise HTTPException(status_code=503, detail="Admin API key not configured on server.")
+    if x_admin_key != settings.admin_api_key:
+        raise HTTPException(status_code=401, detail="Invalid or missing admin API key.")
+
     result = await session.execute(
         select(Annotation).order_by(Annotation.key, Annotation.item_number)
     )
@@ -222,6 +239,7 @@ async def export_all_annotations(
         {
             "key": a.key,
             "item_number": a.item_number,
+            "annotator_id": a.annotator_id,
             "correctness": a.correctness,
             "significance": a.significance,
             "evidence_quality": a.evidence_quality,
@@ -245,6 +263,7 @@ def _save_annotations_json(key: str, session):
             {
                 "key": a.key,
                 "item_number": a.item_number,
+                "annotator_id": a.annotator_id,
                 "correctness": a.correctness,
                 "significance": a.significance,
                 "evidence_quality": a.evidence_quality,

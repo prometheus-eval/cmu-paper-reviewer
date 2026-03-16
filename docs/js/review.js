@@ -563,6 +563,17 @@ function formatBytes(bytes) {
 // =========================================================
 // Annotation Modal
 // =========================================================
+
+// Generate a persistent annotator ID per browser
+function getAnnotatorId() {
+  let id = localStorage.getItem("annotator_id");
+  if (!id) {
+    id = crypto.randomUUID();
+    localStorage.setItem("annotator_id", id);
+  }
+  return id;
+}
+
 let annotationState = { correctness: null, significance: null, evidence_quality: null };
 let existingAnnotations = [];
 
@@ -655,6 +666,7 @@ function showAnnotationModal(key, items, currentIndex) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             item_number: item.number,
+            annotator_id: getAnnotatorId(),
             ...annotationState,
           }),
         });
@@ -673,7 +685,7 @@ function showAnnotationModal(key, items, currentIndex) {
 
   // Fetch existing annotations on first call, reuse cache after
   if (existingAnnotations.length === 0 && currentIndex === 0) {
-    fetch(`${API_BASE_URL}/api/review/${key}/annotations`)
+    fetch(`${API_BASE_URL}/api/review/${key}/annotations?annotator_id=${encodeURIComponent(getAnnotatorId())}`)
       .then(r => r.json())
       .then(data => { existingAnnotations = data; render(); })
       .catch(() => render());
@@ -686,7 +698,7 @@ function showSingleAnnotationModal(key, item) {
   // Open modal for a single item (no auto-advance)
   annotationState = { correctness: null, significance: null, evidence_quality: null };
 
-  fetch(`${API_BASE_URL}/api/review/${key}/annotations`)
+  fetch(`${API_BASE_URL}/api/review/${key}/annotations?annotator_id=${encodeURIComponent(getAnnotatorId())}`)
     .then(r => r.json())
     .then(data => {
       existingAnnotations = data;
@@ -769,6 +781,7 @@ function renderSingleAnnotationModal(key, item) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           item_number: item.number,
+          annotator_id: getAnnotatorId(),
           ...annotationState,
         }),
       });

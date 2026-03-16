@@ -61,6 +61,7 @@ class Annotation(Base):
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     key: Mapped[str] = mapped_column(String(12), index=True)
     item_number: Mapped[int] = mapped_column(Integer)
+    annotator_id: Mapped[str] = mapped_column(String(36), default="anonymous")
     correctness: Mapped[str | None] = mapped_column(String(20), nullable=True)
     significance: Mapped[str | None] = mapped_column(String(30), nullable=True)
     evidence_quality: Mapped[str | None] = mapped_column(String(20), nullable=True)
