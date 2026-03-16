@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - ../.env
+    volumes:
+      - reviewer_data:/app/data
+
+volumes:
+  reviewer_data:
