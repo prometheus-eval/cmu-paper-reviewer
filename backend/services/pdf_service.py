@@ -68,11 +68,13 @@ def _tex_escape_url(url: str) -> str:
     return url.replace("#", r"\#").replace("%", r"\%").replace("&", r"\&")
 
 
-def _tex_escape_with_links(text: str) -> str:
+def _tex_escape_with_links(text: str, auto_link_citations: bool = True) -> str:
     """Escape LaTeX special chars in text while converting [text](url) to \\href.
 
     Handles nested-bracket citation links like [[1]](#ref1) as well as
     standard markdown links like [text](url).
+    When auto_link_citations is True, also converts plain [N] references
+    to clickable links pointing to the citation list.
     """
     # Combined pattern: nested-bracket citations OR standard markdown links
     link_pattern = re.compile(
@@ -85,9 +87,9 @@ def _tex_escape_with_links(text: str) -> str:
     for m in link_pattern.finditer(text):
         parts.append(_tex_escape(text[last_end:m.start()]))
         if m.group(1) is not None:
-            # Nested-bracket citation: [[N]](#anchor) → rendered as [N]
+            # Nested-bracket citation: [[N]](#anchor) → clickable link to ref
             num = m.group(1)
-            parts.append(r"[" + num + r"]")
+            parts.append(r"\hyperlink{ref" + num + r"}{[" + num + r"]}")
         else:
             # Standard link: [text](url) → \href{url}{text}
             link_text = m.group(3)
@@ -95,7 +97,17 @@ def _tex_escape_with_links(text: str) -> str:
             parts.append(r"\href{" + _tex_escape_url(link_url) + "}{" + _tex_escape(link_text) + "}")
         last_end = m.end()
     parts.append(_tex_escape(text[last_end:]))
-    return "".join(parts)
+    result = "".join(parts)
+
+    # Auto-link plain [N] citation references not already handled
+    if auto_link_citations:
+        result = re.sub(
+            r'(?<!\\hyperlink\{ref)(?<!\[)\[(\d+)\](?!\()',
+            lambda m: r"\hyperlink{ref" + m.group(1) + r"}{[" + m.group(1) + r"]}",
+            result,
+        )
+
+    return result
 
 
 # ─── Markdown → structured data ─────────────────────────────────────────────
@@ -427,9 +439,9 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
         parts.append(r"{\color{cmured}\hrule height 1.5pt}" + "\n")
         parts.append(r"\vspace{8pt}" + "\n")
         parts.append(r"\begin{enumerate}[leftmargin=2em, label={\color{cmured}[\arabic*]}, itemsep=0.4em]" + "\n")
-        for cite in parsed.citations:
+        for idx, cite in enumerate(parsed.citations, 1):
             cite_text = re.sub(r"^\[\d+\]\s*", "", cite)
-            parts.append(r"  \item {\small " + _tex_escape_with_links(cite_text) + "}\n")
+            parts.append(r"  \item \hypertarget{ref" + str(idx) + r"}{}" + r"{\small " + _tex_escape_with_links(cite_text, auto_link_citations=False) + "}\n")
         parts.append(r"\end{enumerate}" + "\n")
 
     # ── Disclaimer ──
@@ -526,7 +538,7 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
     def _html_esc(text: str) -> str:
         return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
-    def _md_links(text: str) -> str:
+    def _md_links(text: str, auto_link_citations: bool = True) -> str:
         """Convert [text](url) and [[N]](#anchor) to <a> tags in otherwise-escaped text."""
         import re as _re
         # Combined pattern: nested-bracket citations OR standard links
@@ -540,12 +552,20 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
         for m in pattern.finditer(text):
             parts.append(_html_esc(text[last:m.start()]))
             if m.group(1) is not None:
-                parts.append(f'[{m.group(1)}]')
+                parts.append(f'<a href="#ref{m.group(1)}">[{m.group(1)}]</a>')
             else:
                 parts.append(f'<a href="{_html_esc(m.group(4))}">{_html_esc(m.group(3))}</a>')
             last = m.end()
         parts.append(_html_esc(text[last:]))
-        return "".join(parts)
+        result = "".join(parts)
+        # Auto-link plain [N] citation references not already converted
+        if auto_link_citations:
+            result = _re.sub(
+                r'(?<!<a href="#ref)(?<!\[)\[(\d+)\](?!\()',
+                lambda m: f'<a href="#ref{m.group(1)}">[{m.group(1)}]</a>',
+                result,
+            )
+        return result
 
     html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{WEASYPRINT_STRUCTURED_CSS}</style></head><body>
 <div class="header-bar">
@@ -574,9 +594,9 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
 
     if parsed.citations:
         html += '<div class="references"><h2>References (' + str(len(parsed.citations)) + ')</h2><ol>\n'
-        for cite in parsed.citations:
+        for idx, cite in enumerate(parsed.citations, 1):
             cite_text = re.sub(r"^\[\d+\]\s*", "", cite)
-            html += f'  <li>{_md_links(cite_text)}</li>\n'
+            html += f'  <li id="ref{idx}">{_md_links(cite_text, auto_link_citations=False)}</li>\n'
         html += '</ol></div>\n'
 
     html += '<div class="disclaimer">This review was generated by an AI system and should be used as supplementary feedback only.<br>It does not replace human expert peer review.</div>\n'

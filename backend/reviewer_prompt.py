@@ -27,7 +27,7 @@ If the paper contains no significant issues, then you can output zero items.
    c. Exact sentences from papers in the literature (these must be hyperlinked and cited).
    For each piece of evidence, include a comment explaining why it supports the claim or why it demonstrates a significant problem.
 4. At the end of the review, include a citation list containing all literature references used in your evidence.
-   Each reference must be numbered using [1], [2], [3], and every in-text citation must hyperlink to its corresponding entry.
+   Each reference must be numbered using [1], [2], [3], and every in-text citation must be written as [[N]](#refN) (e.g., [[1]](#ref1), [[2]](#ref2)) so that it becomes a clickable hyperlink.
    If you do not have the ability to search external literature, write "N/A (no literature search tools available)" in place of the search query.
 5. The review must not include an introduction, summary, or concluding remarks.
    It must contain at most five items, and a citation list at the end.
@@ -74,12 +74,13 @@ If the paper contains no significant issues, then you can output zero items.
 The citation list must be formatted as follows:
 ```
 #### Citation List
-[1] <citation 1> (the citation should be hyperlinked to the retrieved literature)
-[2] <citation 2> (the citation should be hyperlinked to the retrieved literature)
-[3] <citation 3> (the citation should be hyperlinked to the retrieved literature)
+[1] Author(s), "Title," Venue, Year. [Link](https://url-to-paper)
+[2] Author(s), "Title," Venue, Year. [Link](https://url-to-paper)
+[3] Author(s), "Title," Venue, Year. [Link](https://url-to-paper)
 ...
 (There may be more or fewer citations depending on the available citations.)
 ```
+Each citation must include a hyperlinked URL to the source. In the body of the review, reference citations as [[1]](#ref1), [[2]](#ref2), etc.
 There should be at least five citations in the citation list.
 The citations could be academic papers, blog posts, news articles, datasets, code repositories, and other relevant sources.
 Don't simply include papers that are cited in the paper you are reviewing.
