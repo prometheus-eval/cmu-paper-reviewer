@@ -37,6 +37,7 @@ class Settings(BaseSettings):
         "http://127.0.0.1:8000",
         "https://prometheus-eval.github.io",
         "http://35.231.39.20",
+        "https://cmu-paper-reviewer.duckdns.org",
     ]
 
     # Worker
