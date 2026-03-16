@@ -261,11 +261,11 @@ function parseReviewMarkdown(md) {
       const evidenceMatch = body.match(/####\s*Evidence\s*\n([\s\S]*?)(?=####|##\s(?!#)|$)/i);
       if (evidenceMatch) {
         const evText = evidenceMatch[1];
-        const quoteBlocks = evText.split(/(?=\*\s*Quote\s*:)/i);
+        const quoteBlocks = evText.split(/(?=\*\s*Quote(?:\s+from\s+[^:]+)?\s*:)/i);
         for (const block of quoteBlocks) {
           const trimmed = block.trim();
           if (!trimmed) continue;
-          const qMatch = trimmed.match(/\*\s*Quote\s*:\s*([\s\S]*?)(?=\n\s+\*\s*Comment\s*:|$)/i);
+          const qMatch = trimmed.match(/\*\s*Quote(?:\s+from\s+[^:]+)?\s*:\s*([\s\S]*?)(?=\n\s+\*\s*Comment\s*:|$)/i);
           const cMatch = trimmed.match(/\*\s*Comment\s*:\s*([\s\S]*?)$/i);
           if (qMatch) {
             item.evidence.push({
