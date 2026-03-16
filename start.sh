@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-# Clear previous review data on startup
-rm -rf data/reviews/* data/uploads/* data/pdfs/* data/ocr/*
-
 # Ensure data directories exist (volume mount point)
 mkdir -p data/uploads data/ocr data/reviews data/pdfs
 
-# Drop and recreate the database so schema is always up-to-date
-rm -f data/reviewer.db
+# Clear only temporary OCR/PDF cache (not reviews or uploads — annotated data is preserved)
+rm -rf data/ocr/* data/pdfs/*
 
 # Start worker in background
 python -m backend.worker &
