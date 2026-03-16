@@ -35,11 +35,32 @@ _LATEX_ESCAPE_MAP = {
 _LATEX_ESCAPE_RE = re.compile("|".join(re.escape(k) for k in _LATEX_ESCAPE_MAP))
 
 
+_UNICODE_MAP = {
+    "\u2014": "---",        # em-dash
+    "\u2013": "--",         # en-dash
+    "\u2018": "`",          # left single quote
+    "\u2019": "'",          # right single quote
+    "\u201c": "``",         # left double quote
+    "\u201d": "''",         # right double quote
+    "\u2026": r"\ldots{}",  # ellipsis
+    "\u00a9": r"\textcopyright{}",  # copyright
+    "\u00ae": r"\textregistered{}",  # registered
+    "\u2122": r"\texttrademark{}",   # trademark
+    "\u00b0": r"\textdegree{}",      # degree
+    "\u00d7": r"\texttimes{}",       # multiplication sign
+    "\u2022": r"\textbullet{}",      # bullet
+}
+
+
 def _tex_escape(text: str) -> str:
     """Escape LaTeX special characters while preserving intended formatting."""
     # First handle backslash (must be done before other replacements)
     text = text.replace("\\", r"\textbackslash{}")
-    return _LATEX_ESCAPE_RE.sub(lambda m: _LATEX_ESCAPE_MAP[m.group()], text)
+    text = _LATEX_ESCAPE_RE.sub(lambda m: _LATEX_ESCAPE_MAP[m.group()], text)
+    # Handle common Unicode characters
+    for char, replacement in _UNICODE_MAP.items():
+        text = text.replace(char, replacement)
+    return text
 
 
 def _tex_escape_url(url: str) -> str:
@@ -151,9 +172,13 @@ LATEX_PREAMBLE = r"""
 \documentclass[11pt,a4paper]{article}
 
 % Encoding & fonts
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{textcomp}
 \usepackage{microtype}
+
+\sloppy
 
 % Page layout
 \usepackage[margin=2.2cm, top=2.8cm, bottom=2.8cm]{geometry}
@@ -329,6 +354,7 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
 \noindent
 {\sffamily\large\bfseries\color{darkgray} Review Summary}\hspace{8pt}%
 {\sffamily\color{medgray} """ + str(len(parsed.items)) + r""" review items \quad\textbar\quad """ + str(len(parsed.citations)) + r""" citations}
+\par
 \vspace{1.5em}
 """)
 
@@ -410,25 +436,29 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
 
 def _compile_latex(tex_content: str, output_path: str) -> bool:
     """Compile LaTeX to PDF using pdflatex. Returns True on success."""
-    with tempfile.TemporaryDirectory() as tmpdir:
-        tex_file = os.path.join(tmpdir, "review.tex")
-        with open(tex_file, "w", encoding="utf-8") as f:
-            f.write(tex_content)
+    try:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tex_file = os.path.join(tmpdir, "review.tex")
+            with open(tex_file, "w", encoding="utf-8") as f:
+                f.write(tex_content)
 
-        # Run pdflatex twice (for page refs like lastpage)
-        for run in range(2):
-            result = subprocess.run(
-                ["pdflatex", "-interaction=nonstopmode", "-output-directory", tmpdir, tex_file],
-                capture_output=True, text=True, timeout=60,
-            )
-            if result.returncode != 0 and run == 1:
-                logger.warning("pdflatex run %d failed:\n%s", run + 1, result.stdout[-2000:])
-                return False
+            # Run pdflatex twice (for page refs like lastpage)
+            for run in range(2):
+                result = subprocess.run(
+                    ["pdflatex", "-interaction=nonstopmode", "-output-directory", tmpdir, tex_file],
+                    capture_output=True, text=True, timeout=60,
+                )
+                if result.returncode != 0 and run == 1:
+                    logger.warning("pdflatex run %d failed:\n%s", run + 1, result.stdout[-2000:])
+                    return False
 
-        pdf_file = os.path.join(tmpdir, "review.pdf")
-        if os.path.exists(pdf_file):
-            shutil.copy2(pdf_file, output_path)
-            return True
+            pdf_file = os.path.join(tmpdir, "review.pdf")
+            if os.path.exists(pdf_file):
+                shutil.copy2(pdf_file, output_path)
+                return True
+    except FileNotFoundError:
+        logger.warning("pdflatex not found on system; falling back to weasyprint")
+        return False
 
     return False
 
@@ -444,14 +474,103 @@ pre { background: #f4f4f4; padding: 12px; border-radius: 6px; overflow-x: auto; 
 blockquote { border-left: 4px solid #C41230; margin: 1em 0; padding: 0.5em 1em; background: #fdf2f4; }
 """
 
+WEASYPRINT_STRUCTURED_CSS = """
+@page { size: A4; margin: 2cm; @top-left { content: "CMU Paper Reviewer"; font-size: 9pt; color: #737373; } @top-right { content: "AI-Generated Review"; font-size: 9pt; color: #737373; } @bottom-center { content: "Page " counter(page) " of " counter(pages); font-size: 9pt; color: #737373; } }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11pt; line-height: 1.6; color: #404040; }
+.header-bar { background: #C41230; color: #fff; padding: 12px 20px; border-radius: 6px; margin-bottom: 1.5em; }
+.header-bar h1 { color: #fff; font-size: 18pt; margin: 0; }
+.header-bar .meta { font-size: 9pt; color: rgba(255,255,255,0.8); margin-top: 4px; }
+.summary-line { font-size: 13pt; font-weight: bold; color: #262626; margin-bottom: 0.3em; }
+.summary-stats { font-size: 10pt; color: #737373; margin-bottom: 1.5em; }
+.item-header { display: flex; align-items: center; gap: 8px; margin-top: 1.5em; margin-bottom: 0.5em; padding-bottom: 6px; border-bottom: 2px solid #C41230; }
+.item-num { display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 50%; background: #fdf2f4; color: #C41230; font-weight: bold; font-size: 10pt; }
+.item-title { font-size: 14pt; font-weight: bold; color: #262626; }
+.claim-box { background: #fdf2f4; border-left: 3px solid #C41230; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; }
+.claim-box .label { font-size: 8pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #C41230; margin-bottom: 4px; }
+.criteria-pill { display: inline-block; background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; border-radius: 12px; padding: 2px 10px; font-size: 9pt; font-weight: 600; }
+.evidence-header { font-size: 9pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #737373; margin-top: 12px; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid #E5E5E5; }
+.quote-box { background: #F5F5F5; border: 1px solid #E5E5E5; border-radius: 6px; padding: 8px 12px; margin: 4px 0; }
+.quote-box .label { font-size: 8pt; font-weight: bold; text-transform: uppercase; color: #A3A3A3; margin-bottom: 2px; }
+.quote-box .text { font-style: italic; color: #404040; }
+.comment-box { border-left: 2px solid #D4D4D4; margin-left: 16px; padding: 6px 12px; margin-top: 2px; margin-bottom: 6px; }
+.comment-box .label { font-size: 8pt; font-weight: bold; text-transform: uppercase; color: #A3A3A3; margin-bottom: 2px; }
+.comment-box .text { font-size: 10pt; color: #404040; }
+.references { margin-top: 2em; }
+.references h2 { font-size: 14pt; color: #262626; border-bottom: 2px solid #C41230; padding-bottom: 4px; }
+.references ol { padding-left: 2em; }
+.references li { font-size: 10pt; color: #525252; padding: 3px 0; }
+.disclaimer { margin-top: 2em; padding-top: 8px; border-top: 1px solid #E5E5E5; text-align: center; font-size: 9pt; font-style: italic; color: #737373; }
+a { color: #C41230; }
+"""
 
-def _fallback_weasyprint(md_text: str, pdf_path: str) -> str | None:
+
+def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = "") -> str:
+    """Generate professional HTML from parsed review for weasyprint fallback."""
+    now = datetime.now(timezone.utc).strftime("%B %d, %Y")
+    model_display = model_name.split("/")[-1] if model_name else "AI"
+
+    def _html_esc(text: str) -> str:
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+    def _md_links(text: str) -> str:
+        """Convert [text](url) to <a> tags in otherwise-escaped text."""
+        import re as _re
+        parts = []
+        last = 0
+        for m in _re.finditer(r'\[([^\]]+)\]\(([^)]+)\)', text):
+            parts.append(_html_esc(text[last:m.start()]))
+            parts.append(f'<a href="{_html_esc(m.group(2))}">{_html_esc(m.group(1))}</a>')
+            last = m.end()
+        parts.append(_html_esc(text[last:]))
+        return "".join(parts)
+
+    html = f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>{WEASYPRINT_STRUCTURED_CSS}</style></head><body>
+<div class="header-bar">
+  <h1>AI-Generated Paper Review</h1>
+  <div class="meta">Date: {_html_esc(now)} &nbsp;|&nbsp; Submission Key: {_html_esc(key)} &nbsp;|&nbsp; Model: {_html_esc(model_display)}</div>
+</div>
+<div class="summary-line">Review Summary</div>
+<div class="summary-stats">{len(parsed.items)} review items &nbsp;|&nbsp; {len(parsed.citations)} citations</div>
+"""
+
+    for item in parsed.items:
+        html += f'<div class="item-header"><span class="item-num">{item.number}</span><span class="item-title">{_html_esc(item.title)}</span></div>\n'
+
+        if item.main_criticism:
+            html += f'<div class="claim-box"><div class="label">Main Point of Criticism</div><div>{_md_links(item.main_criticism)}</div></div>\n'
+
+        if item.eval_criteria:
+            html += f'<p style="margin:6px 0;"><span style="font-size:9pt;color:#737373;">Evaluation Criteria:</span> <span class="criteria-pill">{_html_esc(item.eval_criteria)}</span></p>\n'
+
+        if item.evidence:
+            html += '<div class="evidence-header">Evidence</div>\n'
+            for j, ev in enumerate(item.evidence):
+                html += f'<div class="quote-box"><div class="label">Quote {j + 1}</div><div class="text">{_md_links(ev.quote)}</div></div>\n'
+                if ev.comment:
+                    html += f'<div class="comment-box"><div class="label">Comment</div><div class="text">{_md_links(ev.comment)}</div></div>\n'
+
+    if parsed.citations:
+        html += '<div class="references"><h2>References (' + str(len(parsed.citations)) + ')</h2><ol>\n'
+        for cite in parsed.citations:
+            cite_text = re.sub(r"^\[\d+\]\s*", "", cite)
+            html += f'  <li>{_md_links(cite_text)}</li>\n'
+        html += '</ol></div>\n'
+
+    html += '<div class="disclaimer">This review was generated by an AI system and should be used as supplementary feedback only.<br>It does not replace human expert peer review.</div>\n'
+    html += '</body></html>'
+    return html
+
+
+def _fallback_weasyprint(md_text: str, pdf_path: str, parsed: ParsedReview | None = None, key: str = "", model_name: str = "") -> str | None:
     """Fallback PDF generation using weasyprint."""
     try:
         import weasyprint
 
-        html_body = markdown.markdown(md_text, extensions=["fenced_code", "tables", "codehilite"])
-        full_html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{WEASYPRINT_CSS}</style></head><body>{html_body}</body></html>'
+        if parsed and parsed.items:
+            full_html = _generate_structured_html(parsed, key, model_name)
+        else:
+            html_body = markdown.markdown(md_text, extensions=["fenced_code", "tables", "codehilite"])
+            full_html = f'<!DOCTYPE html><html><head><meta charset="utf-8"><style>{WEASYPRINT_CSS}</style></head><body>{html_body}</body></html>'
         weasyprint.HTML(string=full_html).write_pdf(str(pdf_path))
         return str(pdf_path)
     except Exception:
@@ -474,6 +593,7 @@ def generate_review_pdf(key: str, model_name: str = "") -> str | None:
     pdf_path = str(review_pdf_path(key))
 
     # Try LaTeX first
+    parsed = None
     try:
         parsed = _parse_review(md_text)
         if parsed.items:
@@ -488,8 +608,8 @@ def generate_review_pdf(key: str, model_name: str = "") -> str | None:
     except Exception:
         logger.exception("LaTeX generation failed for key=%s, falling back to weasyprint", key)
 
-    # Fallback
-    result = _fallback_weasyprint(md_text, pdf_path)
+    # Fallback — pass parsed data for structured HTML if available
+    result = _fallback_weasyprint(md_text, pdf_path, parsed=parsed, key=key, model_name=model_name)
     if result:
         logger.info("Weasyprint PDF generated for key=%s at %s", key, pdf_path)
     return result

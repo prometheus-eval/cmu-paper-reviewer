@@ -27,11 +27,12 @@ toggleActivityBtn.addEventListener("click", () => {
   toggleActivityBtn.textContent = activityExpanded ? "Hide Agent Activity" : "View Agent Activity";
 });
 
-// Auto-fill key from URL query param
+// Auto-fill key from URL query param (?review_id= preferred, ?key= for backward compat)
 const params = new URLSearchParams(window.location.search);
-if (params.get("key")) {
-  keyInput.value = params.get("key");
-  checkStatus(params.get("key"));
+const urlKey = params.get("review_id") || params.get("key");
+if (urlKey) {
+  keyInput.value = urlKey;
+  checkStatus(urlKey);
 }
 
 lookupForm.addEventListener("submit", (e) => {
@@ -45,6 +46,11 @@ lookupForm.addEventListener("submit", (e) => {
 // =========================================================
 async function checkStatus(key) {
   currentKey = key;
+  // Update browser URL to shareable link
+  const newUrl = new URL(window.location);
+  newUrl.searchParams.set("review_id", key);
+  newUrl.searchParams.delete("key");
+  history.replaceState(null, "", newUrl);
   stopPolling();
   statusArea.style.display = "block";
   statusArea.innerHTML = `<div class="message info"><span class="spinner"></span> Checking status...</div>`;
@@ -356,6 +362,7 @@ function renderStructuredReview(parsed, key) {
             <span class="item-number">${item.number}</span>
             <span>${escapeHtml(item.title)}</span>
             ${criteriaTag}
+            <button class="annotate-pill" onclick="event.stopPropagation(); openItemAnnotation(${item.number})">Annotate</button>
           </div>
           ${chevronSvg}
         </div>
@@ -373,7 +380,7 @@ function renderStructuredReview(parsed, key) {
         References (${parsed.citations.length})
       </h3>
       <ol class="citation-list">
-        ${parsed.citations.map((c) => `<li>${renderCitation(c)}</li>`).join("")}
+        ${parsed.citations.map((c, i) => `<li id="ref${i + 1}">${renderCitation(c)}</li>`).join("")}
       </ol>`;
   }
 
@@ -388,7 +395,7 @@ function renderStructuredReview(parsed, key) {
 
   // -- Fetch verification code + show annotation modal --
   fetchVerificationCode(key);
-  showAnnotationModal(key, parsed.items[0]);
+  showAnnotationModal(key, parsed.items, 0);
 }
 
 function renderRawReview(md, key) {
@@ -534,13 +541,22 @@ function formatBytes(bytes) {
 // Annotation Modal
 // =========================================================
 let annotationState = { correctness: null, significance: null, evidence_quality: null };
+let existingAnnotations = [];
 
-function showAnnotationModal(key, firstItem) {
-  if (!firstItem) return;
+function showAnnotationModal(key, items, currentIndex) {
+  if (!items || currentIndex >= items.length) {
+    closeAnnotationModal();
+    return;
+  }
 
-  // Check if annotation already exists
-  fetch(`${API_BASE_URL}/api/review/${key}/annotations`).then(r => r.json()).then(existing => {
-    const existingForItem = existing.find(a => a.item_number === firstItem.number);
+  const item = items[currentIndex];
+
+  // Reset state for new item
+  annotationState = { correctness: null, significance: null, evidence_quality: null };
+
+  // Load existing annotations once, then render
+  const render = () => {
+    const existingForItem = existingAnnotations.find(a => a.item_number === item.number);
     if (existingForItem) {
       annotationState = {
         correctness: existingForItem.correctness,
@@ -549,17 +565,16 @@ function showAnnotationModal(key, firstItem) {
       };
     }
 
-    // Show modal
     annotationModalRoot.innerHTML = `
       <div class="modal-overlay" id="annotation-overlay">
         <div class="modal">
-          <h3>Rate Review Item 1</h3>
-          <p class="modal-subtitle">Help us evaluate the quality of this AI-generated review by rating the first item.</p>
+          <h3>Rate Review Item ${currentIndex + 1} of ${items.length}</h3>
+          <p class="modal-subtitle">Help us evaluate the quality of this AI-generated review.</p>
 
           <div class="item-preview">
-            <strong>${escapeHtml(firstItem.title)}</strong>
-            ${firstItem.mainCriticism ? `<div style="margin-top:0.5rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--cmu-red);">Main Point of Criticism</span><br>${renderInlineMarkdown(firstItem.mainCriticism)}</div>` : ""}
-            ${firstItem.evidence.length > 0 ? `<div style="margin-top:0.75rem;border-top:1px solid rgba(196,18,48,0.15);padding-top:0.6rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray-500);">Evidence</span>${firstItem.evidence.map((ev, j) => `<div style="margin-top:0.5rem;"><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;font-style:italic;font-size:0.85rem;color:var(--gray-600);">${renderInlineMarkdown(ev.quote)}</div>${ev.comment ? `<div style="border-left:2px solid var(--gray-300);margin-left:0.75rem;margin-top:0.3rem;padding:0.3rem 0.6rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ev.comment)}</div>` : ""}</div>`).join("")}</div>` : ""}
+            <strong>${escapeHtml(item.title)}</strong>
+            ${item.mainCriticism ? `<div style="margin-top:0.5rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--cmu-red);">Main Point of Criticism</span><br>${renderInlineMarkdown(item.mainCriticism)}</div>` : ""}
+            ${item.evidence.length > 0 ? `<div style="margin-top:0.75rem;border-top:1px solid rgba(196,18,48,0.15);padding-top:0.6rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray-500);">Evidence</span>${item.evidence.map((ev, j) => `<div style="margin-top:0.5rem;"><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;font-style:italic;font-size:0.85rem;color:var(--gray-600);">${renderInlineMarkdown(ev.quote)}</div>${ev.comment ? `<div style="border-left:2px solid var(--gray-300);margin-left:0.75rem;margin-top:0.3rem;padding:0.3rem 0.6rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ev.comment)}</div>` : ""}</div>`).join("")}</div>` : ""}
           </div>
 
           <div class="annotation-group">
@@ -606,30 +621,142 @@ function showAnnotationModal(key, firstItem) {
       });
     });
 
+    // Skip closes modal (no auto-advance)
     document.getElementById("annotation-skip").addEventListener("click", closeAnnotationModal);
 
+    // Submit saves and advances to next item
     document.getElementById("annotation-submit").addEventListener("click", async () => {
       try {
         await fetch(`${API_BASE_URL}/api/review/${key}/annotations`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            item_number: firstItem.number,
+            item_number: item.number,
             ...annotationState,
           }),
         });
       } catch {
         // Ignore errors silently
       }
-      closeAnnotationModal();
+      // Advance to next item
+      showAnnotationModal(key, items, currentIndex + 1);
     });
 
-    // Close on overlay click
+    // Close on overlay click (no auto-advance)
     document.getElementById("annotation-overlay").addEventListener("click", (e) => {
       if (e.target === e.currentTarget) closeAnnotationModal();
     });
-  }).catch(() => {
-    // If we can't check existing annotations, still show the modal
+  };
+
+  // Fetch existing annotations on first call, reuse cache after
+  if (existingAnnotations.length === 0 && currentIndex === 0) {
+    fetch(`${API_BASE_URL}/api/review/${key}/annotations`)
+      .then(r => r.json())
+      .then(data => { existingAnnotations = data; render(); })
+      .catch(() => render());
+  } else {
+    render();
+  }
+}
+
+function showSingleAnnotationModal(key, item) {
+  // Open modal for a single item (no auto-advance)
+  annotationState = { correctness: null, significance: null, evidence_quality: null };
+
+  fetch(`${API_BASE_URL}/api/review/${key}/annotations`)
+    .then(r => r.json())
+    .then(data => {
+      existingAnnotations = data;
+      const existingForItem = data.find(a => a.item_number === item.number);
+      if (existingForItem) {
+        annotationState = {
+          correctness: existingForItem.correctness,
+          significance: existingForItem.significance,
+          evidence_quality: existingForItem.evidence_quality,
+        };
+      }
+      renderSingleAnnotationModal(key, item);
+    })
+    .catch(() => renderSingleAnnotationModal(key, item));
+}
+
+function renderSingleAnnotationModal(key, item) {
+  annotationModalRoot.innerHTML = `
+    <div class="modal-overlay" id="annotation-overlay">
+      <div class="modal">
+        <h3>Rate Review Item ${item.number}</h3>
+        <p class="modal-subtitle">Rate this specific review item.</p>
+
+        <div class="item-preview">
+          <strong>${escapeHtml(item.title)}</strong>
+          ${item.mainCriticism ? `<div style="margin-top:0.5rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--cmu-red);">Main Point of Criticism</span><br>${renderInlineMarkdown(item.mainCriticism)}</div>` : ""}
+          ${item.evidence.length > 0 ? `<div style="margin-top:0.75rem;border-top:1px solid rgba(196,18,48,0.15);padding-top:0.6rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray-500);">Evidence</span>${item.evidence.map((ev, j) => `<div style="margin-top:0.5rem;"><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;font-style:italic;font-size:0.85rem;color:var(--gray-600);">${renderInlineMarkdown(ev.quote)}</div>${ev.comment ? `<div style="border-left:2px solid var(--gray-300);margin-left:0.75rem;margin-top:0.3rem;padding:0.3rem 0.6rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ev.comment)}</div>` : ""}</div>`).join("")}</div>` : ""}
+        </div>
+
+        <div class="annotation-group">
+          <div class="annotation-group-label">Is this criticism correct?</div>
+          <div class="annotation-buttons" data-field="correctness">
+            <button class="annotation-btn ${annotationState.correctness === 'correct' ? 'selected' : ''}" data-value="correct">Correct</button>
+            <button class="annotation-btn ${annotationState.correctness === 'incorrect' ? 'selected' : ''}" data-value="incorrect">Incorrect</button>
+          </div>
+        </div>
+
+        <div class="annotation-group">
+          <div class="annotation-group-label">Does it touch a significant issue?</div>
+          <div class="annotation-buttons" data-field="significance">
+            <button class="annotation-btn ${annotationState.significance === 'significant' ? 'selected' : ''}" data-value="significant">Significant</button>
+            <button class="annotation-btn ${annotationState.significance === 'marginally_significant' ? 'selected' : ''}" data-value="marginally_significant">Marginally Significant</button>
+            <button class="annotation-btn ${annotationState.significance === 'not_significant' ? 'selected' : ''}" data-value="not_significant">Not Significant</button>
+          </div>
+        </div>
+
+        <div class="annotation-group">
+          <div class="annotation-group-label">Is the evidence sufficient?</div>
+          <div class="annotation-buttons" data-field="evidence_quality">
+            <button class="annotation-btn ${annotationState.evidence_quality === 'sufficient' ? 'selected' : ''}" data-value="sufficient">Sufficient</button>
+            <button class="annotation-btn ${annotationState.evidence_quality === 'insufficient' ? 'selected' : ''}" data-value="insufficient">Insufficient</button>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn btn-secondary btn-sm" id="annotation-skip">Cancel</button>
+          <button class="btn btn-primary btn-sm" id="annotation-submit" style="margin-top:0;">Submit</button>
+        </div>
+      </div>
+    </div>`;
+
+  // Wire up buttons
+  document.querySelectorAll(".annotation-buttons").forEach(group => {
+    const field = group.dataset.field;
+    group.querySelectorAll(".annotation-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        group.querySelectorAll(".annotation-btn").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        annotationState[field] = btn.dataset.value;
+      });
+    });
+  });
+
+  document.getElementById("annotation-skip").addEventListener("click", closeAnnotationModal);
+
+  document.getElementById("annotation-submit").addEventListener("click", async () => {
+    try {
+      await fetch(`${API_BASE_URL}/api/review/${key}/annotations`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          item_number: item.number,
+          ...annotationState,
+        }),
+      });
+    } catch {
+      // Ignore errors silently
+    }
+    closeAnnotationModal();
+  });
+
+  document.getElementById("annotation-overlay").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) closeAnnotationModal();
   });
 }
 
@@ -647,7 +774,12 @@ function escapeHtml(text) {
 }
 
 function renderInlineMarkdown(text) {
-  let result = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  let result = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, url) => {
+    if (url.startsWith("#")) {
+      return `<a href="${url}" style="scroll-behavior:smooth;">${label}</a>`;
+    }
+    return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
+  });
   result = result
     .replace(/\n\n/g, "</p><p>")
     .replace(/\n/g, "<br>")
@@ -665,6 +797,12 @@ function renderCitation(text) {
 function toggleItem(header) {
   const item = header.closest(".review-item");
   item.classList.toggle("open");
+}
+
+function openItemAnnotation(itemNumber) {
+  if (!parsedReviewData || !currentKey) return;
+  const item = parsedReviewData.items.find(i => i.number === itemNumber);
+  if (item) showSingleAnnotationModal(currentKey, item);
 }
 
 function scrollToItem(number) {

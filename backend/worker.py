@@ -129,9 +129,19 @@ CLEANUP_MAX_AGE = timedelta(hours=1)
 
 
 def cleanup_old_submissions():
-    """Delete submissions and their files older than CLEANUP_MAX_AGE."""
+    """Delete submissions and their files older than CLEANUP_MAX_AGE.
+
+    Submissions that have annotations are preserved permanently.
+    """
     cutoff = datetime.now(timezone.utc) - CLEANUP_MAX_AGE
     with SessionLocal() as session:
+        # Find keys that have annotations — these are preserved permanently
+        annotated_keys = set(
+            row[0] for row in session.execute(
+                select(Annotation.key).distinct()
+            ).all()
+        )
+
         old = session.execute(
             select(Submission).where(Submission.created_at < cutoff)
         ).scalars().all()
@@ -139,7 +149,11 @@ def cleanup_old_submissions():
         if not old:
             return
 
+        to_delete_keys = []
         for sub in old:
+            if sub.key in annotated_keys:
+                logger.info("[%s] Skipping cleanup — submission has annotations.", sub.key)
+                continue
             # Remove review directory
             review_d = review_dir(sub.key)
             if review_d.exists():
@@ -148,12 +162,14 @@ def cleanup_old_submissions():
             upload_f = upload_path(sub.key, sub.filename)
             if upload_f.exists():
                 upload_f.unlink(missing_ok=True)
+            to_delete_keys.append(sub.key)
             logger.info("[%s] Cleaned up old submission (age > %s).", sub.key, CLEANUP_MAX_AGE)
 
-        session.execute(
-            delete(Submission).where(Submission.created_at < cutoff)
-        )
-        session.commit()
+        if to_delete_keys:
+            session.execute(
+                delete(Submission).where(Submission.key.in_(to_delete_keys))
+            )
+            session.commit()
 
 
 def recover_stuck_submissions():

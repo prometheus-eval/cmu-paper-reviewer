@@ -890,6 +890,30 @@ input::placeholder {
   flex-shrink: 0;
 }
 
+/* Per-item annotate button */
+.annotate-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: var(--cmu-red-light);
+  color: var(--cmu-red);
+  border: 1px solid rgba(196, 18, 48, 0.2);
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}
+
+.annotate-pill:hover {
+  background: var(--cmu-red);
+  color: #fff;
+  border-color: var(--cmu-red);
+}
+
 .chevron {
   width: 20px;
   height: 20px;
