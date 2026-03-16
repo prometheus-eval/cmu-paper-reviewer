@@ -22,6 +22,7 @@ from backend.services.storage_service import (
     annotations_path,
     get_review_markdown,
     list_verification_code_files,
+    preprint_md_path,
     review_pdf_path,
     verification_code_dir,
 )
@@ -75,6 +76,24 @@ async def get_review_pdf(
         media_type="application/pdf",
         filename=f"review_{key}.pdf",
     )
+
+
+@router.get("/review/{key}/paper")
+async def get_paper_markdown(
+    key: str,
+    session: AsyncSession = Depends(get_session),
+):
+    result = await session.execute(select(Submission).where(Submission.key == key))
+    submission = result.scalar_one_or_none()
+    if not submission:
+        raise HTTPException(status_code=404, detail="Submission not found.")
+
+    md_path = preprint_md_path(key)
+    if not md_path.exists():
+        raise HTTPException(status_code=404, detail="OCR'd paper not found.")
+
+    content = md_path.read_text(encoding="utf-8")
+    return {"key": key, "paper_markdown": content}
 
 
 # ─── Verification Code ──────────────────────────────────────────────────────
