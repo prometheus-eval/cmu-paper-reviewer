@@ -12,4 +12,8 @@ venv/
 *.db
 *.sqlite3
 .fly/
+annotations.json
+scripts/download_annotations_.py
+scripts/deploy_.sh
+scripts/download_annotations_.py
 .DS_Store
