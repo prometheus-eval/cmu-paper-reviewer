@@ -69,17 +69,31 @@ def _tex_escape_url(url: str) -> str:
 
 
 def _tex_escape_with_links(text: str) -> str:
-    """Escape LaTeX special chars in text while converting [text](url) to \\href."""
-    link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+    """Escape LaTeX special chars in text while converting [text](url) to \\href.
+
+    Handles nested-bracket citation links like [[1]](#ref1) as well as
+    standard markdown links like [text](url).
+    """
+    # Combined pattern: nested-bracket citations OR standard markdown links
+    link_pattern = re.compile(
+        r'\[\[(\d+)\]\]\(([^)]+)\)'   # [[N]](url) — citation reference
+        r'|'
+        r'\[([^\]]+)\]\(([^)]+)\)'    # [text](url) — standard link
+    )
     parts = []
     last_end = 0
     for m in link_pattern.finditer(text):
-        # Escape the text before this link
         parts.append(_tex_escape(text[last_end:m.start()]))
-        # Convert the link
-        parts.append(r"\href{" + _tex_escape_url(m.group(2)) + "}{" + _tex_escape(m.group(1)) + "}")
+        if m.group(1) is not None:
+            # Nested-bracket citation: [[N]](#anchor) → rendered as [N]
+            num = m.group(1)
+            parts.append(r"[" + num + r"]")
+        else:
+            # Standard link: [text](url) → \href{url}{text}
+            link_text = m.group(3)
+            link_url = m.group(4)
+            parts.append(r"\href{" + _tex_escape_url(link_url) + "}{" + _tex_escape(link_text) + "}")
         last_end = m.end()
-    # Escape the remaining text after the last link
     parts.append(_tex_escape(text[last_end:]))
     return "".join(parts)
 
@@ -513,13 +527,22 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
         return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
     def _md_links(text: str) -> str:
-        """Convert [text](url) to <a> tags in otherwise-escaped text."""
+        """Convert [text](url) and [[N]](#anchor) to <a> tags in otherwise-escaped text."""
         import re as _re
+        # Combined pattern: nested-bracket citations OR standard links
+        pattern = _re.compile(
+            r'\[\[(\d+)\]\]\(([^)]+)\)'   # [[N]](url)
+            r'|'
+            r'\[([^\]]+)\]\(([^)]+)\)'    # [text](url)
+        )
         parts = []
         last = 0
-        for m in _re.finditer(r'\[([^\]]+)\]\(([^)]+)\)', text):
+        for m in pattern.finditer(text):
             parts.append(_html_esc(text[last:m.start()]))
-            parts.append(f'<a href="{_html_esc(m.group(2))}">{_html_esc(m.group(1))}</a>')
+            if m.group(1) is not None:
+                parts.append(f'[{m.group(1)}]')
+            else:
+                parts.append(f'<a href="{_html_esc(m.group(4))}">{_html_esc(m.group(3))}</a>')
             last = m.end()
         parts.append(_html_esc(text[last:]))
         return "".join(parts)

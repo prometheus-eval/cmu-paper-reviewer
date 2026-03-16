@@ -84,6 +84,15 @@ def process_submission(submission: Submission):
     is_byok = submission.mode == SubmissionMode.byok
 
     try:
+        # Step 0: Send "review started" email
+        if submission.email:
+            try:
+                from backend.services.email_service import send_review_started_email
+                asyncio.run(send_review_started_email(submission.email, key, submission.filename))
+                logger.info("[%s] 'Review started' email sent to %s.", key, submission.email)
+            except Exception:
+                logger.exception("[%s] 'Review started' email failed (non-critical).", key)
+
         # Step 1: OCR
         logger.info("[%s] Starting OCR... (mode=%s)", key, submission.mode.value)
         update_status(key, SubmissionStatus.ocr)
@@ -115,9 +124,13 @@ def process_submission(submission: Submission):
         if submission.email:
             try:
                 from backend.services.email_service import send_review_ready_email
-                asyncio.run(send_review_ready_email(submission.email, key))
+                result = asyncio.run(send_review_ready_email(submission.email, key))
+                if result:
+                    logger.info("[%s] Email sent to %s.", key, submission.email)
+                else:
+                    logger.warning("[%s] Email send returned False (SMTP not configured or send failed).", key)
             except Exception:
-                logger.warning("[%s] Email notification failed (non-critical).", key)
+                logger.exception("[%s] Email notification failed.", key)
     finally:
         # Always clear stored user API keys after processing
         if is_byok:

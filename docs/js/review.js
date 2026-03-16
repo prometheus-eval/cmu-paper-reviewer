@@ -355,6 +355,9 @@ function renderStructuredReview(parsed, key) {
       bodyHtml += `</div>`;
     }
 
+    bodyHtml += `
+        <button class="annotate-pill" onclick="event.stopPropagation(); openItemAnnotation(${item.number})">Provide us your opinion on this criticism!</button>`;
+
     itemsHtml += `
       <div class="review-item" id="review-item-${item.number}">
         <div class="review-item-header" onclick="toggleItem(this)">
@@ -362,7 +365,6 @@ function renderStructuredReview(parsed, key) {
             <span class="item-number">${item.number}</span>
             <span>${escapeHtml(item.title)}</span>
             ${criteriaTag}
-            <button class="annotate-pill" onclick="event.stopPropagation(); openItemAnnotation(${item.number})">Annotate</button>
           </div>
           ${chevronSvg}
         </div>
@@ -380,18 +382,39 @@ function renderStructuredReview(parsed, key) {
         References (${parsed.citations.length})
       </h3>
       <ol class="citation-list">
-        ${parsed.citations.map((c, i) => `<li id="ref${i + 1}">${renderCitation(c)}</li>`).join("")}
+        ${parsed.citations.map((c, i) => `<li id="ref${i + 1}"><a id="citation-${i + 1}"></a>${renderCitation(c)}</li>`).join("")}
       </ol>`;
   }
 
-  // -- PDF Download button --
+  // -- Action buttons row --
+  const actionsRow = document.createElement("div");
+  actionsRow.className = "summary-actions";
+
   const dlBtn = document.createElement("a");
   dlBtn.className = "btn btn-secondary btn-sm";
-  dlBtn.style.marginTop = "1rem";
   dlBtn.style.display = "inline-flex";
   dlBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PDF`;
   dlBtn.onclick = (e) => { e.preventDefault(); downloadPDF(key); };
-  reviewSummaryCard.appendChild(dlBtn);
+
+  const shareBtn = document.createElement("button");
+  shareBtn.className = "btn btn-secondary btn-sm";
+  shareBtn.style.display = "inline-flex";
+  shareBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share the review with your co-author`;
+  shareBtn.onclick = () => {
+    const url = new URL(window.location);
+    url.searchParams.set("review_id", key);
+    navigator.clipboard.writeText(url.toString()).then(() => {
+      const orig = shareBtn.innerHTML;
+      shareBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Link copied!`;
+      shareBtn.style.color = "var(--success)";
+      shareBtn.style.borderColor = "var(--success-border)";
+      setTimeout(() => { shareBtn.innerHTML = orig; shareBtn.style.color = ""; shareBtn.style.borderColor = ""; }, 2000);
+    });
+  };
+
+  actionsRow.appendChild(dlBtn);
+  actionsRow.appendChild(shareBtn);
+  reviewSummaryCard.appendChild(actionsRow);
 
   // -- Fetch verification code + show annotation modal --
   fetchVerificationCode(key);
@@ -774,7 +797,12 @@ function escapeHtml(text) {
 }
 
 function renderInlineMarkdown(text) {
-  let result = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, url) => {
+  // Handle nested-bracket citation links first: [[1]](#ref1) or [[1]](#citation-1)
+  let result = text.replace(/\[\[(\d+)\]\]\((#[^)]+)\)/g, (match, num, url) => {
+    return `<a href="${url}" class="citation-ref" style="scroll-behavior:smooth;">[${num}]</a>`;
+  });
+  // Then handle standard markdown links: [text](url)
+  result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, url) => {
     if (url.startsWith("#")) {
       return `<a href="${url}" style="scroll-behavior:smooth;">${label}</a>`;
     }

@@ -795,6 +795,13 @@ input::placeholder {
   font-weight: 500;
 }
 
+.summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 .summary-items {
   display: flex;
   flex-wrap: wrap;
@@ -890,13 +897,14 @@ input::placeholder {
   flex-shrink: 0;
 }
 
-/* Per-item annotate button */
+/* Per-item annotate button (inside expanded item body) */
 .annotate-pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.15rem 0.55rem;
-  border-radius: var(--radius-full);
-  font-size: 0.7rem;
+  display: block;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  font-size: 0.82rem;
   font-weight: 600;
   font-family: inherit;
   background: var(--cmu-red-light);
@@ -904,8 +912,7 @@ input::placeholder {
   border: 1px solid rgba(196, 18, 48, 0.2);
   cursor: pointer;
   transition: all 0.15s;
-  flex-shrink: 0;
-  margin-left: 0.25rem;
+  text-align: center;
 }
 
 .annotate-pill:hover {
