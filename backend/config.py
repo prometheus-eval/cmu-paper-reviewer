@@ -36,6 +36,7 @@ class Settings(BaseSettings):
         "http://127.0.0.1:5500",
         "http://127.0.0.1:8000",
         "https://prometheus-eval.github.io",
+        "http://35.231.39.20",
     ]
 
     # Worker
