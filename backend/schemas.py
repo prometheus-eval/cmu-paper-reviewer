@@ -50,6 +50,7 @@ class VerificationCodeResponse(BaseModel):
 
 class AnnotationRequest(BaseModel):
     item_number: int
+    annotator_id: str = "anonymous"
     correctness: str | None = None
     significance: str | None = None
     evidence_quality: str | None = None
@@ -58,6 +59,7 @@ class AnnotationRequest(BaseModel):
 class AnnotationResponse(BaseModel):
     key: str
     item_number: int
+    annotator_id: str = "anonymous"
     correctness: str | None = None
     significance: str | None = None
     evidence_quality: str | None = None
