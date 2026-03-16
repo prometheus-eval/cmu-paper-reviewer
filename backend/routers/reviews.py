@@ -21,6 +21,8 @@ from backend.services.pdf_service import generate_review_pdf
 from backend.services.storage_service import (
     annotations_path,
     get_review_markdown,
+    images_dir,
+    images_list_path,
     list_verification_code_files,
     preprint_md_path,
     review_pdf_path,
@@ -94,6 +96,42 @@ async def get_paper_markdown(
 
     content = md_path.read_text(encoding="utf-8")
     return {"key": key, "paper_markdown": content}
+
+
+@router.get("/review/{key}/paper/images")
+async def get_paper_images_list(
+    key: str,
+    session: AsyncSession = Depends(get_session),
+):
+    result = await session.execute(select(Submission).where(Submission.key == key))
+    if not result.scalar_one_or_none():
+        raise HTTPException(status_code=404, detail="Submission not found.")
+
+    list_path = images_list_path(key)
+    if not list_path.exists():
+        return {"key": key, "images": []}
+
+    import json
+    data = json.loads(list_path.read_text(encoding="utf-8"))
+    return {"key": key, "images": data}
+
+
+@router.get("/review/{key}/paper/images/{filename}")
+async def get_paper_image(
+    key: str,
+    filename: str,
+    session: AsyncSession = Depends(get_session),
+):
+    result = await session.execute(select(Submission).where(Submission.key == key))
+    if not result.scalar_one_or_none():
+        raise HTTPException(status_code=404, detail="Submission not found.")
+
+    img_path = images_dir(key) / filename
+    if not img_path.exists():
+        raise HTTPException(status_code=404, detail="Image not found.")
+
+    media_type = "image/png" if filename.endswith(".png") else "image/jpeg"
+    return FileResponse(path=str(img_path), media_type=media_type, filename=filename)
 
 
 # ─── Verification Code ──────────────────────────────────────────────────────
