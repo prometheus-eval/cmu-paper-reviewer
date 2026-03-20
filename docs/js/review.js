@@ -373,6 +373,9 @@ function renderStructuredReview(parsed, key) {
   }
   reviewItems.innerHTML = itemsHtml;
 
+  // -- Verification Code (displayed before references) --
+  fetchVerificationCodeInline(key);
+
   // -- Citation Card --
   if (parsed.citations.length > 0) {
     citationCard.style.display = "block";
@@ -393,8 +396,8 @@ function renderStructuredReview(parsed, key) {
   const dlBtn = document.createElement("a");
   dlBtn.className = "btn btn-secondary btn-sm";
   dlBtn.style.display = "inline-flex";
-  dlBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download PDF`;
-  dlBtn.onclick = (e) => { e.preventDefault(); downloadPDF(key); };
+  dlBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download Review (ZIP)`;
+  dlBtn.onclick = (e) => { e.preventDefault(); downloadBundle(key); };
 
   const shareBtn = document.createElement("button");
   shareBtn.className = "btn btn-secondary btn-sm";
@@ -416,8 +419,7 @@ function renderStructuredReview(parsed, key) {
   actionsRow.appendChild(shareBtn);
   reviewSummaryCard.appendChild(actionsRow);
 
-  // -- Fetch verification code + show annotation modal --
-  fetchVerificationCode(key);
+  // -- Show annotation modal --
   showAnnotationModal(key, parsed.items, 0);
 }
 
@@ -426,6 +428,22 @@ function renderRawReview(md, key) {
   reviewContent.innerHTML = marked.parse(md);
   pdfDownload.style.display = "inline-flex";
   pdfDownload.onclick = (e) => { e.preventDefault(); downloadPDF(key); };
+}
+
+async function downloadBundle(key) {
+  try {
+    const resp = await fetch(`${API_BASE_URL}/api/review/${key}/download`);
+    if (!resp.ok) throw new Error("Download not available.");
+    const blob = await resp.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `review_${key}.zip`;
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    alert("Failed to download: " + err.message);
+  }
 }
 
 async function downloadPDF(key) {
@@ -480,7 +498,7 @@ async function fetchReview(key) {
 let verificationCodeFiles = [];
 let verificationExpanded = false;
 
-async function fetchVerificationCode(key) {
+async function fetchVerificationCodeInline(key) {
   try {
     const resp = await fetch(`${API_BASE_URL}/api/review/${key}/verification-code`);
     if (!resp.ok) return;
@@ -489,6 +507,7 @@ async function fetchVerificationCode(key) {
 
     if (verificationCodeFiles.length === 0) return;
 
+    // Show verification code section before references (it's placed before citation-card in DOM)
     verificationSection.style.display = "block";
     verificationSection.innerHTML = `
       <div class="card">
@@ -520,6 +539,11 @@ async function fetchVerificationCode(key) {
   } catch {
     // Silently ignore
   }
+}
+
+async function fetchVerificationCode(key) {
+  // Legacy - now handled by fetchVerificationCodeInline
+  return fetchVerificationCodeInline(key);
 }
 
 async function loadVerificationCodeFiles(key) {

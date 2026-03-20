@@ -26,6 +26,7 @@ async def submit_paper(
     user_litellm_api_key: str | None = Form(None),
     user_litellm_base_url: str | None = Form(None),
     user_tavily_api_key: str | None = Form(None),
+    review_settings: str | None = Form(None, description="JSON review settings"),
     session: AsyncSession = Depends(get_session),
 ):
     if not file.filename or not file.filename.lower().endswith(".pdf"):
@@ -98,6 +99,7 @@ async def submit_paper(
         user_litellm_api_key=user_litellm_api_key,
         user_litellm_base_url=user_litellm_base_url,
         user_tavily_api_key=user_tavily_api_key,
+        review_settings=review_settings,
     )
     session.add(submission)
     await session.commit()

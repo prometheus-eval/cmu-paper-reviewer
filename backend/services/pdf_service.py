@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 
 import markdown
 
-from backend.services.storage_service import review_md_path, review_pdf_path
+from backend.services.storage_service import review_md_path, review_pdf_path, verification_code_dir
 
 logger = logging.getLogger(__name__)
 
@@ -424,6 +424,44 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
 
         parts.append(r"\vspace{0.8em}" + "\n\n")
 
+    # ── Verification code (before references) ──
+    vdir = verification_code_dir(key)
+    vcode_files = []
+    if vdir.exists():
+        vcode_files = sorted(f for f in vdir.rglob("*") if f.is_file())
+    if vcode_files:
+        parts.append(r"\vspace{0.5em}" + "\n")
+        parts.append(r"\noindent")
+        parts.append(r"\begin{tikzpicture}[baseline=(num.base)]")
+        parts.append(r"  \node[circle, fill=lightred, text=cmured, font=\sffamily\bfseries\small,")
+        parts.append(r"        minimum size=22pt, inner sep=0pt] (num) {$\langle/\rangle$};")
+        parts.append(r"\end{tikzpicture}")
+        parts.append(r"\hspace{6pt}")
+        parts.append(r"{\Large\sffamily\bfseries\color{darkgray} Verification Code}")
+        parts.append(r"\hspace{8pt}{\sffamily\color{medgray}(" + str(len(vcode_files)) + r" files)}" + "\n")
+        parts.append(r"\vspace{4pt}" + "\n")
+        parts.append(r"{\color{cmured}\hrule height 1.5pt}" + "\n")
+        parts.append(r"\vspace{8pt}" + "\n")
+        parts.append(r"{\small\sffamily\color{medgray}\itshape The AI reviewer generated the following code to verify claims in the paper.}" + "\n\n")
+
+        for vf in vcode_files:
+            fname = str(vf.relative_to(vdir))
+            try:
+                content = vf.read_text(encoding="utf-8")
+                # Truncate very long files
+                if len(content) > 3000:
+                    content = content[:3000] + "\n... (truncated)"
+            except UnicodeDecodeError:
+                content = "(binary file)"
+            parts.append(r"\noindent{\small\sffamily\bfseries\color{textgray} " + _tex_escape(fname) + "}\n\n")
+            parts.append(r"\begin{quotebox}" + "\n")
+            parts.append(r"{\ttfamily\scriptsize " + "\n")
+            # Escape and use verbatim-like formatting
+            escaped = _tex_escape(content).replace("\n", r"\\" + "\n")
+            parts.append(escaped + "\n")
+            parts.append(r"}" + "\n")
+            parts.append(r"\end{quotebox}" + "\n\n")
+
     # ── Citation list ──
     if parsed.citations:
         parts.append(r"\vspace{0.5em}" + "\n")
@@ -591,6 +629,26 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
                 html += f'<div class="quote-box"><div class="label">Quote {j + 1}</div><div class="text">{_md_links(ev.quote)}</div></div>\n'
                 if ev.comment:
                     html += f'<div class="comment-box"><div class="label">Comment</div><div class="text">{_md_links(ev.comment)}</div></div>\n'
+
+    # Verification code
+    vdir = verification_code_dir(key)
+    vcode_files = []
+    if vdir.exists():
+        vcode_files = sorted(f for f in vdir.rglob("*") if f.is_file())
+    if vcode_files:
+        html += '<div class="references"><h2>Verification Code (' + str(len(vcode_files)) + ' files)</h2>\n'
+        html += '<p style="font-size:9pt;color:#737373;font-style:italic;">The AI reviewer generated the following code to verify claims in the paper.</p>\n'
+        for vf in vcode_files:
+            fname = str(vf.relative_to(vdir))
+            try:
+                content = vf.read_text(encoding="utf-8")
+                if len(content) > 3000:
+                    content = content[:3000] + "\n... (truncated)"
+            except UnicodeDecodeError:
+                content = "(binary file)"
+            html += f'<p style="font-weight:bold;font-size:10pt;margin:8px 0 2px;">{_html_esc(fname)}</p>\n'
+            html += f'<pre style="background:#f5f5f5;border:1px solid #e5e5e5;border-radius:6px;padding:8px;font-size:8pt;overflow-x:auto;white-space:pre-wrap;">{_html_esc(content)}</pre>\n'
+        html += '</div>\n'
 
     if parsed.citations:
         html += '<div class="references"><h2>References (' + str(len(parsed.citations)) + ')</h2><ol>\n'
