@@ -6,6 +6,7 @@ import os
 import random
 import uuid
 
+import litellm
 from openhands.sdk import Agent, Conversation, Event, LLM, LLMConvertibleEvent, Tool
 from openhands.sdk.context.condenser import LLMSummarizingCondenser
 from openhands.tools.file_editor import FileEditorTool
@@ -38,6 +39,14 @@ class ReviewService:
         # Disable Claude/Anthropic-specific params that non-Claude models
         # (e.g. Azure AI GPT-5.4, Gemini) don't support.
         is_claude = "claude" in self.model_name.lower()
+
+        # For non-Claude models behind a LiteLLM proxy, the proxy may reject
+        # params like tool_choice that aren't in its allowed list.
+        # Passing allowed_openai_params via extra_body whitelists them per-request.
+        extra_body = {}
+        if not is_claude:
+            extra_body["allowed_openai_params"] = ["tool_choice"]
+
         return LLM(
             model=self.model_name,
             base_url=self.litellm_base_url,
@@ -48,6 +57,7 @@ class ReviewService:
             reasoning_effort="high" if is_claude else None,
             extended_thinking_budget=200000 if is_claude else None,
             enable_encrypted_reasoning=is_claude,
+            litellm_extra_body=extra_body,
         )
 
     def _build_mcp_config(self) -> dict:
@@ -70,6 +80,10 @@ class ReviewService:
         Returns a tuple of (path to review markdown, model name used).
         """
         logger.info("Starting review for key=%s with model=%s", key, self.model_name)
+
+        # Tell litellm globally to drop unsupported params — this propagates
+        # to the LiteLLM proxy so it won't reject tool_choice etc.
+        litellm.drop_params = True
 
         llm = self._build_llm()
         condenser = LLMSummarizingCondenser(
