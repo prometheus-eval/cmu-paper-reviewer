@@ -109,6 +109,18 @@ def _is_budget_error(error_text: str) -> bool:
     return any(kw.lower() in lower for kw in BUDGET_ERROR_KEYWORDS)
 
 
+def _validate_review(key: str) -> bool:
+    """Check that the generated review contains at least one review item."""
+    import re
+    from backend.services.storage_service import review_md_path
+    md_path = review_md_path(key)
+    if not md_path.exists():
+        return False
+    content = md_path.read_text(encoding="utf-8")
+    # Must contain at least one "## Item N:" header
+    return bool(re.search(r"^##\s*Item\s+\d+\s*:", content, re.MULTILINE | re.IGNORECASE))
+
+
 def process_submission(submission: Submission):
     key = submission.key
     pdf_file = upload_path(key, submission.filename)
@@ -158,22 +170,42 @@ def process_submission(submission: Submission):
             except Exception:
                 logger.exception("[%s] Paper date extraction failed (non-critical).", key)
 
-        # Step 2: Review
+        # Step 2: Review (with validation and retry)
         logger.info("[%s] Starting review...", key)
         update_status(key, SubmissionStatus.reviewing)
-        reviewer = ReviewService(
-            litellm_api_key=submission.user_litellm_api_key if is_byok else None,
-            litellm_base_url=submission.user_litellm_base_url if is_byok else None,
-            tavily_api_key=submission.user_tavily_api_key if is_byok else None,
-            review_settings=review_settings,
-        )
-        review_path, model_used = reviewer.run_review(key)
-        store_model_used(key, model_used)
-        logger.info("[%s] Review complete. Model: %s", key, model_used)
+
+        max_attempts = 2
+        model_used = None
+        for attempt in range(1, max_attempts + 1):
+            reviewer = ReviewService(
+                litellm_api_key=submission.user_litellm_api_key if is_byok else None,
+                litellm_base_url=submission.user_litellm_base_url if is_byok else None,
+                tavily_api_key=submission.user_tavily_api_key if is_byok else None,
+                review_settings=review_settings,
+            )
+            review_path, model_used = reviewer.run_review(key)
+            store_model_used(key, model_used)
+            logger.info("[%s] Review attempt %d complete. Model: %s", key, attempt, model_used)
+
+            # Validate: review must contain at least one "## Item" header
+            if _validate_review(key):
+                break
+            else:
+                logger.warning("[%s] Review validation failed (attempt %d/%d) — no review items found.",
+                               key, attempt, max_attempts)
+                if attempt < max_attempts:
+                    # Delete the bad review so the retry starts fresh
+                    from backend.services.storage_service import review_md_path as _rmp
+                    bad = _rmp(key)
+                    if bad.exists():
+                        bad.unlink()
+                    logger.info("[%s] Retrying with a different model...", key)
+                else:
+                    logger.error("[%s] All %d review attempts produced invalid output.", key, max_attempts)
 
         # Step 3: Generate PDF
         logger.info("[%s] Generating PDF...", key)
-        generate_review_pdf(key, model_name=model_used)
+        generate_review_pdf(key, model_name=model_used or "")
         logger.info("[%s] PDF generated.", key)
 
         # Step 4: Mark as completed
