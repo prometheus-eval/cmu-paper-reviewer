@@ -111,7 +111,20 @@ function renderStatus(data) {
     </div>`;
 
   if (data.status === "failed" && data.error_message) {
-    html += `<div class="message error"><strong>Error details:</strong> ${escapeHtml(data.error_message)}</div>`;
+    if (data.error_message.includes("[OUT_OF_BUDGET]")) {
+      html += `
+        <div class="message error" style="text-align:center;padding:1.5rem;">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">&#9888;</div>
+          <strong>We're currently out of API credit and will adjust this ASAP.</strong>
+          <p style="margin-top:0.75rem;font-size:0.88rem;">Your submission has been saved. It will be processed automatically once credit is restored.</p>
+          <p style="margin-top:0.75rem;font-size:0.88rem;">If you're interested in funding this project, please contact:<br>
+            <a href="mailto:seungone@cmu.edu" style="font-weight:600;">seungone@cmu.edu</a> and
+            <a href="mailto:gneubig@cs.cmu.edu" style="font-weight:600;">gneubig@cs.cmu.edu</a>
+          </p>
+        </div>`;
+    } else {
+      html += `<div class="message error"><strong>Error details:</strong> ${escapeHtml(data.error_message)}</div>`;
+    }
   }
 
   if (data.status !== "completed" && data.status !== "failed") {

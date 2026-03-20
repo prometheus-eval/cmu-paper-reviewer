@@ -588,6 +588,46 @@ input::placeholder {
   gap: 0.75rem;
 }
 
+.criteria-drag-handle {
+  cursor: grab;
+  color: var(--gray-400);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.2rem 0;
+  user-select: none;
+  flex-shrink: 0;
+  min-width: 1rem;
+  text-align: center;
+}
+
+.criteria-drag-handle:active {
+  cursor: grabbing;
+}
+
+.criteria-config-item[draggable="true"] {
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.criteria-config-item.dragging {
+  opacity: 0.4;
+  background: var(--gray-100);
+}
+
+.criteria-config-item.drag-over {
+  box-shadow: 0 -2px 0 0 var(--cmu-red);
+}
+
+.criteria-config-item.criteria-disabled {
+  opacity: 0.5;
+  background: var(--gray-50);
+}
+
+.criteria-rank {
+  color: var(--cmu-red);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
 .criteria-config-info {
   flex: 1;
   min-width: 0;
@@ -604,40 +644,6 @@ input::placeholder {
   color: var(--gray-500);
   line-height: 1.4;
   margin-top: 0.15rem;
-}
-
-.criteria-config-importance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.15rem;
-  flex-shrink: 0;
-}
-
-.criteria-importance-label {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--gray-400);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin: 0;
-}
-
-.criteria-importance-input {
-  width: 48px;
-  height: 28px;
-  padding: 0 0.3rem;
-  border: 1px solid var(--gray-300);
-  border-radius: 6px;
-  font-size: 0.82rem;
-  font-family: inherit;
-  text-align: center;
-  color: var(--gray-800);
-}
-
-.criteria-importance-input:focus {
-  outline: none;
-  border-color: var(--cmu-red);
 }
 
 .criteria-remove-btn {
