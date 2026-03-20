@@ -463,6 +463,45 @@ input::placeholder {
   gap: 0.5rem;
 }
 
+.setting-sub-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--gray-200);
+}
+
+.setting-sub-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.setting-sub-hint {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  white-space: nowrap;
+}
+
+.date-input {
+  height: 32px;
+  padding: 0 0.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-family: inherit;
+  color: var(--gray-800);
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: var(--cmu-red);
+  box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.12);
+}
+
 /* Toggle switch */
 .toggle-switch {
   position: relative;

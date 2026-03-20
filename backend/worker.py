@@ -139,6 +139,25 @@ def process_submission(submission: Submission):
         ocr.process_pdf(str(pdf_file), key)
         logger.info("[%s] OCR complete.", key)
 
+        # Step 1.5: Extract paper date (for reference filtering)
+        if review_settings is None:
+            review_settings = {}
+        if not review_settings.get("paper_date"):
+            try:
+                from backend.services.paper_date_service import get_paper_date
+                from backend.services.storage_service import preprint_md_path
+                md_path = preprint_md_path(key)
+                if md_path.exists():
+                    md_text = md_path.read_text(encoding="utf-8")
+                    paper_date = get_paper_date(md_text)
+                    if paper_date:
+                        review_settings["paper_date"] = paper_date
+                        logger.info("[%s] Extracted paper date: %s", key, paper_date)
+                    else:
+                        logger.info("[%s] Could not determine paper date.", key)
+            except Exception:
+                logger.exception("[%s] Paper date extraction failed (non-critical).", key)
+
         # Step 2: Review
         logger.info("[%s] Starting review...", key)
         update_status(key, SubmissionStatus.reviewing)

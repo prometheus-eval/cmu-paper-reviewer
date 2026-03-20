@@ -174,13 +174,17 @@ def _parse_review(md: str) -> ParsedReview:
         evidence_match = re.search(r"####\s*Evidence\s*\n([\s\S]*?)(?=####|##\s|$)", body, re.IGNORECASE)
         if evidence_match:
             ev_text = evidence_match.group(1)
+            # Normalize bold labels: "* **Quote**:" → "* Quote:"
+            ev_text = re.sub(r"\*\s*\*\*Quote\*\*", "* Quote", ev_text)
+            ev_text = re.sub(r"\*\s*\*\*Comment\*\*", "* Comment", ev_text)
             # Split into Quote blocks: each starts with "* Quote:" or "* Quote from ...:"
             quote_blocks = re.split(r"(?=\*\s*Quote(?:\s+from\s+[^:]+)?\s*:)", ev_text)
             for block in quote_blocks:
                 block = block.strip()
                 if not block:
                     continue
-                q_match = re.match(r"\*\s*Quote(?:\s+from\s+[^:]+)?\s*:\s*([\s\S]*?)(?=\n\s+\*\s*Comment\s*:|$)", block, re.IGNORECASE)
+                # Match quote text up to comment (indented or same level)
+                q_match = re.match(r"\*\s*Quote(?:\s+from\s+[^:]+)?\s*:\s*([\s\S]*?)(?=\n\s*\*\s*Comment\s*:|$)", block, re.IGNORECASE)
                 c_match = re.search(r"\*\s*Comment\s*:\s*([\s\S]*?)$", block, re.IGNORECASE)
                 if q_match:
                     quote_text = q_match.group(1).strip()

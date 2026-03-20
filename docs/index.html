@@ -110,12 +110,17 @@
               <div class="setting-row">
                 <div class="setting-info">
                   <div class="setting-name">Enable references published after the paper</div>
-                  <div class="setting-desc">When enabled, the reviewer uses the latest knowledge including works published after the manuscript. When disabled, only references published before the manuscript date are used.</div>
+                  <div class="setting-desc">When enabled, the reviewer uses the latest knowledge including works published after the manuscript. When disabled, only references published before the manuscript date are used (date is auto-detected from the PDF, or you can set it manually below).</div>
                 </div>
                 <label class="toggle-switch">
                   <input type="checkbox" id="setting-future-refs" checked>
                   <span class="toggle-slider"></span>
                 </label>
+              </div>
+              <div id="paper-date-row" class="setting-sub-row" style="display:none;">
+                <label for="setting-paper-date" class="setting-sub-label">Paper date (optional override)</label>
+                <input type="date" id="setting-paper-date" class="date-input">
+                <span class="setting-sub-hint">Leave blank to auto-detect from the PDF</span>
               </div>
             </div>
 
