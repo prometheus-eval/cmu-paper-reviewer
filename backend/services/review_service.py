@@ -64,37 +64,26 @@ class ReviewService:
         if not self.tavily_api_key:
             return {}
 
-        # Determine if we should filter references by paper date
-        enable_future = True
-        paper_date = None
+        import sys
+
+        # Always use our custom MCP server (more reliable than npx mcp-remote
+        # which uses a fragile SSE proxy to mcp.tavily.com).
+        args = [
+            sys.executable, "-m", "backend.services.tavily_mcp",
+            "--api-key", self.tavily_api_key,
+        ]
+
+        # Add date filtering if user disabled future references and we have a paper date
         if self.review_settings:
             enable_future = self.review_settings.get("enable_future_references", True)
             paper_date = self.review_settings.get("paper_date")
+            if not enable_future and paper_date:
+                args.extend(["--paper-date", paper_date])
 
-        if not enable_future and paper_date:
-            # Use custom MCP server that filters results by publication date
-            import sys
-            args = [
-                sys.executable, "-m", "backend.services.tavily_mcp",
-                "--api-key", self.tavily_api_key,
-                "--paper-date", paper_date,
-            ]
-            return {
-                "tavily-filtered": {
-                    "command": args[0],
-                    "args": args[1:],
-                }
-            }
-
-        # Default: use Tavily MCP directly (no date filtering)
         return {
-            "tavily-remote": {
-                "command": "npx",
-                "args": [
-                    "-y",
-                    "mcp-remote",
-                    f"https://mcp.tavily.com/mcp/?tavilyApiKey={self.tavily_api_key}",
-                ],
+            "tavily": {
+                "command": args[0],
+                "args": args[1:],
             }
         }
 
