@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libcairo2 libgdk-pixbuf-2.0-0 libffi-dev shared-mime-info \
         fonts-dejavu-core fonts-liberation \
         texlive-base texlive-latex-recommended texlive-fonts-recommended \
-        texlive-latex-extra lmodern \
+        texlive-latex-extra texlive-fonts-extra lmodern \
         curl \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y --no-install-recommends nodejs \

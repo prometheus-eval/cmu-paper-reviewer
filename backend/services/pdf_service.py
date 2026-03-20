@@ -246,8 +246,8 @@ LATEX_PREAMBLE = r"""
 \usepackage{microtype}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{bbm}
 \usepackage{bm}
+\IfFileExists{bbm.sty}{\usepackage{bbm}}{\newcommand{\mathbbm}[1]{\mathbb{#1}}}
 
 \sloppy
 
@@ -555,18 +555,39 @@ def _compile_latex(tex_content: str, output_path: str) -> bool:
             for run in range(2):
                 result = subprocess.run(
                     ["pdflatex", "-interaction=nonstopmode", "-output-directory", tmpdir, tex_file],
-                    capture_output=True, text=True, timeout=60,
+                    capture_output=True, text=True, timeout=120,
                 )
-                if result.returncode != 0 and run == 1:
-                    logger.warning("pdflatex run %d failed:\n%s", run + 1, result.stdout[-2000:])
-                    return False
+                if result.returncode != 0:
+                    # Extract error lines from the log
+                    log_file = os.path.join(tmpdir, "review.log")
+                    error_lines = ""
+                    if os.path.exists(log_file):
+                        log_content = open(log_file, encoding="utf-8", errors="replace").read()
+                        # Extract lines with "!" (LaTeX errors)
+                        error_lines = "\n".join(
+                            line for line in log_content.split("\n")
+                            if line.startswith("!") or "Error" in line or "Undefined" in line
+                        )[:1000]
+                    logger.warning(
+                        "pdflatex run %d failed (returncode=%d). Errors:\n%s",
+                        run + 1, result.returncode, error_lines or result.stdout[-1000:]
+                    )
+                    if run == 1:
+                        return False
 
             pdf_file = os.path.join(tmpdir, "review.pdf")
             if os.path.exists(pdf_file):
                 shutil.copy2(pdf_file, output_path)
+                logger.info("pdflatex succeeded, PDF at %s", output_path)
                 return True
+            else:
+                logger.warning("pdflatex produced no PDF file despite no error")
+                return False
     except FileNotFoundError:
         logger.warning("pdflatex not found on system; falling back to weasyprint")
+        return False
+    except subprocess.TimeoutExpired:
+        logger.warning("pdflatex timed out after 120s")
         return False
 
     return False
