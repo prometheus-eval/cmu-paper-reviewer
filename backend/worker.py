@@ -4,6 +4,7 @@ Run as: python -m backend.worker
 """
 
 import asyncio
+import json
 import logging
 import shutil
 import time
@@ -78,10 +79,28 @@ def clear_user_keys(key: str):
             session.commit()
 
 
+def store_model_used(key: str, model_name: str):
+    """Store which model was used for the review."""
+    with SessionLocal() as session:
+        result = session.execute(select(Submission).where(Submission.key == key))
+        sub = result.scalar_one_or_none()
+        if sub:
+            sub.review_model_used = model_name
+            session.commit()
+
+
 def process_submission(submission: Submission):
     key = submission.key
     pdf_file = upload_path(key, submission.filename)
     is_byok = submission.mode == SubmissionMode.byok
+
+    # Parse review settings
+    review_settings = None
+    if submission.review_settings:
+        try:
+            review_settings = json.loads(submission.review_settings)
+        except (json.JSONDecodeError, TypeError):
+            logger.warning("[%s] Invalid review_settings JSON, using defaults.", key)
 
     try:
         # Step 0: Send "review started" email
@@ -107,13 +126,15 @@ def process_submission(submission: Submission):
             litellm_api_key=submission.user_litellm_api_key if is_byok else None,
             litellm_base_url=submission.user_litellm_base_url if is_byok else None,
             tavily_api_key=submission.user_tavily_api_key if is_byok else None,
+            review_settings=review_settings,
         )
-        reviewer.run_review(key)
-        logger.info("[%s] Review complete.", key)
+        review_path, model_used = reviewer.run_review(key)
+        store_model_used(key, model_used)
+        logger.info("[%s] Review complete. Model: %s", key, model_used)
 
         # Step 3: Generate PDF
         logger.info("[%s] Generating PDF...", key)
-        generate_review_pdf(key, model_name=settings.review_model)
+        generate_review_pdf(key, model_name=model_used)
         logger.info("[%s] PDF generated.", key)
 
         # Step 4: Mark as completed
@@ -232,9 +253,35 @@ def recover_stuck_submissions():
             session.commit()
 
 
+def _migrate_add_columns():
+    """Add new columns to existing tables if they don't exist (lightweight migration)."""
+    import sqlite3
+    db_path = sync_url.replace("sqlite:///", "")
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    # Get existing columns
+    cursor.execute("PRAGMA table_info(submissions)")
+    existing = {row[1] for row in cursor.fetchall()}
+    new_cols = {
+        "review_settings": "TEXT",
+        "review_model_used": "TEXT",
+    }
+    for col, col_type in new_cols.items():
+        if col not in existing:
+            cursor.execute(f"ALTER TABLE submissions ADD COLUMN {col} {col_type}")
+            logger.info("Added column submissions.%s", col)
+    conn.commit()
+    conn.close()
+
+
 def main():
     # Ensure tables exist
     Base.metadata.create_all(engine)
+    # Add any new columns to existing tables
+    try:
+        _migrate_add_columns()
+    except Exception:
+        logger.warning("Column migration failed (table may not exist yet)", exc_info=True)
 
     # On startup, recover any submissions stuck from a previous crash
     recover_stuck_submissions()

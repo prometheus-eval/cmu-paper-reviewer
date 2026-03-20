@@ -1,9 +1,11 @@
 """GET /api/review/{key} and related endpoints."""
 
+import io
 import json
+import zipfile
 
 from fastapi import APIRouter, Depends, HTTPException, Header
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -69,7 +71,8 @@ async def get_review_pdf(
     pdf_path = review_pdf_path(key)
     if not pdf_path.exists():
         # Generate on the fly if MD exists but PDF hasn't been created yet
-        generated = generate_review_pdf(key)
+        model_name = submission.review_model_used or ""
+        generated = generate_review_pdf(key, model_name=model_name)
         if not generated:
             raise HTTPException(status_code=404, detail="Review PDF not available.")
 
@@ -77,6 +80,50 @@ async def get_review_pdf(
         path=str(pdf_path),
         media_type="application/pdf",
         filename=f"review_{key}.pdf",
+    )
+
+
+@router.get("/review/{key}/download")
+async def download_review_bundle(
+    key: str,
+    session: AsyncSession = Depends(get_session),
+):
+    """Download a zip bundle containing the review PDF and verification code."""
+    result = await session.execute(select(Submission).where(Submission.key == key))
+    submission = result.scalar_one_or_none()
+    if not submission:
+        raise HTTPException(status_code=404, detail="Submission not found.")
+
+    if submission.status != SubmissionStatus.completed:
+        raise HTTPException(status_code=202, detail="Review is not yet complete.")
+
+    pdf_path = review_pdf_path(key)
+    if not pdf_path.exists():
+        from backend.services.pdf_service import generate_review_pdf
+        generated = generate_review_pdf(key)
+        if not generated:
+            raise HTTPException(status_code=404, detail="Review PDF not available.")
+
+    # Create zip in memory
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+        # Add PDF
+        if pdf_path.exists():
+            zf.write(str(pdf_path), f"review_{key}.pdf")
+
+        # Add verification code files
+        vdir = verification_code_dir(key)
+        if vdir.exists():
+            for fpath in vdir.rglob("*"):
+                if fpath.is_file():
+                    arcname = f"verification_code/{fpath.relative_to(vdir)}"
+                    zf.write(str(fpath), arcname)
+
+    buf.seek(0)
+    return StreamingResponse(
+        buf,
+        media_type="application/zip",
+        headers={"Content-Disposition": f'attachment; filename="review_{key}.zip"'},
     )
 
 

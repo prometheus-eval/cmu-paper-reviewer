@@ -47,6 +47,8 @@ class Submission(Base):
     user_litellm_api_key: Mapped[str | None] = mapped_column(Text, nullable=True)
     user_litellm_base_url: Mapped[str | None] = mapped_column(Text, nullable=True)
     user_tavily_api_key: Mapped[str | None] = mapped_column(Text, nullable=True)
+    review_settings: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON
+    review_model_used: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

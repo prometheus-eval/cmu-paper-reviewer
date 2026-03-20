@@ -1,16 +1,123 @@
-REVIEWER_PROMPT = """You are a reviewer agent assessing the quality of a research paper.
+"""Dynamic reviewer prompt generation based on user-configurable settings."""
+
+import json
+from datetime import datetime, timezone
+
+# Default criteria sets
+NATURE_CRITERIA = [
+    {"name": "Validity", "description": "Does the manuscript have significant flaws which should prohibit its publication?", "importance": 1},
+    {"name": "Conclusions", "description": "Are the conclusions and data interpretation robust, valid and reliable?", "importance": 2},
+    {"name": "Originality and significance", "description": "Are the results presented of immediate interest to many people in the field of study, and/or to people from several disciplines?", "importance": 3},
+    {"name": "Data and methodology", "description": "Is the reporting of data and methodology sufficiently detailed and transparent to enable reproducing the results?", "importance": 4},
+    {"name": "Appropriate use of statistics and treatment of uncertainties", "description": "Are all error bars defined in the corresponding figure legends and are all statistical tests appropriate and the description of any error bars and probability values accurate?", "importance": 5},
+    {"name": "Clarity and context", "description": "Is the abstract clear, accessible? Are abstract, introduction and conclusions appropriate?", "importance": 6},
+]
+
+NEURIPS_CRITERIA = [
+    {"name": "Originality", "description": "Are the tasks or methods new? Is the work a novel combination of well-known techniques? (This can be valuable!) Is it clear how this work differs from previous contributions? Is related work adequately cited?", "importance": 1},
+    {"name": "Quality", "description": "Is the submission technically sound? Are claims well supported (e.g., by theoretical analysis or experimental results)? Are the methods used appropriate? Is this a complete piece of work or work in progress? Are the authors careful and honest about evaluating both the strengths and weaknesses of their work?", "importance": 2},
+    {"name": "Clarity", "description": "Is the submission clearly written? Is it well organized? (If not, please make constructive suggestions for improving its clarity.) Does it adequately inform the reader? (Note that a superbly written paper provides enough information for an expert reader to reproduce its results.)", "importance": 3},
+    {"name": "Significance", "description": "Are the results important? Are others (researchers or practitioners) likely to use the ideas or build on them? Does the submission address a difficult task in a better way than previous work? Does it advance the state of the art in a demonstrable way? Does it provide unique data, unique conclusions about existing data, or a unique theoretical or experimental approach?", "importance": 4},
+]
+
+
+def get_default_settings() -> dict:
+    """Return the default review settings."""
+    return {
+        "enable_future_references": True,
+        "reviewer_criteria_preset": "nature",  # "nature" or "neurips" or "custom"
+        "max_items": 5,
+        "criteria": [
+            {**c, "enabled": True, "custom": False}
+            for c in NATURE_CRITERIA
+        ],
+        "criticize_limitations": True,
+    }
+
+
+def build_reviewer_prompt(settings: dict | None = None) -> str:
+    """Build the reviewer prompt based on user-configurable settings.
+
+    Args:
+        settings: dict with keys:
+            - enable_future_references: bool
+            - reviewer_criteria_preset: "nature" | "neurips" | "custom"
+            - max_items: int (1-10)
+            - criteria: list of {name, description, importance, enabled, custom}
+            - criticize_limitations: bool
+            - paper_date: str | None (extracted date of the paper, ISO format)
+    """
+    if settings is None:
+        settings = get_default_settings()
+
+    max_items = settings.get("max_items", 5)
+    criteria = settings.get("criteria", NATURE_CRITERIA)
+    enabled_criteria = [c for c in criteria if c.get("enabled", True)]
+    enabled_criteria.sort(key=lambda c: c.get("importance", 99))
+    criticize_limitations = settings.get("criticize_limitations", True)
+    enable_future_references = settings.get("enable_future_references", True)
+    paper_date = settings.get("paper_date")
+
+    # Current date
+    now = datetime.now(timezone.utc)
+    current_date_str = now.strftime("%B %d, %Y")
+
+    # Build criteria section
+    criteria_lines = []
+    for i, c in enumerate(enabled_criteria, 1):
+        criteria_lines.append(f"{i}. {c['name']}: {c.get('description', '')}")
+    criteria_text = "\n".join(criteria_lines)
+
+    # Build limitations instruction
+    if criticize_limitations:
+        limitations_instruction = (
+            "8. Try to avoid using what the paper listed in the \"Limitations\" or \"Future work\" section as your claim "
+            "unless it is actually a significant issue that is not justifiable. If so, you should prepare very good evidence "
+            "explaining why just listing it in the limitations or future work section is not sufficient."
+        )
+    else:
+        limitations_instruction = (
+            "8. Do NOT criticize items that are mentioned in the paper's \"Limitations\" or \"Future work\" section. "
+            "The authors have already acknowledged these limitations, and your review should focus on issues the authors "
+            "have not identified or addressed."
+        )
+
+    # Build future references instruction
+    future_ref_instruction = ""
+    if not enable_future_references and paper_date:
+        future_ref_instruction = (
+            f"\n\n### Important constraint on reference materials\n"
+            f"The paper under review has an estimated publication/submission date of {paper_date}. "
+            f"You must ONLY use reference materials (papers, articles, blog posts, etc.) that were published ON OR BEFORE this date. "
+            f"When using the Tavily search tool, check the \"published_date\" field in the results and EXCLUDE any reference "
+            f"that was published after {paper_date}. Do not cite or use knowledge from publications that post-date the manuscript. "
+            f"This ensures the review is fair and does not penalize the authors for not citing work that did not exist at the time of writing."
+        )
+    elif not enable_future_references:
+        future_ref_instruction = (
+            f"\n\n### Important constraint on reference materials\n"
+            f"When using the Tavily search tool, check the \"published_date\" field in the results. "
+            f"Try to determine the submission/publication date of the paper from its content (e.g., date on the manuscript, "
+            f"arXiv submission date mentioned, or year of references). Only use reference materials published on or before "
+            f"the paper's estimated date. This ensures the review is fair and does not penalize the authors for not citing "
+            f"work that did not exist at the time of writing."
+        )
+
+    prompt = f"""You are a reviewer agent assessing the quality of a research paper.
 You will be given the paper's content, images, and optionally its code and supplementary materials.
-Your task is to write a review in markdown format, where your review must contain at most five items (from most significant to least significant).
+Your task is to write a review in markdown format, where your review must contain at most {max_items} items (from most significant to least significant).
 Each item represents an atomic criticism of the paper and points out a major issue.
 If the paper contains no significant issues, then you can output zero items.
+
+**Important context: Today's date is {current_date_str}.** This is relevant for assessing the recency of cited works and the state of the field.
 
 
 ### Principles guiding your review (ordered by importance)
 1. Your review must be factually correct:
    Your claims will be checked by domain experts. Any incorrect or unsupported criticism will undermine the credibility of your review. When uncertain, avoid speculation.
 2. Your review must consist of only significant issues:
-   Only point out problems that meaningfully affect the paper's validity, soundness, methodology, claims, or reproducibility. Do not focus on minor or cosmetic issues. If you think there are less than five significant issues, then you should output less than five items (even zero items are allowed if there are no significant issues).
-3. Your review must be concise and only criticize at most five major aspects with detailed evidence:
+   Only point out problems that meaningfully affect the paper's validity, soundness, methodology, claims, or reproducibility. Do not focus on minor or cosmetic issues. If you think there are less than {max_items} significant issues, then you should output less than {max_items} items (even zero items are allowed if there are no significant issues).
+3. Your review must be concise and only criticize at most {max_items} major aspects with detailed evidence:
    Each criticism must be supported with detailed evidence. Specifically, mention the contextual background of what the authors attempted to do, and why that was not sufficient when comparing to common practices in the field (e.g., refer to how other relevant papers attempted to address this issue and why it is more precise or comprehensive compared to this paper).
 
 
@@ -30,10 +137,10 @@ If the paper contains no significant issues, then you can output zero items.
    Each reference must be numbered using [1], [2], [3], and every in-text citation must be written as [[N]](#refN) (e.g., [[1]](#ref1), [[2]](#ref2)) so that it becomes a clickable hyperlink.
    If you do not have the ability to search external literature, write "N/A (no literature search tools available)" in place of the search query.
 5. The review must not include an introduction, summary, or concluding remarks.
-   It must contain at most five items, and a citation list at the end.
+   It must contain at most {max_items} items, and a citation list at the end.
 6. All output must be valid markdown.
 7. You must separate each item with a blank line.
-8. Try to avoid using what the paper listed in the "Limitations" or "Future work" section as your claim unless it is actually a significant issue. If so, you should prepare very good evidence explaining why just listing it in the limitations or future work section is not sufficient.
+{limitations_instruction}
 9. The items should be sorted by their importance. This means that the first item is the most important one, and the last item is the least important one. The importance is decided by the priority of the evaluation criteria (explained below).
 10. Never output raw triple-backticks inside quotation marks. If evidence is a code block, place the fenced code block outside of quotation marks.
 11. Use the format Item 1, Item 2, ..., with no fraction or denominator.
@@ -45,7 +152,7 @@ If the paper contains no significant issues, then you can output zero items.
 3. Each item must be independent of other items.
 4. Each item must be formatted exactly as follows:
 ```
-## Item {n}: <short title summarizing the criticism>
+## Item {{n}}: <short title summarizing the criticism>
 
 #### Claim
 * Main point of criticism: <State what you are criticizing the paper for>
@@ -88,17 +195,12 @@ It is very recommended to send a search query, read through the retrieved materi
 
 
 ### Evaluation criteria (ordered by importance)
-1. Validity: Does the manuscript have significant flaws which should prohibit its publication?
-2. Conclusions: Are the conclusions and data interpretation robust, valid and reliable?
-3. Originality and significance: Are the results presented of immediate interest to many people in the field of study, and/or to people from several disciplines?
-4. Data and methodology: Is the reporting of data and methodology sufficiently detailed and transparent to enable reproducing the results?
-5. Appropriate use of statistics and treatment of uncertainties: Are all error bars defined in the corresponding figure legends and are all statistical tests appropriate and the description of any error bars and probability values accurate?
-6. Clarity and context: Is the abstract clear, accessible? Are abstract, introduction and conclusions appropriate?
+{criteria_text}
 
 Note that the earlier evaluation criteria should be prioritized when deciding the items in the review over the later evaluation criteria.
-For instance, assessing based on the "Validity" criterion should be prioritized over other ones, followed by "Conclusions", and so on.
-Also, as a reminder, you could output less than five items if the paper contains no significant issues upon inspecting the paper based on these criteria.
-
+For instance, assessing based on the first criterion should be prioritized over other ones, followed by the second, and so on.
+Also, as a reminder, you could output less than {max_items} items if the paper contains no significant issues upon inspecting the paper based on these criteria.
+{future_ref_instruction}
 
 ### TODO List for writing your review
 - [ ] Read through the paper, supplementary files, and images and construct a potential list of items you will criticize.
@@ -156,3 +258,4 @@ preprint/
 3. The code you are reviewing does not need to be perfect; focus on major issues such as non-reproducible experiments or mismatches with descriptions instead of minor issues such as bad formatting, hard-coded paths, not accessible links to code, and bad documentation. Also, the code should be used to support the criticisms you make, and the main focus shouldn't be on the code itself.
 4. When refining your review (as specified in the TODO list), please ensure that all the items in the review are factually correct, significant, and mutually exclusive to each other.
 """
+    return prompt

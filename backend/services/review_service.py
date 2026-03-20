@@ -1,7 +1,9 @@
 """Review service refactored from generate_review.py — orchestrates the OpenHands agent."""
 
+import json
 import logging
 import os
+import random
 import uuid
 
 from openhands.sdk import Agent, Conversation, Event, LLM, LLMConvertibleEvent, Tool
@@ -11,7 +13,7 @@ from openhands.tools.task_tracker import TaskTrackerTool
 from openhands.tools.terminal.definition import TerminalTool
 
 from backend.config import settings
-from backend.reviewer_prompt import REVIEWER_PROMPT
+from backend.reviewer_prompt import build_reviewer_prompt
 from backend.services.storage_service import preprint_dir, review_md_path, review_output_dir
 
 logger = logging.getLogger(__name__)
@@ -23,11 +25,14 @@ class ReviewService:
         litellm_api_key: str | None = None,
         litellm_base_url: str | None = None,
         tavily_api_key: str | None = None,
+        review_settings: dict | None = None,
     ):
-        self.model_name = settings.review_model
+        # Randomly pick a model from the configured list
+        self.model_name = random.choice(settings.review_models)
         self.litellm_api_key = litellm_api_key or settings.litellm_api_key
         self.litellm_base_url = litellm_base_url or settings.litellm_base_url
         self.tavily_api_key = tavily_api_key or settings.tavily_api_key
+        self.review_settings = review_settings
 
     def _build_llm(self) -> LLM:
         return LLM(
@@ -50,10 +55,10 @@ class ReviewService:
             }
         }
 
-    def run_review(self, key: str) -> str:
+    def run_review(self, key: str) -> tuple[str, str]:
         """Run the OpenHands review agent for a given submission.
 
-        Returns the path to the generated review markdown file.
+        Returns a tuple of (path to review markdown, model name used).
         """
         logger.info("Starting review for key=%s with model=%s", key, self.model_name)
 
@@ -92,7 +97,8 @@ class ReviewService:
             max_iteration_per_run=200,
         )
 
-        prompt = REVIEWER_PROMPT.replace("[LINK TO THE PAPER]", link_to_paper).replace(
+        prompt = build_reviewer_prompt(self.review_settings)
+        prompt = prompt.replace("[LINK TO THE PAPER]", link_to_paper).replace(
             "[MODEL NAME]", model_short
         )
         conversation.send_message(prompt)
@@ -112,4 +118,4 @@ class ReviewService:
             # If review.md already exists, overwrite
             canonical_path.write_text(agent_review_path.read_text(encoding="utf-8"), encoding="utf-8")
 
-        return str(canonical_path)
+        return str(canonical_path), self.model_name
