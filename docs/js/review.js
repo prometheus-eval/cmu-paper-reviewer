@@ -436,6 +436,14 @@ function renderStructuredReview(parsed, key) {
   actionsRow.appendChild(shareBtn);
   reviewSummaryCard.appendChild(actionsRow);
 
+  // -- Typeset math (KaTeX) after content is in the DOM --
+  // Use a small delay to ensure KaTeX auto-render script has loaded
+  setTimeout(() => {
+    typsetMath(reviewSummaryCard);
+    typsetMath(reviewItems);
+    typsetMath(citationCard);
+  }, 100);
+
   // -- Show annotation modal --
   showAnnotationModal(key, parsed.items, 0);
 }
@@ -851,28 +859,70 @@ function escapeHtml(text) {
 }
 
 function renderInlineMarkdown(text) {
-  // Handle nested-bracket citation links first: [[1]](#ref1) or [[1]](#citation-1)
+  // 1. Protect math expressions from being mangled by other replacements
+  const mathBlocks = [];
+  // Display math: $$...$$
+  text = text.replace(/\$\$([\s\S]+?)\$\$/g, (m, math) => {
+    const idx = mathBlocks.length;
+    mathBlocks.push(`<span class="math-display">$$${math}$$</span>`);
+    return `%%MATH${idx}%%`;
+  });
+  // Inline math: $...$  (but not $$)
+  text = text.replace(/\$([^\$\n]+?)\$/g, (m, math) => {
+    const idx = mathBlocks.length;
+    mathBlocks.push(`<span class="math-inline">$${math}$</span>`);
+    return `%%MATH${idx}%%`;
+  });
+
+  // 2. Protect fenced code blocks: ```lang\n...\n```
+  const codeBlocks = [];
+  text = text.replace(/```(\w*)\n([\s\S]*?)```/g, (m, lang, code) => {
+    const idx = codeBlocks.length;
+    const escaped = escapeHtml(code.trim());
+    codeBlocks.push(`<pre class="code-block"><code${lang ? ` class="language-${lang}"` : ""}>${escaped}</code></pre>`);
+    return `%%CODE${idx}%%`;
+  });
+
+  // 3. Handle citations and links
   let result = text.replace(/\[\[(\d+)\]\]\((#[^)]+)\)/g, (match, num, url) => {
     return `<a href="${url}" class="citation-ref" style="scroll-behavior:smooth;">[${num}]</a>`;
   });
-  // Then handle standard markdown links: [text](url)
   result = result.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, label, url) => {
     if (url.startsWith("#")) {
       return `<a href="${url}" style="scroll-behavior:smooth;">${label}</a>`;
     }
     return `<a href="${url}" target="_blank" rel="noopener">${label}</a>`;
   });
-  // Auto-link plain [N] citation references that weren't already converted
   result = result.replace(/(?<![<\w])(?<!\[)\[(\d+)\](?!\()/g, (match, num) => {
     return `<a href="#ref${num}" class="citation-ref" style="scroll-behavior:smooth;">[${num}]</a>`;
   });
+
+  // 4. Standard markdown formatting
   result = result
     .replace(/\n\n/g, "</p><p>")
     .replace(/\n/g, "<br>")
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/`(.+?)`/g, "<code>$1</code>");
+
+  // 5. Restore protected blocks
+  result = result.replace(/%%CODE(\d+)%%/g, (m, idx) => codeBlocks[parseInt(idx)]);
+  result = result.replace(/%%MATH(\d+)%%/g, (m, idx) => mathBlocks[parseInt(idx)]);
+
   return result;
+}
+
+function typsetMath(el) {
+  // Call KaTeX auto-render on an element after content is injected
+  if (window.renderMathInElement) {
+    window.renderMathInElement(el, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+      throwOnError: false,
+    });
+  }
 }
 
 function renderCitation(text) {

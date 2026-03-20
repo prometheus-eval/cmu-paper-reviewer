@@ -132,7 +132,7 @@ If the paper contains no significant issues, then you can output zero items.
    a. Exact sentences from the main paper or supplementary materials.
    b. Exact code blocks or functions from the paper's code.
    c. Exact sentences from papers in the literature (these must be hyperlinked and cited).
-   For each piece of evidence, include a comment explaining why it supports the claim or why it demonstrates a significant problem.
+   IMPORTANT: Every single Quote MUST be immediately followed by its own Comment. Never write two consecutive Quotes without a Comment in between. If multiple quotes support the same point, each quote still needs its own individual comment explaining its relevance.
 4. At the end of the review, include a citation list containing all literature references used in your evidence.
    Each reference must be numbered using [1], [2], [3], and every in-text citation must be written as [[N]](#refN) (e.g., [[1]](#ref1), [[2]](#ref2)) so that it becomes a clickable hyperlink.
    If you do not have the ability to search external literature, write "N/A (no literature search tools available)" in place of the search query.
