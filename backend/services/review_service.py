@@ -35,10 +35,19 @@ class ReviewService:
         self.review_settings = review_settings
 
     def _build_llm(self) -> LLM:
+        # Disable Claude/Anthropic-specific params that non-Claude models
+        # (e.g. Azure AI GPT-5.4, Gemini) don't support.
+        is_claude = "claude" in self.model_name.lower()
         return LLM(
             model=self.model_name,
             base_url=self.litellm_base_url,
             api_key=self.litellm_api_key,
+            drop_params=True,
+            prompt_cache_retention="24h" if is_claude else None,
+            caching_prompt=is_claude,
+            reasoning_effort="high" if is_claude else None,
+            extended_thinking_budget=200000 if is_claude else None,
+            enable_encrypted_reasoning=is_claude,
         )
 
     def _build_mcp_config(self) -> dict:

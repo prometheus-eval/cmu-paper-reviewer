@@ -283,6 +283,7 @@ def _migrate_add_columns():
     cursor.execute("PRAGMA table_info(submissions)")
     existing = {row[1] for row in cursor.fetchall()}
     new_cols = {
+        "client_ip": "VARCHAR(45)",
         "review_settings": "TEXT",
         "review_model_used": "TEXT",
     }
@@ -290,6 +291,14 @@ def _migrate_add_columns():
         if col not in existing:
             cursor.execute(f"ALTER TABLE submissions ADD COLUMN {col} {col_type}")
             logger.info("Added column submissions.%s", col)
+
+    # Annotations table migration
+    cursor.execute("PRAGMA table_info(annotations)")
+    ann_existing = {row[1] for row in cursor.fetchall()}
+    if "seconds_since_review" not in ann_existing:
+        cursor.execute("ALTER TABLE annotations ADD COLUMN seconds_since_review INTEGER")
+        logger.info("Added column annotations.seconds_since_review")
+
     conn.commit()
     conn.close()
 

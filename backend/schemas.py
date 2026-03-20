@@ -63,3 +63,4 @@ class AnnotationResponse(BaseModel):
     correctness: str | None = None
     significance: str | None = None
     evidence_quality: str | None = None
+    seconds_since_review: int | None = None

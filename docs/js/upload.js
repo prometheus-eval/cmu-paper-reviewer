@@ -468,6 +468,30 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+// --- Rate limit popup ---
+function showRateLimitPopup(message) {
+  const modalRoot = document.getElementById("criteria-modal-root");
+  modalRoot.innerHTML = `
+    <div class="modal-overlay" id="rate-limit-overlay">
+      <div class="modal" style="max-width:480px;text-align:center;">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;">&#9203;</div>
+        <h3 style="margin-bottom:0.5rem;">Daily Limit Reached</h3>
+        <p style="color:var(--gray-600);font-size:0.93rem;line-height:1.6;margin-bottom:1.25rem;">
+          ${escapeHtml(message)}
+        </p>
+        <div class="modal-actions" style="justify-content:center;">
+          <button class="btn btn-primary btn-sm" id="rate-limit-close" style="margin-top:0;">Got it</button>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById("rate-limit-close").addEventListener("click", () => {
+    modalRoot.innerHTML = "";
+  });
+  document.getElementById("rate-limit-overlay").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) modalRoot.innerHTML = "";
+  });
+}
+
 // --- Form submission ---
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -514,6 +538,10 @@ form.addEventListener("submit", async (e) => {
 
     if (!resp.ok) {
       const err = await resp.json();
+      if (resp.status === 429) {
+        showRateLimitPopup(err.detail || "You have reached the daily submission limit.");
+        return;
+      }
       throw new Error(err.detail || "Submission failed.");
     }
 
