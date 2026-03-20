@@ -588,20 +588,39 @@ input::placeholder {
   gap: 0.75rem;
 }
 
-.criteria-drag-handle {
-  cursor: grab;
-  color: var(--gray-400);
-  font-size: 1rem;
-  line-height: 1;
-  padding: 0.2rem 0;
-  user-select: none;
+.criteria-arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
   flex-shrink: 0;
-  min-width: 1rem;
-  text-align: center;
+  min-width: 1.2rem;
+  align-items: center;
 }
 
-.criteria-drag-handle:active {
-  cursor: grabbing;
+.criteria-arrow-btn {
+  background: none;
+  border: none;
+  font-size: 0.65rem;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+  width: 1.2rem;
+  height: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.criteria-arrow-btn:hover {
+  color: var(--cmu-red);
+}
+
+.criteria-arrow-placeholder {
+  display: block;
+  width: 1.2rem;
+  height: 0.85rem;
 }
 
 .criteria-config-item[draggable="true"] {
@@ -1576,6 +1595,18 @@ footer p {
   color: var(--gray-400);
   font-size: 0.82rem;
   line-height: 1.5;
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--gray-300);
+  text-underline-offset: 2px;
+}
+
+.footer-link:hover {
+  color: var(--gray-600);
+  text-decoration-color: var(--gray-400);
 }
 
 /* --- Inline lookup form --- */
