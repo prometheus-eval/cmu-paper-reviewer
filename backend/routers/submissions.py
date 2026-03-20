@@ -37,8 +37,8 @@ async def submit_paper(
     if not client_ip:
         client_ip = request.client.host if request.client else "unknown"
 
-    # Rate limit: max submissions per IP per day
-    if client_ip != "unknown" and settings.max_submissions_per_ip_per_day > 0:
+    # Rate limit: max submissions per IP per day (queue mode only — BYOK uses user's own keys)
+    if mode == "queue" and client_ip != "unknown" and settings.max_submissions_per_ip_per_day > 0:
         cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
         result = await session.execute(
             select(func.count())
