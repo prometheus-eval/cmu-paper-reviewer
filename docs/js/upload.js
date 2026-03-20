@@ -188,8 +188,17 @@ maxItemsSlider.addEventListener("input", () => {
 });
 
 // Future references toggle
-document.getElementById("setting-future-refs").addEventListener("change", (e) => {
+const futureRefsToggle = document.getElementById("setting-future-refs");
+const paperDateRow = document.getElementById("paper-date-row");
+const paperDateInput = document.getElementById("setting-paper-date");
+
+futureRefsToggle.addEventListener("change", (e) => {
   reviewSettings.enable_future_references = e.target.checked;
+  paperDateRow.style.display = e.target.checked ? "none" : "flex";
+});
+
+paperDateInput.addEventListener("change", () => {
+  reviewSettings.paper_date = paperDateInput.value || null;
 });
 
 // Criticize limitations toggle

@@ -63,6 +63,30 @@ class ReviewService:
     def _build_mcp_config(self) -> dict:
         if not self.tavily_api_key:
             return {}
+
+        # Determine if we should filter references by paper date
+        enable_future = True
+        paper_date = None
+        if self.review_settings:
+            enable_future = self.review_settings.get("enable_future_references", True)
+            paper_date = self.review_settings.get("paper_date")
+
+        if not enable_future and paper_date:
+            # Use custom MCP server that filters results by publication date
+            import sys
+            args = [
+                sys.executable, "-m", "backend.services.tavily_mcp",
+                "--api-key", self.tavily_api_key,
+                "--paper-date", paper_date,
+            ]
+            return {
+                "tavily-filtered": {
+                    "command": args[0],
+                    "args": args[1:],
+                }
+            }
+
+        # Default: use Tavily MCP directly (no date filtering)
         return {
             "tavily-remote": {
                 "command": "npx",

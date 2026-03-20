@@ -273,12 +273,16 @@ function parseReviewMarkdown(md) {
       // Parse Evidence section
       const evidenceMatch = body.match(/####\s*Evidence\s*\n([\s\S]*?)(?=####|##\s(?!#)|$)/i);
       if (evidenceMatch) {
-        const evText = evidenceMatch[1];
+        let evText = evidenceMatch[1];
+        // Normalize bold labels: "* **Quote**:" → "* Quote:"
+        evText = evText.replace(/\*\s*\*\*Quote\*\*/g, "* Quote");
+        evText = evText.replace(/\*\s*\*\*Comment\*\*/g, "* Comment");
         const quoteBlocks = evText.split(/(?=\*\s*Quote(?:\s+from\s+[^:]+)?\s*:)/i);
         for (const block of quoteBlocks) {
           const trimmed = block.trim();
           if (!trimmed) continue;
-          const qMatch = trimmed.match(/\*\s*Quote(?:\s+from\s+[^:]+)?\s*:\s*([\s\S]*?)(?=\n\s+\*\s*Comment\s*:|$)/i);
+          // Match quote text up to comment (indented or same level)
+          const qMatch = trimmed.match(/\*\s*Quote(?:\s+from\s+[^:]+)?\s*:\s*([\s\S]*?)(?=\n\s*\*\s*Comment\s*:|$)/i);
           const cMatch = trimmed.match(/\*\s*Comment\s*:\s*([\s\S]*?)$/i);
           if (qMatch) {
             item.evidence.push({
