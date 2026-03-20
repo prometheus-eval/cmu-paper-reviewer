@@ -87,6 +87,68 @@ class ReviewService:
             }
         }
 
+    @staticmethod
+    def _patch_litellm_for_proxy():
+        """Monkey-patch litellm completion to inject allowed_openai_params for proxy models.
+
+        The LiteLLM proxy rejects tool_choice for azure_ai models unless
+        allowed_openai_params is sent in extra_body. We must patch every
+        module that imports litellm's completion/acompletion functions.
+        """
+        if getattr(litellm, "_cmu_patched", False):
+            return  # Already patched
+
+        # Patch synchronous completion
+        _original_completion = litellm.completion
+
+        def _patched_completion(*args, **kwargs):
+            model = kwargs.get("model", args[0] if args else "")
+            if "litellm_proxy/" in model:
+                extra_body = kwargs.get("extra_body", {}) or {}
+                if "allowed_openai_params" not in extra_body:
+                    extra_body["allowed_openai_params"] = ["tool_choice"]
+                    kwargs["extra_body"] = extra_body
+            return _original_completion(*args, **kwargs)
+
+        litellm.completion = _patched_completion
+
+        # Patch async completion
+        _original_acompletion = litellm.acompletion
+
+        async def _patched_acompletion(*args, **kwargs):
+            model = kwargs.get("model", args[0] if args else "")
+            if "litellm_proxy/" in model:
+                extra_body = kwargs.get("extra_body", {}) or {}
+                if "allowed_openai_params" not in extra_body:
+                    extra_body["allowed_openai_params"] = ["tool_choice"]
+                    kwargs["extra_body"] = extra_body
+            return await _original_acompletion(*args, **kwargs)
+
+        litellm.acompletion = _patched_acompletion
+
+        # Patch all OpenHands modules that have already imported the functions
+        for mod_path in [
+            "openhands.sdk.llm.llm",
+            "openhands.llm.llm",
+        ]:
+            try:
+                import importlib
+                mod = importlib.import_module(mod_path)
+                if hasattr(mod, "litellm_completion"):
+                    mod.litellm_completion = _patched_completion
+            except (ImportError, AttributeError):
+                pass
+
+        try:
+            import importlib
+            async_mod = importlib.import_module("openhands.llm.async_llm")
+            if hasattr(async_mod, "litellm_acompletion"):
+                async_mod.litellm_acompletion = _patched_acompletion
+        except (ImportError, AttributeError):
+            pass
+
+        litellm._cmu_patched = True
+
     def run_review(self, key: str) -> tuple[str, str]:
         """Run the OpenHands review agent for a given submission.
 
@@ -94,9 +156,9 @@ class ReviewService:
         """
         logger.info("Starting review for key=%s with model=%s", key, self.model_name)
 
-        # Tell litellm globally to drop unsupported params — this propagates
-        # to the LiteLLM proxy so it won't reject tool_choice etc.
+        # Patch litellm to inject allowed_openai_params for proxy models
         litellm.drop_params = True
+        self._patch_litellm_for_proxy()
 
         llm = self._build_llm()
         condenser = LLMSummarizingCondenser(
