@@ -6,44 +6,6 @@ import os
 import random
 import uuid
 
-# ── Patch litellm BEFORE OpenHands imports it ────────────────────────────────
-# OpenHands does `from litellm import completion as litellm_completion` at import
-# time. We must replace litellm.completion BEFORE that import happens, so
-# OpenHands captures our patched version as its local reference.
-import litellm
-
-_original_litellm_completion = litellm.completion
-_original_litellm_acompletion = litellm.acompletion
-
-
-def _patched_completion(*args, **kwargs):
-    model = kwargs.get("model", args[0] if args else "")
-    if "litellm_proxy/" in str(model):
-        extra_body = kwargs.get("extra_body") or {}
-        extra_body["allowed_openai_params"] = ["tool_choice"]
-        kwargs["extra_body"] = extra_body
-    return _original_litellm_completion(*args, **kwargs)
-
-
-async def _patched_acompletion(*args, **kwargs):
-    model = kwargs.get("model", args[0] if args else "")
-    if "litellm_proxy/" in str(model):
-        extra_body = kwargs.get("extra_body") or {}
-        extra_body["allowed_openai_params"] = ["tool_choice"]
-        kwargs["extra_body"] = extra_body
-    return await _original_litellm_acompletion(*args, **kwargs)
-
-
-litellm.completion = _patched_completion
-litellm.acompletion = _patched_acompletion
-# Also patch litellm.main (the internal module where the function is defined)
-if hasattr(litellm, "main"):
-    litellm.main.completion = _patched_completion
-    if hasattr(litellm.main, "acompletion"):
-        litellm.main.acompletion = _patched_acompletion
-litellm.drop_params = True
-# ── End patch ────────────────────────────────────────────────────────────────
-
 from openhands.sdk import Agent, Conversation, Event, LLM, LLMConvertibleEvent, Tool
 from openhands.sdk.context.condenser import LLMSummarizingCondenser
 from openhands.tools.file_editor import FileEditorTool
@@ -77,13 +39,6 @@ class ReviewService:
         # (e.g. Azure AI GPT-5.4, Gemini) don't support.
         is_claude = "claude" in self.model_name.lower()
 
-        # For non-Claude models behind a LiteLLM proxy, the proxy may reject
-        # params like tool_choice that aren't in its allowed list.
-        # Passing allowed_openai_params via extra_body whitelists them per-request.
-        extra_body = {}
-        if not is_claude:
-            extra_body["allowed_openai_params"] = ["tool_choice"]
-
         return LLM(
             model=self.model_name,
             base_url=self.litellm_base_url,
@@ -94,7 +49,6 @@ class ReviewService:
             reasoning_effort="high" if is_claude else None,
             extended_thinking_budget=200000 if is_claude else None,
             enable_encrypted_reasoning=is_claude,
-            litellm_extra_body=extra_body,
         )
 
     def _build_mcp_config(self) -> dict:

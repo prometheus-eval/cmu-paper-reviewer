@@ -68,6 +68,9 @@ def build_reviewer_prompt(settings: dict | None = None) -> str:
         criteria_lines.append(f"{i}. {c['name']}: {c.get('description', '')}")
     criteria_text = "\n".join(criteria_lines)
 
+    # Build a short summary of criteria names for use in the principles section
+    criteria_names_summary = ", ".join(c["name"].lower() for c in enabled_criteria)
+
     # Build limitations instruction
     if criticize_limitations:
         limitations_instruction = (
@@ -116,7 +119,7 @@ If the paper contains no significant issues, then you can output zero items.
 1. Your review must be factually correct:
    Your claims will be checked by domain experts. Any incorrect or unsupported criticism will undermine the credibility of your review. When uncertain, avoid speculation.
 2. Your review must consist of only significant issues:
-   Only point out problems that meaningfully affect the paper's validity, soundness, methodology, claims, or reproducibility. Do not focus on minor or cosmetic issues. If you think there are less than {max_items} significant issues, then you should output less than {max_items} items (even zero items are allowed if there are no significant issues).
+   Only point out problems that meaningfully affect the paper based on the evaluation criteria ({criteria_names_summary}). Do not focus on minor or cosmetic issues. You don't always have to fill all {max_items} issues in case there isn't anything to point out. However, it is equally bad if there are clearly significant problems in the paper but you don't point them out.
 3. Your review must be concise and only criticize at most {max_items} major aspects with detailed evidence:
    Each criticism must be supported with detailed evidence. Specifically, mention the contextual background of what the authors attempted to do, and why that was not sufficient when comparing to common practices in the field (e.g., refer to how other relevant papers attempted to address this issue and why it is more precise or comprehensive compared to this paper).
 
@@ -189,6 +192,7 @@ The citation list must be formatted as follows:
 ```
 Each citation must include a hyperlinked URL to the source. In the body of the review, reference citations as [[1]](#ref1), [[2]](#ref2), etc.
 There should be at least five citations in the citation list.
+IMPORTANT: Every citation in the citation list MUST be referenced at least once in the evidence sections above. Do not include citations that are not used in the review — the citation list should only contain references that directly support your claims.
 The citations could be academic papers, blog posts, news articles, datasets, code repositories, and other relevant sources.
 Don't simply include papers that are cited in the paper you are reviewing.
 It is very recommended to send a search query, read through the retrieved material, and based on that, iteratively send additional search queries and gather the most crucial pieces of evidence to support your review.

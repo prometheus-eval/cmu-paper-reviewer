@@ -63,6 +63,32 @@ def _tex_escape(text: str) -> str:
     return text
 
 
+def _tex_escape_preserving_math(text: str) -> str:
+    """Escape LaTeX special characters but preserve $...$ and $$...$$ math blocks."""
+    # Extract math blocks before escaping
+    math_placeholders = []
+
+    def _save_math(m):
+        idx = len(math_placeholders)
+        math_placeholders.append(m.group(0))
+        return f"%%MATH_PH_{idx}%%"
+
+    # Protect display math $$...$$ first, then inline $...$
+    text = re.sub(r'\$\$[\s\S]+?\$\$', _save_math, text)
+    text = re.sub(r'\$[^\$\n]+?\$', _save_math, text)
+
+    # Now escape everything else
+    text = _tex_escape(text)
+
+    # Restore math blocks (unescaped)
+    for idx, math in enumerate(math_placeholders):
+        text = text.replace(f"%%MATH\\_PH\\_{idx}%%", math)
+        # Also handle case where underscores weren't escaped (shouldn't happen but safe)
+        text = text.replace(f"%%MATH_PH_{idx}%%", math)
+
+    return text
+
+
 def _tex_escape_url(url: str) -> str:
     """Escape a URL for use in \\href — only escape characters that break LaTeX."""
     return url.replace("#", r"\#").replace("%", r"\%").replace("&", r"\&")
@@ -71,12 +97,20 @@ def _tex_escape_url(url: str) -> str:
 def _tex_escape_with_links(text: str, auto_link_citations: bool = True) -> str:
     """Escape LaTeX special chars in text while converting [text](url) to \\href.
 
-    Handles nested-bracket citation links like [[1]](#ref1) as well as
-    standard markdown links like [text](url).
-    When auto_link_citations is True, also converts plain [N] references
-    to clickable links pointing to the citation list.
+    Preserves $...$ and $$...$$ math blocks, and handles citation links.
     """
-    # Combined pattern: nested-bracket citations OR standard markdown links
+    # 1. Extract math blocks first
+    math_placeholders = []
+
+    def _save_math(m):
+        idx = len(math_placeholders)
+        math_placeholders.append(m.group(0))
+        return f"\x00MATH{idx}\x00"
+
+    text = re.sub(r'\$\$[\s\S]+?\$\$', _save_math, text)
+    text = re.sub(r'\$[^\$\n]+?\$', _save_math, text)
+
+    # 2. Handle links and escape non-math text
     link_pattern = re.compile(
         r'\[\[(\d+)\]\]\(([^)]+)\)'   # [[N]](url) — citation reference
         r'|'
@@ -87,11 +121,9 @@ def _tex_escape_with_links(text: str, auto_link_citations: bool = True) -> str:
     for m in link_pattern.finditer(text):
         parts.append(_tex_escape(text[last_end:m.start()]))
         if m.group(1) is not None:
-            # Nested-bracket citation: [[N]](#anchor) → clickable link to ref
             num = m.group(1)
             parts.append(r"\hyperlink{ref" + num + r"}{[" + num + r"]}")
         else:
-            # Standard link: [text](url) → \href{url}{text}
             link_text = m.group(3)
             link_url = m.group(4)
             parts.append(r"\href{" + _tex_escape_url(link_url) + "}{" + _tex_escape(link_text) + "}")
@@ -106,6 +138,11 @@ def _tex_escape_with_links(text: str, auto_link_citations: bool = True) -> str:
             lambda m: r"\hyperlink{ref" + m.group(1) + r"}{[" + m.group(1) + r"]}",
             result,
         )
+
+    # 3. Restore math blocks (unescaped)
+    for idx, math in enumerate(math_placeholders):
+        # The placeholder null bytes survive _tex_escape unchanged
+        result = result.replace(f"\x00MATH{idx}\x00", math)
 
     return result
 
@@ -207,6 +244,10 @@ LATEX_PREAMBLE = r"""
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{bm}
 
 \sloppy
 

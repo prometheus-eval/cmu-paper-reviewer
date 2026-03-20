@@ -921,6 +921,10 @@ function typsetMath(el) {
         { left: "$", right: "$", display: false },
       ],
       throwOnError: false,
+      macros: {
+        "\\mathbbm": "\\mathbb",
+        "\\bm": "\\boldsymbol",
+      },
     });
   }
 }
