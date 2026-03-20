@@ -2,11 +2,13 @@
 
 import shutil
 import zipfile
+from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
-from sqlalchemy import select
+from fastapi import APIRouter, Depends, File, Form, HTTPException, Request, UploadFile
+from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from backend.config import settings
 from backend.database import get_session
 from backend.models import Submission, SubmissionMode, generate_key
 from backend.schemas import ProgressEvent, ProgressResponse, StatusResponse, SubmitResponse
@@ -17,6 +19,7 @@ router = APIRouter(prefix="/api", tags=["submissions"])
 
 @router.post("/submit", response_model=SubmitResponse)
 async def submit_paper(
+    request: Request,
     file: UploadFile = File(...),
     email: str | None = Form(None),
     mode: str = Form("queue"),
@@ -29,6 +32,27 @@ async def submit_paper(
     review_settings: str | None = Form(None, description="JSON review settings"),
     session: AsyncSession = Depends(get_session),
 ):
+    # Resolve client IP (respect X-Forwarded-For from reverse proxy)
+    client_ip = request.headers.get("x-forwarded-for", "").split(",")[0].strip()
+    if not client_ip:
+        client_ip = request.client.host if request.client else "unknown"
+
+    # Rate limit: max submissions per IP per day
+    if client_ip != "unknown" and settings.max_submissions_per_ip_per_day > 0:
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
+        result = await session.execute(
+            select(func.count())
+            .select_from(Submission)
+            .where(Submission.client_ip == client_ip, Submission.created_at >= cutoff)
+        )
+        recent_count = result.scalar() or 0
+        if recent_count >= settings.max_submissions_per_ip_per_day:
+            raise HTTPException(
+                status_code=429,
+                detail=f"You have reached the daily submission limit ({settings.max_submissions_per_ip_per_day} per day). "
+                       f"Please try again tomorrow, or use BYOK mode with your own API keys.",
+            )
+
     if not file.filename or not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are accepted.")
 
@@ -95,6 +119,7 @@ async def submit_paper(
         mode=SubmissionMode(mode),
         has_code=has_code,
         has_supplementary=has_supplementary,
+        client_ip=client_ip,
         user_mistral_api_key=user_mistral_api_key,
         user_litellm_api_key=user_litellm_api_key,
         user_litellm_base_url=user_litellm_base_url,

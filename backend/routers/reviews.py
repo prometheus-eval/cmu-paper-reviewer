@@ -3,6 +3,7 @@
 import io
 import json
 import zipfile
+from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Header
 from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
@@ -255,6 +256,15 @@ async def submit_annotation(
 
     annotator = body.annotator_id or "anonymous"
 
+    # Compute seconds elapsed since the review was completed
+    seconds_since = None
+    if submission.updated_at:
+        now = datetime.now(timezone.utc)
+        completed_at = submission.updated_at
+        if completed_at.tzinfo is None:
+            completed_at = completed_at.replace(tzinfo=timezone.utc)
+        seconds_since = int((now - completed_at).total_seconds())
+
     # Upsert: check if annotation for this key+item+annotator already exists
     existing = await session.execute(
         select(Annotation).where(
@@ -272,6 +282,7 @@ async def submit_annotation(
             annotation.significance = body.significance
         if body.evidence_quality is not None:
             annotation.evidence_quality = body.evidence_quality
+        annotation.seconds_since_review = seconds_since
     else:
         annotation = Annotation(
             key=key,
@@ -280,6 +291,7 @@ async def submit_annotation(
             correctness=body.correctness,
             significance=body.significance,
             evidence_quality=body.evidence_quality,
+            seconds_since_review=seconds_since,
         )
         session.add(annotation)
 
@@ -295,6 +307,7 @@ async def submit_annotation(
         correctness=annotation.correctness,
         significance=annotation.significance,
         evidence_quality=annotation.evidence_quality,
+        seconds_since_review=annotation.seconds_since_review,
     )
 
 
@@ -319,6 +332,7 @@ async def get_annotations(
             correctness=a.correctness,
             significance=a.significance,
             evidence_quality=a.evidence_quality,
+            seconds_since_review=a.seconds_since_review,
         )
         for a in annotations
     ]
@@ -347,6 +361,7 @@ async def export_all_annotations(
             "correctness": a.correctness,
             "significance": a.significance,
             "evidence_quality": a.evidence_quality,
+            "seconds_since_review": a.seconds_since_review,
             "created_at": a.created_at.isoformat() if a.created_at else None,
         }
         for a in annotations
@@ -371,6 +386,7 @@ def _save_annotations_json(key: str, session):
                 "correctness": a.correctness,
                 "significance": a.significance,
                 "evidence_quality": a.evidence_quality,
+                "seconds_since_review": a.seconds_since_review,
             }
             for a in annotations
         ]

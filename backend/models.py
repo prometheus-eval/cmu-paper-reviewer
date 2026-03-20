@@ -47,6 +47,7 @@ class Submission(Base):
     user_litellm_api_key: Mapped[str | None] = mapped_column(Text, nullable=True)
     user_litellm_base_url: Mapped[str | None] = mapped_column(Text, nullable=True)
     user_tavily_api_key: Mapped[str | None] = mapped_column(Text, nullable=True)
+    client_ip: Mapped[str | None] = mapped_column(String(45), nullable=True)  # IPv4 or IPv6
     review_settings: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON
     review_model_used: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime.datetime] = mapped_column(
@@ -67,6 +68,7 @@ class Annotation(Base):
     correctness: Mapped[str | None] = mapped_column(String(20), nullable=True)
     significance: Mapped[str | None] = mapped_column(String(30), nullable=True)
     evidence_quality: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    seconds_since_review: Mapped[int | None] = mapped_column(Integer, nullable=True)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

@@ -40,6 +40,9 @@ class Settings(BaseSettings):
         "https://cmu-paper-reviewer.duckdns.org",
     ]
 
+    # Rate limiting
+    max_submissions_per_ip_per_day: int = 3
+
     # Worker
     worker_poll_interval: int = 10
     review_models: list[str] = [
