@@ -191,25 +191,69 @@ def _extract_title_from_markdown(markdown_text: str) -> str | None:
     return None
 
 
-def get_paper_date(markdown_text: str) -> str | None:
+def _extract_search_term_from_filename(filename: str) -> str | None:
+    """Extract a usable search term from the uploaded PDF filename.
+
+    Common patterns:
+      - "2501.12345v1.pdf" (arXiv ID)
+      - "Attention_Is_All_You_Need.pdf"
+      - "smith2025_transformers.pdf"
+    """
+    if not filename:
+        return None
+
+    # Strip extension
+    name = re.sub(r"\.pdf$", "", filename, flags=re.IGNORECASE).strip()
+    if not name:
+        return None
+
+    # Check for arXiv ID pattern: 2501.12345 → search "arXiv 2501.12345"
+    arxiv_match = re.match(r"(\d{4}\.\d{4,5})(v\d+)?$", name)
+    if arxiv_match:
+        return f"arXiv {arxiv_match.group(1)}"
+
+    # Clean up common filename separators into spaces for search
+    cleaned = re.sub(r"[_\-]+", " ", name)
+    # Remove leading author/year patterns like "smith2025 " to get the title part
+    cleaned = re.sub(r"^\w+\d{4}\s+", "", cleaned)
+
+    if len(cleaned) > 10:
+        return cleaned
+
+    return None
+
+
+def get_paper_date(markdown_text: str, filename: str | None = None) -> str | None:
     """Get the paper date as an ISO string (YYYY-MM-DD).
 
-    Tries OCR extraction first, then falls back to OpenAlex title search.
+    Tries multiple strategies in order:
+    1. OCR regex extraction (dates in the manuscript text)
+    2. OpenAlex search by title extracted from OCR
+    3. Filename-based search (arXiv ID or title from filename) via OpenAlex
     Returns None if the date cannot be determined.
     """
-    # Try OCR extraction
+    # 1. Try OCR extraction
     d = extract_date_from_ocr(markdown_text)
     if d:
         return d.isoformat()
 
-    # Fallback: search OpenAlex by title
+    # 2. Fallback: search OpenAlex by title from OCR text
     title = _extract_title_from_markdown(markdown_text)
     if title:
         d = search_openalex_date(title)
         if d:
             return d.isoformat()
 
-    logger.warning("Could not determine paper date from OCR or OpenAlex")
+    # 3. Fallback: search OpenAlex using the filename
+    if filename:
+        search_term = _extract_search_term_from_filename(filename)
+        if search_term:
+            logger.info("Trying OpenAlex with filename-derived query: %s", search_term)
+            d = search_openalex_date(search_term)
+            if d:
+                return d.isoformat()
+
+    logger.warning("Could not determine paper date from OCR, OpenAlex, or filename")
     return None
 
 

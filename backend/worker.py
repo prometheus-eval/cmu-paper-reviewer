@@ -149,7 +149,7 @@ def process_submission(submission: Submission):
                 md_path = preprint_md_path(key)
                 if md_path.exists():
                     md_text = md_path.read_text(encoding="utf-8")
-                    paper_date = get_paper_date(md_text)
+                    paper_date = get_paper_date(md_text, filename=submission.filename)
                     if paper_date:
                         review_settings["paper_date"] = paper_date
                         logger.info("[%s] Extracted paper date: %s", key, paper_date)
