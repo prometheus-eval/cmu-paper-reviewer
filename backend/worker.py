@@ -89,6 +89,26 @@ def store_model_used(key: str, model_name: str):
             session.commit()
 
 
+BUDGET_ERROR_KEYWORDS = [
+    "budget has been exceeded",
+    "budget exceeded",
+    "exceeded your current budget",
+    "BudgetExceededError",
+    "over budget",
+    "out of budget",
+    "insufficient budget",
+    "rate_limit_error",
+    "insufficient_quota",
+    "exceeded your current quota",
+]
+
+
+def _is_budget_error(error_text: str) -> bool:
+    """Check if an error message indicates a budget/quota issue."""
+    lower = error_text.lower()
+    return any(kw.lower() in lower for kw in BUDGET_ERROR_KEYWORDS)
+
+
 def process_submission(submission: Submission):
     key = submission.key
     pdf_file = upload_path(key, submission.filename)
@@ -302,7 +322,18 @@ def main():
             except Exception:
                 tb = traceback.format_exc()
                 logger.error("[%s] Processing failed:\n%s", submission.key, tb)
-                update_status(submission.key, SubmissionStatus.failed, error=tb[-500:])
+                if _is_budget_error(tb):
+                    # Budget error — mark as failed with a recognizable tag so the
+                    # frontend can show a friendly message, then pause before retrying.
+                    logger.warning("[%s] Budget exceeded — marking as budget_exhausted.", submission.key)
+                    update_status(
+                        submission.key,
+                        SubmissionStatus.failed,
+                        error="[OUT_OF_BUDGET] The service is temporarily out of API credit. "
+                              "Your submission has been saved and will be retried automatically once credit is restored.",
+                    )
+                else:
+                    update_status(submission.key, SubmissionStatus.failed, error=tb[-500:])
         else:
             time.sleep(settings.worker_poll_interval)
 

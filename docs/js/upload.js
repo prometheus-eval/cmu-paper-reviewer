@@ -217,28 +217,53 @@ document.getElementById("configure-criteria-btn").addEventListener("click", () =
 
 // ─── Criteria Configuration Modal ────────────────────────────────────────────
 
+function sortCriteriaForDisplay() {
+  // Enabled items first (sorted by importance), disabled items at the bottom
+  reviewSettings.criteria.sort((a, b) => {
+    if (a.enabled && !b.enabled) return -1;
+    if (!a.enabled && b.enabled) return 1;
+    return a.importance - b.importance;
+  });
+}
+
+function syncImportanceFromOrder() {
+  // Assign importance based on current array position (enabled items only)
+  let rank = 1;
+  for (const c of reviewSettings.criteria) {
+    if (c.enabled) {
+      c.importance = rank++;
+    }
+  }
+  // Disabled items get high importance values
+  for (const c of reviewSettings.criteria) {
+    if (!c.enabled) {
+      c.importance = rank++;
+    }
+  }
+}
+
+let dragSrcIndex = null;
+
 function openCriteriaModal() {
   const modalRoot = document.getElementById("criteria-modal-root");
+  sortCriteriaForDisplay();
   const criteria = reviewSettings.criteria;
 
   let criteriaHtml = "";
-  criteria.sort((a, b) => a.importance - b.importance);
   for (let i = 0; i < criteria.length; i++) {
     const c = criteria[i];
+    const disabledClass = c.enabled ? "" : " criteria-disabled";
     criteriaHtml += `
-      <div class="criteria-config-item" data-index="${i}">
+      <div class="criteria-config-item${disabledClass}" draggable="${c.enabled}" data-index="${i}">
         <div class="criteria-config-row">
+          <span class="criteria-drag-handle" title="Drag to reorder">${c.enabled ? "&#x2630;" : ""}</span>
           <label class="toggle-switch toggle-sm">
             <input type="checkbox" class="criteria-enable" data-index="${i}" ${c.enabled ? "checked" : ""}>
             <span class="toggle-slider"></span>
           </label>
           <div class="criteria-config-info">
-            <div class="criteria-config-name">${escapeHtml(c.name)}</div>
+            <div class="criteria-config-name">${c.enabled ? `<span class="criteria-rank">${c.importance}.</span> ` : ""}${escapeHtml(c.name)}</div>
             <div class="criteria-config-desc">${escapeHtml(c.description || "")}</div>
-          </div>
-          <div class="criteria-config-importance">
-            <label class="criteria-importance-label">Priority</label>
-            <input type="number" class="criteria-importance-input" data-index="${i}" value="${c.importance}" min="1" max="20">
           </div>
           ${c.custom ? `<button class="criteria-remove-btn" data-index="${i}" title="Remove">&times;</button>` : ""}
         </div>
@@ -249,7 +274,7 @@ function openCriteriaModal() {
     <div class="modal-overlay" id="criteria-overlay">
       <div class="modal" style="max-width:800px;">
         <h3>Configure Evaluation Criteria</h3>
-        <p class="modal-subtitle">Enable/disable criteria, adjust their priority (lower number = higher priority), or add custom criteria.</p>
+        <p class="modal-subtitle">Drag to reorder priority (top = highest). Toggle to enable/disable criteria, or add your own.</p>
 
         <div class="criteria-presets-row">
           <button class="btn btn-secondary btn-sm" id="modal-load-nature">Load Nature Criteria</button>
@@ -286,28 +311,24 @@ function openCriteriaModal() {
     reviewSettings.criteria = JSON.parse(JSON.stringify(NATURE_CRITERIA));
     presetSelect.value = "nature";
     reviewSettings.reviewer_criteria_preset = "nature";
-    openCriteriaModal(); // re-render
+    openCriteriaModal();
   });
   document.getElementById("modal-load-neurips").addEventListener("click", () => {
     reviewSettings.criteria = JSON.parse(JSON.stringify(NEURIPS_CRITERIA));
     presetSelect.value = "neurips";
     reviewSettings.reviewer_criteria_preset = "neurips";
-    openCriteriaModal(); // re-render
+    openCriteriaModal();
   });
 
-  // Enable/disable checkboxes
+  // Enable/disable checkboxes — toggling off moves item to bottom
   document.querySelectorAll(".criteria-enable").forEach((cb) => {
     cb.addEventListener("change", () => {
       const idx = parseInt(cb.dataset.index, 10);
       reviewSettings.criteria[idx].enabled = cb.checked;
-    });
-  });
-
-  // Importance inputs
-  document.querySelectorAll(".criteria-importance-input").forEach((inp) => {
-    inp.addEventListener("change", () => {
-      const idx = parseInt(inp.dataset.index, 10);
-      reviewSettings.criteria[idx].importance = parseInt(inp.value, 10) || 1;
+      syncImportanceFromOrder();
+      presetSelect.value = "custom";
+      reviewSettings.reviewer_criteria_preset = "custom";
+      openCriteriaModal(); // re-render (moves disabled to bottom)
     });
   });
 
@@ -316,8 +337,57 @@ function openCriteriaModal() {
     btn.addEventListener("click", () => {
       const idx = parseInt(btn.dataset.index, 10);
       reviewSettings.criteria.splice(idx, 1);
+      syncImportanceFromOrder();
       presetSelect.value = "custom";
       reviewSettings.reviewer_criteria_preset = "custom";
+      openCriteriaModal();
+    });
+  });
+
+  // Drag-and-drop reordering
+  const listEl = document.getElementById("criteria-list");
+  const items = listEl.querySelectorAll(".criteria-config-item[draggable='true']");
+
+  items.forEach((item) => {
+    item.addEventListener("dragstart", (e) => {
+      dragSrcIndex = parseInt(item.dataset.index, 10);
+      item.classList.add("dragging");
+      e.dataTransfer.effectAllowed = "move";
+    });
+
+    item.addEventListener("dragend", () => {
+      item.classList.remove("dragging");
+      listEl.querySelectorAll(".criteria-config-item").forEach((el) => el.classList.remove("drag-over"));
+    });
+
+    item.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+      // Only allow dropping on enabled items
+      const targetIdx = parseInt(item.dataset.index, 10);
+      if (reviewSettings.criteria[targetIdx].enabled) {
+        item.classList.add("drag-over");
+      }
+    });
+
+    item.addEventListener("dragleave", () => {
+      item.classList.remove("drag-over");
+    });
+
+    item.addEventListener("drop", (e) => {
+      e.preventDefault();
+      item.classList.remove("drag-over");
+      const targetIdx = parseInt(item.dataset.index, 10);
+      if (dragSrcIndex === null || dragSrcIndex === targetIdx) return;
+      if (!reviewSettings.criteria[targetIdx].enabled) return;
+
+      // Move the dragged item to the target position
+      const [moved] = reviewSettings.criteria.splice(dragSrcIndex, 1);
+      reviewSettings.criteria.splice(targetIdx, 0, moved);
+      syncImportanceFromOrder();
+      presetSelect.value = "custom";
+      reviewSettings.reviewer_criteria_preset = "custom";
+      dragSrcIndex = null;
       openCriteriaModal(); // re-render
     });
   });
@@ -327,17 +397,20 @@ function openCriteriaModal() {
     const name = document.getElementById("new-criteria-name").value.trim();
     const desc = document.getElementById("new-criteria-desc").value.trim();
     if (!name) return;
-    const maxImp = Math.max(...reviewSettings.criteria.map((c) => c.importance), 0);
-    reviewSettings.criteria.push({
+    // Insert before disabled items
+    const firstDisabledIdx = reviewSettings.criteria.findIndex((c) => !c.enabled);
+    const insertIdx = firstDisabledIdx === -1 ? reviewSettings.criteria.length : firstDisabledIdx;
+    reviewSettings.criteria.splice(insertIdx, 0, {
       name,
       description: desc,
-      importance: maxImp + 1,
+      importance: insertIdx + 1,
       enabled: true,
       custom: true,
     });
+    syncImportanceFromOrder();
     presetSelect.value = "custom";
     reviewSettings.reviewer_criteria_preset = "custom";
-    openCriteriaModal(); // re-render
+    openCriteriaModal();
   });
 
   // Save
