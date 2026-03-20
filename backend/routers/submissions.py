@@ -162,21 +162,48 @@ def get_progress(key: str):
     if not raw_events:
         return ProgressResponse(total_steps=0)
 
-    # Filter to ActionEvents only (they have a "thought" or "tool_call" field but no "observation" field)
+    # Filter to ActionEvents and extract useful summaries
     action_events: list[ProgressEvent] = []
     for ev in raw_events:
-        # Skip ObservationEvents, SystemPromptEvents, TokenEvents, etc.
-        if "observation" in ev or "system_prompt" in ev or "prompt_token_ids" in ev:
+        kind = ev.get("kind", "")
+
+        # Only show ActionEvents (agent doing something)
+        if kind != "ActionEvent":
             continue
-        # ActionEvents and MessageEvents are interesting for progress
-        if "tool_name" not in ev and "thought" not in ev and "summary" not in ev:
-            continue
+
+        tool_name = ev.get("tool_name")
+
+        # Extract a human-readable summary from the event
+        summary = ev.get("summary") or ""
+
+        # OpenHands 1.1.0: thought is a list, not a string
+        thought = ev.get("thought", "")
+        if isinstance(thought, list):
+            thought = " ".join(str(t) for t in thought if t)
+
+        # Extract command from action dict (e.g., terminal commands)
+        action = ev.get("action", {})
+        if isinstance(action, dict):
+            command = action.get("command", "")
+            action_kind = action.get("kind", "")
+            if command:
+                summary = summary or f"Running: {command[:120]}"
+            elif action_kind:
+                summary = summary or action_kind
+
+        # Fall back to thought content
+        if not summary and thought:
+            summary = thought[:200]
+
+        if not summary:
+            summary = f"Using {tool_name}" if tool_name else "Processing..."
+
         action_events.append(
             ProgressEvent(
                 step=ev.get("_idx", 0),
                 timestamp=ev.get("timestamp", ""),
-                tool_name=ev.get("tool_name"),
-                summary=ev.get("summary") or ev.get("thought", ""),
+                tool_name=tool_name,
+                summary=summary,
             )
         )
 
