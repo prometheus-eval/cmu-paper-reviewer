@@ -16,3 +16,4 @@ scripts/download_annotations_.py
 scripts/deploy_.sh
 scripts/download_annotation_.sh
 .DS_Store
+downloaded_papers/*
