@@ -558,8 +558,11 @@ function renderStructuredReview(parsed, key) {
     typsetMath(citationCard);
   }, 100);
 
-  // -- Show annotation modal --
-  showAnnotationModal(key, parsed.items, 0);
+  // -- Show annotation modal (only once per page load) --
+  if (!window._annotationModalShown) {
+    window._annotationModalShown = true;
+    showAnnotationModal(key, parsed.items, 0);
+  }
 }
 
 function renderRawReview(md, key) {
@@ -1134,6 +1137,8 @@ async function sendDebateMessage() {
 
   input.value = "";
   debateState.isStreaming = true;
+
+  // Increment for user message
   debateState.turnCount++;
   document.getElementById("turn-counter").textContent = `Turn ${debateState.turnCount}/20`;
 
@@ -1193,10 +1198,14 @@ async function sendDebateMessage() {
       }
     }
 
-    // Check for derail
-    if (fullText.trim() === "DERAIL") {
+    // Increment for AI response
+    debateState.turnCount++;
+    document.getElementById("turn-counter").textContent = `Turn ${debateState.turnCount}/20`;
+
+    // Check for derail (AI response contains "DERAIL" anywhere)
+    if (fullText.toUpperCase().includes("DERAIL")) {
       debateState.status = "derailed";
-      textEl.innerHTML = "";
+      // Replace the streamed DERAIL text with a styled message
       assistantBubble.remove();
       showDerailUI();
     }
