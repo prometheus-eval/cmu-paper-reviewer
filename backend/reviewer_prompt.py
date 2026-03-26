@@ -76,7 +76,12 @@ def build_reviewer_prompt(settings: dict | None = None) -> str:
         limitations_instruction = (
             "8. Try to avoid using what the paper listed in the \"Limitations\" or \"Future work\" section as your claim "
             "unless it is actually a significant issue that is not justifiable. If so, you should prepare very good evidence "
-            "explaining why just listing it in the limitations or future work section is not sufficient."
+            "explaining why just listing it in the limitations or future work section is not sufficient.\n"
+            "   For each item, you must also classify whether the issue is mentioned in the paper's "
+            "\"Limitations\" or \"Future work\" section. Set the Limitations status field to "
+            "\"Mentioned in the Limitations section, but not justifiable\" if the authors listed it "
+            "but the limitation is too significant to dismiss, or \"Not mentioned in the Limitations "
+            "section\" if the authors did not acknowledge it."
         )
     else:
         limitations_instruction = (
@@ -104,6 +109,33 @@ def build_reviewer_prompt(settings: dict | None = None) -> str:
             f"arXiv submission date mentioned, or year of references). Only use reference materials published on or before "
             f"the paper's estimated date. This ensures the review is fair and does not penalize the authors for not citing "
             f"work that did not exist at the time of writing."
+        )
+
+    # Build limitations status line for the item template (only when criticize_limitations is on)
+    if criticize_limitations:
+        limitations_status_line = '* Limitations status: <One of: "Not mentioned in the Limitations section" OR "Mentioned in the Limitations section, but not justifiable">'
+    else:
+        limitations_status_line = ""
+
+    # Build reference date badge instruction
+    ref_date_badge_instruction = ""
+    if enable_future_references and paper_date:
+        ref_date_badge_instruction = (
+            f"\n\nSince references published after the paper are allowed, you must tag each citation with a temporal marker. "
+            f"Append ` [BEFORE]` if the cited work was published on or before the paper under review, or ` [AFTER]` if it was published after. "
+            f"The paper under review has an estimated publication date of {paper_date}. Use this date to determine the tag.\n"
+            f"Format example:\n"
+            f"[1] Smith et al., \"Title,\" Venue, 2023. [Link](url) [BEFORE]\n"
+            f"[2] Jones et al., \"Title,\" Venue, 2025. [Link](url) [AFTER]"
+        )
+    elif enable_future_references:
+        ref_date_badge_instruction = (
+            "\n\nSince references published after the paper are allowed, you must tag each citation with a temporal marker. "
+            "Append ` [BEFORE]` if the cited work was published on or before the paper under review, or ` [AFTER]` if it was published after. "
+            "Try to determine the paper's publication date from its content (e.g., date on the manuscript, arXiv submission date, or year of references).\n"
+            "Format example:\n"
+            "[1] Smith et al., \"Title,\" Venue, 2023. [Link](url) [BEFORE]\n"
+            "[2] Jones et al., \"Title,\" Venue, 2025. [Link](url) [AFTER]"
         )
 
     prompt = f"""You are a reviewer agent assessing the quality of a research paper.
@@ -160,6 +192,7 @@ If the paper contains no significant issues, then you can output zero items.
 #### Claim
 * Main point of criticism: <State what you are criticizing the paper for>
 * Evaluation criteria: <which evaluation criteria the criticism is based on>
+{limitations_status_line}
 
 #### Evidence
 * Quote: <Exact sentence(s) 1 from the paper>
@@ -196,7 +229,7 @@ IMPORTANT: Every citation in the citation list MUST be referenced at least once 
 The citations could be academic papers, blog posts, news articles, datasets, code repositories, and other relevant sources.
 Don't simply include papers that are cited in the paper you are reviewing.
 It is very recommended to send a search query, read through the retrieved material, and based on that, iteratively send additional search queries and gather the most crucial pieces of evidence to support your review.
-
+{ref_date_badge_instruction}
 
 ### Evaluation criteria (ordered by importance)
 {criteria_text}
@@ -208,7 +241,8 @@ Also, as a reminder, you could output less than {max_items} items if the paper c
 
 ### TODO List for writing your review
 - [ ] Read through the paper, supplementary files, and images and construct a potential list of items you will criticize.
-- [ ] Read through the paper's code, check the functionality of each file, and attempt to execute the code if possible (unless the code is non-executable or resource-prohibitive). Also, you may implement additional code to validate the claims you make, where the implemented code should be saved in the "[LINK TO THE PAPER]/../review/verification_code_[MODEL NAME]" directory.
+- [ ] Read through the paper's code, check the functionality of each file, and attempt to execute the code if possible (unless the code is non-executable or resource-prohibitive).
+- [ ] Write verification code that validates the key claims you make in your review. Save all verification code files in the "[LINK TO THE PAPER]/../review/verification_code_[MODEL NAME]" directory. Each claim that involves a quantitative, reproducibility, or methodological issue should have corresponding code that demonstrates or checks the problem (e.g., re-run a calculation, check statistical tests, verify dataset properties, or reproduce a computation the paper claims).
 - [ ] Devise a list of search queries to find relevant literature. If search tools are unavailable, note that you cannot perform this step.
 - [ ] Retrieve relevant papers (using tavily search tool), read them, and update your list of criticisms.
 - [ ] (Very Important) Iterate through your list and ensure each potential criticism is factually correct, significant, and eligible for inclusion. Remove the items that are not eligible for inclusion and then sort the remaining items by their importance.
