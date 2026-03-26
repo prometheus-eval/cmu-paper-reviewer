@@ -196,12 +196,22 @@ async function fetchProgress(key) {
     if (data.events && data.events.length > 0) {
       toggleActivityBtn.style.display = "inline-block";
 
+      const toolLabels = {
+        file_editor: "file",
+        terminal: "terminal",
+        tavily__search: "search",
+        tavily__extract: "extract",
+        think: "think",
+        task_tracker: "task",
+        finish: "finish",
+      };
       let logHtml = "";
       for (const ev of data.events) {
         const time = ev.timestamp ? new Date(ev.timestamp).toLocaleTimeString() : "";
-        const tool = ev.tool_name ? `<span class="event-tool">${escapeHtml(ev.tool_name)}</span>` : "";
+        const label = (ev.tool_name && toolLabels[ev.tool_name]) || ev.tool_name || "";
+        const tool = label ? `<span class="event-tool">${escapeHtml(label)}</span>` : "";
         const summary = ev.summary
-          ? escapeHtml(ev.summary.length > 200 ? ev.summary.substring(0, 200) + "..." : ev.summary)
+          ? escapeHtml(ev.summary.length > 250 ? ev.summary.substring(0, 250) + "..." : ev.summary)
           : "";
         logHtml += `<div class="event-item">
           <span class="event-step">#${ev.step}</span>
@@ -257,6 +267,7 @@ function parseReviewMarkdown(md) {
         title: sec.title,
         mainCriticism: "",
         evalCriteria: "",
+        limitationsStatus: "",
         evidence: [],
       };
 
@@ -268,6 +279,8 @@ function parseReviewMarkdown(md) {
         if (critMatch) item.mainCriticism = critMatch[1].trim();
         const evalMatch = claimText.match(/\*\s*Evaluation criteria\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
         if (evalMatch) item.evalCriteria = evalMatch[1].trim();
+        const limMatch = claimText.match(/\*\s*Limitations status\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (limMatch) item.limitationsStatus = limMatch[1].trim();
       }
 
       // Parse Evidence section
@@ -347,6 +360,16 @@ function renderStructuredReview(parsed, key) {
         <div class="criteria-box">
           <span class="criteria-label">Evaluation Criteria:</span>
           <span class="criteria-value">${escapeHtml(item.evalCriteria)}</span>
+        </div>`;
+    }
+
+    if (item.limitationsStatus) {
+      const isNotMentioned = item.limitationsStatus.toLowerCase().includes("not mentioned");
+      const badgeClass = isNotMentioned ? "limitations-badge not-mentioned" : "limitations-badge mentioned-not-justifiable";
+      bodyHtml += `
+        <div class="limitations-box">
+          <span class="limitations-label">Limitations Status:</span>
+          <span class="${badgeClass}">${escapeHtml(item.limitationsStatus)}</span>
         </div>`;
     }
 
@@ -930,8 +953,22 @@ function typsetMath(el) {
 }
 
 function renderCitation(text) {
-  const stripped = text.replace(/^\[\d+\]\s*/, "");
-  return stripped.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  let stripped = text.replace(/^\[\d+\]\s*/, "");
+
+  // Detect and strip [BEFORE]/[AFTER] date tags
+  let dateBadge = "";
+  const beforeMatch = stripped.match(/\s*\[BEFORE\]\s*$/i);
+  const afterMatch = stripped.match(/\s*\[AFTER\]\s*$/i);
+  if (beforeMatch) {
+    stripped = stripped.replace(/\s*\[BEFORE\]\s*$/i, "");
+    dateBadge = '<span class="ref-date-badge ref-before">Published before this paper</span>';
+  } else if (afterMatch) {
+    stripped = stripped.replace(/\s*\[AFTER\]\s*$/i, "");
+    dateBadge = '<span class="ref-date-badge ref-after">Published after this paper</span>';
+  }
+
+  const rendered = stripped.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+  return dateBadge + rendered;
 }
 
 function toggleItem(header) {

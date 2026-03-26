@@ -1,5 +1,6 @@
 """POST /api/submit and GET /api/status/{key} endpoints."""
 
+import json
 import shutil
 import zipfile
 from datetime import datetime, timedelta, timezone
@@ -156,6 +157,107 @@ async def get_status(
     )
 
 
+def _extract_tool_args(ev: dict) -> dict:
+    """Parse tool_call.arguments from an ActionEvent JSON."""
+    tool_call = ev.get("tool_call")
+    if not isinstance(tool_call, dict):
+        return {}
+    raw = tool_call.get("arguments", "")
+    if not raw:
+        return {}
+    try:
+        return json.loads(raw)
+    except (ValueError, TypeError):
+        return {}
+
+
+def _shorten_path(path: str, max_parts: int = 3) -> str:
+    """Show only the last N path components for readability."""
+    parts = path.rstrip("/").split("/")
+    if len(parts) <= max_parts:
+        return path
+    return ".../" + "/".join(parts[-max_parts:])
+
+
+def _build_summary(ev: dict) -> str:
+    """Build a human-readable summary for an ActionEvent."""
+    tool_name = ev.get("tool_name", "")
+    args = _extract_tool_args(ev)
+
+    # --- file_editor ---
+    if tool_name == "file_editor":
+        cmd = args.get("command", "view")
+        path = args.get("path", "")
+        short = _shorten_path(path) if path else ""
+        if cmd == "view":
+            return f"Viewing {short}" if short else "Viewing file"
+        elif cmd == "str_replace":
+            return f"Editing {short}" if short else "Editing file"
+        elif cmd == "create":
+            return f"Creating {short}" if short else "Creating file"
+        elif cmd == "insert":
+            line = args.get("insert_line", "")
+            loc = f" at line {line}" if line else ""
+            return f"Inserting into {short}{loc}" if short else "Inserting into file"
+        return f"{cmd}: {short}" if short else cmd
+
+    # --- terminal ---
+    if tool_name == "terminal":
+        command = args.get("command", "")
+        if command:
+            return f"Running: {command[:200]}"
+        return "Running terminal command"
+
+    # --- tavily search/extract (MCP) ---
+    if "search" in tool_name:
+        query = args.get("query", "")
+        if query:
+            return f'Searching: "{query[:150]}"'
+        return "Web search"
+
+    if "extract" in tool_name:
+        urls = args.get("urls", [])
+        if urls:
+            display = urls[0][:80] + ("..." if len(urls[0]) > 80 else "")
+            if len(urls) > 1:
+                display += f" (+{len(urls) - 1} more)"
+            return f"Extracting: {display}"
+        return "Extracting web content"
+
+    # --- think ---
+    if tool_name == "think":
+        thought = args.get("thought", "")
+        if thought:
+            return f"Thinking: {thought[:150]}"
+        return "Thinking..."
+
+    # --- task_tracker ---
+    if tool_name == "task_tracker":
+        cmd = args.get("command", "")
+        task = args.get("task", "")
+        if cmd and task:
+            return f"Task {cmd}: {task[:100]}"
+        elif cmd:
+            return f"Task {cmd}"
+        return "Updating tasks"
+
+    # --- finish ---
+    if tool_name == "finish":
+        return "Finishing review"
+
+    # --- fallback: use thought text ---
+    thought = ev.get("thought", "")
+    if isinstance(thought, list):
+        thought = " ".join(
+            t.get("text", "") if isinstance(t, dict) else str(t)
+            for t in thought if t
+        )
+    if thought:
+        return thought[:200]
+
+    return f"Using {tool_name}" if tool_name else "Processing..."
+
+
 @router.get("/status/{key}/progress", response_model=ProgressResponse)
 def get_progress(key: str):
     raw_events = find_trajectory_events(key)
@@ -171,32 +273,8 @@ def get_progress(key: str):
         if kind != "ActionEvent":
             continue
 
-        tool_name = ev.get("tool_name")
-
-        # Extract a human-readable summary from the event
-        summary = ev.get("summary") or ""
-
-        # OpenHands 1.1.0: thought is a list, not a string
-        thought = ev.get("thought", "")
-        if isinstance(thought, list):
-            thought = " ".join(str(t) for t in thought if t)
-
-        # Extract command from action dict (e.g., terminal commands)
-        action = ev.get("action", {})
-        if isinstance(action, dict):
-            command = action.get("command", "")
-            action_kind = action.get("kind", "")
-            if command:
-                summary = summary or f"Running: {command[:120]}"
-            elif action_kind:
-                summary = summary or action_kind
-
-        # Fall back to thought content
-        if not summary and thought:
-            summary = thought[:200]
-
-        if not summary:
-            summary = f"Using {tool_name}" if tool_name else "Processing..."
+        tool_name = ev.get("tool_name", "")
+        summary = _build_summary(ev)
 
         action_events.append(
             ProgressEvent(

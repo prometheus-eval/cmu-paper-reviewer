@@ -161,6 +161,7 @@ class ReviewItem:
     title: str
     main_criticism: str = ""
     eval_criteria: str = ""
+    limitations_status: str = ""
     evidence: list[QuoteComment] = field(default_factory=list)
 
 
@@ -206,6 +207,9 @@ def _parse_review(md: str) -> ParsedReview:
             eval_match = re.search(r"\*\s*Evaluation criteria\s*:\s*(.+)", claim_text, re.IGNORECASE)
             if eval_match:
                 item.eval_criteria = eval_match.group(1).strip()
+            lim_match = re.search(r"\*\s*Limitations status\s*:\s*(.+)", claim_text, re.IGNORECASE)
+            if lim_match:
+                item.limitations_status = lim_match.group(1).strip()
 
         # Parse Evidence section — extract Quote/Comment pairs
         evidence_match = re.search(r"####\s*Evidence\s*\n([\s\S]*?)(?=####|##\s|$)", body, re.IGNORECASE)
@@ -267,6 +271,9 @@ LATEX_PREAMBLE = r"""
 \definecolor{bordergray}{HTML}{E5E5E5}
 \definecolor{infoblue}{HTML}{2563EB}
 \definecolor{infobluebg}{HTML}{EFF6FF}
+\definecolor{warningbg}{HTML}{FEFCE8}
+\definecolor{warningborder}{HTML}{FEF08A}
+\definecolor{warningtext}{HTML}{CA8A04}
 
 % Graphics & drawing
 \usepackage{tikz}
@@ -335,6 +342,40 @@ LATEX_PREAMBLE = r"""
           inner xsep=8pt, inner ysep=3pt, font=\small\sffamily\color{infoblue}]
           (pill) {#1};%
   }%
+}
+
+% ── Limitations pill (gray - not mentioned) ──
+\newcommand{\limitationspillgray}[1]{%
+  \tikz[baseline=(pill.base)]{%
+    \node[fill=midgray, draw=bordergray, rounded corners=8pt,
+          inner xsep=8pt, inner ysep=3pt, font=\small\sffamily\color{medgray}]
+          (pill) {#1};%
+  }%
+}
+
+% ── Limitations pill (amber - mentioned but not justifiable) ──
+\newcommand{\limitationspillamber}[1]{%
+  \tikz[baseline=(pill.base)]{%
+    \node[fill=warningbg, draw=warningborder, rounded corners=8pt,
+          inner xsep=8pt, inner ysep=3pt, font=\small\sffamily\color{warningtext}]
+          (pill) {#1};%
+  }%
+}
+
+% ── Reference date badges ──
+\newcommand{\refbefore}{%
+  \tikz[baseline=(pill.base)]{%
+    \node[fill=midgray, draw=bordergray, rounded corners=6pt,
+          inner xsep=6pt, inner ysep=2pt, font=\tiny\sffamily\color{medgray}]
+          (pill) {BEFORE};%
+  }\hspace{4pt}%
+}
+\newcommand{\refafter}{%
+  \tikz[baseline=(pill.base)]{%
+    \node[fill=warningbg, draw=warningborder, rounded corners=6pt,
+          inner xsep=6pt, inner ysep=2pt, font=\tiny\sffamily\color{warningtext}]
+          (pill) {AFTER};%
+  }\hspace{4pt}%
 }
 
 % ── Quote box: gray background, rounded ──
@@ -446,6 +487,13 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
             parts.append(r"\noindent {\small\sffamily\color{medgray} Evaluation Criteria:}\hspace{6pt}")
             parts.append(r"\criteriapill{" + _tex_escape(item.eval_criteria) + "}\n\n")
 
+        # Limitations status pill
+        if item.limitations_status:
+            is_not_mentioned = "not mentioned" in item.limitations_status.lower()
+            cmd = r"\limitationspillgray" if is_not_mentioned else r"\limitationspillamber"
+            parts.append(r"\noindent {\small\sffamily\color{medgray} Limitations Status:}\hspace{6pt}")
+            parts.append(cmd + "{" + _tex_escape(item.limitations_status) + "}\n\n")
+
         # Evidence section
         if item.evidence:
             parts.append(r"\evidenceheader{}" + "\n\n")
@@ -524,7 +572,17 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
         parts.append(r"\begin{enumerate}[leftmargin=2em, label={\color{cmured}[\arabic*]}, itemsep=0.4em]" + "\n")
         for idx, cite in enumerate(parsed.citations, 1):
             cite_text = re.sub(r"^\[\d+\]\s*", "", cite)
-            parts.append(r"  \item \hypertarget{ref" + str(idx) + r"}{}" + r"{\small " + _tex_escape_with_links(cite_text, auto_link_citations=False) + "}\n")
+            # Detect and strip [BEFORE]/[AFTER] date tags
+            date_label = ""
+            before_m = re.search(r"\s*\[BEFORE\]\s*$", cite_text, re.IGNORECASE)
+            after_m = re.search(r"\s*\[AFTER\]\s*$", cite_text, re.IGNORECASE)
+            if before_m:
+                cite_text = cite_text[:before_m.start()]
+                date_label = r"\refbefore{}"
+            elif after_m:
+                cite_text = cite_text[:after_m.start()]
+                date_label = r"\refafter{}"
+            parts.append(r"  \item \hypertarget{ref" + str(idx) + r"}{}" + date_label + r"{\small " + _tex_escape_with_links(cite_text, auto_link_citations=False) + "}\n")
         parts.append(r"\end{enumerate}" + "\n")
 
     # ── Disclaimer ──
@@ -618,6 +676,12 @@ body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 1
 .claim-box { background: #fdf2f4; border-left: 3px solid #C41230; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; }
 .claim-box .label { font-size: 8pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #C41230; margin-bottom: 4px; }
 .criteria-pill { display: inline-block; background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; border-radius: 12px; padding: 2px 10px; font-size: 9pt; font-weight: 600; }
+.limitations-pill { display: inline-block; border-radius: 12px; padding: 2px 10px; font-size: 9pt; font-weight: 600; }
+.limitations-pill.not-mentioned { background: #F5F5F5; color: #737373; border: 1px solid #E5E5E5; }
+.limitations-pill.mentioned { background: #FEFCE8; color: #CA8A04; border: 1px solid #FEF08A; }
+.ref-date-badge { display: inline-block; border-radius: 10px; padding: 1px 8px; font-size: 8pt; font-weight: 600; margin-right: 4px; vertical-align: middle; }
+.ref-date-badge.ref-before { background: #F5F5F5; color: #737373; border: 1px solid #E5E5E5; }
+.ref-date-badge.ref-after { background: #FEFCE8; color: #CA8A04; border: 1px solid #FEF08A; }
 .evidence-header { font-size: 9pt; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; color: #737373; margin-top: 12px; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid #E5E5E5; }
 .quote-box { background: #F5F5F5; border: 1px solid #E5E5E5; border-radius: 6px; padding: 8px 12px; margin: 4px 0; }
 .quote-box .label { font-size: 8pt; font-weight: bold; text-transform: uppercase; color: #A3A3A3; margin-bottom: 2px; }
@@ -689,6 +753,11 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
         if item.eval_criteria:
             html += f'<p style="margin:6px 0;"><span style="font-size:9pt;color:#737373;">Evaluation Criteria:</span> <span class="criteria-pill">{_html_esc(item.eval_criteria)}</span></p>\n'
 
+        if item.limitations_status:
+            is_not_mentioned = "not mentioned" in item.limitations_status.lower()
+            pill_cls = "limitations-pill not-mentioned" if is_not_mentioned else "limitations-pill mentioned"
+            html += f'<p style="margin:4px 0;"><span style="font-size:9pt;color:#737373;">Limitations Status:</span> <span class="{pill_cls}">{_html_esc(item.limitations_status)}</span></p>\n'
+
         if item.evidence:
             html += '<div class="evidence-header">Evidence</div>\n'
             for j, ev in enumerate(item.evidence):
@@ -720,7 +789,17 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
         html += '<div class="references"><h2>References (' + str(len(parsed.citations)) + ')</h2><ol>\n'
         for idx, cite in enumerate(parsed.citations, 1):
             cite_text = re.sub(r"^\[\d+\]\s*", "", cite)
-            html += f'  <li id="ref{idx}">{_md_links(cite_text, auto_link_citations=False)}</li>\n'
+            # Detect and strip [BEFORE]/[AFTER] date tags
+            date_badge = ""
+            before_m = re.search(r"\s*\[BEFORE\]\s*$", cite_text, re.IGNORECASE)
+            after_m = re.search(r"\s*\[AFTER\]\s*$", cite_text, re.IGNORECASE)
+            if before_m:
+                cite_text = cite_text[:before_m.start()]
+                date_badge = '<span class="ref-date-badge ref-before">BEFORE</span>'
+            elif after_m:
+                cite_text = cite_text[:after_m.start()]
+                date_badge = '<span class="ref-date-badge ref-after">AFTER</span>'
+            html += f'  <li id="ref{idx}">{date_badge}{_md_links(cite_text, auto_link_citations=False)}</li>\n'
         html += '</ol></div>\n'
 
     html += '<div class="disclaimer">This review was generated by an AI system and should be used as supplementary feedback only.<br>It does not replace human expert peer review.</div>\n'

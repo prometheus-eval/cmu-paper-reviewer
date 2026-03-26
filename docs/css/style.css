@@ -1366,6 +1366,42 @@ input::placeholder {
   border: 1px solid var(--info-border);
 }
 
+/* Limitations status box */
+.limitations-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.35rem 0;
+  margin-bottom: 0.75rem;
+}
+
+.limitations-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.limitations-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.limitations-badge.not-mentioned {
+  background: var(--gray-100);
+  color: var(--gray-500);
+  border: 1px solid var(--gray-200);
+}
+
+.limitations-badge.mentioned-not-justifiable {
+  background: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+
 /* Evidence section */
 .evidence-section {
   margin-top: 0.25rem;
@@ -1517,6 +1553,29 @@ input::placeholder {
 
 .citation-list li:last-child {
   border-bottom: none;
+}
+
+/* Reference date badges */
+.ref-date-badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 600;
+  vertical-align: middle;
+  margin-right: 0.35rem;
+}
+
+.ref-date-badge.ref-before {
+  background: var(--gray-100);
+  color: var(--gray-500);
+  border: 1px solid var(--gray-200);
+}
+
+.ref-date-badge.ref-after {
+  background: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
 }
 
 /* --- Review content (raw markdown fallback) --- */
