@@ -246,6 +246,7 @@ async def submit_annotation(
     valid_correctness = {"correct", "incorrect"}
     valid_significance = {"significant", "marginally_significant", "not_significant"}
     valid_evidence = {"sufficient", "insufficient"}
+    valid_action_item = {"helpful_executable", "helpful_needs_modification", "not_helpful"}
 
     if body.correctness and body.correctness not in valid_correctness:
         raise HTTPException(status_code=400, detail=f"correctness must be one of: {valid_correctness}")
@@ -253,6 +254,8 @@ async def submit_annotation(
         raise HTTPException(status_code=400, detail=f"significance must be one of: {valid_significance}")
     if body.evidence_quality and body.evidence_quality not in valid_evidence:
         raise HTTPException(status_code=400, detail=f"evidence_quality must be one of: {valid_evidence}")
+    if body.action_item_quality and body.action_item_quality not in valid_action_item:
+        raise HTTPException(status_code=400, detail=f"action_item_quality must be one of: {valid_action_item}")
 
     annotator = body.annotator_id or "anonymous"
 
@@ -282,6 +285,10 @@ async def submit_annotation(
             annotation.significance = body.significance
         if body.evidence_quality is not None:
             annotation.evidence_quality = body.evidence_quality
+        if body.action_item_quality is not None:
+            annotation.action_item_quality = body.action_item_quality
+        if body.free_text is not None:
+            annotation.free_text = body.free_text
         annotation.seconds_since_review = seconds_since
     else:
         annotation = Annotation(
@@ -291,6 +298,8 @@ async def submit_annotation(
             correctness=body.correctness,
             significance=body.significance,
             evidence_quality=body.evidence_quality,
+            action_item_quality=body.action_item_quality,
+            free_text=body.free_text,
             seconds_since_review=seconds_since,
         )
         session.add(annotation)
@@ -307,6 +316,8 @@ async def submit_annotation(
         correctness=annotation.correctness,
         significance=annotation.significance,
         evidence_quality=annotation.evidence_quality,
+        action_item_quality=annotation.action_item_quality,
+        free_text=annotation.free_text,
         seconds_since_review=annotation.seconds_since_review,
     )
 
@@ -332,6 +343,8 @@ async def get_annotations(
             correctness=a.correctness,
             significance=a.significance,
             evidence_quality=a.evidence_quality,
+            action_item_quality=a.action_item_quality,
+            free_text=a.free_text,
             seconds_since_review=a.seconds_since_review,
         )
         for a in annotations
@@ -361,6 +374,8 @@ async def export_all_annotations(
             "correctness": a.correctness,
             "significance": a.significance,
             "evidence_quality": a.evidence_quality,
+            "action_item_quality": a.action_item_quality,
+            "free_text": a.free_text,
             "seconds_since_review": a.seconds_since_review,
             "created_at": a.created_at.isoformat() if a.created_at else None,
         }
@@ -386,6 +401,8 @@ def _save_annotations_json(key: str, session):
                 "correctness": a.correctness,
                 "significance": a.significance,
                 "evidence_quality": a.evidence_quality,
+                "action_item_quality": a.action_item_quality,
+                "free_text": a.free_text,
                 "seconds_since_review": a.seconds_since_review,
             }
             for a in annotations

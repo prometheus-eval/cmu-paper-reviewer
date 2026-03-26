@@ -306,6 +306,32 @@ function parseReviewMarkdown(md) {
         }
       }
 
+      // Parse Concrete Action Item section
+      const actionMatch = body.match(/####\s*Concrete Action Item\s*\n([\s\S]*?)(?=####|##\s(?!#)|$)/i);
+      if (actionMatch) {
+        const aiText = actionMatch[1];
+        const ai = {};
+        const typeM = aiText.match(/\*\s*Action type\s*:\s*(.+)/i);
+        if (typeM) ai.actionType = typeM[1].trim();
+        const origM = aiText.match(/\*\s*Original text\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (origM) ai.originalText = origM[1].trim();
+        const suggM = aiText.match(/\*\s*Suggested text\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (suggM) ai.suggestedText = suggM[1].trim();
+        const locM = aiText.match(/\*\s*Location\s*:\s*(.+)/i);
+        if (locM) ai.location = locM[1].trim();
+        const paraM = aiText.match(/\*\s*New paragraph\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (paraM) ai.newParagraph = paraM[1].trim();
+        const descM = aiText.match(/\*\s*Description\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (descM) ai.description = descM[1].trim();
+        const codeM = aiText.match(/\*\s*Key code changes\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (codeM) ai.keyCodeChanges = codeM[1].trim();
+        const filesM = aiText.match(/\*\s*Files modified\s*:\s*(.+)/i);
+        if (filesM) ai.filesModified = filesM[1].trim();
+        const runM = aiText.match(/\*\s*Run command\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)/i);
+        if (runM) ai.runCommand = runM[1].trim();
+        item.actionItem = ai;
+      }
+
       result.items.push(item);
     }
   } catch {
@@ -393,6 +419,71 @@ function renderStructuredReview(parsed, key) {
           </div>`;
       }
       bodyHtml += `</div>`;
+    }
+
+    if (item.actionItem) {
+      const ai = item.actionItem;
+      const isWriting = ai.actionType && ai.actionType.toLowerCase().includes("fix the writing");
+      const badgeClass = isWriting ? "action-badge-writing" : "action-badge-implementation";
+      const badgeText = isWriting ? "Fix the writing" : "Add new implementation";
+
+      bodyHtml += `
+        <div class="action-item-section">
+          <div class="action-item-header" onclick="toggleActionItem(this)">
+            <span class="action-item-label">Concrete Action Item</span>
+            <span class="action-type-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
+            <svg class="chevron action-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <div class="action-item-body">`;
+
+      if (isWriting) {
+        if (ai.originalText && ai.suggestedText) {
+          bodyHtml += `
+            <div class="diff-view">
+              <div class="diff-panel diff-original">
+                <div class="diff-panel-header">Original</div>
+                <div class="diff-panel-content">${renderInlineMarkdown(ai.originalText)}</div>
+              </div>
+              <div class="diff-panel diff-suggested">
+                <div class="diff-panel-header">Suggested</div>
+                <div class="diff-panel-content">${renderInlineMarkdown(ai.suggestedText)}</div>
+              </div>
+            </div>`;
+        }
+        if (ai.newParagraph) {
+          bodyHtml += `
+            <div class="new-paragraph-box">
+              <div class="new-paragraph-label">New paragraph to add</div>
+              <div class="new-paragraph-text">${renderInlineMarkdown(ai.newParagraph)}</div>
+            </div>`;
+        }
+        if (ai.location) {
+          bodyHtml += `<div class="action-location"><strong>Location:</strong> ${escapeHtml(ai.location)}</div>`;
+        }
+      } else {
+        if (ai.description) {
+          bodyHtml += `<div class="action-description">${renderInlineMarkdown(ai.description)}</div>`;
+        }
+        if (ai.keyCodeChanges) {
+          bodyHtml += `
+            <div class="code-changes-box">
+              <div class="code-changes-header">Key Code Changes <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard(this, ${JSON.stringify(JSON.stringify(ai.keyCodeChanges))})">Copy</button></div>
+              <pre class="code-block"><code>${escapeHtml(ai.keyCodeChanges)}</code></pre>
+            </div>`;
+        }
+        if (ai.filesModified) {
+          bodyHtml += `<div class="action-files"><strong>Files modified:</strong> ${escapeHtml(ai.filesModified)}</div>`;
+        }
+        if (ai.runCommand) {
+          bodyHtml += `
+            <div class="run-command-box">
+              <div class="run-command-header">Run Command <button class="copy-btn" onclick="event.stopPropagation(); copyToClipboard(this, ${JSON.stringify(JSON.stringify(ai.runCommand))})">Copy</button></div>
+              <pre class="code-block"><code>${escapeHtml(ai.runCommand)}</code></pre>
+            </div>`;
+        }
+      }
+
+      bodyHtml += `</div></div>`;
     }
 
     bodyHtml += `
@@ -646,7 +737,7 @@ function getAnnotatorId() {
   return id;
 }
 
-let annotationState = { correctness: null, significance: null, evidence_quality: null };
+let annotationState = { correctness: null, significance: null, evidence_quality: null, action_item_quality: null, free_text: "" };
 let existingAnnotations = [];
 
 function showAnnotationModal(key, items, currentIndex) {
@@ -658,7 +749,7 @@ function showAnnotationModal(key, items, currentIndex) {
   const item = items[currentIndex];
 
   // Reset state for new item
-  annotationState = { correctness: null, significance: null, evidence_quality: null };
+  annotationState = { correctness: null, significance: null, evidence_quality: null, action_item_quality: null, free_text: "" };
 
   // Load existing annotations once, then render
   const render = () => {
@@ -668,6 +759,8 @@ function showAnnotationModal(key, items, currentIndex) {
         correctness: existingForItem.correctness,
         significance: existingForItem.significance,
         evidence_quality: existingForItem.evidence_quality,
+        action_item_quality: existingForItem.action_item_quality,
+        free_text: existingForItem.free_text || "",
       };
     }
 
@@ -708,6 +801,24 @@ function showAnnotationModal(key, items, currentIndex) {
             </div>
           </div>
 
+          <div class="annotation-group">
+            <div class="annotation-group-label">Is the action item helpful in improving this paper?</div>
+            <div class="annotation-buttons" data-field="action_item_quality">
+              <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_executable' ? 'selected' : ''}" data-value="helpful_executable">Helpful and executable</button>
+              <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_needs_modification' ? 'selected' : ''}" data-value="helpful_needs_modification">Helpful but needs modification</button>
+              <button class="annotation-btn ${annotationState.action_item_quality === 'not_helpful' ? 'selected' : ''}" data-value="not_helpful">Not helpful</button>
+            </div>
+          </div>
+
+          <div class="annotation-group">
+            <div class="annotation-group-label">Additional comments (optional)</div>
+            <textarea class="annotation-textarea" id="annotation-free-text" placeholder="Share any additional thoughts about this review item..." rows="3">${escapeHtml(annotationState.free_text || "")}</textarea>
+          </div>
+
+          <div class="debate-trigger">
+            <button class="btn btn-secondary btn-sm debate-btn" id="debate-btn">I want to debate with AI about this (Beta \u{1F9EA})</button>
+          </div>
+
           <div class="modal-actions">
             <button class="btn btn-secondary btn-sm" id="annotation-skip">Skip</button>
             <button class="btn btn-primary btn-sm" id="annotation-submit" style="margin-top:0;">Submit</button>
@@ -726,6 +837,13 @@ function showAnnotationModal(key, items, currentIndex) {
         });
       });
     });
+
+    // Wire free text
+    const freeTextEl = document.getElementById("annotation-free-text");
+    if (freeTextEl) freeTextEl.addEventListener("input", () => { annotationState.free_text = freeTextEl.value; });
+
+    // Wire debate button
+    document.getElementById("debate-btn")?.addEventListener("click", () => { openDebateChat(key, item); });
 
     // Skip closes modal (no auto-advance)
     document.getElementById("annotation-skip").addEventListener("click", closeAnnotationModal);
@@ -768,7 +886,7 @@ function showAnnotationModal(key, items, currentIndex) {
 
 function showSingleAnnotationModal(key, item) {
   // Open modal for a single item (no auto-advance)
-  annotationState = { correctness: null, significance: null, evidence_quality: null };
+  annotationState = { correctness: null, significance: null, evidence_quality: null, action_item_quality: null, free_text: "" };
 
   fetch(`${API_BASE_URL}/api/review/${key}/annotations?annotator_id=${encodeURIComponent(getAnnotatorId())}`)
     .then(r => r.json())
@@ -780,6 +898,7 @@ function showSingleAnnotationModal(key, item) {
           correctness: existingForItem.correctness,
           significance: existingForItem.significance,
           evidence_quality: existingForItem.evidence_quality,
+          free_text: existingForItem.free_text || "",
         };
       }
       renderSingleAnnotationModal(key, item);
@@ -825,6 +944,24 @@ function renderSingleAnnotationModal(key, item) {
           </div>
         </div>
 
+        <div class="annotation-group">
+          <div class="annotation-group-label">Is the action item helpful in improving this paper?</div>
+          <div class="annotation-buttons" data-field="action_item_quality">
+            <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_executable' ? 'selected' : ''}" data-value="helpful_executable">Helpful and executable</button>
+            <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_needs_modification' ? 'selected' : ''}" data-value="helpful_needs_modification">Helpful but needs modification</button>
+            <button class="annotation-btn ${annotationState.action_item_quality === 'not_helpful' ? 'selected' : ''}" data-value="not_helpful">Not helpful</button>
+          </div>
+        </div>
+
+        <div class="annotation-group">
+          <div class="annotation-group-label">Additional comments (optional)</div>
+          <textarea class="annotation-textarea" id="annotation-free-text" placeholder="Share any additional thoughts about this review item..." rows="3">${escapeHtml(annotationState.free_text || "")}</textarea>
+        </div>
+
+        <div class="debate-trigger">
+          <button class="btn btn-secondary btn-sm debate-btn" id="debate-btn">I want to debate with AI about this (Beta \u{1F9EA})</button>
+        </div>
+
         <div class="modal-actions">
           <button class="btn btn-secondary btn-sm" id="annotation-skip">Cancel</button>
           <button class="btn btn-primary btn-sm" id="annotation-submit" style="margin-top:0;">Submit</button>
@@ -843,6 +980,13 @@ function renderSingleAnnotationModal(key, item) {
       });
     });
   });
+
+  // Wire free text
+  const freeTextEl = document.getElementById("annotation-free-text");
+  if (freeTextEl) freeTextEl.addEventListener("input", () => { annotationState.free_text = freeTextEl.value; });
+
+  // Wire debate button
+  document.getElementById("debate-btn")?.addEventListener("click", () => { openDebateChat(key, item); });
 
   document.getElementById("annotation-skip").addEventListener("click", closeAnnotationModal);
 
@@ -870,6 +1014,253 @@ function renderSingleAnnotationModal(key, item) {
 
 function closeAnnotationModal() {
   annotationModalRoot.innerHTML = "";
+}
+
+// =========================================================
+// Action Item Helpers
+// =========================================================
+function toggleActionItem(header) {
+  const section = header.closest(".action-item-section");
+  section.classList.toggle("expanded");
+}
+
+function copyToClipboard(btn, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => { btn.textContent = orig; }, 1500);
+  });
+}
+
+// =========================================================
+// Debate with AI
+// =========================================================
+let debateState = {
+  sessionId: null,
+  messages: [],
+  turnCount: 0,
+  status: "active",
+  isStreaming: false,
+  currentKey: null,
+  currentItem: null,
+};
+
+async function openDebateChat(key, item) {
+  debateState.currentKey = key;
+  debateState.currentItem = item;
+
+  // Start debate session via API
+  try {
+    const resp = await fetch(`${API_BASE_URL}/api/review/${key}/debate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        item_number: item.number,
+        annotator_id: getAnnotatorId(),
+      }),
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      alert(err.detail || "Failed to start debate.");
+      return;
+    }
+    const data = await resp.json();
+    debateState.sessionId = data.session_id;
+    debateState.messages = [];
+    debateState.turnCount = 0;
+    debateState.status = "active";
+    debateState.isStreaming = false;
+  } catch {
+    alert("Failed to start debate session.");
+    return;
+  }
+
+  // Transform modal to debate layout
+  const modal = document.querySelector(".modal");
+  if (!modal) return;
+  modal.classList.add("modal-debate");
+
+  // Build left panel with item info
+  let leftHtml = `<h3>Review Item ${item.number}</h3>`;
+  leftHtml += `<div class="item-preview"><strong>${escapeHtml(item.title)}</strong>`;
+  if (item.mainCriticism) {
+    leftHtml += `<div style="margin-top:0.5rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--cmu-red);">Main Point of Criticism</span><br>${renderInlineMarkdown(item.mainCriticism)}</div>`;
+  }
+  if (item.evidence.length > 0) {
+    leftHtml += `<div style="margin-top:0.75rem;border-top:1px solid rgba(196,18,48,0.15);padding-top:0.6rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray-500);">Evidence</span>`;
+    item.evidence.forEach((ev, j) => {
+      leftHtml += `<div style="margin-top:0.5rem;"><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;font-style:italic;font-size:0.85rem;color:var(--gray-600);">${renderInlineMarkdown(ev.quote)}</div>`;
+      if (ev.comment) leftHtml += `<div style="border-left:2px solid var(--gray-300);margin-left:0.75rem;margin-top:0.3rem;padding:0.3rem 0.6rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ev.comment)}</div>`;
+      leftHtml += `</div>`;
+    });
+    leftHtml += `</div>`;
+  }
+  leftHtml += `</div>`;
+
+  modal.innerHTML = `
+    <div class="debate-layout">
+      <div class="debate-left">${leftHtml}</div>
+      <div class="debate-right">
+        <div class="debate-header">
+          <span class="debate-title">Debate with AI (Beta \u{1F9EA})</span>
+          <span class="turn-counter" id="turn-counter">Turn 0/20</span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-bubble chat-assistant"><div class="chat-message-text">I believe this criticism is valid and important. Try to convince me otherwise! Make your argument.</div></div>
+        </div>
+        <div class="chat-input-area" id="chat-input-area">
+          <textarea class="chat-input" id="chat-input" placeholder="Type your argument..." rows="2"></textarea>
+          <button class="btn btn-primary btn-sm" id="chat-send">Send</button>
+        </div>
+        <div class="debate-conclusion" id="debate-conclusion" style="display:none;"></div>
+      </div>
+    </div>`;
+
+  document.getElementById("chat-send").addEventListener("click", () => sendDebateMessage());
+  document.getElementById("chat-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendDebateMessage();
+    }
+  });
+}
+
+async function sendDebateMessage() {
+  if (debateState.isStreaming || debateState.status !== "active") return;
+
+  const input = document.getElementById("chat-input");
+  const content = input.value.trim();
+  if (!content) return;
+
+  input.value = "";
+  debateState.isStreaming = true;
+  debateState.turnCount++;
+  document.getElementById("turn-counter").textContent = `Turn ${debateState.turnCount}/20`;
+
+  // Add user message bubble
+  appendChatMessage("user", content);
+
+  // Add empty assistant bubble for streaming
+  const assistantBubble = appendChatMessage("assistant", "");
+  const textEl = assistantBubble.querySelector(".chat-message-text");
+
+  // Disable input during streaming
+  const sendBtn = document.getElementById("chat-send");
+  const inputEl = document.getElementById("chat-input");
+  if (sendBtn) sendBtn.disabled = true;
+  if (inputEl) inputEl.disabled = true;
+
+  try {
+    const resp = await fetch(
+      `${API_BASE_URL}/api/review/${debateState.currentKey}/debate/${debateState.sessionId}/message`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content }),
+      }
+    );
+
+    const reader = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let fullText = "";
+    let buffer = "";
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      const lines = buffer.split("\n");
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (line.startsWith("data: ")) {
+          const data = line.slice(6);
+          if (data === "[DONE]") continue;
+          try {
+            const parsed = JSON.parse(data);
+            if (parsed.content) {
+              fullText += parsed.content;
+              textEl.innerHTML = renderInlineMarkdown(fullText);
+              const chatEl = document.getElementById("chat-messages");
+              chatEl.scrollTop = chatEl.scrollHeight;
+            }
+            if (parsed.error) {
+              textEl.textContent = "Error: " + parsed.error;
+            }
+          } catch {}
+        }
+      }
+    }
+
+    // Check for derail
+    if (fullText.trim() === "DERAIL") {
+      debateState.status = "derailed";
+      textEl.innerHTML = "";
+      assistantBubble.remove();
+      showDerailUI();
+    }
+    // Check for conclusion
+    else if (fullText.includes("I was convinced") || fullText.includes("I was not convinced") || debateState.turnCount >= 20) {
+      if (fullText.includes("I was convinced")) {
+        debateState.status = "concluded_convinced";
+      } else {
+        debateState.status = "concluded_not_convinced";
+      }
+      showConclusionUI(fullText);
+    }
+  } catch (err) {
+    textEl.textContent = "Error: " + err.message;
+  }
+
+  debateState.isStreaming = false;
+  if (sendBtn) sendBtn.disabled = false;
+  if (inputEl) inputEl.disabled = false;
+}
+
+function appendChatMessage(role, content) {
+  const chatEl = document.getElementById("chat-messages");
+  const bubble = document.createElement("div");
+  bubble.className = `chat-bubble chat-${role}`;
+  bubble.innerHTML = `<div class="chat-message-text">${content ? renderInlineMarkdown(content) : '<span class="typing-indicator">...</span>'}</div>`;
+  chatEl.appendChild(bubble);
+  chatEl.scrollTop = chatEl.scrollHeight;
+  return bubble;
+}
+
+function showDerailUI() {
+  const inputArea = document.getElementById("chat-input-area");
+  if (inputArea) inputArea.innerHTML = `<div class="derail-message">Derail \u{1F682} (You went off-point!)</div>`;
+}
+
+function showConclusionUI(verdict) {
+  const inputArea = document.getElementById("chat-input-area");
+  if (inputArea) inputArea.style.display = "none";
+  const conclusionEl = document.getElementById("debate-conclusion");
+  if (!conclusionEl) return;
+  conclusionEl.style.display = "block";
+  conclusionEl.innerHTML = `
+    <div class="verdict-text">${escapeHtml(verdict)}</div>
+    <div class="verdict-question">Do you agree with this result?</div>
+    <div class="verdict-buttons">
+      <button class="verdict-btn verdict-agree" onclick="submitDebateFeedback(true)">\u{1F44D}</button>
+      <button class="verdict-btn verdict-disagree" onclick="submitDebateFeedback(false)">\u{1F44E}</button>
+    </div>`;
+}
+
+async function submitDebateFeedback(agrees) {
+  try {
+    await fetch(
+      `${API_BASE_URL}/api/review/${debateState.currentKey}/debate/${debateState.sessionId}/feedback`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_agrees: agrees }),
+      }
+    );
+    const btns = document.querySelector(".verdict-buttons");
+    if (btns) btns.innerHTML = `<span style="color:var(--gray-500);">Thank you for your feedback!</span>`;
+  } catch {}
 }
 
 // =========================================================

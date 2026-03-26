@@ -68,7 +68,41 @@ class Annotation(Base):
     correctness: Mapped[str | None] = mapped_column(String(20), nullable=True)
     significance: Mapped[str | None] = mapped_column(String(30), nullable=True)
     evidence_quality: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    action_item_quality: Mapped[str | None] = mapped_column(String(40), nullable=True)
     seconds_since_review: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    free_text: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime.datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+
+
+class DebateSession(Base):
+    __tablename__ = "debate_sessions"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    key: Mapped[str] = mapped_column(String(12), index=True)
+    item_number: Mapped[int] = mapped_column(Integer)
+    annotator_id: Mapped[str] = mapped_column(String(36), default="anonymous")
+    model_used: Mapped[str] = mapped_column(Text, default="")
+    status: Mapped[str] = mapped_column(String(30), default="active")
+    user_agrees_with_result: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
+    turn_count: Mapped[int] = mapped_column(Integer, default=0)
+    created_at: Mapped[datetime.datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    updated_at: Mapped[datetime.datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
+    )
+
+
+class DebateMessage(Base):
+    __tablename__ = "debate_messages"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    session_id: Mapped[int] = mapped_column(Integer, index=True)
+    role: Mapped[str] = mapped_column(String(20))
+    content: Mapped[str] = mapped_column(Text)
+    turn_number: Mapped[int] = mapped_column(Integer, default=0)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

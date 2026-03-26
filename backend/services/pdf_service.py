@@ -156,6 +156,19 @@ class QuoteComment:
 
 
 @dataclass
+class ActionItem:
+    action_type: str = ""
+    original_text: str = ""
+    suggested_text: str = ""
+    location: str = ""
+    new_paragraph: str = ""
+    description: str = ""
+    key_code_changes: str = ""
+    files_modified: str = ""
+    run_command: str = ""
+
+
+@dataclass
 class ReviewItem:
     number: int
     title: str
@@ -163,6 +176,7 @@ class ReviewItem:
     eval_criteria: str = ""
     limitations_status: str = ""
     evidence: list[QuoteComment] = field(default_factory=list)
+    action_item: ActionItem | None = None
 
 
 @dataclass
@@ -231,6 +245,31 @@ def _parse_review(md: str) -> ParsedReview:
                     quote_text = q_match.group(1).strip()
                     comment_text = c_match.group(1).strip() if c_match else ""
                     item.evidence.append(QuoteComment(quote=quote_text, comment=comment_text))
+
+        # Parse Concrete Action Item section
+        action_match = re.search(r"####\s*Concrete Action Item\s*\n([\s\S]*?)(?=####|##\s|$)", body, re.IGNORECASE)
+        if action_match:
+            ai_text = action_match.group(1)
+            ai = ActionItem()
+            type_m = re.search(r"\*\s*Action type\s*:\s*(.+)", ai_text, re.IGNORECASE)
+            if type_m: ai.action_type = type_m.group(1).strip()
+            orig_m = re.search(r"\*\s*Original text\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)", ai_text, re.IGNORECASE)
+            if orig_m: ai.original_text = orig_m.group(1).strip()
+            sugg_m = re.search(r"\*\s*Suggested text\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)", ai_text, re.IGNORECASE)
+            if sugg_m: ai.suggested_text = sugg_m.group(1).strip()
+            loc_m = re.search(r"\*\s*Location\s*:\s*(.+)", ai_text, re.IGNORECASE)
+            if loc_m: ai.location = loc_m.group(1).strip()
+            para_m = re.search(r"\*\s*New paragraph\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)", ai_text, re.IGNORECASE)
+            if para_m: ai.new_paragraph = para_m.group(1).strip()
+            desc_m = re.search(r"\*\s*Description\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)", ai_text, re.IGNORECASE)
+            if desc_m: ai.description = desc_m.group(1).strip()
+            code_m = re.search(r"\*\s*Key code changes\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)", ai_text, re.IGNORECASE)
+            if code_m: ai.key_code_changes = code_m.group(1).strip()
+            files_m = re.search(r"\*\s*Files modified\s*:\s*(.+)", ai_text, re.IGNORECASE)
+            if files_m: ai.files_modified = files_m.group(1).strip()
+            run_m = re.search(r"\*\s*Run command\s*:\s*([\s\S]*?)(?=\n\*\s|\n####|$)", ai_text, re.IGNORECASE)
+            if run_m: ai.run_command = run_m.group(1).strip()
+            item.action_item = ai
 
         result.items.append(item)
 
@@ -378,6 +417,29 @@ LATEX_PREAMBLE = r"""
   }\hspace{4pt}%
 }
 
+% ── Action type pill ──
+\newcommand{\actiontypepill}[1]{%
+  \tikz[baseline=(pill.base)]{%
+    \node[fill=lightred, draw=cmured!40, rounded corners=8pt,
+          inner xsep=8pt, inner ysep=3pt, font=\small\sffamily\bfseries\color{cmured}]
+          (pill) {#1};%
+  }%
+}
+
+% ── Action box ──
+\newtcolorbox{actionbox}{
+  enhanced,
+  colback=white,
+  colframe=cmured!40,
+  boxrule=0.5pt,
+  arc=4pt,
+  breakable,
+  top=10pt, bottom=10pt, left=14pt, right=14pt,
+  fontupper=\color{textgray},
+  before skip=8pt,
+  after skip=8pt,
+}
+
 % ── Quote box: gray background, rounded ──
 \newtcolorbox{quotebox}[1][]{
   enhanced,
@@ -514,6 +576,36 @@ def _generate_latex(parsed: ParsedReview, key: str, model_name: str = "") -> str
                     parts.append(r"\end{commentbox}" + "\n")
 
                 parts.append(r"\vspace{4pt}" + "\n")
+
+        if item.action_item:
+            ai = item.action_item
+            parts.append(r"\vspace{6pt}" + "\n")
+            parts.append(r"{\small\sffamily\bfseries\color{medgray}\MakeUppercase{Concrete Action Item}}" + "\n")
+            parts.append(r"\vspace{2pt}{\color{bordergray}\hrule height 0.5pt}\vspace{6pt}" + "\n")
+            parts.append(r"\noindent \actiontypepill{" + _tex_escape(ai.action_type) + "}\n\n")
+            parts.append(r"\begin{actionbox}" + "\n")
+            if ai.location:
+                parts.append(r"{\sffamily\bfseries\small\color{medgray} Location:} " + _tex_escape(ai.location) + "\n\n")
+            if ai.original_text and ai.suggested_text:
+                parts.append(r"{\sffamily\bfseries\small\color{red!60!black} Original Text:}" + "\n\n")
+                parts.append(_tex_escape_with_links(ai.original_text) + "\n\n")
+                parts.append(r"{\sffamily\bfseries\small\color{green!50!black} Suggested Text:}" + "\n\n")
+                parts.append(_tex_escape_with_links(ai.suggested_text) + "\n")
+            if ai.new_paragraph:
+                parts.append(r"{\sffamily\bfseries\small\color{green!50!black} New Paragraph:}" + "\n\n")
+                parts.append(_tex_escape_with_links(ai.new_paragraph) + "\n")
+            if ai.description:
+                parts.append(r"{\sffamily\bfseries\small\color{medgray} Description:}" + "\n\n")
+                parts.append(_tex_escape_with_links(ai.description) + "\n\n")
+            if ai.key_code_changes:
+                parts.append(r"{\sffamily\bfseries\small\color{medgray} Key Code Changes:}" + "\n\n")
+                parts.append(r"{\ttfamily\small " + _tex_escape(ai.key_code_changes) + "}\n\n")
+            if ai.files_modified:
+                parts.append(r"{\sffamily\bfseries\small\color{medgray} Files Modified:} " + _tex_escape(ai.files_modified) + "\n\n")
+            if ai.run_command:
+                parts.append(r"{\sffamily\bfseries\small\color{medgray} Run Command:}" + "\n\n")
+                parts.append(r"{\ttfamily\small " + _tex_escape(ai.run_command) + "}\n")
+            parts.append(r"\end{actionbox}" + "\n")
 
         parts.append(r"\vspace{0.8em}" + "\n\n")
 
@@ -764,6 +856,32 @@ def _generate_structured_html(parsed: ParsedReview, key: str, model_name: str = 
                 html += f'<div class="quote-box"><div class="label">Quote {j + 1}</div><div class="text">{_md_links(ev.quote)}</div></div>\n'
                 if ev.comment:
                     html += f'<div class="comment-box"><div class="label">Comment</div><div class="text">{_md_links(ev.comment)}</div></div>\n'
+
+        if item.action_item:
+            ai = item.action_item
+            is_writing = ai.action_type and "fix" in ai.action_type.lower()
+            badge_cls = "action-badge-writing" if is_writing else "action-badge-impl"
+            html += f'<div style="margin-top:12px;padding:10px 14px;border:1px solid #E5E5E5;border-radius:6px;">\n'
+            html += f'<div style="font-size:8pt;font-weight:bold;text-transform:uppercase;color:#737373;margin-bottom:6px;">Concrete Action Item</div>\n'
+            html += f'<span style="display:inline-block;padding:2px 10px;border-radius:12px;font-size:9pt;font-weight:600;background:#fdf2f4;color:#C41230;border:1px solid rgba(196,18,48,0.2);">{_html_esc(ai.action_type)}</span>\n'
+            if ai.location:
+                html += f'<p style="font-size:9pt;color:#737373;margin:6px 0;"><strong>Location:</strong> {_html_esc(ai.location)}</p>\n'
+            if ai.original_text and ai.suggested_text:
+                html += f'<div style="display:flex;gap:8px;margin-top:8px;">'
+                html += f'<div style="flex:1;background:#fef2f2;border:1px solid #fecaca;border-radius:6px;padding:8px;"><div style="font-size:8pt;font-weight:bold;color:#DC2626;margin-bottom:4px;">ORIGINAL</div><div style="font-size:9pt;">{_md_links(ai.original_text)}</div></div>'
+                html += f'<div style="flex:1;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:8px;"><div style="font-size:8pt;font-weight:bold;color:#16A34A;margin-bottom:4px;">SUGGESTED</div><div style="font-size:9pt;">{_md_links(ai.suggested_text)}</div></div>'
+                html += f'</div>\n'
+            if ai.new_paragraph:
+                html += f'<div style="margin-top:8px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:8px;"><div style="font-size:8pt;font-weight:bold;color:#16A34A;margin-bottom:4px;">NEW PARAGRAPH</div><div style="font-size:9pt;">{_md_links(ai.new_paragraph)}</div></div>\n'
+            if ai.description:
+                html += f'<p style="font-size:9pt;margin:6px 0;">{_md_links(ai.description)}</p>\n'
+            if ai.key_code_changes:
+                html += f'<div style="margin-top:6px;"><div style="font-size:8pt;font-weight:bold;color:#737373;">Key Code Changes</div><pre style="background:#f5f5f5;border:1px solid #e5e5e5;border-radius:6px;padding:8px;font-size:8pt;white-space:pre-wrap;">{_html_esc(ai.key_code_changes)}</pre></div>\n'
+            if ai.files_modified:
+                html += f'<p style="font-size:9pt;color:#737373;"><strong>Files modified:</strong> {_html_esc(ai.files_modified)}</p>\n'
+            if ai.run_command:
+                html += f'<div style="margin-top:6px;"><div style="font-size:8pt;font-weight:bold;color:#737373;">Run Command</div><pre style="background:#f5f5f5;border:1px solid #e5e5e5;border-radius:6px;padding:8px;font-size:8pt;white-space:pre-wrap;">{_html_esc(ai.run_command)}</pre></div>\n'
+            html += '</div>\n'
 
     # Verification code
     vdir = verification_code_dir(key)
