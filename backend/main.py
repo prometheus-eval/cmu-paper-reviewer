@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.config import settings
 from backend.database import init_db
-from backend.routers import reviews, submissions
+from backend.routers import debates, reviews, submissions
 
 logging.basicConfig(
     level=logging.INFO,
@@ -39,6 +39,7 @@ app.add_middleware(
 
 app.include_router(submissions.router)
 app.include_router(reviews.router)
+app.include_router(debates.router)
 
 
 @app.get("/api/health")

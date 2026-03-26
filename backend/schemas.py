@@ -54,6 +54,8 @@ class AnnotationRequest(BaseModel):
     correctness: str | None = None
     significance: str | None = None
     evidence_quality: str | None = None
+    action_item_quality: str | None = None
+    free_text: str | None = None
 
 
 class AnnotationResponse(BaseModel):
@@ -63,4 +65,46 @@ class AnnotationResponse(BaseModel):
     correctness: str | None = None
     significance: str | None = None
     evidence_quality: str | None = None
+    action_item_quality: str | None = None
     seconds_since_review: int | None = None
+    free_text: str | None = None
+
+
+# ── Debate schemas ───────────────────────────────────────────────────────────
+
+class DebateStartRequest(BaseModel):
+    item_number: int
+    annotator_id: str = "anonymous"
+
+
+class DebateStartResponse(BaseModel):
+    session_id: int
+
+
+class DebateMessageRequest(BaseModel):
+    content: str
+
+
+class DebateMessageResponse(BaseModel):
+    id: int
+    role: str
+    content: str
+    turn_number: int
+
+
+class DebateFeedbackRequest(BaseModel):
+    user_agrees: bool
+
+
+class DebateSessionResponse(BaseModel):
+    id: int
+    key: str
+    item_number: int
+    annotator_id: str
+    model_used: str
+    status: str
+    user_agrees_with_result: bool | None = None
+    turn_count: int
+    messages: list[DebateMessageResponse] = []
+    created_at: datetime.datetime
+    updated_at: datetime.datetime

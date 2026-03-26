@@ -179,6 +179,7 @@ If the paper contains no significant issues, then you can output zero items.
 9. The items should be sorted by their importance. This means that the first item is the most important one, and the last item is the least important one. The importance is decided by the priority of the evaluation criteria (explained below).
 10. Never output raw triple-backticks inside quotation marks. If evidence is a code block, place the fenced code block outside of quotation marks.
 11. Use the format Item 1, Item 2, ..., with no fraction or denominator.
+12. Each item must include exactly one Concrete Action Item section after the Evidence section. The action item should be long and detailed enough to be directly actionable. Choose "Fix the writing" if the issue can be resolved by modifying or adding text in the paper. Choose "Add new implementation" if the issue requires adding code, running new experiments, or producing new results. For "Add new implementation", also create the actual code files in the verification_code directory.
 
 
 ### Required structure and format of each item
@@ -208,6 +209,25 @@ If the paper contains no significant issues, then you can output zero items.
 * Quote: <Exact sentence(s) 2 from other papers [hyperlinked citation]>
    * Comment: <Explanation of how this sentence contradicts the paper you are reviewing>
 (There may be more or fewer evidence items depending on the available evidence.)
+
+#### Concrete Action Item
+* Action type: <One of: "Fix the writing" OR "Add new implementation">
+
+For "Fix the writing" with replacement text:
+* Original text: <exact text from the paper to be modified, quoted verbatim>
+* Suggested text: <the corrected/improved replacement text>
+* Location: <section name and paragraph reference, e.g., "Section 3.2, paragraph 2">
+
+For "Fix the writing" with a new paragraph to add:
+* Location: <where to insert, e.g., "After paragraph 3 in Section 4.2">
+* New paragraph: <full paragraph text following the paper's writing style, with citations as [[N]](#refN)>
+
+For "Add new implementation":
+* Description: <detailed description of what additional experiment/implementation to add and why>
+* Key code changes: <summary of core code modifications needed, with specific function/file references>
+* Files modified: <comma-separated list of files that need changes>
+* Run command: <bash command(s) the user can run to execute the suggested experiment>
+(Use only one of the three variants above, matching the action type.)
 ```
 5. Each comment should be 5-7 sentences long (a single paragraph), providing a concrete explanation of why the evidence supports the claim. Comments must be specific but not overly verbose.
 6. Insert two empty lines between each item to separate them.
@@ -295,5 +315,7 @@ preprint/
 2. The link to the images in the paper's markdown may be incorrect. Instead, there is guarantee that the images are listed properly as "figure1.png", "figure2.png", etc. Hence, do not point out about broken and missing figure assets.
 3. The code you are reviewing does not need to be perfect; focus on major issues such as non-reproducible experiments or mismatches with descriptions instead of minor issues such as bad formatting, hard-coded paths, not accessible links to code, and bad documentation. Also, the code should be used to support the criticisms you make, and the main focus shouldn't be on the code itself.
 4. When refining your review (as specified in the TODO list), please ensure that all the items in the review are factually correct, significant, and mutually exclusive to each other.
+5. For "Fix the writing" action items, the original text must be an exact quote from the paper, and the suggested text must be a corrected version that fully addresses the criticism. Write enough text to make the fix self-contained. If a new paragraph is needed, write it following the paper's existing style and citation format.
+6. For "Add new implementation" action items, focus on the minimal but complete changes needed. The run command should be directly executable. Also save the actual implementation code in the verification_code directory.
 """
     return prompt
