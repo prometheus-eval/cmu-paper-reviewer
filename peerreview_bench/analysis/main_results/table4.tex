@@ -1,0 +1,35 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{9.5}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l ccc c}
+\toprule
+\textbf{Comparison} & \textbf{Correctness} & \textbf{Significance} & \textbf{Evidence Sufficiency} & \textbf{$n_{\text{paired}}$} \\
+                    & {\scriptsize diff (Cohen's $d$)} & {\scriptsize diff (rank-biserial $r$)} & {\scriptsize diff (Cohen's $d$)} & {\scriptsize range} \\
+\midrule
+Top-Rated H. vs Lowest-Rated H. & $+12.6\%^{***}$\,({\scriptsize $+0.50$}) & $+0.13$\,({\scriptsize $+0.24$})       & $+2.7\%$\,({\scriptsize $+0.11$})       & 80--85 \\
+Top-Rated H. vs GPT-5.2         & $+5.3\%$\,({\scriptsize $+0.20$})       & $-0.22^{***}$\,({\scriptsize $-0.49$}) & $-3.6\%$\,({\scriptsize $-0.16$})       & 82--84 \\
+Top-Rated H. vs Claude Opus 4.5 & $+8.7\%^{**}$\,({\scriptsize $+0.33$}) & $-0.14^{*}$\,({\scriptsize $-0.31$})   & $-3.7\%$\,({\scriptsize $-0.17$})       & 81--84 \\
+Top-Rated H. vs Gemini 3.0 Pro  & $+11.3\%^{***}$\,({\scriptsize $+0.46$}) & $-0.18^{**}$\,({\scriptsize $-0.43$})  & $+3.3\%$\,({\scriptsize $+0.12$})       & 83--85 \\
+\midrule
+Lowest-Rated H. vs GPT-5.2      & $-7.5\%^{*}$\,({\scriptsize $-0.23$})  & $-0.30^{***}$\,({\scriptsize $-0.56$}) & $-4.0\%$\,({\scriptsize $-0.17$})       & 77--84 \\
+Lowest-Rated H. vs Claude Opus 4.5 & $-4.0\%$\,({\scriptsize $-0.11$})    & $-0.24^{**}$\,({\scriptsize $-0.44$})  & $-6.0\%$\,({\scriptsize $-0.22$})       & 76--84 \\
+Lowest-Rated H. vs Gemini 3.0 Pro  & $-1.3\%$\,({\scriptsize $-0.04$})    & $-0.28^{***}$\,({\scriptsize $-0.48$}) & $+1.2\%$\,({\scriptsize $+0.04$})       & 78--85 \\
+\midrule
+GPT-5.2 vs Claude Opus 4.5      & $+3.7\%$\,({\scriptsize $+0.14$})      & $+0.11$\,({\scriptsize $+0.28$})       & $+1.7\%$\,({\scriptsize $+0.11$})       & 78--83 \\
+GPT-5.2 vs Gemini 3.0 Pro       & $+6.2\%^{*}$\,({\scriptsize $+0.24$}) & $+0.04$\,({\scriptsize $+0.11$})       & $+6.5\%^{*}$\,({\scriptsize $+0.23$})   & 80--84 \\
+Claude Opus 4.5 vs Gemini 3.0 Pro & $+2.3\%$\,({\scriptsize $+0.09$})    & $-0.06$\,({\scriptsize $-0.24$})       & $+6.4\%$\,({\scriptsize $+0.20$})       & 81--84 \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{All pairwise paired comparisons across the five reviewer groups, on each of the three primary evaluation metrics.}
+Each row reports a single (group A, group B) comparison; values are paired differences in the form ``A $-$ B'', with the corresponding effect size in parentheses (Cohen's $d$ for binary metrics; rank-biserial $r$ for the ordinal significance score).
+A positive entry means the first-named reviewer scores higher than the second-named reviewer.
+The comparisons are paired across the papers where both groups have items after cascade stripping; tests are paired $t$-test for binary metrics and Wilcoxon signed-rank for ordinal Significance.
+The rightmost column reports the range of paired-paper counts across the three metrics for that pair; the value is highest for Correctness (which has the most cascade-eligible items) and slightly lower for Significance and Evidence (which require additional cascade conditions).
+Significance is encoded on a 0--2 scale (0 = Not Significant, 1 = Marginally Significant, 2 = Significant).
+$^{*}p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$ (raw $p$-values, unadjusted for multiple comparisons).
+Comparisons are grouped by their first-named reviewer for readability.
+The corresponding ``fully good'' (Correct + Significant + Sufficient) comparisons are reported separately in Table~\ref{tab:fully-good}.
+}
+\label{tab:pairwise-full}
+\end{table}

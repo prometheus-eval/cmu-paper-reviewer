@@ -11,9 +11,15 @@ build/
 venv/
 *.db
 *.sqlite3
-annotations.json
+./annotations.json
+./annotations_debates.json
 scripts/download_annotations_.py
 scripts/deploy_.sh
 scripts/download_annotation_.sh
 .DS_Store
 downloaded_papers/*
+peerreview_bench/api_key/
+peerreview_bench/outputs/
+peerreview_bench/papers/
+peerreview_bench/**/agent_trajectories/
+peerreview_bench/**/*_trajectory/

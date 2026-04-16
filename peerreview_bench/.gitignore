@@ -1,0 +1,39 @@
+# ============================================================================
+# PeerReview Bench .gitignore
+# ============================================================================
+
+# --- Large generated outputs (recreatable by running the scripts) -----------
+outputs/
+
+# --- Downloaded papers from HF (recreatable via download_papers.py) ---------
+papers/
+
+# --- API keys (secrets — never commit) --------------------------------------
+api_key/
+
+# --- Python caches -----------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# --- Agent trajectories (large conversation state from OpenHands) -----------
+**/agent_trajectories/
+**/*_trajectory/
+
+# --- OS files ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --- IDE files ---------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Jupyter -----------------------------------------------------------------
+.ipynb_checkpoints/

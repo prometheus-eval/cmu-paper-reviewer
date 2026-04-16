@@ -1,0 +1,343 @@
+{
+  "1": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "2": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "3": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "4": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "5": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "6": {
+    "best": "Human_2",
+    "worst": "Human_2"
+  },
+  "7": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "8": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "9": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "10": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "11": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "12": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "13": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "14": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "15": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "16": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "17": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "18": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "19": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "20": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "21": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "22": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "23": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "24": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "25": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "26": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "27": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "28": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "29": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "30": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "31": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "32": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "33": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "34": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "35": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "36": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "37": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "38": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "39": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "40": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "41": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "42": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "43": {
+    "best": "Human_3",
+    "worst": "Human_2"
+  },
+  "44": {
+    "best": "Human_3",
+    "worst": "Human_2"
+  },
+  "45": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "46": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "47": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "48": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "49": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "50": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "51": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "52": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "53": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "54": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "55": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "56": {
+    "best": "Human_1",
+    "worst": "Human_1"
+  },
+  "57": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "58": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "59": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "60": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "61": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "62": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "63": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "64": {
+    "best": "Human_3",
+    "worst": "Human_2"
+  },
+  "65": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "66": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "67": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "68": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "69": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "70": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "71": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "72": {
+    "best": "Human_3",
+    "worst": "Human_1"
+  },
+  "73": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "74": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "75": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "76": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "77": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "78": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "79": {
+    "best": "Human_3",
+    "worst": "Human_2"
+  },
+  "80": {
+    "best": "Human_1",
+    "worst": "Human_3"
+  },
+  "81": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "82": {
+    "best": "Human_2",
+    "worst": "Human_3"
+  },
+  "83": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "84": {
+    "best": "Human_2",
+    "worst": "Human_1"
+  },
+  "85": {
+    "best": "Human_1",
+    "worst": "Human_2"
+  },
+  "_note": "Per-paper best/worst human reviewer tags. Keys are HF paper_ids (1..85) from the prometheus-eval/peerreview-bench dataset. Values are the reviewer_id strings used on that paper in the HF expert_annotation config."
+}
