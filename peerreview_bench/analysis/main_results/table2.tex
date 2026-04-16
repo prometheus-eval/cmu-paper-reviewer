@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering
+\fontsize{7}{9.5}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l cc c cc cc c cccc cc c cc cc}
+\toprule
+& \multicolumn{5}{c}{\textbf{Correctness}} & & \multicolumn{6}{c}{\textbf{Significance}} & & \multicolumn{5}{c}{\textbf{Evidence}} \\
+\cmidrule(lr){2-6} \cmidrule(lr){8-13} \cmidrule(lr){15-19}
+& & & & \multicolumn{2}{c}{\scriptsize Breakdown} & & & & & \multicolumn{3}{c}{\scriptsize Breakdown} & & & & & \multicolumn{2}{c}{\scriptsize Breakdown} \\
+\cmidrule(lr){5-6} \cmidrule(lr){11-13} \cmidrule(lr){18-19}
+\textbf{Reviewer} & {\scriptsize Rate [95\% CI]} & & $n$ & {\scriptsize Corr.} & {\scriptsize Incorr.} & & {\scriptsize Mean [95\% CI]} & & $n$ & {\scriptsize Sig.} & {\scriptsize Marg.} & {\scriptsize Not} & & {\scriptsize Rate [95\% CI]} & & $n$ & {\scriptsize Suff.} & {\scriptsize Insuff.} \\
+\midrule
+Top-Rated Human    & 93.7{\scriptsize\,[92.2, 95.0]} & & 1{,}183 & {\scriptsize 1{,}109} & {\scriptsize 74}  & & 1.38{\scriptsize\,[1.33, 1.42]} & & 1{,}109 & {\scriptsize 596} & {\scriptsize 336} & {\scriptsize 177} & & 92.9{\scriptsize\,[91.1, 94.4]} & & 932 & {\scriptsize 866} & {\scriptsize 66} \\
+Lowest-Rated Human & 85.8{\scriptsize\,[83.3, 88.0]} & & 832     & {\scriptsize 714}     & {\scriptsize 118} & & 1.07{\scriptsize\,[1.01, 1.13]} & & 714     & {\scriptsize 275} & {\scriptsize 215} & {\scriptsize 224} & & 88.2{\scriptsize\,[85.0, 90.7]} & & 490 & {\scriptsize 432} & {\scriptsize 58} \\
+GPT-5.2            & 87.3{\scriptsize\,[83.9, 90.0]} & & 455     & {\scriptsize 397}     & {\scriptsize 58}  & & 1.61{\scriptsize\,[1.54, 1.67]} & & 397     & {\scriptsize 271} & {\scriptsize 96}  & {\scriptsize 30}  & & 96.2{\scriptsize\,[93.7, 97.7]} & & 367 & {\scriptsize 353} & {\scriptsize 14} \\
+Claude Opus 4.5    & 84.2{\scriptsize\,[80.7, 87.2]} & & 488     & {\scriptsize 411}     & {\scriptsize 77}  & & 1.57{\scriptsize\,[1.51, 1.63]} & & 411     & {\scriptsize 269} & {\scriptsize 107} & {\scriptsize 35}  & & 97.1{\scriptsize\,[94.8, 98.4]} & & 376 & {\scriptsize 365} & {\scriptsize 11} \\
+Gemini 3.0 Pro     & 81.8{\scriptsize\,[78.0, 85.0]} & & 472     & {\scriptsize 386}     & {\scriptsize 86}  & & 1.59{\scriptsize\,[1.53, 1.65]} & & 386     & {\scriptsize 255} & {\scriptsize 105} & {\scriptsize 26}  & & 91.4{\scriptsize\,[88.0, 93.9]} & & 360 & {\scriptsize 329} & {\scriptsize 31} \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Item-level descriptive statistics across all evaluation dimensions.}
+Each review comment was independently evaluated for correctness, significance (0 = not significant, 1 = marginal, 2 = significant), and evidence sufficiency.
+Correctness and evidence rates use Wilson score 95\% confidence intervals; significance uses non-parametric bootstrap confidence intervals (10{,}000 iterations).
+Significance is evaluated only for items rated Correct; evidence is evaluated only for items rated Correct \emph{and} at least Marginally Significant.
+This cascading filter explains the decreasing $n$ across metrics.
+See Table~\ref{tab:main-results} for paper-level statistics and paired inferential comparisons.
+}
+\label{tab:ext-itemlevel}
+\end{table}

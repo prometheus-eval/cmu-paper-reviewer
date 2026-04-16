@@ -1,0 +1,41 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{10}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccc}
+\toprule
+& \textbf{Correctness (\%)} & \textbf{Significance (0--2)} & \textbf{Evidence (\%)} & & \\
+\textbf{Reviewer} & {\scriptsize mean [95\% CI]} & {\scriptsize mean [95\% CI]} & {\scriptsize mean [95\% CI]} & $n_{\text{items}}$ & $n_{\text{papers}}$ \\
+\midrule
+Top-Rated Human & 92.1{\scriptsize\,[89.1, 95.0]} & 1.40{\scriptsize\,[1.30, 1.50]} & 92.2{\scriptsize\,[88.8, 95.6]} & 1{,}183 & 85 \\
+Lowest-Rated Human & 79.4{\scriptsize\,[73.7, 85.2]} & 1.31{\scriptsize\,[1.19, 1.43]} & 89.7{\scriptsize\,[85.0, 94.4]} & 832 & 85 \\
+\midrule
+GPT-5.2 & 86.7{\scriptsize\,[81.5, 91.9]} & 1.61{\scriptsize\,[1.52, 1.71]} & 95.7{\scriptsize\,[92.0, 99.4]} & 455 & 84 \\
+\rowcolor{gray!6}
+\multicolumn{1}{r}{{\scriptsize\textcolor{gray!70}{vs Top-Rated Human}}} & {\scriptsize $d{=}{-}0.197$,\; $p{=}.074$} & {\scriptsize $r{=}{+}0.490$,\; $p{<}.001^{*}$} & {\scriptsize $d{=}{+}0.158$,\; $p{=}.157$} & & \\
+\rowcolor{gray!6}
+\multicolumn{1}{r}{{\scriptsize\textcolor{gray!70}{vs Lowest-Rated Human}}} & {\scriptsize $d{=}{+}0.227$,\; $p{=}.040^{*}$} & {\scriptsize $r{=}{+}0.564$,\; $p{<}.001^{*}$} & {\scriptsize $d{=}{+}0.167$,\; $p{=}.147$} & & \\[3pt]
+
+Claude Opus 4.5 & 83.2{\scriptsize\,[78.0, 88.4]} & 1.54{\scriptsize\,[1.44, 1.64]} & 95.4{\scriptsize\,[91.6, 99.2]} & 488 & 84 \\
+\rowcolor{gray!6}
+\multicolumn{1}{r}{{\scriptsize\textcolor{gray!70}{vs Top-Rated Human}}} & {\scriptsize $d{=}{-}0.333$,\; $p{=}.003^{*}$} & {\scriptsize $r{=}{+}0.307$,\; $p{=}.023^{*}$} & {\scriptsize $d{=}{+}0.171$,\; $p{=}.128$} & & \\
+\rowcolor{gray!6}
+\multicolumn{1}{r}{{\scriptsize\textcolor{gray!70}{vs Lowest-Rated Human}}} & {\scriptsize $d{=}{+}0.114$,\; $p{=}.301$} & {\scriptsize $r{=}{+}0.435$,\; $p{=}.002^{*}$} & {\scriptsize $d{=}{+}0.222$,\; $p{=}.057$} & & \\[3pt]
+
+Gemini 3.0 Pro & 80.7{\scriptsize\,[75.3, 86.2]} & 1.58{\scriptsize\,[1.48, 1.67]} & 88.7{\scriptsize\,[83.3, 94.2]} & 472 & 85 \\
+\rowcolor{gray!6}
+\multicolumn{1}{r}{{\scriptsize\textcolor{gray!70}{vs Top-Rated Human}}} & {\scriptsize $d{=}{-}0.465$,\; $p{<}.001^{*}$} & {\scriptsize $r{=}{+}0.429$,\; $p{=}.002^{*}$} & {\scriptsize $d{=}{-}0.123$,\; $p{=}.266$} & & \\
+\rowcolor{gray!6}
+\multicolumn{1}{r}{{\scriptsize\textcolor{gray!70}{vs Lowest-Rated Human}}} & {\scriptsize $d{=}{+}0.039$,\; $p{=}.717$} & {\scriptsize $r{=}{+}0.481$,\; $p{<}.001^{*}$} & {\scriptsize $d{=}{-}0.039$,\; $p{=}.732$} & & \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{AI reviewers identify more significant issues but with lower factual correctness than the top-rated human reviewers.}
+Each review comment from 85 papers across Physical Sciences, Biological Sciences, and Health Sciences was independently evaluated by domain scientists (45 unique annotators across primary and secondary roles) for correctness, significance (0 = not significant, 1 = marginal, 2 = significant), and evidence sufficiency.
+Values are paper-level means with 95\% confidence intervals (Wilson score interval for binary metrics, $t$-interval on per-paper means for the ordinal significance score).
+Shaded rows report pairwise effect sizes and $p$-values versus the Top-Rated and Lowest-Rated Human Reviewer; positive effects indicate the AI is higher than the human reference.
+$d$: Cohen's $d$ (paired) for binary metrics; $r$: rank-biserial correlation for the ordinal significance score.
+$^{*}p < 0.05$, unadjusted (paired $t$-test for correctness and evidence; Wilcoxon signed-rank for significance; $n = 76$--$85$ paired papers per comparison).
+Evidence sufficiency shows no significant differences across any AI--human comparison, indicating that when AI review comments are correct, they are equally well-supported.
+}
+\label{tab:main-results}
+\end{table}

@@ -1,0 +1,48 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{9.5}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l cc cc cc}
+\toprule
+& \multicolumn{2}{c}{\textbf{Per-group ``fully good'' rate}} & & & & \\
+\cmidrule(lr){2-3}
+\textbf{Reviewer} & {\scriptsize Paper-level mean [95\% CI]} & {\scriptsize Item-level rate [95\% CI]} & \textbf{Fully Good} & \textbf{Total Items} & \textbf{Papers} & \\
+\midrule
+Top-Rated Human    & 48.4{\scriptsize\,[42.2, 54.6]} & 48.0{\scriptsize\,[45.2, 50.9]} & 568 & 1{,}183 & 85 & \\
+Lowest-Rated Human & 36.1{\scriptsize\,[30.0, 42.2]} & 29.6{\scriptsize\,[26.6, 32.8]} & 246 & 832     & 85 & \\
+GPT-5.2            & 59.5{\scriptsize\,[51.9, 67.1]} & 58.2{\scriptsize\,[53.7, 62.7]} & 265 & 455     & 84 & \\
+Claude Opus 4.5    & 52.8{\scriptsize\,[45.4, 60.3]} & 54.5{\scriptsize\,[50.1, 58.9]} & 266 & 488     & 84 & \\
+Gemini 3.0 Pro     & 49.5{\scriptsize\,[42.0, 57.0]} & 50.8{\scriptsize\,[46.3, 55.3]} & 240 & 472     & 85 & \\
+\midrule
+\multicolumn{7}{@{}l}{\textbf{Pairwise paired differences} {\scriptsize (paper-level, row $-$ column; paired $t$-test)}} \\
+\midrule
+\textbf{Comparison} & \textbf{Diff} & \textbf{95\% CI (diff)} & \textbf{Cohen's $d$} & \textbf{$p$-value} & $n_{\text{paired}}$ & \\
+\midrule
+Top-Rated H. vs Lowest-Rated H.   & $+12.3\%$ & {\scriptsize $[+5.8, +19.4]$}   & $+0.41$ & $0.0004^{***}$ & 83 & \\
+Top-Rated H. vs GPT-5.2           & $-10.9\%$ & {\scriptsize $[-19.7, -2.2]$}   & $-0.27$ & $0.0150^{*}$   & 84 & \\
+Top-Rated H. vs Claude Opus 4.5   & $-4.5\%$  & {\scriptsize $[-13.0, +3.9]$}   & $-0.12$ & $0.2913$       & 84 & \\
+Top-Rated H. vs Gemini 3.0 Pro    & $-1.1\%$  & {\scriptsize $[-9.8, +7.6]$}    & $-0.03$ & $0.7969$       & 85 & \\
+\midrule
+Lowest-Rated H. vs GPT-5.2        & $-23.1\%$ & {\scriptsize $[-32.9, -15.1]$} & $-0.59$ & $<0.0001^{***}$ & 82 & \\
+Lowest-Rated H. vs Claude Opus 4.5 & $-16.3\%$ & {\scriptsize $[-25.8, -7.3]$}  & $-0.39$ & $0.0006^{***}$  & 82 & \\
+Lowest-Rated H. vs Gemini 3.0 Pro & $-13.5\%$ & {\scriptsize $[-23.7, -5.1]$}  & $-0.32$ & $0.0028^{**}$   & 83 & \\
+\midrule
+GPT-5.2 vs Claude Opus 4.5        & $+7.7\%$  & {\scriptsize $[+0.6, +14.8]$}   & $+0.24$ & $0.0336^{*}$   & 83 & \\
+GPT-5.2 vs Gemini 3.0 Pro         & $+10.6\%$ & {\scriptsize $[+4.0, +17.1]$}   & $+0.35$ & $0.0019^{**}$  & 84 & \\
+Claude Opus 4.5 vs Gemini 3.0 Pro & $+2.7\%$  & {\scriptsize $[-2.7, +8.1]$}    & $+0.11$ & $0.3177$       & 84 & \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{``Fully good'' review items: descriptive statistics and paired comparisons.}
+A review item is \emph{fully good} if it is rated Correct, Significant (encoded value 2, including the original 4-option ``Very Significant'' choice), \emph{and} Sufficient on the evidence axis.
+\textbf{Top:} per-group descriptive rates with two complementary aggregations.
+The \emph{paper-level mean} is the average across papers of the per-paper fully-good fraction (each paper weighted equally), with a $t$-interval 95\% CI.
+The \emph{item-level rate} pools all items together (overall fully-good count divided by total items) and uses the Wilson score 95\% CI.
+The two summaries are close but not identical: the paper-level mean weights each paper equally regardless of how many items it contributes, while the item-level rate weights papers in proportion to their item count.
+The ``Fully Good'' and ``Total Items'' columns show the underlying counts.
+\textbf{Bottom:} all 10 pairwise paired comparisons on the per-paper fully-good rate.
+Each row reports the paired difference (row $-$ column), its 95\% CI, Cohen's $d$, and the raw $p$-value from a paired $t$-test on per-paper rate differences.
+A positive entry indicates the first-named reviewer has a higher fully-good rate than the second-named reviewer.
+$^{*}p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$; unadjusted for multiple comparisons.
+}
+\label{tab:fully-good}
+\end{table}

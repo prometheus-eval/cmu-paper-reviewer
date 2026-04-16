@@ -1,0 +1,2578 @@
+{
+  "metadata": {
+    "source": "per-paper survey PDFs under annotated_survey/",
+    "description": "Per-annotator survey judgments on which AI reviewers match or exceed the best / worst human reviewer for each paper, plus derived per-model win rates.",
+    "total_responses": 112,
+    "responses_by_source": {
+      "primary": 85,
+      "secondary": 27
+    },
+    "papers_covered": 85,
+    "excluded_legacy_paper_ids": [
+      44,
+      45,
+      88,
+      89
+    ],
+    "ai_rotation_key": "legacy_paper_id % 6",
+    "ai_rotation": {
+      "0": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "1": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "2": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "3": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "4": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "5": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ]
+    },
+    "encoding_notes": "Radio /V values /0 /1 /2 map to reviewer1 reviewer2 reviewer3. Checkbox /V='/Yes' is True; None / '/' / '/Off' are False. Win-rate: a 'win' = the annotator indicated the AI matches or exceeds the corresponding human baseline on that paper."
+  },
+  "win_rate": {
+    "vs_top_rated_human": {
+      "GPT": {
+        "wins": 55,
+        "total": 112,
+        "rate": 0.49107142857142855,
+        "ci_lower_wilson95": 0.40033026234428093,
+        "ci_upper_wilson95": 0.5824047617104859,
+        "ci_lower_cluster_boot95": 0.39285714285714285,
+        "ci_upper_cluster_boot95": 0.589297161172161
+      },
+      "Claude": {
+        "wins": 34,
+        "total": 112,
+        "rate": 0.30357142857142855,
+        "ci_lower_wilson95": 0.2261015559412659,
+        "ci_upper_wilson95": 0.3940689732636048,
+        "ci_lower_cluster_boot95": 0.21666666666666667,
+        "ci_upper_cluster_boot95": 0.3944954128440367
+      },
+      "Gemini": {
+        "wins": 36,
+        "total": 112,
+        "rate": 0.32142857142857145,
+        "ci_lower_wilson95": 0.24209789736715798,
+        "ci_upper_wilson95": 0.4126025837281792,
+        "ci_lower_cluster_boot95": 0.2288135593220339,
+        "ci_upper_cluster_boot95": 0.42105263157894735
+      }
+    },
+    "vs_lowest_rated_human": {
+      "GPT": {
+        "wins": 82,
+        "total": 112,
+        "rate": 0.7321428571428571,
+        "ci_lower_wilson95": 0.6434352838771962,
+        "ci_upper_wilson95": 0.8054540906988654,
+        "ci_lower_cluster_boot95": 0.6410256410256411,
+        "ci_upper_cluster_boot95": 0.8214285714285714
+      },
+      "Claude": {
+        "wins": 66,
+        "total": 112,
+        "rate": 0.5892857142857143,
+        "ci_lower_wilson95": 0.4966881513192573,
+        "ci_upper_wilson95": 0.6759616081330742,
+        "ci_lower_cluster_boot95": 0.4954128440366973,
+        "ci_upper_cluster_boot95": 0.6810440189197435
+      },
+      "Gemini": {
+        "wins": 76,
+        "total": 112,
+        "rate": 0.6785714285714286,
+        "ci_lower_wilson95": 0.587397416271821,
+        "ci_upper_wilson95": 0.7579021026328421,
+        "ci_lower_cluster_boot95": 0.5818181818181818,
+        "ci_upper_cluster_boot95": 0.7727272727272727
+      }
+    }
+  },
+  "responses": [
+    {
+      "legacy_paper_id": 1,
+      "hf_paper_id": 1,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 2,
+      "hf_paper_id": 2,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 3,
+      "hf_paper_id": 3,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 4,
+      "hf_paper_id": 4,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 5,
+      "hf_paper_id": 5,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 6,
+      "hf_paper_id": 6,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": true,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 6,
+      "hf_paper_id": 6,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": true,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 7,
+      "hf_paper_id": 7,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 8,
+      "hf_paper_id": 8,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 9,
+      "hf_paper_id": 9,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 10,
+      "hf_paper_id": 10,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": true,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 11,
+      "hf_paper_id": 11,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": false,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 12,
+      "hf_paper_id": 12,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 12,
+      "hf_paper_id": 12,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 13,
+      "hf_paper_id": 13,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 14,
+      "hf_paper_id": 14,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 14,
+      "hf_paper_id": 14,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 15,
+      "hf_paper_id": 15,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 15,
+      "hf_paper_id": 15,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 16,
+      "hf_paper_id": 16,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 17,
+      "hf_paper_id": 17,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 18,
+      "hf_paper_id": 18,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 19,
+      "hf_paper_id": 19,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 20,
+      "hf_paper_id": 20,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 21,
+      "hf_paper_id": 21,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 22,
+      "hf_paper_id": 22,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 23,
+      "hf_paper_id": 23,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 24,
+      "hf_paper_id": 24,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 25,
+      "hf_paper_id": 25,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 26,
+      "hf_paper_id": 26,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": null,
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 27,
+      "hf_paper_id": 27,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 27,
+      "hf_paper_id": 27,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 28,
+      "hf_paper_id": 28,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": true
+      },
+      "match_worst": {
+        "GPT": false,
+        "Gemini": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 29,
+      "hf_paper_id": 29,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "GPT": false,
+        "Claude": true
+      },
+      "match_worst": {
+        "Gemini": false,
+        "GPT": false,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 30,
+      "hf_paper_id": 30,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 31,
+      "hf_paper_id": 31,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 31,
+      "hf_paper_id": 31,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 32,
+      "hf_paper_id": 32,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 33,
+      "hf_paper_id": 33,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 33,
+      "hf_paper_id": 33,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 34,
+      "hf_paper_id": 34,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 34,
+      "hf_paper_id": 34,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 35,
+      "hf_paper_id": 35,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 35,
+      "hf_paper_id": 35,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 36,
+      "hf_paper_id": 36,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": true,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 37,
+      "hf_paper_id": 37,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 37,
+      "hf_paper_id": 37,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 38,
+      "hf_paper_id": 38,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 39,
+      "hf_paper_id": 39,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 40,
+      "hf_paper_id": 40,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 41,
+      "hf_paper_id": 41,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 42,
+      "hf_paper_id": 42,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 43,
+      "hf_paper_id": 43,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 46,
+      "hf_paper_id": 44,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 51,
+      "hf_paper_id": 45,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 52,
+      "hf_paper_id": 46,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 53,
+      "hf_paper_id": 47,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 55,
+      "hf_paper_id": 48,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 56,
+      "hf_paper_id": 49,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 56,
+      "hf_paper_id": 49,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 58,
+      "hf_paper_id": 50,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 58,
+      "hf_paper_id": 50,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 59,
+      "hf_paper_id": 51,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 59,
+      "hf_paper_id": 51,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 60,
+      "hf_paper_id": 52,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": null,
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 60,
+      "hf_paper_id": 52,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 63,
+      "hf_paper_id": 53,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 64,
+      "hf_paper_id": 54,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 65,
+      "hf_paper_id": 55,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 68,
+      "hf_paper_id": 56,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 69,
+      "hf_paper_id": 57,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 70,
+      "hf_paper_id": 58,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Gemini": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 72,
+      "hf_paper_id": 59,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 72,
+      "hf_paper_id": 59,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 73,
+      "hf_paper_id": 60,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 73,
+      "hf_paper_id": 60,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 74,
+      "hf_paper_id": 61,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 74,
+      "hf_paper_id": 61,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 78,
+      "hf_paper_id": 62,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 78,
+      "hf_paper_id": 62,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 79,
+      "hf_paper_id": 63,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 80,
+      "hf_paper_id": 64,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 81,
+      "hf_paper_id": 65,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 82,
+      "hf_paper_id": 66,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Gemini": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 83,
+      "hf_paper_id": 67,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "GPT": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": false,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 83,
+      "hf_paper_id": 67,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 84,
+      "hf_paper_id": 68,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 85,
+      "hf_paper_id": 69,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 86,
+      "hf_paper_id": 70,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 87,
+      "hf_paper_id": 71,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 90,
+      "hf_paper_id": 72,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 91,
+      "hf_paper_id": 73,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": false,
+        "Claude": true,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 92,
+      "hf_paper_id": 74,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": false,
+        "Gemini": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 93,
+      "hf_paper_id": 75,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 96,
+      "hf_paper_id": 76,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": true,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 97,
+      "hf_paper_id": 77,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 97,
+      "hf_paper_id": 77,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      },
+      "match_worst": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": false
+      }
+    },
+    {
+      "legacy_paper_id": 98,
+      "hf_paper_id": 78,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": true
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": false,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 98,
+      "hf_paper_id": 78,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 99,
+      "hf_paper_id": 79,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 99,
+      "hf_paper_id": 79,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer3",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Claude": false,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 100,
+      "hf_paper_id": 80,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": false
+      },
+      "match_worst": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 100,
+      "hf_paper_id": 80,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "GPT",
+        "Gemini",
+        "Claude"
+      ],
+      "match_best": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": true
+      },
+      "match_worst": {
+        "GPT": false,
+        "Gemini": false,
+        "Claude": true
+      }
+    },
+    {
+      "legacy_paper_id": 101,
+      "hf_paper_id": 81,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "GPT": true,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 101,
+      "hf_paper_id": 81,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "Gemini",
+        "GPT",
+        "Claude"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "GPT": true,
+        "Claude": false
+      },
+      "match_worst": {
+        "Gemini": true,
+        "GPT": true,
+        "Claude": false
+      }
+    },
+    {
+      "legacy_paper_id": 102,
+      "hf_paper_id": 82,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 102,
+      "hf_paper_id": 82,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer3",
+      "ai_rotation": [
+        "Claude",
+        "Gemini",
+        "GPT"
+      ],
+      "match_best": {
+        "Claude": false,
+        "Gemini": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Claude": true,
+        "Gemini": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 103,
+      "hf_paper_id": 83,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 103,
+      "hf_paper_id": 83,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Gemini",
+        "Claude",
+        "GPT"
+      ],
+      "match_best": {
+        "Gemini": false,
+        "Claude": false,
+        "GPT": true
+      },
+      "match_worst": {
+        "Gemini": true,
+        "Claude": false,
+        "GPT": true
+      }
+    },
+    {
+      "legacy_paper_id": 104,
+      "hf_paper_id": 84,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": true,
+        "GPT": true,
+        "Gemini": false
+      }
+    },
+    {
+      "legacy_paper_id": 104,
+      "hf_paper_id": 84,
+      "annotator_source": "secondary",
+      "best_human_reviewer": "reviewer2",
+      "worst_human_reviewer": "reviewer1",
+      "ai_rotation": [
+        "Claude",
+        "GPT",
+        "Gemini"
+      ],
+      "match_best": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "Claude": false,
+        "GPT": true,
+        "Gemini": true
+      }
+    },
+    {
+      "legacy_paper_id": 105,
+      "hf_paper_id": 85,
+      "annotator_source": "primary",
+      "best_human_reviewer": "reviewer1",
+      "worst_human_reviewer": "reviewer2",
+      "ai_rotation": [
+        "GPT",
+        "Claude",
+        "Gemini"
+      ],
+      "match_best": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": false
+      },
+      "match_worst": {
+        "GPT": true,
+        "Claude": true,
+        "Gemini": false
+      }
+    }
+  ]
+}
