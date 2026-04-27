@@ -1,95 +1,213 @@
 # PeerReview Bench — Local Toolkit
 
-This directory contains the three evaluation pipelines that sit on top of
-the PeerReview Bench HuggingFace dataset
-(**[`prometheus-eval/peerreview-bench`](https://huggingface.co/datasets/prometheus-eval/peerreview-bench)**).
+This directory contains the evaluation pipelines, analysis scripts, and
+benchmark infrastructure for
+**[PeerReview Bench](https://huggingface.co/datasets/prometheus-eval/peerreview-bench)** —
+a benchmark for AI peer reviewers of scientific papers.
 
-The dataset has four configs:
+## HuggingFace dataset
+
+The dataset lives at
+[`prometheus-eval/peerreview-bench`](https://huggingface.co/datasets/prometheus-eval/peerreview-bench)
+and has **five configs**:
 
 | Config | What it contains | Used by |
 |---|---|---|
-| `expert_annotation` | Per-item meta-review annotations from human experts, one row per (paper, reviewer, item, annotator_source). Used for statistical analysis and similarity measurement. | `analysis/`, `similarity_check/` |
-| `meta_reviewer` | The 27 overlap papers' items with both primary and secondary labels, plus a collapsed 10-class label that encodes both the cascade outcome and whether experts agree on each axis. | `meta_review/` |
-| `reviewer` | One row per paper — paper title, preprint text, `file_refs` — for training/evaluating AI reviewers that generate reviews from scratch. | `reviewer/` (TODO if you need it) |
-| `submitted_papers` | Deduplicated file storage. Each row is one unique file (keyed by SHA256). Other configs reference these via `file_refs`. | Resolved on-demand by `load_data.resolve_file_refs` |
+| `expert_annotation` | Per-item meta-review annotations from human experts (correctness, significance, evidence). One row per (paper, reviewer, item, annotator_source). 3,954 rows across 85 papers. | `analysis/`, `similarity_check/`, `metareview_bench/`, `evaluation/` |
+| `meta_reviewer` | The 27 overlap papers where both primary and secondary annotators labeled each item. Includes a collapsed 10-class label encoding the cascade outcome + inter-annotator agreement. 908 rows. | `metareview_bench/expert_annotation_meta_review/` |
+| `reviewer` | One row per paper (85 rows) — paper title, preprint text, `file_refs`, and a `rubric` column listing the "fully good" human review item texts for recall evaluation. | `evaluation/`, `download_papers.py` |
+| `similarity_check` | 164 curated review-item pairs with expert-annotated 4-way similarity labels (near-paraphrase, convergent, topical neighbor, unrelated). | `similarity_check/expert_annotation_similarity/` |
+| `submitted_papers` | Deduplicated file storage (~2 GB). Each row is one unique file (keyed by SHA256). Other configs reference these via `file_refs`. | Resolved on-demand by `load_data.resolve_file_refs` |
 
 ## Directory layout
 
 ```
 peerreview_bench/
-├── README.md                       ← you are here
-├── load_data.py                    ← shared HF loaders (all 4 configs)
-├── reviewer_rankings.json          ← per-paper Best/Worst Human rankings
-│                                     (the one piece of metadata not in HF)
+├── README.md                               ← you are here
+├── load_data.py                            ← shared HF loaders (all 5 configs)
+├── download_papers.py                      ← download papers + reconstruct reviews
+├── reviewer_rankings.json                  ← per-paper Best/Worst Human rankings
 │
-├── analysis/                       ← statistical analysis pipelines
+├── evaluation/                             ← PeerReview Bench evaluation pipeline
+│   ├── README.md                             for AI reviewer systems
+│   ├── config.py                           ← configurable parameters
+│   ├── prepare_papers.py                   ← download papers from HF
+│   ├── generate_reviews.py                 ← run AI agent reviewer (OpenHands)
+│   ├── parse_review.py                     ← extract items from review markdown
+│   ├── build_rubric.py                     ← build recall rubric from human items
+│   ├── evaluate_recall.py                  ← similarity-based recall metric
+│   ├── evaluate_precision.py               ← meta-review-based precision metric
+│   ├── evaluate.py                         ← unified entry point
+│   └── run_evaluation.sh                   ← shell wrapper
+│
+├── analysis/                               ← statistical analysis pipelines
+│   ├── data_filter.py                      ← validity rules (cascade, fully-good)
+│   ├── peerreview_analysis.py              ← main per-group analysis
+│   ├── peerreview_analysis_per_paper.py    ← per-paper breakdowns
+│   ├── peerreview_analysis_glmm.py         ← GLMM analysis
+│   ├── inter_rater_reliability.py          ← IRR metrics
+│   └── main_results/                       ← paper figures and tables
+│
+├── metareview_bench/                       ← LLM meta-reviewer benchmark
 │   ├── README.md
-│   ├── data_filter.py              ← validity rules shared by analysis scripts
-│   ├── peerreview_analysis.py
-│   ├── peerreview_analysis_per_paper.py
-│   ├── peerreview_analysis_glmm.py
-│   ├── inter_rater_reliability.py
-│   ├── run_analysis.sh
-│   └── {analysis,glmm,irr}_output/ ← generated outputs
+│   ├── litellm_client.py                   ← shared LiteLLM wrapper
+│   ├── model_config.py                     ← per-model capabilities
+│   ├── image_mapping.py                    ← figure detection + image loading
+│   ├── metrics.py                          ← axis + 10-class scoring
+│   ├── expert_annotation_meta_review/      ← curated benchmark (908 rows, 27 papers)
+│   │   ├── prompts.py                      ← axis + tenclass prompt families
+│   │   ├── predictors.py                   ← LLM predictor with thinking + retries
+│   │   ├── run_meta_review.py              ← LLM runner (concurrent, resumable)
+│   │   ├── run_meta_review_agent.py        ← OpenHands agent runner
+│   │   └── evaluate.py                     ← unified scorer
 │
-├── meta_review/                    ← evaluate LLM meta-reviewers
-│   ├── README.md
-│   ├── prompts.py                  ← prompt templates
-│   ├── predictors.py               ← Random/Majority baselines + LLM predictors
-│   ├── metrics.py                  ← 10-class accuracy, per-axis, per-agreement metrics
-│   └── run_meta_review.py
-│
-└── similarity_check/               ← per-pair similarity benchmark (238-pair eval set)
-    ├── README.md
-    ├── load_eval_set.py            ← loader for the similarity_check HF config
-    ├── prompts.py                  ← 4-way LLM-as-judge prompt templates
-    ├── embeddings.py               ← pluggable embedding backends
-    ├── baselines/
-    │   ├── embedding_classifier.py ← cosine-similarity baseline
-    │   └── llm_classifier.py       ← 4-way LLM-as-judge (thinking mode, multimodal)
-    ├── evaluate.py                 ← metrics (acc, AUROC, per-finegrained, per-pair-type)
-    └── run_similarity.sh           ← full sweep: embeddings + LLM + evaluate
+└── similarity_check/                       ← review-item similarity benchmark
+    ├── expert_annotation_similarity/       ← curated 164-pair eval set
+    │   ├── prompts.py                      ← 4-way similarity taxonomy
+    │   ├── load_eval_set.py                ← loader for similarity_check HF config
+    │   ├── embeddings.py                   ← Azure / Gemini / Qwen3 backends
+    │   ├── baselines/
+    │   │   ├── embedding_classifier.py     ← cosine-similarity baseline
+    │   │   └── llm_classifier.py           ← 4-way LLM judge (thinking, multimodal)
+    │   ├── evaluate.py                     ← accuracy, AUROC, per-category metrics
+    │   └── run_similarity.sh
+    └── full_similarity/                    ← full within-paper pairs (66k pairs)
+        ├── compute_full_similarity_embedding.py
+        ├── compute_full_similarity_llm.py  ← resumable 4-way LLM judge
+        ├── analyze_embedding.py
+        ├── analyze_llm.py
+        └── ANALYSIS_IDEAS.md
 ```
 
 ## Quick start
 
+### (1) Practitioners: evaluate your AI reviewer on PeerReview Bench
+
+If you have an AI reviewer system and want to measure its recall
+(coverage of important issues) and precision (quality of generated items):
+
 ```bash
-# 1) Install dependencies
-pip install datasets pandas numpy scipy statsmodels scikit-learn sentence-transformers
+cd peerreview_bench/evaluation
 
-# 2) Statistical analysis (uses expert_annotation)
-cd analysis
-./run_analysis.sh
+# Step 1: Download the 85 benchmark papers (one-time, ~5 min)
+python3 prepare_papers.py
 
-# 3) Meta-reviewer benchmark — baselines don't need API keys
-cd ../meta_review
-python3 run_meta_review.py --predictor majority
-python3 run_meta_review.py --predictor random
+# Step 2: Run your AI reviewer agent on each paper
+python3 generate_reviews.py \
+    --model-name litellm_proxy/anthropic/claude-opus-4-6 \
+    --paper-root ../papers/ \
+    --max-items 5
 
-# 4) Meta-reviewer benchmark with a real LLM
-export ANTHROPIC_API_KEY=...
-python3 run_meta_review.py --predictor anthropic --model claude-sonnet-4-5-20250929
-#   or
-export OPENAI_API_KEY=...
-python3 run_meta_review.py --predictor openai --model gpt-4o
+# Step 3: Evaluate (recall + precision)
+python3 evaluate.py \
+    --model-name litellm_proxy/anthropic/claude-opus-4-6 \
+    --paper-root ../papers/
 
-# 5) Similarity benchmark (238-pair eval set; requires LITELLM_API_KEY for proxy-routed models)
-cd ../similarity_check
-./run_similarity.sh                                      # full sweep
-LIMIT=5 ./run_similarity.sh                              # smoke test
-./run_similarity.sh llm                                  # only LLM-as-judge baselines
+# Or bring your own review items JSON (BYOJ) and just evaluate
+# Place review_items_mymodel.json in papers/paper{N}/review/
+python3 evaluate.py --paper-root ../papers/ --byoj
 ```
+
+See [`evaluation/README.md`](evaluation/README.md) for the full BYOJ
+format, all configurable parameters, and cost estimates.
+
+### (2) Researchers: reuse the analysis / meta-review / similarity scripts
+
+If you want to understand the methodology or adapt the code to your own
+review data:
+
+**Statistical analysis** — reproduce the paper's tables and figures:
+```bash
+cd peerreview_bench/analysis
+./run_analysis.sh          # generates tables 1-6, figures 3-5
+```
+Key files: `data_filter.py` (validity rules, "fully good" definition),
+`peerreview_analysis.py` (per-group statistics, pairwise comparisons).
+These can be pointed at any dataset with the same schema
+(correctness/significance/evidence annotations).
+
+**Meta-review experiments** — run LLM meta-reviewers on your data:
+```bash
+cd peerreview_bench/metareview_bench/expert_annotation_meta_review
+# Run a model in axis mode (predicts correctness/significance/evidence)
+python3 run_meta_review.py \
+    --model litellm_proxy/gemini/gemini-3.1-pro-preview \
+    --prompt-mode axis --limit 20
+
+# Or run the agent meta-reviewer (navigates paper files)
+python3 run_meta_review_agent.py \
+    --model-name litellm_proxy/gemini/gemini-3.1-pro-preview \
+    --paper-root ../../papers --prompt-mode axis --limit 1
+```
+The prompts in `prompts.py` define Correctness, Significance, and
+Evidence with extensive boundary rules — you can use these directly on
+your own review items by constructing rows with the expected schema.
+
+**Similarity experiments** — measure pairwise review-item similarity:
+```bash
+cd peerreview_bench/similarity_check/full_similarity
+# Embedding-based (fast, ~3 min per backend)
+python3 compute_full_similarity_embedding.py \
+    --backend litellm_proxy/azure_ai/text-embedding-3-large
+
+# LLM-judge-based (slow but accurate, resumable)
+python3 compute_full_similarity_llm.py \
+    --model litellm_proxy/gemini/gemini-3.1-pro-preview \
+    --concurrency 16
+```
+The 4-way taxonomy (near-paraphrase / convergent / topical neighbor /
+unrelated) in `expert_annotation_similarity/prompts.py` can be applied
+to any pair of review texts.
+
+### (3) Researchers: benchmark your LLM meta-reviewer or similarity model
+
+If you've built a custom LLM meta-reviewer or similarity classifier and
+want to evaluate it against our expert annotations:
+
+**Meta-reviewer benchmark** (908 items with 10-class ground truth):
+```bash
+cd peerreview_bench/metareview_bench/expert_annotation_meta_review
+
+# Test your model
+python3 run_meta_review.py \
+    --model litellm_proxy/your-model-here \
+    --prompt-mode axis --concurrency 8
+
+# Score results
+python3 evaluate.py ../../outputs/expert_annotation_meta_review/your_model/
+```
+Ground truth: per-axis labels from human meta-reviewers (primary +
+secondary on 27 overlap papers). Reports per-axis accuracy + reduced
+6-class accuracy.
+
+**Similarity benchmark** (164 pairs with 4-way ground truth):
+```bash
+cd peerreview_bench/similarity_check/expert_annotation_similarity
+
+# Embedding baseline
+python3 baselines/embedding_classifier.py --backend your-embedding-model
+
+# LLM judge baseline
+python3 baselines/llm_classifier.py \
+    --model litellm_proxy/your-model-here --concurrency 8
+
+# Score
+python3 evaluate.py ../../outputs/similarity_check/your_output.json
+```
+Ground truth: 164 expert-labeled pairs with 4-way finegrained labels.
+Reports binary accuracy, 4-way accuracy, AUROC, and per-category
+breakdowns.
 
 ## Loading from the HuggingFace dataset
 
-Everything in this repo ultimately loads the data via `load_data.py`:
+All scripts load data via `load_data.py`:
 
 ```python
 from load_data import (
     load_annotations,              # expert_annotation as ReviewItem dataclasses
     load_expert_annotation_rows,   # expert_annotation as raw HF row dicts
-    load_meta_reviewer,            # meta_reviewer config
-    load_reviewer,                 # reviewer config
+    load_meta_reviewer,            # meta_reviewer config (27-paper overlap set)
+    load_reviewer,                 # reviewer config (85 papers + rubric)
     load_submitted_papers,         # submitted_papers config (hash -> bytes)
     resolve_file_refs,             # join file_refs to bytes
 )

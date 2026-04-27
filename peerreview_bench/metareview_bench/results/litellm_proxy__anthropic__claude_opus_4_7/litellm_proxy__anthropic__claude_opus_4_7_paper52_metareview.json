@@ -1,0 +1,379 @@
+{
+  "paper_id": 52,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks why Ag@AuNW (the precursor) was used as a control rather than a simpler AuNW. This is a valid scientific question: the paper indeed only benchmarks AuHNW against Ag@AuNW, AgNW, and gold thin films, but not against pure AuNW which would have isolated the effect of the hollow structure. Correct and constructive. Devil's advocate: a skeptic might say the paper's goal is to justify AuHNW over its direct precursor, making Ag@AuNW the natural control. This is a plausible defense, so experts might disagree on significance (is AuNW really needed?). Evidence is sufficient because the absence is verifiable in the paper. I predict significance disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the paper compares AuHNW with a 100 nm Au thin film without specifying the thickness of the AuHNW film itself. Checking the paper, shell thickness (~20-30 nm) is given, but film-level thickness used in Fig 2i's comparison is not clearly specified in the main text. Correct, constructive detail. Devil's advocate: methods mention 5 spin coats; an expert might find this adequate. Borderline — could be viewed as a minor methodological reporting issue. Evidence: sufficient (points to specific comparison in Figure 2). I predict experts would disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Asks why H2O2 was chosen for chemical stability testing. The paper uses H2O2 for chemical stability but does not justify this choice versus physiologically relevant conditions (like tear fluid). Correct — valid methodological clarification. Significance: this is mainly a justification/rationale question; addressing it would improve interpretation, but it's relatively minor. Devil's advocate: chemical stability under H2O2 is a common oxidative-stress test, and experts may consider this a standard choice not needing justification. Could be Marginally Significant. Evidence: sufficient (clear reference to the H2O2 experiment).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer observes that although AuHNW is transparent, the final DDS device with ASIC chip is opaque, and suggests reporting whole-device transmittance. Correct — the paper only reports AuHNW/sensor transmittance, not whole-device. This is constructive: total transmittance matters for a contact lens. Devil's advocate: the transparency claim is specifically about the sensor/AuHNW material, not the whole device, so an expert could argue the criticism misses the claim scope. However the broader concern (whole-lens clarity) is genuine. Evidence: sufficient (paper figures support the claim of opacity).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer questions the characterization method for Figure 2g (>10000% resistance change at 30% strain), asking about contact method, initial resistance, and 2-probe vs 4-probe measurement. Correct — these are standard electromechanical measurement details that are not specified in the paper's main text or methods section sufficiently. Significant: these details are critical for reproducibility and interpreting sensitivity. Evidence: sufficient (specific figure reference with specific concerns). Devil's advocate: methods mention a source meter (Keithley 2450) but don't address probe configuration — so the criticism holds firmly. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer requests an Ag@AuNW-based lens as a proper control to verify the IOP response improvement. Correct — the paper compares materials at the film/sensor level but doesn't show a full Ag@AuNW-integrated lens as comparison. Significant: this ablation would strengthen the paper's claim that AuHNW is superior. Devil's advocate: a skeptic could argue the material-level comparison is sufficient and a full lens-level control is excessive work. Borderline significance. Evidence: sufficient (specific missing experiment identified).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Requests more ASIC chip details (power consumption, circuit blocks). The paper describes the ASIC as 'ultra-low power' but gives limited architectural detail. Correct. Significant: the ASIC is claimed to be an integral contribution, so details matter. Devil's advocate: the reviewer acknowledges AuNW is the main point, implying this is a secondary concern; an expert could see ASIC details as less critical. Borderline significance. Evidence: sufficient (absence in paper is verifiable).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Asks about IOP effects from eye blinking, closed eye, lying down, and device adaptability. Correct — the paper doesn't address these scenarios that matter for real-world use. Significant: these are key practical validation concerns for a contact lens device. Devil's advocate: an expert could argue this goes beyond the proof-of-concept scope. Borderline. Evidence: sufficient (absence is easy to verify).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Points out spread in Fig 6b and less data at higher IOPs. Correct — R²=0.88 with Bland-Altman range of -3.16 to 2.90 mmHg shows meaningful spread, and higher IOP values are indeed sparser. Significant: measurement accuracy at elevated IOP is clinically critical. Devil's advocate: R²=0.88 is reasonable for this type of device; data is limited but not unreasonable. Experts likely agree it's Significant. Evidence: sufficient (specific figure reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Requests top view of lens fitting in Supp Fig 9 and criteria for 'perfect fitting'. This is about figure/supplementary presentation. Correct. Devil's advocate on significance: adding a top view and fitting criteria would help readers evaluate fit, which matters for device performance. Could be Significant (fit affects sensor accuracy) or Marginally Significant (presentation nit). Evidence: sufficient. Likely disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Points out missing scale bar in Supp Fig 3b. Classic formatting issue. Correct (assuming true — minor and verifiable). Marginally Significant: pure presentation issue that doesn't affect substance. Evidence: sufficient (specific figure pointed out). Devil's advocate: could an expert see this as substantive? No — it's a clear formatting nit. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Requests discussion of diurnal-nocturnal IOP fluctuation. Correct — the paper acknowledges IOP varies with time but doesn't address circadian rhythm in its monitoring/actuation framework. Significant: essential for a continuous monitoring system. Devil's advocate: the paper is a proof-of-concept; full diurnal discussion might be out of scope. Borderline. Evidence: sufficient (absence is verifiable).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Asks about patient wear schedule (daily/weekly). Correct — the paper mentions 'daily' and 'weekly' types of DDS but doesn't clearly define wear duration or the intended regimen. Significant: clinical usage model is fundamental for the application. Devil's advocate: some details are in Supplementary (wear tests for 8h, etc.), but overall usage story is not fully clear. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Asks why hollow nanomaterial is better than bulk. Paper says 'Hollow nanomaterials have many unique characteristics compared to bulk nanomaterials' with citations but doesn't thoroughly explain advantages. Correct — partial explanation is given (transparency, sensitivity, stretchability) but the reviewer wants more detail. Significant: motivational reasoning is key. Devil's advocate: the paper does discuss advantages (NIR shift, thin shell flexibility). An expert could say this is adequate. Borderline. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Questions the 30% stretchability claim as 'reasonable' without justification. Correct — paper states 'reasonable stretchability' but doesn't specify target/optimal value from contact lens physiology. Significant: defines the acceptable performance envelope. Devil's advocate: 30% is well beyond typical ocular strain, so may be deemed obviously sufficient by domain experts. Borderline. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Asks about device performance above 35 mmHg and drug release frequency if IOP doesn't respond. Correct — paper tests only up to 35 mmHg and has no strategy for non-responsive cases. Significant: higher IOP ranges matter clinically for severe glaucoma. Devil's advocate: 35 mmHg covers most of clinical range for glaucoma patients. Possibly Marginally Significant. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Questions drug dose selection (one drop of commercial eye drop) given bioavailability differences. Correct — paper says 'The amount of loaded drug in each type was corresponded to that in the one drop of commercial eye drop (50 μg)' without discussing the potentially higher bioavailability from direct corneal contact. Significant: dose optimization is clinically important. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Suggests including complete drug release profile with one reservoir in main manuscript. This is in Supp Fig 7d. Correct — the main text has Fig 4f for PVA vs no PVA and Fig 4g for cumulative. Presentation suggestion. Marginally Significant: moving figures is a presentation preference, doesn't affect substance. Evidence: sufficient. Devil's advocate: adding this would let readers evaluate a core DDS claim more easily — could be Significant. Borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer finds Fig 4g unclear — asks if it's cumulative. The caption explicitly says 'The cumulative release of timolol from three different reservoirs' — so this is stated. However the reviewer may still find the figure confusing on its own. Borderline correctness: the answer IS in the caption, so the reviewer's question could be seen as incorrect reading. But as a clarity concern, it's real. Devil's advocate for Not Correct: answer is present. Devil's advocate for Correct: figure itself unclear. Likely disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Asks how long animals had contact lenses on for biosafety study. Correct — the paper mentions 24 hours in one context but durations for various biosafety tests aren't fully clear from main text. Significant: duration is central to biosafety evaluation. Devil's advocate: Methods describe some durations. An expert could say the information is there. Borderline. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Requests IOP readings for Day 2 and Day 4 in Figure 6, and rationale for every-other-day dosing. Correct — the paper skips intermediate days which obscures drug duration/recovery. Significant: understanding IOP trajectory between treatments is crucial for evaluating efficacy and dosing protocol. Devil's advocate: the overall trend is shown; intermediate data might be redundant. Borderline but leans Significant. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Raises concerns about lens replacement frequency, safety of repeated wear (epithelium, keratitis, ulcer). Correct — paper shows limited number of reservoirs (6 in daily, more in weekly) and doesn't adequately address risks of regular replacement. Significant: core clinical viability issue. Devil's advocate: paper includes biosafety studies; an expert could deem these adequate. Borderline. Evidence: sufficient (clinical reasoning is domain-appropriate).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Combines multiple criticisms: 30-min drug release duration vs eye drop bolus, poorly reproducible glaucoma models (alpha-chymotrypsin, methylcellulose), few rabbits. Correct on all counts — paper uses exactly these models with small n. Significant: model choice and release kinetics affect therapeutic claims. Devil's advocate: these models are established in the field for inducing transient IOP elevation. Could be Marginally Significant. Evidence: sufficient (specific experimental details referenced).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Criticizes the word 'menacing' in line 15 as inaccurate since most glaucoma patients don't lose useful vision. Correct — this is a rhetorical word choice issue. Marginally Significant: stylistic/word choice issue that doesn't affect substance. Devil's advocate: framing of disease importance does affect motivation. Some experts might say it's minor stylistic preference; others might insist accurate framing matters. Evidence: sufficient (specific line reference).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Challenges the claim that IOP indicates glaucoma condition — correct clinical fact: many with high IOP don't have glaucoma, and many with glaucoma have normal IOP. Correct. Significant: this is a factual framing error that misrepresents glaucoma pathophysiology and affects the paper's rationale. Devil's advocate: the paper acknowledges IOP is 'the major risk factor,' which is accurate. But the subsequent text ('indicates the glaucoma condition') is too strong. Evidence: sufficient (specific line reference, domain knowledge).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Claims tonometry is not uncomfortable or expensive, and training is minimal. Correct — the paper overstates these issues to justify the smart lens. Significant: affects the motivation/significance claim of the paper. Devil's advocate: rebound tonometer vs GAT vary in comfort and cost; 'expensive' can be context-dependent. Some experts might call this marginally significant wording. Borderline. Evidence: sufficient (specific line reference, domain knowledge).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Clarification on 'critical mismatch' — what's meant? Reviewer notes IOP varies naturally day-to-day. Correct — the paper's language is ambiguous. Marginally Significant: wording clarification. Devil's advocate: the issue of missed IOP peaks is relevant to the paper's premise; fixing the language might help readers. Could be Significant. Borderline. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Claims that the real eye drop issue is adherence, not what the paper states. Correct — adherence is a major clinical concern with eye drops, which paper mentions high dose/low bioavailability instead. Significant: accurate problem framing strengthens motivation for the device. Devil's advocate: paper's description of 'high dose and low bioavailability' is also a real issue — experts could differ on whether text is 'inaccurate' or simply emphasizes a different aspect. Borderline correctness. Evidence: sufficient (line reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer notes unclear how resistance-vs-IOP testing is done at L140. Correct — the method uses an artificial eye (Methods section) but the result description at line 140 area may be unclear about testing procedure. The paper does describe methods in the 'Characterization of the hybrid IOP sensor' section with PDMS eye model. So the info is present; the reviewer may have found it unclear in the main results section. Could be Marginally Significant (presentation concern). Evidence: sufficient (specific line). Borderline correctness — info does exist in Methods.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Argues the paper overstates 'theranostic feedback' since the drug release is manually triggered by researchers on discrete days, not automatically by the device. Correct — reading Fig 6e and the protocol, researchers make decisions based on tonometer measurements and manually trigger release. This differs from an automated closed-loop system. Significant: overstating claimed capabilities is a core issue. Devil's advocate: the paper does say 'feedback system,' which can be read as supervised/manual rather than fully automated. An expert might accept it as proof-of-concept of the concept. Evidence: sufficient (multiple direct quotes, literature reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Critiques n=3 per group, one-sided ANOVA, and pseudoreplication with n=25 being technical replicates. Correct — paper confirms these numbers. Significant: statistical rigor of efficacy claims is central. Devil's advocate: small-n preclinical studies are common; the authors may have ethical reasons to limit animal use. But the statistical analysis choices remain problematic. Evidence: sufficient (quoted passages, external standards).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Argues R²=0.88 correlation doesn't equal accurate absolute IOP measurement, similar to Triggerfish's documented limitation, and paper relies on per-subject calibration. Correct — these facts are in the paper. Significant: this fundamentally qualifies the monitoring claim. Devil's advocate: R²=0.88 is reasonable for this application; per-subject calibration is common for strain-gauge devices. An expert might see this as a known limitation that the paper adequately handles. Evidence: sufficient (specific quotes, literature citation).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Criticizes biocompatibility as short-term only (3-day in vitro, brief rabbit studies), using NIH 3T3 fibroblasts instead of corneal cells, with chip temperature of 39.3°C concerning. Correct — paper does use 3T3 cells and shorter-term tests; does report 39.3°C. Significant: chronic glaucoma treatment requires long-term safety data. Devil's advocate: this is proof-of-concept; extensive biocompatibility is a follow-up study. Could be Marginally Significant. Borderline. Evidence: sufficient (quoted, external standards cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Raises safety concern about gold ion toxicity from electrochemical dissolution. Correct — paper describes Au + Cl⁻ → AuCl4⁻ reaction in eye, but doesn't specifically evaluate the released gold species' toxicity. Significant: safety of released byproducts in the eye is critical. Devil's advocate: the amount of gold channel is small (100 nm film) and the AuCl4⁻ would likely be washed away by tears. An expert familiar with the chemistry might see this as adequately addressed by existing biocompatibility assays. Borderline. Evidence: sufficient (direct quotes, references to toxicity literature).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Criticizes individual (per-rabbit) calibration as clinically impractical since it would require artificial IOP manipulation in patients. Correct — confirmed by paper's calibration procedure. Significant: limits translational applicability. Devil's advocate: one could calibrate naturally occurring IOP fluctuations over time without induced changes. Also, this overlaps with a well-known Triggerfish limitation. Still, the concern is substantive. Evidence: sufficient (direct quotes from supplement).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Criticizes 39.3°C chip temperature as above normal 35°C corneal temperature, arguing thermal safety isn't adequately addressed. Correct. Significant: thermal safety matters for chronic wear. Devil's advocate: 39.3°C is close to body temperature and below damage thresholds; an expert might see this as a minor concern. The reviewer cites IEC 60601-1 without specifying limits. Evidence: sufficient (quotes and literature cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Notes that AuHNW is compared only to its precursor (Ag@AuNW), not to state-of-the-art sensors like graphene or silicon-based. Correct — the paper mentions these in intro but doesn't benchmark quantitative performance against them. Significant: establishing the novelty/superiority claim requires broader comparison. Devil's advocate: full cross-device comparisons are difficult because fabrication methods differ; paper focuses on its own material innovation. Borderline. Evidence: sufficient (specific references 12 and 13 cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Critiques n=3 per group as statistically weak. Correct — this fact is confirmed. Significant: affects reliability of efficacy claims. Devil's advocate: similar arguments as claude-opus-4-5's Item 2; proof-of-concept preclinical studies often use small samples. Slightly less detailed than the claude item. Evidence: sufficient (direct quotes).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Critiques use of contralateral eye as negative control given timolol's known systemic IOP-lowering effect. Correct — well-documented pharmacological concern; paper indeed uses this design. Significant: potentially confounds therapeutic effect interpretation. Devil's advocate: the paper uses PBS on contralateral eye for smart-contact-lens group, and eye drops on contralateral eye for different group. The systemic effect concern primarily applies to the eye-drop arm. Still, it applies to that comparator. Evidence: sufficient (multiple direct quotes, cited literature).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Critiques small group sizes and unclear experimental unit specification. Correct. Significant: statistical validity is central. Overlaps with other reviewers' points. Devil's advocate: small-n is standard for preclinical proof-of-concept; an expert might accept. Borderline. Evidence: sufficient (quotes, statistical reasoning).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Argues per-rabbit calibration undermines quantitative mmHg claim and generalizability. Correct — paper confirms this methodology. Significant: fundamentally changes what can be concluded about absolute IOP sensing capability. Devil's advocate: per-subject calibration is common in biomedical sensing; the paper's claim isn't necessarily falsified, just qualified. Borderline significance between 'Significant' and 'Marginally Significant,' though I lean Significant. Evidence: sufficient (quoted supplement, literature reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Argues continuous real-time closed-loop monitoring claim is weakened by short monitoring windows (30 min) and coarse (every-other-day) actuation schedule. Correct — paper protocol confirms these specifics. Significant: critical gap between claim and demonstration. Devil's advocate: the paper demonstrates the building blocks; full continuous validation is future work. Overlaps with claude-opus-4-5 Item 1 (theranostic closed-loop overstatement). Evidence: sufficient (specific quotes, literature on IOP peaks).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Claims the provided code (Verilog + Java) is insufficient for reproducing telemetry/decoding/control workflow. Correct — I verified code folder contains only LSK_v1.v (FPGA Verilog targeting DSP-PLUS II board) and guimake4.java (hard-coded Windows paths, missing classes). Significant: reproducibility of the system contribution matters. Devil's advocate: materials-science papers often don't share full system code; field norms may accept hardware-specific scaffolding. Borderline. Evidence: sufficient (direct quotes from code, specific hardware/software details).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

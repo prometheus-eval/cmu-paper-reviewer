@@ -1,0 +1,172 @@
+{
+  "paper_id": 75,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper demonstrates the framework only on TCR-like antibodies/TCBs (MAGE-A4 and ESK1), not native TCRs, while the title and discussion generalize to “TCR-based therapeutics.” The scope-overclaim concern is therefore reasonable, although whether that makes the title misleading is somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The Methods say the interactome experiments were run in triplicate, but Figure 2A/5A do not clearly document replicate structure, and the text says only the intended MAGE-A4 target was reproduced across two biological repeats. The reviewer is also right that the control description around Figure 5 is unclear/inconsistent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper uses the method as part of a de-risking framework, but it does not establish across a broader set of binders that IP-MS predicts functional T-cell reactivity; the discussion even says ex vivo testing should complement it. The request for broader validation is valid, but the item slightly overstates the paper’s claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript does not estimate peptide-recovery efficiency or overall peptidome coverage, even though copy-number estimates explicitly assume 100% recovery. That omission matters for interpreting assay sensitivity and broader applicability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Birnbaum, Gee, and related prior platforms are relevant precedents, and the paper mainly compares itself in detail with Gejman rather than clearly situating itself against those other approaches on a concrete exemplar. A sharper comparison would improve contextualization of the contribution.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The study is confined to HLA-A*02:01 and does not test whether the same MAGE-A4 peptide might be recognized when presented by other HLA allotypes. That missing check is real, but how essential it is to the paper’s safety argument is debatable because the therapeutic is framed as HLA-A*02:01-specific.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 4 and Table 2 use modeled structures to explain cross-reactivity, but the paper does not experimentally test the key assumptions about peptide backbone similarity or induced fit. Calling these structural conclusions speculative without additional structural validation is justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Supplementary Figure/Table 1 reports only summarized SPR kinetics, not the underlying sensograms or fit traces. Providing the primary traces would improve transparency, though this is more supporting detail than a central scientific issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Because the main contribution is an immunopeptidomics dataset and analysis pipeline, depositing the primary data would materially improve reproducibility and reuse. The manuscript only promises availability on request rather than deposition in a standard repository.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Figure 1 supports enrichment of the target peptide, and the text later says it was the only HLA-A*02:01 binder enriched across two biological repeats, but the broader detected-peptide set is not shown in the main presentation. Asking for the full list and for one-off enriched peptides is a valid transparency request that bears on the selectivity claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly identifies a confusing control rationale: the paper says MAGE-A4 and WT1 are not expressed in A375 cells, which conflicts with the earlier statement that A375 expresses MAGE-A4, and in any case does not clearly justify reciprocal-antibody controls for liver IPs. Requesting a proper isotype control or clearer justification is well founded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "For the liver-spheroid assay, the manuscript asserts absence of MAGE-A4 and WT1 expression only as “data not shown,” and Figure 3D reports normalized rather than raw killing readouts. Both issues make it harder to verify that the observed effects are truly off-target and to assess background.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item mixes two points: a request to clarify the apparent non-HLA-A*02:01-looking points in Figure 5A and a request for raw killing values instead of normalized values. The raw-value request is clearly valid, but whether Figure 5A truly shows meaningful enriched off-target hits is harder to determine definitively from the paper alone.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript does sometimes blur “antibody/IgG” versus “TCB” across experiments, which can make the workflow harder to follow. The clarification request is valid but mostly presentational.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The text describing the reverse-immunopeptidomics workflow cites Figure 1C, but that panel is the cell-killing assay; the workflow is Figure 1D. This is a straightforward cross-reference error.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript states that NetMHCpan-4.1 was used to predict binders but does not report the threshold or the per-peptide scores used to classify peptides as HLA-A*02:01 binders. Those details are important for reproducing the peptide-filtering logic behind several results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The Figure 3 reference is swapped: the text about the MAGE-A4 TCB assay should point to panel B, whereas panel C is the titration-curve panel. This is a straightforward citation fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Conversely, the text about higher ESK1 activity at diluted peptide concentrations should point to Figure 3C, not 3B. This is another clear panel-reference error.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The Figure 5 caption in the reconstructed paper only describes panel B and omits or mislabels panel A, so the reviewer is right that the Figure 5A legend is incorrect. This is a real but minor presentation problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

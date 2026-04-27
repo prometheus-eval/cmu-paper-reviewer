@@ -1,0 +1,195 @@
+{
+  "paper_id": 35,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the DrugVQA curve cannot be found in Figure 2. Looking at Figure 2a's PPI panel, DrugVQA IS labeled (Best-F1: 0.682) and there does appear to be a very light gray curve corresponding to it, though it is faint and easy to miss against other overlapping curves. Devil's advocate (prosecution): a strict expert would note DrugVQA's label IS in the legend and a faint curve is present, making the claim technically wrong. Devil's advocate (charitable): the reviewer's concern that the DrugVQA curve is effectively invisible / indistinguishable in Figure 2 is a legitimate observation — the visual presentation makes it hard to identify. This borderline visibility makes correctness debatable, so experts could plausibly disagree. Predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer questions why variational EM is needed when the implementation resembles semi-supervised learning with pseudo-labels. Verifying against the paper: Eqs. 11 and 14 do boil down to mixtures of supervised loss + loss on pseudo-labeled data, and the code uses hard thresholding (sigmoid>0.7) to generate pseudo-labels. Other reviewers (claude-opus, gemini) independently raise the same concern. Core claim is correct. Significance: this is a central methodological framing concern — addressing it would meaningfully improve the paper. Evidence: reviewer points to specific equations and sections (4.3, E-/M-step) that a meta-reviewer can verify. Devil's advocate: a charitable reader might say the variational framework IS a legitimate lens on iterative pseudo-labeling. But the absence of a variational distribution and ELBO optimization supports the reviewer's concern. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims Sections 2.2 and 2.3 don't contain ablation studies for their claims. However, Section 2.2 explicitly mentions the MUSE-Joint ablation and compares MUSE to single-scale baselines (TAG-PPI, DrugVQA focusing on atomic structure). Section 2.3 also references MUSE-Joint. So the literal claim 'didn't see any ablation study' is overstated. However, the broader concern is that the paper lacks direct ablations showing the specific cross-scale contribution (e.g., removing atomic structure → performance drop) rather than just iterative-vs-joint ablations. Devil's advocate: a strict expert would say MUSE-Joint IS an ablation study, so the claim is factually wrong. Charitable expert: the deeper methodological concern about inadequate ablation to support the causal claim 'leveraging X improves Y' has merit. Significance if correct: would improve paper. Evidence: specific section references. Predict disagree_on_correctness since the literal vs charitable readings diverge.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer raises a technical concern about KL asymmetry: in Eq. 5 treating C as the entropy of p_theta assumes KL(q||p) has entropy term H(q), but H(q) depends on phi and cannot simply be dropped when optimizing phi. This is a legitimate derivation concern. Correctness: the reviewer's technical point is valid — in reverse KL minimization, the q-entropy term does depend on phi. Significance: this touches the theoretical soundness of the E-step derivation, which is a central component of the claimed novelty (variational EM). Evidence: reviewer cites specific equations 5 and 7. Devil's advocate: a charitable reader might note that the wake-sleep approximation allows treating it this way in practice. Experts might differ on whether this is a 'main error' or a standard approximation. Predict correct_significant_sufficient, but with some possibility of disagreement on evidence since reviewer's short chain requires a meta-reviewer to do some work.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer flags grammar error 'structures information' in section 2.2 title. The preprint.md we have shows 'atomic structure information' (singular, correct). This could be an OCR difference or the reviewer saw a different version. Devil's advocate: charitable — the reviewer genuinely encountered the typo in some version. Strict — the current text is fine. Either way, this is a pure typo/grammar nit. Significance: Marginally Significant (typo, doesn't affect substance). Evidence: specific location given, though verification uncertain. Predict correct_marginal_sufficient, but given the disagreement on whether the typo is actually present, predict correct_marginal_disagree_on_evidence or disagree_on_correctness. Given our source shows correct text, I lean toward disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the abstract is too vague — specifically about 'inter/intra molecular' and how the two scales are connected. Looking at the abstract, it uses 'molecular network or structural information' and 'multi-scale' without clearly defining inter/intra molecular terminology. The connection between scales is described abstractly (mutual supervision, EM). Subjective-but-reasonable claim about clarity. Correctness: we should assume reviewers are honest about their reading experience on subjective clarity claims. Significance: Significant — abstract clarity for a broad-readership paper matters. Devil's advocate: charitable reader might find the abstract clear enough. But many readers would agree it's vague. Evidence: pointing at the abstract itself is sufficient. Predict correct_significant_sufficient, with some possibility of disagreement on significance (strict experts might downgrade abstract-vagueness to marginal).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer says Section 2.1 doesn't make clear whether the algorithm is truly EM, what inputs/outputs of E/M steps are, and what information is shared. Section 2.1 does describe MUSE at a high level (referring to Fig 1) but omits specifics like what constitutes the E-step output vs M-step output. Methods Section 4.4-4.6 elaborate but the reviewer explicitly says these don't address the questions adequately either. This matches other reviewers' observations that implementation departs from stated EM. Correct and Significant — clarity on these basic methodological questions would materially improve the paper. Evidence: points to specific sections (Section 2.1 / Methods). Sufficient. Devil's advocate: a charitable expert might argue Fig 1 + Methods DO answer these questions. But multiple reviewers flagged clarity issues, suggesting the concern is real. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer says Figure 1 lacks a legend/key explaining colors and node/edge meanings. Looking at the actual Figure 1: nodes in the molecular network appear in various shades of red/pink without explanation of what these colors represent; the figure shows molecular structures in different colors but no key. The reviewer's observation is factually accurate. Significance: Significant — a clear legend directly affects reader's ability to understand the method. Evidence: pointing at Figure 1 itself, which a meta-reviewer can verify. Sufficient. Devil's advocate: a charitable expert might argue the caption explains enough via descriptions of panels (a)(b)(c). But a legend for colors is indeed absent. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer says there's no context/explanation of datasets in the Results section and no discussion of evaluation metrics (e.g., what F1 is). The paper does discuss datasets in Section 4.1 (Methods) and metrics in Section 4.12 — so the claim 'no context' is overstated if we consider the full paper. However, Results sections present numbers without reminding readers what the metrics are, which is a fair concern for a general-audience paper like Nature Communications. Significance: Marginally Significant to Significant depending on audience — for a broad-readership journal, brief metric explanations help. Evidence: specific observation about metrics like F1 not being explained. Sufficient. Devil's advocate (strict): the paper has a full Methods section defining everything — this critique is unnecessary. Charitable: presentation in Results would benefit readers. Experts likely to disagree on significance. Predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the utilization rate formula u = (f(M)-f(M1))/f(M1) cannot be bounded in [-1,1] as the paper claims. This is mathematically correct — if f(M) > 2*f(M1), u exceeds 1. Also, the methodology for obtaining single-scale models from multi-scale M is ambiguous. Paper Section 4.11 just says 'M_0 and M_1 represent single-scale models obtained from the multi-scale model M' without detail. Correct, Significant (central metric used for main claims about imbalance and utilization), Sufficient (specific quotes, specific reasoning with concrete examples). Devil's advocate: charitable expert might argue the paper's range claim is a typo/minor, or that in practice f() values are such that bounds are respected. But the formal definition is indeed flawed. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the paper's variational EM framing doesn't match the actual implementation which uses hard pseudo-labeling. Verified: code uses `sigmoid() > 0.7` thresholding (hard), no variational q_phi with parameters is maintained, and the 'wake-sleep' citation doesn't match the actual procedure. Correct, Significant (touches core methodological framing / theoretical justification of the method), Sufficient (specific code line cited, specific paper quotes). Devil's advocate: charitable expert might argue hard pseudo-labeling IS an empirical approximation of variational inference with Dirac distributions. But the disconnect is substantial. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims Fig. 5c shows optimum at t=0.4 but code uses threshold 0.7, contradicting the ablation. However, the paper defines t such that 'when probability exceeds threshold 1-t, the predicted interaction is incorporated'. So code's `sigmoid() > 0.7` corresponds to 1-t=0.7, i.e., paper's t=0.3. Figure 5c peak is actually at t=0.3 (Best-F1=0.953), NOT t=0.4 (Best-F1=0.947). The code's threshold is therefore CONSISTENT with the optimal from the ablation, not contradictory. The reviewer misread the parameterization (confusing probability threshold 0.7 with paper's parameter t). Core claim is factually wrong. Devil's advocate: charitable — the paper's text is confusing about t-vs-threshold, and the reviewer was misled by this. But the literal claim 'code uses t=0.7' is wrong. Predict incorrect, though some disagreement is possible since the paper's notation is confusing.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims Figure 2c lacks error bars and statistical significance tests. Looking at Figure 2c: small error bars appear to be present on some bars (small vertical lines), though they're barely visible. Statistical significance tests are indeed NOT discussed in the paper. The broader concern about inadequate statistical reporting for 'substantial improvements' claims (8.41%, 13.04%, etc.) has merit. Correct in substance (no significance tests reported even if tiny error bars exist), Significant (affects interpretation of main results), Sufficient (references to specific supplementary tables with stdev values). Devil's advocate (strict): error bars ARE visible, so the literal claim 'without error bars' is wrong. Charitable: bars are invisible/missing for most methods and no significance tests exist — the broader concern is valid. Predict correct_significant_disagree_on_evidence or correct_significant_sufficient — experts may disagree on whether the existing tiny error bars satisfy the requirement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer identifies suspicious entry '0.922 ± 0.08' in Supplementary Table S2. Verified: line 304 of supplementary shows exactly '0.922 ± 0.08' with inconsistent decimals (0.08 vs 0.003-0.006 elsewhere). Correct. Significance: Marginally Significant — either a reporting typo or a real high-variance issue worth clarifying. Evidence: specific cell cited, specific comparisons to neighboring cells. Sufficient. Devil's advocate: charitable — this is clearly a typo that doesn't affect main results. Strict — if variance truly is 0.08, that's 16x other values and undermines stability claims. Predict correct_marginal_sufficient, though some experts might upgrade to Significant given it affects interpretation of the DDI claims. Predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims test edges are added as pseudo-edges to the molecular network graph and then used to predict those same interactions — a data leakage issue. Verified directly: trainer_ppi.py line 566-567 concatenates `pseudo_edges` (derived from `self.test_edges` via `gnn_inference` on test_edges at line 619-621, 636) into the training graph's edge_index, then line 580 evaluates on `self.test_edges`. The test edges themselves are used for message passing. Correct, Significant (fundamental evaluation validity issue), Sufficient (specific code quotes with line-level detail). Devil's advocate: charitable — only pseudo-labels (predictions), not ground truth, are used; transductive learning often uses test-edge structure. But using test edge structure for message passing when predicting the same edges is still a form of leakage. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the framework is inaccurately called 'Variational EM' when it's effectively self-training/co-training with hard pseudo-labels. Same core claim as Human_2 Item 1 and claude-opus Item 2. Verified: no variational q_phi with parameters, no ELBO optimization, hard thresholding at 0.7. Correct, Significant (affects paper's theoretical positioning and naming), Sufficient (code cited, quotes from paper). Devil's advocate: charitable — the method CAN be viewed as an approximation to variational EM under certain simplifying assumptions. But the mathematical apparatus is largely not used in the actual implementation. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the code's `_maximization` and `_expectation` naming is swapped relative to the paper. Verified: paper Sec 4.4 says 'E-Step: Atomic structure scale Modeling' and Sec 4.5 says 'M-step: Molecular Network scale Modeling'. Code's `_maximization` trains gnn_model (Protein/atomic structure GNN — line 97-122), while `_expectation` trains link_model (Network/molecular network GNN — line 124+). So the code is indeed swapped vs the paper. Correct. Significance: Significant — this affects the correspondence between paper and code, important for understanding and reproducibility. Evidence: specific quotes from paper sections and code functions. Sufficient. Devil's advocate: strict expert might call this merely cosmetic naming, downgradable to Marginally Significant. Charitable: it reflects genuine conceptual confusion about E-step vs M-step mapping. Predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims SHS27K PPI lacks a validation split (confirmed: Supp Table S1 shows '-' for Validation column for Random/BFS/DFS), the code uses test_edges for early stopping / model selection (confirmed: trainer_ppi.py lines 580/586 evaluate on test_edges then save best checkpoint based on that F1), and injects test edges as pseudo-edges (confirmed: line 566-567, 619-636). These directly undermine the paper's SHS27K performance claims. Correct, Significant (fundamental evaluation validity for a headline claim), Sufficient (code quotes with specific lines, table citation, external literature references). Devil's advocate: charitable — 'best_valid_f1' variable name might suggest an intended but unrealized validation split; some prior works also do this. But the paper's claimed gains become unreliable as generalization estimates. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims BioSNAP's random negative sampling introduces false negatives and inflates DPI metrics. The paper Section 4.1 does state 'negative drug-protein interactions were generated by randomly selecting an equal number of protein-drug pairs'. Reported DPI AUROC=0.993, AUPRC=0.922 are indeed near-saturation. The concern about random negatives inflating DTI metrics is a well-known methodological issue in the field. Correct, Significant (affects interpretation of state-of-the-art claims), Sufficient (paper quote, external references to DTI benchmarking literature). Devil's advocate: charitable — this is common practice following prior work (ConPLex); the paper inherits the benchmark setup rather than introducing the issue. But the central claim is still that the paper's headline DPI numbers may be inflated. Some experts might see this as a general field issue not attributable to the paper. Predict correct_disagree_on_significance or correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer lists three reproducibility issues: (i) import-time failure on non-GPU (verified: utils.py line 972/1104 has check_gpus() raising ImportError), (ii) hard-requiring 2 GPUs via GPUManager().auto_choice(num=2) (verified: trainer_ppi.py line 40), and (iii) hard-coded absolute paths (verified: utils.py line 419 has '/data/user/raojh/worksapce/...' and config.py lines 51-52 similarly). All three concerns are directly verifiable in the code. Correct. Significance: Significant — these concretely block reproduction of the paper's claims. Evidence: specific code quotes with file/line references. Sufficient. Devil's advocate: charitable — these are code cleanliness issues, not scientific problems. Strict — reproducibility is essential for computational methods papers. Most experts would agree these genuinely impair reproducibility. Predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

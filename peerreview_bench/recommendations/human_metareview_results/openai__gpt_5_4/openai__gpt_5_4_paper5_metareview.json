@@ -1,0 +1,164 @@
+{
+  "paper_id": 5,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 3,
+          "reasoning": "The MD-17 paragraph around Table I mostly reports who beats whom and notes that the result is surprising, but it does not really explain the architectural differences or why NequIP can match kernel methods. This criticism is therefore valid and addressing it would materially improve interpretation of the main benchmark.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 7 only shows the authors' own l=0 versus l=0/l=1 ablation and does not include SchNet. Asking for a familiar baseline in that figure is a valid but relatively minor presentation suggestion, especially since the paper already provides an invariant reference model for the same experiment.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Across the benchmark tables and the LiPS/Li4P2O7 application sections, the paper reports force errors only, and the Methods say explicitly that training is done only on forces. It never reports energy accuracy, so the complaint that the evaluation is incomplete without clearer justification and energy results is correct and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Table V indeed reports only force MAE for LiPS and Li4P2O7, with no RMSE and no energy errors. Asking for RMSE to expose possible outliers and for a fuller evaluation is a substantive, easy-to-verify criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The Li4P2O7 structural validation is based on a 50 ps NequIP-MD run compared with AIMD RDF/ADF curves. Requesting a much longer stability check is a reasonable validation suggestion, but the reviewer does not provide concrete support that 50 ps is actually inadequate or that 500 ps is the right threshold.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper omits RMSE and energy errors for Li4P2O7, but this item then discusses judging reported diffusivity values for Li4P2O7 even though diffusivity is reported for LiPS, not for Li4P2O7. Because the comment mixes a real omission concern with a factual conflation of two different applications, correctness is genuinely borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure 7 studies only l=0 versus l=0/l=1, and the paper explicitly notes that higher-order interactions beyond l=1 are possible but not explored. Asking for an l=2 result is a real and specific suggestion, though its importance is debatable because the current figure already supports the paper's main ablation claim.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The Discussion section is a single summary-style paragraph that mostly restates contributions and expected impact rather than engaging the broader state of the field, limitations, or practitioner takeaways. The criticism is accurate, though experts could plausibly differ on how important this is relative to other revisions.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "This is largely a venue and presentation judgment, and it also leans on the debatable claim that the method was mostly already introduced elsewhere. Since part of the item is subjective but part rests on a potentially wrong factual premise, experts could reasonably split on whether the criticism itself is correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The model predicts a scalar energy and obtains forces as its gradient, yet the paper never reports energy accuracy and evaluates only forces. Flagging this omission as a major incompleteness is therefore factually grounded and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 2,
+          "reasoning": "The equations in this stretch are short definitional equations for energy, forces, and atomic decomposition, so the suggestion that they could be condensed is a valid but minor presentation preference.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Equation 5 defines the equivariant convolution filter, not a literal pairwise interatomic force law, so the review item's opening interpretation is off. Still, the complaint that the presentation does not make the many-body role of the later convolution step fully transparent is understandable, making correctness genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The sentence in the paper says that high accuracy on small data sets opens the door to training on expensive higher-level reference methods; it does not claim NequIP is the first model ever trained on CCSD(T) or QMC data. This criticism therefore attacks a stronger claim than the paper actually makes.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The experimental descriptions repeatedly say structures were sampled uniformly from MD data, but they do not specify the exact sampling rule. Because these are temporally correlated trajectories, asking for that detail is a valid and reasonably important reproducibility concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The water/ice comparison is indeed made against an earlier DeepMD result on trajectory-derived data, and the paper does not discuss caveats of that comparison. However, the reviewer's specific claims about DeepMD's weakness and how much sparsification changes the comparison rely on external field knowledge that is not fully established here, so correctness is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The Methods section lists cutoffs and uses six interaction blocks, but the paper does not analyze sensitivity to these hyperparameters. Asking for such discussion is reasonable, though how important it is relative to the main claims is debatable and the reviewer gives no concrete example or failure mode.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper reports error tables but provides no visualization of training-data distribution or coverage. Asking for at least some representation of the training data, with a concrete example and citation, is a valid suggestion, though experts may differ on whether this is an important revision or an optional enhancement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper expands distances in a Bessel basis and then passes them through a small neural network for the radial function, but it does not justify that design choice against simpler parameterizations. Requesting that justification is a valid, specific, but relatively minor methodological clarification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

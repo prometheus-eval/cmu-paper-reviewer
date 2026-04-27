@@ -1,0 +1,196 @@
+{
+  "paper_id": 71,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer is right that Table 1 reports correlations between BLUE-based genotypic values rather than formal genetic correlations, and the paper does not report indirect-selection accuracy or relative-efficiency metrics. Heritability is only partly summarized in the main text, so the broader request for a clearer indirect-selection framework is valid and materially helpful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly uses field-vs-field correlations as a benchmark for how much mismatch is expected even for the same trait across environments, so those comparisons are central to the paper's argument rather than irrelevant side material.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The panels do differ in diversity and the paper does not analyze whether structure is affecting the reported correlations, heritabilities, or prediction accuracy, nor does it adjust those analyses with PCs. The supplement does assess structure with PCoA, so the concern is valid but not fully substantiated by the reviewer.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The methods state that correlations were computed between pairs of experiments using hybrids common to those experiments, not from a pooled analysis across datasets. Because the manuscript already answers this question, the criticism does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper reports point estimates and p-values for the correlations in Table 1 but no standard errors or confidence intervals, so the uncertainty-reporting criticism is factually valid. Because those correlations are central evidence for the paper's claims, adding uncertainty estimates would meaningfully strengthen the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Model 2 predicts genotype-level BLUE means, and the methods say the 5-fold cross-validation was applied to hybrid datasets, so this is already a genotype-held-out setting rather than a CV2-style split of individual observations. The complaint that the paper leaves this ambiguous is therefore not well grounded.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The caption wording around a “5-fold cross-validation scheme with 10 iterations” is genuinely unclear and could be rephrased as repeated 5-fold CV. But the stronger claim that the plot should show individual phenotype predictions rather than genotype-level BLUE predictions is debatable because the model predicts BLUE means, making the overall item borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Several main-text paragraphs do begin with dash-like markers, which reads like leftover draft formatting. This is a real but minor presentation issue that is easy to verify directly from the manuscript.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The manuscript does contain awkward phrasing, long sentences, and formatting glitches, so the general writing-quality complaint is plausible. But the reviewer gives no concrete examples, so a meta-reviewer would need independent work to determine exactly which passages are problematic.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Some section titles are indeed unusually long and slow to parse, especially in the results section. That is a valid but mainly stylistic presentation improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The quoted methods sentence does treat BLUEs as if genotypic values were directly “calculated,” whereas they are estimates from a fitted model, so the terminology concern has a real basis. But the reviewer partly overextends the point into genetic-correlation methodology that the sentence itself does not claim, making this item genuinely borderline on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper only showcases traits with moderate-to-strong positive indoor-to-field relationships, so adding a contrasting low- or negative-correlation example would broaden the story. Still, the reviewer names no concrete omitted trait or promised analysis, so this is a minor suggestion with weak support.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Table 1 reports multiple indoor-vs-field correlations without identifying which field each value corresponds to, while Supplementary Table 3 already names the fields. Replacing generic labels with field IDs would make the main table easier to interpret.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The same clarity problem applies to the field-vs-field entries in Table 1: several correlations are shown, but the specific field pairings are only recoverable from the supplement. Using field numbers in the main table is a valid minor improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The figure captions say “5-fold cross-validation scheme with 10 iterations,” while the methods clarify that the 5-fold CV was repeated ten times. Rephrasing the legend as repeated CV would improve clarity, though this is only a presentation issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Large genotype-by-environment interaction is already the paper's central motivation, and the discussion explicitly explains how environmental variables account for indoor-to-field translation. So the claim that GxE effects still need discussion is not borne out by the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The genomic prediction model is explicitly for hybrid genomic prediction, and the BLUE phenotypes are derived earlier from separate mixed models rather than from model 2. Since the reviewer's premise about how genotypic values are obtained is wrong and dominance is standard for hybrid maize, this criticism does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The linear-model equations are written without boldface matrices and vectors, so the reviewer is pointing to a real notation-convention issue. This is minor but specific and easy to verify in the methods section.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper is not only about genomic prediction; it also shows indoor-to-field translation using phenotyping plus environmental modelling. So the suggestion that the title may overemphasize the genomic component is a fair but minor framing comment.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The abstract's final sentence mentions “spender” and “conservative” strategies without immediately tying them to water-use or stress strategy, whereas the discussion later makes that link explicit. Asking for a more specific abstract phrasing is a valid but minor clarity fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 4 shows a systematic bias, with many points below the 1:1 line, and Supplementary Table 4 reports a substantial negative bias for modeled-versus-UAV LAI. Because the paper's translation claim relies on this relationship, asking for discussion of what drives the bias and how to improve it is a substantive, well-supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper attributes weaker external validation in recent hybrids mainly to narrower phenotypic range and shows only genome-wide diversity summaries in Supplementary Fig. 3, not trait-specific genetic variance by group. Computing within-group genetic variances would directly test that explanation and would meaningfully strengthen the interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

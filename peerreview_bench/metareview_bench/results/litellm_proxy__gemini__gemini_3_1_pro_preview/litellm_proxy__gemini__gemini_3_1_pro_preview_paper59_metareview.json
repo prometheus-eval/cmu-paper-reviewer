@@ -1,0 +1,219 @@
+{
+  "paper_id": 59,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks why the authors selected the three industrial sectors and what their contributions are to PM2.5 levels. However, the paper explicitly states in the Introduction that they were selected because they are the 'three most polluting industrial sectors' and the study models their ambient PM2.5 contributions via zero-out scenarios. Because the reviewer's premise that this information is missing is factually wrong, the item is Not Correct. A devil's advocate might argue the reviewer wanted exact percentage contributions in the Introduction, but the core questions are answered in the text. Experts would agree this is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the paper's calculation of OS potency relies on a reference model that uses valence metals, but the ICP-MS method employed does not analyze metal valence. This is a factually correct methodological critique. It is Significant because clarifying how valence was handled would improve the reproducibility and validity of the toxicity findings. The evidence is Sufficient because the reviewer appeals to specific external knowledge about the method's limitations. A devil's advocate could argue the paper might have assumed default valences, but the lack of transparency is real. Experts would agree on this judgment.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks whether prior studies have investigated industrial PM2.5 toxicity and suggests comparing findings. The paper states that such potencies have been 'scarcely investigated based on field study'. A charitable expert might consider the reviewer's request correct, arguing the paper should compare with whatever 'scarce' literature exists. A strict expert would consider it Not Correct because the paper already addressed the lack of prior literature. Because of this ambiguity, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests comparing the in vitro findings with previous epidemiology research on PM2.5 compositions. This is a valid suggestion as epidemiology is a key pillar of air pollution health effects, making the claim Correct. It is Significant because such a comparison would contextualize the real-world validity of the in vitro toxicity metrics. However, the evidence Requires More, as the reviewer merely asserts 'Numerous studies' without naming any specific study or epidemiological finding to compare against. Experts would generally agree on the need for more evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer criticizes the paper's claim that inorganic sulfate and nitrate are 'innocuous', noting that acidity modifications can impact metal toxicity. This is factually Correct and Significant, as dismissing sulfates affects the fundamental toxicity weighting among sectors. The reviewer provides a mechanistic explanation (modifying acidity impacts metal toxicity) but does not cite a specific paper. A strict expert might require a citation for 'many epidemiology studies', while a charitable expert would find the specific mechanistic explanation Sufficient evidence. Thus, experts would disagree on evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks why black carbon or elemental carbon is not a targeted chemical, noting their absence from the toxicity focus despite being measured. This observation is Correct. A devil's advocate could argue this is only Marginally Significant because the paper focuses on the most potent drivers (metals/PAHs), but others would view explaining this exclusion as Significant for methodological completeness. Due to this debatable impact on the paper's core message, experts would disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer recommends including the proportion of specific key constituents like inorganic sulfate and nitrate in Supplementary Table 4, which currently only groups them as 'WSI (%)'. The claim that this breakdown is missing is Correct. It is Marginally Significant because providing this breakdown is a minor presentation enhancement that doesn't alter the paper's main conclusions about metals and PAHs. The evidence is Sufficient as the reviewer points directly to the specific table and the absent information. Experts would agree on this judgment.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks what methodology the authors employed to compute the information in Supplementary Figure 7a. The paper explicitly states in the text that the relative contributions to OS potency were quantified via the 'concentration addition reference model'. Therefore, the reviewer's premise that the methodology is missing is factually wrong. A devil's advocate might say the reviewer wanted more detailed equations, but the method is clearly named and cited. Experts would agree this is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the isokinetic sampling method at 120 C misses condensable particulate matter, which requires a dilution sampler for accurate toxicity representation. This is factually Correct based on the methods described. It is Significant because missing condensable PM could severely alter the perceived toxicity profile of the emissions. The evidence is Sufficient because the reviewer points to the exact method used, explains its physical limitation, and provides a specific citation for the appropriate alternative. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the absence of sample handling protocols to protect against acid neutralization, which can alter the bioavailability and toxicity of transition metals. The paper does indeed lack mention of such protections, making the claim Correct. It is Significant because proper sample handling is critical for preserving the true toxicity of fossil fuel combustion PM. The evidence is Sufficient as it details the missing step and provides a specific citation explaining its importance. Experts would agree on this evaluation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer criticizes the paper for dismissing sulfates as relatively non-toxic, arguing that acidic sulfur plays an important role in activating metals, which the authors fail to acknowledge. This is Correct, as the paper calls sulfates 'innocuous'. It is Significant because ignoring this interaction could lead to underestimating the toxicity of sectors with high sulfur emissions. The evidence is Sufficient, providing a clear explanation of the interaction and citing a specific epidemiological study. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is a concluding summary stating that the methodology is flawed but could have provided new insights. As a summary of the previous points, its premise is Correct (assuming the prior points hold). However, it is Not Significant because it does not introduce any new actionable criticism that would independently improve the paper. The evidence is evaluated as null for a Not Significant item. Experts would agree that this is a minor summary remark better removed from the review.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the 'toxic potency-adjusted exposure' metric relies solely on in vitro A549 assays without epidemiological validation linking these specific endpoints to population health outcomes. This is factually Correct. It is Significant because the paper's core policy recommendations rest on the unverified assumption that these cellular metrics correlate with real-world health impacts. The evidence is Sufficient, quoting the paper's claims and citing literature to show how epidemiological studies establish health correlations differently. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that the methanol-water sonication extraction method can alter chemical composition and measured toxicity compared to ambient PM2.5, potentially biasing inter-sector comparisons. This is Correct. It is Significant because extraction efficiency differences for metal-rich (ISI) vs other PM could artificially inflate the relative toxicity rankings. The evidence is Sufficient, as the reviewer quotes the paper's method and explicitly quotes a cited paper (Roper et al.) demonstrating that extraction solvent choice dramatically affects element recovery. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the study assigns identical toxic equivalent values for the cement industry across all provinces, despite acknowledging varying air pollution control technologies and kiln types. This observation of the supplementary table is Correct. It is Significant because assuming uniform toxicity ignores documented heterogeneity and could bias the spatial exposure analysis. The evidence is Sufficient, pointing directly to Supplementary Table 7 and contrasting it with the paper's own data showing varying toxicity between kiln head and tail processes. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims the paper assumes a linear relationship between toxic potency-adjusted exposure reductions and health benefits, ignoring supralinear exposure-response relationships. A charitable expert would argue the paper only calculates a linear cost-per-exposure metric and makes no explicit claim about linear health outcomes (morbidity/mortality). A strict expert would argue the paper implies linear health benefits by concluding this strategy is 'cost-effective' for health protection. Because the critique attacks an implied assumption, experts would disagree on whether the paper is genuinely incorrect here.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the study applies primary PM toxicity to the total ambient PM2.5 attributable to a sector, which includes secondary aerosols. However, the paper explicitly states that 'Emission inventories excluding primary PM2.5 emissions... were used to simulate the NoELE, NoCI, and NoISI scenarios.' Thus, the modeled ambient concentration difference only represents primary PM2.5, not secondary aerosols. The reviewer's premise is factually wrong because they misunderstood the zero-out methodology. A devil's advocate could argue the text is brief, but it is unambiguous. Experts would agree this is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues it is misleading to frame the 'current strategy' (power sector ULE) as a competing alternative to the proposed strategy (ISI ULE), since power sector ULE was already largely completed before 2019. This is factually Correct. A charitable expert might argue the authors are just comparing the conceptual effectiveness of the two strategies and it is not 'misleading'. A strict expert would agree with the reviewer that the framing implies an immediate policy trade-off. Because the critique is about framing and interpretation, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer states that methanol and water extraction likely underestimates the toxicity of ISI particles because many relevant transition metals like iron oxides are insoluble in these solvents. This is factually Correct based on the chemistry of the extracts. It is Significant because it implies the study might be systematically underestimating the physical and surface-mediated toxicity of the most potent sector. The evidence is Sufficient, explaining the solubility of iron oxides, quoting the paper's data on iron dominance, and citing relevant literature on particle surface reactivity. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer observes that the paper aggregates toxic units (TUs) using the reciprocal of an emission-weighted average of EC endpoints, rather than a weighted average of the reciprocals, which is a non-equivalent mathematical transformation. This is factually Correct based on the formulas in Supplementary Note 9. It is Significant because this nonlinear aggregation can substantially bias the toxic equivalent values and alter the sector rankings. The evidence is Sufficient as the reviewer quotes the exact formulas from the paper and demonstrates the mathematical inconsistency. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the policy claims are based on a 'toxic potency-adjusted exposure' index built entirely from in vitro assays without demonstrating it is a valid surrogate for human health outcomes. This is Correct. It is Significant because the absence of epidemiological linkage threatens the robustness of the 'health-oriented' sector-priority recommendations. The evidence is Sufficient, citing the paper's reliance on A549 cell lines and quoting external literature warning against exclusively using in vitro screens for hazard ranking. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer identifies that the sector attribution scenarios explicitly omit source-specific secondary aerosol formation by only zeroing out primary PM2.5 emissions. This is Correct, as the paper's methodology confirms only primary emissions were excluded. It is Significant because secondary aerosols often dominate PM2.5, and ignoring precursors like SO2/NOx fundamentally skews the exposure burdens and the resulting sector prioritization. The evidence is Sufficient, quoting the exact methodological sentences from the paper and explaining the consequences of the omission. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the provided code and materials do not include the CMAQ modeling system, model configurations, or the ABaCAS inventory data necessary to reproduce the exposure and cost estimates. This is Correct based on an inspection of the code repository, which only contains the standard WRF meteorology model. It is Significant because independent replication of the core computational claims is impossible without these assets. The evidence is Sufficient, accurately describing what is missing compared to what the paper claims to have run. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

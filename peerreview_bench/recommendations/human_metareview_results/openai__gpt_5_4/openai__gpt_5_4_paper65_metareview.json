@@ -1,0 +1,103 @@
+{
+  "paper_id": 65,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper indeed relies on RCWA for periodic meta-atom simulations, a local-phase approximation, and shifted angular spectrum propagation, so asking for stronger discussion of PSF/Strehl accuracy is well grounded. The supplement does provide experimental PSF/MTF validation, but the manuscript does not report measured Strehl ratios against Fig. 1(d), so the broader validation concern remains only partially addressed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The figure of merit is explicitly the wavelength- and angle-averaged MTF/Strehl objective, not an efficiency objective, and the paper gives only a rough expected transmission statement rather than a real efficiency analysis. Since throughput matters for thermal imaging practicality and detector SNR, asking the authors to discuss efficiency trade-offs is a substantive and paper-improving point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Section 4.5 says the deconvolution kernel K is initialized from an analytical PSF from simulation, but it does not itself explain that construction; the PSF simulation procedure is described more generally in Section 4.1. So the request for clarification is plausible and useful for reproducibility, even though the paper is not completely silent about how the PSF is obtained.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The request to reconcile the hyperboloid Strehl value with the paper\u2019s other characterization is understandable: Fig. 1(d) reports spectral Strehl curves, while the supplement\u2019s Fig. S2 shows the hyperboloid performing best near 10 \u03bcm, and the plotted angle associated with Strehl is not made explicit in that figure. Still, calling 0.12 \u201cvery low\u201d and inferring a much higher Strehl directly from Fig. S2 is debatable, so correctness itself is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper shows that complex scatterers outperform simple ones and later attributes that mainly to having more structural degrees of freedom and a larger optimization space, but it does not really give a deeper physical explanation such as what role dispersion engineering plays. Because this concerns the central design insight, the request is meaningful, though the reviewer provides little concrete support beyond the observed performance gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Efficiency is only lightly discussed in the paper: the authors mention expected silicon transmission and acknowledge that the local phase approximation can lower efficiency, but they do not analyze overall optical efficiency for broadband imaging or how it scales with more design wavelengths. That makes the concern valid and practically important, although the reviewer\u2019s assertion that polychromatic design sacrifices efficiency \u201ca lot\u201d is not itself specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript uses the term \u201cManhattan grid\u201d in the figure caption and methods but does not define it. Asking whether this simply means a square lattice is a minor but valid terminology clarification request.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Methods Section 4.2 explicitly states that 0\u00b0 and 10\u00b0 were selected as the incident angles used in optimization, so the requested information is already present in the paper. On a strict factual check, this item does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The deconvolution method is described mathematically, but the paper gives no runtime, hardware cost, or throughput information, so asking about computational cost is a real omission. Whether support for video frame rates is an essential concern for this still-image demonstration is more debatable, making the item\u2019s importance somewhat borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The supplement already explains this point: Fig. S5 says an external shutter (flat black body) was used to remove internal reflections before solving the inverse problem. Since the paper does identify shutter correction as a physical/experimental step, this clarification request is not factually missing from the submission.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is a minor but valid typo comment. In the supplementary Fig. S2 image, the row label is visibly misspelled as \u201cHyperbloid Metalens,\u201d so the reviewer\u2019s broader point that there are figure-text typos holds even if the exact location wording is slightly imprecise.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

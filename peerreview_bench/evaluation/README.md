@@ -13,6 +13,51 @@ pipeline measures two complementary metrics:
   running an LLM meta-reviewer on each AI item to judge correctness,
   significance, and evidence sufficiency.
 
+## Requirements for AI reviewer baselines
+
+To be included as a baseline on PeerReview Bench, an AI model must meet
+three hard requirements:
+
+1. **Multimodal (vision input)** — The model must accept image content
+   blocks (e.g., `image_url` with base64 data) so it can read the
+   figures, tables, and diagrams in the paper. Text-only models cannot
+   be used because they miss visual evidence that reviewers need to
+   reference.
+
+2. **Sufficient input context (≥128K tokens)** — The agent conversation
+   includes the full paper (~15–25K tokens), tool call history, file
+   contents read during navigation, and condenser summaries. For longer
+   papers with code and supplementary materials, the agent context can
+   exceed 100K tokens. Models with context windows below 128K risk
+   truncating critical content mid-conversation.
+
+3. **Sufficient output length (≥32K tokens)** — The agent needs room for
+   thinking/reasoning tokens, tool call responses, and the final review
+   output across multiple conversation turns. Models with output caps
+   below 32K (e.g., Mistral-Large-3 on Azure AI at 8K) will truncate
+   mid-review or fail to produce complete output.
+
+4. **Function/tool calling support** — The review agent uses OpenHands
+   with `TerminalTool` (run commands), `FileEditorTool` (read/write
+   files), and `TaskTrackerTool` (track progress). Models that cannot
+   produce structured tool calls cannot be used as agents. This is why
+   PeerReview Bench does not accept simple single-turn LLM-call
+   baselines — the context window would overflow when trying to fit the
+   entire paper, code, and supplementary materials into one prompt.
+
+Models that meet all three requirements can be used directly with
+`generate_reviews.py --model-name <your-model>`. Models that don't
+support the OpenHands agent framework can still participate via **BYOJ
+(Bring Your Own JSON)** — run your own reviewer system externally and
+provide the parsed review items for evaluation.
+
+**Important: run one model at a time.** Do not launch multiple
+`generate_reviews.py` processes concurrently for different models. The
+review generation pipeline temporarily hides other review files to
+prevent the agent from reading them, and concurrent runs can interfere
+with each other's file hiding/restoring. Run models sequentially, or
+use separate copies of the `papers/` directory for parallel runs.
+
 ## Quick start
 
 ```bash
@@ -100,7 +145,7 @@ classes are:
 ### Precision: quality of AI reviewer items
 
 Each AI review item is judged by an LLM meta-reviewer (axis mode, same
-prompt as `meta_review/expert_annotation_meta_review/`) for:
+prompt as `metareview_bench/expert_annotation_meta_review/`) for:
 - Correctness (Correct / Not Correct)
 - Significance (Significant / Marginally Significant / Not Significant)
 - Evidence (Sufficient / Requires More)

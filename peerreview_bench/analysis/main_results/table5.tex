@@ -8,34 +8,34 @@
 \cmidrule(lr){2-3}
 \textbf{Reviewer} & {\scriptsize Paper-level mean [95\% CI]} & {\scriptsize Item-level rate [95\% CI]} & \textbf{Fully Good} & \textbf{Total Items} & \textbf{Papers} & \\
 \midrule
-Top-Rated Human    & 48.4{\scriptsize\,[42.2, 54.6]} & 48.0{\scriptsize\,[45.2, 50.9]} & 568 & 1{,}183 & 85 & \\
-Lowest-Rated Human & 36.1{\scriptsize\,[30.0, 42.2]} & 29.6{\scriptsize\,[26.6, 32.8]} & 246 & 832     & 85 & \\
-GPT-5.2            & 59.5{\scriptsize\,[51.9, 67.1]} & 58.2{\scriptsize\,[53.7, 62.7]} & 265 & 455     & 84 & \\
-Claude Opus 4.5    & 52.8{\scriptsize\,[45.4, 60.3]} & 54.5{\scriptsize\,[50.1, 58.9]} & 266 & 488     & 84 & \\
-Gemini 3.0 Pro     & 49.5{\scriptsize\,[42.0, 57.0]} & 50.8{\scriptsize\,[46.3, 55.3]} & 240 & 472     & 85 & \\
+Top-Rated Human    & 48.2{\scriptsize\,[42.2, 54.3]} & 47.8{\scriptsize\,[44.9, 50.7]} & 544 & 1{,}139 & 82 & \\
+Lowest-Rated Human & 36.2{\scriptsize\,[30.0, 42.4]} & 29.3{\scriptsize\,[26.3, 32.5]} & 244 & 833     & 82 & \\
+GPT-5.2            & 60.0{\scriptsize\,[52.3, 67.4]} & 58.6{\scriptsize\,[54.0, 63.1]} & 259 & 442     & 81 & \\
+Claude Opus 4.5    & 53.1{\scriptsize\,[45.6, 60.7]} & 54.7{\scriptsize\,[50.2, 59.2]} & 260 & 475     & 81 & \\
+Gemini 3.0 Pro     & 50.2{\scriptsize\,[42.7, 57.7]} & 51.3{\scriptsize\,[46.7, 55.8]} & 236 & 460     & 82 & \\
 \midrule
 \multicolumn{7}{@{}l}{\textbf{Pairwise paired differences} {\scriptsize (paper-level, row $-$ column; paired $t$-test)}} \\
 \midrule
 \textbf{Comparison} & \textbf{Diff} & \textbf{95\% CI (diff)} & \textbf{Cohen's $d$} & \textbf{$p$-value} & $n_{\text{paired}}$ & \\
 \midrule
-Top-Rated H. vs Lowest-Rated H.   & $+12.3\%$ & {\scriptsize $[+5.8, +19.4]$}   & $+0.41$ & $0.0004^{***}$ & 83 & \\
-Top-Rated H. vs GPT-5.2           & $-10.9\%$ & {\scriptsize $[-19.7, -2.2]$}   & $-0.27$ & $0.0150^{*}$   & 84 & \\
-Top-Rated H. vs Claude Opus 4.5   & $-4.5\%$  & {\scriptsize $[-13.0, +3.9]$}   & $-0.12$ & $0.2913$       & 84 & \\
-Top-Rated H. vs Gemini 3.0 Pro    & $-1.1\%$  & {\scriptsize $[-9.8, +7.6]$}    & $-0.03$ & $0.7969$       & 85 & \\
+Top-Rated H. vs Lowest-Rated H.   & $+12.1\%$ & {\scriptsize $[+5.3, +18.9]$}    & $+0.39$ & $0.0007^{***}$ & 82 & \\
+Top-Rated H. vs GPT-5.2           & $-11.6\%$ & {\scriptsize $[-20.3, -3.0]$}    & $-0.30$ & $0.0091^{**}$  & 81 & \\
+Top-Rated H. vs Claude Opus 4.5   & $-4.9\%$  & {\scriptsize $[-13.0, +3.2]$}    & $-0.13$ & $0.2300$       & 81 & \\
+Top-Rated H. vs Gemini 3.0 Pro    & $-2.0\%$  & {\scriptsize $[-10.6, +6.7]$}    & $-0.05$ & $0.6521$       & 82 & \\
 \midrule
-Lowest-Rated H. vs GPT-5.2        & $-23.1\%$ & {\scriptsize $[-32.9, -15.1]$} & $-0.59$ & $<0.0001^{***}$ & 82 & \\
-Lowest-Rated H. vs Claude Opus 4.5 & $-16.3\%$ & {\scriptsize $[-25.8, -7.3]$}  & $-0.39$ & $0.0006^{***}$  & 82 & \\
-Lowest-Rated H. vs Gemini 3.0 Pro & $-13.5\%$ & {\scriptsize $[-23.7, -5.1]$}  & $-0.32$ & $0.0028^{**}$   & 83 & \\
+Lowest-Rated H. vs GPT-5.2        & $-23.6\%$ & {\scriptsize $[-32.3, -14.8]$}  & $-0.60$ & $<0.0001^{***}$ & 81 & \\
+Lowest-Rated H. vs Claude Opus 4.5 & $-16.5\%$ & {\scriptsize $[-25.3, -7.6]$}   & $-0.41$ & $0.0004^{***}$  & 81 & \\
+Lowest-Rated H. vs Gemini 3.0 Pro & $-14.1\%$ & {\scriptsize $[-23.4, -4.7]$}   & $-0.33$ & $0.0038^{**}$   & 82 & \\
 \midrule
-GPT-5.2 vs Claude Opus 4.5        & $+7.7\%$  & {\scriptsize $[+0.6, +14.8]$}   & $+0.24$ & $0.0336^{*}$   & 83 & \\
-GPT-5.2 vs Gemini 3.0 Pro         & $+10.6\%$ & {\scriptsize $[+4.0, +17.1]$}   & $+0.35$ & $0.0019^{**}$  & 84 & \\
-Claude Opus 4.5 vs Gemini 3.0 Pro & $+2.7\%$  & {\scriptsize $[-2.7, +8.1]$}    & $+0.11$ & $0.3177$       & 84 & \\
+GPT-5.2 vs Claude Opus 4.5        & $+8.0\%$  & {\scriptsize $[+0.8, +15.3]$}    & $+0.25$ & $0.0294^{*}$   & 80 & \\
+GPT-5.2 vs Gemini 3.0 Pro         & $+10.4\%$ & {\scriptsize $[+4.1, +16.8]$}    & $+0.36$ & $0.0016^{**}$  & 81 & \\
+Claude Opus 4.5 vs Gemini 3.0 Pro & $+2.2\%$  & {\scriptsize $[-2.8, +7.3]$}     & $+0.10$ & $0.3784$       & 81 & \\
 \bottomrule
 \end{tabular}
 \caption{\textbf{``Fully good'' review items: descriptive statistics and paired comparisons.}
 A review item is \emph{fully good} if it is rated Correct, Significant (encoded value 2, including the original 4-option ``Very Significant'' choice), \emph{and} Sufficient on the evidence axis.
 \textbf{Top:} per-group descriptive rates with two complementary aggregations.
-The \emph{paper-level mean} is the average across papers of the per-paper fully-good fraction (each paper weighted equally), with a $t$-interval 95\% CI.
+The \emph{paper-level mean} is the average across papers of the per-paper fully-good fraction (each paper weighted equally), with a bootstrap 95\% CI (10{,}000 paper-level resamples, percentile method).
 The \emph{item-level rate} pools all items together (overall fully-good count divided by total items) and uses the Wilson score 95\% CI.
 The two summaries are close but not identical: the paper-level mean weights each paper equally regardless of how many items it contributes, while the item-level rate weights papers in proportion to their item count.
 The ``Fully Good'' and ``Total Items'' columns show the underlying counts.

@@ -1,0 +1,404 @@
+{
+  "paper_id": 28,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies a real exposition problem in the paper\u2019s central story: Fig. 1 emphasizes that fluctuating communities are richer and more invasible under fixed conditions, while Figs. 2\u20133 later show invasibility decreasing with stronger interactions or larger species pools. The manuscript eventually reconciles this through survival fraction and different ways of changing richness, but that contrast is not foregrounded early, and the mixed use of invasion probability, invasion resistance, and invasibility adds avoidable confusion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly uses a broad ecological definition of priority effects: earlier arrivals can make later invaders less likely to establish, and it cites priority-effect reviews when making that claim. Because that usage is defensible, the reviewer\u2019s stronger claim that \u201cpriority effect\u201d does not apply is too strong, although experts could plausibly split because the term is sometimes used more narrowly around alternative stable states and assembly history.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "In context, \u201cThe lower probability\u201d is explained by the immediately preceding sentence: invasions succeed more rarely than predicted by survival fraction. The antecedent is therefore present, so the complaint that the comparison target is missing does not hold up well against the actual paragraph.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is a minor line-level wording fix. The manuscript does contain awkward correlation phrasing in this discussion, so the suggested preposition change is a valid but purely stylistic improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The approximate one-to-one correspondence between survival fraction and invasion probability is a central conceptual link, but the paper mainly shows it before it fully interprets it. The reviewer is right that this expectation is not explained as clearly as it could be until the later Fig. 4b discussion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper invokes ergodicity as the reason chaotic fluctuations do not show a priority effect, but it does not explain the term at that point. That is a real clarity issue, though it is debatable whether defining one technical concept here is substantively important or just a minor presentation improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript gives one definition of invasion effect for the simulations and then later states the experimental definition in slightly different language. Because these are close but not presented as an explicit reconciliation, the reviewer is right that the term\u2019s definition is easy to read as inconsistent or at least underexplained.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The main text cites Supplementary Fig. 17 as showing an Allee effect for invaders 2 and 3, but the supplementary caption and available figure material for Supplementary Fig. 17 are about composition changes after successful low-nutrient invasions, not growth-from-small-inoculum curves. That makes this a valid cross-reference problem, but still a relatively minor one.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The relevant captions explain the plotted relationships but do not explain the gray lines the reviewer points to. This is a legitimate figure-annotation complaint, though it is minor rather than substantive.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This is a straightforward readability complaint about a specific figure panel. Since it concerns visual parsing rather than the underlying results, it is valid but only a presentation-level issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is a strong and accurate methodological concern. The paper uses a phenomenological gLV and argues that higher nutrient concentration strengthens competition through media modification such as pH, but it does not actually derive or clearly explain how changing resources and pH map onto the interaction coefficients in that model, nor why that approximation remains appropriate when pH changes during a transfer cycle.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript repeatedly discusses \u201cfluctuations\u201d but usually leaves implicit that the theoretical fluctuations are deterministic dynamical ones rather than stochastic noise. Given how central that distinction is to the paper\u2019s interpretation, asking the authors to clarify it for broad readers is a fair and important criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The experiments rely on continued dispersal from the regional pool, and the supplement says nonzero dispersal is important for sustaining persistent fluctuations. The reviewer is therefore right that explicitly motivating this design choice, and ideally contrasting it with zero-migration settings or prior no-migration results, would strengthen the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The supplement gives the migration/dispersal rate and discusses nonzero dispersal qualitatively, but it never directly shows whether the experimentally matched migration level is enough to place the model in a chaotic regime. Since the paper leans heavily on fluctuating dynamics and their interpretation, asking for that connection is a valid substantive clarification request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This recommendation does not hold up against the provided paper package. The source bundle already includes code, and the README points to a public Dryad repository for the raw sequencing data, so the request is factually outdated rather than identifying a real omission.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The supplement does mention sequencing depth and links the extinction threshold to detection limitations, but it still does not make the choice of the exact 0.08% threshold especially transparent or compare it to a biologically motivated extinction scale. That makes the reviewer\u2019s request for fuller justification and context valid and useful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Around the cited discussion of high nutrient, pH, and stronger interactions, the paper asserts the mapping from environmental modification to competitive interaction strength without giving much mechanistic modeling detail. The reviewer is therefore right that more explanation or a concrete model pointer would help readers understand that connection.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper invokes alternative stable states both in the main text and in the simulation discussion, but it does not spell out very clearly how they are identified in the relevant analysis. Asking the authors to explain that determination is therefore a valid and substantive request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer points to a visible pattern in Fig. 1d and raises a plausible alternative explanation, but the item stops at speculation rather than showing that the synchronized biomass drop is actually an artifact of the experimental protocol. The concern is reasonable and potentially important, yet the support provided in the review item is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper reports p-values for this comparison but nowhere identifies the statistical test used. Because naming the test is basic support for a reported result, this is a valid and important reproducibility complaint.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This is a straightforward figure-legend issue. The panel shows different gray line styles, and the caption does not explain them, so the complaint is valid but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Adding a label to an unlabeled colorbar is a classic presentation fix. It would make the figure easier to interpret, but it is still a minor rather than substantive issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The paper does define invasion effect in the surrounding text, but the figure label \u201cEffect on resident community\u201d is vague on its own and does not tell a reader how the quantity was computed. Because this quantity is central to one of the main results, the request for a clearer legend and explicit formula is a valid substantive suggestion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The manuscript reports fold changes in biomass after successful invasion, but it does not clearly specify which timepoints enter that calculation or whether the same rule is used across communities. Since that ambiguity affects interpretation of a headline experimental comparison, the reviewer\u2019s request is correct and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The supplement juxtaposes a sequencing-based abundance threshold and an experimental dispersal/dilution scale without really discussing how that mismatch may shape observed outcomes. Raising that issue is a valid methodological concern, and the reviewer points to the exact numerical ingredients involved.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "This criticism misstates what the paper calls \u201cdispersal.\u201d In the methods, dispersal refers to adding a diluted pool-derived inoculum into communities each cycle, not to the serial dilution step itself, so the claim that the term is being used for ordinary dilution is factually off target.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The supplement already addresses this point at least briefly: it states that previous work considered explicit daily dilutions in silico and found the qualitative conclusions robust. Because the reviewer\u2019s core premise is that no justification is provided, the criticism does not hold as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The model uses abstract times such as t=10^3 and t=2\u00d710^3, but the manuscript never clearly maps those units onto experimental timescales. Since that makes it harder to relate simulations to the experiments, this is a correct and important request for clarification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The supplement does define the CV mathematically as a temporal coefficient of variation averaged across species, so the strongest version of the reviewer\u2019s confusion overstates the problem. But the rationale for the 10^-3 cutoff and the lack of distributional evidence behind that threshold are real concerns, making this item genuinely borderline on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "Panel c of Supplementary Fig. 12 uses absolute species abundances that explicitly multiply relative abundance by total biomass, so the reviewer is right that some correlation with biomass-based fluctuation metrics may be mechanically induced. At the same time, these are supportive supplementary analyses rather than the main classification itself, so the issue is real but of debatable importance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "This is mostly an exploratory suggestion rather than a demonstrated deficiency. The paper does not analyze phylogenetic structure here, but the reviewer provides little justification for why such an analysis is needed to support the current claims.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "There is a real inconsistency here: the methods define the experimental stability classification using days 4\u20136, whereas the Supplementary Fig. 12 caption says \u201cday 5, day 6 and day 7.\u201d Because this classification is central to several results, the reviewer is correct that the rationale and consistency need to be fixed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The reviewer accurately identifies that the Supplementary Fig. 13 legend makes several correlation claims in compressed, sometimes hard-to-parse language and does not statistically support treatment-to-treatment comparisons. Because those claims bear directly on one of the paper\u2019s main conceptual contributions, this is a valid and substantial criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The supplementary panels visually illustrate composition changes after invasion, but they do not themselves provide a formal within-condition statistical test for the claim in their caption. Since the main paper already reports a summary invasion-effect analysis, experts could disagree about how important an additional dedicated test here really is, but the underlying request is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "This is the same substantive concern as the previous item, now applied to the low-nutrient supplementary figures with multiple invader identities. The request for a formal statistical demonstration is reasonable, though experts could differ on whether it is a major missing analysis or a supplementary nicety given the main-text effect metric already reported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "This is an exploratory additional analysis suggestion rather than a clearly established flaw in the paper. The reviewer gives little justification for why this relationship should be expected or why it is needed for the paper\u2019s claims, so it is only weakly supported.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "If the paper states that correlations are absent, reporting the corresponding correlation coefficients alongside non-significant p-values would indeed improve statistical reporting. That is a valid but relatively minor presentation improvement, and the reviewer identifies the exact figures affected.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper\u2019s presented gLV analyses use purely competitive interactions, so asking whether the conclusions generalize when facilitation is allowed is a fair substantive concern. But the supplement also says prior work tested positive interactions and found the qualitative conclusions robust, so experts could plausibly differ on whether the present paper has already addressed this point enough.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly identifies an important limitation of the invasion-impact measurements. Fold change in total biomass does not isolate the resident community from the invading species, and the chosen composition-based effect metric does not by itself speak to functional consequences, so the paper would benefit from making those limitations more explicit.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does not always define its key diversity terms at the point where they are first used, and phrases like \u201crich dynamics\u201d are indeed vague. Since those terms are central to understanding the results, the reviewer\u2019s clarity complaint is accurate and constructive.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper frames its findings largely in terms of emergent dynamical regimes and survival fraction, but it does not strongly translate those results back into more standard invasion-ecology language about niches, resource competition, or why strong interactions and larger pools reduce invasibility. This is a real and important contextualization gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The interactions among nutrient regime, interaction strength, species pool size, and dynamical regime are central to the paper, but the exposition is demanding and assumes familiarity with the group\u2019s earlier phase-diagram work. The reviewer is right that more intuitive explanation would materially improve readability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The main text reports many values as mean \u00b1 something without clearly stating in the text what the dispersion measure is, even though some figure legends say the error bars are s.e.m. That omission affects how readers interpret reported variability, so the criticism is valid and useful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper says each resident community underwent 7\u20139 invasion tests with different invader species, but it does not clearly explain the selection rule for those invaders at the cited point. Because invader choice is part of the experimental design, asking the authors to state it explicitly is a correct and substantive request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The main text states when the invader is introduced in the simulations but does not clearly state its abundance relative to the resident community there, even though that quantity matters for reproducibility and interpretation. The reviewer is therefore correct that this should be made explicit.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer\u2019s observation from the representative Fig. 2a panels is plausible, but the item extrapolates from a small illustrative example to a broader mechanistic claim without additional supporting analysis. The concern could matter, yet the review item does not provide enough evidence to establish it.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This is a clear wording/consistency suggestion: the paper often uses high versus low nutrient as a proxy for strong versus weak interaction, and repeating that mapping more consistently would improve readability. The point is valid but only minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The paper directly states that monoculture growth properties were ineffective predictors and that resident-community properties are the primary determinants of invasion outcome, but it only examined a limited set of invader properties. The reviewer is right that this concluding claim overreaches what was actually tested and should be softened.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

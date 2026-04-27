@@ -89,9 +89,7 @@ def main():
     parser.add_argument('--judge-model', type=str,
                         default='litellm_proxy/anthropic/claude-opus-4-6',
                         help='LLM judge for precision (meta-review)')
-    parser.add_argument('--judge-mode', type=str, default='llm',
-                        choices=('llm', 'agent'),
-                        help='Meta-review judge mode')
+    # Judge mode is agent-only (no LLM baseline option)
     parser.add_argument('--concurrency', type=int, default=16)
     parser.add_argument('--temperature', type=float, default=1.0)
 
@@ -186,7 +184,6 @@ def main():
         precision_args = [
             '--paper-root', str(args.paper_root),
             '--judge-model', args.judge_model,
-            '--judge-mode', args.judge_mode,
             '--concurrency', str(args.concurrency),
             '--temperature', str(args.temperature),
         ]

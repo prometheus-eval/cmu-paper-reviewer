@@ -1,0 +1,222 @@
+{
+  "paper_id": 78,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer's main point — that Shono's 1970 anodic arylcyclopropane oxidation (reference 50) is present in the reference list but is not substantively acknowledged in the introduction as the direct precedent — is verifiable. In the preprint, [50] appears only bundled with other references in the electrochemistry paragraph ([8-49-50]), and the introduction's discussion of prior ring-opening oxidation work does not specifically discuss Shono's anodic arylcyclopropane methoxylation. Devil's advocate: an uncharitable expert might argue that citing is acknowledging, so the reviewer is pedantic — but since Shono's work is the direct predecessor of the 1,3-dioxygenation here, a specific callout is clearly warranted. Evidence is sufficient (a specific reference number and a clear claim of where it should appear). Two experts would very likely agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is a concrete constructive suggestion following from Item 1 — to describe Shono's work in the introduction and include it in Figure 1. Looking at Figure 1a (thermochemical/photochemical strategy), no anodic/electrochemical precedent is depicted, so the suggestion is sensible. Correctness is clear. Devil's advocate for significance: one could argue this is just a rephrasing of Item 1 and marginal; however, explicitly representing prior electrochemical precedent in the comparison figure would genuinely improve readers' ability to situate the contribution, making it Significant. The evidence points directly to Figure 1 and to the reference. Experts should agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims some products' NMR spectra contain impurities (specifically citing compound 8 with solvent) and recommends cleaner spectra or stated purity. This is a verifiable SI-level observation about characterization quality. Devil's advocate: a reviewer could disagree about whether minor solvent residues constitute impurity; this is somewhat subjective, and Human_2 Item 7 even praises the SI as showing high purity — demonstrating that experts genuinely disagree on this quality call. Significance: characterization purity is relevant but a relatively minor quality-of-reporting issue; most experts would call it Significant if fixing improves reproducibility, Marginally otherwise. Evidence is sufficient (a specific compound is named as example). I predict disagreement on significance because of its borderline nature.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer says numbers in Fig 6a and 6b are difficult to see. Checking Fig 6 directly: the CV axes are legible but small, and the partial charges (+0.22, -0.06, +0.22) on the ESP surface in 6b are indeed small and load-bearing for the DFT mechanistic argument. So the claim is factually reasonable. Devil's advocate: a strict expert might call this purely cosmetic/Marginal since the numbers can be read with magnification, while another expert would consider it Significant because 6b's charge numbers are essential to the mechanism. Evidence is sufficient — specific figure panels are named. I predict disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer notes that the difluorination substrate scope (Fig 2) does not demonstrate compatibility with electron-donating groups (methoxy, etc.) and contains only one heterocyclic example (thienyl). This is directly verifiable from Figure 2 — no OMe/amino-substituted aryl rings appear, and only compound 26 is heterocyclic. Devil's advocate: the authors did show EDG compatibility in the oxyfluorination (37-39) and dioxygenation (51-52) scopes, so the scope limitation is specific to difluorination; a charitable expert might say this is a reasonable restriction. But the difluorination is the main scope table, so asking about EDG/heterocycle generality is constructive. Significant (scope expansion genuinely improves papers). Evidence is sufficient (specific Fig 2 reference, concrete functional-group questions).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer observes that the natural-product substrates (32-35) are attached via an aryl ester to a simple 4-(1,3-difluoropropyl)benzoate, so 'complex FGs' are only in the unreactive natural-product portion, not near the cyclopropane. Examining Fig 2, this is accurate — the natural product scaffolds are linked through an ester bond to a simple phenyl ring. Devil's advocate: a defender would say demonstrating tolerance to complex external molecules is still meaningful for synthetic utility; this is a legitimate alternative read. So correctness is reasonably firm. Significance: pushing authors to explore substrates with complex nearby FGs would genuinely strengthen synthetic-utility claims. Significant. Evidence is sufficient — the reader can verify by inspecting the structures in Fig 2.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer suggests combining Figure 5 (gram-scale, only 4 substrates) into Figs 2-4, and combining Figs 3 and 4 (only 7 dioxygenation examples). These figures do indeed contain relatively few examples each, so the observation is correct. Devil's advocate: some experts strongly prefer separate figures for distinct transformations/scales for clarity, so a reviewer might disagree that combining is better; this is a stylistic preference. Marginally Significant — it's a presentation suggestion that doesn't affect the paper's scientific content. Evidence is sufficient (specific figure numbers and substrate counts).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer raises two points: (a) the oxonium mechanism for C-O ether cleavage is proposed without evidence, and (b) 'dimethoxymethane led to the formation of non-fluorinated product, while the other two ethers formed the fluorinated products' — but checking the paper, products 48 (THF), 49 (DME=1,2-dimethoxyethane), 50 (THP) all carry fluorine as 1,3-oxyfluorination products. The reviewer's factual claim about one ether giving non-fluorinated product is incorrect. Devil's advocate: the request for evidence on the oxonium mechanism is still valid. But the main criticism combines a factually wrong premise with a valid request. Experts would split on correctness depending on whether they focus on the valid mechanism-evidence point or the incorrect product claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer asks why yields are moderate for many substrates — are these low conversions or lost to side products. This is a valid methodological question; the paper does not identify side products or quantify conversion vs. selectivity. Devil's advocate: the SI does report some starting material recoveries (e.g., 27% SM recovered for 16, 36% for 35), partially addressing conversion; but general discussion of side products and overall mass balance is absent. Significant — understanding where mass goes is important for method assessment. Evidence is sufficient (the reviewer is pointing to what's absent; meta-reviewer can verify by inspection).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer observes that two onset potentials (E_onset = 1.68 V, 1.99 V) are reported without the reference electrode being mentioned in the main text, and that it is unclear how the values were obtained from the CV. This is verifiable — the main text (line 34) indeed omits the reference electrode; it is only shown in Fig 6a's axis label ('E vs Ag/AgCl') and described in SI. Devil's advocate: some experts would say the figure axis label is sufficient and not demand repetition in text; others would expect the reference and extraction method (onset at a particular current threshold) to be stated. This is a legitimate reporting concern, and overlaps with gpt-5.2 item 1. Significant. Evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is essentially praise: 'The supplementary information seems satisfactory and it is clear from the NMR spectra that these compounds could be isolated in high purity.' It is a positive statement without a constructive request. Devil's advocate: one might argue positive statements are Marginally Significant since they provide balance; however they are not constructive and do not help improve the paper. Note also that Human_1 item 3 says some NMR spectra have impurities, contradicting Human_2's praise — demonstrating that experts genuinely disagree about NMR purity. Per the rubric, positive statements typically belong in 'Not Significant' because removing them would streamline the review. Evidence: N/A since not significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Two-part request: (a) show large-scale setup with pictures, and (b) NMR resolution is low making splitting patterns hard to discern. Both claims are plausible — the SI provides small-scale pictures but does not show the gram-scale cell explicitly, and NMR resolution in a PDF can be genuinely hard to read. Devil's advocate: a reviewer might consider both of these as minor presentation issues; however, pictures of the gram-scale setup would improve reproducibility (relevant to the paper's scalability claim), and legible NMRs support data verification. Significant. Evidence is sufficient (specific requests against specific SI content).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer says 19F NMR splitting patterns should be reported and 13C reporting with two decimal places overstates accuracy. Checking SI: 19F shifts are often reported as plain singlets with coupling constants given inline (varied reporting), and 13C values are consistently at two decimal places (e.g., 166.30, 149.78). The reviewer's observation is essentially correct. Devil's advocate: two decimals for 13C is very standard in modern synthesis SI; many top journals accept it, so this is a matter of reporting convention. Marginally Significant — these are minor reporting-format issues. Evidence is sufficient (claims verifiable in SI).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Reviewer claims HRMS is missing for compounds 6, 15, 17, 18, 19. Verification: the SI entries for 6 (line 295), 18 (line 333), 19 (line 337) end after 19F NMR without HRMS; 17 likewise appears to lack HRMS. This is verifiable. Devil's advocate: an expert might argue that since these are known compounds (footnote [2] in the SI indicates prior literature), HRMS is not strictly required. However, for compounds prepared by a new method, HRMS is standard. Significant — proper characterization affects data completeness. Evidence is sufficient — specific compound numbers cited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Grammar issues. The example sentence given by the reviewer is indeed grammatically awkward (comma splice, agreement). Looking at the abstract/introduction, there are multiple grammar issues ('had a lot of inherent advantages', 'it's deconstructive functionalization are meaningful'). Correct. Devil's advocate: grammar suggestions are minor-but-legitimate; no expert would dispute. Marginally Significant — these are style issues that don't affect scientific content. Evidence is sufficient (the reviewer quotes the exact problematic sentence).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer claims the abstract/introduction overstate EDG compatibility because the difluorination (Fig 2, the largest scope) lacks methoxy/amino/thioether substrates. Examining Fig 2, this observation is factually correct — no OMe, SMe, OPh, or NHBoc aryl substituents appear. The reviewer quotes an explicit 'not amenable' sentence purportedly from the paper that is not actually in the preprint.md, which is a peripheral inaccuracy, but the main point (the broad abstract/intro claim doesn't reflect the difluorination limitation) is supported by Fig 2 contents. Devil's advocate: the abstract's broad statement technically refers to all three transformations combined, and oxyfluorination/dioxygenation do show EDG compatibility (compounds 37-39, 51-52) — so a charitable reading says the abstract is accurate for the combined scope. This is a genuine borderline case. I lean Correct because the primary scope figure (Fig 2) does lack EDG examples, but experts would potentially split. Significance: Significant. Evidence mostly sufficient though one quoted sentence is not verifiable in the preprint.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer points out that several EWG substrates require very high charge (e.g., 23.9 F/mol for 16, 35.8 F/mol for 34) giving low Faradaic efficiency, and this is not discussed in the paper. Verification: SI line 324 confirms compound 16 electricity = 23.9 F/mol; line 394 confirms compound 34 = 35.8 F/mol. The paper indeed does not discuss Faradaic efficiency. Correct. Devil's advocate: a charitable reader could say time (rather than charge) is what's reported in the main text, and that constant-current electrolysis trivially implies extra charge = more time; still, an explicit Faradaic-efficiency discussion would strengthen the scalability claim. Significant. Evidence is sufficient (specific SI numbers and external refs). This overlaps with gpt-5.2 item 2.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues that the proposed second anodic oxidation (benzyl radical → benzyl cation at the anode) is not directly established; radical trapping with O2/BrCCl3 and cation trapping with MeCN show both intermediates exist but do not distinguish heterogeneous anode oxidation from homogeneous ET or disproportionation. This is factually accurate — Fig 6 mechanistic studies are as summarized, and none directly probes where the second oxidation occurs. Correct. Devil's advocate: one could argue that in an undivided cell electrolysis, if no other oxidant is present, only the anode can realistically carry out the oxidation — so the anode mechanism is by default. But the reviewer's request for divided-cell controls or mediator experiments is reasonable. Significant. Evidence is sufficient (specific figure panels and external references).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues the Shono comparison is limited to example-count and lacks mechanistic discussion of what is new relative to Shono's 1970 framework. Checking the preprint: the introduction cites Shono (ref 50) only bundled, without a dedicated paragraph discussing what the current work adds mechanistically vs. Shono. The reviewer quotes a 'Pioneering work was disclosed by Shono...' sentence not present in preprint.md, which is a peripheral inaccuracy, but the broader concern about inadequate mechanistic differentiation is supported. Correct on the main point. Devil's advocate: a charitable expert could argue the paper's advance is methodological (new nucleophiles, new scope, scale) not mechanistic, so mechanistic differentiation isn't the real contribution to emphasize. Significance: discussing prior art contextualization is substantive and helps readers. Significant. Evidence borderline — the specific quoted sentence is not in the preprint, but the broader observation is verifiable. I'd call it sufficient; experts could split.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues that the 1,3-dioxygenation (anodic oxidation of arylcyclopropanes in MeOH giving 1,3-dimethoxy products) is essentially the reaction reported by Shono in 1970, and the paper doesn't adequately acknowledge this precedent. Verification: Shono (ref 50) did exactly the same transformation in 1970; in the preprint, ref 50 is cited only bundled and the 1,3-dioxygenation section (line 28) does not call out Shono's precedent. The reviewer's point is directly correct. Devil's advocate: the authors significantly expanded the scope and the dioxygenation is one of three tranformations, so the authors can argue novelty at the broader level. Still, not mentioning Shono specifically in the context of dioxygenation is a real gap. Significant. Evidence sufficient — specific abstract quote plus Shono reference. This overlaps with Human_1 Item 1 and claude Item 4.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer claims the paper's statement 'Different from thermochemical and photochemical conditions, benzyl radical can further lose one electron at anode' implies a false dichotomy — photochemical methods CAN oxidize benzyl radicals to cations. The reviewer cites a 2018 paper supporting this. Devil's advocate is strong: the authors are probably saying 'under the specific thermochemical/photochemical conditions cited in refs 20-24 for arylcyclopropane ring opening, the second oxidation to benzyl cation is not accessed' — which is a plausible charitable reading rather than a blanket claim. An uncharitable reader would take the sentence at face value as the reviewer does. This is a genuine correctness ambiguity. I lean toward the reviewer being partially right (the wording does invite the broader reading), but experts would split. Significance (if correct): rephrasing a mechanistic sentence is a modest but substantive fix. Evidence: reviewer cites a specific external reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues that 42-56% yields for EWG substrates shouldn't be characterized as 'good' or implied to be good via 'amenable' + 'good functional group tolerance.' Looking at the paper, the Results section calls these yields obtained 'by prolonging reaction time' and the abstract describes 'good functional groups tolerance.' 42-56% yields are indeed moderate by general synthesis standards. Devil's advocate: 'amenable' does not strictly mean 'high-yielding' — it means the substrates reacted. A charitable reader sees nothing wrong. But the reviewer's point — that combined framing is over-optimistic — has merit. Correctness: Correct (framing is debatable). Significance: borderline — this is a framing/language concern; some experts would call it Marginally Significant (stylistic), others Significant (misleads scope assessment). Evidence is sufficient (direct quote plus external context).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues the CV methodology uses an aqueous Ag/AgCl reference in MeCN electrolyte without calibration to Fc/Fc+ or other internal standard, making the reported E_onset values (1.68 V, 1.99 V) unreliable for absolute comparisons and mechanistic inference. Verification: SI confirms aqueous Ag/AgCl reference in MeCN; no internal-standard calibration is reported. The main text uses these E_onset values to support the mechanistic argument about aryl groups being essential. The IUPAC 1984 recommendations cited are directly relevant. Correct. Devil's advocate: the qualitative conclusion ('aryl groups are essential; alkyl cyclopropanes cannot be oxidized below 3V') is likely robust even with imperfect referencing because the differences are very large (>1 V). So a charitable expert could say the methodological critique doesn't really undermine the qualitative claim. Still, the reporting standards point is a legitimate methodological concern. Significant. Evidence is sufficient (direct SI quote, main-text quote, multiple external refs).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer argues that several substrates require very large charge (up to 23.9 F/mol) for moderate yields, indicating low Faradaic efficiency that undermines scalability claims. Verification: compounds 16 and 18 require 23.9 F/mol (SI lines 324, 333). The paper does not discuss Faradaic efficiency. Correct. Devil's advocate: the authors do show gram-scale success (Fig 5) with higher yields and presumably reasonable efficiency, so the scalability claim is supported by direct demonstration — even if Faradaic efficiency is not always high. An expert might say showing scaled-up runs is the practical test, and F/mol numbers are a secondary metric. But this is a real reporting gap the reviewer highlights. Significant. Evidence is sufficient (specific SI values, external references, and a clear logical chain). This overlaps with claude-opus-4-5 item 2.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "paper_id": 45,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The methods explain that phosphorylation attempts occur every 200 MD steps and that contact plus a Metropolis acceptance rule determine the reaction probability, but the manuscript never cleanly explains how those choices set the effective absolute transition rates in the MC+MD cycle. Figure 1 also uses arrows with differing visual styles without explaining them. This is therefore a real and important clarity issue, and the reviewer points to the exact mechanism and figure elements at issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper reports that the averaged-interaction polymer behaves very differently from wild type and says the average mass, size parameter, and hydropathy parameter are given in the SI, but the supplementary text does not actually spell out those averaged values. Since those parameters are needed to interpret the surprisingly large contact-probability change, the criticism is accurate, useful, and directly grounded in a specific claimed location of missing information.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper attributes the N-versus-C phosphorylation bias partly to sequence-dependent charge and aromatic-content effects, but later also argues from averaged-interaction simulations that the serine arrangement and the build-up of negative phosphoserine charges contribute to the same bias. Those passages are not a clean contradiction, yet they do leave the relative mechanistic roles somewhat underexplained. The reviewer identifies the relevant sections precisely, but experts could disagree on whether this is a real inconsistency or just a multifactor explanation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The condensate results show surface localization of CK1δ and discuss enhanced binding after phosphorylation, but they do not clearly decompose whether surface attachment is driven mainly by electrostatics or hydrophobic/LJ interactions, nor do they fully explain the surface-versus-interior preference for the folded-domain case in Figure 4. Asking for that mechanistic clarification would materially improve interpretation of the condensate results, and the reviewer anchors the point to specific simulation regimes and a specific figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript states that condensate dissolution begins around 24 to 25% total phosphoserine and notes a possible saturation effect, but it does not report finer-grained information such as whether phosphorylated chains redistribute within the condensate, whether phosphosites remain surface-enriched, or what chain-level phosphorylation level precedes escape to the dilute phase. Those missing details would help interpret the dissolution mechanism, but the review item bundles several broad follow-up questions with only limited support beyond the global 24% statement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This criticism does not hold up. The paper argues that phosphorylation strengthens CK1δ binding to phosphorylated TDP-43 and to the condensate surface, but that does not imply the enzyme should preferentially abandon the condensate for dilute-phase phosphorylated chains. The condensate still offers many interaction partners and high local concentration, so the reviewer’s inference is not warranted by the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The model treats ATP and ADP implicitly through the chemical potential difference Δμ_P and does not discuss the separate possibility that ATP or ADP concentrations themselves could alter phase separation. Given that the reviewer cites concrete literature suggesting such effects, this is a valid and constructive request for broader discussion of model scope and biological interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The Figure 2 caption says panel c shows implied timescales but does not explain what the colored dots and lines in that panel denote. That omission is real, and adding a legend would improve readability, though it is primarily a presentation issue rather than a substantive scientific flaw. Because the figure is important, some meta-reviewers could rate its importance differently.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "As written, the first requested change is unintelligible because it asks to change the unit string to the same unit string, and the text alone does not let a meta-reviewer verify the separate precision complaint for Figure 2e. A charitable reader might suspect a minor formatting issue was lost in transcription, but the item in its present form is too unclear to support a firm factual judgment.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The manuscript does use the phrase 'goodness of the MSM' when introducing the Chapman-Kolmogorov test, so the reviewer’s wording suggestion is grounded in the text. But this is only a stylistic preference and does not materially affect the scientific content or clarity of the paper.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The Figure 3f caption explains that arrow thickness encodes the percentage of simulations in which Ser 410 is phosphorylated after n earlier events, but it does not clearly explain whether all arrows in the diagram share that meaning or whether different connector styles indicate different transitions. That is a real figure-clarity issue with a precise pointer, although reasonable experts could differ on whether it is merely a minor presentation nit or a more useful clarification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper links disease-associated phosphorylation to suppressed condensation and cites patient-sample phosphosites, but it does not really discuss how the observed patient phosphorylation patterns might mechanistically connect to condensate disruption. That broader framing would improve the paper’s implications, yet the review item mainly states a desirable discussion topic rather than giving a tightly supported verification chain.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript is focused on pathological phosphorylation, condensation, and dissolution of TDP-43, and it does not discuss whether the modeled phase separation is tied to the more functionality-oriented framing raised by the cited recent report. Requesting that contextual clarification is fair, but it is mostly a related-work or framing suggestion rather than a core methodological problem. The item names a specific external work, so the basis is easy to verify.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This concern is partly valid because the model is coarse-grained and the paper does not directly validate specific CK1δ–TDP-43 binding geometries. At the same time, the discussion already says that more detailed conformational modeling will be needed to understand molecular recognition and the inhibition mechanism in detail. So the reviewer is pointing to a real limitation, but experts could reasonably disagree on whether the paper already addresses it enough to make the criticism redundant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper simulates the TDP-43 LCD with a fully flexible residue-level coarse-grained model and never discusses how the known helical segment within the CTD is represented or how that structural element could affect CK1δ interactions and phosphorylation patterns. That omission is relevant because the work interprets sequence determinants of phase behavior and enzyme recognition, but the review item relies on uncited field knowledge about the helical region’s importance, making the evidentiary sufficiency borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    }
+  ]
+}

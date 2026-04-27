@@ -1,0 +1,246 @@
+{
+  "paper_id": 31,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the paper itself emphasizes that predictions are highly sensitive to the distribution of incorporated kcat values (line 59) but only briefly sketches how GECKO 2.0 handles heterogeneous BRENDA entries, leaving the actual selection logic under-explained in the manuscript. This is Significant because clearer treatment of how kcat values are chosen is central to trusting the method, and the item's pointers to the sensitivity claim plus Supplementary Note 1 make the concern verifiable, so evidence is Sufficient. Devil's advocate on correctness is that the paper does mention phylogenetic matching and later describes replacing limiting kcats with the highest class value, so one could say the issue is partly addressed; that defense is only partially plausible because it still does not clearly explain the general selection policy for heterogeneous BRENDA measurements. Devil's advocate on significance is weak because resolving this methodological ambiguity would materially improve the paper, so I predict experts would agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the paper's key hierarchical kcat matching change is introduced in the main results (lines 63-66) but the actual comparison of old and new criteria is pushed to Supplementary File 2, and the main text gives only limited validation of the phylogenetic-distance idea. This is Significant because the matching algorithm is central to the paper's claimed improvement, and the reviewer's specific pointers to the quoted sentence, Figure 1D, and the supplementary placement make the evidence Sufficient. Devil's advocate on correctness is that the paper does provide some validation in the main text through KS tests and growth prediction improvement, so one could argue the issue is presentation rather than absence; that defense is only partly plausible because the methodological rationale is still thin where readers most need it. Devil's advocate on significance is weak because bringing this core method into clearer view would materially strengthen the paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper reports the 23.97% versus 32.07% average relative errors but does not explain exactly how the error was computed, does not test whether the difference is statistically meaningful, and does not describe any held-out validation against overfitting after calibration. This is Significant since the claimed predictive improvement is a central result, and the quoted numbers together with the paper's own calibration language make the missing methodological detail verifiable, so evidence is Sufficient. Devil's advocate on correctness is that evaluating batch growth across 19 environments is already some validation and the automatic curation is openly described, but that does not answer the reviewer's narrower complaint about missing significance and independence from calibration. Devil's advocate on significance is weak because clarifying these evaluation details would materially improve confidence in the result, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper uses SSE in Figure 3, and asking for a correlation view is a reasonable suggestion for another way to summarize agreement with experiment. This is only Marginally Significant because it is mainly an evaluation-presentation preference rather than a core methodological flaw, and the Figure 3 pointer makes the evidence Sufficient. Devil's advocate on correctness is that SSE is already a standard accuracy metric and correlation can hide magnitude errors, but that only weakens the preference, not the validity of asking for an additional view. Devil's advocate on significance is that some experts could treat this as too minor to keep, but I think it remains a valid minor point, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Correct because, regardless of the exact count the reviewer reads from Figure 4, the paper makes a strong '10 out of 11' improvement claim without statistical testing, power discussion, or any explicit safeguard against overfitting in this comparison. This is Significant, and the item gives enough concrete anchors - the quoted sentence and the specific conditions the reviewer believes are counterexamples - for evidence to be Sufficient. Devil's advocate on correctness is plausible: a stricter expert could focus on the reviewer's apparent visual recount of Figure 4 and say the factual premise may be a misreading of the plot, especially since the paper text asserts 10/11. Because that skeptical reading is genuinely plausible even though the broader concern about unsupported strength of claim is valid, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I mark this Correct because the paper uses 'wild cards' in the matching algorithm discussion and Figure 1 caption but never plainly defines the term in the main text, even though it is key to understanding how EC numbers are relaxed. I treat this as Significant because the undefined term sits in the core methods/results story, and the line reference is enough to verify the omission, so evidence is Sufficient. Devil's advocate on correctness is weak: a reader could infer the meaning from EC-number notation and the caption, but the paper still does not explicitly define it. Devil's advocate on significance is more plausible - some experts will see this as merely terminology while others will see it as important method clarity - so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because line 221 says additional condition-dependent exchange fluxes can be used when needed, but the paper gives little guidance or example for deciding which byproduct fluxes to add in practice. This is Significant for a methods paper because such choices affect model behavior and reproducibility, and the quoted missing procedure is specific enough that evidence is Sufficient. Devil's advocate on correctness is that the authors may have intended Supplementary File 2 or code documentation to cover these choices, but the paper itself does not explain them. The downgrade argument on significance is weak because an example would materially improve usability, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the paper uses 'active fluxes' in lines 226 and 241 without defining the threshold or criterion that makes a flux 'active.' This is Marginally Significant: it is a real clarity issue, but defining the term would refine interpretation rather than change the paper's main results, and the exact passages make the evidence Sufficient. Devil's advocate on correctness is that many readers will infer 'non-zero fluxes' from context, yet the lack of an explicit definition still leaves room for ambiguity. Devil's advocate on significance is that some experts might upgrade it because the term is used in quantitative summaries, but I think most would still treat it as a minor clarification, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper explains proteomics constraints and ecModel construction at a high level but does not spell out how reactions without enzymatic activity or without GPRs are treated, even though that choice is central to genome-scale coverage. This is Significant because exchange, transport, and other non-enzymatic reactions are common and materially affect how a reader evaluates the method; the reviewer's examples make the absence concrete enough for evidence to be Sufficient. Devil's advocate on correctness is that the codebase does contain a standard-kcat workflow that ignores exchange/transport/pseudoreactions, so one could say the information exists somewhere, but it is not explained in the paper itself. The significance downgrade is weak for a methods paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Not Correct because the item is essentially a speculative extension question about predicting cutoffs for other organisms, not a clear criticism of a factual claim the paper makes. The paper analyzes BRENDA distributions and demonstrates several organisms, but it never promises a generic 'minimum cutoff' estimator for Mycobacterium tuberculosis, mouse, or Arabidopsis, so there is no specific missing result to verify. Devil's advocate is that one could charitably read this as asking for stronger guidance on generalization, but that reading is too indirect and underspecified to make the criticism itself clear. Because the main point is not a well-defined verifiable criticism, I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Not Correct because this is mainly a forward-looking feature request about integrating multi-omics, not a clear factual criticism of what the paper claims or omits within its stated scope. The manuscript presents a proteomics-constrained GECKO workflow; it does not claim to support all multi-omics combinations, so the item does not identify a specific error or clearly missing required component. Devil's advocate is that broader omics integration could be useful for future versions of the toolbox, but that does not make the present paper factually deficient on its own stated contribution. Because the criticism is too indirect and scope-expanding to verify as written, I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I mark this Correct because the paper provides model size metrics but no comparable reporting of computational cost or runtime, leaving readers without a sense of scalability across the different ecModels. This is Significant for a software/methods paper because computational burden affects practical adoption, and the missing runtime information is specific enough that evidence is Sufficient. Devil's advocate on correctness is that the paper focuses more on biological utility than benchmarking, so runtime may have been intentionally out of scope, but the omission still stands. Devil's advocate on significance is plausible - some experts will treat runtime as central while others will see it as a secondary usability detail - so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I mark this Correct because the manuscript does use 'eukaryal' (line 59), and the reviewer is fairly noting an unusual word choice for this context. However, this is Not Significant: changing the term would not materially improve the science, methods, or interpretability of the paper. Devil's advocate on correctness is weak because the complaint is simply about usage preference, not a false factual claim. Since this is a minor wording nit that the review could largely do without, I predict correct_not_significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I mark this Correct because the paper makes an evolutionary interpretation about differentiated isoenzyme usage reflecting why isoenzymes were maintained throughout evolution (line 226) without giving a concrete example in the main text. This is Significant because the statement goes beyond reporting model output and would be more convincing with an illustrative biological case; the exact quoted claim is enough for evidence to be Sufficient. Devil's advocate on correctness is that the authors do provide aggregate support such as Figure 4 and Supplementary File 3, so examples are not strictly necessary, but the broader concern about under-explained interpretation still holds. The downgrade argument on significance is weak because supporting this mechanistic claim would meaningfully strengthen the paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I mark this Not Correct because the item is just a narrow implementation question about whether fastFVA was used, rather than a clear criticism of a false or missing claim in the paper. The manuscript already says an FVA module was integrated into GECKO for ecModels, so asking about a particular alternative implementation does not by itself establish an actual deficiency. Devil's advocate is that this could be read as a reproducibility clarification request, but that interpretation is too thin to make the criticism clearly stated and fact-checkable. Because the main point is not a substantive verifiable criticism, I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the paper compares eciML1515 and the ME-model on SSE and proteome predictions without fully contextualizing that the two frameworks optimize different objectives and have different scopes, so the comparison can mislead readers about what 'better' really means. This is Significant, and the quoted passages plus the external ME-model reference give Sufficient evidence to verify the concern. Devil's advocate on correctness is plausible: the discussion later does acknowledge that ME-models provide a much wider range of predictions and uses the comparison only for specific tasks, so a stricter expert could view the criticism as overstated. Because both readings are plausible even though I find the underlying concern valid, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the paper validates the revised matching strategy mainly by showing distributional similarity to BRENDA fungi entries and improved phenotype prediction, which does not directly establish that individual reaction-level kcat assignments are accurate. This is Significant since validation is central to the paper's main methodological claim, and the quoted KS-test passage, growth-error passage, and named external literature make the evidence Sufficient. Devil's advocate on correctness is that reaction-specific ground truth is hard to obtain, so distributional and phenotype-level validation may be a reasonable practical standard, but that does not negate the reviewer's narrower point about what the validation does and does not show. The significance downgrade is weak because clearer validation limits would materially improve the paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper's own text shows that proteomics-constrained models are not uniformly better in every condition and that the evaluation is based narrowly on O2 and CO2 exchange errors, so the claimed benefit is more limited than the framing sometimes suggests. This is Significant and the item points to the exact result section, figure caption, and the later statement that most enzyme-demand predictions do not change much, which is enough for Sufficient evidence. Devil's advocate on correctness is plausible: the paper does not actually claim universal improvement, and '10 out of 11' is still a strong majority, so a skeptical expert could call the reviewer's framing too harsh. Because that prosecution is genuinely plausible even though the broader limitation is real, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper turns proteomics-constrained model outputs into biological claims about high saturation and metabolic robustness without any independent experimental validation of saturation levels or direct justification for the >=0.95 threshold. This is Significant since those biological interpretations are among the paper's headline takeaways, and the quoted abstract/result passages plus the figure-caption threshold make the evidence Sufficient. Devil's advocate on correctness is that a computational paper can reasonably present these as model-based predictions rather than experimentally validated facts, but the reviewer is specifically criticizing the strength of the inference, not denying that the model produced the outputs. The significance downgrade is weak because tempering or better supporting these claims would materially improve the paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Correct because the paper presents flux-variability reductions descriptively through cumulative distributions and summary percentages, without formal statistical treatment or a stronger discussion of how much of the effect comes from enzyme constraints versus the rest of the constraint set. This is Significant because solution-space reduction is a substantive methodological claim, and the quoted figure caption and results passages make the evidence Sufficient. Devil's advocate on correctness is plausible: these are deterministic model outputs, so some experts will argue that confidence intervals or hypothesis tests are not necessary and that matched-condition comparisons already make the point. Because that alternative methodological standard is credible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the code and paper clearly show a broad fuzzy-matching hierarchy that can assign kcat values from any organism, any substrate, or specific activity entries when specific matches are unavailable, and the manuscript does not quantify the uncertainty introduced by those fallbacks. This is Significant since the claimed generality and quality of the ecModels depend directly on parameter assignment quality, and the code comments plus Figure 1 discussion make the evidence Sufficient. Devil's advocate on correctness is plausible: a sympathetic expert could say the reviewer overstates the case by calling the approach 'scientifically unsound,' because the paper frames it as a pragmatic response to sparse kinetic data and adds phylogenetic filtering. Because that stricter reading could reject the wording even while accepting the uncertainty concern, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because both the paper and the cited code show that proteomics constraints may be loosened until a target growth rate is reached, which can hide whether poor feasibility came from kcat values, proteomics measurements, or other modeling assumptions. This is Significant since the paper later uses these proteomics-constrained models for mechanistic interpretation, and the exact code path and quoted text provide Sufficient evidence. Devil's advocate on correctness is that the authors openly acknowledge this relaxation as a practical necessity for noisy absolute proteomics data, so one could view it as calibration rather than a flaw; that defense does not eliminate the core concern that predictive purity is reduced. The significance downgrade is weak because reporting and limiting this relaxation would materially strengthen the paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper places a fitted, simplified GECKO ecModel beside a much broader ME-model on growth-error and proteome-demand plots without fully spelling out that these metrics favor the simpler calibrated framework. This is Significant, and the reviewer provides Sufficient evidence through the exact Figure 3 passages and an external reference on ME-model scope. Devil's advocate on correctness is plausible: the paper does state that the ME-model includes expression processes and later concedes that ME-models provide a wider range of predictions, so an unsympathetic expert could say the comparison is imperfect but not misleading. Because that defense is credible even though the reviewer's concern is real, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper explicitly claims applicability to 'any organism with an available GEM reconstruction' but validates the upgraded workflow only on a small set of relatively well-characterized organisms with comparatively rich kinetic resources. This is Significant since generality is a central selling point of the paper, and the quoted claim plus the listed validation organisms make the evidence Sufficient. Devil's advocate on correctness is that the claim is partly about software architecture rather than demonstrated prediction accuracy, so the authors may mean the toolbox can run on any organism even if performance varies. Even with that charitable reading, the reviewer is right that the empirical support for the broad claim is limited, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the paper explicitly describes replacing the limiting enzyme's kcat with the highest available value in BRENDA for the enzyme class until the model reaches experimental maximum growth, and the provided code operationalizes exactly that maximal-value heuristic. This is Significant since calibration of kcat constraints sits at the heart of the method, and the quoted method passage, code snippet, and comparison to a more conservative pipeline give Sufficient evidence. Devil's advocate on correctness is that this aggressive curation may be a deliberate engineering choice to ensure feasible automated models rather than a hidden error, but that does not negate the reviewer's core point about optimistic bias and overfitting risk. The significance downgrade is weak because the issue can directly shape downstream biological conclusions, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the paper and code both show that proteomics-constrained models may exclude conflicting data or relax measured enzyme bounds to restore growth feasibility, yet the manuscript does not report how often or by how much these interventions occur. This is Significant since the paper uses these models to argue for high saturation and metabolic robustness, and the quoted passages plus code comments provide Sufficient evidence. Devil's advocate on correctness is that the paper openly notes proteomics variability and presents relaxation as a practical accommodation, but that still leaves the audit trail missing for evaluating mechanistic claims. The significance downgrade is weak because transparency about relaxed constraints would materially affect how readers interpret the results, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper emphasizes continuous updates and public repositories but does not pin exact software versions, frozen environments, or archived analysis artifacts for the specific figures and metrics reported in the manuscript. This is Significant for reproducibility, and the quoted methods passages, live-repository dependency list, BRENDA access issue, and provided code-version evidence make the chain Sufficient. Devil's advocate on correctness is that the paper does provide source-code links and a version-controlled workflow, so a generous expert could say it is better than many computational papers, but that defense does not answer the narrower complaint about immutable provenance for published results. The significance downgrade is weak because pinned versions and archived artifacts would substantially improve reproducibility, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

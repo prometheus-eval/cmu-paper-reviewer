@@ -1,0 +1,347 @@
+{
+  "paper_id": 12,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer raises a concrete methodological concern: Figure 2 shows polarisation intensity but no EVPA is plotted, and the authors explicitly note in the methods (what the reviewer calls Appendix D) that absolute EVPA calibration was skipped. This is factually accurate against the paper text, and the reviewer cleanly requests at least an uncalibrated/caveated EVPA plot or a clearer justification — a genuinely constructive improvement. Evidence is sufficient: they point to Figure 2 and the explicit Appendix/Supplementary note. Devil's advocate on correctness: one could argue the paper does mention the uncalibrated EVPA in Supplementary Figure 2, but the reviewer's point about Figure 2 itself (main text figure) still stands, so the criticism holds. Experts would agree this is a Correct, Significant, well-supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that alternative interpretations of the J1 'termination shock' scenario should be discussed. The paper does mention several alternatives (helical motion, re-started jet) in the main text and methods, but the reviewer's specific suggestion (J1 and the core as two standing shocks in the outflow, the question of earlier high-luminosity phases clearing the ISM) is not covered. The main point (more alternative interpretations should be explored) holds and is constructive. Devil's advocate: a strict expert could say the paper does mention alternatives and does caveat its claims; this could push toward 'Marginally Significant' or even 'Not Correct'. The evidence is a logical argument grounded in the paper's claim — sufficient for verification. Experts may disagree on significance due to the partial coverage of alternatives in the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points to specific concrete issues in the appendices: using β⊥ from J2 in equations meant for J1 properties, applying θ~7° to J1, the circularity in the Eq. 13/14 derivation where β_h<β_12/4 under a strong-shock assumption effectively fixes the density contrast. These are accurate technical critiques — the paper indeed uses β⊥,2=2.5c and θ derived from the C-J2 analysis as inputs into the jet-ISM momentum balance centered at J1, and the strong-shock assumption does make the density-contrast derivation partly circular. This is Significant (addressing these would meaningfully clarify the energetics). Evidence is sufficient (specific equations and appendix locations cited). Devil's advocate: one could argue the paper's simplifying assumptions are typical in VLBI AGN modeling; but the reviewer's main point (need to be clearer about assumptions) still holds. Experts would likely agree on all three axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises a precise technical question: in Appendix H (jet power calculations) the paper uses a monochromatic expression (akin to Birzan Eq. 16), but since the source has a radio SED peak, a bolometric-style relation may be more appropriate; an alternative calculation would give different values. The reviewer also suggests using the 4×10^9 M_sun mass from ref 25/27 for comparison. The paper's equations (10)–(11) are monochromatic in form and use the radio luminosity rather than a bolometric integration. The critique is concrete and actionable. Devil's advocate: the paper does discuss both mass estimates (10^9 and 4.4×10^7). But the main technical point about using monochromatic vs bolometric expressions is a specific methodological concern. Experts would likely agree this is Correct, Significant, and Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item refers to 'radio jets to north and south of central AGN', 'magnetic boundary layer (magnetic arch)', 'cluster wind', 'double-skythe morphology', 'N1,N2 and S1,S2'. None of these concepts appear in the paper: the paper describes a single blazar J0906+6930 with a core-jet structure (C, J1, J2) and does not involve a BCG-in-cluster simulation or magnetic boundary layer model. The item is clearly applying criticism meant for a different paper (likely the MRC 0600-399 bent-jets paper). The main factual premise is therefore wrong for this paper. Devil's advocate: no plausible reading makes this item applicable — experts would uniformly mark Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The item refers to 'galaxy B in Figure 1', a 'second smaller radio source to the east of the BCG', 'MRC 0600-399', 'narrow-angled tailed radio source', and 'ram-pressure'. None of these apply to this paper — there is no BCG, no galaxy B, no MRC 0600-399, no NAT radio source in Figure 1, which is the VLBA morphology of J0906+6930. This is clearly a review item mis-targeted from another manuscript. Not Correct. Experts would agree this does not apply to this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer says the radio SED peak was originally published in Romani 2006 (AJ 132, 1959), but the paper cites ref 14 as Zhang et al 2017, which 'largely drew the data from that paper'. Looking at the paper's reference list: ref 14 is actually Romani et al. 2004, ref 15 is Romani 2006, and ref 16 is Zhang 2017. The paper does cite Romani 2006 (ref 15) in the introduction, and cites ref 16 for the SED peak location. The reviewer's numbering (14 = Zhang 2017) doesn't match this paper's references. The main point — that the Romani 2006 origination of the SED peak measurement should be more clearly attributed — is a valid citation/attribution concern, though minor. Correct on substance, Marginally Significant (citation nit), Sufficient. Devil's advocate: given the mismatched reference numbering, a strict expert might mark Not Correct; charitable expert accepts the underlying attribution point. Disagreement on correctness is plausible.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer says 'The Coppejans reference in App. H should be 2016, not 2017'. The paper's ref 5 is Coppejans et al. 2016, MNRAS 463, 3260, and it is cited in the main text. I do not see an explicit 'Coppejans 2017' citation in the current methods Appendix H text. The reviewer's complaint looks to be about an earlier version. Still, if the critique is targeted at a stated 2017 date, it is a minor correction that could still improve the paper if applicable. Correctness is borderline — charitable: paper had this typo; strict: not visible. Marginally Significant typo-level issue either way.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is an overall summary/recommendation paragraph that recaps the reviewer's top concerns (EVPA discussion, nascent-jet energetics clarity). It does not introduce a new, independently verifiable criticism — it just restates what the prior items already said. As a standalone item, it is largely subjective (overall assessment) and does not add new substantive feedback beyond what items 1-4 raised. Mark Correct (the reviewer's assessment is self-consistent and defensible) but Not Significant because the paper would not be improved by keeping this recap — it should be a summary/decision recommendation, not a new review point. Devil's advocate: a strict expert might mark this as Marginally Significant since it does frame priorities. Disagreement on significance is plausible.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes that the paper does not specify the confidence level for its quoted 1σ errors (68% vs 90%), and argues that at 68% the proper motion measurements may only be ~2σ, which would warrant upper limits instead of a detection. The paper states '1σ errors' in Table 1 footnote but does not elaborate on statistical treatment, and the μ(J1) measurement is indeed at ~1.5σ (also pointed out by multiple other reviewers). This is Correct and Significant — specifying confidence levels and re-examining detection significance would materially improve the paper. Evidence is sufficient because the reviewer identifies an exact absence (confidence interval specification) in the paper. Devil's advocate: one could argue '1σ' is standard astronomical convention implying 68%, so the reviewer is pedantic, making this Marginally Significant. Experts may disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer flags that 'positional errors are 10% and 5% of FWHM of the restoring beam for J1 and J2' (in an earlier version 'Appendix C') need further justification. The current methods section actually justifies σ_p via discrepancies between multiple core-model fits (see Supp. Tables 3-5). The specific '10% and 5%' claim may be from an earlier draft, so the exact fact the reviewer cites may not be verbatim in the present paper. However, the broader concern (justification of positional error budget) still has weight because the systematic error dominates for J1. Devil's advocate for correctness: the paper does provide a systematic-error budget, so the reviewer's claim that 'these numbers need further justification' is weakened. Disagreement on correctness is plausible. Significance: if valid, it would improve the paper. Evidence: reviewer points to a specific appendix location.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer's concern that measurement errors are not adequately propagated into derived quantities is a valid, important critique. Multiple downstream quantities (Γ, θ, n_e, L_jet) inherit uncertainties from β_app and δ that the paper does not fully propagate. However, the reviewer does not cite specific quantities or provide examples; the complaint is generic. Correct (main point is true), Significant (proper error propagation would materially strengthen the paper), but Evidence is Requires More because no specific derived quantity is named. Devil's advocate: this is a standard methodological concern and could be seen as Sufficient if one accepts that 'measurements have relatively large uncertainties' is self-verifiable from the paper's own tables. Experts may split on evidence sufficiency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer says 'The bulk Lorentz factor is reported to be >3.3, only an upper limit. While this is consistent with previous estimations... it alone does not rule out a possibility of a powerful jet'. The paper actually quotes Γ=3.6±0.5 (a point measurement with 1σ error, not an upper limit). The reviewer confuses 'upper limit' terminology (Γ>3.3 is a lower limit, if anything), and the paper gives a measured value not a limit. So the factual framing is confused. However, the underlying substantive concern — that a moderate Lorentz factor alone does not establish 'less powerful jet' as a conclusion — is reasonable. Devil's advocate on correctness: the framing error (upper vs lower limit) is significant enough that a strict expert might mark Not Correct; charitable expert accepts the underlying jet-power concern. Disagreement on correctness is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer raises a concrete methodological concern: in Appendix H the spectral index α=0 is assumed between 1.4 and 15 GHz for the jet-power calculation, but the measurements supporting α=0 were for C+J1+J2 (core dominated), while the jet-power calculation applies to the core only (or J1+J2). Given variability differences and propagating shocks that change spectrum shape, this extrapolation assumption needs justification. This is a specific, well-grounded critique — Correct, Significant, Sufficient. Devil's advocate: one might argue a flat spectral index is a reasonable default for the core-plus-nearby-jet at 15 GHz; but the reviewer's point that the assumption shouldn't be applied to different emission components without verification is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out the empirical relations used for jet power (Birzan-like) have large scatter, and this uncertainty should propagate to the jet-power/ISM-density claims. This is the same substantive concern as claude-opus-4-5 Item 4 and gpt-5.2 Item 3. The paper itself acknowledges '±2 in log space' scatter but does not propagate the uncertainty through to the final conclusions. Correct, Significant, Sufficient — the reviewer cites the specific relation and the known scatter. Devil's advocate: the paper does state 'uncertainty on the jet power may be underestimated', so one could argue the authors have acknowledged it; but not propagating through remains a valid issue. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer notes 'n~65 cm^-3' is 'too precise' and that it should be a limit since β_h is only a limit. The current paper reports n_e ≥ 26.6 cm^-3 (already a lower limit with ≥ symbol) and ρ_ISM/ρ_jet > 9 (not 11). The reviewer's specific numbers (65 and >11) do not match the current paper. The broader concern about precision is partially addressed since the paper already uses ≥. The reviewer's underlying point — that these should be consistent limits — is not new information against the current paper. This may reflect an earlier version. Devil's advocate: the underlying call to express these as limits still applies if text elsewhere quotes '65' or '11' without the ≥ symbol. Hard to verify. Disagreement on correctness is plausible.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer's quote is 'In the highest-resolution images, a sharp (>90 degree) jet bending is seen' and says Zhang et al. 2017 previously reported this bending and needs recognition. The current paper actually says 'In the highest-resolution 2005 image^16 and the new 2017 image, a sharp (> 90°) jet bending is seen' — i.e., ref 16 (Zhang 2017) IS cited exactly where the reviewer asks for recognition. So the reviewer's complaint is already addressed in the current version. Not Correct. Devil's advocate: maybe the reviewer wants more than a citation (e.g., more discussion of what Zhang 2017 showed); then the concern has some residual validity. Disagreement on correctness is plausible.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer challenges a statement 'a prominent X-ray emission (with a strong contribution from the disk)' — but this exact statement does not appear in the current paper. The current paper only says 'A prominent disk emission is inferred from the modelling of the spectral energy distribution' (no X-ray claim). So the critique is against text that does not appear in the paper. Not Correct for the current version. Devil's advocate: if the reviewer is quoting from a prior version, their underlying physics point (X-rays in high-z blazars are SSC not disk) is still standard textbook knowledge; but since the claim isn't in the current paper, the criticism doesn't apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer observes that contours in Figure 1-e and Figure 2 are slightly different, although both should come from the same BZ071 dataset. The paper explicitly states 'The contours represent Stokes I intensity, same as Figure 1 panel e'. If they differ, that's a small internal inconsistency in presentation. Inspecting the images is needed to verify; without clearly inspecting, I take the reviewer's observation on trust — astronomers reading two overlaid maps can see contour discrepancies. Correct (observation), Marginally Significant (minor presentation issue that doesn't affect scientific claims but would be nice to fix), Sufficient. Devil's advocate: if the discrepancy reflects different restoring beams (Fig 2 was restored at 2017 beam), that's a legitimate scientific reason; then 'inconsistency' may be explained already. Experts may disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer cannot reproduce S_15GHz=21 mJy for J1+J2 from the table. Using Table 1: 2017 J1+J2 = 20.4+1.0=21.4 mJy; 2018: 18.0+1.4=19.4 mJy. So ~20–21.4 mJy range — the '21' referenced is approximately reproducible. The reviewer's 'difference is only tiny' acknowledgment confirms this is minor. The reviewer's underlying request is that the authors state explicitly whether J1+J2 is used. This is a minor clarity/reproducibility ask. Correct (the paper doesn't explicitly state which components are summed), Marginally Significant (clarity improvement), Sufficient. Devil's advocate: a reader can figure it out from context; a strict expert might call this Not Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer notes in Appendix G above equation (8) the text says 'Employing equation (7) which reduces to...' but 'Equation (7) does not seem to reduce to (8)'. Looking at the paper, equation (8) (μ_max ≤ H0 Γ β g(a)^-1) is derived using equations (5), (6), and (7) together, not from (7) alone. The reviewer's observation is technically correct — the wording 'equation (7) reduces to (8)' is imprecise. Correct, Marginally Significant (small wording issue), Sufficient. Devil's advocate: a charitable reader interprets 'using equation 7' broadly; a strict expert wants correct derivation citation. Experts would likely agree this is Correct-Marginal-Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests mentioning Saxena et al. 2018 (z=5.72 jetted AGN/radio galaxy). The paper already cites this work as ref 28: 'the recently discovered radio galaxy TGSS J1530+1049 at z = 5.72 also has a compact structure resembling a radio galaxy in an early evolutionary phase^28'. So the paper does mention this other jetted AGN. The reviewer acknowledges 'the authors statements are formally correct' and asks for 'a few words about this other jetted AGN' — which the paper already provides. Not Correct in the sense that the broader concern (lack of mention) is already addressed. Devil's advocate: the reviewer might want more discussion than ref 28 offers; but the paper's treatment is reasonable for a brief mention, which is what the reviewer asked for. Experts would likely mark Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer quotes 'As jetted quasars seem to harbour heavier black holes than non jetted ones, high-redshift blazars are probes...' and calls this 'line of reasoning inverted'. This exact phrasing is not in the current paper. The current paper says 'High-redshift blazars are useful probes of the early Universe owing to their Doppler-beamed emission which makes them amongst the brightest sources. As their jet power scales with the mass of the SMBH, blazars shed light on the cosmic evolution of massive black holes' — exactly what the reviewer argues for. So the critique applies to an earlier draft that has been corrected. Not Correct for the current paper. Devil's advocate: charitable reading could treat the reviewer's concern as historical; but for the current text, the issue is resolved.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer says 'the radio loudness is a meaningless parameter. No need to cite it.' — referring to [page 1, row 28-29]. In the current paper's introduction, I do not find a 'radio loudness' citation on page 1. The paper mentions 'radio-loud quasar', 'radio-loud AGN' in later sections but not a radio-loudness parameter discussion. Likely referring to an earlier draft. Not Correct for the current version. Devil's advocate: the reviewer's domain opinion that radio loudness is meaningless is itself a debatable expert claim — not all astronomers agree. So even if present, the critique is borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests also calculating δ from radio variability using Liodakis et al. 2018 (δ=8.91), yielding Γ=4.8 and θ=3°. The paper DOES already perform a variability-based δ calculation (δ_var = 4.8 derived from Gaussian fit to the flare). The paper's δ_var=4.8 is much lower than Liodakis's δ=8.91, which the reviewer would want compared. The paper does not specifically reference Liodakis 2018, but it does address variability-based δ. The reviewer's suggestion to use Liodakis 2018 as a benchmark is a reasonable addition; the critique that this check is missing is partially addressed. Correct in spirit (comparison with Liodakis would add value), Significant (useful comparison), Sufficient (specific paper named). Devil's advocate: the paper's own δ_var calculation partially covers this, so the criticism is weakened — a strict expert may mark Not Correct because the paper does the variability analysis.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes using Birzan et al. 2008 relations (MHz extended emission, cavity-based kinetic power, Myr-timescale) applied to a single high-frequency component; suggests Foschini 2014 relations instead. Looking at paper ref 59: Foschini 2014 is actually cited as the source of the empirical relations (Eqs 10-11). So the paper already uses Foschini, not Birzan. The reviewer appears to have reviewed an earlier draft using Birzan. The concern about applying extended-emission relations to high-frequency core data is more general and still has some validity since Foschini relations were also derived from large-scale data. Devil's advocate: the substantive physics critique (high-freq vs low-freq extrapolation) can still apply; charitable expert grants partial correctness. Disagreement on correctness is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer suggests recalculating BH mass using Lyα with Pian 2005 relations (accounting for Doppler boosting), resulting in ~7×10^7 M_sun. The current paper ALREADY does this: it uses Pian 2005 (ref 49) for the BLR radius scaling and derives M_BH = 4.4×10^7 M_sun, explicitly noting this is a revision to account for Doppler beaming and is consistent with young-AGN/HFP expectations. The paper even refs Berton 2016 (ref 48). So the reviewer's suggestion is already implemented. Not Correct for the current paper. Devil's advocate: minor differences in specific values (4.4×10^7 vs 7×10^7) remain, but the reviewer's methodological suggestion is already adopted. The critique no longer applies substantively.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the paper interprets the EVPA distribution as consistent with a shock-compressed magnetic field model despite explicitly not performing absolute EVPA calibration. The paper itself states 'specific orientation of the EVPA cannot be treated physically due to the absence of its calibration' then in the very next sentence claims consistency with a shock-compressed model. This internal contradiction is accurately identified. Correct, Significant (this is a central methodological/interpretational issue), Sufficient (reviewer cites exact quotes from both the statement of limitation and the conflicting interpretation, plus an external example of standard practice). Devil's advocate: one could argue 'orderly distribution' (coherence) itself is a field feature not requiring absolute EVPA; a charitable expert could accept the paper's weaker claim. But multiple other reviewers raised the same concern, reinforcing this is a real issue. Experts would likely agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the two Doppler factor estimates (δ=6.1 from T_B and δ_var=4.8 from variability) differ by ~21-27% and the paper only uses δ=6.1 for derived parameters, calling the discrepancy 'consistent but marginally lower' without quantitative justification. The reviewer's arithmetic is correct: 6.1-4.8=1.3, which exceeds ±0.8 formal error. The paper does dismiss it as consistent. Correct, Significant (would affect Γ and θ estimates and thus the 'less powerful jet' interpretation), Sufficient (exact quotes and explicit arithmetic). Devil's advocate: the two methods probe different timescales and aren't expected to match exactly; a strict expert may see '27% difference' as within astrophysical scatter (Marginally Significant). Experts may disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly notes μ(J1)=-0.006±0.004 has significance ~1.5σ (value/error = 1.5), consistent with zero within errors, yet is used as key evidence for 'nearly stationary' and jet-ISM interaction. The paper uses this marginal measurement to derive physical parameters. This is straightforwardly Correct, Significant (affects a central claim), and Sufficient (exact numbers quoted, MOJAVE ref for standard practice). Devil's advocate: the paper does acknowledge J2 is >3σ and J1 is dominated by systematic error; a strict expert might argue the paper's 'nearly stationary' phrasing is acceptable caveat. But using 1.5σ as positive evidence for jet-ISM interaction is still overreach. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out the ISM density estimate (n_e≥26.6 cm^-3) depends on jet-luminosity empirical scaling relations with ±2 dex uncertainties in the intercept (factor ~100), which is not propagated to the ISM constraint. The paper does quote the ±2 scatter in Eq. 10-11 and acknowledges the scatter in a single sentence ('uncertainty on the jet power may then be underestimated') but does not carry this through to n_e. Correct, Significant (this is central to the paper's 'dense medium' claim), Sufficient (exact quotes of the empirical relations and the acknowledgment). Devil's advocate: the paper presents n_e as a lower bound (≥), which partially hedges against the uncertainty; a strict expert might argue the paper adequately caveats. But a factor-100 scatter in L_jet should translate into large changes in n_e, which isn't discussed. Experts would agree this is Correct, Significant, Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that Supplementary Table 5 reports μ(R)(J1)=-0.006±0.004, but the table's own footnote defines μ(R) as 'the square root of the sum of squares of μ(RA) and μ(Dec)', which is by definition non-negative. So a negative value in that column contradicts the stated definition. This is an internal inconsistency in the paper. The paper likely intended μ(R) as a signed radial-separation rate, and the footnote is wrong about the definition. Correct, Significant (mathematical definition issue in a key table; contradicts a principal quantitative claim), Sufficient (exact table entry and footnote quoted). Devil's advocate: a charitable expert recognizes the sign convention is 'signed separation rate' and considers the footnote wording loose; a strict expert insists this is a real internal contradiction requiring correction. Either way, a fix is trivial and useful. Experts may disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Same EVPA criticism as claude-opus-4-5 Item 1 and gpt-5.2 Item 4. Reviewer correctly notes that without absolute EVPA calibration, interpreting the 'orderly distribution' as consistent with a shock-compressed magnetic field model is unsupported, since the angular relation between EVPA and jet axis is undefined. Correct, Significant, Sufficient (exact quote and standard practice reference). Devil's advocate: the reviewer says 'baseless' which is strong — paper's claim is 'consistent with' not 'proves'; a charitable expert may soften but not overturn this. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Same point as claude-opus-4-5 Item 3 and part of gpt-5.2 Item 2: μ(J1) is only 1.5σ, consistent with zero, and should yield an upper limit not a 'measurement' used to derive Γ. The reviewer is correct. The paper does use the 'low proper motion' qualitatively to support the 'less powerful jet' narrative. Correct, Significant, Sufficient (specific numbers, MOJAVE reference for standard threshold). Devil's advocate: the paper computes Γ from the J2 measurement (which is >3σ), not J1; so 'deriving Γ from J1 motion' is a mis-attribution. However, the broader point about overinterpretation of J1 still holds. Experts may disagree on correctness (some may find the nuance about which motion drives Γ significant enough to mark Not Correct).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the 'transition from accretion radiative to jet mechanical power' conclusion is speculative based on a single object and doesn't rule out alternatives (radio-quiet/intermediate state, misaligned jet). The paper does indeed promote this feedback-mode transition scenario based on a single source. This is a legitimate critique about scope/generalization. The paper mentions some alternatives in Methods but still foregrounds the transition interpretation in the abstract. Correct, Significant (concerns a major conclusion), Sufficient (exact quote from abstract). Devil's advocate: the paper does acknowledge alternatives 'could not be fully ruled out' in the abstract and discusses them in methods; a charitable expert may consider the caveat adequate. Disagreement on significance is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies an internal numerical inconsistency: the paper quotes jet/Eddington~0.004 in the main text but in Methods quotes '~0.02 L_Edd'. The reviewer's own arithmetic: with m_g=4.4×10^-2 and L_Edd=1.3×10^47 m_g, L_Edd≈5.7×10^45 erg/s. Then 2.8×10^46 / 5.7×10^45 ≈ 4.9 (super-Eddington), 2.2×10^43 / 5.7×10^45 ≈ 3.9×10^-3 (≈0.004). Neither matches 0.02. The reviewer's math and critique are verifiable and correct. Correct, Significant (internal inconsistency in a central quantitative claim), Sufficient (detailed arithmetic and exact quotes). Devil's advocate: one could argue '0.02' is an approximation using a different M_BH (e.g., ~10^9 M_sun gives Ljet/L_Edd~2e-4; or perhaps an unlabeled variant of mg=1 was used). But the inconsistency is real and not explained in the paper. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the jet kinematics (including μ(J1)<0 and derived Γ, θ) are not robust because: (i) J1 motion is only ~1.5σ; (ii) the core is acknowledged to be blended/variable, making it an unstable reference point; (iii) J2 separation changes appreciably between 2017 and 2018 epochs. These are all verifiable claims quoted from the paper's own text and tables. The reviewer also cites MOJAVE standard practice and VLBI self-calibration literature. Correct, Significant (challenges the robustness of the core kinematic results), Sufficient (multiple quotes and external standards). Devil's advocate: the paper's systematic error treatment addresses some of these concerns, and J2's motion is >3σ. A charitable expert could say the paper adequately handles systematics. But the overall argument that sign of μ(J1) is not physically robust is strong. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Same ISM-density uncertainty-propagation concern as claude-opus-4-5 Item 4 and Human_2 Item 6. The reviewer extensively quotes the paper's own chain of assumptions (momentum balance, strong-shock assumption, opening-angle choice, jet-power with ±2 dex scatter) and notes that two L_jet values differ by three orders of magnitude but are both used in downstream calculations. Correct, Significant (robustness of the central 'dense medium' claim), Sufficient (extensive quoting and internal logic). Devil's advocate: the paper presents n_e as a lower bound and acknowledges scatter; a very charitable expert may consider this sufficient. But the specific circularity (strong-shock assumption forces density contrast >9) is a valid methodological critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Same EVPA critique as claude-opus-4-5 Item 1 and gemini-3.0-pro-preview Item 2. The reviewer clearly identifies the logical contradiction: paper acknowledges EVPA is not physically interpretable due to missing calibration, but then interprets the EVPA pattern as supporting a shock-compressed field model. External references (NRAO AIPS polarimetry memo) further support the critique. Correct, Significant (the polarisation detection and its interpretation is a headline result), Sufficient (multiple direct quotes and external standards). Devil's advocate: the paper's final claim is 'consistent with' not 'proves', and 'orderly' distribution could be interpreted as a structural coherence argument independent of absolute angle. A charitable expert may partially accept the paper's weaker claim; however the logical contradiction remains. Experts would likely agree this is Correct, Significant, Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -176,7 +176,7 @@ def load_review_items(
 
     Returns list of item dicts, or empty list if nothing found.
     """
-    review_dir = paper_dir / 'review'
+    review_dir = paper_dir / 'reviews'
     if not review_dir.exists():
         return []
 

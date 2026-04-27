@@ -1,0 +1,349 @@
+{
+  "paper_id": 15,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct because the paper gives the 19-31 h circadian band and the 36 h rolling window with almost no rationale beyond saying the window is proportional to the rhythm period. I judge it Significant and the evidence is Sufficient because those choices affect the core methods and the reviewer points to the exact values. A defense is these may be standard design choices, but the circadian label and seizure-independence analysis still rest on them, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the recordings were made under entrained real-world conditions, so a strict chronobiology reader can fairly object that the paper measures day-linked rhythms rather than endogenous circadian rhythms. I judge it Significant and the evidence is Sufficient because terminology here shapes the interpretation of the central claim and the reviewer explains the convention clearly. The prosecution is also plausible: many human EEG papers use circadian more loosely for approximately 24 h modulation, so another expert could see the complaint as overly strict. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the paper first says it sees no evidence that disrupted rhythms cause seizures in this cohort and later discusses a vicious-circle model in a way that can sound inconsistent without clearer scoping. I judge it Significant and the evidence is Sufficient because this concerns causal interpretation in the discussion and the reviewer points to the relevant passages. A defense is one can argue the two statements are compatible because one is cohort-specific and the other summarizes prior theory, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct because SOZ or resected tissue is only a proxy for pathology, so the label pathological tissue can read broader than the actual operational definition. I judge it Significant and the evidence is Sufficient because this wording affects the title and interpretation of the main result, and the reviewer ties it to the paper's proxy definition. A different expert could reasonably debate the importance because the authors do define the proxy and note that pathology may be more widespread, so another expert could treat this as mostly a terminology preference. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the supplement does contain across-band and pathology-type context that the main paper mentions only lightly, so a request to surface some of that context in the main text is broadly fair. I judge it Marginally Significant and the evidence is Requires More because the likely benefit is mainly presentational, and the reviewer does not point to exact panels and also mentions age and sex analyses that are not shown in the provided supplement. The prosecution is also plausible: an expert could focus on those unsupported age and sex examples and call the whole criticism factually off target, while a charitable reader would salvage the broader presentational concern. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the paper gives only basic cohort summary statistics and does not report medication status, detailed epilepsy phenotype, or careful limits on generalizing beyond drug-refractory focal epilepsy. I judge it Significant and the evidence is Sufficient because those missing descriptors matter for confounding and generalizability, and the reviewer names them concretely. A defense is the study focuses on tissue-level differences rather than subtype stratification, but better cohort characterization would still help, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the paper analyzes peri-ictal versus inter-ictal periods and seizure load, but it does not test whether seizures themselves show circadian structure or whether post-ictal periods behave differently. I judge it Significant and the evidence is Sufficient because those absent analyses bear directly on a headline claim about seizure independence. A defense is one could call them extensions rather than requirements, but they would still strengthen the seizure-related interpretation, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this item Not Correct because the paper already performs predictive discrimination analyses by repeatedly computing AUCs for using rhythm power to distinguish SOZ or pathological tissue from other tissue. Significance and evidence are therefore null on my final labels. A charitable expert could still argue the reviewer may have meant a stronger clinically deployable biomarker analysis such as out-of-sample or cross-patient prediction. Because that alternative reading is plausible, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This item is Correct because the reviewer is just making a tiny tense-choice style suggestion in the introduction. It is Not Significant because changing are reported to have been reported would not materially improve the paper, so evidence is null by cascade. A counterargument is the original wording is already grammatically fine, but stylistic micro-edits like this are still understandable preferences, but that does not make the item more important. I therefore predict correct_not_significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is Correct because the design lacks healthy controls and only compares relatively more and less pathological tissue within epilepsy patients, so invoking healthy functioning of brain tissue overreaches. I judge it Significant and the evidence is Sufficient because this goes to the discussion's interpretation and the reviewer quotes the exact sentence. A defense is the authors do hedge with initial evidence, but the wording still goes beyond what the data directly show, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This item is Correct because the sentence about no correlation between resection of diminished rhythms and later surgical outcome is awkward enough that a reader can reasonably ask for rephrasing. I judge it Significant and the evidence is Sufficient because it appears in the causal-interpretation part of the discussion and the reviewer identifies the exact sentence. A different expert could reasonably debate the importance because another expert could see this as only a minor wording edit rather than an important issue. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this item Not Correct because the item misdescribes the paper's AUC as an area-under-the-waveform measure of curve shape, while the paper actually uses ROC AUC to compare pathological versus non-pathological tissue based on rhythm power. Significance and evidence are therefore null on my final labels. A charitable expert could still argue a charitable expert could rescue the narrower point that the paper gives limited rationale for choosing AUC over amplitude or phase oriented chronobiology analyses. Because that alternative reading is plausible, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the paper does not characterize seizure phenotype or entrainment markers in depth, does not justify the broad 19-31 h circadian band very well, and leaves the recording context relative to surgery only partly implicit. I judge it Significant and the evidence is Sufficient because these details matter for interpreting what the measured rhythms mean, and the reviewer points to specific missing metadata and the unusual period range. A defense is the primary comparison is within-patient across ROIs rather than across epilepsy subtypes, but that does not remove the need for context, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the proposed within-subject seizure-stratified and severity-related checks are absent and would genuinely strengthen the claims about persistence and seizure independence. I judge it Significant and the evidence is Sufficient because the reviewer clearly states what extra consistency analyses are missing. A defense is the paper already includes peri-ictal versus inter-ictal and seizure-load checks, but the proposed analyses would still add confirmation, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the introduction could state the paper's hypothesis more explicitly and sharpen how the prior EEG-rhythm literature motivates the present study. I judge it Significant and the evidence is Requires More because this is partly a framing issue, and the reviewer does not name specific missing papers or pinpoint a narrower passage. A different expert could reasonably debate the importance because another expert could treat this as presentation-level framing rather than a substantive problem. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Correct because Figure 1a visibly shows attenuated amplitudes near the beginning and end of the plotted week, so asking about edge effects or time-varying recording quality is a fair verification request. I judge it Significant and the evidence is Sufficient because the reviewer points to a specific visual pattern that can be inspected directly. A different expert could reasonably debate the importance because the figure is only a single illustrative example, so another expert could see the issue as less important to the cohort-level claims. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct because the paper reports many rhythm-by-band p-values in Supplementary Table S2.1 and many mixed-effects results in Table S2.2 without any stated multiple-comparison correction. I judge it Significant and the evidence is Sufficient because the reviewer names the relevant tables, counts the test family, and ties the point to explicit p-value claims. A defense is the tests are correlated and the effects are broad, but that still does not remove the need to state a multiplicity strategy, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the study compares SOZ and non-SOZ regions only within epilepsy patients, so it cannot by itself establish how either class relates to truly healthy tissue. I judge it Significant and the evidence is Sufficient because the reviewer cites the SOZ proxy, the authors' own limitation about broader pathology, and the call for normative maps. A defense is the paper mostly claims relatively diminished rhythms in more pathological tissue rather than a full healthy-control comparison, but the stronger reading is still invited, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the paper acknowledges medication changes, implantation, and epilepsy-monitoring-unit conditions as possible rhythm disruptors yet does not model them. I judge it Significant and the evidence is Sufficient because the reviewer quotes the limitation directly and links it to known circadian and EEG effects of ASMs and hospital environments. The prosecution is also plausible: these exposures are largely shared within each patient, so another expert could doubt that they truly confound the SOZ versus non-SOZ contrast rather than globally perturb rhythms. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the main reported AUCs are statistically above 0.5 but still modest in size, so the paper would benefit from explicitly discussing that discrimination is not strong for every patient. I judge it Significant and the evidence is Sufficient because the reviewer ties this to the reported median AUC of 0.62 and the 66 percent of subjects with AUC above 0.5. A defense is the study is making a biological association claim rather than proposing a clinical classifier, but modest effect size still matters, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct because the paper does not report or control anti-seizure medication status even though it later acknowledges medication changes as a possible source of rhythm disruption. I judge it Significant and the evidence is Sufficient because the reviewer names the missing covariate and links it to known EEG and circadian effects of ASMs. The prosecution is also plausible: ASM exposure is largely shared within each patient, so whether it truly confounds the SOZ versus non-SOZ contrast depends on the unproven claim that tissue classes respond differently to medication. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the paper does not disentangle endogenous clock dysfunction from sleep-wake or sleep-architecture related drivers of the approximately 24-hour delta modulation it labels circadian. I judge it Significant and the evidence is Sufficient because the reviewer cites the paper's own admission that sleep was not explicitly investigated and ties delta power to sleep physiology. A defense is the authors mostly frame the result as chronobiological modulation rather than a specific mechanistic clock claim, but the title and abstract still make the distinction matter, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the cohort includes recordings as short as two days, which gives very few circadian cycles and makes long-period filtering more vulnerable to noise and boundary effects. I judge it Significant and the evidence is Sufficient because the reviewer points to the explicit 2-21 day range and cites chronobiology norms for longer monitoring. The prosecution is also plausible: the paper is not estimating free-running phase with standard cosinor methods, and its within-patient SOZ versus non-SOZ comparison may still be informative even with short recordings. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because non-SOZ tissue inside a refractory focal epilepsy brain is not equivalent to healthy control tissue, so the pathological versus non-pathological framing needs caution. I judge it Significant and the evidence is Sufficient because the reviewer points to the SOZ proxy definition and to the broader-network nature of epilepsy. A defense is the authors explicitly call SOZ a proxy and also test resected tissue, but that does not erase the conceptual limitation, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Correct because the code clearly filters imputed ROI time series with forward-backward band-pass filters, so imputed values can in principle leak into nearby non-missing samples and create edge or ringing artifacts. I judge it Significant and the evidence is Requires More because the reviewer shows the risky pipeline but does not quantify missingness, window lengths, or the size of any downstream distortion. A charitable expert could find the current support enough, while a stricter one could ask for more because a charitable expert may find the code citations enough, whereas a stricter expert would want an empirical robustness check before accepting the claimed impact. I therefore predict correct_significant_disagree_on_evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct because the main text says imputed data were not used for subsequent analysis, while the supplement and code show stochastic imputation with added Gaussian noise before forward-backward filtering of the ROI time series. I judge it Significant and the evidence is Sufficient because the reviewer cross-checks the main text, supplement, and exact code paths implementing the pipeline. A defense is masked samples may reduce the practical impact, but the contradictory documentation and stochastic filtering pipeline are still hard to dismiss, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the paper text never specifies the one-sample test used to claim AUC distributions exceed 0.5, and it presents a large battery of rhythm-by-band p-values without any stated multiple-comparison control. I judge it Significant and the evidence is Sufficient because the reviewer points to the exact results sentences and Supplementary Table S2.1 where the under-specified testing appears. A defense is the released code suggests a Wilcoxon-based implementation and the effects are broad, but publication-level reporting still requires the manuscript to explain the test and multiplicity strategy, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the seizure-independence analysis is under-documented: Figure 4 is a headline result, yet the released README does not describe a reproduction path for it, and the paper gives only a terse paired-t-test statement for rolling-window AUC comparisons. I judge it Significant and the evidence is Requires More because the reproducibility complaint is solid, but the temporal-dependence criticism depends on details of how the paired t-test was actually applied. The prosecution is also plausible: another expert could accept the reproducibility concern while resisting the stronger claim that the statistical inference is invalid. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the manuscript says the region-controlled inference uses likelihood-ratio tests, the supplement presents Wald z-statistics and P>|z| values, and the released code computes the LRT p-value with chi-square df=2 even though only one pathology term appears to be added. I judge it Significant and the evidence is Sufficient because the reviewer triangulates the main text, Supplementary Table S2.2, and the exact code lines in P4.mixedeffects.py. A defense is there might have been an undocumented rationale for the df choice or for reporting both Wald and LRT results, but the paper never explains it, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "review_claude-opus-4-7",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct because the paper runs a large family of AUC and mixed-effects significance tests and reports raw p-values, including the flagship circadian-delta result, without any stated multiple-comparison correction. I judge it Significant and the evidence is Sufficient because the reviewer gives exact result sentences, counts the test family, and even notes that the flagship p value would not survive Bonferroni correction. A defense is the tests are related and a less conservative correction could be chosen, but the paper still needs to disclose and justify some multiplicity strategy, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the mixed-effects likelihood-ratio test is coded with chi-square df equals 2 even though the full and reduced models differ only by the pathology indicator. I judge it Significant and the evidence is Sufficient because the reviewer aligns the methods text with the exact code line and the standard fixed-effect LRT rule. A defense is one could debate whether the paper relies more on Wald tests than on the LRT, but the stated LRT implementation is still wrong or at least inconsistently documented, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the paper does not really rule out the possibility that known SOZ spectral abnormalities, interictal spikes, or the sum-to-one constraint on relative band power could mechanically shrink the temporal fluctuation metric it interprets as diminished rhythms. I judge it Significant and the evidence is Requires More because the reviewer points to the relative-power normalization and to the limited scope of Supplementary S4, which only tests total raw signal power. The prosecution is also plausible: another expert could say this confound story is plausible but not demonstrated strongly enough to undercut the paper's main interpretation on its own. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the paper's directional wording about diminished rhythms is stronger than what a purely within-patient SOZ versus non-SOZ comparison can support without a healthy normative reference. I judge it Significant and the evidence is Sufficient because the reviewer quotes the directional claim and the authors' own statement that a normative map would be needed to judge abnormality. A defense is the authors mainly mean weaker rhythms relative to the other sampled regions, but the current abstract and discussion wording still invites the stronger interpretation, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Correct because the flagship circadian-delta effect is modest and heterogeneous across subjects, yet the abstract presents it as a broad population-level diminished rhythm without conveying that nuance. I judge it Significant and the evidence is Sufficient because the reviewer ties the point to the reported median AUC of 0.62, the 66 percent above 0.5, and the exact sign-test calculation for 25 of 38 subjects. A defense is the reported Wilcoxon result is still statistically significant, but the abstract should communicate the effect size and heterogeneity more clearly, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "review_gemini-3.1-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this item Not Correct because the criticism imports an aperiodic 1/f normalization problem from frequency-domain power-spectrum analysis into a very different object, namely low-frequency temporal fluctuations of already log-transformed relative band-power time series over days. Significance and evidence are therefore null on my final labels. A charitable expert could still argue a charitable expert could still salvage the narrower concern that broad temporal variance can be mistaken for a specific biological rhythm when the paper relies mainly on band-pass-filtered power. Because that alternative reading is plausible, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because Supplementary S4 sums signal power across time and bands, which speaks to overall magnitude but does not directly test whether differences in temporal variance are driving the rhythm-power results. I judge it Significant and the evidence is Sufficient because the reviewer points to the exact S4 computation and to the distinction between mean level and fluctuation amplitude. A defense is the authors only claimed to rule out a weaker overall EEG signal, not every possible variance confound, but the control is still narrower than the prose suggests, but it does not overturn the concern. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct because the white-noise imputation plus forward-backward band-pass filtering can plausibly create transient artifacts near missing blocks and thereby contaminate adjacent valid segments. I judge it Significant and the evidence is Requires More because the reviewer cites the imputation rule and the filtering call, but the claimed magnitude of the effect on the real dataset depends on missingness patterns that are not shown in the paper. A charitable expert could find the current support enough, while a stricter one could ask for more because a charitable expert could accept the signal-processing logic as enough, while a stricter one would want direct evidence that SOZ regions have more affected gaps or that the artifact materially changes the AUCs. I therefore predict correct_significant_disagree_on_evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this item Not Correct because the reviewer asserts a mixed-model assumption failure solely from the skewness of the dependent variable, but linear mixed models require scrutiny of residuals rather than automatic log transformation of any positive outcome, and the paper's signal already originates from log-transformed band-power features. Significance and evidence are therefore null on my final labels. A charitable expert could still argue a charitable expert could still argue that residual diagnostics or a transformed sensitivity analysis would be useful, even if the current criticism overstates the assumption violation. Because that alternative reading is plausible, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

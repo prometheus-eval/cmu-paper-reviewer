@@ -1,0 +1,246 @@
+{
+  "paper_id": 27,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer challenges the abstract's language of LoWS being 'activated in epilepsy' when the paper also claims LoWS are a physiologic phenomenon. Verifying: the paper does state LoWS occur in Parkinson's patients too (lower rate) and never compares to truly healthy controls, yet the abstract uses 'activated' language suggesting upregulation. The concern is valid — the paper cannot establish activation vs. baseline healthy. Devil's advocate on correctness: the paper does show higher rate/SNR in epilepsy vs Parkinson's, which could be charitably read as 'activation' — so borderline. On significance, this is a central conceptual issue affecting the abstract's core claim, clearly Significant. Evidence is brief but pins the exact phrase in the abstract. Expert disagreement likely on correctness given the charitable reading.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that rarity of LoWS is a necessary consequence of using a 90th-percentile amplitude threshold, not a finding. Verifying against the paper: 'only the remaining candidate slow waves whose amplitude exceeded the 90th percentile were retained' — yes, rarity is definitionally constrained by this threshold. The methodological critique is correct and insightful. Devil's advocate: one could argue that the paper's rarity claim is about detection rate relative to sleep rates reported in the literature using similar thresholding — partially addresses the concern but the broader point holds. Significant — affects framing of a core result. Evidence specific enough (identifies the thresholding logic).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer suggests limiting conclusions to the temporal lobe and notes LoWS are rare across all stages by construction in the MNI dataset. The paper does extend claims beyond temporal lobe somewhat (it also discusses amygdala, neocortex in Extended Data), and the thresholding concern from item 2 recurs here. The criticism relates to generalization scope. Devil's advocate: the paper's main claims are already focused on temporal lobe/hippocampus. Significance is moderate — scope clarification is helpful. Evidence is brief; specifying the MNI dataset is fine but the reasoning chain is slightly hand-wavy. Likely expert disagreement on significance/evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks about the high-pass (acquisition) filter. Checking the paper: the Data acquisition section reports sampling rates but does not specify the acquisition hardware high-pass filter; the 0.5 Hz slow-wave detection filter is a separate analysis filter. The concern that a too-high hardware high-pass could interfere with slow-wave detection is legitimate. Correct and methodologically relevant. Devil's advocate: one could argue the analysis filter dominates so hardware filter is secondary. Significant for reproducibility/methods transparency. Evidence: the reviewer points to an absence, which is verifiable by a meta-reviewer.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the paper does not explain how wakefulness was assessed (no direct polysomnography or EEG-based vigilance staging). The paper only says patients were 'performing an associative memory task'. The concern is valid — wake assessment is critical given LoWS are supposedly wake-specific. Devil's advocate: performing a task is implicitly evidence of wakefulness, and the Supplementary may contain spectral controls (referenced p=0.07 suggests prior discussion), but absence of direct vigilance staging remains a real concern. Significant for methodology. Evidence points to absence in the paper plus the specific p=0.07 reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks where the electrode reference scheme is described. Searching the paper I could not find an explicit statement of the referencing (bipolar, common average, etc.). For intracranial EEG, the reference choice critically affects slow-wave amplitude/morphology. Correct — this information is missing. Devil's advocate: it may be in the supplementary (which I cannot access), but the reviewer's claim that it's missing from 'the section called Choice of the reference' suggests they checked. Significant for reproducibility. Evidence is brief but specific (points to a specific section).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer questions the purpose of the 1-second refractory period after IED detection if the visual override then catches missed spikes anyway. Looking at the code comment: 'after each variable, all variables following in the refractory_ms period will be deleted - not described in Gelinas et al. In practice, the visual confirmation overwrites this.' The reviewer's point that the refractory period may be meaningless given visual override is directly supported by the code comment. Correct. Devil's advocate: the refractory period may serve a purpose before visual confirmation. Significant for methodological clarity. Evidence is brief but reasoning is clear.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer notes that lack of IED-LoWS correlation only shows majority of LoWS are not IEDs, not that none are. This is a logically correct caveat — the statistical tests in the paper indeed bound the overall pattern but do not exclude a subpopulation of mislabeled events. Correct. Devil's advocate: the paper has 8 separate verification steps, and requiring acknowledgment of this residual uncertainty is relatively minor. Significance is borderline between Marginally Significant and Significant. Evidence is brief and logical.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer suggests a control: random 'fake' LoWS at the same average rate to test whether slope/amplitude changes are artefacts of passing time. This is a concrete, methodologically valuable suggestion that would strengthen the adaptation claim. Correct and constructive. Devil's advocate: the paper uses mixed models that implicitly control for some time trends, but a surrogate/null LoWS control would indeed strengthen causal claims. Significant. Evidence is the logical derivation from stated premises.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer questions whether the small magnitude of LoWS change (per minute) has any practical functional effect on IEDs. The paper argues the rate of change is more than double sleep SW, but doesn't quantify functional impact. Correct concern about effect size interpretation. Devil's advocate: the paper does argue the effect exceeds what's seen in sleep, which is a meaningful comparison. Borderline significance — more a discussion request than a core criticism. Evidence is brief but verifiable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer asks for the change in gamma power as a function of delay since last LoWS to be reported in %/min and for functional significance comment. This is a presentation/clarification request that would help readers judge magnitude. Correct — the paper reports β-estimates in unusual units (log(µV²/µV²)/s). Devil's advocate: the units chosen are technically defensible for the mixed model output. Borderline significance — presentation improvement. Evidence is specific and verifiable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies a central conceptual tension: whether LoWS are an induced pathological phenomenon or a physiological phenomenon that also occurs in epilepsy. The paper indeed shows both framings (calling them 'a homeostatic process' yet also discussing them in Parkinson's cohort). The critique is correct and points to a core interpretive issue. Devil's advocate: the paper's 'epilepsy homeostasis' framing implies physiologic mechanism adapted to pathology, but the ambiguity remains. Significant — central to the paper's story. Evidence includes specific page/line references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer requests discussion of the mechanism by which LoWS induce long-lasting changes in network excitability, noting an apparent paradox (a down-state could be hypersynchronizing). This is a constructive request that would improve the discussion. Correct — the paper does not explicitly address this. Devil's advocate: the paper acknowledges mechanism is beyond its scope and discusses related literature. Borderline between Significant and Marginally Significant; fixing it would improve the framing of mechanism. Evidence is the logical derivation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks that n-values be reported consistently and that linear mixed models incorporate patient as a grouping variable. Verifying: n is reported inconsistently; the paper sometimes gives n=17, n=8, n=16, but not always clearly tied to the specific analysis. The grouping variable question is substantively important — the methods say 'y-intercept was specific to each subject' which addresses part of the concern. Correct. Significant for statistical rigor and reproducibility. Evidence is specific (points to inconsistent reporting).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the paper overreaches with causal language ('reduce', 'homeostatic') from correlational mixed-model data. Verifying: the paper states 'LoWS reduce increases in network excitability' based on LMM analyses — this is indeed a causal claim from observational data. Correct and well-documented with direct quotes. Devil's advocate: the paper uses temporal precedence (delay since last LoWS) which strengthens inference, and acknowledges this is correlational. But the abstract's strong language is indefensible without intervention. Significant. Evidence is detailed with multiple quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the Parkinson's control is fundamentally flawed (different pathology, different brain region — neocortical ECoG vs hippocampal depth). The paper itself acknowledges this limitation but still draws strong conclusions. Correct. Devil's advocate: obtaining healthy temporal lobe intracranial recordings is ethically not possible, so the authors did what they could; they also used a second epilepsy cohort (Boran) for comparison. Significance: the critique affects the 'distinct from non-epileptic' claim made in the abstract. Evidence: detailed with quotes pinpointing the methodological mismatch.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the LoWS-slow-RT association could be confounded by arousal/vigilance — LoWS may be markers rather than causes of slow processing. The dissociation between RT and accuracy effects is real and is a legitimate puzzle. Correct. Devil's advocate: the paper frames this as association consistent with local sleep literature (which the reviewer cites). Significant — affects interpretation of cognitive claims. Evidence is specific with quotes from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the negative correlation between LoWS and IED rates has multiple competing interpretations (ceiling effects, mutual inhibition, detection artifacts). Correct — the paper does attempt to rule out the mislabeling interpretation but other alternatives remain. Devil's advocate: the paper does discuss this and the Supplementary Information reportedly provides further analysis; the correlation is not solely relied upon. The point about slope/amplitude not correlating with IED rate is a genuinely interesting negative finding for the homeostasis model. Significant. Evidence is thorough.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues LoWS may be 'spike-less' IEDs (IEDs with undetected spikes). The paper devotes extensive effort (8 verification steps) to addressing this exact concern. The reviewer's critique about the HG comparison between IED spike and pSW (rather than between the IED slow-wave component and LoWS) is a reasonable methodological point. Correct: the core concern about subtle mislabeled IEDs cannot be fully ruled out. Devil's advocate: the paper has multiple orthogonal tests (PRV index, differential memory effects, spatial analysis, propagation analysis) that together strongly argue against systematic mislabeling. A skeptical expert would see the paper as having addressed this adequately. Likely disagreement on correctness. Significant if correct; evidence is specific.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points to an explicit comment in the code: 'we remove the condition no_IED_before' and notes that the post-processing pruning script is not provided. I verified this directly in iDetectSlowWave.m. The IED visual confirmation is also not standardized/scripted. Correct — directly supported by code inspection. Devil's advocate: the paper describes the methodology even if code is incomplete; reproducibility is partial. Significant for reproducibility, which is explicitly flagged in the rubric. Evidence: direct code quote.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the 'Epilepsy Homeostasis Hypothesis' is a rebranding of known post-discharge suppression / interictal slow activity. This is a conceptual/framing critique. The argument that a down-state is teleologically relabeled as homeostatic is plausible but debatable. Correct in spirit but highly interpretive. Devil's advocate: the paper does show LoWS are distinct from post-IED waves (verification step 8) and show adaptation to excitability (a feature not obviously explained by simple refractory mechanisms). A charitable expert might find the homeostatic framing defensible. Significant for interpretation. Likely disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the LoWS definition (high slope, down-state) is circular — features are defined such that controls are excluded. Verifying: the detection algorithm uses the same thresholds across all datasets (90th percentile amplitude, 0.25-1 s duration). The down-state is a derived finding, not part of detection. So the circularity claim is somewhat incorrect — the same algorithm is applied, and Parkinson's patients simply had weaker events at the same thresholds. Devil's advocate: the percentile threshold is within-dataset, so detection is adaptive. But the clustering analysis uses slope and down-state features, which are measured post-detection — not a circular definition. The critique is partly incorrect. Likely disagreement on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the LoWS exclusion near IEDs creates artificial anticorrelation in rates, and the 'corrected rate' formula (multiplying LoWS rate × IED rate) is mathematically unjustified. Verifying: the 1-s exclusion rule does apply per brain region; more IEDs → more excluded time. The multiplication correction is indeed non-standard (yielding units of rate²) and the paper's justification is thin. Correct and methodologically sophisticated. Devil's advocate: the excluded time per subject is typically small (1s × IED rate × duration << total time), so bias may be negligible; but authors don't show this. Significant for the IED-LoWS correlation interpretation. Evidence is thorough with multiple quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Overlaps substantially with claude-opus-4-5 item 1: causal overreach from correlational data. The reviewer specifically notes that 'delay since last LoWS' is endogenous, and that baseline HG should be included as a main-effect covariate (not only as interaction). Verifying: the paper's methods state 'We did not include baseline increases in HG as an independent covariate' — this modeling choice is correct target of critique. Correct and detailed. Devil's advocate: the authors offer a (weak) justification for the modeling choice; results may be robust. Significant. Evidence is specific with direct quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Overlaps with claude-opus-4-5 item 2: Parkinson's as non-epileptic comparator is flawed (different pathology, brain region, recording modality). The reviewer adds the important point that IED exclusion was applied in epilepsy but not in Parkinson's, creating further comparability issues. Correct. Devil's advocate: the paper explicitly acknowledges the modality/region limitation. Significant. Evidence is thorough with multiple detailed quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that claiming multiple-comparisons correction is unnecessary under estimation statistics is inconsistent with the paper's widespread use of p-values as confirmatory evidence. Verifying: the paper states 'they do not require correction for multiple comparisons' yet repeatedly reports p<0.05 cutoffs. The reviewer correctly notes the paper's claim that 'all p-values remained significant' under Bonferroni-Holm is opaque (which family, which tests?). Correct. Devil's advocate: estimation statistics framework does have some philosophical basis for this claim, and the paper does run some correction checks. Significant for statistical rigor. Evidence: direct quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer argues the provided code is non-runnable (placeholder inputs, undefined variables, hard-coded paths). I verified this directly: iDetectSlowWave.m contains 'rawdata = ;' 'n = ;' 'sf = ;' 'keep_above_prctle = [];' — these are empty placeholders. iFindIED_semiautomatic.m similarly has empty sf, filter_order, and references undefined eegData. Correct and directly verifiable. Devil's advocate: the code is shared at all, and the algorithmic logic can be read even if not executed; 'research code' standards in neurophysiology are often low. Significant for reproducibility (explicitly flagged in rubric). Evidence: direct code quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

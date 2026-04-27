@@ -1,0 +1,50 @@
+{
+  "paper_id": 56,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper repeatedly presents EMeRALD as scalable, rapid, modular, and clinically impactful (abstract; preprint.md around lines 36, 62, and 64-66), so the reviewer's core concern about overclaiming novelty/impact is grounded. But this item bundles many separate objections, some tied to wording not directly present in the paper (for example the numbered \u201ckey advances\u201d list and the \u201cfastest to date\u201d angle), and several subpoints are partly evaluative rather than strictly factual. I therefore judge the main concern as valid and important, but not fully supported as written; I would expect experts to split on correctness for such a mixed item.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly calls the platform/scaffold \u201cscalable\u201d in multiple places (abstract; preprint.md lines 36, 62, 66), despite this bile-salt case requiring directed evolution and tuning. A reviewer could reasonably see that as overstating practical scalability and conflating \u201cgeneralizable/modular\u201d with \u201cscalable.\u201d Still, this is partly a terminology/norms dispute rather than a clean factual error, and the reviewer gives no concrete field standard beyond assertion. So I treat the criticism as substantively fair and important but weakly evidenced, while expecting expert meta-reviewers to disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This concern targets a real issue: the paper says the chosen TcpP/TcpH sensor is selective for primary conjugated bile salts, especially TCA and GCDCA, whereas the clinical comparison is to total bile-salt assays (preprint.md around lines 40 and 54-60). That makes a composition-mismatch concern plausible and important for clinical interpretation. However, the reviewer's concrete example is wrong: Supplementary Table S4 does not show patient 17 as having high bile salts. Because the broader point is plausible but the cited evidence is mistaken and speculative, I mark the item correct overall but insufficiently supported, and I expect expert disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does make strong claims that EMeRALD is a scalable, broadly usable platform for interrogating sequence-function relationships and engineering sensing modules (preprint.md around lines 62 and 66). The reviewer's pushback that these capabilities are not obviously unique to EMeRALD, and that adoptability may be overstated, is therefore understandable and potentially useful. But the quoted \u201cno other method\u201d statement is not plainly in the paper text provided, and the reviewer supplies no concrete comparator system or citation to establish the uniqueness claim as false. That makes the item important but weakly justified, with likely expert disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer only notes a possible small visual discrepancy in representative images around 0 GCDCA/30 min and immediately concedes that, if the images are merely representative, this is fine. Even if the observation is true, it is an extremely minor presentation nit and not a constructive issue for improving the paper. This is best treated as a correct but not significant comment.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    }
+  ]
+}

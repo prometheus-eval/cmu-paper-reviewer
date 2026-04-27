@@ -1,0 +1,371 @@
+{
+  "paper_id": 49,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests incorporating phenotypic/clinical profiles (symptoms, neurocognitive data) to extend beyond reverse-inference. The paper indeed does not link regional vulnerability patterns to symptom or cognitive phenotypes, and this is a legitimate missing dimension that, if addressed, would strengthen translational relevance. The point is clear and actionable. Devil's advocate: could be argued that such phenotypic data is outside the stated scope — the paper focuses on cortical morphology's relationship to molecular/connectomic predictors, not behavior — which would make this an extension request rather than a flaw; an expert could reasonably downgrade significance. Evidence: reviewer points specifically at 'reverse inference' passage on p8 and at Fig. 3 disorder categorization; an expert can easily find and verify these — evidence is sufficient. Prediction: experts may disagree on whether this is a substantive improvement or an extension wish-list (significance is the debatable axis).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out heterogeneity within disorders (onset, age, medication effects) that could confound single-map representations. This is a well-known real limitation and the paper uses single effect-size maps per disorder. The reviewer offers constructive suggestions (break-out analyses or explicit discussion). Devil's advocate: the paper does acknowledge treatment/co-morbidities as limitation (Second caveat in Discussion). However, the reviewer's broader concern (medication, chronicity, age stratification) is only briefly mentioned, not adequately analyzed — so Correct stands. Significance is clear since fixing would be substantive. Evidence is specific (antipsychotics and cortical thickness; citation included). Prediction: both experts likely agree on correctness/significance/sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer criticizes the causal-sounding language ('drive') given the correlations-of-correlations methodology. This is a real issue — the paper repeatedly uses phrases like 'drive the spatial patterning' while relying on cross-sectional correlational analysis. Specific quote given. Devil's advocate: this concern is also noted by other reviewers; domain experts may treat 'drive' as conventional. Significance is real but narrow (a wording issue that still matters for how the paper is interpreted). Evidence is sufficient — exact quote provided and concern is verifiable. Prediction: experts agree on correctness; may disagree on significance (is this a minor wording issue or a substantial overclaim?).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer asks whether cortical thickness privileges local molecular over connectomic findings, and suggests brief acknowledgement. The reviewer self-labels this as 'minor'. The underlying conceptual point (metric choice biases comparison toward local biology) is legitimate but not deeply substantiated. Devil's advocate: a skeptical expert could say this is primarily a discussion/framing suggestion rather than a methodological flaw. Significance is borderline marginal-to-significant. Evidence consists of a conceptual argument rather than a specific citation. Prediction: experts may disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer claims that ENIGMA harmonizes analysis pipelines but not image acquisition (site-specific). Verification: the paper says ENIGMA 'relies on standardized image acquisition and processing pipelines' which is indeed a slight overclaim — acquisition is NOT fully standardized across sites (each has its own scanner/protocol), only the processing is. So this is a factual correction. Devil's advocate: the Methods reference the ENIGMA protocols URL suggesting some standardization attempts, and the reviewer hedges ('I could be wrong'). Significance: a minor factual correction that could be addressed in one sentence — marginal. Evidence: minimal — just a claim from memory, no citation; but the claim is easily verifiable. Prediction: experts may disagree on evidence sufficiency (no citation but common knowledge).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer notes stronger inter-correlations among graph metrics than molecular features (in Fig. 1 heatmaps), which could bias dominance analysis since effective DoF differ. This is a legitimate methodological concern: dominance analysis does distribute R² but is sensitive to predictor collinearity. The claim can be visually verified from Fig. 1 heatmaps. Devil's advocate: dominance analysis partly addresses collinearity by its combinatoric approach; expert could argue it is robust enough. Significance: a real methodological concern that would improve analysis if addressed. Evidence: reviewer points to Fig. 1 heatmap; sufficient. Prediction: experts agree on correct/significant; could split on evidence sufficiency since no quantification is given.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer questions the word 'embryonic' on p4 since wiring abnormalities can arise across any neurodevelopmental stage. The paper indeed says 'perturbations in network wiring during the embryonic stage' which is an overly narrow claim. This is a small but valid point. Devil's advocate: 'embryonic' may be loose shorthand for early neurodevelopment; not a substantive error. Significance: minor wording issue. Evidence: exact page reference given; sufficient. Prediction: a clear marginal-significance observation.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer argues the Lausanne MRI data is not state-of-the-art (long TR, 32-channel, single-shell DSI, deterministic tractography). Verification: TR=1920ms, DSI with 128 directions (actually multi-shell with b up to 8000 — so not single-shell), deterministic tractography. The critique is partly correct (deterministic is older; 32-channel is standard; TR is moderate) but partly wrong (DSI with b=8000, 128 directions is quite advanced for its time, not 'single-shell'). The reviewer self-labels as minor and notes it may not change findings. Devil's advocate: the Lausanne dataset is a standard, published benchmark used in many connectome papers. A charitable expert would say the dataset choice is defensible and well-justified. Some details of the criticism are factually off (DSI is not single-shell). Prediction: experts may disagree on correctness since the criticism has mixed accuracy.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer suggests checking that dominant regions in cross-disorder findings are not simply larger and therefore more likely to be hits by chance or higher-SNR. This is a legitimate methodological concern given the known heterogeneity in region sizes in Desikan-Killiany. Devil's advocate: the paper uses effect sizes and statistical null models that might partially control for this; but region size bias is not explicitly addressed. Significance: a real robustness check that would strengthen findings. Evidence: reviewer specifies the DK atlas and articulates the concern clearly; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Reviewer raises a conceptual concern about the spin test introducing geometric distortions (inflation-based). This is a nuanced technical point about spatial null models, and the reviewer self-labels it as 'perhaps for another occasion' and notes it likely doesn't bias the paper's conclusions (more conservative if anything). Devil's advocate: spin tests are the field standard and the Markello & Misic 2021 paper assesses this exact concern. A skeptical expert might say the criticism is speculative and the reviewer admits it doesn't affect this paper. Significance: reviewer themselves suggests a simple acknowledgement in Methods — marginal. Evidence: argumentative, no specific citation or derivation; mostly conjectural. Prediction: experts may disagree on correctness (speculative claim) or significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer notes that many tests are performed (e.g., Fig. 2 dominance analysis across disorders/predictors) without explicit multiple-comparisons correction, and requests acknowledgment in the limitations. Verification: the paper uses spin-test p-values per predictor but does not correct across the many tests in Fig. 2. Devil's advocate: spin tests are spatial-autocorrelation-controlled, not multiple-testing-controlled, and reviewer explicitly hedges that correction is problematic. Significance: adding a limitation acknowledgement is constructive but modest. Evidence: specifically references Fig. 2; sufficient. Prediction: experts may split on significance (is this Significant or marginal?).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer questions why epicentre likelihood is in motor/parietal rather than association regions, asks about distance effects, and raises concerns about duplicate epilepsy inflating the mean (Fig S7). These are substantive and specific concerns; reviewer identifies the averaging approach as potentially misleading when individual disorder maps differ considerably. Devil's advocate: the paper does discuss epicentre interpretation; but the duplicate-epilepsy concern is a real issue (confirmed in code — two epilepsies are collapsed but still contribute). Significance: clear substantive criticism. Evidence: specific to Fig. S7 and paper's assertion; sufficient. Prediction: experts likely agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer observes that the 'disorder similarity' matrix in Fig 5a, computed as pairwise correlation of regional cortical thickness, looks like a Structural Covariance Network and might partly reflect SCN rather than disorder-specific similarity. The reviewer acknowledges the Methods text says 'correlated the abnormality vectors' (which is correct) and explicitly notes if so only rephrasing of Fig 5a legend is needed. This is a real internal inconsistency between figure legend and methods. Devil's advocate: reviewer already admits ambiguity may be resolved by rephrasing. Significance: text/figure inconsistency that, if fixed, would improve clarity — Significant. Evidence: specific quotes from Fig 5a legend and Methods; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer asks why Fig 5c-f are tested using distance regression rather than spin null model, pointing out that spin avoids the linearity assumption. This is a valid methodological suggestion. Verification: paper does use distance-regression for these panels rather than spin tests. Devil's advocate: distance regression and spin tests address slightly different concerns; authors justify their choice elsewhere. Significance: real methodological alternative that could strengthen analyses. Evidence: references specific panels; sufficient. Prediction: experts agree on correct/significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer requests explicit mention that the Lausanne dataset has been used elsewhere (Bazinet et al 2021) and asks why deterministic rather than probabilistic tractography was used. Both are minor clarification requests. Devil's advocate: adding these mentions is not substantive to the paper's conclusions. Significance: marginally significant — would improve clarity but not core validity. Evidence: reviewer cites specific Bazinet paper; sufficient. Prediction: experts likely agree on correct/marginal/sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer asks for clarification of the binning process in structural network reconstruction — the consensus-edge-retention process. Verification: the Methods section does contain a relatively dense description of edge binning and selection. This is a legitimate clarity request. Devil's advocate: the text does describe the procedure, just densely; expert could say it's adequately described and just a stylistic preference for more detail. Significance: unclear methods description is Significant when it impedes reproduction. Evidence: reviewer points specifically to the paragraph; sufficient. Prediction: experts may disagree on significance (clarity request vs. substantive methodological concern).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer notes T1w/T2w as a myelin proxy is debated, cites a specific reference (Van der Weijden 2021) and asks for a brief limitation note. This is a constructive limitation suggestion. The underlying point — T1w/T2w is an imperfect myelin marker — is well-established. Devil's advocate: the reviewer themselves notes the myelin predictor is not dominant, so this doesn't affect core conclusions — but the limitation is still worth noting. Significance: marginal-to-Significant — adds nuance without changing conclusions. Evidence: specific citation provided; sufficient. Prediction: experts likely agree on correct/marginal/sufficient but could split on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer asks for discussion of why schizophrenia and schizotypy show differentiated molecular vs. connectivity predictor profiles. This is a reasonable but mild suggestion for discussion expansion. Devil's advocate: the paper does discuss these two disorders but the contrast is not deeply explored; adding a few discussion lines would improve. Significance: a suggestion for added interpretation rather than a methodological concern — marginal/significant borderline. Evidence: no specific reference but the reviewer refers to a specific results observation that can be verified from Fig. 3. Prediction: experts may disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer raises concern that gene PC1 may mainly reflect cell-type distribution differences, so the association with thickness may reflect this confound. This is a substantive interpretive concern supported by known neuroscience (gene PC1 often tracks cell composition gradients). Devil's advocate: the paper does acknowledge the gene gradient is a summary measure; but doesn't address the cell-type-composition interpretation. Significance: legitimate methodological critique that could be addressed. Evidence: reviewer does not cite a specific paper, but the concept is well-established. Prediction: experts may disagree on evidence sufficiency (no specific citation given).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer suggests sex-stratified analyses to deconfound or yield insight. The paper does not report sex-stratified results, and sex does have known effects on brain structure. This is a reasonable constructive suggestion. Devil's advocate: sex-stratification requires access to individual-level ENIGMA data which may not be available given the effect-size map approach; an expert might say it's a scope-expansion request rather than a flaw. Significance: could improve paper but not central. Evidence: brief suggestion with no specific pointers; verifiable by absence of sex analysis in paper. Prediction: experts may disagree on significance or evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer argues the 'local vs global' comparison is confounded by possibly different noise levels in the two predictor families and suggests a simulation or alternative preprocessing. This is a legitimate and insightful methodological concern — comparing predictive power between predictor sets requires roughly equivalent signal-to-noise. Devil's advocate: the paper does include a supplementary analysis with different connectomes (Fig S1), partially addressing robustness; still, noise-level simulation is not done. Significance: substantive methodological point. Evidence: conceptual argument, no specific citation; verifiable as absent in paper. Prediction: experts may agree on correct/significant but split on evidence sufficiency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer notes that connectome technology will improve and asks about confidence in current global-attribute findings. This is a rhetorical/philosophical question rather than an actionable criticism. The paper does acknowledge tractography limitations and provides Fig S1 with different connectome variants. Devil's advocate: this is essentially a question rather than a concrete request. Significance: borderline — not clearly actionable, bordering on Not Significant. Evidence: no specific reference; the request itself is vague. Prediction: experts may split on significance (marginal vs not significant).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer suggests a validation: check pairwise genetic correlation between disorders and see if genetically correlated disorders cluster in Fig 3 axis. This is a concrete, constructive validation idea. Devil's advocate: genetic correlations between such a diverse disorder set may not be readily available or easily comparable; scope-expansion. Significance: a potentially insightful validation that could strengthen confidence. Evidence: conceptual suggestion, no specific citation. Prediction: experts may disagree on significance (is this ambitious validation or scope creep?).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer notes inconsistent use of abbreviations (e.g., PD for Parkinson's, 22q). This is a stylistic/consistency comment. Devil's advocate: could be considered a helpful copy-editing suggestion. Significance: purely stylistic — marginal. Evidence: no specific examples cited, but the observation is easily verifiable. Prediction: clearly a minor consistency issue; experts agree it's marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer suggests rephrasing the title so that 'shape' is more clearly a verb. This is a stylistic/wording preference. Devil's advocate: title parsing is somewhat subjective; current title is not strictly ambiguous. Significance: purely stylistic. Evidence: reviewer explains the parsing concern directly; sufficient for this type of suggestion. Prediction: clearly marginal; experts agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer flags a typo 'cortical abnormaliity' on page 3. This is not visible in the markdown (may be an OCR artifact or true typo in original). Since reviewer presumably read the PDF, this is reported in good faith. Devil's advocate: could be OCR artifact and not a true typo in source. Significance: minor typo — marginal. Evidence: specific page pointer and the typo itself; sufficient. Prediction: experts agree on correct/marginal/sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer raises several specific Figure 5 presentation issues: x-axis scale inconsistency, Pearson's r seeming < -1 (probably jitter), claim of normal distribution without KS test, panel g top/bottom mismatch with caption, contrast 'significant correlation' vs 'low correlation' being inappropriate. These are precise, constructive points about the figure. Devil's advocate: some sub-points are mild nits; KS test and internal consistency between figure and caption are legitimate. Significance: presentation inconsistencies that would improve readability and interpretability — Significant per the guidelines since addressing would help readers evaluate claims. Evidence: very specific; sufficient. Prediction: could split on significance since it's presentation-focused.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer notes a typo 'inhibitory' in Figure 1 caption. Verification: 'inhibitory' appears spelled correctly in the markdown, but the reviewer presumably saw a typo in the PDF (possibly 'inhbitory' or similar). This is a typo report and should be accepted in good faith. Devil's advocate: the typo may be OCR-rendered correctly in markdown; unclear exactly which word is meant. Significance: trivial typo — marginal at best. Evidence: very specific but no exact quote of the wrong form. Prediction: experts agree on marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer criticizes the use of causal/mechanistic language ('network spreading', 'trans-synaptic') for a cross-sectional correlational analysis. Verification: the paper does use these terms and the analysis is cross-sectional node-neighbor correlation. The paper notes this as a caveat only loosely. The reviewer's core concern — cross-sectional correlation cannot establish spreading dynamics — is factually correct and widely agreed upon. Devil's advocate: the paper uses 'network spreading' as shorthand already established by prior work (Shafiei et al.), and the critique may be stylistic. However, strong phrases like 'propagates' do overstate the evidence. Significance: substantive claim about overinterpretation. Evidence: exact quotes and cited Brown et al. / Vogel et al. longitudinal work; sufficient. Prediction: experts agree on correct and significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer criticizes that predictors derive from healthy adults while applied to diseased populations, potentially creating circularity (e.g., Parkinson's receptors used to predict Parkinson's abnormalities). The paper acknowledges this as a limitation. Devil's advocate: the paper's framing is precisely about whether the healthy reference maps predict disorder patterns — that is the hypothesis, and using a fixed reference is consistent with the 'vulnerability scaffold' framing. The paper does acknowledge the limitation explicitly. So it's a known limitation rather than a hidden flaw; nevertheless the reviewer's broader concern (limited sensitivity analysis) is valid. Significance: substantive if addressed. Evidence: exact quote provided; sufficient. Prediction: experts may split on significance since paper already acknowledges.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer notes epicentre analysis only uses 7/13 disorders (post-hoc selection on significance) and abstract phrasing overgeneralizes. Verification: confirmed in paper Methods and code. Also correctly identifies the collapse of two epilepsies. Devil's advocate: the paper explicitly describes the selection in Methods, so it's transparent — an expert might say this is not a hidden problem. However, abstract phrasing is overly broad. Significance: clear substantive concern about overclaim. Evidence: exact quotes and code line references; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer criticizes the repeated use of causal language ('drive', 'govern', 'propagate', 'amplify') for correlational findings. This closely overlaps with Item 1 but focuses specifically on the overall causal framing. Verification: the paper does use these terms. Devil's advocate: some of these terms are conventionally used in the field; critique may be overstated. Significance: real but partly overlapping with other critiques. Evidence: multiple exact quotes; sufficient. Prediction: experts agree on correct/significant/sufficient, though some overlap with Item 1 may make this seem redundant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer criticizes the distance-dependent cross-validation — boundary regions in test set will still share spatial autocorrelation with training regions, inflating performance. With only 68 regions and 75/25 split (~51/17 regions), this is a legitimate concern. Verification: code confirms hard cutoff at 75th percentile. Devil's advocate: the spin test already addresses spatial autocorrelation in p-values; this concerns only CV performance estimates. However, the reviewer's point is specifically about CV not about p-values, and is valid. Significance: real methodological concern. Evidence: code quote and Alexander-Bloch citation; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer identifies that the sentence 'variance in cortical thickness of schizophrenia (a possible precursor of schizophrenia...)' is internally inconsistent — the parenthetical describes schizotypy, not schizophrenia. The reviewer also claims schizophrenia's connectivity R²=0.43 is not 'poorly explained' and IGE R²=0.265 is above several disorders. Verification: the paper's sentence clearly has a typo/mislabeling (should be 'schizotypy'). Reference [66] (Lenzenweger) is specifically about schizotypy. The R² claims require verification against Fig. 2 data which I cannot directly check but are plausibly derivable from the code. Devil's advocate: the 'schizophrenia'/'schizotypy' swap is almost certainly a typo, and calling IGE 'poorly explained' might be relative to other disorders. The reviewer's conclusion about factual errors is largely correct. Significance: substantive internal error affecting interpretation. Evidence: exact quote and numerical claims from reanalysis; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes the epicentre/network-spreading finding is only significant for 7/13 disorders and is overgeneralized as 'cross-disorder'. This is the same point as claude-4-5 Item 3 and gpt-5.2 Item 4 and is factually correct per the paper's own Methods. Devil's advocate: paper is transparent in Methods, but abstract phrasing is indeed overbroad. Significance: substantive concern. Evidence: exact quote and re-analysis p-values; sufficient. Prediction: experts agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer criticizes that the network-spreading/epicentre inference is based on static cross-sectional correlations and cannot establish dynamic spreading. Same as claude-4-5 Item 1 in substance. Verification: correct. Devil's advocate: established field terminology; paper acknowledges in limitations but uses strong language nonetheless. Significance: substantive. Evidence: specific citations (Fornito, Raj); sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer critiques use of healthy adult connectomes/molecular maps for neurodevelopmental disorders whose connectomes may be fundamentally altered. Same idea as claude-4-5 Item 2 and gpt-5.2 Item 5. Verification: correct, and paper acknowledges. Devil's advocate: the paper's hypothesis is precisely that healthy reference maps predict disorder patterns; using disorder-specific maps would be circular in a different way. Significance: substantive limitation. Evidence: specific quote and general references; sufficient. Prediction: experts may disagree on significance (paper already acknowledges; how much is this a new criticism?).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer claims the paper asserts all maps are from adult patients, but ENIGMA working-group analyses for at least some disorders (e.g., ASD van Rooij 2018 spans ages 2-64) include non-adults. The paper says 'All cortical abnormality maps were collected from adult patients'. Verification: this is indeed a contested claim since published ENIGMA ASD maps span the lifespan. However, it's possible the authors used adult-only subsets (ENIGMA working groups sometimes release age-stratified effect sizes). The issue of transparency (which stratified map was used) is a legitimate concern. Devil's advocate: authors may have used adult-only maps without fully documenting this. Significance: matters for validity of comparison. Evidence: specific ENIGMA paper quoted; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer identifies that the Methods describe CV with 1000 iterations on randomly chosen source nodes, but the code uses `for i in range(len(y))` (68 iterations, each node as source — deterministic). Verification: code confirmed — the CV function loops over all 68 nodes, not 1000 random iterations. The paper's Methods description is therefore inaccurate. Devil's advocate: this is a documentation/code mismatch; the actual procedure (68 splits, each node once) is defensible but different from what's described. Significance: methods-code inconsistency is a clear reproducibility issue. Evidence: exact code quoted; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer notes the Methods claim 'nine' connectivity predictors but lists only seven, and flags an apparent atlas inconsistency (Desikan-Killiany vs Lausanne atlas for myelin). Verification: Methods text says 'A total of nine global connectome predictors' but lists 7 (and code confirms 7). Reference [19] Cammoun 2012 is for multi-scale Lausanne atlas, which at 68-region scale matches Desikan-Killiany — not a true atlas conflict but wording is inconsistent. Devil's advocate: 'nine' may be typo for 'seven'; atlas issue is mostly naming confusion. Significance: real reporting inconsistency affecting reproducibility. Evidence: exact quotes and code; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Same as claude-4-5 Item 3 and gemini Item 2 — epicentre conclusion overgeneralizes across all 13 disorders when computed only on 7. Verification: confirmed. Devil's advocate: paper Methods are transparent, but abstract is overbroad. Significance: substantive. Evidence: exact quote and code; sufficient. Prediction: experts agree on correct/significant/sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Same core point as claude-4-5 Item 2 and gemini Item 4 — healthy young-adult connectome used to interpret disorders spanning lifespan. Reviewer provides external citations on age effects on connectivity. Verification: correct. Paper acknowledges limitation but doesn't quantify. Devil's advocate: paper explicitly flags as limitation in Discussion; how much more can be asked. Significance: substantive, sensitivity analyses would help. Evidence: specific quotes and external refs; sufficient. Prediction: experts may disagree on significance given paper's own acknowledgement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

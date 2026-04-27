@@ -1,0 +1,246 @@
+{
+  "paper_id": 27,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the authors did not demonstrate that LoWS are more frequent in epilepsy than in \"healthy brain\". However, the authors explicitly compared the epilepsy cohorts to a Parkinson's cohort (as a proxy for non-epileptic brain due to recording constraints) and found LoWS were rarer in Parkinson's. While a strict interpretation might argue Parkinson's is not a strictly \"healthy brain\", within the constraints of human intracranial recordings, the authors did provide comparative evidence. A charitable reader might agree that the Parkinson's comparison is insufficient to prove \"activation\" or \"healthy brain\" status, making the claim's factual validity debatable. I predict experts would disagree on whether this strictly constitutes a factual error.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the authors defined LoWS as candidate slow waves exceeding the 90th percentile in amplitude, meaning their rarity is mathematically constructed by this 10% threshold. The authors cannot claim wake LoWS are rare compared to sleep without applying the same percentile threshold to sleep data. This is a factually correct and major flaw in interpreting a key descriptive result. An expert would find this highly significant as it directly challenges the validity of the \"rarity\" finding. The reviewer provides sufficient evidence by outlining the logical consequence of the denominator and definition.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues conclusions should be limited to the temporal lobe because LoWS were rare by construction and mostly studied there. The paper does mostly study temporal lobe epilepsy, but also uses a neocortical Parkinson's dataset. The reviewer's point that conclusions are slightly overgeneralized is valid. However, this is largely a nuance about generalizability rather than a flaw that threatens the paper's core claims, making it marginally significant. A strict expert might downgrade this to not significant, but it's a fair caveat. The evidence is sufficient as it references the datasets used.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the hardware high-pass filter used during data acquisition is not reported, which could interfere with the detection of slow waves (0.5-4 Hz) if set too high. This is correct as the paper only reports the offline digital filter, not the amplifier settings. Because slow waves are very sensitive to high-pass filtering, this is a significant methodological omission that needs addressing for reproducibility and valid interpretation. The reviewer provides sufficient evidence by specifying the absent methodological detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the authors do not explain how they assessed patients were awake (e.g., via sleep scoring) outside of task periods. This is correct; while patients performed a task, wakefulness verification throughout the analyzed periods is crucial for a paper specifically claiming \"wake\" slow waves. This is a significant issue because undetected micro-sleeps or N1 sleep could confound the results. The reviewer sufficiently points out this missing methodological information.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer correctly points out that the location or type of the reference electrode is not provided in the manuscript. The reference scheme is critical in LFP and slow wave analysis, as common referencing can artificially induce slow waves or invert polarities. Thus, adding this missing detail would significantly improve the paper's methodological transparency. The evidence is sufficient as it points out an explicit absence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer questions the purpose of the 1s automatic refractory period after IEDs if the manual visual override allowed adding missed IEDs back within that window. This is a valid methodological question about how the semi-automated pipeline was executed in practice. While valid, clarifying this detail is a minor methodological point that won't substantively change the results, making it marginally significant. The evidence is sufficient as it correctly quotes the paper's stated procedures.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer notes that a lack of correlation between LoWS rate and IED rate across patients only implies the majority of LoWS are not IEDs, but does not completely rule out that some are mislabeled IEDs. This is a correct statistical nuance. However, the authors undertook multiple verification steps, so adding this caveat is a minor interpretational refinement rather than a major improvement. It is a marginally significant point with sufficient logical justification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer suggests that the small increases in LoWS slope and amplitude before IEDs might just be correlated with passing time awake (sleep homeostasis), and recommends a control analysis placing random fake LoWS. This is a factually correct and very constructive suggestion. Given the importance of the adaptation result to the paper's homeostasis hypothesis, verifying it's not a general time-awake confound would significantly improve the paper. The logical derivation provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer questions whether the small magnitude of change in slope/amplitude over 1-3 minutes before an IED has any practical physiological effect. This is a valid inquiry about the functional significance of the observed effect sizes. It is marginally significant because it merely asks for more discussion and context around an established finding rather than changing the finding itself. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer asks for the change in high-gamma power as a function of duration since the last LoWS to be expressed in more intuitive units and its functional significance discussed. This is factually valid and would improve readability, but it is a minor presentation/discussion issue that does not affect the core substance of the paper. Thus, it is marginally significant. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out an apparent contradiction: the paper calls LoWS part of \"epilepsy homeostasis\" but also notes they appear in non-epileptic patients (Parkinson's), asking for conceptual clarity. This is correct, as the paper does argue both that they are somewhat ubiquitous but also \"activated in epilepsy\". Clarifying whether LoWS are a ubiquitous physiological mechanism recruited by epilepsy, or an intrinsically pathological one, is significant for the paper's main theoretical framework. The reviewer provides sufficient evidence by referencing the specific conceptual tension in the text.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer requests discussion on how LoWS (which cause a simultaneous reduction in firing rate) mechanistically induce long-lasting changes in network excitability to prevent IEDs. This is a valid request for elaboration on the proposed mechanism. However, as the reviewer notes, mechanistic experiments are out of scope, making this a request for speculative discussion. It is marginally significant as it would improve the framing but not the empirical substance. Evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly notes that the 'n' for each analysis should be consistently presented and asks for confirmation that linear mixed models incorporated patients as a grouping variable (random intercept). The paper mentions subject-specific intercepts, but 'n' is sometimes buried. Reporting statistics and modeling structures clearly is essential for reproducibility and interpretation, making this a significant criticism. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly states that the paper uses causal language (\"reduce\") based entirely on correlational linear mixed models between LoWS and high-gamma power during IEDs. The paper's observational design cannot establish causality, as the correlation could stem from shared underlying mechanisms. This is a highly significant flaw in the paper's framing, as it overclaims the evidence for the homeostatic hypothesis. The reviewer provides sufficient evidence by quoting the paper's causal language and the correlational methods used.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that using Parkinson's disease ECoG data as a control is confounded by both the presence of another neurological pathology and the different recording modality/region. The paper uses this comparison to claim LoWS are distinct in epilepsy. This is a factually correct and highly significant methodological criticism, as these confounds undermine the paper's ability to claim disease-specificity. The evidence is sufficient, pointing directly to the methods used.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the association between higher LoWS rate and slower reaction times could be confounded by general arousal/vigilance or time-on-task, which are not controlled for. Moreover, the selective effect on RT but not accuracy is puzzling under a direct neuronal impairment model. This is correct and points to a significant alternative explanation that threatens the specific \"epilepsy-related transient impairment\" claim. The logical derivation provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer observes that the negative correlation between LoWS rate and IED rate across patients is interpreted as LoWS suppressing IEDs, but it could equally reflect IEDs suppressing LoWS. Furthermore, the lack of correlation between LoWS slope/amplitude and IED rate contradicts a simple homeostatic compensatory model. This correctly identifies an over-interpretation of cross-sectional correlations. It is a significant critique of the paper's theoretical conclusions, supported by sufficient logical evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that LoWS and IED waves share a down-state, and comparing LoWS to the high-gamma of the IED spike (rather than the IED wave) does not effectively distinguish them. They suggest LoWS could just be spike-less IEDs or IEDs with missed spikes. This is a correct reading of the paper's methods and a significant threat to the claim that LoWS are a distinct physiological phenomenon from pathological interictal slow activity. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly identifies that the provided code `iDetectSlowWave.m` explicitly comments out the crucial step excluding slow waves preceded by IEDs and relies on an unprovided manual post-processing step. This makes the central detection pipeline unreproducible. This is a highly significant methodological and reproducibility flaw. The reviewer provides sufficient evidence by directly quoting the provided MATLAB code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer criticizes the \"homeostasis hypothesis\" for rebranding pathological interictal slow activity (which inherently has a down-state and impairs cognition) as a beneficial homeostatic mechanism, arguing this is circular. The paper's own data shows LoWS impair reaction times. This is a factually correct observation about the paper's logic and data, and it raises a significant conceptual challenge to the entire framing of the manuscript. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that LoWS are defined by high slope and down-state, features that are essentially absent in the Parkinson's control group. The circularity of defining a phenomenon by features absent in controls, then concluding it's \"activated\" in epilepsy, rather than just recognizing it as an epilepsy-specific pathological wave, is correctly identified. This is a significant interpretational flaw regarding the \"activation\" claim. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies that discarding candidate slow waves within 1s of an IED mechanically reduces the counted LoWS in patients with high IED rates, artificially inducing the reported negative correlation between LoWS and IED rates across patients. This is a factually correct and fatal methodological flaw in the paper's key piece of evidence for the protective homeostasis hypothesis. It is highly significant, and the logical derivation directly from the paper's exclusion rules is sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the linear mixed models used to claim LoWS \"reduce\" network excitability are observational and omit the main effect of \"baseline increases in HG\" while including it in interactions. This modeling choice makes causal inference unsupported, as baseline HG changes plausibly drive both IEDs and HG magnitude. This is correct and highly significant, as it undermines the statistical basis for the paper's core mechanistic claim. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer critiques the use of Parkinson's ECoG patients as a control, noting the differing pathology, recording modality (ECoG vs sEEG), and anatomical region (neocortex vs hippocampus), which confound the signal characteristics used to distinguish LoWS. This correctly identifies major confounds in the cross-population comparison, which is significant because it challenges the claim that LoWS are distinct from non-epileptic waves. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the paper claims \"estimation statistics... do not require correction for multiple comparisons\" yet repeatedly uses p-values to make confirmatory claims of significance across multiple features and datasets. This is factually correct; ignoring multiplicity when using p-values for inference inflates the false positive rate. This is a significant statistical flaw, and the evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out the provided MATLAB code is incomplete, non-runnable, and contains placeholders for essential parameters (like filter order and sampling frequency), preventing reproducibility of the core detection pipeline. This is factually correct and highly significant for computational reproducibility. The reviewer provides sufficient evidence by quoting the non-functional code blocks directly.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

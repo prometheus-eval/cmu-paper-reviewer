@@ -1,0 +1,87 @@
+{
+  "paper_id": 73,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does leave many methodological details to supplementary materials (e.g., methods are explicitly deferred at line 169, and validation details appear in Supplementary note 2), so the main concern is understandable. But this item is a very broad umbrella statement with no concrete example, and the phrase that the analysis may not be rigorous enough is vague. I therefore judge the underlying point as correct but weakly specified, making disagreement on correctness plausible among expert meta-reviewers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism matches the paper. Supplementary note 2 reports a homopolymer transmission rate of 0.4 versus the expected 0.5 (lines 623-624), which implies roughly 20% false positives if non-transmitted calls are errors, and the paper itself notes that homopolymers have a higher false positive rate. The reviewer also gives a concrete logical reason why allelic dropout would evade both the three-generation transmission check and the monozygotic twin concordance check. Because homopolymer error directly affects major rate and sex-bias claims, this is a significant and well-supported point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper largely confines the detailed validation discussion to Supplementary note 2, while the main text only briefly states a 2.0-5.6% false positive rate (line 127) and later notes that homopolymer mDNMs are less reliable (line 162). So the reviewer is right that the manuscript under-foregrounds homopolymer validation problems and could discuss them earlier and more clearly in the main text. That would materially improve interpretation of the rate and sex-bias results. However, this item bundles several stronger follow-on requests—specific filtering changes, propagating error bars, and the possibility that maternal homopolymer enrichment is entirely artifactual—without enough support for each step, so the evidence requires more.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is correct. In the GWAS section the paper says three correlated SNPs were associated and that the authors selected rs4987188 in MSH2 as the lead marker (lines 155-156), and similarly selected rs8191642 in NEIL2 as the lead marker among correlated hits (lines 162-164). Figure 4 notes only correlated markers or a local lead signal, but the manuscript does not explain any fine-mapping procedure, credible interval, or competing genes in the associated regions. Since the GWAS claims are central, asking for clearer locus interpretation is a significant and sufficiently evidenced criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The factual core is valid: the abstract reports only the extrapolated count of 63.7 mDNMs per offspring (line 96) and does not state the per-locus mutation rate, even though that is a central quantity. The paper does report the per-microsatellite rate in the main text (line 129), but the reviewer is plausibly complaining that the relation between the high-quality callable subset, the extrapolation, and the rate estimate is not emphasized clearly enough, especially since Supplementary note 5 adds the unusual point that sample size affects the reported rate estimate. This is a real clarity issue, but experts could reasonably split on whether it is a significant substantive weakness or mainly a presentation issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper makes a strong concluding claim that microsatellite mutation rate is under genetic control based on GWAS associations in MSH2 and NEIL2 (abstract line 96; discussion lines 177-179), while the supporting evidence is primarily statistical association plus a negative comparison to single-nucleotide mutational spectra (lines 166 and 677-683). The reviewer is therefore plausibly correct that the mutator interpretation is stronger than the evidence strictly establishes, and that independent validation would strengthen the claim. But this is partly an interpretive judgment about how far association evidence can support the paper’s conclusion, so disagreement on correctness between expert meta-reviewers is likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism is largely supported by the manuscript. The paper presents the MSH2 and NEIL2 hits as biologically meaningful, but for MSH2 it offers only prior functional literature and a null cancer-association check (line 160), and for NEIL2 it highlights a synonymous lead variant with only generic DNA-repair plausibility (lines 162-164). The reviewer is right that the section provides little direct evidence that either variant itself is functionally causal for microsatellite mutagenesis, especially for the NEIL2 synonymous association. Because the item names the specific variants, cited references, and missing mechanistic evidence, the support is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The general concern about transparency and reproducibility is reasonable. The methods do give the Tandem Repeats Finder command (lines 324-325) and later state that the inclusion limit was 140 bp while accuracy drops beyond 80 bp (line 122), but they do not plainly explain some practical choices a reproducer might want, such as the effective repeat-definition thresholds in ordinary prose or what fraction of the genome remained after filtering to Tier 1/CNV-clean regions (lines 347-349). Because some subpoints are answered partially in the paper while others are not, the item is mixed enough that expert meta-reviewers could disagree on correctness overall.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The mDNM analyses are based on 6,084 Icelandic trios (line 96, line 126), and the paper does not explicitly discuss how population specificity might limit generalization of the estimated rates or detected mutator alleles to other populations. That limitation is real, so the item is correct. However, this is also a fairly generic limitation note rather than a direct challenge to the analyses, so experts could reasonably disagree about whether it is significant or only marginally significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

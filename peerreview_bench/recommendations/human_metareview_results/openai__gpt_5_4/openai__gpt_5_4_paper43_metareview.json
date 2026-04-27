@@ -1,0 +1,124 @@
+{
+  "paper_id": 43,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does cite prior work supporting the aggregation-server approach for this same task, so calling the choice itself 'unjustified' is overstated. Still, the item raises a real concern about how well the paper's setup generalizes to other federation topologies, making correctness borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper's privacy discussion is limited to secure connections, a trusted server, and trusted-execution-environment hardware, with no secure aggregation or differential privacy details. The reviewer also supplies concrete privacy-attack and survey citations, so the criticism is important and well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The discussion explicitly says the study is meant to be a 'blueprint' for future FL studies, so the request to tone down that framing and add more methodological or administrative justification is fair. The point is constructive, but the reviewer gives only broad examples rather than specific missing decisions or administrative details.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper directly justifies glioblastoma as a rare disease with incidence 3/100,000, below the cited rare-disease threshold, and explains why multi-site data are needed. Saying FL is not applicable here because some diseases are rarer does not undercut the paper's stated motivation.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper says the public initial model was trained on 231 cases from 16 sites, but gives little detail on how it was developed and compares mainly against that initialization baseline. Asking for stronger baseline context is constructive, but the item names no specific established models or comparisons.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper's task is segmentation of ET, TC, and WT sub-compartments, not a separate analysis of 'non-enhancing glioblastoma' as phrased here. Because the item does not clearly map its concern to a missing experiment or claim in the paper, the criticism is too vague and inapplicable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper already reports where performance is lower across tumor sub-compartments, with ET lagging TC and WT in the reported metrics and figure. As written, the question is too vague to identify a specific missing analysis beyond that existing breakdown.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Dice and Jaccard/IoU are monotonic transforms of the same overlap information, so reporting both would not materially make the evaluation more rigorous. Using DSC alone is standard for medical image segmentation, making this criticism factually weak.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper explicitly says the six out-of-sample sites were chosen 'based on their availability' rather than randomly. That makes the concern about a less reliable generalization test valid and methodologically important, and the review item points directly to the design choice at issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper notes an involved manual annotation protocol and related tooling, but it does not clearly explain inter-rater variability, quality control, or who labeled the 590 held-out out-of-sample cases. That concern matters for evaluation validity, though the item does not fully pin down the exact missing procedure or evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The second sentence raises a reasonable ablation question about whether a smaller consortium would suffice, but the first sentence conflates an ensemble model choice with federated-versus-nonfederated training. Because the item's main target is mixed and can be read as either valid or confused, correctness is genuinely ambiguous.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper lists site 48 as one training site but does not identify it as problematic or discuss an exclusion experiment for it. This criticism therefore relies on a premise not established by the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper cites some FL background but omits several specifically named recent papers on decentralized FL and privacy in medical imaging. The omission is real and the reviewer provides concrete references, though experts could reasonably differ on how important these additions are to this paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "paper_id": 72,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The provided source already uses Python 3: the main executable has a python3 shebang and the README lists python3 as a dependency, so the core claim that DeBreak is python2-only does not hold against the paper bundle.",
+          "correctness": "Incorrect",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper benchmarks by SV type and size but does not stratify performance by repeat context. Because repeat structure is highly relevant for SV calling difficulty, this missing analysis would meaningfully improve interpretation of the results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The assembly comparison shows substantial disagreement between DeBreak and PAV, and the paper itself notes that additional validation of unique calls is needed. Asking for calibration of the assembly-based comparator with GIAB or an alternative such as dipcall is therefore a constructive and well-grounded request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This clarification is already largely present: the Methods say POA collects \"all reads containing this SV candidate\" and the large-insertion module collects clipped reads at candidate breakpoint regions. So the implied criticism that the paper does not specify this is not supported.",
+          "correctness": "Incorrect",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The strongest factual premise is wrong: in the provided source the executable is explicitly Python 3 and the README lists python3 as the dependency. While dependency freshness could be debated, the review item's core python-2.7 claim does not hold.",
+          "correctness": "Incorrect",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The installation guidance in the provided README is minimal bare conda setup without an environment file or locked dependency specification, so the broader reproducibility concern is plausible and useful. But the specific claim that the authors' conda instructions failed is system-dependent and cannot be independently verified from the paper bundle alone.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The current source writes VCF output through pysam with MAPQ declared as Integer and cast to int before writing, and the bundled example VCF follows that format. The review's central claim that DeBreak outputs invalid VCF because MAPQ is written in non-integer form is therefore not supported by the provided source.",
+          "correctness": "Incorrect",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper specifies only the DeBreak version used and does not report versions for the benchmarked competitors such as Sniffles, pbsv, and cuteSV. That omission directly affects reproducibility and interpretation, especially because these tools changed across releases.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Table S1 does show DeBreak's overall genotyping accuracy slightly worse on HiFi than CLR (87.21 vs 87.98), whereas the broader calling metrics improve on HiFi in Table S2 and other tools generally improve in Table S1. The manuscript does not discuss this discrepancy, so the request for explanation is valid and useful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The abstract claims excellent performance in supplementing whole-genome assembly methods, but the paper's assembly comparison leaves many unique DeBreak and PAV calls unresolved and explicitly says additional validation is needed. So the reviewer is right that the sentence overstates what is shown.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The simulation benchmark uses randomly simulated SVs, does not analyze breakpoint accuracy under downsampling, and does not isolate the long-insertion module's contribution by insertion length. Those are real limitations of the current simulation section, so the request for richer simulation analysis or clearer caveats is well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The HG002 section introduces multi-allelic SVs without much definition, does not report breakpoint-accuracy effects under downsampling, and ends with a broad statement about different SV types even though the GIAB benchmark here covers insertions and deletions. The section would be substantively improved by the requested clarifications and qualification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "For the HGSVC comparison, Table S2 reports only F1, Sniffles is omitted from this benchmark, and no genotype-accuracy analysis is presented. Those omissions reduce interpretability of the assembly-based comparison, so the reviewer is raising a substantive and verifiable issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The Discussion does not really synthesize how CLR, HiFi, and Nanopore affect accuracy, and it also does not explicitly note that empirical truth-set validation is much stronger for insertions/deletions than for inversions/translocations. Adding that discussion would meaningfully strengthen interpretation of the results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The Methods are indeed underspecified in several places: raw SV signal detection and density clustering are only sketched, translocation handling is hard to infer from the chromosome-wise description, and the large-insertion assembly procedure leaves important terms and implementation details undefined. This is a significant clarity and reproducibility issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "PBHoney is discussed in the introduction but then dropped from the evaluation without explanation, so asking for a brief justification is valid. Still, because PBHoney is an older and narrower baseline, the importance of this omission is debatable rather than clearly substantive.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This bundle mixes substantive simulation requests—such as per-read-length breakdowns, clearer translocation modeling, and discussing missing Nanopore simulation—with smaller figure and phrasing nits. The underlying concerns are real, but because the section combines both important and minor points, its overall importance is plausibly debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The genotyping metric is only partly explained, the HG002 text does not report breakpoint-accuracy numbers in the same ±1bp style as the simulations, and Figure 2 does not make the read type for panels a/b especially explicit. These are concrete presentation and interpretation gaps in the HG002 results section.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The HGSVC section would be easier to compare with earlier experiments if it reported breakpoint-accuracy percentages more explicitly, and the item also asks for optional extensions beyond the current presentation. Because the requests mix clearly useful reporting changes with more optional additions, the issue is real but its overall importance is arguable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The main-text cancer section gives little input-data detail, and the suggested stronger validation against assembly-based or cross-caller analyses would certainly add context. But much of this is framed as desirable rather than necessary, so experts could reasonably differ on how important it is.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "These methods comments are supported by the paper text: the multi-allele step is easy to miss in the workflow summary, the cited line lacks a supplement figure number, the downsampling methods description centers on CLR even though HiFi and Nanopore are also shown later, and \"supporting\" reads are not crisply defined. Those are real clarity issues.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

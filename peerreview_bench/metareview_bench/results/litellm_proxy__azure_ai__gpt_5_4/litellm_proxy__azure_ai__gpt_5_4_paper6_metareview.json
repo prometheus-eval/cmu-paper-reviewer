@@ -1,0 +1,259 @@
+{
+  "paper_id": 6,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the package provides Figure 2 images but not the underlying neuroimaging data, so the request for open data identifies a real reproducibility gap. This is Significant, and the evidence is Sufficient because the reviewer points to the absent Figure 2 source data and data-availability language, which a meta-reviewer can directly check. A prosecution case would be that this is only a short first report, but that does not supply the raw datasets in the materials here or remove the broader data-sharing concern. Experts would most likely judge this as correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper package does not share the underlying Figure 2 neuroimaging datasets, so the reviewer's request for sharing targets a real omission. This is Significant, and the evidence is Sufficient because the missing dataset is concretely identified and its absence is directly verifiable. The devil's-advocate view is that this is just an aspirational open-science suggestion rather than a flaw in the paper, but for a technical first-in-human imaging paper the lack of shareable source data is still a meaningful reproducibility issue. Experts would therefore most likely land on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper does not clearly position its achieved resolution against prior lower-field results, and the cited Feinberg 7T work is a concrete example that makes the comparison request legitimate. This is Significant, and the evidence is Sufficient because the reviewer names a specific prior paper that a meta-reviewer could inspect. The devil's-advocate case is that the manuscript's novelty is first human 11.7T imaging rather than absolute resolution leadership, but better state-of-the-art comparison would still materially strengthen the paper. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper shows only selected images and does not provide all-subject supplementary panels or a fuller discussion of cross-subject robustness. This is Significant, and the evidence is Sufficient because the absence of all-subject imaging evidence is easy to verify from the paper package. The devil's-advocate response is that a first-in-human short report need not show every subject, but robustness across volunteers is central to how convincing the imaging claims are. Experts would likely choose correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper reports only limited T2 and T2* examples and does not show or seriously discuss T1, DWI, angiography, fMRI, MRS, or similar contrasts despite presenting 11.7T as broadly enabling. I judge this Significant, and the evidence is Sufficient because the missing contrasts are specifically named and their absence is directly checkable. The devil's-advocate view is that adding many modalities could be beyond the scope of a first demonstration paper, so some experts may downgrade the importance even while agreeing the point is real. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the manuscript compares 3T and 7T directly but gives little explicit discussion of the closest prior human ultra-high-field benchmark at 10.5T. This is Significant, and the evidence is Sufficient because the reviewer identifies a specific missing comparison target that can be checked against the text. The devil's-advocate case is that the in-house 3T/7T comparison is reasonable for a figure meant to show practical differences, but a 10.5T contextual comparison would still materially strengthen positioning. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: the methods say only that 'similar scans were performed' at 3T and 7T, so exact optimization and acquisition settings at the lower fields are not reported. This is Significant, and the evidence is Sufficient because the complaint points to a specific missing methodological detail in the key cross-field comparison. The devil's-advocate response is that the authors do disclose some shared parameters such as resolution, bandwidth, acquisition time, and receive-element count, but that still does not resolve whether the lower-field scans were fairly optimized. Experts would likely choose correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correct: the paper gives only a brief forward-looking sentence about motion correction, better coils, more receive channels, and stronger gradients, without quantifying likely SNR or resolution gains. I judge this Marginally Significant, with Sufficient evidence, because it targets a real but mainly outlook-oriented discussion gap rather than a missing validation result. An upgrading argument is plausible: readers would better understand the current technical headroom if those future gains were quantified, so some experts may see this as more important than I do. That makes correct_disagree_on_significance the best prediction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Correct: the final discussion only briefly sketches scientific, neuroscience, and clinical implications, so the request for a clearer implications discussion targets a real omission. I judge it Significant, and the evidence is Sufficient because a meta-reviewer can directly inspect the thin applications discussion in the closing paragraph. A downgrading argument is plausible because this is partly framing rather than methodology, and some experts may treat it as mainly contextual polish. I therefore expect correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Correct: the paper does cite multiple ISMRM abstracts, and those references are less accessible and less archival than standard journal articles. This is Marginally Significant, and the evidence is Sufficient because the references themselves make the issue directly verifiable. The devil's-advocate case is that field specialists can often locate these abstracts anyway, but the comment is still a legitimate minor point rather than noise. Experts would most likely agree on correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Correct: the manuscript uses 'Iseult' as a project name without explaining what the name means. This is Not Significant because clarifying the origin of a project name would not materially improve a reader's evaluation of the methods, evidence, or conclusions. A devil's-advocate upgrade is not very plausible: curiosity about the name is understandable, but the omission is essentially trivial. Experts would likely call this correct_not_significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper would benefit from more explicit positioning of its achieved resolution against prior state of the art, which is only lightly contextualized now. This is Significant, and the evidence is Sufficient because the absence of a fuller resolution benchmark discussion is directly checkable from the manuscript. The devil's-advocate case is that the main novelty is first human 11.7T imaging rather than a resolution record, but clearer benchmarking would still materially help readers interpret the contribution. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the reviewer names specific prior high-resolution studies and asks the authors to discuss them and state broader resolution records, which the paper does not currently do. I judge this Significant, and the evidence is Sufficient because the cited DOIs provide concrete prior-art pointers. The devil's-advocate view is that 'not trying to break records' is not itself a flaw, so some experts may see this more as optional contextualization than a key deficiency. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: Figure 2 cross-field conditions are under-specified, since the paper gives only partial information for the 3T and 7T scans and does not spell out the exact TE/TR choices for each field. This is Significant, and the evidence is Sufficient because the reviewer points to Figure 2 and to specific missing sequence details that matter for fair comparison. The devil's-advocate case is that the authors do mention some common parameters and one TE tradeoff, but that still leaves key contrast-defining conditions unclear. Experts would likely choose correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this Not Correct overall because the item does not establish that TE = 301 ms is wrong, and a long TE for a T2-weighted turbo spin-echo sequence is plausible from the paper alone. Significance and evidence are null in my labeling because the core factual concern is unresolved. A charitable defense exists: an expert reader could reasonably flag the number as unusual and ask for confirmation, so correctness is somewhat ambiguous rather than cleanly false. That makes disagree_on_correctness the most likely expert prediction.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper reports 20 subjects per group, no power or equivalence analysis, and then interprets null differences as evidence of safety, so the reviewer identifies a real inferential weakness. This is Significant, and the evidence is Sufficient because the relevant sample size, null-result claim, and missing analysis are all explicitly pointed to. The devil's-advocate response is that this is a first-in-human feasibility study rather than a definitive harms trial, but that does not remove the need to bound what the null findings can support. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: genotoxicity is assessed only pre/post within the 11.7T group, with no 0T control and no repeated-exposure design, even though the paper cites repeated-exposure literature as motivation. This is Significant, and the evidence is Sufficient because the reviewer points to the exact asymmetry in the study design and to the cited prior work. The devil's-advocate case is that an acute single-exposure pre/post test is still informative for an initial human study, but it does not fully address the broader genotoxicity question the paper raises. Experts would likely land on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper's SNR claim rests on visual cross-subject, cross-coil comparisons and does not report quantitative in vivo SNR measurements. This is Significant, and the evidence is Sufficient because the reviewer quotes the different-volunteer and different-coil setup and connects it directly to the unsupported SNR inference. A defense is that the figure is meant as an illustrative demonstration rather than a controlled SNR scaling study, but the text nonetheless makes a stronger comparative claim than the design justifies. Experts would likely call this correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the paper reports only phone follow-up up to one week, which is indeed shorter and less rigorous than the longer-term repeat testing used in the cited 10.5T study. This is Significant, and the evidence is Sufficient because both the manuscript's one-week follow-up and the comparator study's longer schedule are specifically cited. The devil's-advocate position is that acute tolerability was the main goal and one week may be acceptable for a first step, but the reviewer is right that this limits claims about delayed effects. Experts would likely choose correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this Not Correct overall because the manuscript does contain a 'Methods' section with 'Data acquisition and processing' plus many imaging sequence parameters, so the item's central premise that core imaging methods are missing is false. Significance and evidence are therefore null in my final labeling. The charitable defense is that reconstruction details are still sparse and reproducibility could be better, so some experts may rescue the item's broader concern even though its supporting factual claims overstate the omission. For that reason I predict disagree_on_correctness rather than a clean incorrect consensus.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct: the paper makes qualitative claims about image quality and SNR gains without providing quantitative in vivo SNR measurements or maps that would rigorously support the cross-field comparison. I also judge it Significant with Sufficient evidence, since the reviewer cites the exact qualitative claims and the missing quantitative outputs are easy to verify. The prosecution has a plausible argument, though: the paper does report some quantitative homogeneity metrics such as coefficient of variation and NRMSE, so the item overstates how little quantification is present. Because that boundary is genuinely arguable, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper names VOP-based SAR control but does not report actual SAR values, margins, or validation data for the human protocols. This is Significant, and the evidence is Sufficient because the reviewer points to the exact high-level SAR claim and the missing safety-relevant quantities. A defense is that naming established SAR-control methods may be enough for a brief report, but at 11.7T the absence of quantitative safety reporting still materially weakens independent evaluation. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the provided repository is centered on the ANT behavioral task, and it does not include the pTx pulse-design or reconstruction code that underlies the core imaging contribution. This is Significant, and the evidence is Sufficient because the README and file list make the scope of the shared code directly verifiable. The devil's-advocate response is that proprietary scanner software may be hard to release and the paper may not promise code availability, but the reviewer's reproducibility concern is still valid. Experts would likely choose correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: the 7T comparison is limited to one T2*-weighted protocol, and the manuscript does not benchmark against optimized or state-of-the-art 7T imaging. This is Significant, and the evidence is Sufficient because the reviewer points to the single cross-field protocol and the lack of a stronger 7T benchmark. A scope-based downgrade is possible because this is a first 11.7T demonstration rather than a full benchmarking paper, but the limitation still materially affects how strongly the comparative advantage can be read. Experts would most likely settle on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper's broad safety and tolerability wording overreaches what a 20-subject, short-term, limited-endpoint study can establish. This is Significant, and the evidence is Sufficient because the reviewer quotes the strong safety language and links it to the actual study scale, endpoint set, and lack of equivalence or power framing. The devil's-advocate case is that authors often use broad language in first-feasibility papers, but here the inference matters because safety is one of the manuscript's headline claims. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the manuscript's cross-field SNR and CNR claim is under-controlled because it uses different subjects, different transmit setups, and no quantitative SNR measurement protocol. This is Significant, and the evidence is Sufficient because the reviewer quotes the relevant methods details and explains the confounds they create. A defense is that the figure is primarily qualitative and visually illustrative, but the paper's text explicitly interprets it as an SNR gain attributable to field strength. Experts would likely choose correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper does not report quantitative SAR margins, hotspot checks, or motion-robustness data needed to independently assess whether pTx safety control generalized across subjects. This is Significant, and the evidence is Sufficient because the reviewer cites the exact SAR-control claims and the limited six-subject universal-pulse design set, then names the missing safety outputs. The devil's-advocate view is that the authors used standard pTx safety methods and may have omitted details for space, but at 11.7T the missing quantitative safety reporting still matters substantially. Experts would likely call this correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the bioeffects comparison is based on non-randomized sequential cohorts with limited reporting on blinding success and protocol stability, so the causal interpretation of 'no field effect' is weaker than the paper suggests. This is Significant, and the evidence is Sufficient because the reviewer points to the exact fixed-order design, the nocebo-control claim, and the missing checks. A defense is that operational constraints made randomization difficult and the authors did attempt a 0T mock condition, but that does not eliminate the internal-validity concern. Experts would likely judge correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

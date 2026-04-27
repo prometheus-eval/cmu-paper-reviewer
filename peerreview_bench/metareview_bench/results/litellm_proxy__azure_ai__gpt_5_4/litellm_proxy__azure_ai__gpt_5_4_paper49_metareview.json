@@ -1,0 +1,371 @@
+{
+  "paper_id": 49,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the paper omits symptom and cognitive phenotype analyses, making the translational interpretation thinner than it could be. Evidence is Sufficient because the reviewer identifies a concrete missing analysis tied to Figure 3 and the discussion. A skeptical expert could say those analyses are outside the paper's main scope or not harmonized across disorders. Because the issue is real but its importance is debatable, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the paper aggregates heterogeneous disorders into single maps despite likely variation by age, stage, and treatment. Evidence is Sufficient because the reviewer names concrete sources of heterogeneity and the paper uses only disorder-level summary maps. A skeptical expert could say this is an unavoidable limitation of the ENIGMA-derived design rather than a paper-specific mistake. I therefore expect agreement on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because the paper uses strong mechanistic language like \"interact to drive\" even though the analyses are correlational. Evidence is Sufficient because the reviewer points to the causal wording and the paper's correlational strategy. A skeptical expert could note that the paper also uses regression and neighbour analyses, not just simple correlations. That still leaves the overclaiming concern intact, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct and Marginally Significant because using cortical thickness as the sole outcome is a plausible caveat because it may privilege local biological explanations over connectomic ones. Evidence is Requires More because the reviewer gives the rationale, but does not show directly that the phenotype choice biases the comparison in this paper. A skeptical expert could say the paper compares both predictor families on the same target and even finds some disorders better fit by connectivity. I therefore predict correct_marginal_insufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge this item Correct and Significant because the reviewer is plausibly challenging the paper's claim that ENIGMA data were harmonized at the acquisition level, not just in processing. Evidence is Requires More because the issue matters for map comparability, but the review item itself gives only a hedged page-specific correction. A skeptical expert could say the reviewer supplies too little support and may simply be mistaken about ENIGMA practice. Because that factual dispute is genuinely plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge this item Correct and Significant because the connectivity predictors are indeed more collinear than the molecular predictors, which affects how dominance analysis is interpreted. Evidence is Sufficient because the reviewer points directly to the Figure 1 heatmap and the paper describes no separate step removing shared variance before interpretation. A skeptical expert could reply that dominance analysis is designed for correlated predictors. That affects severity more than truth, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I judge this item Correct and Marginally Significant because the paper's reference to pathology arising during the embryonic stage is too narrow for neurodevelopmental disorders. Evidence is Sufficient because the reviewer points to the exact wording and the paper does not qualify it as only one example. A skeptical expert could say the authors were offering an illustration rather than an exclusive claim. So this is a valid but minor wording issue, and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I judge this item Correct and Marginally Significant because the normative Lausanne MRI dataset is older and less current than newer HCP-style resources, but the reviewer also says the bottom-line findings likely stand. Evidence is Sufficient because the paper's methods explicitly report the acquisition details and tractography choice supporting the concern. A skeptical expert could counter that the Lausanne dataset was still a defensible choice for this study. I therefore predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I judge this item Correct and Significant because the 68-region atlas has uneven parcel sizes, so checking that parcel extent is not driving the cross-disorder regional findings would strengthen the paper. Evidence is Sufficient because the reviewer ties the concern to the stated atlas choice and to a specific missing robustness check. A skeptical expert could say the atlas choice is justified by ENIGMA availability and the size-bias concern is only hypothetical. Even so, the requested control is substantive, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "I judge this item Correct and Marginally Significant because the paper depends heavily on spin tests and the reviewer gives a coherent argument that geometric distortion could affect those nulls. Evidence is Requires More because the concern is methodological and not tied to a paper-specific empirical failure, so more support would be needed. A skeptical expert could reject the premise as an ongoing domain debate rather than an established flaw. Because that correctness dispute is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the paper runs many significance tests, especially around Figure 2, without any multiple-comparisons correction or discussion of why none is used. Evidence is Sufficient because the reviewer points to a concrete family of tests and the absence of a correction is directly checkable. A skeptical expert could say dependence among predictors complicates standard corrections. That actually strengthens the need for discussion, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the reviewer is reasonably probing whether distance effects or condition composition help explain the unexpected sensory-motor epicentres. Evidence is Requires More because the concern matters for a headline epicentre claim, but the item is mostly framed as questions and intuition rather than a demonstrated confound. A skeptical expert could say the review never shows that Euclidean distance or epilepsy weighting truly drives the result. Because that factual challenge could go either way, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because Figure 5a's caption says disorder similarity is pairwise correlation of regional cortical thickness, while the methods say it comes from correlating regional abnormality vectors. Evidence is Sufficient because the reviewer cites both the caption wording and the methods description, so the inconsistency is directly verifiable. A skeptical expert could say this is only imprecise phrasing because the abnormality values are themselves cortical-thickness effect sizes. Because the fact is clear but the importance is somewhat debatable, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct and Significant because the paper uses distance regression rather than a spin-based matrix null for several Figure 5 panels, so asking for justification is a fair statistical concern. Evidence is Sufficient because the reviewer identifies the exact panels and the absent spin test, which a meta-reviewer can verify directly. A skeptical expert could object that the reviewer overstates the point by saying the regression assumes linearity when the code actually fits an exponential trend. Because that leaves genuine room for factual disagreement about whether the criticism lands, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge this item Correct and Marginally Significant because the manuscript does not explain why deterministic rather than probabilistic tractography was used and does not explicitly note the prior use of the Lausanne dataset. Evidence is Sufficient because both are directly checkable omissions in the methods. A skeptical expert could say these are conventional provenance details rather than substantive weaknesses. So I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge this item Correct and Significant because the group-consensus binning description in structural network reconstruction is genuinely dense and could be rephrased more clearly. Evidence is Sufficient because the reviewer names the exact paragraph and its clarity can be checked directly from the methods text. A skeptical expert could note that the section already cites prior work and that technically trained readers may find it adequate. Because the clarity issue is real but its weight is contestable, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I judge this item Correct and Marginally Significant because T1w/T2w as a myelin proxy is debated and the paper only gives a very general imaging-modality limitation rather than this specific caveat. Evidence is Sufficient because the reviewer identifies the exact predictor and gives a concrete external pointer. A skeptical expert could say this predictor is not central to the paper's main findings. So I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I judge this item Correct and Marginally Significant because the paper mentions the schizophrenia-versus-schizotypy contrast in the results but does not really return to it in the discussion. Evidence is Sufficient because the reviewer points to a specific omitted discussion thread that can be verified from the paper. A skeptical expert could say this is just a desirable discussion extension. I therefore predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I judge this item Correct and Significant because it is biologically plausible that gene PC1 partly reflects cell-type composition, so asking whether that interpretation drives the association is reasonable. Evidence is Requires More because the concern matters for interpreting one of the molecular findings, but the review item gives no paper-specific citation or reference supporting the cell-type claim. A skeptical expert could say gene PC1 captures a broader transcriptional gradient and that the reviewer is speculating. Because that correctness dispute is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because sex can alter brain-development and morphometric patterns, so asking whether pooled disorder maps hide sex-specific effects is a legitimate robustness question. Evidence is Sufficient because the reviewer identifies a concrete missing analysis that can be checked directly from the paper. A skeptical expert could say sex-stratified analyses may be infeasible with summary ENIGMA maps and may reduce power rather than improve it. Because the omission is clear but the importance is arguable, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the paper compares predictive strength across molecular and global-connectivity feature families without assessing whether one family is measured much more noisily than the other. Evidence is Requires More because the logic is sensible, but the reviewer does not show any concrete sign in the paper that the global predictors are actually noisier. A skeptical expert could therefore call this a fair methodological caveat but an under-supported one. I predict correct_significant_insufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Not Correct because the item does not identify a verifiable flaw in the present paper so much as speculate about how future technology might change confidence in today's connectomic measures. Since the main factual premise does not hold, significance and evidence are null. A charitable expert could reframe it as a general concern about current connectome quality, but that is too vague to be the paper-specific criticism stated here. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Not Correct because the item assumes disorders that share genetic architecture should also be close on the paper's molecular-versus-connectomic predictability plane, and that connection is not established by the manuscript or standard logic. Since the main factual premise does not hold, significance and evidence are null. A charitable expert might still view it as an interesting follow-up analysis, but that is not the same as a valid criticism of a missing necessary control. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge this item Correct and Marginally Significant because the manuscript does mix long and short disorder labels such as PD and 22q, which can cause small readability hiccups. Evidence is Sufficient because the reviewer names concrete abbreviations that are easy to check in the paper. A skeptical expert could say this is standard academic shorthand after first definition. So I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge this item Correct and Marginally Significant because the title is somewhat garden-path and the suggested rephrasing would make the verb-object structure easier to parse. Evidence is Sufficient because the title itself is the relevant evidence. A skeptical expert could still find the existing title acceptable. This is a minor presentation suggestion, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I judge this item Not Correct because I could not verify the claimed \"cortical abnormaliity\" typo in either the extracted manuscript text or the bundled PDF. Since the main factual premise does not hold, significance and evidence are null. A charitable expert might wonder whether this came from an OCR artifact or a different version, but the provided paper files do not support the claim. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I judge this item Correct and Significant because several Figure 5 presentation and interpretation details are genuinely questionable, including inconsistent scaling of the distance-regressed scatter panels and an unsupported normality claim in the caption. Evidence is Sufficient because the reviewer names the exact panels, and the code confirms at least part of the statistical and presentation concern. A skeptical expert could say some subpoints are cosmetic and not all of them are equally well established from the paper alone. Because the criticism is real but its importance is debatable, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I judge this item Correct and Marginally Significant because the bundled PDF's Figure 1 caption contains a typo in the excitatory-to-inhibitory phrase, so the reviewer is flagging a real minor error. Evidence is Sufficient because the location is exact and easy to verify in the figure caption. A skeptical expert could still say this is too trivial to matter. Following the benchmark guidance for typos, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the paper's node-neighbour analysis is cross-sectional and cannot by itself distinguish temporal propagation from other causes of spatial association. Evidence is Sufficient because the reviewer quotes both the mechanistic language and the underlying correlational method. A skeptical expert could say \"network spreading\" is being used as a hypothesis or organizing metaphor rather than a fully established mechanism. The paper still states it too strongly, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the molecular and connectomic predictors are derived from healthy participants and then used to interpret abnormalities in patient populations whose biology may differ. Evidence is Sufficient because the reviewer quotes the healthy-source descriptions and the paper itself acknowledges this limitation. A skeptical expert could note that normative reference maps are a common and defensible strategy for this kind of work. That does not remove the limitation, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because the epicentre map is explicitly computed only for the subset of disorders passing the network-spreading significance filter and then averaged, so its scope is narrower than a blanket pan-disorder reading. Evidence is Sufficient because the reviewer cites the exact text and the analysis code confirms the subset-selection. A skeptical expert could say the main text does disclose the conditioning. The abstract and narrative still overgeneralize it, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct and Significant because the manuscript uses verbs like \"drive,\" \"govern,\" and \"amplify\" for findings that are based on correlational regressions and cross-sectional map comparisons. Evidence is Sufficient because the reviewer quotes multiple concrete instances of the language and ties them to the actual analyses. A skeptical expert could argue that some of this wording is conventional scientific shorthand. The cumulative pattern still overstates mechanistic certainty, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge this item Correct and Significant because the distance-dependent cross-validation uses a hard spatial cutoff, so it does not eliminate all spatial dependence between train and test sets. Evidence is Sufficient because the reviewer quotes the paper and the exact code split, making the boundary-dependence argument easy to inspect. A skeptical expert could say the method is still a reasonable published safeguard against spatial autocorrelation. That affects severity more than truth, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the reviewer is right that the IGE description is at least overstated, and the schizophrenia-versus-schizotypy subclaim becomes plausible if one reads the OCR-corrupted markdown rather than the bundled PDF. Evidence is Sufficient because the reviewer gives concrete quoted text and reanalysis numbers, so the evidence chain is clear. A skeptical expert could reasonably object that the PDF appears to say schizotypy, not schizophrenia, and that calling IGE poorly explained by connectivity is debatable rather than plainly false. Because that leaves genuine factual ambiguity after accounting for OCR, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the abstract and narrative frame network spreading and epicentres as cross-disorder phenomena, while the actual epicentre analysis is conditional on significance in only seven of thirteen disorders. Evidence is Sufficient because the reviewer quotes both the broad claim and the limiting text, and the saved p-values support the subset count. A skeptical expert could say the main text eventually clarifies the conditioning. The summary framing still overstates generality, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because static cross-sectional correlation between regional abnormality and neighbour abnormality is not enough to establish a dynamic spreading mechanism or identify true causal epicentres. Evidence is Sufficient because the reviewer quotes the operational definition and gives specific alternative explanations and literature. A skeptical expert could say the paper is testing a network-informed pattern rather than claiming full dynamical identification. The terminology still pushes beyond what the method can prove, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct and Significant because the study uses healthy adult connectomes and molecular maps to interpret developmental disorders like ASD and ADHD, where the underlying architecture may already be altered. Evidence is Sufficient because the reviewer cites the healthy-connectome description and the developmental-disorder scope directly from the paper. A skeptical expert could note that normative reference maps are intentionally used as vulnerability scaffolds. That does not remove the mismatch, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the manuscript explicitly claims all cortical abnormality maps come from adult patients, yet the loading code uses adult-specific ENIGMA maps only for some disorders and non-adult-restricted variants for others such as ASD and 22q. Evidence is Sufficient because the reviewer quotes the adult-only claim and cites concrete ENIGMA age-range evidence, and the bundled code independently supports the concern. A skeptical expert could say the authors may have intended \"mostly adult\" or relied on processed summary maps. That does not rescue the literal statement they wrote, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the paper describes 1,000 random distance-dependent cross-validation iterations, while the released function deterministically loops once over each parcel as the source node. Evidence is Sufficient because the reviewer quotes both the methods text and the exact code implementing the split. A skeptical expert could say the overall spirit of spatially distant training and testing is preserved. The documented procedure and the code are still plainly not the same, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because the manuscript says there are nine global connectome predictors while both the enumerated list and the code show seven, which is a real reproducibility-relevant inconsistency. Evidence is Sufficient because the reviewer quotes the conflicting text and the analysis script that loads a fixed seven-column predictor matrix. A skeptical expert could say the parcellation-language subpoint is less definitive because the Lausanne/Cammoun scale is related to Desikan-Killiany. That does not affect the stronger nine-versus-seven inconsistency, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct and Significant because the abstract-level cross-disorder epicentre language is broader than the actual procedure, which averages epicentre likelihood only over disorders passing a significance filter. Evidence is Sufficient because the reviewer quotes the abstract claim, the conditioning passage, and the matching subset-selection code. A skeptical expert could note that the main text does disclose the subset. The broader framing still overstates the scope, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge this item Correct and Significant because the structural connectome used for all connectomic predictors and neighbour-exposure measures comes from only 70 healthy young adults, while the analyzed disorders span markedly different life stages. Evidence is Sufficient because the reviewer quotes the methods, the paper itself acknowledges the lifespan limitation, and the external references make the age-mismatch concern easy to verify. A skeptical expert could say such normative scaffolds are common and the paper is transparent about the limitation. The issue still weakens the generality of the connectomic claims, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

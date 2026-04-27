@@ -1,0 +1,956 @@
+{
+  "paper_id": 70,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 1
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 2
+        },
+        {
+          "reasoning": "The term \"environmental forcings\" is not well aligned with the rest of the manuscript and appears only in the abstract, so the consistency complaint is valid but limited in scope.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 3
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 4
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 5
+        },
+        {
+          "reasoning": "The introduction does blur maternal learning, maternal effects, offspring learning, and genetic/environmental causes, so clarifying these distinctions would materially improve the framing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 6
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 7
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 8
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 9
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 10
+        },
+        {
+          "reasoning": "The long introductory paragraph combines several mechanisms and definitions in a way that is genuinely hard to follow, so restructuring it would substantially improve clarity.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 11
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 12
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 13
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 14
+        },
+        {
+          "reasoning": "Broadening the framing from purely maternal to parental effects is a defensible conceptual suggestion because fathers can matter too, but the paper is specifically framed around maternal mechanisms, so experts could disagree on whether this criticism is fair.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 15
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 16
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 17
+        },
+        {
+          "reasoning": "The point that paternal effects may also matter is reasonable, but whether the introduction should be broadened in a paper centered on maternal processes is scope-dependent enough to invite disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 18
+        },
+        {
+          "reasoning": "The sentence about maternal effects being reflected in sibling similarity is oversimplified unless separated from additive genetic similarity, so asking for clarification or a reference is reasonable, though experts may split on whether the statistical convention already makes the statement acceptable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 19
+        },
+        {
+          "reasoning": "Mother-offspring similarity does not by itself uniquely establish maternal learning over genetic or other maternal pathways, so the call for clearer definition and support is well founded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 20
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 21
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 22
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 23
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 24
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 25
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 26
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 27
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 28
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 29
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 30
+        },
+        {
+          "reasoning": "The body-size example leans on heritability even though environmental pathways could also propagate similarity, so this interpretive caveat is real, but its practical importance is somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance",
+          "item_number": 31
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 32
+        },
+        {
+          "reasoning": "The manuscript only says maternal resource differences could increase sibling similarity, not that siblings must be identical or free of competition, so this criticism overstates a premise the paper does not require.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 33
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 34
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 35
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 36
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 37
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 38
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 39
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 40
+        },
+        {
+          "reasoning": "The sentence around the effect of maternal trophic position on daughters is grammatically awkward enough that the suggested wording correction is a valid minor edit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 41
+        },
+        {
+          "reasoning": "If numbered material is presented out of order, reordering it is a real but minor presentation improvement; the reviewer points to a specific location, making the issue easy to check.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 42
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 43
+        },
+        {
+          "reasoning": "The main text already explains that daughters are emphasized because males were monitored only briefly and explicitly points readers to supplementary analyses, so the claimed missing justification is already present.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 44
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 45
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 46
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 47
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 48
+        },
+        {
+          "reasoning": "The results separately model additive genetic relatedness with the pedigree and report negligible heritability, so the claim that the similarity could simply be genetic does not hold against the analysis as written.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 49
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 50
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 51
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 52
+        },
+        {
+          "reasoning": "The confounding argument around spatial proximity is difficult to follow in the results text, so asking for more elaboration would materially improve interpretability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 53
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 54
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 55
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 56
+        },
+        {
+          "reasoning": "The discussion does switch among \"early-life imitation,\" \"maternal learning,\" and related terms, so tightening the terminology would improve an important part of the narrative.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 57
+        },
+        {
+          "reasoning": "Using \"adapt\" risks implying evolutionary change when the paper seems to mean behavioral flexibility, so this is a valid but relatively minor terminology refinement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 58
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 59
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 60
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 62
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 63
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 64
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 65
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 66
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 67
+        },
+        {
+          "reasoning": "There is no seed preference test described in the available paper files, so this item appears to target material that is not actually in the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 68
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 69
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 70
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 71
+        },
+        {
+          "reasoning": "This is a local wording, grammar, or punctuation improvement tied to a specific passage; it is a valid but minor presentation fix, and the cited location is enough to verify it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 72
+        },
+        {
+          "reasoning": "The main text already cites many supplementary analyses and figures (including S1, S3, and S5-S10), so the claim that most supplementary material is not referred to is not supported by the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 73
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "reasoning": "The introduction does conflate several mechanisms and uses overlapping terms inconsistently, so reorganizing and defining them more carefully would substantially improve the conceptual framing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 1
+        },
+        {
+          "reasoning": "The final introduction paragraph is method-heavy relative to the surrounding aims framing, so the structural complaint is fair and important for readability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 2
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 3
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 4
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 5
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 6
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 7
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 8
+        },
+        {
+          "reasoning": "The reviewer is pointing to real conceptual ambiguity about how maternal learning nests within maternal effects, but domain conventions differ enough that experts could disagree about whether the paper is actually wrong here.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 9
+        },
+        {
+          "reasoning": "Treating mother-offspring similarity as maternal learning without clearer qualification invites confusion with other pathways, so this is a valid substantive criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 10
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 11
+        },
+        {
+          "reasoning": "The paper does use \"imitation\" and \"learning\" in a way that can confuse the mechanism being claimed, so clearer terminology would materially help the introduction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 12
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 13
+        },
+        {
+          "reasoning": "The text reads more exclusively than it should, because genetic and environmental mechanisms can coexist; this is a real conceptual issue, though experts could differ on how important it is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance",
+          "item_number": 14
+        },
+        {
+          "reasoning": "The model lets maternal learning decay with time but leaves other maternal components time-invariant, so the concern about asymmetric modeling assumptions is important; however, the reviewer does not fully justify the claimed bias or the feasibility of the requested partition.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient",
+          "item_number": 15
+        },
+        {
+          "reasoning": "The paper already models environmental similarity and supplementary analyses argue that increasing mother-daughter distance is biologically small, so the claim that the time interaction may simply be a spatial artifact is contestable enough that experts could split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 16
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 17
+        },
+        {
+          "reasoning": "Requesting more precise figure labels is partly fair, especially \"environment\" versus \"environmental similarity,\" but the proposed replacement of \"permanent individual\" with \"permanent environment\" is not clearly right, so the overall item is borderline on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 18
+        },
+        {
+          "reasoning": "Calling the plotted component \"heritability\" is appropriate because the figure reports proportions of variance explained, so the item's main nomenclature criticism does not hold up against the figure.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 19
+        },
+        {
+          "reasoning": "The discussion is weighted heavily toward maternal learning even though the paper also estimates environmental, maternal-effect, and permanent-individual components, so this is a substantive framing issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 20
+        },
+        {
+          "reasoning": "The permanent-individual component is residual among-individual variation after modeled effects, so the reminder that it could reflect cohort or other unmodeled factors is correct and important for interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 21
+        },
+        {
+          "reasoning": "The discussion does use social and maternal learning inconsistently at different points, so tightening that terminology would improve the interpretation of the main result.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 22
+        },
+        {
+          "reasoning": "This is a fair challenge to the management implication, but it is somewhat speculative and its practical importance is debatable enough that experts could disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance",
+          "item_number": 23
+        },
+        {
+          "reasoning": "The methods do omit several orienting details, including the effective sample for the quantitative-genetic model and an explicit model equation, so this is a meaningful reproducibility and readability criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 24
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 25
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 26
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 27
+        },
+        {
+          "reasoning": "The supplement explicitly says among-individual variation explains all of the variance while also reporting an R2 of 45%, so this is a clear internal inconsistency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 28
+        },
+        {
+          "reasoning": "The supplement itself frames spatial distance as a proxy and not a direct measure of moose or ant density, so the reviewer correctly flags a limitation in treating that approach as better grounded environmentally.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 29
+        },
+        {
+          "reasoning": "The point that similar trophic positions could reflect shared genes as well as social learning is plausible, but the item is terse and does not fully develop why the cited sentence is inadequate.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient",
+          "item_number": 30
+        },
+        {
+          "reasoning": "Reporting habitat autocorrelation across distance classes would help evaluate the spatial-disentangling argument, but the reviewer proposes the analysis more than demonstrating that its absence is a serious flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient",
+          "item_number": 31
+        },
+        {
+          "reasoning": "This is a real but limited clarity, terminology, or presentation request tied to a specific passage; it would modestly improve the paper and is straightforward to verify from the cited location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 32
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "reasoning": "The final introduction paragraph is dominated by methodological detail and even references a figure and supplementary material before results, so the structural critique is well founded and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 1
+        },
+        {
+          "reasoning": "The hair-growth and isotope-timing material is informative but currently embedded in a method-like way inside the objectives framing, so reorganizing it would improve the paper's setup.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 2
+        },
+        {
+          "reasoning": "Because the objectives are loosely framed, the linkage between each objective and the later methods is harder to track, but the reviewer states this at a fairly high level rather than pointing to a specific missing linkage.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence",
+          "item_number": 3
+        },
+        {
+          "reasoning": "Methods should still describe the pedigree and parentage information used in the present analysis even if those data were generated in earlier work, so deleting the section is not a justified criticism.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 4
+        },
+        {
+          "reasoning": "Figure 1A is a schematic used to explain hair growth and isotope timing, which is directly relevant to the study design, and the reviewer's claims about prior-publication reuse or improper placement do not follow from the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 5
+        },
+        {
+          "reasoning": "The reviewer correctly notices that the main methods underdescribe the food-sampling context and raises a potentially important tissue-baseline concern, but the isotope-specific objection is technical enough that experts could plausibly disagree on whether it is actually a flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness",
+          "item_number": 6
+        },
+        {
+          "reasoning": "Supplementary Figure S1 shows multiple food items, so the main methods' focus on moose alone is incomplete and worth clarifying.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 7
+        },
+        {
+          "reasoning": "Reference 61 is visibly incomplete in the bibliography, making this a valid but minor correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 8
+        },
+        {
+          "reasoning": "Supplementary analysis 3 and Figure S3 are different labels for an analysis and one of its displays, so the claimed terminology inconsistency is not really supported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect",
+          "item_number": 9
+        },
+        {
+          "reasoning": "Figures S2 and S4 are present in the supplement but are not cited from the manuscript, so this is a valid minor presentation issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient",
+          "item_number": 10
+        },
+        {
+          "reasoning": "The methods specify eligibility thresholds for movement data but not how many bears actually entered the environmental-similarity analysis, which is important for interpreting the model.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 11
+        },
+        {
+          "reasoning": "The home-range estimation description omits core implementation details like software and smoothing choice, and that omission materially limits reproducibility.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 12
+        },
+        {
+          "reasoning": "Using the median monitored year for landcover extraction is a consequential design choice, and the manuscript does not give enough detail about map timing and update structure to let readers evaluate it.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient",
+          "item_number": 13
+        }
+      ]
+    }
+  ]
+}

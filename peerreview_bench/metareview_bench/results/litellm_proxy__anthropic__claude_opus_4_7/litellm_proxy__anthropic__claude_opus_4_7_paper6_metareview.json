@@ -1,0 +1,259 @@
+{
+  "paper_id": 6,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer's core point is that the neuroimaging data in Figure 2 should be made openly available, and notes inability to locate a claimed data availability statement. Checking the paper, no open data sharing link is provided and the imaging data is not shared on any public platform (e.g., neurovault). Thus the substantive criticism is correct even if the 'quote' the reviewer references isn't exactly in the markdown. Open data sharing is a meaningful improvement for a landmark MRI dataset and would raise the paper's impact. Devil's advocate: a skeptic might say the paper is a short communication and data availability is often handled separately in supplementary, but the absence of any concrete open data pointer is still a legitimate reproducibility concern. Evidence is specific (figure 2, neurovault.org). Experts likely agree this is Significant and Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item essentially reiterates and amplifies item 1 — urging data sharing of figure 2 neuroimaging data. The point remains correct (no open data is provided), and the suggestion is constructive. However, being a duplicate/restatement of item 1 weakens its marginal informativeness. Devil's advocate: one expert may call this Significant (strong repeated plea for open data is worth keeping), another may call it Marginally Significant (since it largely repeats item 1 without new content). Evidence: the reviewer again points to Figure 2 and invokes community benefit — sufficient for verification. Because the significance call is borderline between Significant and Marginally Significant, experts likely disagree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that similar resolutions have been demonstrated at 7T (Feinberg et al. 2023). The paper does cite Feinberg (ref 5) but does not explicitly benchmark its in vivo 11.7T resolution against state-of-the-art 7T resolution. The criticism's core point — the paper should engage more directly with comparable 7T achievements — is correct. Significant because it would strengthen the novelty/contribution framing. Devil's advocate: some might argue the Feinberg reference already shows the authors know of this work and this is minor context, but the paper doesn't substantively address whether 11.7T resolution meaningfully exceeds 7T state-of-the-art. Evidence sufficient: specific named paper with DOI.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer asks for images of all subjects or a robustness discussion. The paper presents only selected subjects in Fig 2; no per-subject gallery or robustness analysis is shown. This is a valid constructive criticism for demonstrating generalizability. Devil's advocate: some experts might say single-subject image panels are standard in short communications, making this borderline significance — but demonstrating robustness across N=20 is especially relevant for a first-in-human UHF demonstration. Evidence is sufficient (specific absence in supplementary material).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer notes paper only shows T2 and T2*; missing T1, DWI, MRA, MRS, fMRI, or at least a discussion. The paper mentions targeting T1, T2, T2* in methods but shows only T2/T2* results and doesn't discuss other modalities that benefit from 11.7T. Correct. Significant because additional contrasts would substantially broaden the demonstration's impact. Devil's advocate: scope may legitimately be limited to what was acquired/cleared, making this more of a 'future work' suggestion — but even a paragraph of discussion would materially help. Evidence is sufficient: specific named contrasts that are clearly absent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues 10.5T human imaging is the closest relevant prior art and should be discussed. The paper compares only to 3T and 7T performed in-house, and does not detail the relationship with the published 10.5T human results (Grant et al., others). Correct; this comparison would meaningfully contextualize the claimed advance. Devil's advocate: the 10.5T comparison isn't strictly necessary for a first-in-human 11.7T paper because the topic is field strength and new magnet, but a skeptical expert might still deem lack of this comparison a real gap. Evidence sufficient: reviewer names the specific field strength and the comparison is verifiable as absent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer says comparison with 3T/7T is biased because acquisition parameters aren't provided and only 'similar scans' stated. Checking: the 11.7T Methods list full sequence parameters, but for 3T/7T the paper only says 'similar scans were performed at 3T and 7T on different subjects' without listing 3T/7T TR/TE/FA. So the 3T/7T parameters are indeed not reported, and the concern about possibly non-optimized parameters at lower fields is valid. Correct. Significant for a fair cross-field claim. Devil's advocate: authors may have used matched parameters intentionally; paper explicitly notes that using longer TE at 3T/7T would have improved CNR but at SNR cost. Still, the full parameter list is absent. Evidence sufficient (quotes the specific 'similar scans' wording).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer wants a more detailed discussion of how future technical improvements (motion mitigation, more efficient coils) will improve SNR and resolution, including how close to theoretical SNR limits one can get. Correct — the paper has a short high-level future-work paragraph but no quantitative projection. Significance is borderline: for a Nature-format short communication such quantitative forecasting is typically deferred, and this is more of a nice-to-have discussion expansion. Devil's advocate: one expert might say this would substantively improve the outlook section (Significant), another that it's peripheral to the paper's core contribution (Marginally Significant). Evidence sufficient: the reviewer identifies the specific missing content.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer misses a clearer discussion of what current results and future developments mean for neuroscience and clinical applications. The paper has a brief mention of Alzheimer/depression/schizophrenia and neuroscience opportunities, but no substantive discussion. The main concern (inadequate applications/impact discussion) is correct. Significant because this is a flagship Nature-style paper where impact framing matters. Devil's advocate: one could argue the brief mention suffices for a short communication (Marginal), while others would see deeper applications framing as essential. Evidence sufficient: reviewer identifies the absence clearly.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer notes that ISMRM abstracts (used as references e.g., ref 26, 32) are not openly accessible to non-registrants. This is factually correct. The criticism is a minor stylistic/citation issue that does not substantively affect the paper's argument. Marginally Significant: the review would not be improved by removing it, but it doesn't substantially improve the paper either. Evidence is sufficient (general factual point about ISMRM access, verifiable). Devil's advocate on significance: could be seen as Not Significant for acceptance decisions, but keeping it as feedback is reasonable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer asks about the meaning of 'Iseult'. Indeed the paper never defines it. This is a minor naming clarification that would have near-zero substantive impact on the paper. Marginally Significant at most (a one-line footnote). Devil's advocate: a charitable expert might even call this Not Significant, since it's pure nomenclature that doesn't affect the science. Evidence sufficient (factual absence easily verified). Experts might disagree between Marginally Significant and Not Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer says the work would benefit from a better description of state-of-the-art resolution compared to the new scanner. Correct — the paper does not position its resolution relative to prior UHF achievements. Significant as it would contextualize the contribution. Devil's advocate: this is a bit generic standing alone (item 2 substantiates with specific references). Evidence on its own (item 1) is vague — no specific paper cited in this item — so Requires More when read in isolation, though item 2 supplies the citations. Experts likely agree it's correct and significant; evidence call is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer gives specific examples: 9.4T with 0.13x0.13x0.8 mm³ and 0.44 mm isotropic, arguing the authors didn't attempt to break records and should discuss these. Correct — those works exist and aren't discussed. Significant: positions the novelty claim on firm ground. Devil's advocate: this overlaps with Human_2 Item 1/4, but the specific resolution citations make it a stronger constructive criticism. Evidence is sufficient (specific DOIs provided).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer asks whether 3T/7T/11.7T images used matched TE/TR or only matched resolution. Looking at methods: paper only specifies 11.7T parameters; for 3T/7T it says 'similar scans' without parameter listings, and notes longer TE would improve CNR at lower fields (implying the 11.7T TE was used). The concern — that contrast conditions aren't matched nor clearly documented — is correct and would improve fairness of comparison. Significant. Devil's advocate: the paper does mention the longer-TE tradeoff; but that doesn't document actual parameters used. Evidence sufficient (specific to Fig 2).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer asks whether 'TE = 301 ms' is correct, appearing at line 272 (of reviewer's source). The value is stated in the paper's Methods for T2-weighted variable flip angle turbo spin-echo (TR=6s, matrix 400x400x320). For VFA TSE, an effective TE of around 300 ms is plausible and normal, so the stated value is likely correct. The reviewer is raising a check rather than asserting an error. This is a typo-level query: if correct, it's a minor query; if wrong, it's a substantive fix. Devil's advocate: a charitable expert reads this as a legitimate sanity check (correct/marginal), while a strict expert might say the reviewer is simply wrong because the value IS correct for VFA TSE (not correct). Evidence is minimal — no reasoning provided. Predict disagree_on_correctness given the ambiguity.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer criticizes lack of statistical power analysis for N=20 safety assessment, noting failure-to-reject is not equivalence. This is correct — the paper performs only null-hypothesis significance tests with N=20 per group and no power analysis/equivalence framework is reported. Significant because the central safety claim depends on adequate power. Devil's advocate: in first-in-human UHF studies N=20 is typical and regulatory approval is the primary signal; still, statistical framing is weak. Evidence is sufficient: specific quotes from paper + specific comparable study (Grant 10.5T N=29 with repeated-measures).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer criticizes asymmetry: genotoxicity tested only in 11.7T group (intra-subject pre/post) with no 0T control, while all other tests used between-group design. The paper explicitly states this asymmetry. Correct. Significant because genotoxicity is the most biologically concerning outcome and the design gap materially weakens the inference. Devil's advocate: intra-subject pre/post can be argued appropriate for short-timescale DNA damage in absence of natural variation concerns; but absence of 0T control still limits interpretation. Evidence sufficient (quotes paper + cites the referenced Herate 3T study).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer criticizes qualitative SNR comparison with different subjects and different coils, no quantitative SNR measurements. Correct — paper provides only visual Fig 2C comparison; no SNR numbers. Significant because SNR gain is a central claim. Devil's advocate: SNR is hard to measure fairly in vivo across sites; but the group's own prior work (Le Ster 2022) did phantom SNR quantification, so it was feasible. Evidence is sufficient: reviewer quotes paper and cites specific comparable prior work by same group.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer criticizes short (1-week phone) follow-up vs. Grant et al.'s 2-4 week repeat testing. Correct — paper does state 'up to 1 week... phone calls' without formal repeat testing. Significant: delayed effects could be missed. Devil's advocate: a skeptic may say 1-week phone + baseline is standard for first-in-human UHF pilots; but comparable 10.5T study did use longer formal follow-up, showing feasibility. Evidence is sufficient (specific quotes + specific comparator study).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer claims 'The Methods section referenced here is missing from the manuscript. The only methods sections present are Genotoxic tests, Behavioral tests, and Balance tests' and states no sequence parameters (TR, TE, FA, Bandwidth, Matrix size, Acceleration factor) are provided. This is factually wrong. The paper has a clearly labeled '# Methods' section with a '## Data acquisition and processing' subsection that provides TR=6s, TE=301ms, matrix=400x400x320, GRAPPA=3x2, bandwidth=250 Hz/pixel, resolution, TA for the T2 VFA TSE; and FA=27°, TR=600ms, TE=20ms, GRAPPA=2, bandwidth=40 Hz/pixel for T2* 2D GRE. The reviewer's core factual claim (Methods missing, parameters not provided) does not hold. Devil's advocate: perhaps the reviewer's tool got truncated content; but the error is about a concrete, verifiable claim that is simply wrong. Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer criticizes lack of quantitative SNR/homogeneity metrics. The paper does report some quantitative numbers (45% coefficient of variation for B1+ in static shim mode; NRMSE 8-13%; 82.7 Hz B0 std), but the in vivo B1+ maps for the parallel-transmission deployment are not shown, and SNR numbers for the 3T/7T/11.7T comparison are absent. The core concern — reliance on qualitative statements for the cross-field SNR claim — is correct. Devil's advocate: some quantitative metrics ARE present, which weakens the 'entirely qualitative' framing slightly; but the SNR claim specifically is qualitative. Significant (would materially strengthen the cross-field claim). Evidence sufficient (specific passages quoted + Pohmann 2016 as standard).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer criticizes insufficient SAR-related safety data: no actual SAR values, no VOP validation, no temperature simulations vs. measurements. Paper mentions VOPs and constraint-based pulse design but does not report quantitative SAR margins or validation results. Correct concern. Significant given the safety-critical nature. Devil's advocate: pTx SAR management is referenced to prior literature ([11], [12]) and VOPs are a standard; but this paper's first-in-human 11.7T context arguably warrants reporting quantitative SAR. Evidence sufficient (specific absences identified).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer correctly observes that the provided code repository contains only the Attentional Network Task (behavioral) scripts and not the pTx pulse design / reconstruction code, which is the paper's primary technical contribution. Verified from code/README.md and directory listing. Correct. Significant for reproducibility. Devil's advocate: pTx code might not customarily be shared due to vendor IP constraints; but the selective sharing of only behavioral code, while framing the paper's innovation as the pTx pipeline, is a real transparency gap. Evidence sufficient (quotes README directly).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer notes that 3T/7T comparison uses 'same protocol' even though relaxation times differ across fields, so a fair comparison would use protocols optimized per field. Correct — paper says 'similar scans' and even acknowledges longer TE at 3T/7T could improve CNR. Significant: affects fairness of the central SNR-gain claim. Devil's advocate: the authors argue matched parameters isolate B0 effects, which is a defensible methodological choice; but not benchmarking against field-optimized 7T undercuts the broader claim of 11.7T advantage. Evidence sufficient (specific quote).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues the paper's broad safety conclusion ('no evidence of adverse effects', 'humans can safely tolerate') overreaches what an N=20, single-exposure, 1-week-follow-up protocol can support, citing best-practice statistical principles (CONSORT, ASA statement) and comparable 10.5T study. Correct — the paper does state these strong conclusions without power/equivalence framing. Significant: the safety framing is a central claim of the paper. Devil's advocate: a first-in-human UHF study will necessarily be limited; the authors do use measured language in parts of the paper. But the abstract-level claim is indeed strong. Evidence sufficient (specific quotes from paper + multiple named references).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer criticizes cross-subject, different-coil-chain SNR comparison with no quantitative SNR/CNR measurement. Same core concern as claude-opus item 3. Correct; paper compares with body-coil 1Tx at 3T vs 8Tx at 7T/11.7T on different subjects, no quantitative SNR values. Significant. Devil's advocate: some constraints are inherent to in-vivo multi-site comparison; but Pohmann-style within-subject comparable-coil study is the established standard. Evidence sufficient (specific quotes + Pohmann reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer criticizes absence of quantitative SAR reporting (margins, hotspot validation, motion sensitivity). Correct — paper mentions VOPs and constraints but reports no concrete SAR numbers or validation. Significant for a first-in-human UHF safety argument. Devil's advocate: regulatory body approval (ANSM) implicitly vetted SAR compliance, and VOP methodology is published elsewhere. But in-paper quantitative SAR reporting is still expected for a flagship safety demonstration. Evidence sufficient (specific quotes + Okada 2022 safety review).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer criticizes non-randomized sequential cohort design (0T first, then 11.7T) and limited blinding-effectiveness reporting, citing CONSORT and Okada 2022. Correct — paper explicitly states the fixed order for operational reasons and reports no blinding checks. Significant: causal attribution of any differences (or non-differences) is weakened by the non-randomized design. Devil's advocate: the paper is not an RCT and operational constraints (field ramps) justify the ordering; but that doesn't negate the temporal confounding concern. Evidence sufficient (specific quotes + CONSORT).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

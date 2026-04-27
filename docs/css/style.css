@@ -486,6 +486,35 @@ input::placeholder {
   white-space: nowrap;
 }
 
+.field-hint {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.focused-feedback-section {
+  margin-bottom: 1rem;
+}
+
+.focused-feedback-section textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.focused-feedback-section textarea:focus {
+  outline: none;
+  border-color: var(--cmu-red);
+  box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.1);
+}
+
 .date-input {
   height: 32px;
   padding: 0 0.5rem;
@@ -857,6 +886,13 @@ input::placeholder {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--gray-700);
+  margin-bottom: 0.35rem;
+}
+
+.annotation-hint {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  line-height: 1.5;
   margin-bottom: 0.5rem;
 }
 

@@ -1,0 +1,188 @@
+{
+  "paper_id": 2,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript emphasizes mean-field-like scaling and practical acceleration, but it never reports wall-clock inference/training timings or a direct timing comparison with machine-learning alternatives. Asking for that comparison is therefore fair and important, and the missing comparison is easy to verify from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The work studies classical NVE Born-Oppenheimer dynamics and, in the Zundel discussion, explicitly says that nuclear quantum and solvent effects may be needed before drawing confident physical conclusions (preprint around lines 118-125 and 239-246). Asking whether the approach can extend beyond classical nuclei is a substantive scope question, but the reviewer does not back the Zundel-specific quantum-nuclear claim with a concrete citation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explains mean-field-like inference scaling, but it does not clearly spell out which bottlenecks dominate when moving to larger, chemically more complex systems—for example training-point count, generation of accurate training states, or increasing surface complexity. That missing scalability discussion matters, but the item is mostly a broad prompt rather than a tightly evidenced argument.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper states that inference requires an O[L^4] contraction to build the subspace Hamiltonian and that the generalized eigenproblem dimension is set by the number of training points (preprint lines 76-82). From that, the reviewer's concern about additional training-set-size costs for assembling all pairwise matrix elements and diagonalizing the subspace is well grounded and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This criticism is aimed at Fig. 2, which is a static benchmark of energy/force prediction on distorted hydrogen chains, not a molecular-dynamics comparison (preprint lines 93-96). Carr-Parrinello MD is therefore not the appropriate missing comparator for that figure as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper already uses CAS-based training for water and presents the method as a route to accelerated correlated dynamics, so asking about compatibility with standard multireference workflows such as CASSCF/RASSCF/CASPT2 is a legitimate extension question. However, this is partly a future-direction suggestion rather than a clear defect in the current manuscript, so experts could reasonably differ on how important it is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Because the paper uses CAS-based training states selected from mean-field orbitals for Fig. 3, concerns about active-space stability along dynamics are relevant to the method's practical applicability. The point is important, but the review item relies on general field knowledge without a specific reference or a concrete failure case from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Fig. 6 does not show CAS-based dynamics 'failing'; the caption and discussion say the CAS-trained continuation differs from CAS-CI by mostly sub-millihartree amounts and can even be variationally lower than the approximate CAS training energies (preprint lines 231 and 458-465). The reviewer's causal claim about failure from disparate CAS spaces is not supported by what the paper reports.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "For the Zundel example the paper compares dynamics mainly against HF/DFT and acknowledges that no exact reference trajectory is available for the full run (preprint lines 118-125 and 469-476). Requesting a higher-level reference dynamics or closer benchmark to the DMRG-trained surface is therefore a correct and important criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "In the Zundel case the main text reports Mulliken charges along a single trajectory, and the authors themselves note that ensemble, temperature, and other effects would be needed before making confident physical predictions (preprint line 125). Asking for chemically interpretable observables and ideally an ensemble of trajectories would meaningfully strengthen the evaluation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Fig. 7 indeed shows a geometry-dependent, oscillatory error between the continuation energy and reference DMRG along the hydrogen-chain trajectory (preprint lines 461-463). Asking for a short explanation is fair, but it is mainly interpretive clarification of an extended-data plot, so its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The Zundel comparison uses B3LYP for the DFT dynamics (Fig. 5), and self-interaction/delocalization errors are a well-known concern for dissociation-like situations. Suggesting a range-separated hybrid as a fairer DFT baseline is substantively reasonable, though the reviewer's causal attribution for the half-charge behavior is only speculative and under-supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The manuscript repeatedly uses 'chemical space' to describe interpolation across geometries of the same system (for example in the abstract and Fig. 1 discussion), which can plausibly confuse readers who reserve the term for variation across chemical compositions. This is a real but primarily terminological issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "A readability complaint about figures is valid if the figures are hard to parse, and several plots are dense, grayscale, and caption-heavy. Improving legibility could help understanding, but the reviewer gives no figure-specific examples, so experts may differ on whether this is a major presentation problem or only a minor one.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The title phrase 'near-exact electronic surfaces' could plausibly miscue some readers about the paper's scope, because the manuscript is really about accelerated ground-state dynamics rather than nonadiabatic surface-intersection physics. This is a minor wording issue, but whether the current title is actually misleading is subjective enough that experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The paper does derive analytic forces in the supplement and only briefly mentions code/data availability in the main text, so the suggestion to emphasize that contribution is fair (preprint lines 189-200; supplement lines 12-57). The second claim—that the authors should replace Hellmann-Feynman language with 'Pulay forces'—is more debatable because the supplement explicitly frames the derivation through Hellmann-Feynman in the variational subspace while differentiating basis-dependent integrals, making correctness genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The introduction does frame AI-BOMD as mostly DFT-based, but it already mentions explicit exceptions and cites correlated AIMD-related work, including MP2 liquid water and other beyond-DFT examples (preprint line 39 and refs. 27-29). The request for a more balanced literature discussion is reasonable and well supported by named references, but experts could differ on whether the current introduction is already balanced enough.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item points to concrete wording and notation problems that are real in the manuscript: overstrong 'exact electronic surface' phrasing, the plural 'potential energy surfaces' heading, and equations around lines 150-174 that drop or inconsistently present R-dependence and E_nuc. Because these inaccuracies occur in the core method presentation, fixing them would meaningfully improve the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer targets the core methodological justification: the paper fixes training amplitudes and t-2RDMs in an SAO representation even though the orbital basis itself changes with geometry (preprint lines 60-80 and 176-189). That is an understandable and important request for fuller justification, but because the paper explicitly defines the transferred-state construction this criticism sits close to the line between 'insufficiently justified' and 'conceptually already addressed,' so correctness is likely to split experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper's Zundel dynamics are mainly contrasted with HF and B3LYP, while the authors themselves acknowledge remaining uncertainties and the lack of an exact reference trajectory for the full system (preprint lines 118-125 and 469-476). Asking for a stronger corroborating reference is important and the reviewer backs it with specific alternative references and concrete pointers, even if one subargument about the feasibility of full DMRG AIMD is not airtight.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "All showcased applications are small gas-phase or quasi-1D systems (water vibration, hydrogen chain, gas-phase Zundel), so asking about prospects in condensed or disordered environments is a fair extrapolation question tied directly to the paper's motivation. This is a substantive applicability issue rather than a nit.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

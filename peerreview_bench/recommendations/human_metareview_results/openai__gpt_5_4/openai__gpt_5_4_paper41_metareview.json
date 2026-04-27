@@ -1,0 +1,620 @@
+{
+  "paper_id": 41,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper uses \"total abundance\" in the abstract and introduction before the metric is concretely illustrated; later Methods note varied abundance measures but give no examples, so the request for clearer early definition is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The Methods are long and dense, so a table or schematic could improve flow, but this is mostly a presentation judgment and its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The study models only maize, soybean, wheat, and rice, so broader generalization across crops is inherently limited; the paper does not fully resolve that external-validity concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The Bayesian analyses are presented as robustness checks after the main frequentist analyses, so saying the paper is excessively or unjustifiably using both frameworks mischaracterizes what the authors did.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper explicitly discusses the contrasting abundance and RCAR patterns in Results and Discussion, so the claim that these effects are not sufficiently highlighted is not supported by the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "\"Closing yield gaps\" appears early and prominently, but its plain-language meaning is not explained until later in Methods, so asking for an earlier explanation is justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The wording around \"more ecological communities\" is awkward enough to confuse readers, making this a valid but minor clarity issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The rationale for focusing on maize, soybean, wheat, and rice is given later in Methods rather than up front, so moving that explanation earlier is a valid presentation improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper mentions six predominant land-use classes at that point but does not list them there, so the request for explicit naming is valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Primary vegetation is discussed before it is formally defined in Methods, so moving the definition earlier would improve readability.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The Methods say abundance was reported using varied measures but give no concrete examples, so asking for examples is a reasonable clarity request about a core metric.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The paper already gives a detailed rationale for using EPIC-BOKU subsistence yields as a proxy for agricultural suitability, so the criticism that this choice lacks explanation does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The statistical-analysis section is dense and does not summarize the models as equations or a schematic, so this request would meaningfully aid understanding even though its ultimate importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The manuscript already adds a site-level random effect specifically to handle overdispersion and reports imperfect diagnostics, so the claim that overdispersion is automatically solved by the mixed Poisson model is too strong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "This is a straightforward request to tabulate a results subsection; it is a valid but minor presentation suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The paper does not equate large-ranged species with generalists, and the reviewer does not identify a concrete factual problem beyond a vague question.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The cited discussion paragraph shifts across wheat, maize/soybean, and rice landscapes with limited signposting, so the complaint about readability in a key interpretation section is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The quoted sentence about rice landscapes is awkward and not easy to parse, so the readability complaint is plausible, though how important it is is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The reviewer only says the 99.7% value seems too high, without showing that the reported value or its derivation is actually wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The text refers to straight-line artifacts in Figs. 4 and 5; those artifacts are present, but the link is not especially transparent, so the confusion complaint is fair but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "Figure 1a uses transparency/intensity differences across points, and the rendered figure does not clearly explain them, so the question is valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "Figure 1b’s size encoding is subtle and the legend/point styling can be hard to parse, making this a valid minor presentation complaint.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "Figure 1c is a schematic with unlabeled axes; although the caption explains the grey square, the overall meaning is not entirely self-evident, so this is a borderline but charitable criticism.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The green reference points in Figure 2 are explained in the caption as the baseline category, and the y-axis labels are visible in the provided figure, so the complaint does not clearly hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The supplementary diagnostic figures are not explained in the main text, so asking what the dashed red lines denote is a valid minor presentation issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The codebase itself uses overlapping supplementary figure numbering conventions, which supports the complaint that some supplementary figures share numbers.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper compares scenarios at a 1% production increase but does not justify why 1% is the chosen benchmark, and the authors themselves describe the scenarios as stylized extremes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The scenario design is imposed pixel by pixel and does not model what drives intensification or expansion geographically, so the concern about assumption-driven conclusions is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Because the paper’s \"intensification\" scenario does not include any land being spared/restored, the link to the land-sparing/sharing framework is indeed imperfect.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The Methods combine many datasets and transformations without a single overview figure, so the suggestion is reasonable, but the reviewer gives only broad support for the complaint.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The study is explicitly framed around the 2000-2005 data window rather than future climate projections, so criticizing it for not being a future-climate study is mainly a scope preference.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper’s year-2000 framing justifies its chosen datasets, so insisting on future-climate crop-model potential yields would amount to a different study rather than a demonstrated flaw here.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Asking for one sentence on other ecosystem services is a valid contextual suggestion, but it is minor and only loosely tied to the paper’s biodiversity-focused aims.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The expansion scenario is highly simplified and does not model broader geographic expansion constraints beyond within-pixel primary-vegetation conversion, so the realism concern is reasonable but underdeveloped.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This broad robustness concern is plausible because the framework uses strong stylized assumptions, but the item provides little specific support of its own.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The paper studies cropland rather than all farmland uses, so preferring \"cropland\" over \"farmland\" is a valid terminology correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The abstract quantifies yield-gap/intensification losses but gives only a qualitative statement for land conversion, so asking for parallel quantitative reporting is reasonable, though its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "These are broad figure-style preferences without a concrete defect tied to a specific map or panel, so the point is minor and only weakly supported.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The abstract contains the grammatical error \"yield also lead,\" so this is a valid typo correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The paper claims a global assessment gap; citing another study without showing it answers the same global question does not establish that the manuscript’s claim is false.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "A comma before \"whereas\" is a small grammatical correction, and the cited wording appears in the Introduction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The manuscript does not really discuss sustainable intensification as a distinct concept or unpack what kinds of management change higher yield represents, so this is a valid substantive discussion request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The reviewer explicitly says they do not know whether the claim about rice subsistence systems is true, so this does not amount to a verified criticism of the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The paper already notes crop-mismatch limitations, and asking for sharper wording about differences across crops is reasonable, but the importance of that change is arguable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "A blank before a full stop is a valid typo-level issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The per-pixel 1% production-increase framing is central to the study but is explained late in the Methods, so asking to surface it earlier is a valid and important clarity point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The expansion scenario keeps yields constant on newly converted land within a pixel, implicitly assuming new cropland has the same yields as existing cropland; that simplification could bias results and deserves discussion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The paper does separate a yield-gap-closing analysis from the 1% intensification-vs-expansion comparison, but the repeated yield-gap language can still make the distinction easy to blur, so this is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The concern that a uniform 1% yield increase may be too small to represent a meaningful management change is plausible, but it rests on extra assumptions that the reviewer does not substantiate from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "If that passage is hard to map onto the scenario definitions on first read, the clarification request is fair but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "Because the supplementary figure itself is not available in the provided source, the claim that its source is missing is difficult to verify decisively from the materials here.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Prior work has addressed land conversion and land sharing/sparing, but this paper still targets a different niche—global, crop-specific modeling of species richness, abundance, and RCAR—so the novelty criticism is partly right but debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Figure 3 and the broader results cover many crop/metric/context combinations, and the text emphasizes only a subset, so the complaint about limited discussion is well grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper explicitly justifies using yield rather than inputs, but whether yield is the right construct for biodiversity comparison is a conceptual judgment on which experts could reasonably disagree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "RCAR is only a proxy for biotic homogenisation and has interpretive limits tied to species-range data, so this is a real concern about a core metric, but the reviewer gives little paper-specific support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper never explains why 1% is the chosen production target, so questioning that benchmark is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The manuscript itself says the models do not fully fit assumptions and that some results should be interpreted cautiously, so the reviewer’s caution is directly supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper uses \"closing yield gaps\" prominently before defining it accessibly, so requesting a definition is justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The Introduction frames the work partly via land sharing/sparing, whereas the abstract avoids those terms, so the mild section-mismatch comment is valid but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer agrees the manuscript’s global-assessment claim is true; citing a European-scale study does not contradict that statement.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The 30%/70% thresholds are important to the design and are justified later in Methods rather than immediately where first used, so the clarity concern is valid though its importance is arguable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Complaining that the numbering starts at Table S4 is a trivial presentation nit rather than a meaningful criticism of the paper.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Figure 1 does show strong geographic clustering of site types, and although the models include biome/climate terms and random effects, the potential geography-treatment confound is a legitimate concern; the unexplained pale-blue point styling also adds confusion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Figure 2 is somewhat cramped between stacked panels, making this a valid minor formatting suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Figure 2 already provides point estimates with 95% confidence intervals, so the absence of separate significance markers is not a clear flaw.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "Figure 3 is information-dense and includes empty panels and heterogeneous patterns that are only partly unpacked in the text, so the readability complaint is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The Figure 3 caption explicitly explains why some panels show only one curve and why others are empty, so the claim that these relationships are omitted without explanation is not supported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "This is a simple typo-level missing-space comment and is valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "Figure 4a does suggest a stronger concentration of richness increases in tropical areas than the text alone conveys, but whether that underemphasis matters much is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "This is a concrete related-work suggestion with a specific citation about combining sharing and sparing, making it a valid but minor contextual addition.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "If the supplementary tables contain visible conversion artifacts, that is a real presentation issue, but the provided source materials do not include those tables directly, so verification is uncertain.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The paper spells out \"species richness\" in the main text, so if \"SR\" later appears in supplementary material without expansion, asking to define it is reasonable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The code and methods use both \"RCAR\" and \"RCAR_55km,\" so concern about inconsistent naming is a fair minor presentation point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "This is a trivial table-formatting issue that would not meaningfully affect the paper.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "The reviewer asks about the scale units of Supplementary Figure S23, but that figure is not available in the provided materials, so the concern is hard to verify decisively.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

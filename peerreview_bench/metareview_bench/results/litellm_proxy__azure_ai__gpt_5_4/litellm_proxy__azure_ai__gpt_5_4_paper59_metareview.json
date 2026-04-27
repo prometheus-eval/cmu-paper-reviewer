@@ -1,0 +1,219 @@
+{
+  "paper_id": 59,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper labels these as the three most polluting industrial sectors, but the main text gives only limited explanation of why these sectors were chosen and little direct quantitative context for their contribution to ambient PM2.5 burden, so the request for clearer motivation is fair. Devil's advocate on correctness: the Introduction does already say they are the three most polluting sectors and cites nationwide context, so a stricter reader could say the rationale is present. I still judge the point Significant because clearer motivation would help readers assess the scope of the study, though some experts could downgrade it as mainly background/context rather than a methodological problem; the cited missing-context evidence is specific enough. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper says OS contributions of metals and PAHs were estimated from a cited reference model, but it does not explain how metal valence assumptions were handled even though the reported elemental measurements come from ICP-MS totals, so the transparency concern is valid. Devil's advocate on correctness: the authors may simply have followed the prior model exactly and treated those assumptions as standard enough not to restate. I judge this Significant because the metals-versus-PAHs decomposition supports an important mechanistic claim, and the reviewer gives enough specifics about ICP-MS, valence, and the cited model for a meta-reviewer to verify the concern. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper does not meaningfully compare its industrial-PM toxicity findings against prior experimental toxicity studies, so the request for such comparison is fair. Devil's advocate on correctness: the manuscript cites prior work on PM toxicity and source-specific composition, so one could argue some contextualization already exists. I still view the point as Significant because direct comparison with earlier experimental results would strengthen interpretation, though some experts may see it as more of a literature-context issue than a core flaw; the absence is specific enough to verify from the paper. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: despite the paper's health-oriented framing, it does not really contrast its assay-based findings with the environmental-epidemiology literature on PM2.5 composition and health, so this request is valid. Devil's advocate on correctness: the authors may have intended this as a toxicology-and-policy paper rather than an epidemiology synthesis, so some readers may not demand extensive comparison. I judge the issue Significant because connecting the assay-based metric to the broader health literature would materially improve interpretation, although some experts could still rate it as mainly contextual; the missing comparison is straightforward to verify. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I lean Correct: the sentence describing sulfate and nitrate as commonly innocuous is arguably oversimplified given the reviewer's concern about epidemiologic evidence and interactions with acidity and metals. Devil's advocate on correctness is quite plausible here, because the paper says these species are \"commonly considered\" innocuous rather than absolutely harmless, and in context the authors are contrasting them with metals and PAHs. If one accepts the concern, it is Significant because it affects the framing of what components matter, but the reviewer gives only general external claims without specific citations, so my own evidence label is Requires More. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the paper explicitly focuses its targeted toxic chemicals on metals and PAHs, but it does not explain why black carbon or elemental carbon, which it also measured, was excluded from that targeted discussion. Devil's advocate on correctness: the authors may have excluded EC because it is not central to their chosen oxidative-stress reference model, so some readers may not see the omission as a real problem. I nonetheless judge the point Significant because a short justification for the component-selection choice would strengthen the chemical interpretation, although some experts could view it as a more limited scope clarification; the reviewer points to the exact sentence where the selection is made. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: Supplementary Table 4 reports only broad categories (OC, EC, WSI, element) and does not include explicit sulfate/nitrate proportions, so the suggested addition is factually missing. Devil's advocate on correctness: the paper does provide aggregate WSI information and related composition figures, so a reader could argue the relevant composition is partly present already. I judge this Marginally Significant because more detailed constituent breakdown would be useful but is mainly a supplementary-presentation refinement, and the specific missing-table content is easy to verify. Prediction: correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I lean Correct in the broader sense that the computation behind Supplementary Figure 7a is not described in much detail, even though the paper names the chemical/concentration addition reference model. Devil's advocate on correctness is very plausible, because the main text and supplementary caption do in fact identify the model used, so a stricter expert could say the methodology is already stated. If treated as a real issue, it is Significant because Figure 7a supports the claim that metals dominate OS potency, but the reviewer does not explain what part of the existing description is inadequate, so my own evidence label is Requires More. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I lean Correct: the methods use heated stack sampling of primary emissions and do not use a dilution sampler, so the reviewer is right that condensable material more representative of ambient transformation is not captured. Devil's advocate on correctness is also plausible, because the paper is explicitly studying primary PM2.5 from industrial sources and even acknowledges that secondary/fugitive aerosols are omitted, so one could argue the sampling is appropriate for the stated scope. If one accepts the concern, it is Significant because it bears directly on how health-relevant the toxicity measurements are, and the reviewer provides concrete methodological and literature pointers. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I lean Correct that the paper does not mention any post-collection handling designed to preserve aerosol acidity, so the reviewer's request for clarification about this aspect is factually grounded. Devil's advocate on correctness is plausible because the reviewer's stronger claim about what \"proper\" storage requires is a domain-norm assertion that the manuscript itself does not establish, and experts could disagree about how necessary that handling is for this study design. If the concern is accepted, it is Significant because acidity could affect bioavailable metals and thus toxicity interpretation, but my own evidence label is Requires More because the review item does not fully justify that the omitted handling is required rather than merely preferable. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I lean Correct: the paper's discussion treats sulfate/nitrate as relatively innocuous and does not acknowledge the reviewer's interaction argument that acidic sulfur can modulate metal toxicity, so the criticism targets a real simplification. Devil's advocate on correctness is still plausible because the authors only say these species are commonly considered innocuous and are clearly emphasizing relative rather than absolute toxicity. If treated as valid, the issue is Significant because it affects the paper's interpretation of which components matter mechanistically, and the reviewer provides a concrete external example plus a clear connection to the disputed sentence. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "My own judgment is Not Correct because calling the overall stack-sampling and handling methodology \"so flawed\" overstates the case relative to the paper's explicit scope and the standard primary-emission methods it uses. Devil's advocate on correctness is nonetheless plausible: if one accepts the reviewer's earlier points about missing condensables and possible acidity-handling problems, a charitable expert could summarize the whole toxicology workflow as fundamentally compromised. Because the main disagreement is about the truth of this broad summary claim itself, I do not assign downstream significance or evidence labels in my final axes. Prediction: disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper uses in vitro A549 oxidative-stress and cytotoxicity endpoints to build a \"health-relevant\" exposure index and then makes strong policy claims, but it does not show epidemiological validation linking that index to real-world health outcomes. Devil's advocate on correctness: the manuscript does call TPAE a risk index rather than a direct mortality estimate and acknowledges limitations of in vitro assays, so a lenient reader could view it as exploratory rather than over-claiming. I still judge the point Significant because this limitation directly affects the central policy interpretation, and the reviewer supplies specific quotations and relevant outside references. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper uses methanol-water extraction for toxicity testing and does not discuss how extraction-method dependence could influence chemistry recovery or cross-sector toxicity comparisons. Devil's advocate on correctness: because all sectors were processed with the same protocol, one could argue the comparative ranking is still informative even if absolute toxicities depend on extraction. I nevertheless judge the issue Significant because the inter-sector comparison is central and the reviewer gives a very specific evidence chain from the methods and from Roper et al., including why metal-rich ISI particles may be especially affected. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I lean Correct: Supplementary Table 7 does assign identical cement toxic-equivalent values across provinces, and that choice can miss residual within-industry heterogeneity when used in spatial analysis. Devil's advocate on correctness is plausible because the supplementary methods explicitly justify this by saying cement toxicity varies only slightly across regions and because precalciner kilns dominate the industry, so a skeptical expert may find the simplification reasonable. If one accepts the concern, it is Significant because province-level TPAE maps and rankings depend on these toxicity equivalents, and the reviewer points to the exact table entries and the paper's own justification. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I lean Correct that the paper's cost-effectiveness discussion implicitly treats reductions in toxic-potency-adjusted mass as if they were directly comparable health gains, even though no outcome-linked exposure-response model is provided. Devil's advocate on correctness is plausible because the formulas are explicitly for cost per adjusted mass or exposure-risk index, not for avoided deaths, so a strict reader could say the reviewer is criticizing a claim the paper does not literally make. If the concern is accepted, it is Significant because the paper uses these ratios to argue for sector-priority policy, and the reviewer cites the exact formulas and interpretation at issue. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Not Correct: the reviewer's main premise is wrong because the methods say the attribution scenarios remove only primary PM2.5 emissions from each sector, so the resulting C_i,s is not a total sector contribution that includes modeled secondary sulfate/nitrate. Devil's advocate on correctness: the phrase \"ambient PM2.5 concentration attributable to each sector\" could mislead a fast reader into assuming total sector attribution. Still, the methods and limitations explicitly state that source-specific secondary aerosols were not considered, so experts should mostly agree that this criticism targets the wrong calculation. Prediction: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper compares its proposed ISI-priority strategy to power-sector ULE implementation even though the supplement makes clear that power-sector ULE was largely already implemented before the 2019 base year, so the framing can be misleading if read as a present-day choice. Devil's advocate on correctness: the comparison is still valid as a retrospective policy benchmark, and the paper does explicitly describe ELE_noULE as the influence of past power-sector ULE implementation. I judge the issue Significant because the abstract-level comparison shapes how readers interpret the paper's policy message, though some experts may see it as mainly a framing clarification rather than a substantive flaw; the cited passages are precise enough to verify. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I lean Correct that using methanol/water extracts rather than intact particles could miss insoluble metal-rich fractions and therefore underestimate some toxicity pathways for ISI emissions. Devil's advocate on correctness is plausible because the paper uses the same extraction protocol across sources and the reviewer's stronger claims about insoluble oxides and their quantitative importance rely on outside assumptions not demonstrated in the manuscript. If accepted, the point is Significant because it bears on the central cross-sector toxicity comparison, and the reviewer provides a concrete chain from the extraction method to the chemistry of iron-rich particles. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the supplement first defines sample-level TU as 1/EC or 1/IC, but then computes provincial \"average\" TU as the reciprocal of an emission-weighted mean endpoint, which is mathematically non-equivalent to averaging the already-defined TU values. Devil's advocate on correctness: one could argue the authors intentionally defined a province-level effective endpoint first and only then converted it into TU, so the algebra is a design choice rather than a mistake. I still judge this Significant because the aggregated toxicity factors feed directly into TPAE and the policy ranking, and the reviewer quotes the exact formulas and the logical inconsistency clearly enough for independent verification. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper makes strong health-oriented control claims using TPAE built from extracted-stack-PM A549 assays, but it does not validate TPAE as a surrogate for real-world human health outcomes. Devil's advocate on correctness: the authors do describe TPAE as a risk index and openly note limitations of in vitro assays, so a more charitable reader could see the metric as exploratory rather than definitive. I nonetheless judge the issue Significant because the central recommendation to prioritize ISI rests on that index, and the reviewer provides exact quotations plus a clear explanation of the missing outcome linkage. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper explicitly says source-specific secondary and fugitive aerosols were not considered and that attribution scenarios remove only primary PM2.5 emissions, so the reviewer is right that sector-attributable exposure burdens are incomplete. Devil's advocate on correctness: because the paper is transparent about this limitation, a reader could argue the ranking is meant only for primary industrial PM rather than total sectoral PM burden. I still judge the point Significant because the paper draws broad policy-priority conclusions from these exposure estimates, and the reviewer cites the exact limitation and attribution-method passages needed to verify the claim. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the provided materials include WRF source code but do not include CMAQ configurations, the ABaCAS inventory, or the post-processing scripts needed to reproduce the TPAE and cost analyses. Devil's advocate on correctness: some readers may treat code/data release as outside the paper's core scientific validity and note that the manuscript cites prior work for parts of the modeling pipeline. I still judge the issue Significant because the headline quantitative results depend on that computational pipeline, and the reviewer gives highly specific evidence from the methods and from the actual contents of the code bundle. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "paper_id": 52,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out the absence of a solid AuNW control, which is a factually correct observation as only Ag@AuNW and AgNW were used. This is a Significant point because comparing against solid AuNW could further demonstrate the benefits of the hollow structure. The evidence is Sufficient as it directly points to the missing baseline. A devil's advocate might argue it's not strictly necessary, but it's a standard control, so experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for the thickness of the AuHNW film, noting a comparison to a 100 nm Au film in Fig 2. This is Correct because the thickness is not specified in the text. It is Significant as film thickness influences resistance. The evidence is Sufficient because it points directly to the figure and missing metric. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer questions the justification for using 30% H2O2 to test chemical stability. This is Correct, as the physiological relevance of this harsh condition is not explained. It is Significant because stability in relevant conditions is critical for a long-term sensor. The evidence is Sufficient, pointing directly to the specific chemical used. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out that the transmittance of the whole integrated device (including the opaque ASIC) is not benchmarked. This is Correct. It is Significant because a contact lens must be transparent overall. The evidence is Sufficient, identifying specific opaque components. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes missing details in the electromechanical characterization (e.g., 2-point vs 4-point probe, initial resistance). This is Correct. It is Significant for reproducibility and understanding the measurement setup. The evidence is Sufficient, pointing directly to Figure 2g and the missing details. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer suggests building a full contact lens with Ag@AuNW as a control. This is Correct, as it was not done. However, a devil's advocate could argue this is only Marginally Significant because the material-level superiority of AuHNW was already established, making a full device control excessive. Because of this plausible counter-argument, experts would likely disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks for more details on the ASIC chip (power consumption, etc.). This is Correct in that these details are not in this paper. However, a devil's advocate would point out that the paper explicitly cites reference 38 for the detailed principle of the wireless communication system/ASIC. Therefore, experts would likely disagree on whether this criticism is Correct/applicable or if the citation suffices.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks about the effect of human behaviors (blinking, lying down) on the device. This is Correct, as it's not discussed. However, a devil's advocate would argue that since this is an animal study on rabbits, assessing human behaviors is out of scope. Because of this scope disagreement, experts are likely to disagree on the correctness/validity of the criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer points out a large spread in Figure 6b and less data at higher IOPs. This is Correct based on the figure. It is Significant as it impacts the reliability of the sensor. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer asks for a top view in Supp Fig 9 and how perfect fitting is determined. This is Correct. It is Marginally Significant as it is a minor presentation/methodological detail that wouldn't drastically change the paper. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer notes a missing scale bar in Supp Fig 3b. This is Correct. It is Marginally Significant, being a minor presentation nit. The evidence is Sufficient, pointing directly to the figure. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer requests a discussion on diurnal-nocturnal IOP fluctuation. This is Correct, as the paper does not deeply address how natural fluctuations affect the drug release algorithm. It is Significant for real-world application. The evidence is Sufficient, appealing to a known domain concept. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for a discussion on how the patient will use the lens, noting daily vs weekly wear. The paper explicitly states 'We designed two different types of DDS for daily and weekly uses'. A devil's advocate would argue the reviewer is Not Correct because the paper already defined this. However, the reviewer might mean a more detailed clinical protocol is missing. Thus, experts would disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks for a discussion of why hollow nanomaterial is better than bulk. This is Not Correct, as the introduction explicitly discusses this, citing unique optical properties, increased surface area, transmittance, and sensitivity. Since the claim is factually wrong, significance and evidence are null. Experts would agree it is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer questions the justification for 30% stretchability being 'reasonable'. This is Correct, as the paper states it but doesn't justify it against physiological corneal stretch. It is Significant for the mechanical design. The evidence is Sufficient, quoting the paper. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks about performance above 35 mmHg and the algorithm if IOP doesn't respond. This is Correct, as these are not detailed in the paper. It is Significant for extreme clinical cases. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer questions the loaded drug amount given the higher bioavailability of contact lenses compared to eye drops. This is Correct and a sound logical deduction not addressed in the text. It is Significant for dosing safety. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests including the complete drug release profile with one reservoir in the main manuscript. This is Correct as a suggestion. However, a devil's advocate would argue it's only Marginally Significant since Fig 4f/g already show release data, making this mostly a presentation choice. Thus, experts would disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer claims it is not clear what Figure 4G demonstrates and asks if it is cumulative. This is Not Correct, as the caption for Fig 4g explicitly states 'The cumulative release of timolol'. Since it is factually wrong, significance and evidence are null. Experts would agree.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer points out that the duration animals wore the lenses for the biosafety study is not clearly stated. This is Correct, as the text describes in vitro times and treatment schedules but lacks clear duration for the in vivo corneal damage assay. It is Significant for evaluating safety. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer asks to show IOP readings on the off-treatment days (Day 2 and 4) to understand the sustained effect. This is Correct, as the data is missing. It is Significant for evaluating the 'every other day' rationale. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks about the safety of regularly replacing the lens due to limited reservoirs. This is Correct, as the paper does not address the long-term corneal risk of frequent application. It is Significant for clinical viability. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer questions the pharmacokinetics of a 30-min release vs a bolus drop, the choice of animal models, and the small sample size. This is Correct, as the paper lacks this pharmacokinetic comparison and uses n=3. It is Significant for evaluating efficacy. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer critiques the use of the word 'menacing' in the introduction. This is Correct, as it may be an overstatement. It is Marginally Significant because it is purely a stylistic/wording issue that doesn't impact the technical work. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out that IOP is not an indicator of glaucoma, correcting the introduction text. This is Correct medically. However, a devil's advocate would argue it's only Marginally Significant since it's introductory framing in an engineering paper. Experts would likely disagree on whether this medical inaccuracy is Significant or Marginally Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer disputes the paper's claim that tonometry is expensive and uncomfortable. This is Correct from a clinical standpoint. Like the previous item, experts would disagree on whether correcting this motivational framing is Significant or Marginally Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer notes that the phrase 'critical mismatch' regarding IOP measurement is unclear. This is Correct. It is Marginally Significant as it is a minor phrasing issue that doesn't obscure the main technical points. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer states the text on eye drop adherence is inaccurate, but provides no explanation. This is Correct (the text might be oversimplifying). It is Marginally Significant as it relates to intro framing. However, the evidence Requires More because the reviewer simply asserts it is inaccurate without citing why or where. Experts would agree the evidence is lacking.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer finds it unclear how resistance is measured with changes in IOP. This is Correct, as the exact methodology for the artificial eye test is brief or missing in the main text. It is Significant for reproducing the sensor validation. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the system is not truly an automated closed-loop theranostic device because in vivo drug release was scheduled/triggered rather than autonomously governed by the sensor. This is Correct based on the experimental description. It is Significant as it challenges a core claim of the paper. The evidence is Sufficient, pointing to the discrete reading and release protocol. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques the small sample size (n=3) and potential pseudoreplication in the statistical analysis. This is Correct. It is Significant because it affects the robustness of the efficacy claims. The evidence is Sufficient, quoting the exact sample sizes and p-values from the paper. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that the sensor requires per-subject calibration to measure absolute IOP, limiting its clinical utility. This is Correct, as described in the supplementary methods. It is Significant, being a major limitation of strain-based lenses. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer critiques the biocompatibility assessment for relying on short-term tests and a 39.3 C chip temperature without comprehensive evaluation. This is Correct. It is Significant for safety validation. The evidence is Sufficient, citing the specific cell line, duration, and temperature. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the paper fails to evaluate the toxicity of gold ions released during the electrochemical dissolution. This is Correct; the biosafety tests do not explicitly isolate this dissolved byproduct. It is Significant as it poses a real ocular risk. The evidence is Sufficient, pointing to the chemical mechanism. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer highlights that the individual calibration method is impractical for clinical use. This is Correct, as inducing IOP changes in patients for calibration is not feasible. It is Significant because it limits real-world application. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out the risk of thermal injury from the chip reaching 39.3 C, higher than normal ocular temperature. This is Correct based on the paper's own admission. It is Significant for safety. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer states that the paper ignores comparisons with state-of-the-art IOP sensors like graphene, only comparing to its precursor. This is Correct. It is Significant because it leaves the device's relative performance unclear. The evidence is Sufficient, pointing to cited papers. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer critiques the small sample size (n=3 per group) in the in vivo experiments. This is Correct. It is Significant as it weakens statistical conclusions. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that using the fellow eye as a negative control is flawed because timolol has known systemic crossover effects. This is Correct. It is Significant as it undermines the internal validity of the therapeutic claims. The evidence is Sufficient, pointing to the specific experimental design. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques the small group sizes (n=3) and unspecified statistical approach (e.g., handling of paired eyes/repeated measures). This is Correct. It is Significant because it affects the reliability of the p-values. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that relying on per-rabbit calibration curves limits the sensor's interpretability as a direct mmHg measurement. This is Correct. It is Significant because it impacts the generalizability of the device. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer contrasts the claim of continuous, real-time monitoring with the actual 30-minute in vivo testing window and scheduled drug release. This is Correct. It is Significant as it shows the validation falls short of the claims. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that the provided code is incomplete and hardware-specific (e.g., FPGA instead of ASIC RTL, missing Java classes), limiting reproducibility. This is Correct, as verified in the code directory. It is Significant for open science and reproducing the telemetry stack. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

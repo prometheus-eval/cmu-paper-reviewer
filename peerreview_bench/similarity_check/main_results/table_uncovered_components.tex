@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{10}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l c c c c}
+\toprule
+\textbf{Metric} & \textbf{Uncovered} & \textbf{Matched} & $\chi^2$ & $p$-value \\
+\midrule
+Correctness & 81.8\% (79) & 84.4\% (81) & 1.45 & $0.229$ \\
+Significance $\geq 1$$^{\dagger}$ & 87.4\% (75) & 91.8\% (80) & 2.81 & $0.094$ \\
+Significance $= 2$$^{\dagger}$ & 57.6\% (75) & 63.5\% (80) & 14.98 & ${<}\,0.001^{***}$ \\
+Evidence sufficient$^{\ddagger}$ & 93.5\% (71) & 93.2\% (80) & 0.00 & $0.971$ \\
+\midrule
+Fully positive (composite) & 48.1\% (79) & 54.8\% (81) & 13.71 & ${<}\,0.001^{***}$ \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Component-level comparison of uncovered vs.\ matched AI review items (paper-level averaging).}
+``Uncovered\'\' items have no similar counterpart in any human review of the same paper (max ordinal similarity $< 2$).
+``Matched\'\' items have at least one similar human counterpart.
+Values are per-paper means averaged across papers; $N_p$ is the number of papers contributing to each rate.
+Each metric applies the annotation cascade: significance is evaluated only for correct items;
+evidence sufficiency only for correct and at least marginally significant items.
+The fully-positive composite requires all three (correct + significant + sufficient evidence).
+$p$-values from item-level $\chi^2$ tests.
+$^{*}p < 0.05$, $^{**}p < 0.01$, $^{***}p < 0.001$.}
+\label{tab:uncovered-components}
+\end{table}

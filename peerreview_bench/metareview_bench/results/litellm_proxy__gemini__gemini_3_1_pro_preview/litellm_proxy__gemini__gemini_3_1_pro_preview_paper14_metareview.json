@@ -1,0 +1,611 @@
+{
+  "paper_id": 14,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the paper lacks a clear focus or objective. However, the objective is explicitly stated in the final paragraph of the Introduction (to characterize circadian patterns...). The reviewer's core claim is factually incorrect. A charitable expert might argue that a purely descriptive goal lacks a testable hypothesis, making it effectively an unclear objective, leading to disagreement.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the lack of controls, chronotype accounting, and external metrics for sleep. This correctly reflects the paper's retrospective limitations. Addressing this would improve the study. The reviewer explicitly points to the lack of sleep metrics. A devil's advocate might argue this is an inherent limitation of retrospective data that the paper already acknowledges, making the criticism only marginally significant for this specific venue, causing disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer highlights the circularity in using LFP power to define day/night states. The paper's Methods do state they used LFP high/low periods to determine when each period occurred. This is a significant methodological concern. An opposing expert might argue the paper mapped these periods to external clock times rather than strictly equating high LFP with daytime, meaning it isn't fully circular, leading to correctness disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks for clarity on when extended-release medications were taken, as this impacts the LFP interpretations. This is factually true and checking this would substantively improve the conclusions drawn. The evidence is sufficient as the reviewer cites specific lines. Experts would widely agree this is a substantive and verifiable concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the paper conflates day/night with awake/asleep. The paper indeed makes this leap in places, which affects the conclusions. This is a significant issue whose correction would improve the clarity of claims. The reviewer provides sufficient evidence. No strong counterargument exists, so experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer suggests that the phrase 'altered by' implies causality. This is an accurate reading of the text. However, it is a minor phrasing issue that does not fundamentally undermine the study, making it marginally significant. The evidence is clear. Experts would agree it is a minor wording fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks for clarification on the frequency band in the abstract. It is true that the abstract phrasing could be more specific. This is a presentation nitpick, so it is marginally significant. The evidence is sufficient. Experts would agree on its marginal importance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer points out that 'direction of circadian rhythm' is ambiguous and suggests a rewrite. The abstract does use this phrasing. It is a minor stylistic fix, making it marginally significant. The evidence is sufficient. Experts would agree it's minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer suggests including the number of hemispheres in the abstract. The abstract currently lacks this exact breakdown. Adding it would be nice but isn't critical, making it marginally significant. The evidence points to a specific absence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer questions the relevance of the aDBS paragraph in the introduction. The paper does rely heavily on this framing. Some experts might see this as a marginal presentation point, while others might view it as a significant structural flaw in the paper's narrative. The evidence is sufficient. Disagreement on significance is likely.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer clarifies a detail about a cited paper (van Rheede et al.) lacking external sleep validation. This is a valid correction but only affects a minor reference point, making it marginally significant. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer requests references for a specific statement in the introduction. The paper does lack references here. Adding them would be helpful but minor. The evidence points out the missing citation. Experts would agree on its marginal impact.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer asks why a specific data collection window (13 +/- 35 days) was chosen. The paper doesn't justify this window, which is a significant methodological ambiguity. The evidence is sufficient by pointing out the absent justification. Experts would agree this is an important clarification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The reviewer asks if frequency bands were chosen in the on-medication or off-medication state. The paper omits this detail, which could skew results. This is a significant methodological gap. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The reviewer asks how many subjects were excluded due to incompatible sensing configurations. The paper doesn't report this attrition rate. It's a significant methodological detail. Evidence is sufficient. Experts would agree this should be reported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The reviewer asks for fractions of each frequency band across hemispheres to be reported. It's a valid data presentation request, though somewhat minor since the main bands are mentioned. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The reviewer points out a typo ('reordered' instead of 'recorded'). This is correct. It is a trivial typo, thus marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The reviewer questions the inclusion of the gamma group since it was targeted differently (based on dyskinesia). The paper does state this different targeting. An expert might argue it's a significant confound, while another might see it as just a marginal grouping issue given the small n. Evidence is sufficient. Prediction: disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The reviewer requests details on the 5-day windows selected for Figures 1 and 2. The paper lacks these specifics, which are important for interpreting the representative examples. This is significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The reviewer asks to explicitly state the comparison being made in the ANOVA. It is a valid request for clarity in the Results section, though mostly presentational. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The reviewer questions the mixed use of parametric and non-parametric tests and the choice of comparisons. The paper's statistical approach is indeed arguably arbitrary here. This is a significant methodological concern. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The reviewer asks for a missing p-value. The paper omits it. Adding it is a minor fix. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The reviewer asks for clarification on the dependent variable in the GLM. The paper does state it's the 'change in Beta band', but could be more precise. Some experts might find this significantly confusing, while others might find it only marginally so. Evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The reviewer spots a discrepancy in subject numbers (119 vs 117). This is a correct observation of a minor error. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The reviewer notes missing demographic data like unilateral/bilateral fractions. The paper lacks these. Some experts would consider this a significant omission for a clinical study, while others might see it as marginally important. Evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The reviewer notes the lack of description of how patient events were selected. The paper does not provide this. It is a significant missing detail for understanding the validation. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "The reviewer notes the lack of description for artifact handling. The paper omits this standard preprocessing detail. This is significant for evaluating data quality. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "The reviewer asks for units for 'brain recording'. A valid but minor presentation issue. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "The reviewer asks to describe sensing-available configurations. The paper mentions them without detail. Valid minor point. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "The reviewer requests the LEDD calculation method. It's a standard metric, so the omission is minor. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "The reviewer points out a contradiction regarding whether stimulation parameters were available. The paper indeed contradicts itself (Discussion vs Methods). This is a significant internal inconsistency. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "The reviewer identifies several missing details in Figures 1 and 2 (events, scale, generation of plot C). These are significant omissions that hinder interpretation of the figures. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "The reviewer points out figure numbering and symbol definition errors in Figure 3. These are minor presentation issues. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 34,
+          "reasoning": "The reviewer points out a mislabeled Figure 4. This is a minor typo. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 35,
+          "reasoning": "The reviewer asks for variables in Table 2 to be defined. Minor presentation fix. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 36,
+          "reasoning": "The reviewer suggests a floor effect in the Supplementary Figure. This is a plausible alternative interpretation of the data. An expert might see this as a significant interpretive point, while another might view it as just a marginal nuance. Evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 37,
+          "reasoning": "The reviewer lists several typos. These are correct and clearly minor. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks for more in-depth exploration of the novel finding that beta increases at night in GPi, citing possible confounders like spindles or artifacts. This is a valid factual concern. Addressing it would improve the paper's discussion. The reviewer cites specific external knowledge. A devil's advocate might argue the retrospective nature precludes this analysis, making it a marginal point for this specific paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the heatmaps in Figures 1 and 2 mix different frequency bands, which is true and misleading since bands modulate differently. Splitting them would clarify the results. The reviewer cites the 46.7% theta/alpha statistic. Disagreement is plausible because Figure 3 does break down by band, so some experts might view the heatmap issue as only marginally significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer questions the automated circadian detection algorithm, noting it could fail in cases like insomnia. This correctly identifies a major methodological weakness. Resolving or fully caveating it is significant. The reviewer explains a specific failure mode. Experts would generally agree this is an important point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks how ER levodopa was factored into the sleep/wake classification algorithm. It was not factored in, which is a correct observation and a significant potential confound since the medication affects the exact signals used to classify sleep. The evidence is sufficient. Experts would agree this needs addressing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks if sleep scales (PSQI, etc.) were collected to explain variance. They were not, as it's a retrospective study. It's a valid limitation to point out. Some experts might see it as significant to add to the discussion, while others might find it marginally significant since the data cannot be retrospectively acquired.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks for the rationale behind target selection given the GPi/STN imbalance. This is a valid question. It is marginally significant because it provides clinical context but doesn't invalidate the within-target findings. The evidence points to the numbers. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks for contact locations to explain the difference between beta-increase and beta-decrease patients. The paper only uses a binary dorsal/ventral factor in the GLM. Providing more precise anatomical detail could explain the variance. Disagreement is likely: some experts might see this as crucial, others as beyond the scope of the current GLM.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer notes a trend in Supplementary Figure 1 and asks for an explanation. The observation is factual. Explaining it would add value. Disagreement is possible on significance, as it concerns a supplementary figure and a secondary effect.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer spots the 119 vs 117 subject count discrepancy. This is a correct observation of a minor error. It is marginally significant. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer points out a figure numbering error. This is correct and a minor presentation issue. It is marginally significant. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that using normalized (z-scored) power obscures whether diurnal changes are driven by daytime drops or nighttime spikes, and asks for absolute power comparisons. This is factually correct. Absolute power would clarify the interpretation of the results significantly. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer raises the confound of sleep spindles (9-16Hz) overlapping with the tracked low-beta band, which the paper largely ignores. This is a very strong physiological point that could explain the 'novel' finding of increased nighttime beta. Addressing this is significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks if clinical phenotype (e.g., tremor-dominant) correlates with the inverse circadian profiles. This is a valid factual question. Some experts would view this as a significant missed opportunity in the analysis, while others might view it as marginally significant due to the retrospective nature and potential lack of data.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks for a discussion of data quality and artifact sources (ECG, motion). The paper lacks this discussion. While a standard request, experts might disagree on whether it is significant or just marginally significant for this specific journal/format.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks if profiles are patient-specific by checking correlation between hemispheres in bilateral patients. This is a great point: they have 165 hemispheres from 119 subjects, so they can test this. This would add significant value. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks for more discussion on canonical bands and sleep spindles in the introduction/discussion. The paper does discuss NREM/REM to some extent, but misses spindles. This is a valid addition, making it marginally significant as a discussion point. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer points out that smoothing across patients in Figures 1C and 2C is inappropriate and asks to split them by canonical band. This is a valid visualization concern. Disagreement on significance is likely: some might see mixing bands as highly misleading (significant), while others might note Figure 3 already breaks them down (marginal).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer notes the nighttime beta increase in Supp Fig 1 when stimulation is turned up, asking for an explanation. This is correct. Explaining this secondary effect is arguably significant, but could be seen as marginal since it's just a supplementary figure. Disagreement on significance is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer highlights confusing terminology (day vs sleep) and ambiguities in the automated circadian detection algorithm for datasets with no significant differences. These are valid methodological clarity issues. Clarifying this is significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notes that figure font sizes are small. This is a correct observation and a minor presentation fix. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer points out there are many typos. This is correct. It is a minor presentation issue. Marginally significant. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out the circularity of defining day/night based on LFP periods without independent validation. This accurately identifies a major methodological weakness of the study. The reviewer provides specific quotes from the paper and compares it to established standards. Experts would agree this is a significant concern that requires at least a strong caveat.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer brilliantly catches a major statistical discrepancy: the paper claims to use a Mann-Whitney U test (which is inappropriate for one-sample tests against 0), but the supplementary code actually uses a parametric one-sample t-test (ttest_1samp). This is factually correct, highly significant for reproducibility and statistical rigor, and perfectly evidenced by citing the exact code lines. Experts would universally agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the study treats nighttime as homogeneous, ignoring NREM/REM differences that strongly affect beta power. This is a correct physiological point. The evidence is sufficient. However, as it is a limitation of the retrospective data, some experts might consider it a significant confounding factor, while others might view it as a marginally significant point since it cannot be fixed without a new study.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that therapeutic stimulation confounds the results and that TEED is an inadequate control. The paper does acknowledge this limitation. A charitable expert might argue the authors did what they could by including TEED and adding a limitation section, making this criticism only marginally significant. A stricter expert would agree it fundamentally limits the conclusions. Prediction: disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer highlights the severe sample size imbalance between GPi and STN, pointing out that STN sub-analyses (n=5 or n=6) lack statistical power to draw robust conclusions. This is factually true and a significant issue with the paper's claims. The evidence references specific numbers from Figure 3. Experts would agree this is a significant overstatement of results in the STN cohort.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer uncovers a severe discrepancy between the manuscript's Methods (which describe a complex adaptive algorithm for defining day/night periods) and the supplementary code (which uses hardcoded 0-5 and 15-20 windows). This is factually correct and heavily impacts reproducibility and trust in the reported methods. The evidence directly compares the text and the code. Experts would universally agree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that using fixed time windows (as revealed in the code) or signal-derived periods (as in the text) without objective sleep validation is methodologically flawed given inter-patient variability. This is a correct physiological and methodological critique. The evidence is sufficient. Experts would agree this is a significant limitation of the study design.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that using sparse patient-marked events in only 61% of recordings as a proxy for wakefulness is insufficient to validate circadian/sleep phases. This is factually true based on the paper's own numbers. It represents a significant methodological gap in linking LFP data to actual sleep/wake states. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer identifies that clinicians selecting the tracking frequency based on prominent peaks introduces a selection bias, skewing the cohort towards specific electrophysiological phenotypes. This is correct. Disagreement on significance is likely: some experts might see this as a critical bias affecting interpretation, while others might view it as an inherent, accepted limitation of retrospective commercial DBS data.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes the causal language ('modulate') used for extended-release medications in a retrospective study, noting unmeasured confounders like disease severity. This is a correct point about causal inference. A strict expert would view causal overclaiming as a significant flaw requiring revision, while a lenient expert might see it as just a marginally significant phrasing issue given the GLM controls. Prediction: disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer provides a deep statistical critique of the circadian detection algorithm, noting that defining groups based on the extrema of the same signal and then calculating a difference constitutes 'selection-on-the-outcome', guaranteeing an inflated effect. This is a mathematically correct and devastating critique of the core method. The evidence points directly to the paper's formulas. Experts would universally agree this is highly significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out pseudoreplication: treating 165 hemispheres from 119 patients as independent observations without hierarchical/mixed modeling. This violates the assumption of independence and likely inflates p-values. This is a correct statistical critique. The evidence is sufficient, pointing to the subject counts and lack of hierarchical models in the methods. Experts would agree this requires re-analysis.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly identifies that the code depends on an internal, proprietary BRAVO server (with IP addresses) and missing Excel files, making computational reproducibility impossible. The evidence quotes the exact code lines showing these dependencies. This is a major methodological failure for a computational study. Experts would agree this is significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer catches major internal inconsistencies: the text reports z=2.46/p=0.016 for ER levodopa while Table 2 reports z=2.825/p=0.005. Furthermore, the paper claims Mann-Whitney U and FDR correction including gamma, but the code shows one-sample t-tests and excludes gamma from FDR. These are massive reporting errors that invalidate trust in the statistical results. The evidence quotes the exact text, table, and code. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

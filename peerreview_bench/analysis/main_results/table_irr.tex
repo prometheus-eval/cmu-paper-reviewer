@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10.5}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrccc}
+\toprule
+\textbf{Axis} & \textbf{Items} & $N$ & \textbf{Agreement} & \textbf{Cohen's $\kappa$} & \textbf{Gwet's AC1} \\
+\midrule
+\multirow{3}{*}{Correctness}
+  & Human  & 568 & 84.7\% & 0.12\;{\scriptsize(slight)}        & 0.81\;{\scriptsize(almost perfect)} \\
+  & AI     & 340 & 87.6\% & 0.47\;{\scriptsize(moderate)}       & 0.84\;{\scriptsize(almost perfect)} \\
+  & \textbf{All} & \textbf{908} & \textbf{85.8\%} & \textbf{0.28}\;{\scriptsize(fair)} & \textbf{0.82}\;{\scriptsize(almost perfect)} \\
+\midrule
+\multirow{3}{*}{Significance}
+  & Human  & 470 & 60.2\% & 0.34\;{\scriptsize(fair)}           & 0.43\;{\scriptsize(moderate)} \\
+  & AI     & 273 & 59.3\% & 0.22\;{\scriptsize(fair)}           & 0.45\;{\scriptsize(moderate)} \\
+  & \textbf{All} & \textbf{743} & \textbf{59.9\%} & \textbf{0.31}\;{\scriptsize(fair)} & \textbf{0.44}\;{\scriptsize(moderate)} \\
+\midrule
+\multirow{3}{*}{Evidence}
+  & Human  & 353 & 83.9\% & 0.06\;{\scriptsize(slight)}         & 0.81\;{\scriptsize(almost perfect)} \\
+  & AI     & 230 & 94.3\% & 0.29\;{\scriptsize(fair)}           & 0.94\;{\scriptsize(almost perfect)} \\
+  & \textbf{All} & \textbf{583} & \textbf{88.0\%} & \textbf{0.12}\;{\scriptsize(slight)} & \textbf{0.86}\;{\scriptsize(almost perfect)} \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Inter-rater reliability across 908 dual-annotated review items from 27 overlap papers.}
+Each item was independently evaluated by two domain experts (primary and secondary annotators).
+$N$ varies across axes due to the annotation cascade: significance and evidence are only annotated for items rated as correct.
+Cohen's $\kappa$ is depressed by skewed marginals (``kappa paradox''), e.g., correctness has 86\% of items rated Correct by both annotators.
+Gwet's AC1, which is robust to class imbalance, provides a more representative measure and indicates almost perfect agreement for correctness and evidence, and moderate agreement for significance.
+Interpretation labels follow \citet{landis1977measurement}.
+}
+\label{tab:irr}
+\end{table}

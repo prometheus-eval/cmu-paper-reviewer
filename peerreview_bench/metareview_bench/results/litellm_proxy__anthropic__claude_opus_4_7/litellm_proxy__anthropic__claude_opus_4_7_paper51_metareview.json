@@ -1,0 +1,294 @@
+{
+  "paper_id": 51,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks about chronic side effects beyond 8 weeks, species differences, potential clotting risks, and local delivery alternatives. These are constructive, open-ended questions about important aspects (safety, clinical translation) that the paper itself acknowledges to some extent. Correctness: the paper does limit evaluation to 8 weeks and uses only rats, so the concerns are factually applicable. Significance: addressing these would make the discussion substantially stronger and help clinical relevance — Significant. Devil's advocate on significance: some experts may view these as mere future-work questions rather than concrete improvements to the paper, downgrading to Marginally Significant. Evidence: the reviewer doesn't cite specific passages but the concerns are self-verifiable against the paper's 8-week design. Predict disagreement on significance because experts often disagree on whether \"future-work\" style questions are substantive improvements.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for more detail on the ROUT method and notes that SECOND is not defined. The paper does use ROUT with Q=5% but does not explain it further; it references SECOND [63] as a software but does not spell out the acronym. Correctness: verifiable — the ROUT details are indeed minimal and SECOND is used without explicit definition. Significance: improving methods for reproducibility is Significant per the guidelines. Devil's advocate: an expert might view both as minor formatting nits, pushing toward Marginally Significant. Evidence: the reviewer points to specific method sections, which is sufficient for a meta-reviewer to verify. Predict experts will agree these are correct but may disagree on whether they warrant Significant or Marginal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks whether brain tissue from free DEX group showed indicators of delayed wound healing consistent with Chen et al. [83]. The paper does cite Chen et al. and attribute the poor free DEX performance to delayed wound healing in non-septic animals, but does not present direct histological evidence of wound-healing markers in this group. Correctness: the question is valid and grounded in the paper's own reasoning. Significance: addressing this would substantiate a key mechanistic claim — Significant. Devil's advocate: an expert may consider this a secondary mechanistic question rather than central, downgrading. Evidence: the reviewer cites the Discussion and Chen et al. directly — sufficient to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "BBB is indeed re-defined multiple times (abstract line 3, intro line 28, results line 126, discussion line 142). Correctness: clearly correct. Significance: this is a trivial stylistic/editing nit that does not affect reader understanding — Marginally Significant at most. Devil's advocate on significance: hard to argue it would substantially improve the paper. Evidence: the reader can immediately verify by scanning the paper. This is a classic minor editorial comment where experts typically agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reference 46 in the bibliography reads \"Systemically delivered platelet-inspired nanoparticles to reduce inflammation... Longshun Li_09042024_clean, (n.d.).\" — clearly a broken/draft reference with a filename-like entry. Correctness: verified as factually correct. Significance: broken references are minor but editorially important; it's a Marginally Significant formatting issue. Devil's advocate on significance: since this is a key self-citation for the methods, fixing it genuinely improves verifiability — could be upgraded to Significant. Evidence: the reviewer identifies the specific reference; easily verified.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer notes that Figure 1 doesn't make clear recordings continue during weeks 2-7, although methods clarify this. Correctness: this is a presentation/clarity observation — plausibly correct based on the figure caption which mentions \"bi-weekly neural recording\" but the visual may not make the continuing schedule obvious. Significance: minor figure clarity issue — Marginally Significant. Devil's advocate: figure comprehensibility that affects reader understanding of the study timeline could be Significant. Evidence: the reviewer points to the specific figure; sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks for scale bars for the electrode and spike amplitude/time on Figure 3A. Correctness: looking at the caption (schematic with active/inactive channels), it's plausible that scale bars are missing or unclear. Significance: scale bars are a standard figure requirement; missing them is Marginally Significant since it's a presentation nit that doesn't really affect the main claims. Devil's advocate: if scale bars are truly missing in a schematic, it might affect reader interpretation. Evidence: reviewer points to the specific figure panel.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims several figures are not referred to in the main text. Verification: Fig. 2C and Fig. 5A are never explicitly called out in the text. Correctness: Correct. Significance: ensuring all panels are referenced is a meaningful presentation improvement — Marginally Significant to Significant. Devil's advocate on significance: some experts may see this as purely editorial, others as important for reader navigation. Evidence: the reviewer doesn't name the specific missing panels, but a meta-reviewer can verify by scanning the text — Sufficient or borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the order of figures is inconsistent. Verification: in the text, Fig. 3 F-I is referenced at line 114 before Fig. 3E at line 116, which is out of sequence. Correctness: Correct. Significance: a minor presentation issue — Marginally Significant. Devil's advocate: order issues are generally stylistic. Evidence: reviewer doesn't cite specific figure — but it's readily verifiable by scanning.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes Fig. 3D and 3F-I appear to show the same data differently grouped. Verification: Fig. 3D is \"Proportion of active electrodes for each treatment in W1_4 and W5_8\" and Fig. 3F-I are \"Comparisons of the proportion of active electrodes within treatment groups across different phases\" — same underlying AEY data, different groupings. Correctness: Correct. Significance: asking for clarification or consolidation would improve figure design — Significant. Devil's advocate: some might consider it a minor editorial suggestion. Evidence: the reviewer points to specific subpanels.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks for the normalization strategy in Figure 5 to be explicit in the legend, and the 600–650 µm bin choice to be justified. The methods (line 88) describe normalization to the 600-650 µm bin with specific factors for CD68/IgG (0) and GFAP (1), but the figure legend itself likely does not repeat this. Correctness: Correct — legend-only readers would miss this. Significance: Significant, since clarifying normalization affects reader interpretation of the core histology claims. Devil's advocate: since it's in methods, an expert might say it's just a minor repetition request, downgrading. Evidence: reviewer points to specific figure and methodology — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims the manuscript does not consistently indicate n in each group; n should be in figure legends. Verification: sample sizes are reported in Methods (line 68 has n=7/7/8/7 per group and line 78 has per-phase channel counts), but figure captions in images_list.json do not repeat these n values. Correctness: Correct. Significance: n in figure legends is a common reporting standard that improves transparency — Significant. Devil's advocate: n is given in methods, so some experts might view this as Marginally Significant. Evidence: verifiable from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks that statistical annotations and p-values be in figure legends. The methods state the asterisk convention (*=p<0.05, etc.), and specific p-values appear in the results text but not in figure legends. Correctness: Correct. Significance: adding p-values in legends is a minor reporting improvement — Marginally Significant. Devil's advocate: some would consider this Significant for reader convenience. Evidence: sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer notes that increased neuron density alone may not be a definitive 'therapeutic' marker and suggests softening wording. Correctness: this is a valid interpretive concern — neuron density + recording performance together may justify 'therapeutic,' but pure density change is not functional evidence. Significance: tempering language is a common useful revision — Marginally Significant (wording improvement). Devil's advocate: one might see this as Significant because it affects the strength of claims. Evidence: reviewer points to the section of Figure 5 use; sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks whether continuous weekly dosing is needed or if reduced dosing would suffice. Correctness: the paper actually does address this as a future direction (line 100 — reducing to 4 weeks), so the reviewer is asking a question the paper acknowledges. Significance: a valid clinical optimization question — Significant. Devil's advocate on correctness: the paper partially addresses this, so some might consider the reviewer's complaint partially off-base. Evidence: the reviewer doesn't quote the paper, but the claim is verifiable. Overall the main point is still valid because no data on varying dosing frequency is shown. Predict disagreement on correctness since the paper does preemptively acknowledge this limitation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer asks if there is direct evidence that PIN promotes endothelial repair, and whether hemostatic properties in BBB sealing can be expanded. Correctness: the paper only shows reduced IgG extravasation as evidence, with no tight junction or endothelial markers — this overlaps with Claude Item 2 and GPT Item 4. Significance: BBB resealing is central to the mechanistic story — Significant. Devil's advocate: the reviewer's wording is somewhat vague. Evidence: reviewer doesn't explicitly cite missing tight-junction markers, but the critique is clear and verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer claims the initial portion of the Discussion repeats content from the Introduction. Verification: the Discussion (lines 136, 140, 142) does reiterate many points from the Introduction (lines 26-32) about neuroinflammation, BBB disruption, and previous studies. Correctness: Correct. Significance: reducing redundancy improves clarity — Marginally Significant. Devil's advocate: could be Significant since it makes the paper more readable. Evidence: reviewer doesn't quote specific passages, but the claim is readily verifiable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer suggests adding inflammatory markers in peripheral organs (liver, spleen) to strengthen systemic safety claims. The paper only reports glucose, ALT, and creatinine — no direct inflammatory markers. Correctness: Correct. Significance: adding such data would strengthen safety claims — Significant. Devil's advocate: this could be considered a future-work suggestion rather than a true gap, downgrading to Marginal. Evidence: reviewer's claim is self-verifiable against the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer highlights that SNR is significantly lower in the SPPINDEX group than the TH control in both phases (p<0.001 and p<0.0001), and noise is higher, which seemingly contradicts 'improved recording.' Verification: line 118 of the paper explicitly confirms these significant differences. Correctness: the technical observation is accurate. Significance: this is a legitimate, central concern about the paper's main claim — Significant. Devil's advocate on correctness: the paper reasons that AEY (more detectable channels) is the recording metric — more channels detecting units can coexist with slightly lower per-unit SNR; the reviewer's 'paradox' framing could be argued against. But the core concern (SNR trade-off) is valid. Evidence: specific quotes with statistics and reference to Fig. 4C — strong, sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues IgG staining alone cannot establish BBB 'resealing' — proper evaluation needs tight junction proteins (ZO-1, claudin-5, occludin). Verification: the paper uses only IgG and does not stain for tight junction proteins. Correctness: correct methodological criticism. Significance: the mechanism claimed (BBB resealing) is central to the paper's narrative — Significant. Devil's advocate: some might argue IgG is an acceptable functional proxy in this field, making the critique a matter of standards rather than a clear flaw. But the call for TJ proteins to substantiate 'structural' resealing is well-grounded. Evidence: specific quotes, external reference to Sweeney et al. as TJ gold-standard — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues intra-arterial administration undermines clinical translatability, and the paper presents efficacy broadly despite this limitation. Verification: line 100 (Discussion) explicitly acknowledges the limitation of intra-arterial delivery and plans future IV studies. Correctness: the reviewer correctly identifies a real limitation; the paper does largely present benefits without tempering the clinical framing in the abstract/conclusion. Significance: this is a fundamental translatability concern — Significant. Devil's advocate on correctness: the paper already acknowledges the limitation in Discussion, so a charitable reader might say the issue is addressed. Evidence: specific quoted passages — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer identifies a sample size typo: '93 for W1-4 SPPINDEX, 51 for W1-4 SPPINDEX' in the Methods. Verification: line 78 of the paper contains exactly this error (W1-4 SPPINDEX is listed twice; one should be W5-8). Correctness: clearly correct. Significance: it's a typo, but it affects understanding of sample sizes for key statistical analyses — Significant. Devil's advocate on significance: some experts may view this as merely a typographical error that's trivial to fix, downgrading to Marginal. Evidence: reviewer quotes the exact passage — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes single-timepoint (8-week) IHC for supporting mechanistic claims about week-by-week recording improvements. Verification: the paper does only perform IHC at the 8-week endpoint (line 122) but makes causal claims linking tissue changes to improved recording over time. Correctness: Correct methodological critique. Significance: temporal mechanistic claims require time-resolved histology — Significant. Devil's advocate: sacrificing animals at intermediate timepoints significantly increases cost/complexity; the authors could reasonably rely on endpoint IHC with careful interpretive language. However, the paper does make causal-temporal links, so the critique stands. Evidence: specific quotes and clear logical reasoning — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer raises the SNR/noise trade-off concern — same core issue as Claude Item 1. Verification: line 118 confirms significantly lower SNR and higher noise in SPPINDEX. Correctness: Correct. Significance: central concern — Significant. Devil's advocate on correctness: same as Claude — the paper argues AEY captures the relevant improvement. Evidence: quotes specific statistical findings; clear reasoning — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues targeted delivery is unsupported by direct biodistribution evidence, and points out the data repository contains an IVIS folder suggesting such data exists but was omitted. Verification: the code repository has 'Li 2025 Biomaterials/DATA/IVIS', and the manuscript indeed has no biodistribution/imaging data shown for the nanoparticles localizing at the implant. Correctness: Correct. Significance: targeted delivery is a key claim — Significant. Devil's advocate on correctness: the IVIS data may belong to the other (Biomaterials) paper, not this one — so the implication that the authors 'omitted' relevant data may be too strong. However, the core critique (no direct biodistribution in THIS paper) is valid. Evidence: reviewer points to specific files and quotes — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer questions whether the Free DEXSP group's poor performance implies systemic DEX toxicity that confounds the comparison. Verification: paper confirms Free DEXSP performed worse than TH (line 114), with weight loss (line 132) supporting systemic effects. Correctness: Correct observation. Significance: this raises a legitimate concern about whether SPPINDEX benefits stem from targeting or merely encapsulation avoiding systemic toxicity — Significant. Devil's advocate: the paper does discuss and cite Chen et al. to contextualize; an expert may view this as adequately addressed. Evidence: specific quotes from the paper — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the paper lacks a comparison to local delivery (e.g., DEX-coated electrodes) — a key benchmark given local delivery's known efficacy. Verification: the paper only compares to free DEXSP and PIN and acknowledges local delivery (Zhong et al.) but does not include it as an experimental arm. Correctness: Correct. Significance: a direct comparison would strongly inform whether systemic targeted delivery provides added value vs. local — Significant. Devil's advocate: adding an additional arm would expand scope substantially; some experts may view this as too demanding for a single study. Evidence: reviewer cites specific prior studies — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer states that MATLAB code for electrophysiology analysis is missing from the repo, while Python (Cellpose) code for histology is present. Verification: the code repository only includes the histology pipeline (cellpose_prediction.ipynb, dist_analysis.ipynb) and no MATLAB/spike-sorting scripts. Correctness: Correct. Significance: reproducibility of the primary endpoint (AEY, SNR) is a core concern — Significant. Devil's advocate: raw data spreadsheets are provided, so some experts may consider it partially reproducible. Evidence: reviewer cites specific missing code — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer critiques the statistical independence assumption — channels are nested within animals and observed repeatedly over time, but the paper uses channel-level proportion z-tests. Verification: line 100 confirms the z-test approach and line 76 describes channel-level aggregation over animals. Correctness: correct — the pseudoreplication concern is well-established in the cited literature. Significance: directly threatens the reliability of the paper's main inferential claims — Significant. Devil's advocate on correctness: proportion z-tests on aggregate channel counts treat each channel as an independent trial; the study also uses a mixed-effects model for other metrics (line 100), showing the authors know about nested structure. Some experts may see this as a debatable choice rather than clear error. Evidence: extensive quotes, external references to Lazic and other statistics literature — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the AEY denominator conditions on the outcome (excluding channels 'never active throughout the entire study'), introducing post-hoc filtering bias. Verification: line 76 explicitly states this exclusion rule. Correctness: Correct observation; this is a real methodological concern about denominator definition. Significance: directly affects the paper's headline metric — Significant. Devil's advocate on correctness: excluding permanently dead channels is defensible as accounting for device failures; an expert might argue this is a reasonable convention. Evidence: exact quotes with numerical mismatch (112/128 physical vs 107/104/118 reported) — sufficient and strong.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer critiques the distance-binned histology: multiple slices per implant, multiple bins per slice, and per-bin one-way ANOVAs create pseudoreplication and multiple-testing risks. Verification: line 92 states ≥3 slice depths per implant and ≥4 animals per group; line 100 confirms per-bin ANOVA. Correctness: Correct and well-founded. Significance: this affects statistical validity of a major claim — Significant. Devil's advocate: the authors may have used per-animal means implicitly (not stated); a charitable reading might suggest the issue is reporting clarity rather than analysis error. Evidence: specific quotes plus external reference to PLoS Biology statistics guideline — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues mechanistic conclusions about BBB 'resealing' and 'targeted delivery' overreach beyond the data. Verification: IgG is the only BBB marker used (endpoint only), and no biodistribution/nanoparticle localization is shown. Correctness: Correct — strongly overlaps with Claude Item 2 and Gemini Item 2. Significance: mechanism claims are central to the paper — Significant. Devil's advocate: the paper sometimes uses hedged language ('suggest', 'potentially'), so some experts may see the overreach as less severe. Evidence: multiple specific quotes from both methods and discussion — sufficient and strong.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the custom R scripts for AEY and custom MATLAB software for electrophysiology metrics are missing from the repository, and the electrophysiology data readme is just 'Placeholder text.' Verification: the code repo README describes only histology processing; the Electrophysiology data README contents I checked shows '# Placeholder text'. Correctness: Correct. Significance: reproducibility of headline metrics is Significant. Devil's advocate: the raw spreadsheet data is provided, allowing partial reproducibility. Evidence: reviewer quotes README contents verbatim — sufficient and strong.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

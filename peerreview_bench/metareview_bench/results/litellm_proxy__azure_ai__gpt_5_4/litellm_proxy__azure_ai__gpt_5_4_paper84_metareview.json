@@ -1,0 +1,526 @@
+{
+  "paper_id": 84,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the paper shows qualitative adhesion images in Fig. 3B and Fig. S46 but no quantitative adhesion-force data across conditions. It is Significant because adhesion is central to implant reliability and tissue coupling. A skeptical expert could note that Fig. S46 and Note S8 partly address adhesion qualitatively, but that does not supply the requested force data. The evidence is Sufficient because the item points to the exact figure and a clearly checkable absence. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the actuation hydrogel thickness is not specified even though other layer dimensions are described, and no thickness-performance tradeoff is analyzed. It is Significant because that omission hurts reproducibility and understanding of the actuator design. A skeptical expert could say the paper is only a proof of concept, but the missing parameter is still important. The evidence is Sufficient because the reviewer identifies a specific missing fabrication detail and missing analysis. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because Fig. 3N does make the three-arm sequence look somewhat uneven and leaves controllability and reversibility unclear from the static snapshots alone. It is Significant because Fig. 3N is supposed to support independent programmable control. A skeptical expert could argue that the arms are not literally identical in composition and that the snapshots may not capture full cooling or recovery, and that counter-reading is plausible. The evidence is Sufficient because the criticism is tied to a specific figure panel. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper does not really address long-term swelling or drift of the PAAm pressure sensor in an implant-like wet environment. It is Significant because such drift would affect the claimed pressure-sensing function. A skeptical expert could say the paper only presents a proof-of-concept sensor rather than a chronic implant study, but that does not remove the concern. The evidence is Requires More because the reviewer gives a plausible mechanism-level worry without a very specific missing experiment or citation. Overall I predict correct_significant_insufficient because the point is important and likely right, but the support is too hand-wavy.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Not Correct because Supplementary Note S8 and Fig. S46 explicitly discuss hydrogel reswelling, physiological conditions, overnight incubation, and temperature-dependent adhesion, so the treatment is not only in a dry environment. A charitable defense is that the reviewer wanted still more wet-environment degradation data, but that defense is not very plausible as a reading of the actual claim. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I mark this Correct because Fig. 5 and Fig. S47 leave the current path for electrical stimulation unclear when hydrogel layers appear to sit between tissue and electronics. It is Significant because that ambiguity affects whether the closed-loop stimulation claim is physically convincing. A skeptical expert could argue that the electrodes may be exposed in a way the schematic does not make obvious, but the paper never explains that clearly. The evidence is Sufficient because the item points to exact device figures and a directly checkable missing explanation. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I mark this Correct because Fig. 5G does not clearly explain the control logic behind when stimulation is turned on and off. It is Significant because panel G is the main closed-loop bladder-control demonstration. A skeptical expert could say the caption and methods partially reconstruct the threshold logic, but the figure still remains hard to interpret. The evidence is Sufficient because the item names the exact panel and the ambiguity is visible. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I mark this Correct because the paper shows the cardiac gripper on a beating heart but does not really explain how the arm ends are controlled or kept stably coupled during ongoing organ motion. It is Significant because attachment stability is central for the epicardial sensing claim. A skeptical expert could argue that Fig. 6E itself shows coupling is feasible, so the wording that it seems impossible is overstated, and that counterargument is plausible. The evidence is Sufficient because the reviewer cites concrete figures and a checkable absence of detail. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I mark this Correct because the bladder-control framing can reasonably be read as targeting underactive or voiding dysfunction rather than classic overactive-bladder terminology. It is Marginally Significant because this mostly affects clinical wording rather than the experiments. A skeptical expert could argue that sacral-nerve stimulation is also discussed in overactive-bladder contexts, and that makes the terminology complaint genuinely debatable. The evidence is Sufficient because the issue is tied to a specific statement in the paper. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "I mark this Correct because the paper lists which materials are used for each modality but gives only limited motivation for why those particular material systems were chosen. It is Significant because clearer material-choice rationale would make the platform design more convincing. A skeptical expert could say that mapping materials to functions is already enough for this paper. On significance, one could also say this is mainly explanatory context rather than a true methodological gap, and that is plausible enough that experts may split. The evidence is Sufficient because the reviewer points to a specific figure and a specific explanatory absence. Overall I predict correct_disagree_on_significance because the fact of the issue is clear, but its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "I mark this Correct because the paper claims conformal contact and mechanical softness but does not report a direct modulus comparison between device and tissue. It is Significant because mechanical matching is a central implantability claim. A skeptical expert could say the qualitative conformal images are enough for an initial proof of concept, but a quantitative comparison would still strengthen the paper materially. The evidence is Sufficient because the reviewer cites exact panels and a clearly checkable missing comparison. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "I mark this Correct because for the closely stacked multimodal structure in Fig. S12B the paper does not show whether the components operate independently or whether simultaneous use introduces cross-talk. It is Significant because independent operation matters if the paper wants to claim true multifunctionality in close proximity. A skeptical expert could say Fig. S12B is only a fabrication schematic, but the missing validation still matters. The evidence is Sufficient because the reviewer identifies the exact supplementary figure and a specific absent test. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "I mark this Not Correct because Figure 3 caption text does describe panels H and I, including the thermal response and cycling behavior of the sensor. A charitable defense is that the caption is dense and easy to miss, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "I mark this Correct because it is a fair stylistic complaint that the main-figure captions repeatedly reference supplementary figures. It is Marginally Significant because cleaning that up would improve presentation but not the science. A skeptical expert could argue that such cross-references are common and not wrong. On significance, one could also say this is so house-style-specific that it should be dropped entirely, and that is plausible enough that experts may split. The evidence is Sufficient because the reviewer gives concrete examples that are easy to verify. Overall I predict correct_disagree_on_significance because the fact of the issue is clear, but its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "I mark this Not Correct because the statement that the figure order is a total mess is too vague and does not hold up as a specific, verifiable criticism. A charitable defense is that dense cross-references and scattered typos may make navigation feel messy, but that does not make the main claim factually sound. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the novelty is mostly in integration/fabrication rather than new materials, and long-term feasibility is only lightly supported. It is Significant because it affects how readers evaluate the paper. A skeptical expert could argue that the paper intentionally sells an integration strategy and already provides some sensor calibrations. The evidence is Requires More because the item states broad concerns without pointing to exact missing sections. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because asking for a few more tissue-interface references is a fair related-work suggestion. It is Marginally Significant because it affects how readers evaluate the paper. A skeptical expert could argue that the introduction already cites substantial implant work and these exact papers may not be necessary. The evidence is Requires More because the reviewer names papers loosely without explaining their specific relevance. Overall I predict correct_marginal_insufficient because the point is minor and likely valid, but the support is thin.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper promises sensing-actuation integration and feedback, but outside a few examples the control logic between sensing and motion is not shown very explicitly. It is Significant because it affects how readers evaluate the paper. A skeptical expert could argue that the bladder closed-loop example and thermal-feedback discussion already provide enough integration. The evidence is Requires More because the item gestures at a real conceptual gap without citing the strongest passages. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper customizes geometries for different organs but does not really explain how curvature and grasp strength were selected for each anatomy. It is Significant because it affects how readers evaluate the paper. A skeptical expert could argue that the work is mainly proof of concept rather than a full design-optimization study. The evidence is Sufficient because the absence of organ-specific design rationale is straightforward to verify. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Not Correct because the paper does explain that parallel strips create concentrated internal stresses and saddle-like curvature that lead to twisting. A charitable defense is that the explanation is brief and lacks an external reference, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I mark this Not Correct because the paper explicitly contrasts the in situ approach with make-and-transfer methods and states why it sees the solution route as advantageous. A charitable defense is that the reviewer may have wanted a more quantitative comparison, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I mark this Not Correct because the paper already reports PNIPAM behavior from 23 °C to 40 °C in the text and supplement, so lower-temperature data are not actually missing. A charitable defense is that Figure 2H itself emphasizes the transition region near body temperature, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I mark this Not Correct because the suggestion that the XPS-confirmed composite may have lower performance than a vague full composite is too unclear to verify against the paper. A charitable defense is that the reviewer may simply want fuller benchmarking, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I mark this Not Correct because the fabrication methods explain that patterned films are cut out and peeled from the glass substrate, so the basic handling and removal step is present. A charitable defense is that the process description could still be cleaner, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "I mark this Correct because the Fig. 3C and 3D caption does not explicitly say whether the SEM views are surface or cross-sectional images. It is Marginally Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that the images themselves strongly suggest cross-sections. The evidence is Sufficient because the caption wording is directly checkable. Overall I predict correct_marginal_sufficient because the point is valid and well supported, but mostly minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "I mark this Correct because the thermal images in Fig. 3E are not perfectly uniform to the eye, so the reviewer concern about uniformity is understandable. It is Marginally Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that the variations are small and the figure still supports reasonably uniform heating under deformation. The evidence is Sufficient because the reviewer points to a specific panel whose uniformity can be inspected directly. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "I mark this Correct because Fig. 3F reaches thermal steady state much earlier than the bending response in Fig. 3G, and the paper does not really explain that lag or how long the force persists. It is Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that some lag is expected for hydrogel actuation. The evidence is Sufficient because the reviewer points to two exact panels and a visible mismatch. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "I mark this Correct because the thermally driven and reversible actuation mechanism leaves it unclear whether continuous heating is needed to maintain bending in use. It is Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that the reversibility plots already imply the answer. The evidence is Sufficient because the concern follows directly from the described mechanism and figures. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "I mark this Correct because several dual-axis plots are hard to parse quickly, and the mapping between electrical signals and physical quantities is not always intuitive. It is Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that the plots are standard enough that a careful reader can still decode them. The evidence is Sufficient because the reviewer lists concrete panels. Overall I predict correct_disagree_on_significance because the fact of the issue is clear, but its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "I mark this Correct because the paper relies on electrothermal actuation near or above body temperature but gives only limited tissue-relevant heat-transfer and safety characterization. It is Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that the paper includes some heater-temperature data and short-term histology. The evidence is Sufficient because the operating temperatures and missing tissue-level analysis are easy to verify. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "I mark this Correct because the paper does not clearly separate heater temperature from actual tissue temperature when the integrated thermal sensors are used during actuation. It is Significant because it would improve how readers understand or evaluate the paper. A skeptical expert could argue that the sensors may only be intended for device-level proprioception. The evidence is Sufficient because the reviewer identifies a specific measurement ambiguity in the integrated design. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "I mark this Not Correct because the paper presents S12B and S16 as different integration architectures, so simply asking why they differ does not identify a factual problem with the manuscript. A charitable defense is that the distinction could be explained more explicitly, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "I mark this Correct because the statement that actuation is regulated by sensing feedback is stronger than the explanation that follows, which never really details the feedback implementation. It is Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that the supplementary movies may demonstrate the behavior even if the text is terse. The evidence is Sufficient because the reviewer quotes the exact claim and the explanatory gap is directly checkable. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "I mark this Correct because Fig. S31 appears to show larger output power at larger coil separation in panel D, which conflicts with the decreasing coupling trend in panel B and with physical expectation. It is Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that the axes or legend may be mislabeled rather than the physics being wrong. The evidence is Sufficient because the reviewer names exact supplementary panels and the contradiction is visible. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "I mark this Correct because the paper gives only qualitative temperature-dependent adhesion evidence, not a quantitative tissue-adhesion strength measurement across temperatures or cycles. It is Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that Fig. S46 and Note S8 do at least show qualitative retention and discuss the trade-off with temperature. The evidence is Sufficient because the reviewer points to a specific absence and a concrete literature-based rationale. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "I mark this Not Correct because using Au electrodes for stimulation is not a contradiction or clear flaw, because Au is a conventional electrode material and does not meaningfully conflict with the rest of the platform. A charitable defense is that the reviewer may simply want more rationale for mixing materials, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "I mark this Correct because Fig. 5G is hard to interpret, including the nonzero-looking off level and the relationship between the stimulation trace and the bladder-volume trace. It is Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that the baseline may just reflect plotting offset rather than true stimulation voltage. The evidence is Sufficient because the reviewer identifies the exact panel and the ambiguity is directly visible. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "I mark this Correct because because PNIPAM actuation is reversible, the paper leaves open whether cooling-driven relaxation could weaken attachment or require continued heating in use. It is Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that Supplementary Note S8 does discuss reswelling and temperature-dependent adhesion trade-offs. The evidence is Requires More because the reviewer raises a plausible mechanism-level concern but not a very specific missing experiment. Overall I predict correct_significant_insufficient because the point is important and likely right, but the support is too hand-wavy.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "I mark this Correct because panel F of Fig. 6 shows traces labeled T1 and T2, but the caption does not define what those labels correspond to. It is Marginally Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that a reader can infer they are the two temperature sensors. The evidence is Sufficient because the missing definition is directly visible. Overall I predict correct_marginal_sufficient because the point is valid and well supported, but mostly minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "I mark this Correct because Fig. 6G and Fig. S52D show pacing artifacts, but they do not clearly establish sustained cardiac capture or pacemaker-like performance. It is Significant because addressing it would improve how readers evaluate the paper. A skeptical expert could argue that the traces could still be read as preliminary evidence of successful pacing, and the paper may only claim proof-of-concept pacing capability. The evidence is Requires More because the reviewer points to the right figures, but interpreting capture still requires additional judgment. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "I mark this Not Correct because Fig. 6M and 6N do show amplitude and waveform-pattern differences, especially in S4, so it is not true that only frequency changes are visible. A charitable defense is that some channels are subtle and could look mostly frequency-shifted at a glance, but that does not make the reviewer claim factually right. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "I mark this Correct because the vascular-system methods do not specify the flow-generation hardware, flow rate, or rubber-tube properties in enough detail for strong reproducibility. It is Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that the paper may only intend a simple phantom proof of concept. The evidence is Sufficient because the missing setup parameters can be checked directly in the methods. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "I mark this Correct because the histology after thermal stimulation is short duration, so it does not tell the reader what would happen under continued or repeated stimulation over longer periods. It is Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that the paper never claims that this experiment alone proves chronic safety. The evidence is Sufficient because the reviewer points to a specific short-duration experiment and a clear missing longer-duration evaluation. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "I mark this Correct because the two-week histology does not report whether the device itself stayed attached or remained operable after chronic mechanical beating. It is Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that the histology panel was aimed at tissue response rather than device-function retention. The evidence is Sufficient because the absence of post-implant device-condition reporting is straightforward to verify. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "I mark this Correct because Fig. S11 is titled as an AgNWs/PDMS strain sensor, yet panel A is captioned as an AgNW/PI-based strain sensor, which looks like a typo or inconsistency. It is Marginally Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that panel A might intentionally depict a different intermediate step. The evidence is Sufficient because the inconsistency is directly visible in the caption. Overall I predict correct_marginal_sufficient because the point is valid and well supported, but mostly minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "I mark this Correct because the manuscript contains a PNIPAM misspelling as PINPAM in the thera-gripper description. It is Marginally Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that it could be an OCR artifact, but the same form appears in the provided text. The evidence is Sufficient because the typo can be checked directly. Overall I predict correct_marginal_sufficient because the point is valid and well supported, but mostly minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "I mark this Correct because supplementary Fig. S51D visibly uses the misspelling Basi instead of Basic. It is Marginally Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that none beyond the possibility of an image artifact. The evidence is Sufficient because the figure itself shows the misspelling. Overall I predict correct_marginal_sufficient because the point is valid and well supported, but mostly minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "I mark this Correct because the paper does use several unit expressions without standard spacing, so the formatting complaint is broadly real. It is Marginally Significant because it would improve how readers assess or understand the paper. A skeptical expert could argue that some irregularities could also reflect reconstructed markdown or OCR artifacts. The evidence is Requires More because the reviewer does not cite concrete examples even though examples are easy to find. Overall I predict correct_disagree_on_significance because the fact of the issue is clear, but its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the paper explicitly claims good biocompatibility for long-term operation, but the in vivo histology in Fig. S56 stops at Day 14 with N=3 per timepoint. It is Significant because that mismatch directly weakens the long-term implantability claim. A skeptical expert could argue that the authors only mean long-term relative to acute deployment, but that is not very persuasive. The evidence is Sufficient because the item quotes the exact claim and the exact supplementary evidence window. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the device relies on temperatures around 40 °C for actuation and some heater characterizations reach roughly 50 °C, while the paper gives limited chronic thermal-safety justification for implant use. It is Significant because thermal safety is central to whether the implant concept is credible. A skeptical expert could argue that a specific ISO-style threshold may not map perfectly onto this early-stage platform, but the broader safety concern still stands. The evidence is Sufficient because the item cites exact temperatures, exact figures, and a standard-based rationale. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper discusses cardiac strain and contractility but does not provide a direct quantitative validation of the implant readouts against echocardiographic metrics or another gold-standard contractility measure. It is Significant because that gap limits how strongly readers can interpret the physiology claim. A skeptical expert could argue that the paper only aims for proof-of-concept sensing, but the contractility language is still stronger than the validation. The evidence is Sufficient because the item points to the exact claim, the existing echocardiography mention, and the missing comparison. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the bladder, vascular, and ingestible demonstrations are performed in simplified phantom or ex vivo settings rather than in the intended physiological in vivo environments. It is Significant because that limitation materially affects the translational strength of several marquee applications. A skeptical expert could argue that this is a platform paper and these are only proof-of-concept vignettes, but the reviewer's point still holds. The evidence is Sufficient because the methods and figures clearly identify balloons, rubber tubes, and non-in vivo stomach demonstrations. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Correct because the paper itself shows degradation of wireless power transfer with distance, offset, and deformation, but it does not really connect those limitations to reliable operation in a moving in vivo implant context. It is Significant because wireless reliability is central for untethered implants. A skeptical expert could argue that the figures were only meant as characterization rather than a full reliability argument, but the missing discussion still matters. The evidence is Sufficient because the item cites the exact characterization and the missing interpretive step is easy to verify. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the paper does require thermal actuation near 40 °C and reports heater temperatures up to about 50 °C, so a serious implant thermal-safety concern is real. It is Significant because the temperature budget bears directly on multiple implant claims. A skeptical expert could argue that calling this a severe risk or a direct standards violation overstates what the current paper alone proves, and that counter-reading is plausible. The evidence is Sufficient because the item cites the relevant temperatures and the limited safety evidence. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the reported 80% power-transfer efficiency appears to come from a favorable benchtop setup and is not validated in a realistic implant environment with tissue losses and misalignment. It is Significant because wireless-power feasibility is central to the untethered implant story. A skeptical expert could argue that very high efficiency can still occur in close-coupled benchtop systems, so calling the number unrealistic in itself is too strong, and that counter-reading is plausible. The evidence is Requires More because the item leans heavily on general literature expectations rather than a paper-specific contradiction. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the actuation figures show response on timescales of many seconds to minutes, so the hydrogel motion is slower than phrases like real-time control or spatiotemporal precision might suggest. It is Significant because response speed changes how readers interpret the practical scope of the actuation claims. A skeptical expert could argue that the paper uses real-time mainly for sensing and that pacing itself is electrical rather than hydrogel-driven, and that counter-reading is plausible. The evidence is Sufficient because the timescales are visible in the figures and follow from the actuation mechanism. Overall I predict disagree_on_correctness because both charitable and skeptical readings are plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper's short-term cell and histology studies do not fully address long-term leakage, release, or chronic biocompatibility concerns for AgNWs- and PNIPAM-containing implants. It is Significant because chronic material safety is central to implant claims. A skeptical expert could argue that the authors do embed the nanomaterials in PI and add parylene encapsulation, but that only partly mitigates the concern. The evidence is Sufficient because the item ties the safety concern to specific materials and the short duration of the reported tests. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I mark this Not Correct because the paper explicitly states that the hydrogel layer interfaces with tissue and that the e-skin can also use very thin films or stretchable materials, so the claim of a direct significant PI-tissue mechanical mismatch is mis-targeted. A charitable defense is that polyimide is intrinsically much stiffer than tissue and could still raise a whole-device mechanics concern, but that does not make the reviewer's main target correct here. Because correctness fails, significance and evidence are null. Overall I predict incorrect because the paper undercuts the reviewer premise.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I mark this Correct because the bladder, vascular, and gastric application claims are supported mainly by balloon, rubber-tube, and simplified stomach demonstrations rather than by experiments in the intended physiological environments. It is Significant because that gap directly affects the strength of the organ-level utility claims. A skeptical expert could argue that the paper is a platform paper and these are only proof-of-concept application vignettes, but the reviewer point still holds. The evidence is Sufficient because the item ties the broad claims to the specific validation settings used in the paper. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I mark this Correct because the paper makes broad biocompatibility and long-term-safety claims despite short-duration cell assays, short thermal histology, and 14-day implantation histology with small N. It is Significant because that mismatch weakens a central implantability conclusion. A skeptical expert could argue that the authors only intend these studies as early safety indicators, but the claim language is still stronger than the evidence base. The evidence is Sufficient because the item points to several concrete experiments and their durations. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I mark this Correct because the paper argues wireless and electrothermal safety without tissue-relevant dosimetry, and the WPT simulations use copper and air rather than tissue-like media. It is Significant because that is a substantial limitation for implant safety interpretation. A skeptical expert could argue that the simulations were only intended as a first-order engineering study, but the safety language still outruns the evidence. The evidence is Sufficient because the item quotes the relevant claims, the material assumptions, and the missing dosimetry framework. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I mark this Correct because the paper sometimes treats chamber-specific strain amplitudes as contractility or myocardial strength without direct calibration to established physiology metrics. It is Significant because that affects how strongly readers should trust the cardiac-function interpretation. A skeptical expert could argue that the authors only intend strain patterns as a proxy rather than a fully load-independent contractility metric, but the present wording is still stronger than that. The evidence is Sufficient because the item cites the exact language and the missing validation path clearly enough to verify. Overall I predict correct_significant_sufficient because the point is clearly real, important, and specifically supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

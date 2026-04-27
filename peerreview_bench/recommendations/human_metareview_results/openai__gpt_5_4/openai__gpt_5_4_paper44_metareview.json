@@ -1,0 +1,100 @@
+{
+  "paper_id": 44,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper argues that cloud-based workflows can benefit the medical AI community, but it does not specify which stakeholders should adopt the proposal or how broad uptake would be achieved. That makes the reviewer's practicality concern real and useful, but the item provides only a general assertion about needing a critical mass rather than concrete supporting detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript shows one Hosny et al. reimplementation and claims reproducibility benefits, but it does not quantify time saved versus using the original released materials or estimate how large the benefit would be for other pipelines. That would strengthen a central claim of the paper, yet the review item is mostly an open question rather than a supported comparison.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This criticism overstates the paper's commitment to a Google-controlled environment. The manuscript says cloud AI pipelines can be implemented using infrastructures such as Google Colaboratory, among others, and the accompanying code README also provides local Docker/Jupyter instructions, so the paper is not solely proposing dependence on Colab as the only reproducible path.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "It is fair that the paper demonstrates only a single example pipeline and could better situate itself against adjacent reproducibility resources and alternative efforts. Those are meaningful limitations for a paper making broad claims, but the item argues novelty at a high level and does not fully connect the cited external resources to the manuscript's exact contribution.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is an accurate contextual observation: the paper itself acknowledges that reporting and reproducibility proposals already exist and positions its contribution as a practical investigation of cloud implementation. However, the item is mainly commendatory framing rather than a criticism whose resolution would improve the paper.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper already discusses several limitations, including learning curve, privacy and institutional approval, provider dependence, flexibility, and cost. Still, it does not really address the local-computing preference and rapid-iteration concerns raised here, so a charitable reading supports the complaint that the limitations discussion is incomplete, even though another expert could reasonably find the existing discussion adequate.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is overstated. The manuscript already discusses privacy and institutional barriers to sharing medical data in the cloud, and the claim that very large imaging problems often exceed the practical capabilities of cloud resources is not supported here and cuts against the paper's basic motivation. The federated-learning suggestion is reasonable, but the main factual premise does not cleanly hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript repeatedly foregrounds Google Colaboratory as the notebook environment but does not give readers a compact list of alternative platforms or the key features such platforms must provide. That omission is real and addressing it would make the proposal more general and less vendor-specific, although experts could differ on how important that addition is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper discusses privacy and data-sharing constraints but does not mention whether the proposed cloud workflow could also be used with synthetic data or differential-privacy-based data releases. That is a real omission and potentially useful to address, but the reviewer does not fully justify why these privacy-preserving contexts are central to this specific manuscript.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper explains technical and reporting causes of poor reproducibility, but it does not discuss commercial, IP, and industry-incentive reasons for limited transparency. That broader context could reasonably be added, yet the listed causes are asserted without citations and are somewhat peripheral to the paper's practical infrastructure focus.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

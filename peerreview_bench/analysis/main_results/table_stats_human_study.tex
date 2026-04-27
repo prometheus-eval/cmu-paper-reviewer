@@ -1,0 +1,37 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10.5}\selectfont
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lr}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+Papers & 82 \\
+Domain expert annotators & 45 \\
+Avg.\ papers per annotator & 2.4 \\
+Reviewers per paper & 6 (3 human + 3 AI) \\
+\midrule
+Total review items & 3{,}881 \\
+\quad Primary annotations & 2{,}960 (82 papers) \\
+\quad Secondary annotations & 921 (27 papers) \\
+Dual-annotated overlap papers & 27 \\
+\midrule
+Human items (primary) & 1{,}930 \\
+\quad Human\_1 per paper & 8.7 (range 1--72) \\
+\quad Human\_2 per paper & 9.9 (range 1--42) \\
+\quad Human\_3 per paper & 7.6 (range 1--33) \\
+AI items (primary) & 1{,}030 \\
+\quad Per AI model per paper & ${\sim}$4.2 (range 2--5) \\
+\midrule
+Annotation axes & 3 \\
+\quad Correctness & binary (Correct / Not Correct) \\
+\quad Significance & 3-level (Significant / Marginal / Not) \\
+\quad Evidence sufficiency & binary (Sufficient / Requires More) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Expert annotation study statistics.}
+Each of 82 papers from Nature-family journals was annotated by a domain scientist who evaluated every review item from 3 human reviewers and 3 AI reviewers (GPT-5.2, Claude Opus 4.5, Gemini 3.0 Pro) on three quality axes.
+A secondary annotator independently re-annotated 27 papers for inter-rater reliability estimation.
+}
+\label{tab:stats-human-study}
+\end{table}

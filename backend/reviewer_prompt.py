@@ -57,6 +57,7 @@ def build_reviewer_prompt(settings: dict | None = None) -> str:
     criticize_limitations = settings.get("criticize_limitations", True)
     enable_future_references = settings.get("enable_future_references", True)
     paper_date = settings.get("paper_date")
+    focus_area = settings.get("focus_area")
 
     # Current date
     now = datetime.now(timezone.utc)
@@ -145,7 +146,13 @@ Each item represents an atomic criticism of the paper and points out a major iss
 If the paper contains no significant issues, then you can output zero items.
 
 **Important context: Today's date is {current_date_str}.** This is relevant for assessing the recency of cited works and the state of the field.
+{f"""
+### Focused feedback request
+The author has specifically requested feedback on the following area:
+> {focus_area}
 
+Focus your criticism on this specific section or topic. Only produce review items that are directly relevant to the requested area. Each item must address a distinct aspect — do not produce overlapping or redundant items. If there are fewer significant issues in the requested area than the maximum ({max_items}), produce only as many items as are genuinely warranted.
+""" if focus_area else ""}
 
 ### Principles guiding your review (ordered by importance)
 1. Your review must be factually correct:

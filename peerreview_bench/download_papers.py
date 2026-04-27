@@ -55,9 +55,17 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from load_data import (
     load_expert_annotation_rows,
     load_meta_reviewer,
-    load_reviewer,
     load_submitted_papers,
 )
+
+
+# Map the anonymized HF reviewer_ids to full model names used in the paper.
+# Human reviewers keep their IDs as-is (Human_1, Human_2, Human_3).
+REVIEWER_ID_TO_FULL_NAME = {
+    'Claude': 'claude-opus-4-5',
+    'GPT': 'gpt-5.2',
+    'Gemini': 'gemini-3.0-pro-preview',
+}
 
 
 # ---------------------------------------------------------------------------
@@ -189,10 +197,11 @@ def _write_reviews(
                 if key in mr_rows_by_item:
                     structured[inum] = mr_rows_by_item[key]
 
-        md = _build_review_markdown(reviewer_id, items_sorted, structured)
+        # Use full model name for AI reviewers (e.g., gpt-5.2 instead of GPT)
+        display_name = REVIEWER_ID_TO_FULL_NAME.get(reviewer_id, reviewer_id)
+        md = _build_review_markdown(display_name, items_sorted, structured)
 
-        # Sanitize reviewer_id for filename
-        safe_name = reviewer_id.replace('/', '_').replace(' ', '_')
+        safe_name = display_name.replace('/', '_').replace(' ', '_')
         review_path = reviews_dir / f'{safe_name}.md'
         review_path.write_text(md, encoding='utf-8')
         n_written += 1
@@ -227,11 +236,7 @@ def main():
     output_root.mkdir(parents=True, exist_ok=True)
 
     # Load all data from HF
-    print('Loading reviewer config (paper metadata + file_refs)...')
-    reviewer_rows = load_reviewer()
-    print(f'  {len(reviewer_rows)} papers')
-
-    print('Loading expert_annotation config (review items)...')
+    print('Loading expert_annotation config (review items + file_refs)...')
     ea_rows = load_expert_annotation_rows()
     print(f'  {len(ea_rows)} rows')
 
@@ -260,8 +265,14 @@ def main():
         inum = int(row.get('review_item_number') or row.get('item_number') or 0)
         mr_by_paper_reviewer_item[pid][(rid, inum)] = row
 
-    # Sort papers by paper_id
-    papers = sorted(reviewer_rows, key=lambda r: int(r['paper_id']))
+    # Build unique paper list from expert_annotation (one entry per paper_id)
+    papers_by_pid: Dict[int, Dict[str, Any]] = {}
+    for row in ea_rows:
+        pid = int(row['paper_id'])
+        if pid not in papers_by_pid:
+            papers_by_pid[pid] = row
+    papers = sorted(papers_by_pid.values(), key=lambda r: int(r['paper_id']))
+    print(f'  {len(papers)} unique papers')
     if args.limit:
         papers = papers[:args.limit]
 

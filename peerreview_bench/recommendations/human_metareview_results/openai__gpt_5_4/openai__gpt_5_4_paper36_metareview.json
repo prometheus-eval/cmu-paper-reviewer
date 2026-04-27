@@ -1,0 +1,252 @@
+{
+  "paper_id": 36,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explicitly presents a five-year prediction model but the abstract also says the sub-groups were validated on an 11-year risk setting, while the manuscript does not really explain how to interpret that horizon mismatch. The concern is real and important, but the reviewer does not point to the exact passage or fully explain why the mismatch matters.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The study is built from retrospectively identified OA cases and date-matched controls, with five years of pre-diagnosis/index-date data captured before modeling. Asking the authors to label this more clearly as a retrospective case-control design, including in Figure 1A, is accurate and materially improves methodological clarity.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper says controls were randomly selected and date-matched, and Figure 1B shows cases and controls still differ in age and sex. Since age and female sex are acknowledged OA risk factors, questioning why controls were not also age/sex matched is factually well grounded and important for interpreting the model.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper gives only limited control eligibility details and does not really discuss possible contamination from imperfect OA coding in controls, so the broader concern is valid. However, the reviewer does not identify specific problematic codes or show concretely why contamination is likely, so the support is incomplete.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript already states that WGPRS/genetic risk scores were generated with PRSice v2.3.3 and weighted using OA meta-analysis summary statistics, with further scoring details in the methods. Because the review item’s core confusion is directly answered in the paper, the criticism does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper explicitly says the omics models were run on subsets of participants where those data were available, and Figure 6A reports different case/control counts for each omics modality. Since the manuscript does address availability by subset, the claimed missing clarification is not supported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Figure 1C is a count plot, and the caption already notes that some patients had OA at multiple sites. Suggesting an UpSet-style visualization to show overlaps more clearly is a valid but primarily presentational improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript repeatedly refers to primary and secondary EHR/health-care data without explicitly defining those terms for readers unfamiliar with the UK data sources. This is a real but modest clarity issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The quoted sentence cites Sup File 1 for the 103,086-case and ~21% statements, but Sup File 1 is described as OA clinical codes rather than cohort derivation, so the support is mismatched. That is a valid and important documentation problem for the core study population.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper mentions read2 and read3 coding systems but does not explain their distinction for readers inspecting the supplementary coding resources. This is a valid but minor clarification request.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Figure 4 is central to the clustering/validation story, yet its caption does not clearly explain several displayed quantities well enough for the figure to stand alone. Requesting a fuller legend is therefore accurate and materially helpful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The paper reports omics models and SHAP-based subgrouping, but it does not really use those analyses to probe whether different biological signatures underlie the BMI effect or to identify intervention-relevant BMI subgroups. That is a substantive missed-analysis point, though the reviewer does not supply a detailed evidence chain.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The manuscript gives a SHAP summary for the clinical model but not parallel SHAP-style displays for the ClinGRS, ClinMet, or ClinPro models, instead emphasizing the sparse volcano plot in Figure 6B. Asking for comparable SHAP presentations is a valid and important interpretability request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The manuscript itself lists the supplementary files explicitly, but the specific claim about lost first-sheet names in uploaded spreadsheets cannot be checked from the available source bundle and may reflect the upload package rather than the paper text. Because that factual premise is not verifiable from the source of truth here, experts could plausibly split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The introduction does read somewhat like a sequence of disconnected points rather than a tightly stitched motivation, so the writing concern is real and worth addressing. But the reviewer does not point to particular paragraph transitions or examples.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The quoted abstract sentence is long and awkward, combining subgroup identification, validation, horizon, and assignment rate in one sentence. The criticism is valid, but it is mainly a writing polish issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The manuscript gives a broad per-person annual OA cost range without stating the countries/context from which that estimate comes. Asking for that specificity is accurate but relatively minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "Figure 2’s caption indeed contains the typo “steoroid” in the expansion of NSAIDs. This is a straightforward, minor, well-supported correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This criticism matches the paper closely: the model uses assessment-center data plus longitudinal data gathered over the next five years before diagnosis/index date, so it is not a pure baseline-only forward clinical prediction setup. Calling for clearer retrospective framing, or a redesign restricted to data available at each prediction timepoint, is accurate and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly names female sex as a known OA risk factor, yet sex does not appear among the top-ranked clinical SHAP features in Figure 2D. Asking the authors to investigate and discuss that omission is therefore factually grounded and useful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer quotes the paper’s “well-matched” claim, but Figure 1B shows meaningful baseline differences in age, sex, and BMI between cases and controls. Requesting comparison against simpler age/sex/BMI baselines or tighter matching is an important and well-supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Some parts of this item are solid, especially the unexplained case/control count imbalance after filtering and the suggestion that baseline-visit timing could matter. But the multicollinearity complaint is less cleanly applicable to XGBoost, so the overall item mixes valid and debatable premises in a way that could make experts split on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper often writes as if it predicts future OA onset, but many predictive features are captured very close to diagnosis, and NSAID use one year before diagnosis likely reflects already symptomatic disease and diagnostic delay. Asking for a sharper distinction between disease presence and recorded diagnosis is accurate and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper does use causal-sounding language about intervention opportunities and modifiable risk biomarkers, but it also explicitly states that the model cannot determine whether changing a biomarker would reduce OA risk. Because there is some overreach yet also a clear caveat, experts could reasonably disagree on whether this criticism is fully correct.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The broader concern is valid: the paper aggregates OA across heterogeneous joints and many diagnoses are not joint-specific, which can blur signal and deserves discussion. However, the item’s opening claim that a majority of participants had undifferentiated OA is not clearly supported by Figure 1C, so experts could split on overall correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Given the breadth of included data, the model’s ~0.7 AUC does invite discussion of why performance is only moderate and whether phenotype heterogeneity contributes. That is a substantive point, but the reviewer does not cite specific prior models or benchmarks, so the evidentiary support is thin.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper clearly chooses a five-year risk horizon and does not really justify that design choice against longer follow-up possibilities. That concern is real, but how important it is is somewhat debatable because the chosen prediction horizon may simply reflect intended scope.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The validation set is independent only in the sense of a separate temporal split within UK Biobank, not a truly external cohort. Pointing out that this limitation should be acknowledged is factually correct and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The methods section does contain the typo “UK BioBank” instead of the standard “UK Biobank.” This is a straightforward minor correction supported directly by the text.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

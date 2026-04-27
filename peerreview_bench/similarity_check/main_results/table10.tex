@@ -1,0 +1,30 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{10}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l l r r r r}
+\toprule
+\textbf{Pair type} & \textbf{Category} & $N$ & \textbf{Raw (\%)} & \textbf{RG-corrected (\%)} & \textbf{95\% CI} \\
+\midrule
+H-H (diff reviewer) & Same issue, same crit., same evid. & 19{,}901 & 0.5 & 0.3 & [0.0, 0.6] \\
+ & Same issue, same crit., diff evid. &  & 5.5 & 3.1 & [0.0, 7.1] \\
+ & Same issue, diff criticism &  & 8.1 & 8.4 & [6.9, 10.8] \\
+ & Different issue &  & 85.8 & 88.3 & [82.6, 92.3] \\
+\midrule
+H-A & Same issue, same crit., same evid. & 23{,}642 & 0.4 & 0.3 & [0.0, 0.5] \\
+ & Same issue, same crit., diff evid. &  & 7.1 & 4.9 & [0.2, 8.5] \\
+ & Same issue, diff criticism &  & 14.4 & 14.8 & [13.3, 16.5] \\
+ & Different issue &  & 78.1 & 80.1 & [76.2, 84.5] \\
+\midrule
+A-A (diff model) & Same issue, same crit., same evid. & 4{,}329 & 3.0 & 3.1 & [2.3, 3.9] \\
+ & Same issue, same crit., diff evid. &  & 17.7 & 17.9 & [13.7, 21.8] \\
+ & Same issue, diff criticism &  & 20.2 & 20.2 & [17.7, 22.7] \\
+ & Different issue &  & 59.0 & 58.9 & [54.8, 63.1] \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Raw vs.\ Rogan-Gladen-corrected similarity prevalences for Figure~\ref{fig:overlap}, Left panel.}
+The Rogan-Gladen correction adjusts for the GPT-5.4 similarity judge's binary misclassification rate (sensitivity~=~87.1\%, specificity~=~96.8\%, measured on the 164-pair calibration set).
+The correction is applied to the binary similar/not-similar boundary; within each binary group, the 4-way split is maintained proportionally from the raw data.
+95\% CIs are cluster-bootstrap (10{,}000 paper-level resamples) with sensitivity and specificity themselves resampled from Binomial distributions per iteration to propagate calibration uncertainty.}
+\label{tab:rg-comparison}
+\end{table}

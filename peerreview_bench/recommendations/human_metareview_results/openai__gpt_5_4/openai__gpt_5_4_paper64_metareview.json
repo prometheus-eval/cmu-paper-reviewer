@@ -1,0 +1,196 @@
+{
+  "paper_id": 64,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does state the training loss (cross-entropy) and regularizing layers such as Dropout/BatchNorm in the architecture section, so part of this complaint overstates what is missing. But the self-supervised pseudo-label update and its convergence/collapse behavior are only sketched at a high level, making the overall concern real but mixed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Figure 1 and the text say S1/S2 are short-term models and L3 is long-term, with self-supervised updates every 5 seconds, but they do not clearly explain how memory is represented or exactly how S1 and S2 differ beyond alternating rebuilds. That is a substantive clarity gap in the core method.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The experiments are built around random binary patterns, binarized MNIST/Fashion-MNIST inputs, and bit-stream video encoding, so the reviewer is right that non-binary validation is absent. Because the paper claims practical imaging and communication relevance, showing gray-level or non-binary cases would meaningfully strengthen applicability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main quantitative comparisons are against a static neural-network baseline; the paper does not report a conventional reconstruction benchmark such as a transmission-matrix style method alongside the central results. That is a meaningful evaluation gap, although the reviewer does not name a specific conventional baseline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript does provide some MMF details, including 100 m and 1 km lengths and GI-200/SI-200 200 μm cases, so saying the specs are simply not listed is too strong. Still, fiber specifications are not comprehensively reported across experiments, so the reviewer is pointing at a plausible reproducibility issue but phrasing it ambiguously.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "AdaDelta is named in the methods, but no AdaDelta paper is cited in the references. Adding the optimizer reference is a minor but valid bibliographic fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The methods mention the GPU and high-level architecture, but they do not report parameter counts or training time. Those omissions matter for reproducibility and resource assessment, though different meta-reviewers could reasonably disagree about how important that is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figure 1b visibly contains the unexplained label “Self-s update,” which reads like a typo or truncated phrase. Clarifying that figure label is a minor but valid presentation fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper motivates multi-timescale memories using slow drift and abrupt jitter, but it never clearly justifies why that leads to exactly two interleaved short-term branches plus one long-term branch instead of a simpler design. That missing rationale concerns the core architectural choice.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript says models are updated every 5 seconds and loosely ties that to channel stability over about 10 seconds, but it does not really discuss how the interval was chosen or how it depends on other factors such as acquisition rate. The point is valid, though the reviewer provides only brief support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figures 2 and 4 do plot the accuracy traces from 500 s onward, and the text explains StaticNN was trained on the first 500 s, so the presentation can indeed look incomplete without extra context. The figures also do not clearly state whether the averaged spatial maps aggregate over 500 s or the full 1000 s.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The experimental setup lists wavelength, lenses, objectives, and device models, but it does not report the beam size on the SLM/MMF entrance or discuss fill factor across fibers of different diameters. Those are meaningful optical details for reproducibility and interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The submission package already contains a code directory with MMDN.py, model files, config, and a README, so the suggestion that the authors should provide code is at least partly already satisfied. However, the manuscript itself does not advertise code availability, making this item somewhat ambiguous.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Both suggested grammatical fixes match phrases that appear verbatim in the introduction (“the calibration of TM with huge number of” and “after long time”). These are minor but valid wording corrections.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The phrase “with several orders throughput enhancement” appears in the paper and is indeed missing “of.” This is a straightforward minor language correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The sentence “For 100m transmission cases, MMDN even reduce the averaged error rate” appears in the results and the reviewer’s suggested edit is grammatically correct. This is a minor but valid language fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper motivates MMF over SMF qualitatively but does not provide the kind of explicit SMF bandwidth/significance comparison that the reviewer asks for. Such a comparison could help contextualize impact, but it is somewhat outside the paper’s core technical claim, so its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main demonstrations use binary patterns, binarized image datasets, and bit-stream video encoding, so the request for non-binary decoding results and clearer real-world use scenarios is well grounded. The item also includes more speculative claims about guidestars and throughput ceilings, so the support is weaker than the core applicability concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The self-supervised online update is described only at a high level: predicted inputs become pseudo-labels, models update periodically, and short-term models are rebuilt on a schedule. Because this mechanism is central to the contribution and lacks deeper explanation or dedicated methodological citation, the reviewer’s request for clarity is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper explicitly uses 20,000 paired samples for the initial natural-image model and does not clearly foreground update data requirements in the main narrative, while the reviewer also names a concrete transmission-matrix calibration reference for comparison. Data efficiency versus conventional calibration is a substantive issue for the claimed applications.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The phrase “amplitude-to-amplitude optical setup” appears without definition, and the methods only loosely describe the chain from expanded laser to SLM to MMF to camera. Asking whether this means intensity modulation and how the planes are optically related is a valid reproducibility/clarity request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper labels the GI-200 and SI-200 cases as “highly variable” but does not define that term quantitatively in the main text. The added assertion that Supplementary Fig. 2 would place them only at medium instability is less firmly supported here, so the issue is real but modest and somewhat borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

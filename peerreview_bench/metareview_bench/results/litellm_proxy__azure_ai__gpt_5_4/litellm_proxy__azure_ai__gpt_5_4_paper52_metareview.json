@@ -1,0 +1,379 @@
+{
+  "paper_id": 52,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the manuscript compares AuHNW mainly against Ag@AuNW and never explains why a solid AuNW control is unnecessary, so the reviewer's request targets a real gap in how the hollow-structure advantage is justified. A skeptical expert could say Ag@AuNW is a natural precursor control and already answers the intended comparison, but that does not remove the missing rationale for why this is the right control rather than AuNW. Because control choice affects whether the claimed benefit comes from hollowness rather than some other material difference, I treat this as Significant. The item identifies the exact absent control/justification, so the evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: Fig. 2 compares AuHNW films to a 100 nm Au film, but the manuscript only gives AuHNW shell thickness and coating times, not the thickness of the AuHNW film itself, so the comparison is under-specified. A skeptical expert could note that coating times partly convey film amount, but that is not a substitute for the missing thickness detail. Because film thickness affects fairness of the electrical and chemical comparisons, I mark this Significant. The reviewer points to the exact figure and missing parameter, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper tests chemical stability in 30% H2O2 but does not explain why this oxidant is the appropriate or physiologically meaningful challenge condition. A skeptical expert could say H2O2 is a standard accelerated oxidative-stability probe, but the manuscript never says that. Since stability is central to the long-term sensor claim, asking for the rationale is Significant. The reviewer identifies the exact assay whose justification is missing, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the paper reports transparency for the sensor material, while the integrated DDS/ASIC regions are visibly opaque and no whole-device optical benchmark is given. A skeptical expert could argue the opaque components sit outside the optical axis and overall transmittance is therefore less important, so the underlying issue is real but its importance is debatable. One expert could see this as a substantive usability question, while another could treat it as mostly presentational, so I expect disagreement on significance. The item points to the relevant figures and missing benchmark, making the evidence Sufficient. I therefore predict \"correct_disagree_on_significance\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: Fig. 2g shows enormous resistance changes, yet the methods only say a source meter measured resistance on stretched PDMS and omit basic details such as contact scheme and starting resistance. A skeptical expert could say the exact probe geometry is ancillary for a proof-of-concept plot, but those omissions materially affect interpretation of such large signals. Because the electromechanical characterization supports the core sensor claim, I mark this Significant. The reviewer cites the exact panel and the specific missing measurement details, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correct: the paper compares material and artificial-eye sensor behavior, but it never shows a full Ag@AuNW-based contact-lens device as a direct control for the final IOP relationship. A skeptical expert could say the earlier material comparisons make that extra device-level control unnecessary, so the concern is real but its importance is debatable. One expert could see this as a key missing control and another as optional strengthening, so I predict disagreement on significance. The missing control is specific enough to verify, so evidence is Sufficient. I therefore predict \"correct_disagree_on_significance\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Correct: the ASIC is presented as a core integrated component, yet the manuscript gives almost no chip-level information beyond its existence and a prior wireless-work reference. A skeptical expert could say the paper's novelty is mostly in the sensor/DDS integration, but the ASIC still underpins the wireless system being claimed. Because more chip detail would materially improve reproducibility and system understanding, I mark this Significant. The reviewer names concrete missing information such as power and circuit blocks, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Correct: the paper claims continuous IOP monitoring, but it does not evaluate common real-world perturbations such as blinking, eye closure, or posture changes that could alter corneal strain and sensor output. A skeptical expert could say those human-use conditions are beyond the scope of a rabbit feasibility study, so the issue is real but its importance is debatable. One expert could view this as essential for translational monitoring claims, while another could see it as future work, so I predict disagreement on significance. The item names specific missing conditions, so the evidence is Sufficient. I therefore predict \"correct_disagree_on_significance\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Correct: Fig. 6b does show noticeable scatter around the identity line and relatively few high-IOP points, so asking the authors to explain that spread is justified. A skeptical expert could note that the paper also reports R^2=0.88 and Bland-Altman limits, but those do not eliminate the visual spread issue. Because this figure is central to sensor validation, I mark the concern Significant. The reviewer points to the exact panel and the two concrete problems, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Correct: Supplementary Fig. 9 is presented as showing 'perfect fitting,' but the paper does not give a clear criterion for how fitting quality was judged, and an additional view could help. A skeptical expert could say a single fitting image is enough for a feasibility paper, so the issue is real but its importance is debatable. One expert could see fit assessment as important for measurement validity, while another could treat it as a minor presentation request, so I predict disagreement on significance. The item names the exact supplementary figure and the missing explanation, so evidence is Sufficient. I therefore predict \"correct_disagree_on_significance\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Correct: Supplementary Fig. 3b appears to show SEM images without a visible scale bar, so the reviewer is flagging a genuine presentation omission. A skeptical expert could say panel a already gives some scale context, but panel-specific scale information is still the proper standard for microscopy. This is a minor presentation fix, so I mark it Marginally Significant rather than Significant. The reviewer names the exact panel, which is enough to verify the omission, so evidence is Sufficient. I therefore predict \"correct_marginal_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the manuscript motivates continuous monitoring yet never discusses how drug release decisions would distinguish pathological IOP elevation from ordinary diurnal or nocturnal fluctuation. A skeptical expert could say the rabbit feasibility study was not designed to solve that clinical-control policy question, but the omission still matters for the claimed feedback use case. Because addressing it would strengthen the therapeutic-control logic, I mark this Significant. The missing discussion is clearly specified, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper mentions daily and weekly DDS formats but never clearly explains how a patient would actually wear the system or what the authors mean by short- versus long-term monitoring. A skeptical expert could say this is early-stage preclinical work and not a deployment study, but the lack of use-case framing still weakens the translational story. Because clearer wear-regimen definitions would materially improve interpretation of the device, I mark this Significant. The item identifies the exact absent discussion, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct on balance: although the manuscript mentions unique optical and electromechanical properties of hollow structures, it does not fully explain why hollow nanomaterials are preferable to bulk or solid alternatives for this application. A skeptical expert could say the paper already gives enough discussion by linking hollowness to transparency and flexibility, and that objection is plausible enough that I expect disagreement on correctness even though I lean Correct. If addressed, the point would sharpen the core novelty claim, so I mark it Significant. The reviewer identifies a specific explanatory gap rather than making a vague complaint, so evidence is Sufficient. I therefore predict \"disagree_on_correctness\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the paper calls 30% stretchability 'reasonable' but does not provide a benchmark or rationale for why that level is appropriate for contact-lens use. A skeptical expert could say the material only needs to exceed expected corneal strain, but the manuscript never makes that link explicit. Because the benchmark affects how readers interpret the sensor-material performance, I mark this Significant. The reviewer points to the exact unsupported claim, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: the in vitro and artificial-eye characterization stops at 35 mmHg, and the control logic for repeated drug release under persistently high IOP is not explained. A skeptical expert could say 35 mmHg already covers the authors' rabbit-model range, but the unanswered high-IOP behavior still limits the claimed control framework. Because this bears directly on therapeutic usefulness, I mark it Significant. The item names two specific missing behaviors, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correct: the paper explicitly calibrates loading to one commercial eye-drop dose but does not discuss whether contact-lens delivery changes ocular bioavailability enough that a lower dose would be more appropriate. A skeptical expert could say matching an existing dose is a reasonable first feasibility choice, but the missing pharmacologic discussion still affects interpretation. Since dosing logic is central to the therapeutic claim, I mark this Significant. The reviewer ties the concern to a concrete design choice in the paper, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Correct: the complete one-reservoir release profile appears in the supplement rather than the main text, so this is a valid request about figure placement. A skeptical expert could say the information is already available and therefore not missing, which is true, but the main-paper placement suggestion still stands. This is mainly a presentation choice rather than a substantive flaw, so I mark it Marginally Significant. The reviewer identifies the exact absent-from-main result, so evidence is Sufficient. I therefore predict \"correct_marginal_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I lean Correct because panel 4g is easy to misread as sequential releases without immediately knowing whether the y-axis is cumulative, even though the caption and text do clarify it. A skeptical expert could reasonably respond that the paper already labels Fig. 4g as cumulative release, and that prosecution is plausible enough that I expect disagreement on correctness. If clarified, this would improve interpretation of a main drug-release figure, so I mark it Significant. The reviewer points to a specific panel and concrete ambiguity, so evidence is Sufficient. I therefore predict \"disagree_on_correctness\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Correct: the biosafety section reports no corneal damage but does not clearly state the duration of lens wear used for that safety assessment. A skeptical expert could say the monitoring protocol implies short wear windows, but the safety claim should still state exposure duration directly. Because safety conclusions depend on exposure time, I mark this Significant. The item identifies a specific missing methodological detail, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Correct: Fig. 6e only shows days 1, 3, and 5, and the every-other-day dosing rationale and between-day IOP behavior are not explained. A skeptical expert could say the figure is only a proof-of-concept snapshot, but the unanswered durability question still affects the claimed control strategy. Because sustained IOP control is central to the paper's therapeutic value, I mark this Significant. The reviewer names the exact missing days and rationale, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the device has only a limited number of reservoirs and the paper does not really address the practical or safety implications of frequent lens replacement for chronic therapy. A skeptical expert could say the weekly design partly mitigates the replacement burden, but it does not answer the long-term wear-and-replacement safety concern. Because chronic usability is fundamental to glaucoma treatment, I mark this Significant. The item ties the concern to the finite-reservoir design and associated ocular risks, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct on balance: the paper does not compare the 30-minute release profile to bolus eye-drop exposure and the efficacy study is limited by small animal numbers and thin justification of the chosen models. A skeptical expert could say the two rabbit models are standard enough and that prolonged-release-versus-bolus safety is beyond the paper's scope, but the overall concern about therapeutic-study interpretation still stands. Addressing it would materially strengthen the efficacy argument, so I mark it Significant. The reviewer gives some concrete anchors (the ~30 min release and few rabbits) but does not support the 'poorly reproducible models' step, so evidence Requires More. I therefore predict \"correct_significant_insufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: calling glaucoma 'menacing' is rhetorically loaded and somewhat overstated for a scientific introduction. A skeptical expert could say it is merely an emphatic adjective and not literally false, but the reviewer's underlying point about tone and precision is still fair. This is a minor wording improvement, so I mark it Marginally Significant. The item points to the exact sentence, so evidence is Sufficient. I therefore predict \"correct_marginal_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the sentence implying IOP 'indicates' glaucoma condition is medically overbroad, because IOP is a risk factor and management target rather than a clean diagnostic marker. A skeptical expert could say the paper is using shorthand in an engineering-focused introduction, but that does not erase the conceptual imprecision. One expert could see this as important clinical framing, while another could see it as mainly introductory wording, so I expect disagreement on significance. The reviewer cites the exact line and the concrete conceptual problem, so evidence is Sufficient. I therefore predict \"correct_disagree_on_significance\".",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I lean Correct because the paper does overstate the drawbacks of clinic tonometry when motivating its device. A skeptical expert could reasonably argue that clinic tonometry is still more expensive, less comfortable, and more training-dependent than ideal home monitoring, and that counterargument is plausible enough that I expect disagreement on correctness. This is mainly about motivation framing rather than the core experiments, so I mark it Marginally Significant. The reviewer points to the exact claims being challenged, so evidence is Sufficient. I therefore predict \"disagree_on_correctness\".",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correct: the phrase 'critical mismatch' is unclear wording for the underlying point that spot measurements can miss time-varying IOP. A skeptical expert could say the intended meaning is inferable from context, but the wording is still imprecise enough to justify the complaint. This is a minor clarity fix, so I mark it Marginally Significant. The reviewer points to the exact phrase, so evidence is Sufficient. I therefore predict \"correct_marginal_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is Not Correct because it never identifies what specific statement about eye-drop treatment is supposedly inaccurate, so the core criticism is too vague to verify. A charitable reading is that the reviewer wanted the paper to discuss adherence rather than only dose and bioavailability, but that is not actually the claim the item makes. Because correctness fails, significance and evidence are null. Experts are likely to agree the item should be treated as incorrect, so I predict \"incorrect\".",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This item is Not Correct because the methods do explain how resistance was measured versus IOP, using an artificial eye model with controlled pressure and a source meter. A charitable reading is that the reviewer found the description hard to follow, but the basic testing setup is in fact present. Because the main factual premise does not hold, significance and evidence are null. Experts would likely agree this item is incorrect, so I predict \"incorrect\".",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I lean Correct because the paper repeatedly markets a feedback or theranostic control system, yet the in vivo demonstration appears to use discrete, externally decided release events rather than autonomous closed-loop actuation. A skeptical expert could reasonably argue that 'feedback system' need not mean fully automatic onboard control and that the paper only claims monitoring-informed intervention, so I expect disagreement on correctness. If clarified, this would materially change how readers understand the system's capability, so I mark it Significant. The reviewer cites the core claims and the specific day-by-day control experiment, so evidence is Sufficient. I therefore predict \"disagree_on_correctness\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the therapeutic study really does use only n=3 rabbits per group, while the statistical description is thin and the n=25 IOP points do not obviously resolve the biological-replicate limitation. A skeptical expert could say this is acceptable for a feasibility study, but it still limits how strongly efficacy can be claimed. Because the issue affects the robustness of the main in vivo conclusions, I mark it Significant. The reviewer quotes the exact group sizes and statistics language, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: an R^2 of 0.88 and a brief Bland-Altman result do not by themselves establish broadly accurate absolute mmHg measurement, especially when the system relies on per-rabbit calibration curves. A skeptical expert could say the paper never promised calibration-free use and did include agreement analysis, but that does not remove the limitation on standalone quantitative interpretation. Because quantitative IOP monitoring is central to the paper, I mark this Significant. The reviewer points to the calibration procedure, the correlation result, and the missing generalizability or error analysis, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the safety package is short-term and limited, relying on 3-day fibroblast assays and brief rabbit studies rather than longer ocular-use evaluation more aligned with chronic glaucoma therapy. A skeptical expert could say feasibility-stage biomaterials papers often use exactly this level of testing, but that does not make the long-term safety gap disappear. Because safety is central for a therapeutic contact lens, I mark it Significant. The reviewer cites the actual assay choices and wear evidence being used, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I lean Correct because the paper does use electrochemical gold dissolution in tear fluid and does not specifically evaluate the ocular effects of the dissolved gold species themselves. A skeptical expert could argue that the authors did perform overall biosafety tests and that the reviewer overstates the risk without quantifying exposure, and that objection is plausible enough that I expect disagreement on correctness. The underlying safety question is important, so I mark it Significant. The review points to the dissolution mechanism but does not establish that the released concentration is actually harmful, so I judge the evidence as Requires More. I therefore predict \"disagree_on_correctness\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the supplementary calibration procedure uses a rabbit-specific standard curve, so the device's mmHg output is not a universal direct readout. A skeptical expert could say clinical calibration might still be manageable with ordinary tonometry and need not require the invasive scenario the reviewer imagines, but that does not remove the practicality concern. Because this bears directly on clinical usefulness of the sensor, I mark it Significant. The reviewer quotes the calibration method precisely, but the jump from subject-specific calibration to definite clinical impracticality is somewhat under-argued, so the evidence is borderline and I set it to Requires More. I therefore predict \"correct_significant_disagree_on_evidence\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct on balance: the paper admits the chip reached 39.3 °C and only shows short-term absence of obvious thermal damage, so a question about longer-term thermal safety is justified. A skeptical expert could say 39.3 °C is not clearly injurious and the reviewer overstates it as 'excessive,' but the broader concern about limited thermal validation still stands. Because thermal safety matters for a wearable ocular device, I mark it Significant. The reviewer gives concrete temperature values, yet the chain from that temperature to meaningful injury risk is borderline rather than definitive, so I set evidence to Requires More and expect disagreement there. I therefore predict \"correct_significant_disagree_on_evidence\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the paper's performance discussion is mostly internal to Ag@AuNW versus AuHNW and does not quantitatively situate the proposed sensor against other strong IOP-sensing approaches cited in the introduction. A skeptical expert could say the paper is about a full theranostic integration rather than a leaderboard comparison, but broader benchmarking would still strengthen the claim of material advantage. Because missing comparisons and contextual baselines would materially improve the evaluation, I mark this Significant. The reviewer names concrete comparator families and references already in the manuscript, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: with n=3 animals per group, the efficacy and safety claims are necessarily based on a very small preclinical sample. A skeptical expert could say this is acceptable for an early feasibility demonstration, but it still weakens the robustness of the conclusions. Since the criticism goes to the strength of the main in vivo claims, I mark it Significant. The reviewer cites the exact group sizes and statistics text, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the supplementary methods show bilateral glaucoma induction with fellow-eye saline control while timolol is delivered to the treated eye, so the study design is exposed to a real contralateral-confounding concern. A skeptical expert could say the paper is a feasibility study and that the magnitude of any contralateral effect in this exact setup is not shown, but the design vulnerability still stands. Because it affects causal interpretation of the therapeutic results, I mark it Significant. The reviewer points to the exact design and the specific confound it creates, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper combines n=3 groups, paired eyes, repeated measurements, and only a one-line ANOVA description, so the experimental unit and statistical validity are indeed under-specified. A skeptical expert could say the work is exploratory and not powered for definitive inference, but that actually reinforces rather than removes the concern. Because this directly affects how much confidence to place in the efficacy and biosafety claims, I mark it Significant. The reviewer cites the exact group-size, paired-eye, and statistics statements, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the manuscript's mmHg readout is generated from per-rabbit calibration against tonometer readings, so the reviewer's claim that the quantitative output is derived rather than calibration-free is factually supported. A skeptical expert could say that calibration is acceptable for a prototype and does not invalidate the sensor, but it does limit what can be claimed about direct generalizable measurement. Because quantitative IOP monitoring is central to the paper's contribution, I mark this Significant. The reviewer points to the exact calibration equations and procedure, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the in vivo monitoring window is only 30 minutes with 5-minute sampling, and the drug-release demonstration operates on an every-other-day timescale, so the evidence falls short of truly continuous closed-loop management. A skeptical expert could say the authors only aim to demonstrate feasibility rather than mature clinical control, but the paper's framing still exceeds what is shown. Because this affects the core system claim, I mark it Significant. The reviewer cites the precise monitoring protocol and control schedule, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: the code bundle contains only one Verilog file and one Java GUI file, with hardware-specific assumptions, a missing datam class, hard-coded paths, and no ASIC-level implementation or documented pipeline. A skeptical expert could say code release is ancillary to a materials or biodevice paper, but for a claimed wireless and ASIC-enabled feedback system the telemetry stack is part of reproducibility. Because fuller code and interfaces would materially improve reproducibility of a core component, I mark this Significant. The reviewer cites concrete missing pieces from the provided code, so evidence is Sufficient. I therefore predict \"correct_significant_sufficient\".",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

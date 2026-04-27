@@ -1,0 +1,371 @@
+{
+  "paper_id": 49,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly points out that the study does not incorporate symptom or neurocognitive profiles to relate with overlapping neurobiological changes. While the reviewer suggests this could be addressed via additional analyses, they also offer the alternative of simply acknowledging it in the Discussion. Because the reviewer accepts either a major analytical addition or a minor discussion note, independent experts would plausibly disagree on whether this omission constitutes a Significant limitation or merely a Marginally Significant discussion point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the ENIGMA cohorts collapse across heterogeneous patients (time, age, medication) and treat disorders as singular entities. This is a crucial limitation in cross-disorder studies that rely on mega-analytic summary statistics. Addressing this by acknowledging it or running sensitivity analyses would genuinely improve the paper's translational interpretation. The reviewer provides sufficient evidence by explaining why pharmacological therapies impact cortical thickness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly identifies that the paper's methodology relies on cross-sectional correlations, and therefore causal-sounding claims like 'interact to drive' should be avoided or toned down. Toning down unwarranted causal language is a significant improvement to the manuscript. The reviewer quotes a specific phrase from the abstract as sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that focusing solely on cortical thickness may naturally bias results toward molecular associations over connectomic ones, since disorders might arise primarily in white matter. The reviewer explicitly calls this a 'relatively minor point' that warrants a brief note. A devil's advocate could argue it's a fundamental limitation, but given the reviewer's own framing, experts would likely agree it is a Marginally Significant point with sufficient logical justification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer accurately corrects a factual claim in the paper's methods regarding the ENIGMA consortium. The paper claims ENIGMA relies on 'standardized image acquisition', whereas ENIGMA actually uses retrospective legacy data with diverse acquisition protocols. Fixing this description is a Marginally Significant improvement. Despite the reviewer's expressed uncertainty ('but I could be wrong!'), the appeal to external knowledge about ENIGMA is specific enough for a meta-reviewer to verify.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer claims that the high mutual correlation among graph metrics impacts the R^2 values from the dominance analysis because there 'does not seem to be a step to partial out mutual correlations'. However, dominance analysis is explicitly designed to handle multicollinearity by partitioning R^2 contributions across all possible feature subsets. A devil's advocate might say the total model R^2 is still affected by multicollinearity, making the criticism partially correct. Because the factual premise about how the method handles correlations is ambiguous, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer correctly points out that the word 'embryonic' is overly restrictive, as network wiring abnormalities in neurodevelopmental disorders can arise across various developmental stages. This is a valid but minor wording issue that is Marginally Significant. The reviewer provides sufficient evidence by quoting the specific word and providing a concise logical correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer correctly observes that the normative MRI data used to reconstruct connectomes is older (long TR, 32-channel, single-shell DSI) rather than state-of-the-art. The reviewer themselves notes they 'doubt this will impact on the bottom-line findings', making it a Marginally Significant point to address. The specific scanner parameters listed provide sufficient evidence for verification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer correctly raises the concern that the 68 regions in the DK atlas differ highly in physical extent, which could confound the cross-diagnostic findings (e.g., larger regions may overlap by chance or have higher SNR). Checking for this confound would genuinely strengthen the paper's methodological rigor. The reviewer builds a sufficient logical derivation based on the known properties of the DK atlas.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer correctly notes that the spin test introduces geometric distortions when applied to a collapsed cortical surface, potentially overestimating the true null variance. The reviewer acknowledges this makes the test more conservative and is 'not an issue for the present paper', asking only for a methods acknowledgement. This is a Marginally Significant limitation to mention, and the logical explanation of the spin test's geometry provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes that a considerable number of multilinear models and tests were performed (e.g., in Figure 2) without explicit multiple comparisons correction. Acknowledging this as a limitation or applying a correction procedure is Significant to prevent inflated Type I errors. The reviewer points directly to the analyses in Figure 2, providing sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly questions whether the cross-disorder epicentre likelihood is driven by Euclidean distance, and whether averaging across the 7 disorders is meaningful given that right and left temporal lobe epilepsy are both included (effectively up-weighting epilepsy). Addressing this would clarify the validity of the epicentre metric. The reference to Figure S7 and the two epilepsy maps provides sufficient verifiable evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out a confusing typo in the Figure 5a legend, which states the matrix was computed as the pairwise correlation of 'regional cortical thickness' rather than cortical thickness abnormality. The reviewer notes the methods section states it correctly. Fixing this typo is a Marginally Significant improvement to presentation clarity, and quoting the legend is sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly questions why a spin null model was not used for the matrix correlations in Figure 5c-f, instead relying on regressing out distance. While regressing out distance is a valid approach for matrix correlations, asking for a spatial null model is a valid methodological concern. This is a Significant point, and the specific reference to the panels and distance regression provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly asks the authors to explicitly mention that the Lausanne dataset has been used elsewhere and to justify the choice of deterministic tractography. These are minor methodological details that are nice to have. As such, they are Marginally Significant. The reviewer provides sufficient evidence by naming a specific reference dataset.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out that the description of the edge binning process for DSI-based connectomes is difficult to understand and asks for rephrasing or a reference. The paper's description of group-consensus edge collation is indeed somewhat dense. Improving the clarity of the methods section is Significant for reproducibility. The specific pointer to the structural network reconstruction section is sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer correctly notes that the use of the T1w/T2w ratio as a proxy for myelin is debated and suggests adding a brief limitation to the text. This is a valid, well-known methodological caveat. As the reviewer only recommends adding a line or two to the limitations, it is Marginally Significant. The citation of a specific external paper provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer correctly observes from the results that schizophrenia and schizotypy have a differentiated influence of molecular versus connectivity predictors, and suggests mentioning this interesting finding in the discussion. Expanding on an interesting secondary result is a Marginally Significant addition. Pointing to the specific result contrast is sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer asks whether the association between gene PC1 and thickness differences might be driven by cell type distribution, as gene PC1 is likely to reflect this. This is a Correct and Significant mechanistic question. However, the reviewer appeals to this external domain knowledge without providing a specific citation or completing the logical chain, meaning experts would likely disagree on whether this constitutes Sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests performing a sex-stratified analysis. However, the ENIGMA summary statistic maps used in this study often lack individual-level data or comprehensive sex-stratified outputs across all 13 disorders, making this potentially impossible. A devil's advocate could argue the reviewer is right to suggest it if the data allows, but a strict expert would dismiss it as an unrealistic request for this specific dataset. Thus, experts would disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly hypothesizes that the finding of local features predicting abnormality better than global features might simply be due to differential noise levels between the two sets of predictors. Assessing this via simulation or pipeline changes would be a Significant validation of the main claim. The logical derivation is clear and provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks how confident the authors are that their global evidence will hold up in 20 years with better graph technology. While technically a valid epistemological question, it does not provide an actionable, concrete criticism of the current manuscript. A devil's advocate could argue this is an extension of Item 2, but on its own, it is a Not Significant point that should be removed from the review.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that the paper does not compare the Figure 3 axes to pairwise genetic correlations between the disorders. This is a concrete, viable suggestion for validating the methodology and findings, which would Significantly improve confidence in the results. The clear description of the proposed control analysis provides sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly points out that some short forms, like 'pd' for Parkinson's, are used inconsistently in the text. Fixing these formatting and abbreviation inconsistencies is a Marginally Significant improvement. The explicit examples provided constitute sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer correctly notes that the word 'shape' in the title could be misread as a noun rather than a verb, and suggests a rephrasing for clarity. Clarifying the title is a valid but Marginally Significant stylistic suggestion. The reviewer provides sufficient evidence by quoting the title and offering an alternative.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer claims there is a typo 'cortical abnormaliity' on page 3. A search of the manuscript's source text reveals that this exact typo does not exist. Because the factual premise of the criticism is straightforwardly false, the item is Not Correct. A devil's advocate cannot plausibly defend a non-existent typo.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer points out multiple issues with Figure 5, such as needing a KS test for the normality claim and a mismatched caption for panel g. However, they also make a factually flawed visual claim that Pearson's r 'looks like < -1', confusing the axis data points with the correlation coefficient. Because the item contains a mix of valid critiques and a glaringly incorrect interpretation, experts would likely disagree on the overall correctness of the item.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer claims that the word 'inhibitory' in the Figure 1 caption is a typo. A review of the caption shows that the word is spelled correctly as 'inhibitory' in the text. Because the reviewer's factual claim is entirely false, the item is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes that the paper infers a causal, mechanistic 'network spreading' and 'trans-synaptic' propagation process from purely cross-sectional correlational data. This is a major inferential leap that is Significant, as it mischaracterizes the strength of the evidence. The reviewer provides sufficient evidence by quoting specific causal phrases and citing longitudinal studies that properly test spreading hypotheses.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly observes that all molecular and connectomic predictors are derived from healthy adult datasets, but are used to predict abnormalities in patient populations where these exact systems (e.g., receptors, connectivity) may be disease-altered. This is a Significant limitation that threatens the validity of the models. The reviewer thoroughly quotes the data source descriptions as sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out that the epicentre analysis was only performed on a post-hoc subset of 7 out of 13 disorders that showed significant node-neighbor correlations, introducing a selection bias that undermines the 'cross-disorder' claim. This is a Significant methodological concern. The reviewer provides sufficient evidence by quoting the inclusion criteria and referencing the analysis code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly identifies that the paper repeatedly uses causal verbs (drive, govern, interact, amplify) to describe correlational dominance and regression analyses. Toning down this language is Significant to ensure readers are not misled about the mechanistic depth of the findings. The reviewer provides sufficient evidence by quoting multiple examples of this language from the text.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly analyzes the distance-dependent cross-validation scheme (75% closest as training, 25% farthest as test) and notes that regions adjacent to the hard boundary will still share spatial autocorrelation, potentially inflating performance estimates. This is a Significant methodological critique. The reviewer provides sufficient evidence by citing spatial autocorrelation literature and quoting the splitting code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies a major factual error in the text, where the authors mistakenly wrote 'schizophrenia' instead of 'schizotypy' when discussing a disorder poorly defined in the brain, and incorrectly claimed IGE was poorly explained by network measures despite the data showing otherwise. Correcting these substantive misreports of the results is highly Significant. The reviewer provides sufficient evidence via re-analysis values.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly observes that the abstract overgeneralizes the 'cross-disorder' epicentre finding, failing to mention that nearly half of the major disorders (like schizophrenia and depression) were excluded from this calculation because they did not pass the network spreading threshold. This is a Significant point about accurately framing the scope of the conclusions, supported by sufficient textual and statistical evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out that identifying dynamic 'network spreading' and 'epicentres' from static, cross-sectional spatial correlations is unwarranted, as shared vulnerability could produce the same patterns without actual spreading. This is a Significant limitation of the study design. The reviewer provides sufficient logical reasoning and external citations to support the critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that the study applies normative connectivity maps from healthy adults to neurodevelopmental disorders like ASD and ADHD, ignoring the fundamental disease-specific connectome alterations inherent to these conditions. This is a Significant conceptual limitation. The reviewer provides sufficient evidence by quoting the methods and logically linking it to developmental disorders.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer challenges the paper's claim that all ENIGMA maps used were from 'adult patients', arguing that ASD/ADHD maps typically span childhood to adulthood. However, the cited ENIGMA toolbox explicitly curates and provides adult-only summary statistics for exactly these cross-disorder comparisons. A devil's advocate would recognize the reviewer's skepticism is plausible given typical ENIGMA papers, but the paper's claim is technically accurate based on the toolkit used, leading experts to disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly uncovers a discrepancy between the text, which claims a 1,000-iteration random spatial cross-validation, and the provided code, which implements a deterministic 68-iteration leave-one-out spatial CV. This is a Significant reproducibility and methodological reporting issue. The reviewer provides sufficient evidence by directly quoting the text and the corresponding code block.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly identifies internal inconsistencies in the manuscript: the text claims 'nine' connectome predictors while only enumerating seven, and also mentions both the Desikan-Killiany and Lausanne parcellations interchangeably. These inconsistencies are Significant because they hinder exact reproduction of the regression models and dominance analysis. The quoted passages provide sufficient evidence of the mismatch.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that the paper overgeneralizes the epicentre findings by framing them as 'cross-disorder' in the abstract, despite the analysis intentionally subsetting only the 7 disorders that passed a network-spreading significance filter. This is a Significant overstatement of the results. The reviewer provides sufficient evidence by quoting the conditional inclusion criteria from the methods and the code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly points out that using a single structural connectome derived from young adults to compute vulnerability and network spreading for disorders that span the lifespan (e.g., Parkinson's) ignores crucial age-related network changes. This is a Significant limitation that challenges the robustness of the connectomic conclusions. The reviewer provides sufficient evidence by quoting the sample demographics and external literature on aging connectomes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

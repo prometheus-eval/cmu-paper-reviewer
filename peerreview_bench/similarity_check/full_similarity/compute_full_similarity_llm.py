@@ -94,7 +94,7 @@ _SIMCHECK_DIR = _HERE.parent                                 # .../similarity_ch
 _BENCH_DIR = _SIMCHECK_DIR.parent                            # .../peerreview_bench
 _EA_DIR = _SIMCHECK_DIR / 'expert_annotation_similarity'     # reuse prompts + retry
 _EA_BASELINES = _EA_DIR / 'baselines'
-_META_REVIEW_DIR = _BENCH_DIR / 'meta_review'
+_META_REVIEW_DIR = _BENCH_DIR / 'metareview_bench'
 
 for p in (_META_REVIEW_DIR, _BENCH_DIR, _EA_DIR, _EA_BASELINES, _HERE):
     if str(p) not in sys.path:
@@ -215,16 +215,52 @@ def _generate_pairs(
 # ---------------------------------------------------------------------------
 
 def _build_messages(paper_content: str, item_a: Dict, item_b: Dict) -> List[Dict[str, Any]]:
-    user_text = FOURWAY_USER_PROMPT_TEMPLATE.format(
-        paper_text=paper_content,
-        reviewer_a=item_a['reviewer_id'],
-        reviewer_b=item_b['reviewer_id'],
-        item_a=item_a['review_item'],
-        item_b=item_b['review_item'],
+    """Build messages with prompt caching support.
+
+    The system prompt is identical across ALL pairs. The paper content is
+    identical across all pairs from the same paper (~780 pairs/paper).
+    Both are marked with cache_control so Anthropic/Gemini can cache them.
+    OpenAI caching is automatic and ignores these markers.
+    """
+    # The pair-specific content (two review items) — unique per call
+    item_text = (
+        f"### Item A (from reviewer {item_a['reviewer_id']})\n"
+        f"{item_a['review_item']}\n\n"
+        f"### Item B (from reviewer {item_b['reviewer_id']})\n"
+        f"{item_b['review_item']}\n\n"
+        "---\n\n"
+        "Using the four-category taxonomy from the system prompt, classify "
+        "the relationship between Item A and Item B. Apply the decision "
+        "procedure rigorously: subject first, then argument, then evidence.\n\n"
+        "Provide your final answer at the very end wrapped in answer tags using "
+        "exactly one of the four full label strings from the system prompt."
     )
+
     return [
-        {'role': 'system', 'content': FOURWAY_SYSTEM_PROMPT},
-        {'role': 'user', 'content': user_text},
+        {
+            'role': 'system',
+            'content': [
+                {
+                    'type': 'text',
+                    'text': FOURWAY_SYSTEM_PROMPT,
+                    'cache_control': {'type': 'ephemeral'},
+                }
+            ],
+        },
+        {
+            'role': 'user',
+            'content': [
+                {
+                    'type': 'text',
+                    'text': f"### Paper\n{paper_content}\n\n---\n\n",
+                    'cache_control': {'type': 'ephemeral'},
+                },
+                {
+                    'type': 'text',
+                    'text': item_text,
+                },
+            ],
+        },
     ]
 
 
@@ -427,14 +463,19 @@ def run(
     def _on_result(rec: Dict[str, Any]) -> None:
         nonlocal n_completed, n_errors, n_parsed
         with lock:
-            pairs_fh.write(json.dumps(rec) + '\n')
-            pairs_fh.flush()
-            n_completed += 1
-            if rec['parsed_answer'] is not None:
-                n_parsed += 1
+            # Only write successfully scored pairs to the JSONL.
+            # Error rows (e.g., budget exceeded, connection failures after
+            # all retries) are NOT persisted — they'll be re-attempted on
+            # the next resume run.
             if rec['error']:
                 n_errors += 1
-                tqdm.write(f"  [pair {n_completed}/{n_total}] ERROR: {rec['error']}")
+                tqdm.write(f"  [pair {n_completed + 1}/{n_total}] ERROR (not saved): {rec['error']}")
+            else:
+                pairs_fh.write(json.dumps(rec) + '\n')
+                pairs_fh.flush()
+                if rec['parsed_answer'] is not None:
+                    n_parsed += 1
+            n_completed += 1
             pbar.set_postfix({
                 'parsed': f'{n_parsed}/{n_completed - n_skipped}',
                 'err': n_errors,

@@ -1,0 +1,148 @@
+{
+  "paper_id": 66,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does argue that the observed near-field contrast is excitonic by comparing resonant and off-resonant behavior across WSe2 and MoSe2, but it does not provide a dedicated control that cleanly rules out all nonresonant or tip-related contrast mechanisms. The reviewer's broader request to clarify the mechanism is therefore grounded, although the specific alternatives about tip shadowing, heating, and charging are themselves speculative.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript explicitly averages the near-field signals over entire WSe2 or MoSe2 regions before plotting the fitted spectra, so asking why such large-area averaging is used is factually grounded. This could matter for how local the claimed dielectric-function extraction really is, although some experts may view it as mainly a presentation choice because the paper still shows hyperspectral nano-imaging.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper reports nearly uniform s-SNOM response within each material region and does not claim that TEPL maps should look the same as absorption-sensitive s-SNOM maps. The asserted contradiction with prior TEPL heterogeneity is therefore not established, and the reviewer does not point to specific data showing meaningful spatial correlations in the present images.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Equation 1 does define ε_bg as a fitted background dielectric constant in the TMD dielectric model, but the paper does not do much to interpret that parameter or explain why its fitted value changes across samples. So the request for clarification is understandable, even though the reviewer's suggestion that ε_bg should just be the h-BN dielectric constant is based on a mistaken reading of what the parameter represents.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript presents nanoscale amplitude/phase maps at individual photon energies and uses those hyperspectral data to infer local excitonic behavior, but it does not directly show nanometer-resolved maps of the extracted resonance energy or dielectric function themselves. That makes the reviewer's concern about overclaiming reasonable, though experts could differ on whether the existing hyperspectral data already substantiate the stronger wording.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's claim about formidable technical challenges is broader than just laser availability: the work also emphasizes ultra-stable tuning, fifth-harmonic demodulation, and suppression of far-field artifacts to extract weak excitonic near-field signals quantitatively. The cited prior visible/near-IR s-SNOM example is not the same as quantitative nanospectroscopy of monolayer excitonic absorption, so the proposed rewrite understates the paper's novelty and challenge.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer raises a physically plausible concern because the illumination geometry does contain out-of-plane fields, but the main text and supplementary derivation explicitly argue that for atomically thin TMDs the s-SNOM response is governed primarily by the in-plane dielectric function. Given that explicit modeling assumption, saying the authors cannot make their bright-exciton claim is too strong, though experts could still disagree because the underlying near-field polarization physics is nuanced.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper explicitly attributes the negligible hybridization in the MoSe2/WSe2 heterobilayer to the measured large twist angle, so asking the authors to clarify whether this is fundamentally a sample-choice issue or a sensitivity limitation is a fair request. It is mainly an interpretive clarification rather than a core flaw in the evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The measurements span 1.50-1.75 eV and are described elsewhere in the paper as near-IR/visible excitonic nanospectroscopy, so the use of the label “nano-IR” is somewhat imprecise. This is a minor terminology point tied to specific wording rather than a substantive scientific problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The allegedly inconsistent statements concern different sample classes: the heterobilayer with large twist angle, where the paper argues hybridization is negligible, and the 2H-stacked WSe2 trilayer, where interlayer hybridization is invoked to explain a larger redshift. Because the reviewer treats those as the same case, the claimed contradiction does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This is a line-specific writing suggestion about how to phrase the sentence on negligible oscillator strength more smoothly. It is a valid stylistic improvement, but it does not affect the substance of the paper.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper models mono-, hetero-, and trilayer TMD regions with an effective TMD dielectric function and fitted ε_bg values, so questioning whether that simplification is adequate for heterogeneous multilayers is a legitimate methodological concern. However, the supporting remark that ε_bg should correspond to the h-BN permittivity misreads the parameter, so correctness is borderline even though the broader modeling concern is reasonable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "As in Human_2 Item 2, the reviewer raises a plausible physical intuition about out-of-plane fields, but the paper and supplement explicitly state that for atomically thin TMDs the relevant response is governed by in-plane conductivity while anisotropy is handled differently for thicker materials. So the criticism does not clearly overturn the paper's claim, although the issue is subtle enough that experts could disagree on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper repeatedly reports about 20 nm resolution for this experiment, and the conclusion wording could be read too quickly as if 20 nm were a general s-SNOM limit rather than the limit in this study. Clarifying that the bound is specific to the present setup would improve wording but would not materially change the results.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The typo is real: the main text says “valance band edges” where “valence” is intended. This is a straightforward minor copy-editing point with precise location information.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The supplementary note does appear to contain several notation and proofreading problems, including shifts between σ_s and σ and a k-versus-q inconsistency, so the general request for proofreading the formulas is well grounded. Some listed issues look like minor typos while others could affect readability of the derivation, making the importance somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

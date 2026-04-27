@@ -26,11 +26,11 @@ from typing import Iterable, List, Optional
 
 import numpy as np
 
-# Import the shared LiteLLM client from meta_review/ — same singleton the
-# meta_review module uses. We add its path to sys.path so we can import the
+# Import the shared LiteLLM client from metareview_bench/ — same singleton the
+# metareview_bench module uses. We add its path to sys.path so we can import the
 # small wrapper without having to duplicate the code.
-# Path: expert_annotation_similarity/embeddings.py → ../../../meta_review
-_META_REVIEW_DIR = Path(__file__).resolve().parent.parent.parent / "meta_review"
+# Path: expert_annotation_similarity/embeddings.py → ../../../metareview_bench
+_META_REVIEW_DIR = Path(__file__).resolve().parent.parent.parent / "metareview_bench"
 if str(_META_REVIEW_DIR) not in sys.path:
     sys.path.insert(0, str(_META_REVIEW_DIR))
 

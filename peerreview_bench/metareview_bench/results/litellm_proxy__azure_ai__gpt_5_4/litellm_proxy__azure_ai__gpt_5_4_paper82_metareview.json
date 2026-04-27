@@ -1,0 +1,411 @@
+{
+  "paper_id": 82,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This item is Not Correct because it discusses OECT, microelectrode, or cell-adhesion content, while the paper under review is about a sub-wavelength Si LED in a CMOS platform and its holographic-microscopy demonstration. The concepts and quoted text targeted by the criticism do not appear in this manuscript, so the claim does not match the paper being reviewed. A devil's-advocate reading would treat it as a generic request for clarity, but that is not plausible here because the criticism is anchored to a different topic rather than to an imprecise citation. Since correctness is not genuinely borderline, I set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct: the paper's device operates by intentional hard gate-oxide breakdown, and the reliability evidence is limited to supplementary variability across five LEDs plus a single robustness test showing about 25% power loss after about 10^5 cycles. Addressing reliability and lifetime would materially strengthen the paper's CMOS-integration claim, so the issue is Significant. The evidence is Sufficient because the reviewer cites the breakdown mechanism in the main text and the exact S5/S6 variance and degradation observations that a meta-reviewer can verify directly. Devil's advocate: the paper is a proof-of-concept letter and does disclose both the 25% drop and the five-device variance, so one could argue it addresses reliability at a preliminary level. That defense does not defeat the core criticism that the reliability characterization is still thin for the integration claims, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct because the supplementary data truly covers only five LEDs on different chips, shows roughly ±20% spread, and the paper mainly presents one representative device afterward. The issue is Significant because reproducibility and device-to-device variability are central to evaluating a stochastic breakdown-based emitter. The evidence is Sufficient: the reviewer quotes the exact S5 and S6 statements, names the anomalous device behavior, and ties the concern to the paper's generalizability claims. Devil's advocate: small-N characterization is common in proof-of-concept device papers, so an expert could see the sample size as acceptable for an initial report. Even under that charitable reading, the criticism that reproducibility evidence is limited remains valid, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct in substance: the sub-wavelength area claim depends on Gaussian PSF/emission assumptions and deconvolution very near the PSF limit, which makes the estimate method-sensitive. The issue is Significant because the claimed <0.14 μm² area and derived spatial intensity are headline results. The evidence is Sufficient because the reviewer points to S2/S4, the PSF values (784±50 and 740±46 nm), the quadrature deconvolution formula, and the reported small-area values. Devil's advocate: the paper does independently measure the PSF, propagates PSF error into Fig. 2(h), and already reports large error bars, so some experts may judge the uncertainty treatment adequate for a letter. Because that prosecution is plausible even though the broader concern is reasonable, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct overall because the holography section is a limited proof-of-concept: it uses only 20 μm beads and lacks systematic benchmarking against standard lensless-microscopy metrics. The issue is Significant since holography is presented as the key application enabled by the source's coherence. The evidence is Sufficient because the reviewer identifies the specific sample choice, notes the long integration and filtering, and points to the absence of broader quantitative benchmarking. Devil's advocate: the paper does provide an approximate resolution claim of about 20 μm and only intends an application demonstration, so one could say the criticism overstates what is missing. Since that objection is plausible but does not erase the broader limitation, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct in its main concern: the paper offers only limited reliability evidence for a breakdown-based emitter, while the supplement shows about a 25% power drop after about 10^5 switching cycles. That is Significant because the paper frames the device as CMOS-integrated and useful for on-chip illumination and holography. The evidence is Sufficient since the reviewer cites the immediate post-breakdown stability statement, the robustness-test result, and an external reliability yardstick. Devil's advocate: the paper does not hide the degradation and the word stable may refer only to the immediate post-breakdown IV behavior, so some experts may find the claimed contradiction too strong. Because that narrower reading is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct in substance: the paper's comparison emphasizes spatial intensity and smallest emission area, while practical utility is also constrained by the very low reported power and EQE. That is Significant because benchmarking and state-of-the-art framing are central to how readers interpret the contribution. The evidence is Sufficient because the reviewer quotes the comparable-intensity claim and the paper's own 94 pW and 1.4×10^-8 EQE values, so the omission is easy to verify. Devil's advocate: the paper openly reports power and EQE elsewhere and is explicitly claiming intensity comparability rather than overall efficiency leadership, so some experts may see the benchmark as scope-appropriate rather than misleading. Because that counter-reading is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Not Correct overall because the paper explicitly explains the hard-breakdown formation mechanism and still describes a light-emitting diode structure; the terminology is qualified rather than hidden. The manuscript repeatedly states that a Si filament is formed by hard breakdown and discusses the resulting mechanism, so the criticism that the term LED is used without sufficient qualification overreaches. Devil's advocate: some experts may still prefer labels like breakdown emitter or antifuse emitter and may view LED as potentially misleading for readers expecting a pristine junction device. That charitable defense is plausible, so I predict disagree_on_correctness rather than straightforward incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Not Correct because no substantive review claim is actually stated under the item heading. Without a concrete criticism, there is nothing specific to verify against the paper, so the item is too vague to count as a correct review point. A devil's-advocate reading would try to infer a missing concern from nearby items, but that would require guessing rather than judging the stated review text. I therefore set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Not Correct because no substantive review claim is actually stated under the item heading. Without a concrete criticism, there is nothing specific to verify against the paper, so the item is too vague to count as a correct review point. A devil's-advocate reading would try to infer a missing concern from nearby items, but that would require guessing rather than judging the stated review text. I therefore set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct: the manuscript's central mechanism is intentional hard gate-oxide breakdown, yet the paper only gives limited post-breakdown variability and robustness evidence for its CMOS-integration framing. The issue is Significant because controlled formation, reproducibility, and lifetime are central to whether such a source is genuinely useful on-chip. The evidence is Sufficient because the reviewer cites the exact main-text breakdown description plus S5/S6 variability and the roughly 25% degradation after about 10^5 cycles. Devil's advocate: as a proof-of-concept paper, it may be acceptable to present preliminary reliability data rather than full qualification. Even so, the paper's integration framing makes the omission substantive rather than minor, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct: the paper claims high spatial coherence and holography-enabling illumination, but it provides no direct quantitative coherence measurement or coherence model despite the broad 150–190 nm emission bandwidth. Addressing that gap would improve the paper, so I mark the issue Significant, but I expect experts to disagree about how important it is beyond the proof-of-concept hologram. The evidence is Sufficient because the reviewer quotes the coherence claims, the broad spectral width, and the absence of coherence or visibility measurements. Devil's advocate on correctness is weak because the lack of direct coherence quantification is clear; devil's advocate on significance is stronger because the successful hologram and visible rings do give qualitative support for the application claim. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Correct in substance: the sub-wavelength area and derived intensity rest on Gaussian PSF/emission assumptions and FWHM-based deconvolution close to the microscope PSF, so the quantitative claim is method-sensitive. The issue is Significant because emission area and intensity are headline performance numbers. The evidence is Sufficient since the reviewer quotes Eq. S2, the PSF values, the reported deconvolved area and intensity, and the fact that the fit only covers a limited 20×20 μm² region. Devil's advocate: the supplement does measure the PSF independently and propagates PSF error, so some experts may accept the simplified deconvolution as adequate for this study. Because that counterargument is plausible while the broader concern remains reasonable, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct: the paper explicitly defines EQE from only the fitted central spot while neglecting background emission, then uses that quantity to make a general no-thermal-droop claim. That is Significant because EQE and droop are highlighted performance conclusions in the main text and conclusion. The evidence is Sufficient because the reviewer cites the main-text EQE discussion, the Fig. 2 caption stating that background is neglected, and the supplementary two-Gaussian-plus-background model. Devil's advocate: one could argue that spot-only EQE is the application-relevant metric for a sub-wavelength coherent source and the paper does disclose this choice. Still, the standard meaning of EQE is device-level photons out per electrons in, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Not Correct because no substantive review claim is actually stated under the item heading. Without a concrete criticism, there is nothing specific to verify against the paper, so the item is too vague to count as a correct review point. A devil's-advocate reading would try to infer a missing concern from nearby items, but that would require guessing rather than judging the stated review text. I therefore set significance and evidence to null and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    }
+  ]
+}

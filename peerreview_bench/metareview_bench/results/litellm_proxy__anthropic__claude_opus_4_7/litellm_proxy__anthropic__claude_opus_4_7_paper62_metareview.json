@@ -1,0 +1,411 @@
+{
+  "paper_id": 62,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks for estimates of how many scattering fingerprints would be available as a function of fiber length (5-15 mm range for in-vivo). This is a valid question: the paper focuses on ~8 mm short MMF and discusses that short fibers don't produce fully developed speckle, but does not quantify how the number of distinguishable fingerprints scales with length — a significant design parameter. Evidence points to specific lines discussing scattering fingerprints. Devil's advocate (correctness): one could argue the paper does discuss rank/components implicitly, but not as a function of length, so the concern holds. Significance: this is somewhat exploratory; some experts may see it as marginally significant rather than strongly improving the paper since it is framed as a question rather than an identified flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that 'realistic conditions' require tissue scattering modeling, varied labeling density, and blood vessel effects, and that the paper's claim of suitability for long-term freely-moving experiments is unsupported. This is correct: the paper uses a 50 µm fixed slice without scattering tissue background, does not vary labeling density, and makes in-vivo claims without testing those conditions. Devil's advocate: the paper does label it as proof-of-concept, but it still extends claims into in-vivo domains. The criticism would substantively improve the paper. Evidence: reviewer points to specific lines and specifies three concrete experimental directions.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks for more details about Figure 1's schematic — whether excitation/emission filters were used, camera objective/magnification, and LED power per unit area. Verifying against the paper: methods for the proof-of-principle setup are deferred entirely to supp info ('The proof of principle setup is visually illustrated and fully described in the supp info'). So the main text genuinely lacks these details, and adding them would meaningfully help readers. Evidence is specific (points to Fig. 1 and missing items). Experts would likely agree this is a valid reproducibility/clarity concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests testing how many point sources can be resolved at once with higher bead densities, tissue-mimicking scattering, and partially overlapping patterns. This is a valid and constructive experimental extension — the paper tests only 6 beads and 4 neurons in well-separated configurations. Adding scaling experiments would substantially strengthen claims about applicability. Devil's advocate: the paper is framed as proof-of-principle, but reviewer's suggestion directly addresses a core claim (scalability). Evidence is specific with concrete suggestions.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer suggests a detailed experiment protocol for near-simultaneous group excitation to estimate limits of NMF demixing when spatial modes overlap, and argues that if the method can't demix large groups, 'high throughput' claim should be reconsidered. This is a valid and substantive critique of the proof-of-principle design. The paper does use DMD-driven GT with some temporal correlation, but not systematically with groups. Addressing this would meaningfully test claims. Evidence is detailed and specific.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer states 'Fig. 2-3 no reported excitation intensity per source.' Verifying: the main text and figure captions do not report per-source LED/excitation intensities, and methods defer to supp info. This is a brief but accurate observation. Significance: reporting excitation intensity is standard for photometry methods, important for reproducibility and comparison. However, some experts may view this as a presentation detail rather than a core scientific weakness, so it's borderline between significant and marginal. Evidence is a specific identification of an absent detail, so sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer argues correlations in Fig 2-3 g-h are not informative and suggests reporting prediction accuracy via a trained model. The paper does rely primarily on correlation coefficients as its main metric. The suggestion to use a classifier-based metric is debatable — correlation is still a standard NMF-GT comparison. Devil's advocate: reviewer's main point is that correlation is insufficient (not wrong) — a real concern echoed by other reviewers about evaluation rigor. But whether their specific alternative (train model on GT, predict from NMF) is the right replacement is more of a preference. Experts may disagree on whether this is a meaningful improvement or just a stylistic alternative.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer asks about how the saturation limitation discussed in lines 188-194 would affect multi-source scenarios. This is a valid, insightful question — the paper demonstrated saturation with single bright beads but multi-source behavior is unaddressed. Addressing this would strengthen the miniscope sensitivity discussion. Evidence: specific line numbers pointed to. Devil's advocate: it's framed as a question ('I wonder'), not a firm criticism — so some experts may find it less of a concrete actionable item.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer points to a specific related paper (Bianco et al. 2022 APL Photonics) that the authors should discuss regarding tapered fiber spatial resolution. This is a valid missing reference/discussion point, echoed by Human_2 item 4. Adding the discussion would contextualize the work. Evidence is specific: exact citation provided. Significance is clear — related work is important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer raises a subtle but important physical concern: cylindrical symmetry of the fiber means multiple equidistant sources would produce similar ring patterns, which limits discrimination. Looking at Figure 4d, the ring diameter encodes radial distance but not azimuthal angle unambiguously, and the paper acknowledges the ring is a function of d. The paper's claim that 'scattering fingerprints seem to not be ambiguous depending on the source lateral position' is not rigorously defended against azimuthally degenerate cases. This is a substantive physics concern. Evidence: specific line range and a physically grounded argument. Significance is clear.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer argues that claims of 'expanding fiber photometry capacity' are not supported by experiments and suggests (non-mandatory) in-vivo experiments with GCaMP cells, perfusion, and counting. This is a valid core critique echoed by multiple reviewers. The suggestion of in-vivo validation is constructive but acknowledged as possibly infeasible. Evidence: reviewer points to specific text lines and names specific experimental protocols. Significance is clearly high — it addresses the main translational claim of the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer recommends citing earlier works by Papadopoulos et al. and Turtaev et al. on spatial resolution via digital scanning. This is a valid missing-reference suggestion. The paper does cite some related wavefront-shaping work but these specific foundational papers are absent from the references. Adding them would contextualize the contribution. However, missing references are often borderline between significant and marginally significant depending on whether the reference is central. Evidence is specific: exact citations provided.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues that the manuscript does not demonstrate the method works in real biology and adds little beyond the authors' prior work in scattering tissue (Refs 43, 44, 48). Verifying: no in vivo or live tissue experiments are performed; the novelty is mainly applying NMF to MMF scattering fingerprints rather than bone tissue speckle. The claim that the current work 'does not add too much' is debatable — it does demonstrate MMF-specific fingerprints are demixable, which is a distinct regime. Devil's advocate: some experts may find the MMF-specific contribution novel enough even without biology. The correctness of 'does not add too much' depends on how one weighs the MMF extension. Significance is high regardless. Evidence points to references and paper's own experimental scope.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that given no biology was done, a more thorough explanation via simulations of observed spatial signatures in terms of fiber modes is expected. Verifying: the paper does not provide a physics-based mode analysis of fingerprint shapes; it mainly describes them phenomenologically and refers to the core geometry. Providing such modeling would strengthen the physics story. This is a substantive and actionable suggestion. Evidence is specific and directly tied to an identified gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer's main point is that Fig. 3 (4 selectively illuminated neurons) is insufficient; realistic scenarios involve widefield illumination and neuropil background fluctuations. This is correct — the paper uses DMD-patterned excitation only on selected neurons, avoiding genuine background variation. Adding widefield + variable background experiments would meaningfully improve the paper. Some discussion about journal suitability is somewhat subjective but the core experimental criticism is solid. Evidence is detailed and specific.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks for discussion of Bianco et al. (tapered fiber work) and theoretical comparison. This is correct — the paper does not discuss this closely related work. Adding the discussion would contextualize the contribution relative to existing spatial-resolution fiber-photometry methods. Evidence includes a specific reference. Clear significant issue — missing related-work discussion is directly actionable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks theoretically for the maximum number of distinguishable spatial signatures and minimal radial/angular distances. This is a valid quantitative question about the method's fundamental limits — the paper shows 10 µm radial steps but does not formalize the resolution limit. Addressing this would improve rigor. Evidence refers to specific supp figures (3-4). Significance is clear because it quantifies a core capability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer notes no mention of z-axis calibration — whether the method works at one particular z-plane. Verifying: the paper mentions the sample is at ~50-60 µm from the fiber but does not examine z-dependence. This is a substantive experimental gap. Addressing would clarify method applicability. Evidence specifically identifies what's missing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests an experiment unmixing beads at different z planes. This is a sensible extension that directly tests 3D demixing. Evidence is specific (refers to previous point). Addressing would meaningfully enhance the paper. Minor: reviewer marks this as 'related' and 'interesting' — a somewhat lighter-touch suggestion than a hard criticism, so some experts may view it as marginally significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks whether the xy FoV could be extended beyond the fiber diameter by increasing sample-tip distance. This is a valid optical question — the paper asserts FoV ≈ core diameter but doesn't explore off-contact scenarios. Addressing would clarify the method. Evidence references the paper's stated FoV. Some experts may view this as a peripheral exploration rather than central concern.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer notes that in real experiments, fluorescence hitting the fiber tip is already scrambled by tissue scattering (not just fiber), so deep neurons might generate similar spatial signatures. This is a physically valid concern the paper indeed assigns all scattering to the fiber. The criticism directly challenges the in-vivo applicability claim. Evidence is a logical derivation from physics. Significance is clear.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notes that in Fig 2-3, y-scale is missing on traces and asks about deltaF/F and whether ground truth includes resting fluorescence. Verifying figures: y-axis labels are minimal/absent; time is 'a.u.' Missing calibration of fluorescence amplitude is a legitimate criticism, relevant to calcium imaging interpretation. Evidence is specific (points to figures). Significance is clear — fixing this improves interpretability of results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer asks to see raw fluorescence videos. This is a reasonable data-transparency request; adding supplementary videos would help readers verify results, though papers often don't include videos. Evidence is general ('nice to see'). Significance is on the boundary — it's helpful but not a substantive method improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer summarizes that the manuscript's biological conclusions are not demonstrated, and recommends an optical journal rather than Nature Communications. The first part (biology not demonstrated) is a valid, substantive concern echoed throughout reviews. The journal suitability suggestion is subjective but not unreasonable given the content. Evidence refers to specific claims in the paper. Core message (biology not demonstrated) is clearly significant. The venue recommendation is a stylistic preference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests two paths forward: (1) strip biological claims and publish as optics paper, or (2) do biology. This is a high-level recommendation rather than a specific criticism. The underlying concern (that biological feasibility is over-claimed) is valid and echoed elsewhere. Significance is high as it frames the whole review. Evidence references specific sections. Some experts may view this as scoping advice rather than a discrete review item, but the underlying substance is clear.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes Figure 4e shows a mouse cartoon but the actual data is bead in agarose (not mouse). Verifying: Figure 4e is indeed a cartoon illustration of the MiniDART concept with a mouse — I can see a rendering of a mouse with miniscope attached, but panel (d) shows bead displacement data in a flat radial scan, not actual mouse brain data. Reviewer is correct. Evidence is specific and verifiable by looking at the figure. Significance is clear — this is a misleading visual claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks whether time 'a.u.' in figures is a typo or indicates non-real-time recording. Verifying: Fig 2f and Fig 3f have x-axis 'Time (a.u.)'. This is a legitimate ambiguity — typical calcium imaging reports time in seconds. Addressing this would improve clarity. Evidence is a specific observation. Significance: some experts view axis units as a presentation detail (marginal), others as affecting interpretability (significant) — borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that repeating the DMD projection approach with a fixed slice adds little benefit — the slice is just a 'projection screen'. Verifying: in Section 2.2, the paper uses a fixed brain slice as sample with DMD-driven selective excitation on few labeled neurons — this is indeed functionally similar to the bead experiment, just with different fluorophore source. The reviewer's point is valid. Significance is clear — if Section 2.2 adds little, that's a substantive issue about experimental design.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer questions the purpose of Section 2.3, arguing it's similar to Section 2.1 but with a miniscope camera on sparse beads, so the realistic-scenario value is limited. Verifying: Section 2.3 does use a single fluorescent bead (very sparse) with the miniscope. The reviewer's point that this doesn't probe realistic configurations is valid. Significance is clear — this targets the experimental design rationale.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer critiques noise-free appearance of data, lack of shot-noise considerations, missing exposure/intensity details, and suggests detailed study of signal quality vs. background/well-depth/sparsity, ideally via simulations or real miniscope videos projected onto fiber. Verifying: the paper does not systematically study how background or SNR affects demixing; Fig 2 traces do show high SNR. The reviewer's suggestion is constructive and directly addresses a key gap. Evidence is specific and detailed. Significance is clearly high.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks for evaluation of robustness against sample movement and MMF bending. Verifying: the paper does not test either, despite claiming freely-behaving applicability. This is echoed by gemini-3.0 item 1 and gpt-5.2 item 1. Clear significant issue with specific identified gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer asks the authors to check language and style throughout, noting the discussion in particular. This is a writing-quality concern. Verifying the discussion section: it is somewhat verbose and has non-standard phrasing. This is a marginally significant issue — fixing language wouldn't affect scientific substance, but it does affect readability. Evidence is general ('Discussion is particularly notable'); some experts may find this too vague, but writing quality is subjective and normally accepted on reviewer's word.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer quotes 'plenty of room for improvement, not only optically wise' and says if improvements are so straightforward, they should be implemented or the text rephrased. Verifying: the discussion does make such speculative improvement statements without implementation. The reviewer's point is fair — either demonstrate or soften. This is reasonable writing/scope feedback. Significance is borderline — substantive if it ties to overstated claims, marginal if just stylistic.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notes that the discussion spends more space on improvements than on critical limitations. Verifying: the discussion does extensively list improvement directions (CNMF constraints, new miniscopes, etc.) and less extensively discusses limitations like bending, SNR, z-dependence. The reviewer's point is a valid request for better-balanced discussion. Significance is clear — addressing limitations properly would improve the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Reviewer suggests removing Fig 4e (cartoon of mouse with MiniDART) unless real recordings are included. This relates to item 2. Verifying: Fig 4e is indeed a cartoon with no matching data. Asking to remove misleading illustration is a reasonable suggestion. Significance depends — some experts would say the cartoon is acceptable as a schematic, others would find it misleading. So a disagreement between experts is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer's main point is that all validations are ex vivo with DMD-generated traces rather than in actual living mice with real calcium transients. Verifying: this is accurate — the paper uses beads and a 50 µm fixed slice with artificially imposed DMD traces. The MiniDART with single bead doesn't demonstrate multi-source demixing. Devil's advocate: the paper explicitly frames itself as proof-of-concept, so some experts may see the gap as acknowledged. But the extension to biological claims still invites this critique. Evidence is thorough — specific quotes, references, and logic.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the NMF rank is manually set per experiment and the paper does not provide a validated automated method. Verifying: the code hard-codes rank from ground truth (rank = numbeads); paper discusses rank selection only via supp info heuristics. This is a real and substantive limitation echoed by gemini (item 2) and gpt-5.2 (item 3). Evidence is specific with external references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues scattering fingerprint stability isn't validated under perturbations relevant to in-vivo use (bending, temperature, tissue motion). Verifying: the paper only shows static experiments; argues rigidity theoretically but provides no experimental stability evidence. This is echoed by gemini item 1 and gpt-5.2 item 1. Specific evidence with quotes and external references. Clearly significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues results come from single experiments (one 6-bead phantom, one 4-neuron slice) with no repetition or statistical analysis. Verifying: paper's 'average ± std' is within-experiment across sources, not across independent trials. The Methods mention 'data from one GAD65-EGFP transgenic mouse.' This is a real reproducibility concern. Also echoed by gpt-5.2 item 2. Evidence is specific with supporting external references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues fiber bending invalidates the static NMF assumption, so freely-behaving claims are unsupported. Verifying: the paper acknowledges TM sensitivity to bending, claims short fibers are rigid but provides no empirical test. NMF spatial components W are assumed stationary. This is a valid, substantive, echoed critique. Evidence is well-structured with paper quotes and external reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes lack of automated rank selection. Verifying: as discussed in claude item 2, this is accurate — code sets rank from ground truth. Specific evidence from paper and code. Significance is clear.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer claims code is non-functional because required .mat files are missing. Verifying: I checked the code directory; no .mat files are present, and the README explicitly lists them as inputs. This is accurate. Reproducibility is an important axis. Evidence is specific (file names, script behavior). Clear significant issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues the paper does not compare NMF with ICA, PCA, or CNMF-E variants. Verifying: the paper mentions CNMF in passing as an improvement direction but does not benchmark. Adding baselines would strengthen evaluation. This is a reasonable critique, though it's more of a methodological-comparison request than a fundamental flaw — some experts might argue the authors' goal is just to demonstrate NMF works, not to compare to alternatives. Evidence: specific methods named. Borderline significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues that the claim of calibration-free, freely-behaving applicability is not supported because fiber perturbations (bending, torsion, temperature) could change fingerprints, and this is not tested. Verifying: the paper asserts short-fiber rigidity theoretically but provides no empirical stability tests. This mirrors other reviewers (Human_3 #7, gemini #1, claude #3). Evidence is very detailed with multiple paper quotes and external references. Significance clearly high.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues evaluation is based primarily on within-experiment correlation summaries without independent repeats, full cross-talk/false-discovery characterization, or systematic failure mode analysis. Verifying: paper reports a single average correlation ± std per experiment, with bead #6 failure described but not systematically analyzed. This is a valid and substantive statistical-rigor critique. Evidence quotes from paper and external references (Pnevmatikakis, Zhou). Clearly significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the source-counting/trace-recovery claim is methodologically unsupported due to NMF rank selection issues, non-convexity, and the fact that ranks were tuned using ground truth. Verifying: rank for Fig 02 = 9 while 6 beads exist; code uses numbeads from GT. The paper acknowledges the issue but provides only a heuristic. Evidence is extensive with code snippets and external references (Gillis, scikit-learn). Clearly significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the shared code is not reproducible because .mat files are missing, paths are hardcoded, and an example script references norm_dimension which isn't in tools_NMF.py. Verifying: I confirmed no .mat files in code/, hardcoded Windows path is present, and grep for norm_dimension in tools_NMF.py returns nothing. All specific claims verified. Evidence is very specific with code snippets. Significance is clear for a methods paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "paper_id": 79,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that the paper provides no protein-ligand crystal structure data or other direct structural binding information, which is true on the face of the manuscript. I therefore judge the item Correct, and I lean Significant because such data would materially strengthen the medicinal-chemistry interpretation of how the new analogs engage cPLA2\u03b1; the evidence is Sufficient because the criticism is about a clearly identifiable absence. The devil's-advocate case on correctness is plausible, though: an expert could say crystal structures are not actually required for this paper's synthesis-plus-biology scope and so the criticism targets an optional rather than expected component. Because that scope-based objection is credible, I expect two meta-reviewers could disagree on correctness even though I read the broader concern as valid. Prediction: disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The item says AVX420's direct binding to cPLA2\u03b1 was not characterized, and that is correct: the paper shows enzyme inhibition and cellular/ex vivo effects, but no direct target-engagement or biophysical binding assay. I judge the item Correct and Significant because stronger target-validation would improve confidence that downstream phenotypes arise from on-target cPLA2\u03b1 inhibition; the evidence is Sufficient because the absence is straightforward to verify from the paper. The devil's-advocate case on correctness is weak, since functional inhibition is not the same as direct binding characterization. The stronger counterargument is on importance: some experts may feel the enzymatic inhibition data already make this a secondary issue, so I predict disagreement on significance. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This criticism is substantively right: Scheme 1 motivates \u03b1-methyl introduction as potentially improving stability, but the results do not establish that rationale cleanly, and the selected lead GK420 is instead the oxygen-containing non-methyl analog. I therefore judge it Correct, and I lean Significant because clearer SAR interpretation would strengthen the medicinal-chemistry contribution; the evidence is Sufficient because the reviewer points directly to Scheme 1A and the lead choice. The devil's-advocate case on correctness is limited, since the paper really does leave the methyl-for-stability idea only partially supported. Still, experts could disagree on importance because some will see this as a secondary SAR-framing issue rather than a major flaw in the paper's biological conclusions. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes a mismatch between the paper's repeated description of inhibition as \"minimal\" and the actual Table 1 values, which differ noticeably between the non-methyl and \u03b1-methyl analog classes. That makes the item Correct, and I lean Significant because the selectivity interpretation feeds into how confidently later cellular effects are attributed to cPLA2\u03b1 inhibition; the evidence is Sufficient because the comment names the repeated wording and Table 1. The devil's-advocate case on correctness is not very plausible: the disparity is real in the reported percentages. The more plausible disagreement is about significance, since one expert may treat this as a wording inconsistency while another sees it as a meaningful overstatement of selectivity. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is correct because the paper's mechanistic model is only partially validated and the study does not include in vivo efficacy, pharmacokinetic, or broader preclinical characterization for AVX420. I judge it Significant since adding pathway validation and in vivo/PK work would materially strengthen both the mechanistic and translational claims; the evidence is Sufficient because the reviewer identifies specific missing study components that are easy to check for absence. The devil's-advocate case on correctness is weak: the manuscript plainly stops at in vitro/ex vivo and omics-based inference. The significance call is also fairly stable because these are major gaps relative to the paper's chemotherapeutic framing. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main criticism is that despite interesting in vitro findings, the manuscript lacks animal studies and key preclinical characterization such as PK and bioavailability, which is accurate. I therefore judge it Correct and Significant because addressing these omissions would substantially improve the paper's translational claims; the evidence is Sufficient because the reviewer names the exact missing classes of experiments. A devil's-advocate reading on correctness is not very plausible, since the paper contains no such in vivo or PK/bioavailability work. The venue recommendation is subjective, but the factual criticism itself is clear and important. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item argues that limited biochemical selectivity testing does not fully establish that the cellular phenotypes are specifically due to cPLA2\u03b1 inhibition and that genetic perturbation would strengthen the claim. That is Correct: the paper tests only GVIA iPLA2 and GV sPLA2 biochemically and does not compare AVX420 phenotypes to cPLA2 depletion in the cancer models. I judge it Significant because on-target validation is central to the biological interpretation, and the evidence is Sufficient since the reviewer points to the narrow isoform panel and the specific missing genetic control. The devil's-advocate case on correctness is weak because the suggested validation is plainly absent. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer's main point is that the paper does not show whether AVX420's cancer-cell effects depend specifically on suppressing cPLA2-driven arachidonic-acid release and lipid-mediator signaling, rather than some other cPLA2-related function. That is Correct: the manuscript demonstrates ROS-dependent cell death and ex vivo eicosanoid effects, but it does not mechanistically connect leukemia-cell death to AA release or downstream lipid mediators in those cancer models. I judge it Significant because clarifying that causal step would strengthen the paper's mechanistic story, and the evidence is Sufficient because the comment identifies a specific missing mechanistic link. The devil's-advocate case on correctness is limited because the paper indeed does not perform that experiment. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item correctly says that the proposed epigenetic link is driven by screen/in silico associations and would be stronger if cPLA2 were genetically manipulated in sensitive lines to test the predicted effects. The paper correlates drug sensitivity with PRC2/EZH2-related signatures but does not perform cPLA2 genetic perturbation to validate those epigenetic consequences. I therefore judge it Correct and Significant, with Sufficient evidence because the missing validation is clearly identified and easy to verify as absent. A devil's-advocate challenge to correctness is not very plausible here; at most one could say the paper presents the epigenetic link as a proposal, but the reviewer's request remains factually apt. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer is essentially saying that the proposed links among cPLA2 inhibition, oxidative stress/Nrf2, ER stress, and mTOR/PRC2-ATF4 signaling are not directly mechanistically stitched together by the current experiments. That is Correct: the paper presents correlative signatures, ROS measurements, and transcriptomic overlaps, but not the suggested genetic or protein-level tests that would establish ordering and causality. I judge the item Significant because such follow-up experiments would materially improve the central mechanism, and the evidence is Sufficient since the missing validations are named concretely. The devil's-advocate case on correctness is weak because the paper plainly leaves these mechanistic connections inferential. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is a subjective presentation complaint about supplementary Figure S3 resolution, and such claims are usually accepted unless the figure is plainly clear; nothing in the provided source makes the complaint obviously false. I therefore judge it Correct and Marginally Significant because improving a blurry figure can help readability, but it is still a minor presentation issue; the evidence is Sufficient because the reviewer points to the exact figure. The devil's-advocate case on correctness is possible only because the supplementary figure asset is not included here, so one could not independently confirm the exact degree of blur from the provided files. More plausibly, experts will disagree on importance: some will keep this as a minor but valid note, while others will view it as too trivial to matter. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This criticism is correct: the paper repeatedly proposes a cPLA2\u03b1\u2192mTOR/PRC2/EZH2 repression mechanism but supports it with drug-profile similarity, gene-set enrichment, and overlap analyses rather than direct biochemical tests of PRC2/EZH2 activity. That issue is Significant because it affects the paper's central mechanistic novelty claim, and the evidence is Sufficient thanks to the reviewer's precise quotations and specific missing assays such as H3K27me3 or EZH2 measurements. The devil's-advocate case on correctness is weak because the manuscript itself uses words like \"suggests\" and \"propose,\" confirming the mechanism remains indirect. The evidence chain is strong enough that I expect agreement from both meta-reviewers. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that the paper attributes ROS induction and downstream death/transcriptional changes to cPLA2\u03b1 inhibition without genetic target validation, and that is correct. The manuscript uses inhibitor phenotypes and correlations but does not show siRNA, knockout, or equivalent perturbations of PLA2G4A in the leukemia models. I judge the item Significant because on-target validation is critical for the causal interpretation, and the evidence is Sufficient because the reviewer quotes the relevant claims and identifies the missing controls specifically. The devil's-advocate case on correctness is not persuasive, since the genetic validation really is absent. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct because the paper suggests AVX420 could treat acute leukemias while presenting only cell-line and ex vivo data, with no in vivo leukemia efficacy study. That is a Significant limitation for the translational claim, and the evidence is Sufficient because the reviewer quotes the exact therapeutic language and contrasts it with the absence of animal validation. A devil's-advocate response could note that the authors say \"has the potential to treat,\" which is somewhat cautious, but it still remains a therapy-oriented claim supported only by in vitro data. I therefore expect agreement from both meta-reviewers. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer is right that the paper rejects canonical ISR translation control yet does not directly establish the proposed alternative EZH2/PRC2 explanation for ATF4-target induction. The manuscript itself says the ISR mechanism is argued against by the ribosomal-occupancy data and then offers an alternative epigenetic proposal without direct testing, so the item is Correct. I judge it Significant because it bears directly on the paper's mechanistic interpretation, and the evidence is Sufficient because the review cites the exact pivot in the argument and names the absent validation experiments. The devil's-advocate case on correctness is weak; the paper plainly leaves the alternative mechanism speculative. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is a correct criticism: the paper proposes a novel cPLA2\u03b1-PRC2/EZH2 repression mechanism but supports it only indirectly through drug-sensitivity correlations, clustering, and enrichment analyses. The issue is Significant because it targets the central mechanistic claim, and the evidence is Sufficient because the reviewer quotes the relevant text and specifies the kinds of direct biochemical validation that are missing. A devil's-advocate reading on correctness is weak because the manuscript never measures PRC2 output such as H3K27me3 after AVX420 treatment. I therefore expect expert agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the paper claims an ATF4-dependent, ISR-independent response without directly showing increased ATF4 protein or equivalent direct evidence of ATF4 engagement. The manuscript infers ATF4 involvement mainly from target-gene patterns and speculative stabilization via ATF3, so this is a Significant mechanistic gap; the evidence is Sufficient because the missing protein-level validation is clearly identified. The devil's-advocate case on correctness is modest: one could argue that established ATF4 target induction is suggestive, but it does not directly demonstrate ATF4 dependence. Because the paper over-interprets an indirect signature, I expect agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct because the paper explicitly says the iROS increase is not directly explained by the data yet still presents a FAO/metabolic model in Figure 6d without direct metabolic measurements. That is Significant since the metabolic explanation is part of the proposed mechanism of action, and the evidence is Sufficient because the reviewer cites the speculative language and identifies the absent assays. A devil's-advocate response could say the authors do label the model as a proposal, but the reviewer's broader point stands: the metabolic attribution is not experimentally demonstrated. I therefore expect agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer's main point is that the manuscript presents GK420 as a next-generation chemotherapeutic lead without in vivo evaluation of the new lead, and that is correct. The paper reports in vitro and ex vivo results for GK420 but no leukemia animal efficacy or comparative in vivo validation versus the earlier generation. I judge it Significant because in vivo confirmation would materially strengthen the translational \"next generation\" framing, and the evidence is Sufficient thanks to the quoted language and specific missing experiment type. The devil's-advocate case on correctness is limited because the absence of in vivo data is clear. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This criticism is correct: the paper calls GK420 and related compounds selective cPLA2\u03b1 inhibitors even though Table 1 shows 46% inhibition of GV sPLA2 for GK420 and the selectivity panel covers only two other PLA2 isoforms. That is Significant because the selectivity premise underpins later claims that cellular phenotypes reflect on-target cPLA2\u03b1 inhibition; the evidence is Sufficient because the reviewer cites the exact table entry and the limited profiling scope. The devil's-advocate case on correctness is weak, though one could argue the authors use a high single-dose screen for a preliminary selectivity claim. Even so, the wording \"minimal inhibition\" is hard to reconcile with the reported numbers. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The item is correct because the paper's leukemia mechanism\u2014cPLA2\u03b1 inhibition leading through mTOR/PRC2/EZH2 and an ATF4-linked program to death\u2014is supported mainly by correlations, enrichment analyses, and inhibitor phenotypes rather than direct causal perturbation in the leukemia models. This is Significant because it challenges the manuscript's core mechanistic novelty claim, and the evidence is Sufficient thanks to the reviewer's detailed quotations and precise identification of missing causal tests. A devil's-advocate defense is limited to saying the authors often use cautious words like \"suggest\" and \"propose,\" but the review correctly notes that the paper still builds a fairly concrete model on that indirect base. I therefore expect agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism is correct: the paper overstates selectivity by calling the thiazolyl ketones selective while Table 1 shows substantial inhibition of other PLA2 enzymes at the screening concentration and profiling is limited. That matters enough to be Significant because selectivity is used to justify downstream biological interpretation, and the evidence is Sufficient because the review quotes the language and reproduces the key table values for GK420 and GK439. A devil's-advocate response could note that the selectivity claim is based on a preliminary family-focused counter-screen rather than exhaustive profiling, but the phrase \"minimal inhibition\" still clashes with the reported percentages. I therefore expect agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the 66-cell-line screen underlies key pathway claims but many practical details are deferred to supplementary methods, which makes the central screen harder to audit from the main paper. That is Correct: the manuscript gives a brief summary in Methods and explicitly says the complete laboratory and analysis description is in the supplement; I lean Significant because the screen drives the PRC2/mTOR and resistance-signature narrative, and the evidence is Sufficient because the reviewer quotes the relevant reporting. The devil's-advocate case is plausible on importance, however, since many papers place full screen details in supplementary methods and some experts will see that as acceptable rather than a major flaw. Because the issue is real but its weight is debatable, I predict disagreement on significance. Prediction: correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is correct because the RNA-seq/ribosome-associated RNA-seq analysis uses a proprietary Eclipsebio pipeline and proprietary feature counting, and the manuscript does not provide a public accession in the main text. That is Significant since these data are central to the paper's argument against ISR-like translational regulation, and the evidence is Sufficient because the reviewer quotes the exact methods statements and the missing-accession issue. A devil's-advocate response could note that some processing tools are named and data might exist elsewhere, but the analysis is still not readily reproducible from the paper alone. The criticism is concrete enough that I expect expert agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer is correct that the paper uses permissive significance conventions\u2014most clearly a star for p<0.1 in Figure 3 and relaxed FDR=20% for some association analyses\u2014which does raise false-positive risk. I judge this Significant because those statistical thresholds feed directly into the mechanistic association narrative, and the evidence is Sufficient because the review points to the exact legend and text describing the relaxed FDR. The devil's-advocate case on correctness is limited: exploratory work can justify looser thresholds, but that does not negate the reviewer's core point that such choices weaken robustness unless interpreted cautiously. I therefore expect agreement. Prediction: correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

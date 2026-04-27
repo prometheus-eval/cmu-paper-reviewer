@@ -1,0 +1,100 @@
+{
+  "paper_id": 53,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper puts most caveats in the Technical limitations section, while the main results passage makes a strong interpretive claim about serotonin, GABA, and glycocholic acid being traditionally non-microbial and microorganisms often being the primary producers in the gut. Asking for stronger caution and clearer support in that example discussion is valid and would improve the paper, but the reviewer does not provide outside citations or a complete evidentiary chain for the claim that these examples are already known host-and-microbe metabolites.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript itself explains batch search in the Methods and explicitly says the code is available on GitHub, and the supplied source tree contains batch-search scripts such as jobs.py. The core claim that batch processing is only briefly mentioned in the supplement and points to unavailable Python code is therefore not supported by the paper or repository.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper does not discuss integration into external preprocessing software such as MZmine or describe an end-to-end integrated data-processing pipeline, so the observation is factually accurate. However, this is partly a future-work and usability request rather than a direct flaw in the current method description, making its importance somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "In the main manuscript, the mouse example is described only as involving 29 tissues and biofluids, without listing the specific sample types, even though more detail exists elsewhere. That makes this a valid clarity request, but whether it is substantively important or just a presentation improvement is borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points to a real clarity issue in the core system description: the paper discusses both the microbeMASST monoculture database and the GNPS public reference library, and their relationship is easy to misread. Because this distinction is central to understanding what the tool searches and returns, the criticism is important and well anchored in a quoted passage.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Although the paper says microbeMASST works within GNPS and contrasts it with MASST, the explanation still assumes familiarity with GNPS and MASST and leaves the practical distinction somewhat compressed. Asking the authors to clarify what is new relative to GNPS and MASST, including the role of taxonomy and speed, is a valid and important request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The interface description gives inputs and default search parameters, but it does not fully explain several concepts a non-expert reader may need, such as what a USI means in practice, how to interpret charge, or how to choose thresholds for different data quality and instruments. Since the reviewer names concrete interface elements and missing guidance, this is an important and sufficiently supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper says the taxa view reports number of samples, number of matches, and a fraction, but it does not walk through the interpretation of those outputs with an explicit example. A charitable reader can therefore see this as a real clarity problem, especially for the pie-chart prevalence display, while a stricter reader may judge the existing explanation already adequate.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript repeatedly frames microbeMASST as applicable to known and unknown spectra and explicitly notes that only 23% of one analyzed set received level 2 or 3 annotations, leaving many spectra unannotated. Because the paper already communicates that many matches are partly or fully unidentified, the claimed omission does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The figures, especially their dense labels and panel text, are indeed hard to read at normal page scale, so the readability complaint is valid. This is a presentation issue rather than a substantive scientific problem, but it is concrete enough to verify directly from the figures.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

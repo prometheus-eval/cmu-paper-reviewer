@@ -1,0 +1,260 @@
+{
+  "paper_id": 29,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper uses antibiotics to diversify baseline communities before invasion experiments rather than as a concurrent invasion treatment, so saying the authors cannot meaningfully call communities permissive or resistant is too strong. Antibiotic history is a limitation worth discussing, but the reviewer's claim that it undermines the study unless untreated samples are used does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The key biological inference that E. faecalis strongly inhibits E. faecium is drawn from the Random-Forest-based colonization-impact analysis and then validated experimentally, but the paper does not show whether alternative models identify the same species. Asking for cross-model corroboration or interpretability would strengthen this central inference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The study already evaluates on held-out donors, and an 80/20 donor split is not by itself an unusually unbalanced or overfitting-prone design. Still, because the effective sample size is only 24 donors, experts could plausibly split between reading this as a rough small-sample concern and as a mistaken complaint about an ordinary cross-validation setup.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The discussion explicitly claims “system-level understanding,” but the paper mainly shows predictive patterns and one validated inhibitory interaction rather than a mechanism, and it does not discuss how the learned mapping may fail under changed media or conditions. That is a real overclaim and missing limitation in the interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The simulations assume true absence of the invader and noiseless observations, whereas the experiments only ensure non-detection and rely on noisy sequencing-derived measurements. Those are meaningful realism gaps, but the below-detection argument is only loosely supported in the review item, making the evidence borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The methods use OD600 as a biomass proxy and multiply it by relative abundance to estimate the invader's absolute abundance, but they do not report an external calibration against dry weight or cell counts. That makes the validation question legitimate, although experts could differ on how important such calibration is given that OD is a conventional proxy.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The medium contains porcine gastric mucin in liquid form, and the paper does not discuss how that choice may especially affect A. muciniphila or the generalizability of the colonization results. This is a real biological limitation, though its importance relative to the paper's proof-of-concept claims is somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper already includes simpler baselines—Logistic Regression for classification and Elastic Net for regression—to compare against the more complex models. Because the reviewer frames this comparison as missing, the core criticism does not hold, even though pure LASSO is not reported separately.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper presents a real contrast between synthetic regression, where GLV structure motivates stronger linear/ODE performance, and experiments, where Random Forest is best, but offers little interpretation of why. Asking the authors to discuss that discrepancy would materially improve the paper's takeaways about model choice.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is a straightforward figure-clarity request about the variables and mapping shown in Figure 1. It is a valid but minor presentation improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The text does not explicitly summarize how Random Forest behaves across training sizes in the GLV regression results, so the reviewer is asking for a clearer verbal takeaway from that panel. This is a minor presentation point rather than a substantive methodological issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The main text reports regression results only for A. muciniphila, even though analogous quantitative prediction results for E. faecium would help readers judge generality across invaders. That omission affects substantive evaluation rather than mere presentation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This is a valid readability complaint about visually distinguishing the invading species from the rest of the community in Figure 1. The underlying results are unaffected, so it remains a minor presentation suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figure 2B is intended to show baseline community profiles, but the reviewer reasonably asks for clearer identification of what communities the panel contains. This is a small but legitimate clarity issue tied to a specific figure panel.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer flags a plausible figure-legend ambiguity in Figure 6 around the dashed line and the two strains. Because this concerns visual interpretation rather than the result itself, it is a valid but minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper repeatedly maps AUROC-based performance to broad claims like “accurate,” “predictable,” and “solve the classification problem,” including in section titles and summary language, without much qualification. Since AUROC above 0.8 is not the same as near-error-free prediction, this is a correct and important framing concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript reports ROC curves and AUROC but does not translate that ranking metric into a more intuitive thresholded accuracy measure for experiments. Providing such guidance would help non-ML readers interpret what the reported classifier performance means in practice.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Because the paper itself shows diversity differences between permissive and resistant communities, comparing the machine-learning models against a naive diversity-based classifier would be a sensible baseline. That would strengthen the evaluation by showing whether complex models outperform an obvious ecological summary statistic.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper evaluates quantitative prediction with Pearson correlation and does not clearly motivate that choice for experimental use, and the main presentation leaves the log-transformed regression target underexplained even though the supplement mentions it. So the reviewer is right that the regression metric and reporting could be clearer.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper shows quantitative prediction only for A. muciniphila, even though readers would also want the analogous regression results for the other invader to judge species-specific performance. The mention of E. faecalis is plainly a wording slip; the substantive point is about the missing second invader regression analysis.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The methods and Figure 2 caption already state that stool communities were treated with antibiotics for 24 hours before later passaging and invasion, so the basic timing is described in the paper. The complaint therefore overstates a missing-methods problem.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The CI definition says a perturbation is applied to a resident species, but neither the supplement nor the main text specifies the perturbation size or sign. Because the interpretation of colonization-impact scores depends on that choice, this is a substantive missing-method detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The synthetic GLV analysis assumes convergence to a steady state, but the paper does not explain what parameter regime or design choice makes that assumption reasonable for the simulated data. The concern is important, though the review item relies on general GLV knowledge rather than a tightly documented evidence chain.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The supplementary methods define off-diagonal interaction sampling and growth rates but do not say how the diagonal self-interaction terms were set. Because that is a core part of the GLV specification, the clarification request is correct and important for reproducibility.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer points to a real modeling mismatch: the synthetic GLV system is formulated in absolute abundances, whereas the experimental community profiles are largely compositional and only partially converted via OD for outcome estimation. But the paper also does use an absolute-abundance outcome proxy, so whether this criticism squarely applies is genuinely debatable across experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The paper does not cite the Bunin/cavity-method line of GLV work around the analytical derivation, and adding that pointer would better contextualize the result. This is a valid but mainly related-work-level improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Equation 4 is written using A^{-1} without stating the invertibility assumption or clarifying that the derivation applies only when that inverse exists. That caveat is real, but experts may differ on whether it is a central issue or mostly a small rigor clarification because the random matrices used here are very likely invertible.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Given the cited prior literature on stable fecal-derived in vitro communities, the wording “established” can sound more novel than warranted. This is a fair but minor wording refinement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The manuscript frequently says “the data-driven approach” in a way that can blur the distinction between a general paradigm and the authors' specific implementation. That is a real but modest phrasing issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The introduction does not adequately situate the work against earlier gut-microbiome studies that used data-informed or model-based prediction of colonization and competition, such as Buffie 2015 and Venturelli 2018. Adding that context would materially improve how the paper's novelty is framed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

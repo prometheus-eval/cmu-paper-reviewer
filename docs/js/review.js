@@ -781,6 +781,7 @@ function showAnnotationModal(key, items, currentIndex) {
 
           <div class="annotation-group">
             <div class="annotation-group-label">Is this criticism correct?</div>
+            <div class="annotation-hint">For each item, first click whether the main point of the item (criticism) is correct and clearly stated. This is a binary yes/no question: if you think there is any slight doubt, you can select "Incorrect", whereas "Correct" means every aspect of the main point is correct and clearly stated.</div>
             <div class="annotation-buttons" data-field="correctness">
               <button class="annotation-btn ${annotationState.correctness === 'correct' ? 'selected' : ''}" data-value="correct">Correct</button>
               <button class="annotation-btn ${annotationState.correctness === 'incorrect' ? 'selected' : ''}" data-value="incorrect">Incorrect</button>
@@ -789,6 +790,10 @@ function showAnnotationModal(key, items, currentIndex) {
 
           <div class="annotation-group">
             <div class="annotation-group-label">Does it touch a significant issue?</div>
+            <div class="annotation-hint">If you have clicked "Correct" above, you should then click whether the main point of the criticism is talking about a significant aspect of the paper that is constructive to enhance the paper rather than touching a minor issue. You could click on one of the three options:<br>
+            <strong>Significant</strong> \u2014 items that you would consider to be insightful and helpful to improve the paper.<br>
+            <strong>Marginally Significant</strong> \u2014 items that aren\u2019t helpful at all for improving the paper but are still worth remaining in the review itself. This includes issues like typos, stylistic issues, and suggestions for submitting to a different journal, etc.<br>
+            <strong>Not Significant (Very marginal issue)</strong> \u2014 very minor items that should not affect the acceptance of this paper and are better to be removed from the review.</div>
             <div class="annotation-buttons" data-field="significance">
               <button class="annotation-btn ${annotationState.significance === 'significant' ? 'selected' : ''}" data-value="significant">Significant</button>
               <button class="annotation-btn ${annotationState.significance === 'marginally_significant' ? 'selected' : ''}" data-value="marginally_significant">Marginally Significant</button>
@@ -798,9 +803,10 @@ function showAnnotationModal(key, items, currentIndex) {
 
           <div class="annotation-group">
             <div class="annotation-group-label">Is the evidence sufficient?</div>
+            <div class="annotation-hint">Additionally, we ask you to check if the evidence is sufficient to support the main point of the criticism. This means whether the evidence provided by the AI reviewer well justifies its main point of criticism. You could click on one of the two options: "Evidence is sufficient" or "Requires more evidence".</div>
             <div class="annotation-buttons" data-field="evidence_quality">
-              <button class="annotation-btn ${annotationState.evidence_quality === 'sufficient' ? 'selected' : ''}" data-value="sufficient">Sufficient</button>
-              <button class="annotation-btn ${annotationState.evidence_quality === 'insufficient' ? 'selected' : ''}" data-value="insufficient">Insufficient</button>
+              <button class="annotation-btn ${annotationState.evidence_quality === 'sufficient' ? 'selected' : ''}" data-value="sufficient">Evidence is sufficient</button>
+              <button class="annotation-btn ${annotationState.evidence_quality === 'insufficient' ? 'selected' : ''}" data-value="insufficient">Requires more evidence</button>
             </div>
           </div>
 
@@ -814,12 +820,13 @@ function showAnnotationModal(key, items, currentIndex) {
           </div>
 
           <div class="annotation-group">
-            <div class="annotation-group-label">Additional comments (optional)</div>
+            <div class="annotation-group-label">Additional comments</div>
+            <div class="annotation-hint">If you have any specific comments regarding this review item, you can provide your thoughts here. Also, by writing this, you can debate with the AI reviewer on whether this review item is valid or not.</div>
             <textarea class="annotation-textarea" id="annotation-free-text" placeholder="Share any additional thoughts about this review item..." rows="3">${escapeHtml(annotationState.free_text || "")}</textarea>
           </div>
 
           <div class="debate-trigger">
-            <button class="btn btn-secondary btn-sm debate-btn" id="debate-btn">I want to debate with AI about this (Beta \u{1F9EA})</button>
+            <button class="btn btn-secondary btn-sm debate-btn" id="debate-btn" disabled>I want to debate with AI about this (Beta \u{1F9EA})</button>
           </div>
 
           <div class="modal-actions">
@@ -829,6 +836,18 @@ function showAnnotationModal(key, items, currentIndex) {
         </div>
       </div>`;
 
+    // Check if all annotation fields are filled (for enabling debate button)
+    function updateDebateButton() {
+      const debateBtn = document.getElementById("debate-btn");
+      if (!debateBtn) return;
+      const allFilled = annotationState.correctness
+        && annotationState.significance
+        && annotationState.evidence_quality
+        && annotationState.action_item_quality
+        && (annotationState.free_text || "").trim();
+      debateBtn.disabled = !allFilled;
+    }
+
     // Wire up buttons
     document.querySelectorAll(".annotation-buttons").forEach(group => {
       const field = group.dataset.field;
@@ -837,16 +856,34 @@ function showAnnotationModal(key, items, currentIndex) {
           group.querySelectorAll(".annotation-btn").forEach(b => b.classList.remove("selected"));
           btn.classList.add("selected");
           annotationState[field] = btn.dataset.value;
+          updateDebateButton();
         });
       });
     });
 
     // Wire free text
     const freeTextEl = document.getElementById("annotation-free-text");
-    if (freeTextEl) freeTextEl.addEventListener("input", () => { annotationState.free_text = freeTextEl.value; });
+    if (freeTextEl) freeTextEl.addEventListener("input", () => {
+      annotationState.free_text = freeTextEl.value;
+      updateDebateButton();
+    });
 
     // Wire debate button
-    document.getElementById("debate-btn")?.addEventListener("click", () => { openDebateChat(key, item); });
+    document.getElementById("debate-btn")?.addEventListener("click", () => {
+      const allFilled = annotationState.correctness
+        && annotationState.significance
+        && annotationState.evidence_quality
+        && annotationState.action_item_quality
+        && (annotationState.free_text || "").trim();
+      if (!allFilled) {
+        alert("Please fill in all annotation fields (correctness, significance, evidence, action item helpfulness, and additional comments) before starting a debate.");
+        return;
+      }
+      openDebateChat(key, item);
+    });
+
+    // Initialize debate button state
+    updateDebateButton();
 
     // Skip closes modal (no auto-advance)
     document.getElementById("annotation-skip").addEventListener("click", closeAnnotationModal);
@@ -1060,6 +1097,13 @@ async function openDebateChat(key, item) {
       body: JSON.stringify({
         item_number: item.number,
         annotator_id: getAnnotatorId(),
+        user_annotations: {
+          correctness: annotationState.correctness || null,
+          significance: annotationState.significance || null,
+          evidence_quality: annotationState.evidence_quality || null,
+          action_item_quality: annotationState.action_item_quality || null,
+          free_text: (annotationState.free_text || "").trim() || null,
+        },
       }),
     });
     if (!resp.ok) {

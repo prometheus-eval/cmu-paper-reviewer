@@ -1,0 +1,148 @@
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [overall, axis], mode: axis)
+================================================================================
+N rows total: 25
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.958  (23/24)
+  significance   0.909  (10/11)
+  evidence       0.875  (21/24)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 10
+  accuracy: 0.900
+  macro F1: 0.474
+  weighted F1: 0.853
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.900      1.000      0.947          9
+  correct_marginal_sufficient                        0.000      0.000      0.000          1
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [overall, tenclass], mode: tenclass)
+================================================================================
+N rows total: 25
+N scored: 25 (unscorable: 0)
+10-class accuracy: 0.440
+Macro F1:          0.200
+Weighted F1:       0.427
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.533      0.889      0.667          9
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000          0
+  correct_marginal_sufficient                        0.000      0.000      0.000          1
+  correct_disagree_on_significance                   0.750      0.214      0.333         14
+  disagree_on_correctness                            0.000      0.000      0.000          1
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [human_reviewers, axis], mode: axis)
+================================================================================
+N rows total: 14
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.929  (13/14)
+  significance   0.800  (4/5)
+  evidence       0.769  (10/13)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 5
+  accuracy: 0.800
+  macro F1: 0.444
+  weighted F1: 0.711
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.800      1.000      0.889          4
+  correct_marginal_sufficient                        0.000      0.000      0.000          1
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [human_reviewers, tenclass], mode: tenclass)
+================================================================================
+N rows total: 14
+N scored: 14 (unscorable: 0)
+10-class accuracy: 0.429
+Macro F1:          0.212
+Weighted F1:       0.468
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.500      0.750      0.600          4
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000          0
+  correct_marginal_sufficient                        0.000      0.000      0.000          1
+  correct_disagree_on_significance                   0.750      0.333      0.462          9
+  disagree_on_correctness                            0.000      0.000      0.000          0
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [ai_reviewers, axis], mode: axis)
+================================================================================
+N rows total: 11
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    1.000  (10/10)
+  significance   1.000  (6/6)
+  evidence       1.000  (11/11)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 5
+  accuracy: 1.000
+  macro F1: 1.000
+  weighted F1: 1.000
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     1.000      1.000      1.000          5
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [ai_reviewers, tenclass], mode: tenclass)
+================================================================================
+N rows total: 11
+N scored: 11 (unscorable: 0)
+10-class accuracy: 0.455
+Macro F1:          0.238
+Weighted F1:       0.325
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.556      1.000      0.714          5
+  correct_disagree_on_significance                   0.000      0.000      0.000          5
+  disagree_on_correctness                            0.000      0.000      0.000          1
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [self_review, axis], mode: axis)
+================================================================================
+N rows total: 5
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    1.000  (4/4)
+  significance   1.000  (3/3)
+  evidence       1.000  (5/5)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 2
+  accuracy: 1.000
+  macro F1: 1.000
+  weighted F1: 1.000
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     1.000      1.000      1.000          2
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/azure_ai/gpt-5.4 [self_review, tenclass], mode: tenclass)
+================================================================================
+N rows total: 5
+N scored: 5 (unscorable: 0)
+10-class accuracy: 0.400
+Macro F1:          0.222
+Weighted F1:       0.267
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.500      1.000      0.667          2
+  correct_disagree_on_significance                   0.000      0.000      0.000          2
+  disagree_on_correctness                            0.000      0.000      0.000          1

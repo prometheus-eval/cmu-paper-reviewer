@@ -1,0 +1,227 @@
+{
+  "paper_id": 34,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly points out that the samples have low compacity (69-77%), meaning the experimental impedance includes grain boundary resistance, making the direct comparison to bulk KMC simulations flawed. A devil's advocate might argue the reviewer is too harsh in saying the measurement itself is 'not correct', but the core technical point about the flawed comparison is factually accurate. Fixing this would significantly improve the paper's scientific rigor. The evidence points to the pellet density and the direct comparison, which is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer concludes they cannot recommend the manuscript for publication based on the flaw identified in Item 1. This is purely an editorial recommendation rather than a technical critique that can be addressed to improve the paper. A devil's advocate might argue it expresses the severity of the issue, but standard practice is to remove such recommendations from the review. Thus, it is not significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes the limitation of comparing bulk KMC simulations to experimental results that include grain boundaries, especially given the varying relative densities. A devil's advocate could argue the authors already mention grain boundaries, but they still directly compare the values, making the critique valid. Addressing this would clarify the comparison. The evidence points to the experimental vs computational scopes, which is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the KMC method freezes the non-Na framework, neglecting polyanion rotations (paddle-wheel effect) seen in similar systems. This is factually correct based on the methods section. A devil's advocate might argue the paddle-wheel effect is less prominent in NASICON than in some other systems, but discussing this limitation is still highly relevant. Addressing it would improve the paper's mechanistic discussion. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that NEB was done at 0 K, while KMC and experiments are at finite temperatures, and asks about Arrhenius behavior. This is factually correct. A devil's advocate might argue this is a standard and well-accepted approximation in the field, so it may not strictly need addressing, leading to disagreement on significance. The evidence points to the temperature difference, which is sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer accurately identifies that the KMC uses structures quenched from 1500 K, whereas the experiments involve natural cooling without a quench protocol, and suggests Rietveld refinement to quantify impurities like ZrO2. This is correct as the authors only performed Le Bail fitting. A devil's advocate might argue Le Bail is sufficient for phase identification, but Rietveld is indeed needed for quantification. Addressing this would improve structural characterization.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that the monoclinic to rhombohedral phase transition occurs below the quenching temperature, making the symmetry used for diffusion calculations important to specify. This is factually correct, as the paper uses the rhombohedral structure even for low-temperature simulations. A devil's advocate might argue the high-T structure is a reasonable proxy, but the mismatch is a real limitation. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer recommends showing the window sizes difference when replacing P with Si, which the authors claim facilitates migration. This is a correct reading of the authors' claims. A devil's advocate might argue the authors already explained the ionic radii difference, but explicitly showing the window sizes would strengthen the argument. This is a constructive suggestion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer correctly points out that the abstract claims ~0.1 S/cm conductivity without stating the temperature (which is 573 K), which could mislead readers into thinking it is a room-temperature value. A devil's advocate might say readers will assume elevated temperatures for NASICON, but omitting it in the abstract is a major oversight. Fixing this is crucial. The evidence is clear.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer suggests discussing the effect of optimal Na stoichiometry alongside the positive effect of Si substitution. This is a valid point, as the authors mention both but could integrate them better. A devil's advocate might argue the authors already sufficiently address this elsewhere in the text, making it a relatively minor addition. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that 0.2 S/cm is a 100% overestimation compared to 0.1 S/cm and questions whether this is 'excellent agreement'. This is factually correct mathematically. A devil's advocate would argue that in solid-state ionics, agreement within a factor of 2 is typically considered excellent, making the critique somewhat pedantic. The issue is minor and borderline stylistic.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes from the SI that structures were relaxed until stresses were less than 0.29 GPa, and points out this is a relatively high residual stress for DFT relaxations. A devil's advocate might argue that 0.29 GPa (2.9 kbar) is acceptable for complex, disordered cells, leading to disagreement on whether this significantly impacts the results. The evidence provided is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer accurately identifies that the paper compares bulk KMC conductivities with total experimental conductivities from pellets with 69-77% compacity. A devil's advocate might argue the authors acknowledge grain boundaries, but the direct comparison and 'excellent agreement' claim remains methodologically flawed. Fixing this would improve the paper's rigor. The evidence is highly specific and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly points out that KMC simulations use the rhombohedral structure at all temperatures, while experiments show a monoclinic transition near 433 K, creating a structural mismatch for the 373 K data. A devil's advocate might argue simulating the monoclinic phase is computationally too complex, but the critique remains entirely valid and significant. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly identifies from the provided code that a fixed attempt frequency of 5 THz is used without justification, which linearly scales the predicted conductivity. A devil's advocate might argue this is a standard typical value, but the lack of sensitivity analysis or justification for absolute values is a major limitation. The evidence from the code is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the KMC covers the full composition range, but experiments only validate the high-conductivity region (x=1.5 to 2.4). This is factually correct. A devil's advocate might argue the authors already compare with literature for x=0, and requiring new experiments for the low-conductivity end is asking too much. Experts might disagree on whether this is significant or marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the provided KMC code predicts a trend contradicting the paper (higher conductivity at x=1.8 than x=2.4). However, this is factually incorrect because the reviewer ran a provided toy script that only does 3000 passes on a single configuration, whereas the paper's results are based on 14 million passes averaged over 50 configurations. A devil's advocate cannot defend running an unconverged toy script to invalidate the full study.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the provided code yields values around 2 mS/cm instead of the reported 200 mS/cm. This is factually incorrect for the same reason as Item 1: it relies on an unconverged, 3000-pass toy example on a single configuration rather than the full, converged ensemble calculation described in the paper's methods.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that claiming 'highest ionic conductivity (~0.1 S/cm)' is misleading because early literature reported 0.2 S/cm. A devil's advocate would argue the authors clearly meant highest conductivity *within their studied compositions*, not the highest ever recorded in literature. Because the text can be ambiguously interpreted, experts would likely disagree on whether the reviewer's premise of a 'misleading claim' is correct.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims the simulation only covers microseconds, not milliseconds, based on the 3000 passes in the toy script. This is factually incorrect because the paper explicitly states they performed 14 million passes per configuration, which mathematically scales to the millisecond realm. The reviewer completely ignored the described methodology in favor of a toy script.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer accurately identifies the mismatch between computed bulk conductivity and measured total pellet conductivity, explicitly noting the low compacity (69-77%) of the samples. A devil's advocate might argue that the authors admit the samples aren't perfect, but direct comparison remains fundamentally flawed. This is a major structural critique. The evidence is specific and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the KMC models a frozen rhombohedral lattice at all temperatures, while the experimental samples undergo a monoclinic transition around 433 K. This is factually correct and a major limitation of the modeling approach. A devil's advocate could argue that modeling the monoclinic phase is too difficult, but it doesn't invalidate the critique. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly highlights that the abstract claims a high conductivity of ~0.1 S/cm without specifying that this is at 573 K, which could heavily mislead readers. A devil's advocate might say standard practice implies higher temperatures for NASICON, but the omission is still critical context. The evidence is clear and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out that the claim 'conductivity cannot be used to identify phase separation' is based on a 1-order-of-magnitude dip being 'within error', without presenting quantified error bars to prove a factor of 10 is undetectable. This is a very sharp, correct critique. A devil's advocate has little ground to defend unquantified error claims for such a large dip. The evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

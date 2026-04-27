@@ -1,0 +1,95 @@
+{
+  "paper_id": 63,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's architecture description around Fig. 1a says the branches are combined and passed through 'a nonlinear operation' but never names the nonlinear functions. The released model code uses tanh in the repeated blocks and GELU near the output, so asking the authors to specify the nonlinearities is a valid request about a real omission in the paper's model description.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item points to a concrete panel in a core results figure and asks about an apparent mismatch between the relative-error and absolute-error visualizations. That is a plausible, clearly stated observation about figure presentation, though without the underlying figure data its importance is more interpretive than methodological.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I could not verify the stated premise from the provided paper source: searches of the full preprint text do not reveal a discussion of multiplexing for handling high-dimensional problems. Because the criticism depends on a claim that is not actually present in the supplied manuscript, it does not hold up against the source of truth here.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper source contains one explicit big-O statement, mathcal-O of 1, in the Darcy-flow discussion, but I could not find corresponding big-O notation in the experimental demonstration section to support the claimed formatting inconsistency. Since the asserted mismatch is not borne out by the provided manuscript, this item is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The experimental setup reports the laser wavelength and model number (CPS532) but does not state the laser's output power. That is a concrete missing hardware detail in the methods, and providing it would improve reproducibility of the optical experiment.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer is right that there is prior optical-PINN work before this preprint, but the key 2023 citation is a simulation-based optical training framework rather than an unambiguous deployed or experimental optical PDE solver, and the 2025 citation postdates this 2024 preprint. So calling the paper's novelty claim flatly 'wrong' is too strong, though a more qualified priority complaint would be reasonable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I could not find the quoted sentence or its distinctive phrases ('latter', 'best prediction and speed performance', etc.) anywhere in the provided paper source. Because the claimed target text is not present in the manuscript I was asked to verify against, the typo criticism is not supported by the source of truth.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The hardware scaling discussion estimates throughput from SLM/camera frame rates and power from SLM leakage current, but it does not analyze source power, detector SNR constraints, fan-out losses, insertion losses, or dynamic-range issues. The reviewer's concern therefore targets a real omission in the practical scaling argument and would materially strengthen the hardware claims if addressed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item mixes a valid high-level concern with an inaccurate premise. It is fair to ask for a stronger digital-only ablation and for hardware energy-scaling claims to include electronic post-processing costs, but the paper does not actually present Fig. 5 as a tandem experimental system with a separately identified postprocessing CNN on Darcy or Navier-Stokes. Because the main criticism can be read either as a legitimate ablation request or as a misreading of what Fig. 5 contains, correctness is borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The experimental section builds and measures only a DONN setup, while XBAR behavior is handled through noise simulations; Fig. 5 mixes experimental measurements and simulated analyses, and the main text could be clearer about that scope. Asking the authors to clarify whether the full DONN plus XBAR stack was physically implemented and to label simulated versus experimental results more explicitly is therefore a correct and important request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

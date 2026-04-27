@@ -1,0 +1,132 @@
+{
+  "paper_id": 18,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript does use the quoted phrases 'exhaustively classified' and 'in order to fathom the equilibrium selection process', and those flourishes do not add precision. Complaining that this wording makes an already dense paper harder to read is a valid but mainly stylistic point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly states that the verification uses one-dimensional particle-in-cell simulations and repeats this again in the Methods section. Because the dimensionality is stated directly, the claim that it is not explicitly stated does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 1 is only a schematic with arrow widths and pink shading, while the nearby text says that Fig. 1d exhibits a finite dBz/dx. Because the figure does not directly show a Bz profile or derivative, the request to clarify the visual encoding and that text reference is a valid criticism of a central figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main thrust of this item is that Figure 2 and its coordinate/orbit explanations are confusing, and that concern is real: the color-over-color overlays are hard to read and the paper does not cleanly relate the model coordinates to current-sheet directions in the way the reviewer requests. But the item also folds in some subclaims that are already partly addressed in the caption or text, such as the definitions of NC/DW/M and the x-z versus x-y panel descriptions, so correctness is somewhat borderline under strict reading.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The narrow color bars and nested parenthetical notation in the Figure 4 and 5 captions do make those already busy figures harder to parse. This is a real, figure-specific presentation complaint, but it remains a minor readability issue rather than a substantive scientific problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper repeatedly presents mixed equilibria as 'universal' or 'ubiquitous', yet the direct support for that leap is limited to one MMS comparison plus supporting timescale arguments. The concern about overclaiming is therefore valid and central, but the review item itself gives only a high-level assertion rather than a detailed evidentiary gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper does use reduced c/v_A values, reports that the higher-c/v_A run develops plasma oscillations, and says those oscillations damp away without affecting the core mechanism. Asking the authors to identify these waves and discuss damping, boundary effects, and observational relevance is a valid and important request tied to a specific claim in the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The simulations are explicitly one-dimensional, while the discussion later acknowledges that in larger-scale 2D setups reconnection can spontaneously develop. It is therefore fair to ask for a clearer justification of what the 1D model can establish about real current sheets and how that limitation affects the paper's claims.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 6 shows that the observed and simulated sheets differ in the relative amplitudes of the parallel and perpendicular electron temperatures, and the paper explains that difference only briefly just before the Discussion section. Because this observation-simulation comparison is central, the request for a clearer explanation is valid and well anchored.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper compares MMS and simulation mainly through fields and low-order moments, not through ion or electron velocity distribution functions, so suggesting a direct VDF comparison is a reasonable way to strengthen the observational link to the orbit analysis. However, the item does not explain why this extra analysis is necessary or feasible enough for the present paper, so its importance is debatable across experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper itself notes that the numerical final state agrees with the analytical family only approximately and says that Eqs. 1 and 2 do not capture the whole spectrum. So the reviewer is pointing to a real theoretical limitation, but the phrasing slightly overstates the mismatch by implying that the simulation misses the expected equilibria altogether rather than differing from the simple analytical form in specific details.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The final discussion does claim that mixed equilibria are likely ubiquitous even though the MMS example is a reconnecting, non-static sheet. That makes the request for clearer observational support understandable, but calling this an outright contradiction is stronger than what the paper actually says because the authors explicitly argue that many 1D equilibration features carry over to 2D reconnecting sheets.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figures 4 and 5 label reduced distributions as f(x,v_x), f(x,v_y), and f(x,v_z), but the caption and surrounding text do not say explicitly whether the other velocity components are integrated out or fixed. Clarifying that reduction would improve interpretability and reproducibility, though some experts could view it as routine notation rather than a major issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The end of the abstract does invoke the 'universality' of mixed equilibria without making the intended scope especially clear. Rephrasing that sentence would improve the statement of the paper's central claim, and the reviewer points to the exact location.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

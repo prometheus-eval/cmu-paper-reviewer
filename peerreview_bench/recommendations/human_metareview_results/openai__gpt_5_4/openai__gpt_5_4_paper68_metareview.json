@@ -1,0 +1,292 @@
+{
+  "paper_id": 68,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's basic use of 3D geometric morphometrics on the bony labyrinth is not itself novel, and the reviewer names prior inner-ear morphometric studies including one on afrotherians. The manuscript's novelty lies more in the specific comparative framing and multivariate analysis than in the underlying morphometric technique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper itself acknowledges prior morphological convergence in Afrotheria, so the reviewer is fair to say the broad conclusion may not be wholly unexpected. But the claim that DNA phylogenetics established adaptation-driven convergence as the main driver of mammalian phylogeny overstates what that literature shows, so correctness is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Ekdale 2013 and 2016 are cited for cochlear diversity and function, not for having already established the paper's stronger 'high evolvability' hypothesis. The manuscript's evolvability claim is a broader interpretive argument tied to Le Maître et al. 2020, so this objection overstates prior establishment.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript discusses convergence in afrotherian inner-ear morphology but does not cite the specific Benoit 2013 studies the reviewer names. For a paper centered on afrotherian convergence, omitting directly relevant prior ear-region work is a real related-work gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The sample is deliberately selective—20 afrotherians and 20 chosen analogues—so it is reasonable to question whether broader taxon sampling would change the balance between ecological and phylogenetic signal. But the reviewer does not identify a concrete missing subset or show from the paper alone that the present conclusion fails, so the support is limited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item's core premise is wrong in the source package: R scripts are included under code/, along with the raw data files and README. The broader requests for extra analyses may be reasonable in principle, but the stated reproducibility problem as written does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does frame the adaptive interpretation strongly while not engaging several recent studies the reviewer cites as challenging ecological reading of bony labyrinth form, and PLS4 is indeed reported with p = 0.103. Asking the authors to contextualize their claims against that literature is therefore substantively grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The code explicitly notes that Sotalia is a strong outlier, so a sensitivity check without the dolphin is a plausible robustness request. However, saying the dataset is 'not normalized' or that the aquatic signal is necessarily biased by this specimen is too strong given that other aquatic taxa show the same general direction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The contextual variables are coarse ordinal scores, and the paper groups species with mixed ecologies such as the platypus while interpreting PLS axes behaviorally. The reviewer's examples therefore support a legitimate concern that some category definitions or ecological mappings may blur interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper's PLS3 discussion concerns variation within the sampled mammals, whereas the reviewer cites a turtle result across a different clade to say the mammalian association is challenged. That literature may be worth discussing, but it does not straightforwardly invalidate the paper's specific claim.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This presentation choice is described exactly as the reviewer says: the ordinary 2B-PLS is in the main text and the phylogenetic 2B-PLS is moved to the supplement. Asking the authors to justify that choice is a valid but mainly presentational request.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper already makes the data available through an OSF repository and the source package also contains a large 3D-surface archive, so the verification-access concern is answered. The claim that these taxa are problematic outliers is also not established with concrete evidence here.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The manuscript does not make a strong standalone claim that bony labyrinth shape is chiefly governed by allometry; it only includes body mass as one contextual variable and cites size-related functional literature. The reviewer's external counterclaim about minor allometry therefore does not directly show that the paper says something false.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The manuscript mentions posture among several functional associations but does not claim that canal orientation can directly predict head posture in the strong sense the reviewer attacks. Because the objection targets a stronger claim than the paper makes, it is not well aimed.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The phrase 'high disparity to diversity ratio' is used without clearly specifying the comparison frame or benchmark. That is a real clarity issue, though fixing it would mainly sharpen wording rather than alter the analysis.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer fairly notices that 'assumed high evolvability' is vague shorthand for a premise that is central to the paper. But the manuscript does in fact attribute that idea earlier to the authors' prior work, so the issue is more about local clarity and emphasis than about a missing foundation.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Figure 1 is crowded and gives the sample phylogeny and silhouettes but not the ecological/contextual coding used later in the analyses. The suggested redesign is one possible solution, and the underlying readability concern is valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The figure does show deformations at fixed values (-0.1 and +0.1), but the claim that this indicates coding or specimen problems is speculative and not supported by anything concrete in the paper. Asking for more extreme visualizations is a preference, not evidence of an actual error.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The paper explicitly reports the fourth PLS dimension with p = 0.103 yet still discusses it as one of the four trait combinations underlying convergence. Pointing out that this dimension is not statistically supported in the same way as the first three is a substantial and well-evidenced criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "This comment is too vague to verify: it does not specify which comparison is unclear or what claim is allegedly unsupported. A meta-reviewer would have to guess at the intended criticism.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The corresponding discussion of arboreal, subterranean, and agile taxa is already accompanied by multiple citations in the manuscript. The blanket claim that references are missing for that span therefore does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The manuscript's phrase 'very small' is qualitative, but replacing it with 'significantly smaller' would imply a formal statistical comparison that is not actually presented there. As written, the proposed correction is not clearly justified.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "This fragment does not identify a specific problem clearly enough to verify. It reads like an incomplete copy-edit note rather than a well-formed criticism.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The text does say aquatic and semi-aquatic mammals had a 'limited number of turns' without stating the approximate range or comparison. Asking for a more concrete description is a valid minor clarification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The lines about the four PLS dimensions and contextual proxies are interpreting the study's own results, not making an obvious unsupported literature claim. The reviewer does not identify any specific assertion in that span that requires an external citation.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The reviewer raises a plausible nuance about developmental timing: the paper says inner-ear growth is completed 'around birth', whereas the underlying ossification timeline can be more specifically prenatal depending on structure and taxon. But the manuscript does cite developmental references here, so the criticism is somewhat interpretive.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "In the later discussion the manuscript makes broad comparative claims about evolvability, disparity, and mammalian diversification, and not every part of that argument is directly cited. Still, the cited line range also contains some references, so the blanket 'references are missing' claim is only partially specified.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_disagree_on_evidence"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "If the paper says the current study did not itself compare mammals with non-mammals, that remains true even if another paper such as Evers et al. 2022 did. The reviewer's note therefore does not identify an actual error in the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The manuscript calls the scans 'high-resolution micro-CT' without defining the term, although the methods later give the actual voxel sizes. Asking for a clearer immediate characterization is a valid but minor presentation point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's headline Procrustes-distance result is presented only as pooled averages across all analogue and non-analogue pairs, even though the analogue sets span very different ecological categories. Asking for category-level tables or statistics is a valid request that would make the convergence claim more transparent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper reports overall p-values for the PLS dimensions, but the figures and accompanying text do not quantify how well the ecological groups separate or how much within-group spread matters. The reviewer's broader point—that the adaptive interpretation is discussed more qualitatively than quantitatively—is therefore reasonable, though the exact missing analyses are not fully specified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Only one actual bony labyrinth specimen image is shown, while much of the discussion interprets shape differences across ecotypes. Additional representative exemplars from the major eco-types would make the morphological discussion more convincing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This criticism is well grounded: the manuscript makes strong claims about 'high evolvability', surprise due to ear architecture, and a direct link to genetic/developmental complexity, but it does not actually measure evolvability, compare the ear to other structures or clades, or present genetic/developmental data. The reviewer also correctly notes that some of the comparative developmental assertions go beyond what is shown.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The quoted introduction sentence does overreach relative to the evidence presented in this paper. Developmental complexity is asserted rather than demonstrated here, and linking ear evolvability to the large-scale disparity of mammalian body plans is a substantial extrapolation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

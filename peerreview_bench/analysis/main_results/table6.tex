@@ -7,17 +7,17 @@
 \textbf{Reviewer} & \textbf{vs Top-Rated Human} & \textbf{vs Lowest-Rated Human} \\
                   & {\scriptsize Win-rate [95\% CI]\,\,(wins/$n$)} & {\scriptsize Win-rate [95\% CI]\,\,(wins/$n$)} \\
 \midrule
-GPT-5.2         & 49.1{\scriptsize\,[39.3, 58.9]}\,({\scriptsize 55/112}) & 73.2{\scriptsize\,[64.1, 82.1]}\,({\scriptsize 82/112}) \\
-Claude Opus 4.5 & 30.4{\scriptsize\,[21.7, 39.4]}\,({\scriptsize 34/112}) & 58.9{\scriptsize\,[49.5, 68.1]}\,({\scriptsize 66/112}) \\
-Gemini 3.0 Pro  & 32.1{\scriptsize\,[22.9, 42.1]}\,({\scriptsize 36/112}) & 67.9{\scriptsize\,[58.2, 77.3]}\,({\scriptsize 76/112}) \\
+GPT-5.2         & 48.6{\scriptsize\,[38.7, 58.5]}\,({\scriptsize 53/109}) & 73.4{\scriptsize\,[64.2, 82.4]}\,({\scriptsize 80/109}) \\
+Claude Opus 4.5 & 30.3{\scriptsize\,[21.6, 39.4]}\,({\scriptsize 33/109}) & 59.6{\scriptsize\,[50.4, 69.2]}\,({\scriptsize 65/109}) \\
+Gemini 3.0 Pro  & 32.1{\scriptsize\,[22.5, 42.0]}\,({\scriptsize 35/109}) & 68.8{\scriptsize\,[58.9, 78.4]}\,({\scriptsize 75/109}) \\
 \bottomrule
 \end{tabular}
 \caption{\textbf{Annotator-judged win rates: fraction of papers on which each AI reviewer ``matches or exceeds'' the top-rated and lowest-rated human reviewer.}
 After reading all three human and all three AI reviews for a paper, each expert annotator was asked two checkbox questions in the per-paper survey: ``Compared to the best human review, which AI-generated reviews match or exceed that level of quality?'' and the parallel question against the worst human review.
 Each survey response contributes one Bernoulli observation per AI model per baseline.
-The 85 primary and 27 secondary (overlap-paper) annotators give $n = 112$ observations per cell.
-Rates are the pooled proportion of wins across all 112 observations; 95\% confidence intervals are a non-parametric cluster bootstrap with 10{,}000 resamples, clustering on HF \texttt{paper\_id} to account for within-paper correlation on the overlap papers.
-Under this convention, GPT-5.2 matches or exceeds the top-rated human on $\sim$49\% of papers and the lowest-rated human on $\sim$73\%; Claude Opus 4.5 and Gemini 3.0 Pro sit noticeably lower on the top-rated comparison ($\sim$30--32\%) but recover on the lowest-rated comparison ($\sim$59--68\%), consistent with the correctness-vs-significance trade-off highlighted in Tables~\ref{tab:main-results} and~\ref{tab:glmm}.
+The 82 primary and 27 secondary (overlap-paper) annotators give $n = 109$ observations per cell.
+Rates are the pooled proportion of wins across all 109 observations; 95\% confidence intervals are a non-parametric cluster bootstrap with 10{,}000 resamples, clustering on HF \texttt{paper\_id} to account for within-paper correlation on the overlap papers.
+Under this convention, GPT-5.2 matches or exceeds the top-rated human on $\sim$49\% of papers and the lowest-rated human on $\sim$73\%; Claude Opus 4.5 and Gemini 3.0 Pro sit noticeably lower on the top-rated comparison ($\sim$30--32\%) but recover on the lowest-rated comparison ($\sim$60--69\%), consistent with the correctness-vs-significance trade-off highlighted in Tables~\ref{tab:main-results} and~\ref{tab:glmm}.
 }
 \label{tab:winrate}
 \end{table}

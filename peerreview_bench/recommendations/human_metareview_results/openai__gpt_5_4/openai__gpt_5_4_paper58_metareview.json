@@ -1,0 +1,156 @@
+{
+  "paper_id": 58,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper reports total anti-Spike IgG/IgA and recall cytokines, but it does not report Spike-specific IgG isotypes, IgE, or broader Th1/Th2-skewing readouts; only IL-4 is included among the measured T-cell cytokines. So the concern about incomplete characterization of response quality and possible allergic skewing is valid, even though the comment about clustering adding little is subjective.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The study evaluates one Pam2Cys-Spike formulation and compares delivery routes, but it does not compare Pam2Cys against other adjuvants, alternative TLR ligands, formulation variants, or longer-term durability. That makes the complaint about limited comparison to alternative approaches factually valid and important for positioning the contribution.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The challenge data and discussion show partial protection from intranasal Pam2Cys alone, while the abstract only summarizes protection from the full vaccine. Highlighting this antigen-independent effect more clearly is a real point, but experts could differ on whether it is a major biological omission or mostly a framing tweak.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item bundles several real but mostly revision-level suggestions: some figures are busy, the Pam2Cys-alone effect could be discussed more, and the paper could say more about isotype or Th1/Th2 profiling even without new data. Because it mixes presentation and discussion requests rather than substantiating one major flaw, the importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The immunogenicity experiments do not include a Spike-alone, non-adjuvanted control, and the challenge is performed only three weeks after the third dose, exactly as the reviewer states. Given the observed partial Pam2Cys-alone protection, later challenge time points would materially strengthen claims about durable vaccine-specific memory rather than short-term innate effects.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The chimera experiments indeed use only an early 24-hour innate readout and a later one-week-post-boost adaptive readout, without unvaccinated or non-adjuvanted chimera controls. Since the data are largely descriptive cell-composition readouts and do not directly link early influx events to later immunity, the criticism about limited mechanistic insight is well founded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper already includes a Pam2Cys-alone challenge arm, so the item somewhat overstates what is missing, but it is fair that this nonspecific protection is not deeply dissected and that mucosal correlates of protection are not established. Because the wording can be read either as claiming the experiment is absent or as asking for fuller characterization, correctness itself is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 2 shows a lung CD4 response dominated by IL-17 with little IFNg or CD8 signal, and the discussion only briefly notes that this pattern is typical of mucosal protein vaccines without really connecting it to SARS-CoV-2 protection. Asking for more interpretation of this unusual response profile is therefore a valid substantive comment.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points to Figures 3b and 4b and correctly notes that the main FIt-SNE panels do not quantify reconstitution efficiency or clearly communicate which populations are TLR2 positive; the clearer confirmation is pushed to supplementary plots. More direct population-level quantification would strengthen confidence in the chimera model that underpins the mechanistic claims.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper notes that BALF and lung tissue show different innate recruitment patterns, but it does not substantially explain why those compartment-level differences arise. That is a real interpretive gap, though experts could reasonably differ on whether it deserves major emphasis or is mainly a discussion-level refinement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item does not identify a concrete, verifiable flaw in the manuscript; it mostly says the paper combines several aspects of Pam2Cys/TLR2 biology and then praises the study as well designed. Because the supposed criticism is too vague to pin down, it does not qualify as a correct criticism under the rubric.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "It is true that lung CD4 responses are dominated by IL-17, but the paper also shows strong neutralizing antibodies and complete protection in the mouse challenge model, and it cites prior mucosal-vaccine work where Th17 responses accompany protection. The jump from 'IL-17 can be inflammatory' to 'this SARS vaccine strategy is unlikely to work' is therefore contestable rather than clearly established.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly identifies two limitations of the protection section: K18-hACE2 is a non-physiologic transgenic susceptibility model, and the mechanistic chimera experiments are done in BALB/c mice whereas protection is tested in a C57BL/6-derived challenge model. Those choices do not invalidate the paper, but they do limit how directly the mechanistic and efficacy sections can be connected.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper itself shows that Pam2Cys Spike protects against SARS-CoV-2 challenge, so the claim that TLR2-driven infiltration and IL-17 responses are inherently ill-suited to viral infection overstates what can be concluded from the manuscript. Still, the comment draws on a plausible immunology concern about inflammatory bias, making correctness genuinely debatable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The study indeed uses three sequential intranasal immunizations, and questioning how easily that regimen translates to humans is a reasonable translational concern. However, whether this is an important weakness is subjective, because multi-dose schedules are not inherently implausible and the discussion already acknowledges clinical-translation issues at a general level.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper measures several single cytokine-producing CD4 and CD8 populations after ex vivo recall, but it does not analyze multifunctional T cells or provide a broader phenotypic breakdown beyond those markers. So the criticism that T-cell phenotyping remains incomplete is valid and would improve interpretation of the vaccine-induced response.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "IL-17 is discussed largely through antigen-specific T-cell recall assays, and the paper does not directly identify other cellular sources of IL-17 in the lung by ex vivo staining or similar methods. Given how prominent IL-17 is in the mechanistic interpretation, this is a valid and important request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

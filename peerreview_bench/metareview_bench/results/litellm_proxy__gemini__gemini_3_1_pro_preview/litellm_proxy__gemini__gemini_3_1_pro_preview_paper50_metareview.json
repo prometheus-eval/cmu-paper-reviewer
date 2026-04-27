@@ -1,0 +1,275 @@
+{
+  "paper_id": 50,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly points out the absence of a cyclic stretching test and evaluation of the soldering region under strain. The paper mentions robustness under stretching but lacks these specific rigorous durability evaluations. This is a significant concern because durability is crucial for wearable devices. The evidence is sufficient as the reviewer identifies a specific missing analysis. A devil's advocate might argue the existing stretching tests are enough, but cyclic testing is a standard requirement, making disagreement unlikely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the paper analyzes the hydrogel-skin interface but not the hydrogel-metal interface. Checking the paper confirms this analysis is absent. This is significant because the stability of this interface affects long-term electrical performance. The evidence is sufficient as it points to a specific missing analysis. Some might argue it's only marginally significant if the skin interface is the main novelty, but it's important enough that experts would likely agree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks if the system can classify multiple simultaneous motions separately. The paper does test simultaneous motions (e.g., 'drinking water while coughing') but treats one as a noise artifact rather than classifying both separately. A charitable reading is that the reviewer correctly identifies a missing capability (multi-label classification). An uncharitable reading is that the reviewer missed the fact that simultaneous motions were already tested as noise. This ambiguity makes it likely that experts would disagree on whether this is a valid criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks how the VIA hole in the LTCC antenna (Fig. S13) is fabricated. The paper describes integrating a 'miniaturized LTCC antenna', which typically implies a commercial off-the-shelf component. If it's a commercial part, asking for fabrication details is a misunderstanding. A charitable expert might assume the authors custom-designed it and should explain the vias, while a strict expert would dismiss this as inapplicable to a commercial component. Thus, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims the fabrication process shows the open pad of the electrode faces away from the skin. However, the text explains that the water-soluble tape is dissolved to expose the copper electrode, on which the hydrogel is poured, and the hydrogel directly interfaces with the skin. The reviewer has misinterpreted the fabrication sequence or the figures. Therefore, the core claim is factually incorrect. A devil's advocate cannot plausibly defend a misreading of the text.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer suggests that the advantage of integrating two distinct data streams is not highlighted enough compared to previous studies, recommending a comparison table. The paper lacks a direct comparative analysis of the ML classification accuracy versus prior single-stream approaches. This is significant as it would strengthen the core claim. The evidence is sufficient since the reviewer points out a specific absence. Experts would likely agree this is a valid and constructive suggestion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the machine learning algorithm is just a 'well-known module' and that the battery 'needs externally wired' based on schematics, reducing the compact design. The paper claims a 'standalone' device powered by a lithium-ion battery, implying integration. A charitable expert might agree that the battery integration is poorly explained or bulky, while a strict expert would note the paper explicitly calls it 'standalone' and 'fully integrated'. This ambiguity in interpreting the device's true form factor leads to likely disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that due to the limited testing sample sizes, it is difficult to conclude the scientific meanings for clinical applications. This is factually correct, as only 7 healthy subjects were tested. The issue is significant for a paper claiming clinical relevance. The evidence is sufficient as it directly identifies the small sample size as the limiting factor. Experts would agree this is a valid and important criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the data analysis was limited because only 5 people were tested, and the activities were devised, making classification easy. This is correct based on the paper's methodology (5 training subjects, simple tasks). It is a significant limitation for a rehabilitation-focused device. The evidence is sufficient as the reviewer cites the exact number of subjects. Experts would readily agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer questions reproducibility due to the limitation of data sizes and suggests 'detailed evaluation' should be elaborated. While the claim about data size is correct and significant, the suggestion for 'detailed evaluation' is vague and lacks specific pointers on what exactly needs to be elaborated. A meta-reviewer would need to guess what the reviewer means, making the evidence insufficient. Experts would likely agree the evidence is lacking.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that 'genetic choking' is unclear terminology and that swallowing disorders have many causes beyond neck cancer. The paper does use the awkward phrase 'genetic choking'. Correcting medical terminology in a bioengineering paper is significant because it impacts the paper's credibility and clarity to clinicians. The evidence is sufficient as the reviewer quotes specific lines. Experts would agree this is a valid and helpful point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the sensor is placed on the larynx, which is not the suprasternal notch anatomically, despite the paper's claims. This is correct, as the paper's figures show laryngeal placement. It is a significant anatomical inaccuracy that needs correction. The evidence is sufficient as it points to a specific anatomical mismatch. Experts would agree this is a valid factual correction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the authors misrepresent citations 22 and 24 by stating they suffer from low signal quality and severe skin inflammation. However, the paper actually says 'these flexible sensors suffer... [citing 20, 25, 26-28]'. A charitable reader might think the paper implicitly critiques 22 and 24, while a strict reader would say the reviewer misread the citations. This ambiguity makes it likely that experts would disagree on the correctness of the reviewer's claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the larynx is not the ideal location to monitor swallowing via sEMG (the suprahyoid area is) and recommends validation via VFSS. This is a correct domain-specific fact and a major methodological concern. It is highly significant as it questions the core validity of the signals. The evidence is sufficient as the reviewer provides specific anatomical knowledge and names the gold-standard alternative (VFSS).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer questions how the authors can make generalizations about evaluating post-surgical states using data from healthy adults. This is correct; the paper only tested healthy subjects but claims utility for post-surgical states. This is a significant limitation regarding clinical claims. The evidence is sufficient as the reviewer correctly identifies the mismatch between the test population and the claimed application.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks how the 8-level pathological degree was determined, noting they are unfamiliar with such an evidence-based rating. The paper introduces this 8-level scale arbitrarily without clinical validation. This is factually correct and significant, as proposing an unvalidated clinical scale is problematic. The evidence is sufficient as it points to a specific, unsupported clinical claim in the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the paper's title and abstract claim 'in-sensor' machine learning, contradicting the cloud-based implementation. However, the term 'in-sensor' only appears in the references of the preprint, not in the title or abstract. The reviewer has hallucinated this claim. Because the fundamental premise of the criticism is factually wrong against the provided text, the item is Not Correct. A devil's advocate cannot defend a hallucinated text citation.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that validation was exclusively on healthy volunteers without clinical patient data, undermining clinical claims. This is factually correct based on the paper. It is highly significant for a device intended for clinical diagnosis. The evidence is sufficient, citing the specific number of healthy subjects (n=7). Experts would agree on this solid criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the reported heart rate of 19.2 bpm is physiologically impossible and likely swapped with the respiration rate. The paper indeed reports these numbers. This is a significant error in data presentation or processing. The evidence is sufficient as the reviewer points to the exact impossible numbers reported. Experts would agree this needs to be corrected.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer criticizes the ML evaluation for using a simple 5 train / 2 test split without rigorous cross-validation like leave-one-subject-out. This is correct and a significant methodological flaw for assessing generalization. The evidence is sufficient, accurately reflecting the paper's limited splitting strategy. Experts would agree this is a standard and necessary critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that the provided code lacks essential dependencies and does not match the 13-class problem described in the paper (instantiating 10 classes instead). This is correct upon inspecting the code directory and the `action_training.py` script. It is highly significant for reproducibility. The evidence is sufficient, providing specific quotes from the code demonstrating the missing files and the class mismatch.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the title explicitly includes 'in-sensor adaptive machine learning'. However, an examination of the paper reveals no such title, and the text describes cloud-based processing. The reviewer hallucinated the title. Therefore, the main factual premise is wrong. A devil's advocate cannot plausibly defend a hallucinated title.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out the paper claims 800 Hz sampling but the provided Arduino code has a 500ms delay, limiting it to ~2 Hz. This is factually correct based on the code provided. It is significant as it shows a discrepancy between the claims and the provided reproducible material. The evidence is sufficient, quoting the specific `delay(500)` from the code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the manuscript is missing the 'Methods' section. However, the Methods section is clearly present in the preprint document starting on line 53. Because the reviewer's core claim is factually false, the item is Not Correct. A devil's advocate cannot defend this, as the section is demonstrably present.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer states the model claims to be 'adaptive' but uses standard static training without online learning mechanisms. This is correct; the paper justifies adaptability solely with fully connected neurons, which is misleading. It is significant as it challenges a core claim. The evidence is sufficient, pointing to the standard `net.train()` loop in the code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly notes that the code defines 10 classes (mostly speech) and omits swallowing and coughing, contradicting the paper's claim of 13 features including these behaviors. This is factually correct. It is a significant issue for reproducibility and verifying the claims. The evidence is sufficient, quoting the specific `class_names_dict` from the code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes the lack of validation against a clinical gold standard like VFSS for the post-surgical rehabilitation claims and the arbitrary 8-level grading scheme. This is correct; the paper makes clinical claims without clinical validation. It is a highly significant limitation. The evidence is sufficient, correctly identifying the missing instrumental validation. Experts would agree this is a critical flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out the dataset is too small (2 test subjects) and that random slicing of time-series can leak information, leading to overly optimistic results without uncertainty estimates. This is correct and a major methodological concern in ML applied to physiological signals. It is highly significant. The evidence is sufficient, addressing the specific splitting procedure described in the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes the code is not reproducible due to missing dependencies and setting up a 10-class problem for 50 epochs instead of the claimed 13 classes for 100 epochs. This is factually correct based on the provided code. It is significant for reproducibility. The evidence is sufficient, directly quoting the code discrepancies. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out the paper claims superior signal quality based on having the 'lowest signal-to-noise ratio', which inverts the standard definition of SNR. The paper indeed explicitly says this. This is correct and significant, as it shows a fundamental misunderstanding or misreporting of a key metric. The evidence is sufficient, directly quoting the erroneous sentence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

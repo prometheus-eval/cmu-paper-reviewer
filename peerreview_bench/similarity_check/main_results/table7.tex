@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{9.5}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l cc}
+\toprule
+& \multicolumn{2}{c}{\textbf{Agreement with Experts}} \\
+\cmidrule(lr){2-3}
+\textbf{Model} & \textbf{Binary} {\scriptsize [95\% CI]} & \textbf{4-way} {\scriptsize [95\% CI]} \\
+\midrule
+\multicolumn{3}{l}{\textit{Embedding baselines}} \\
+\quad text-embedding-3-large   & 77.4{\scriptsize\,[70.5, 83.2]} & --- \\
+\quad Gemini embedding-001     & 80.5{\scriptsize\,[73.8, 85.8]} & --- \\
+\midrule
+\multicolumn{3}{l}{\textit{LLM-as-judge baselines}} \\
+\quad Gemini-3.1-Pro           & 92.7{\scriptsize\,[87.6, 95.8]} & 83.5{\scriptsize\,[77.1, 88.4]} \\
+\quad GPT-5.4                  & 92.7{\scriptsize\,[87.6, 95.8]} & 81.1{\scriptsize\,[74.4, 86.4]} \\
+\quad Claude-Sonnet-4.6        & 92.7{\scriptsize\,[87.6, 95.8]} & 80.5{\scriptsize\,[73.8, 85.8]} \\
+\quad GPT-5.4-mini             & 89.0{\scriptsize\,[83.3, 92.9]} & 80.5{\scriptsize\,[73.8, 85.8]} \\
+\quad Claude-Opus-4.7          & 92.7{\scriptsize\,[87.6, 95.8]} & 79.9{\scriptsize\,[73.1, 85.3]} \\
+\quad Gemini-3-Flash           & 92.1{\scriptsize\,[86.9, 95.3]} & 79.9{\scriptsize\,[73.1, 85.3]} \\
+\midrule
+\quad LLM Baselines Majority Vote & 93.9{\scriptsize\,[89.1, 96.7]} & 84.1{\scriptsize\,[77.8, 88.9]} \\
+\bottomrule
+\end{tabular}
+\caption{Agreement with expert decisions on the 164-pair review item similarity benchmark.
+Binary accuracy measures whether the model correctly classifies pairs as similar (near-paraphrase or convergent conclusion) vs.\ not similar (topical neighbor or unrelated).
+4-way accuracy measures exact match with the fine-grained label.
+95\% Wilson score confidence intervals are shown in brackets.
+Embedding baselines use cosine similarity at the optimal threshold; LLM baselines use thinking-mode 4-way classification.
+The majority vote aggregates predictions from the 6 LLM baselines (excluding images and code artifacts).}
+\label{tab:similarity-bench}
+\end{table}

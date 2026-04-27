@@ -1,0 +1,236 @@
+{
+  "paper_id": 55,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper text says 41 control-vs-LNB CSF proteins with absolute log2 fold change above 1, but Figure 1B's overlap counts for that comparison sum to 43 (33+7+3). That is a real internal inconsistency in a central result figure and the reviewer identifies the exact discrepancy.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript text says the overlap of high-fold-change CSF proteins is shown in Figure 1C, but Figure 1B is the overlap diagram and Figure 1C is the heatmap. This is a straightforward cross-reference error.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper reports only a median of 268 quantified plasma proteins and uses a short 8 cm column with a 60-samples-per-day workflow. Raising the possibility that this high-throughput setup limited proteome depth is fair and relevant to biomarker discovery, but the reviewer does not substantiate the literature comparison or quantify the effect of column length.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 3A's right-hand volcano plot is labeled LNB Control vs. LNB, which is inconsistent with the text and caption describing a control-vs-LNB comparison. This is a minor presentation correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The plasma results text reports 61 significant proteins for LNB vs viral meningitis and 63 for LNB vs controls, but Figure 3B's circle counts sum to 68 and 69 for those comparisons. The reviewer correctly identifies a numerical inconsistency in the main results figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Figure 3A shows only a few plasma proteins beyond the plus or minus 1 log2 fold-change thresholds, whereas Figure 3B and its caption count far more proteins. The reviewer is right that the overlap panel does not match the stated large-fold-change criterion, so there is a substantive figure or legend inconsistency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The text describing the plasma overlap points to Figure 3C, but the overlap diagram is Figure 3B and Figure 3C is the heatmap. This is another small but real cross-reference error.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer is effectively asking the authors to discuss whether the plasma analysis relies on weaker-effect proteins than the CSF presentation and what that means for the robustness of a blood-based test. The concern is understandable given the plasma figure inconsistencies and weaker validation performance, but the comment blurs figure-threshold choices with the actual machine-learning pipeline, so correctness is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The Methods identify the instrument, short column, and high-throughput mode, but they do not spell out key liquid-chromatography and mass-spectrometry settings such as gradient duration or fuller acquisition details. For reproducibility, asking for those missing parameters or a more directly matching method citation is a valid and well-supported request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The Methods define LNB only by first-time positive intrathecal antibody test plus ICD-10 code A69, and do not report clinical presentation or pleocytosis as part of that definition. That is a real limitation of cohort characterization.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Controls are defined only as suspected LNB cases with normal CSF white-blood-cell count and a negative intrathecal antibody index; the paper does not say what alternative diagnoses they had or whether other Lyme presentations were excluded. The reviewer correctly identifies that ambiguity in the comparator group.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Because LNB membership requires a positive intrathecal antibody test, it is plausible that immunoglobulin-heavy proteins will help separate that group, and the reviewer supports that point with a concrete Gene Ontology reanalysis. The paper does acknowledge intrathecal-antibody-related compartmentalization in the Discussion, but whether that sufficiently addresses the reviewer's concern is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The cohort definition requires a positive intrathecal antibody index and the Discussion explicitly says the study could not stratify fully according to EFNS criteria. The reviewer is therefore right that possible early LNB cases without a positive index are excluded, which limits generalizability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper itself notes that low-abundance but disease-specific proteins such as CXCL13 were not captured. Since CXCL13 is a well-known acute LNB marker, the reviewer's point that this weakens the claim for untargeted discovery and deserves more emphasis is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer accurately cites the CSF model Matthews correlation coefficients and points out that the study's own case definition is anchored on a positive intrathecal antibody index, so claiming especially strong diagnostic promise without comparison to existing diagnostics is overstated. The argument is somewhat broader than the paper's exact claims, but the central criticism holds.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper reports that viral meningitis and especially controls show higher plasma immunoglobulin levels than LNB, a counterintuitive pattern for a Lyme study. The Discussion offers a broad compartmentalization explanation, but it does not directly explain the control comparison, so the adequacy of the paper's explanation is arguable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The plasma machine-learning section explicitly says no viral-meningitis-versus-LNB model was feasible and reports a validation Matthews correlation coefficient of only 0.48 for the control-versus-LNB plasma classifier. That makes the reviewer's caution about the blood-based model well grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper applies the plasma model to acrodermatitis chronica atrophicans, erythema migrans, post-treatment Lyme disease syndrome, and viral meningitis and makes a qualitative claim about active infection, but the subgroup counts are small and the paper gives little additional clinical or methodological context for those comparisons. This is a real but secondary concern.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Table 1 shows marked age differences across groups, especially older LNB plasma cases versus younger viral meningitis cases, yet the paper provides no direct age-adjustment analysis and only briefly notes age as a possible influence in the Discussion. That is a valid limitation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Several Discussion sentences are stronger than the actual validation results, especially for plasma where the validation Matthews correlation coefficient falls to 0.48, so the reviewer is right that the framing leans optimistic. However, some quoted claims about cerebrospinal-fluid performance are supported, making the overall not-supported verdict somewhat overbroad.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Figures 1 and 3 pack many labels into small panels and are indeed hard to read at manuscript scale; the issue is especially apparent in Figure 1. This is a legitimate presentation complaint, but it is a minor one.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The Methods say 76 viral meningitis cases had PCR-verified aetiology but never specify the assay used. Asking the authors to name that assay is a valid request about cohort ascertainment, though experts could differ on how much it matters to the paper's core claims.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Because the cerebrospinal-fluid signal is dominated by immunoglobulin-related proteins, asking how other immunoglobulin-rich neuroinflammatory diseases such as multiple sclerosis might affect specificity is a fair concern. But the reviewer does not provide concrete evidence from this paper or external references showing how large that risk is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The Introduction claims proteomic test results can be available in just 2 hours, yet the manuscript does not clearly distinguish instrument runtime from end-to-end sample-to-result turnaround. Clarifying total testing time would improve the paper's translational claim, though its importance is somewhat judgment-dependent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The Methods say twelve algorithms were tested and that logistic regression or support vector classification performed best, but they do not explain how those twelve were chosen or why that search space was appropriate. Requesting that rationale is valid, even if some experts would see it as a relatively secondary machine-learning reporting issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The study has an internal validation cohort, but not a third external cohort from another setting, so asking about generalization to other sites and disease prevalences is a valid methodological concern for a diagnostic machine-learning paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper evaluates models with area under the curve and Matthews correlation coefficient and does not report calibration-oriented metrics such as Brier score. Requesting additional evaluation measures is reasonable, but it is a relatively minor reporting suggestion rather than a core flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

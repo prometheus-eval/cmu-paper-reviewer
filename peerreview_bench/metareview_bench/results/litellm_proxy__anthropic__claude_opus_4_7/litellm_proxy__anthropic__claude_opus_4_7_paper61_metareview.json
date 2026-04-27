@@ -1,0 +1,491 @@
+{
+  "paper_id": 61,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer suggests reformatting the title. Subjective stylistic critique; reading the title 'Population aging challenge future mitigation...' is indeed ungrammatical as a noun phrase so the claim is reasonable. Devil's advocate: a different reviewer might find the title acceptable as-is (journal-dependent). Significance is marginal — a purely title re-wording doesn't substantively change the paper. Evidence is sufficient (title quoted). Experts likely agree it's correct and marginal, and evidence is unambiguous.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer suggests using 'air pollution' rather than 'pollution'. This is a stylistic preference rather than factual claim. Correct as a preference. Devil's advocate: could be considered Not Significant since it is purely terminology preference. Evidence is sufficient. Borderline between marginal and not significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer critiques the DAPP acronym as uncommon. Factually reasonable — DAPP is indeed coined/mainly used in the authors' own prior work. Devil's advocate: another reviewer might view this as not significant at all (just a naming preference), others as marginally significant for readability. Evidence sufficient (reviewer cites context). Significance call is borderline between Marginally Significant and Not Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer suggests briefly explaining the scenarios in the abstract. Valid observation — abstract mentions SSP1-2.6/2-4.5/5-8.5 without explanation. Devil's advocate: another expert might deem this marginal since scenarios are standard. Yet understanding scenarios is central for readers of a climate-health paper, and adding short descriptions would meaningfully aid understanding. Evidence sufficient (abstract reference). Borderline between Significant and Marginally Significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer points out internal confusion in the abstract: DAPP 'will decrease' then 'aging will be leading driver contributing to the increase'. This is a real semantic inconsistency in the abstract that a reader would stumble on. Devil's advocate: a charitable reader could reconcile it (aging increases DAPP but net effect is decrease), but the wording genuinely confuses. Fixing this would improve abstract clarity — Significant. Evidence is specific (quotes both sentences).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer asks whether lines 47-51 refer to China or global. The intro paragraph does shift between global and China-specific context, and the reviewer's request for clarity is reasonable. Correct. Marginally Significant (clarification of scope). Sufficient (line range given). Devil's advocate: could be Significant since scope matters for interpretation.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer suggests emphasizing that RCPs are GHG concentration trajectories, not air pollutants. Technically accurate. Marginally Significant — a small clarification. Sufficient. Devil's advocate: could be upgraded to Significant because conflating RCPs with air pollution pathways is a meaningful confusion in this field, but most readers already understand. Borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer suggests clearer phrasing adding 'in China'. Stylistic suggestion. Correct. Marginally Significant. Sufficient (specific line). No strong devil's advocate to reverse.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer flags confusing sentence starting 'In addition, it is worth noting...'. Reading the paper, that sentence about central/eastern DAPP comparisons is indeed awkward and truncated-sounding. Correct. Marginally to Significant — clarity of a results statement. Sufficient (line numbers given).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Reviewer finds sentence in lines 182-185 confusing. The sentence about Henan/Hebei largest decreases is indeed awkwardly phrased. Correct. Marginally Significant. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Reviewer notes lines 187-188 confusingly suggest DAPP increases from 2017-2035. Same framing issue as in abstract. Correct. Significant if it confuses headline results; marginal otherwise. Sufficient. Borderline significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Reviewer notes Figure 3 needs explanation of how to read it. Looking at Figure 3 (a waterfall plot), readers indeed cannot easily interpret the stacked bars without explanation. Correct. Significant — figure interpretability matters for main claim. Sufficient (specific figure reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Reviewer notes Wang et al (ref 26) was not covered in Introduction and asks for comparison. Paper does cite Wang et al in discussion (line 259). Intro lists several prior studies but does not specifically include Wang et al. Valid critique. Significant (positioning against prior work). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Reviewer notes paragraph says 'two aspects' but makes three points (the paragraph indeed has 'Third...'). Verifiable structural inconsistency. Correct. Marginally Significant (editorial). Sufficient (line range).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "Reviewer says KAYA model needs description and reference. Verified — paper mentions KAYA model on line 180 but does not provide a reference in the main text. Correct. Significant — methodological transparency for a claim about mediating effects. Sufficient (specific line).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "Reviewer questions what paragraph 318-339 adds to the paper. Subjective reading — the paragraph about international comparison has some relevance. Correct as a reader's impression. Marginally Significant — a matter of editorial tightening. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "Reviewer says policy recommendations (pensions etc.) don't follow directly from findings. Valid concern about scope creep — some discussion recommendations indeed stretch beyond the analysis (e.g., 'necessary measures to adjust population structure'). Correct. Significant (alignment between findings and claims). Sufficient. Devil's advocate: could be viewed as merely marginal editorial advice.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "Reviewer asks clarification on 'necessary measures to adjust the population structure'. Phrasing in paper is indeed vague. Correct. Marginally Significant (clarification). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "Reviewer requests more detail on how CMIP6 estimates PM2.5 levels, since this is central. Indeed, paper only says 'Future PM2.5 composition data came from the CMIP6 dataset' with brief note, then uses an empirical formula. The mechanism by which CMIP6 simulates PM2.5 is not explained in detail. Significant — central methodology. Sufficient (specific line).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "Reviewer asks about inputs to formula from Chowdhury/Van Donkelaar and their basis. Formula (eq 3) does use BC, OA, SO4, SS, dust components — reasonable to ask whether all come from CMIP6 and for justification. Correct. Significant (methodology justification). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer asks for brief methodology/data explanation before results, noting confusion about how population growth and aging are disentangled. Valid — results are presented before the decomposition method is explained. Significant (readability of main results depends on it). Sufficient (specific example given). Devil's advocate: journal may require methods after results, so this is partly format-dependent, but the disentanglement question itself is substantive.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer suggests Figure 3 would be clearer as bar chart with shared x-axis. Subjective visualization preference but Figure 3 (waterfall) is genuinely hard to read. Correct. Significant (figure clarity affects understanding of main finding). Sufficient. Devil's advocate: some readers may find waterfall clear; could be marginal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer critiques framing: paper claims aging 'drives increase' when DAPP actually decreases in most scenarios. This is a valid framing critique — aging counteracts decreases, not increases net DAPP in most scenarios. Correct. Significant (main narrative framing). Sufficient (specific quote).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer finds Figure 6 overly complex. Looking at Figure 6 (circular panels), it is genuinely dense. Correct. Marginally Significant. Sufficient. Devil's advocate: could be Significant if understanding Figure 6 is key.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer suggests moving Figure 4 to supplementary. Editorial preference. Correct. Marginally Significant. Sufficient. Devil's advocate: Could be Not Significant since it's purely preferential.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer asks why specific years vs 5-year intervals — reasonable methodological question about smoothing. Correct. Significant (methodological choice affects results robustness). Sufficient. Devil's advocate: paper does use intervals (2017-2025, 2025-2035, etc.), so concern may be partially addressed. But the specific year comparisons are still used.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer notes limitations not discussed — paper indeed lacks a limitations section. Specifically, constant association estimates not discussed. Correct. Significant (standard requirement). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer notes Figure 5 shows proportion but not actual change in DAPP by cause. Looking at Figure 5, it shows 'Proportion of elderly population in total DAPP' — so it indeed doesn't show absolute DAPP changes per cause. Correct. Significant (missing relevant data). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer wants overview of previous papers' findings when cited. Editorial suggestion. Correct. Marginally Significant. Sufficient (paragraph pointer).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Reviewer suggests 'older population' instead of 'elderly'. Stylistic/terminology. Correct (current WHO guidance trends in this direction). Marginally Significant. Sufficient. Devil's advocate: could be Not Significant as pure preference.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Reviewer notes Figure 2 bars too small. Looking at Figure 2, the tiny bar charts embedded in the map are indeed very small and hard to read. Correct. Significant (figure readability). Sufficient. Devil's advocate: could be marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer notes abstract mentions 31.9 to 178.8 thousand across three scenarios but results section has four scenarios and more detail — numbers 'don't seem consistent'. Indeed abstract explicitly omits SSP3-7.0 and may misalign with results. Correct. Significant (headline consistency). Sufficient. Devil's advocate: abstract is deliberately abridged, could be intentional omission.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer critiques opening sentence 'PM2.5 has increased' as location-dependent. Paper's first sentence says 'air pollution caused by PM2.5 has increased dramatically' globally-implied. This is indeed simplistic (PM2.5 has declined in many regions including China since ~2014). Correct. Marginally Significant (framing nuance). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer asks for more references on PM2.5 health effects on elderly. Paper does cite some (Shumake, Yin) but reviewer's broader concern is that a paper about elderly health deserves more such references. Correct. Significant (literature coverage of focal topic). Sufficient (absence is the evidence). Devil's advocate: could be called marginal since some refs exist.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer calls 'climate change (e.g., transformation and diffusion of air pollution)' vague — which climate change parameters affect diffusion? Correct — phrase is indeed vague. Marginally Significant (clarification). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer notes driving factors shown in supplementary but should be discussed in results. Valid — the decomposition is central to findings. Correct. Significant (transparency of key methodology). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer asks if decreasing mortality trend could be outshined by aging. Paper already addresses exactly this point — it's the paper's main finding that aging offsets mortality improvements. Thus the reviewer seems to be raising a concern already answered. Correctness is debatable: a charitable reading asks for more discussion; an uncharitable reading says already addressed. Borderline correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer asks about heat waves and synergistic effects on elderly — not addressed in paper. Correct (paper focuses only on PM2.5 concentrations, not broader meteorological effects). Significant (relevant omission for elderly health under climate scenarios). Sufficient. Devil's advocate: beyond paper's scope, might be marginal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer notes figure legends inadequate. Looking at figures, several captions (especially Figures 3, 4, 6) lack info needed to interpret them. Correct. Significant (figure interpretability). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer notes Figure 3 shows DAPP as both a variable and alongside other factors — confusing. This is a valid observation: in Figure 3, DAPP is the grey bar (total) while age structure, population, air quality, disease mortality are contributions. Correct. Significant (figure clarity). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Reviewer says KAYA model needs a reference. Verified — the paper mentions KAYA model (line 180) without primary reference. Matches Human_1 item 15. Correct. Significant (methodological reference). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Reviewer notes recommending indoor activities fails if indoors have pollution. Reasonable point. Correct. Marginally Significant (discussion nuance). Sufficient. Devil's advocate: could be Not Significant since it's a tangential comment about policy recommendations.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer claims Figure 3 labels 'SSP1-2.5' and 'SSP3-7.5' are wrong (should be SSP1-2.6 and SSP3-7.0). I verified Figure 3 directly: the panel headers do show 'SSP1-2.5' and 'SSP3-7.5', while the paper text uses SSP1-2.6 and SSP3-7.0. Clear internal inconsistency. Correct. Significant (figure labeling error in central results figure). Sufficient (direct quote of figure content).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes that Foreman et al. forecasts at national level, and paper doesn't explain how these were downscaled to provincial. Looking at methods: Eqs 6-8 describe the GBD model generically, but the paper does not explicitly describe provincial-level mortality projection procedure. Correct. Significant (methodological transparency for claimed contribution). Sufficient (specific quote + absence).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer claims validation is only through national-level Pearson correlation, inadequate for provincial claim. Paper's Appendix Figure S3 uses Pearson correlation. The scale of the comparison (national vs provincial) isn't explicit in main text. Correct. Significant (validation insufficient for claimed novelty). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer critiques uncertainty propagation as incomplete — combining bounds rather than proper Monte Carlo/propagation. Paper states bounds are determined by upper/lower of each source. This is indeed not rigorous propagation. Correct. Significant (statistical methodology). Sufficient. Devil's advocate: paper uses separate variance terms via t-statistics for PM2.5 and normal for mortality — but doesn't reconcile with nonlinear aggregation through Eq 1.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer claims paper doesn't correct for CMIP6 PM2.5 underestimation bias. Actually, paper does calibrate via Eq 5 using satellite observations for baseline period. So the factual claim 'does not correct' is partly wrong — calibration is performed. However, broader concern (systematic discussion of bias, model selection) remains. Borderline correctness — a strict expert would say paper does address bias, while a charitable reader would say it lacks adequate discussion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer notes coarse 1° CMIP6 resolution vs 0.1° historical. Verified in paper's Table 2 (historical 0.1°; CMIP6 composition 1°). Inconsistency in resolutions is accurately identified. Correct. Significant (exposure misclassification risk). Sufficient (quoted resolutions + literature citation).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer says disease mortality projection methodology insufficiently described, especially for provinces. Same concern as claude-opus-4-5 item 2 and overlaps with gpt-5.2 item 2. Correct. Significant (reproducibility of key driver). Sufficient (quoted text + literature).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer says paper overstates novelty; Geng et al 2021 already did decomposition of PM2.5 deaths. Paper does cite Geng et al as #14 but reviewer is correct that intro claim 'most studies focus on single factor' is overstated. Correct. Significant (positioning vs prior work). Sufficient (specific citation). Devil's advocate: paper's claim is about combined SSP+climate scenarios, which is arguably novel, so a charitable reader may side with the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer critiques omission of ozone. However, the paper is explicitly scoped to PM2.5 (in title, abstract, all results). Asking to include ozone expands scope beyond paper's aims. Borderline correctness: a strict reader would say scope is paper's prerogative and not a flaw; a charitable reader would say broader 'air pollution' framing warrants ozone. Devil's advocate convincing on both sides.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer critiques reliance on IER/GBD method vs GEMM and asks for sensitivity analysis. Paper uses MR-BRT (GBD2019) and compares with Yue (IER) and Geng (GEMM) via correlation only, not a proper sensitivity analysis. Correct. Significant (robustness check). Sufficient. Devil's advocate: paper acknowledges GEMM differences already.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer points out Eq 3 omits nitrate and uses oversimplified ammonium formula (NH4 = 36*SO4/96, assuming only ammonium sulfate). Verified in paper — Eq 3 does not include NO3 and the paper explicitly assumes 'NH4 exists only in the form of ammonium sulfate'. This is a real compositional omission, significant for PM2.5 over China where nitrate is substantial. Correct. Significant (exposure reconstruction bias). Sufficient (exact formula quoted + literature).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer says GBD mortality projection details (SDI definition, coefficients, ARIMA orders, provincial mapping) are missing. Indeed, paper gives generic Eqs 6-8 without parameter values or fitting details. Correct. Significant (reproducibility of key driver). Sufficient (specific quotes + literature).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer critiques use of Pearson correlation for validation — appropriate critique, Bland–Altman is the standard reference. Matches claude-opus-4-5 item 3. Correct. Significant (validation methodology). Sufficient (quoted text + Bland–Altman reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer critiques t-distribution assumption for CMIP6 multi-model ensemble. Verified — paper applies t-CI to 11 CMIP6 models treating them as t-distributed. Knutti 2010 is the canonical source for 'ensemble of opportunity' warning. Correct. Significant (statistical framing of headline uncertainty intervals). Sufficient (exact equation + external reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer identifies internal inconsistencies: (i) 674/703 thousand vs 730/634 thousand for aging contributions; (ii) '658(608-656, 95%CI)' where lower > upper bound; (iii) conclusion's 718-746 and 608-656 ranges attributed to wrong scenarios. I verified these directly in paper lines 91 and 267 — all three issues are real. Correct. Significant (quantitative integrity of main results). Sufficient (exact quotes).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "paper_id": 84,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that Figure 3B shows a bending image demonstrating adhesion but no quantified adhesion force data under various (dry/wet) conditions. Checking the paper: the adhesion layer is described as bio-adhesive (n-butyl cyanoacrylate) but I find no quantitative adhesion force characterization reported in the main text/methods. The reviewer's factual premise is correct. This is a substantive concern since adhesion strength is critical for implant reliability, particularly in wet biological environments. Devil's advocate on significance: one might argue this is a secondary detail but given the paper's implantable use case, quantifying adhesion is clearly helpful—Significant. Evidence: the reviewer points to a specific figure and frames the absence specifically, which is sufficient. Experts likely agree this is correct, significant, and sufficiently evidenced.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the thickness of the actuation hydrogel is not specified while other layers are, and asks about optimal thickness and effects on sensing/stimulation. Verifying the paper, thicknesses are specified for PI (~10µm), parylene (~2µm), Au (~200nm), but I could not locate an explicit PNIPAM hydrogel thickness. The reviewer's concern is factually grounded and leads to a constructive methodological question. Devil's advocate on correctness: the thickness might appear somewhere in supplementary info; partial mention possible. Still the broader concern (inadequate reporting of a key dimension affecting performance) holds—Correct. On significance: this is methodological/reproducibility-related—Significant. Evidence: the reviewer names the specific absent information, which is verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer observes inconsistency in bending configurations of the three arms in Figure 3N despite similar composition, and notes arms don't return to original state. Looking at Fig 3N caption: it says 'sequentially programming input power'—so the arms are actuated at different times/powers, which may actually explain the differences. However, the reviewer's observation about reversibility is a reasonable concern. A charitable reading: the reviewer is asking a legitimate clarifying question about why configurations differ and whether actuation is reversible. A skeptical reading: the differences are by design (sequential programming, different powers), so the premise of 'same composition means same configuration' misreads the experiment. This is ambiguous, likely disagreement on correctness among experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises stability concerns for PAAm hydrogel as pressure sensor, specifically swelling-induced capacitance drift in the implant environment. This is a legitimate hydrogel-engineering concern not addressed by the paper's characterization (pressure calibration only shown in bench testing). The premise is correct. Significance is high—addressing long-term stability would meaningfully improve the paper. Evidence: the reviewer identifies Figure 4A context and articulates the mechanism (swelling→capacitance change) clearly enough for a meta-reviewer to verify the absence of such analysis in the paper. Experts likely agree this is a valid and significant concern with sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that adhesion/actuation force characterization (Fig. S46, Supplementary Note S8) is done in dry environment, while hydrogels swell/degrade in wet environments. This is a valid concern that mirrors a real limitation. The paper doesn't show corresponding wet-environment characterization. Correct, Significant (hydrogel performance in wet environment is critical for implants), and the reviewer specifically cites which supplementary item they are critiquing, making evidence sufficient. Devil's advocate: paper does mention immersion in PBS for some sensor tests elsewhere, but the reviewer's specific concern about adhesion and actuation force holds.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks how electrical stimulation to bladder can work through the adhesive and PAAm hydrogel layer if the hydrogel faces tissue. Looking at paper: the bladder gripper uses electrical stimulators in the e-skin (Au on PI). The actual physical layout may have electrodes on the tissue-facing side or separate from the hydrogel. The reviewer's concern is a legitimate architectural question, though the paper does describe separate stimulation electrodes. It is possible the paper's design positions electrodes directly contacting tissue, so the critique may be partially based on a misreading of the layered architecture. Experts could differ: a charitable reading finds the concern legitimate about integration clarity; uncharitable reading says the paper adequately specifies separate stimulation electrodes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer questions the demonstration in Figure 5G, noting the timing of E-stim ON/OFF seems counterintuitive ('E-stim ON when bladder is void'). Looking at paper: Fig 5G caption says 'volume threshold of ~100 mL, electrical stimulation amplitude of 3 V' and text says 'When the balloon reaches a certain volume threshold, the control system triggers a command for electrical stimulation.' The reviewer's interpretation of the figure may be wrong—stim is triggered at volume threshold—but the broader concern about unclear presentation/logic of Fig 5G (what it demonstrates and why that stimulation pattern) is legitimate. Devil's advocate: the paper's explanation is reasonably clear; uncharitable expert might call this incorrect. Charitable expert agrees the figure is confusing. Likely disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer raises concerns about electronic components at the end of each arm being able to form strong coupling to living tissues with changing volumes. This is a legitimate mechanical engineering concern for the thera-gripper design, especially for dynamic organs. The paper does describe the gripper wrapping and FEA simulation, but doesn't explicitly demonstrate stable mechanical coupling under cyclic volume changes beyond the heart demonstration. Correct observation about missing evidence; significant because it affects core functionality. Evidence: reviewer points to specific figures and articulates the concern clearly.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer claims 'overactive' should be 'underactive' bladder. The paper uses 'overactive bladder' in intro and discussion. This is a clinical terminology question. Sacral nerve stimulation (electrical neuromodulation) is actually FDA-approved specifically for overactive bladder—so the paper's use of 'overactive' is clinically correct. However, the gripper also performs squeezing/emptying, which is typically for underactive (urinary retention) conditions. The reviewer's claim that the paper should say 'underactive' depends on which function is emphasized. The claim is factually debatable and depends on domain interpretation. A charitable expert says the reviewer makes a reasonable point since emptying relates to underactive; an uncharitable expert says the paper's term 'overactive' is fine because neurostimulation treats overactive bladder. Disagreement on correctness likely.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer asks about the motivation for using diverse materials for different sensing components in Fig 2C, stating they can't find outstanding characteristics justifying the material choices. The paper actually does include some justification scattered throughout for each material choice (AgNWs for stretchability, RGO for thermal sensing, PEDOT:PSS for electrodes, MXene for biocompatibility). So the reviewer's broader concern about justification being inadequate is partially valid—the rationale is not tightly consolidated. Correct (broader concern holds), Significant (motivating material choices helps reader understand contribution), Evidence is clear (pointing to specific figure).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer notes the paper claims conformal contacts but asks whether mechanical modulus comparison was performed. Checking the paper: the FEA uses E_PI=2.5 GPa, E_PNIPAM=90 kPa, and the paper cites tissue compliance qualitatively but does not present a direct quantitative comparison with tissue mechanical modulus. The reviewer's concern is correct—this comparison is absent. Significant because mechanical match is central to the paper's claims about biocompatible interface. Evidence: reviewer points to specific figures (2F, 2G) and asks for a specific missing comparison, which is verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer asks whether stacked layer structures in Fig. S12B interfere with each other's signals and whether simultaneous measurement is meaningful. This is a legitimate sensor crosstalk/operational concern. The paper describes the multi-layer approach but does not demonstrate independent operation without crosstalk explicitly. Correct concern, Significant as it affects the multi-modal claim, Evidence is specific (Fig. S12B). Devil's advocate: the paper may implicitly demonstrate independence, but without specific crosstalk characterization the concern holds.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer claims 'there's no description for Figs. 3H & 3I'. Checking the paper: Figure 3H is described in main text ('Figure 3 H illustrates the resistive change in a relatively linear relation with temperature for the RGO/PI thermal sensor') and Figure 3I ('Figure 3 I and Fig. S23F show performance of the thermal sensor in response to cycles of temperature rise and drop'). Captions also describe them. The reviewer's factual claim appears to be Not Correct—both figures ARE described. Devil's advocate: perhaps the reviewer means descriptions are inadequate or the caption specifically, but on face value this is factually wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The reviewer notes that SI figure references (Fig. S18, S25) appear in main figure captions and suggests they should be removed. This is a stylistic/formatting preference—some journals allow and encourage this, others don't. It's a correct factual observation that SI refs appear in main captions. Significance: marginal—this is formatting style, not substance. Evidence is specific. Most experts would agree this is a minor stylistic comment.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The reviewer asks authors to check SI figure ordering, claiming it's 'a total mess'. This is vague—no specific example of disordered figures is given. It's plausible given the complexity of the paper (63+ SI figures). Correctness is ambiguous without seeing SI; evidence is clearly insufficient (no specific citation). Significance: marginal since it's about presentation. Devil's advocate: even charitable expert would note lack of specifics. Likely correct-but-weakly-evidenced call.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the materials are commonly used with no material novelty (except in-situ approach), and the paper lacks long-term feasibility and sensor mechanism details. This is partially correct—the paper's novelty is claimed in the integration/fabrication, and indeed detailed sensor mechanism (pH-resistance, pressure-resistance relationship mechanisms) is not fully developed. Significant because missing mechanism details and long-term feasibility data are substantive issues. Evidence: reviewer names the specific missing items. Devil's advocate: the paper does offer some mechanism (e.g., PEDOT:PSS/PSS pH mechanism in methods), so charitable expert might say partial coverage exists. Disagreement on evidence possible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests citing three specific references about tissue-interfacing performance of implantable devices. Adding relevant citations is a constructive suggestion. Correct (citations suggested are topically relevant to the paper's scope), Marginally Significant (it's primarily a reference-suggestion that doesn't change the paper's substance fundamentally), Evidence: reviewer cites specific references. Devil's advocate: one could argue these citations would meaningfully contextualize the contribution, thus Significant. Likely disagreement on significance between experts.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer questions whether sensing and actuation are truly integrated (responsive) or operate independently. Looking at the paper: the gripper does have closed-loop bladder control where sensing triggers stimulation (Fig 5G), which does demonstrate integration. However, the broader concern about most demos being independent (sensing separate from actuation modulation) has some merit. Correct on the broader concern but partially wrong on the factual premise (closed-loop is demonstrated for bladder). Likely disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks about variation in curvature among different organs and how squeezing too much is avoided. This is a legitimate design concern—the paper presents different designs for different organs but doesn't explicitly discuss force/curvature optimization to avoid damage. Correct, Significant for the implant design story. Evidence: reviewer gives specific examples (heart, bladder).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks for a reference explaining why parallel strips lead to twisting. The paper inspires this from chiral seedpods and explains the mechanism briefly ('concentrated internal stresses at the bonding areas are built simultaneously, leading to local saddle-like curvature and twisting motion'). Whether this is sufficient or a reference is needed is a fair question. Correct concern, marginally significant (it's a mechanism clarification request), evidence is specific.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks what advantage the solution-based approach has over a well-designed transfer method. The paper does compare: 'compared with a make-and-transfer method, our in situ solution-based fabrication approach for full integration of sensors into the e-skin layer...' and articulates the benefits. The reviewer's concern about needing clearer advantage articulation is reasonable but partially addressed. Likely experts agree this is a correct concern (more explicit comparison would help) but of marginal-to-moderate significance. Possible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer points out that PNIPAM's volume change between 35-45°C (Fig 2H) is near body temperature (36-37°C), so shape maintenance at body temperature is a concern. The paper shows LCST at 34°C, so PNIPAM would already be partially contracted at body temperature. This is a legitimate design concern about operational stability at 37°C. Correct, Significant (affects core usability as implant), Evidence: specific figure cited and logical argument made.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks whether nanocomposite performance might be lower than full composite based on XPS analysis. This is quite vague—what's 'full composite' vs 'nanocomposite'? The concern about performance comparison may be valid but unclear what's being asked. Evidence is weak. Possibly correct on the broader idea of comparing performance but interpretation is ambiguous.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer asks about laser pattern handling—how surrounding material was removed/treated. The paper describes laser cutting but doesn't detail post-cutting cleanup. This is a fabrication detail that affects reproducibility. Correct (specific detail missing), Marginally Significant to Significant (reproducibility matters). Evidence: reviewer identifies what's missing. Experts may disagree on significance since it's a procedural detail.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer asks for the caption of Figs 3C, D to clarify whether SEM images are surface or cross-section, and requests TEM for void detection. Verifying captions: Fig 3C, D describe DRIE of partial regions to reveal integration—this is ambiguous about surface vs cross-section. The reviewer's concern about caption clarity is correct and specific. Significant for figure comprehension. Evidence: specific figures named.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer observes temperature distribution non-uniformity in Fig 3E. This is a visual observation—the reviewer acknowledges that twisting/bending may cause issues with IR camera accuracy but still notes non-uniformity. This is a reasonable observation though somewhat subjective. Correct observation, Marginally Significant (the paper's claim is 'stable and uniform temperature distribution' so this is a legitimate challenge). Evidence is reviewer's visual interpretation. Likely disagreement on significance and possibly evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer asks why bending force continues to change after temperature converges (Fig 3F, G) and how long bending force persists. These are legitimate dynamic behavior questions. The paper shows force characterization but doesn't explicitly address persistence. Correct concern, Significant for actuation understanding, Evidence: specific figures.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer asks whether the heater must stay on continuously to maintain bending when attached to an organ. This is a legitimate operational question about energy consumption and thermal load during in-vivo use. The paper doesn't explicitly address this. Correct, Significant (critical for implant practicality). Evidence: reviewer's question is clear and verifiable against the paper's silence on this.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The reviewer says dual-axis graphs (Fig 3I, 5F, K, N) are difficult to interpret and should be modified. This is a presentation issue—dual-axis graphs can indeed be confusing. It's a subjective claim but legitimate. Significance: depends on whether fixing it would help reader understanding substantively. Likely Significant since the figures convey key data. Evidence: specific figures cited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The reviewer raises thermal safety concern and asks about heat transfer efficiency through the hydrogel. This is a critical safety concern for implants using thermal actuation. The paper does address this tangentially (IR thermograph showing heat distribution, Fig S55 histology at 0.1W). But comprehensive thermal safety/heat dissipation analysis is missing. Correct, Significant, Evidence: specific concern tied to paper's operational mode.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The reviewer asks whether, while applying temperature, the thermal sensor can accurately measure tissue temperature (rather than its own heating). This is a legitimate sensor operational question—during actuation the sensor would be reading the device's own heat, not tissue temperature. The paper doesn't explicitly address this mode of operation. Correct, Significant (affects a key sensing claim), Evidence: clear logical argument.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The reviewer asks about the difference between transfer method in S12(b) vs dual printing method in S16. This is a specific question about supplementary figure methodology. Correct (asking for clarification on the method difference is a reasonable verification request). Marginally Significant (clarification of methodology rather than substantive scientific concern). Evidence: specific figures named.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The reviewer quotes the paper's claim about 'actuation regulated by sensing feedback' and asks how this was implemented. The paper describes closed-loop control for bladder (Fig 5G) where volume sensing triggers stimulation, but this is electrical stimulation not actuation feedback per se. The reviewer's concern is correct—the mechanism of sensing-regulated actuation is not explicitly shown. Significant (claims require demonstration). Evidence: direct quote of the claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The reviewer identifies an apparent theoretical inconsistency in Fig S31B vs S31D (coupling coefficient decreases with distance, but output power appears to increase with distance). I cannot directly verify S31 contents, but the reviewer articulates the inconsistency clearly. If true, this is a significant scientific concern. Correct (pending figure check), Significant (internal inconsistency is always significant), Evidence: specific panels identified and logical contradiction stated.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The reviewer notes that PNIPAM loses adhesion at ~40°C (citing specific Nature Biotechnology 2023 paper), raising concern about tissue adhesion of the authors' device when actuated. This is a very substantive point backed by a specific reference. The paper doesn't show temperature-dependent adhesion characterization. Correct, Significant (central to implant functionality), Evidence: specific external reference plus clear logical argument.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The reviewer notes that Au electrodes for electrical stimulation diverge from the paper's emphasis on nanocomposite sensing materials. This is a consistency observation—the paper's main novelty is nanocomposite e-skin, but stimulation uses conventional Au. Correct observation. Significance: Marginal to Significant—it's a conceptual consistency point but not a core defect. Evidence: specific figure cited.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The reviewer notes that in Fig 5G the E-stim OFF voltage is not 0.0 V, and asks for clarification on whether the stimulation causes volume change or simply signals patients. This is a specific figure interpretation question. Correct observation, Significant for understanding the demo. Evidence: specific figure cited, specific observation made.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The reviewer raises delamination concerns if body temperature drops, and questions whether continuous electrothermal stimulation to prevent deformation causes adverse effects. Both are legitimate operational concerns for an implant. The paper doesn't explicitly address these scenarios. Correct, Significant (critical operational concerns), Evidence: clear logical argument grounded in the device's stated mechanism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The reviewer asks what T1 and T2 mean in Fig 6F caption. Looking at the caption I have for Figure 6F: 'Temperature measurements from the thera-gripper during its deployment onto the mouse heart.' Indeed, T1 and T2 are not explained in the caption. Correct, Significant for figure comprehension. Evidence: specific figure cited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The reviewer claims Fig 6G doesn't show actual cardiac capture from pacing. Checking: the paper text says 'effective transmission of electrical impulses (voltage ranges from 500 mV to 2 V with 1 ms width at 2.65 Hz) onto cardiac tissues' and Fig 6G shows ECG trace during stimulation. Whether this demonstrates true pacing capture is a cardiology interpretation question. The reviewer's concern has merit but depends on expert interpretation of the ECG. Devil's advocate: if ECG shows synchronized response, pacing is demonstrated; if only stimulation artifacts are shown, capture is not proven. Likely disagreement among experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The reviewer notes that in Figs 6M, N only frequency changes along x-axis are visible and asks whether focus should be on y-axis resistance changes. This is a figure interpretation question about what the key signal is. The paper text interprets amplitude changes as contractility. The reviewer asks for clarity on which axis is actually diagnostic. Correct concern about interpretation/presentation, Significant because it affects a key claim. Evidence: specific figures cited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "The reviewer notes missing details on the flow simulation system (equipment names, flow rate settings, rubber tube properties/thickness). Checking the methods section: paper says 'A rubbery tube was used to mimic the artery system... A pulsatile flow of water was created' but doesn't provide equipment details or flow parameters. Correct, Significant (reproducibility), Evidence: specific missing items identified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "The reviewer notes H&E staining only demonstrates single-day impact of stimulation; longer-term effects are unclear. Looking at paper: Fig S55 shows stimulation at 0.1W for 0.5-1 hour (acute), Fig S56 shows Day 1-14 after implantation. The reviewer's concern about longer-term stimulation effects is correct. Significant. Evidence: clear.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "The reviewer asks about device condition after 2-week implantation—whether it remained operable and properly attached. Valid question since the histology is shown but device state is not. Correct, Significant (operational durability matters for implant claims), Evidence: specific observation from the 2-week study.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "The reviewer points out a caption error: Fig S11(a) should say AgNW/PDMS not AgNW/PI. Looking at paper text: 'a strain sensor made of a nanocomposite of silver nanowires (AgNWs) and polydimethylsiloxane (PDMS)' and 'Fig. S11 provides a representative example of in situ integration of AgNW/PDMS-based strain sensor'. So the reviewer's claim is a caption-text inconsistency. Correct, Marginally Significant (minor typo/inconsistency), Evidence specific.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "The reviewer identifies a typo: 'PINPAM' should be 'PNIPAM'. Paper line 51 indeed says 'based on PINPAM actuation hydrogel' (typo verified). Correct, Marginally Significant (it's a typo), Evidence: specific location and correction provided.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "The reviewer identifies a typo 'Basi -> Basic' in Fig S51D. I cannot directly verify this without opening the figure, but it's the kind of typo that's plausible in a figure label. Assuming correct based on the reviewer's specific citation. Marginally Significant (typo), Evidence specific.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "The reviewer says there should be a space before units in text and figures. This is a pure stylistic/formatting preference (space vs no space before units like °C, mL). Correct observation about style. Marginally Significant or Not Significant (formatting nit). Evidence sufficient since verifiable by inspection.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues 14-day in vivo biocompatibility is insufficient for 'long-term operation' claims, citing N=3, ISO/FDA standards requiring 30+ days, and a PNIPAM biocompatibility paper. This is a well-supported methodological critique. The paper does claim 'good biocompatibility for long-term operation' based on 14-day data. Correct, Significant (affects a central implant claim), Evidence: specific quotes, figures, sample sizes, and external standards cited. Thorough support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that PNIPAM actuation at 40°C (and heater temperatures up to 50°C) exceeds ISO safety thresholds (2°C above body temperature for implantable neurostimulators). Paper confirms 40°C operation and Fig 3F shows high-power temperatures. This is a legitimate thermal safety concern grounded in specific standards. Correct, Significant, Evidence: specific quotes from the paper plus external ISO reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues cardiac strain measurements lack validation against gold-standard cardiac function metrics (ejection fraction, GLS). The paper mentions echocardiography and FS but doesn't present direct correlation/Bland-Altman analysis with the strain sensor. Correct observation, Significant (affects clinical utility claims), Evidence: specific quotes from the paper and external VITALS comparison as benchmark.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues 3 of 4 demos use artificial phantoms (balloons, rubber tubes, PBS) rather than in vivo models, limiting translational validity. This is factually accurate per the paper's methods. Correct, Significant (translational claims are central), Evidence: specific quotes from methods sections.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer argues wireless power transfer degrades with deformation/misalignment/distance, and paper lacks SAR analysis for tissue safety. Paper indeed doesn't report SAR. Correct observations, Significant (RF safety matters for implants), Evidence: specific figures (Fig 4O, Fig S31) quoted and external SAR reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues high power (~1W) and 40°C actuation poses thermal damage risk, violating implant safety standards. The paper confirms 40°C operation and wireless harvest of ~1.05W. Correct factual premise. Significant (core safety concern). Evidence: specific quotes from paper plus ISO 14708-1 reference and thermal damage literature. Well-supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the reported 80% power transfer efficiency is unrealistically high for an implantable system. Typical implantable WPT efficiencies are below 50%. The paper reports 80% 'power efficiency' reaches around 80%' without specifying conditions (air vs tissue). The reviewer's concern about air vs tissue conditions is valid—and the paper's Fig 4 caption does suggest these may be benchtop measurements. Correct, Significant (affects feasibility claims), Evidence: specific quotes + external literature reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues bulk PNIPAM hydrogel has inherently slow response times (seconds-minutes), contradicting 'real-time' and 'spatiotemporal precision' claims especially for cardiac pacing. This is a well-grounded physical argument—PNIPAM response is diffusion-limited. However, the pacing function uses electrical stimulation (Au electrodes), not hydrogel actuation for pacing. So the reviewer conflates the hydrogel actuation speed with pacing. Pacing doesn't actually rely on hydrogel actuation in real-time cycles. Charitable reading: the claim about slow hydrogel response is still correct for the actuation functions where it matters. Uncharitable reading: misapplied to cardiac pacing which uses Au electrodes. Disagreement on correctness plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises AgNW cytotoxicity concerns under long-term implantation with mechanical fatigue potentially causing leaching. The paper does encapsulate AgNWs in PI and uses biocompatible materials, and shows short-term cell viability but not long-term leaching under fatigue. Correct concern about long-term safety; the paper's short-term data doesn't rule out long-term leaching. Significant, Evidence: cites AgNW cytotoxicity literature and points to missing fatigue/leaching tests.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer argues PI has high modulus (2.5 GPa, confirmed in paper's FEA) orders of magnitude higher than soft tissue (kPa), so 'softness' claim conflates structural compliance with material softness. This is a substantive materials-science point. The paper itself uses E_PI=2.5 GPa. Correct, Significant (central 'softness' and tissue-matching claims), Evidence: specific quotes + reference to Lacour's Nature Reviews Materials.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues organ-level implant claims rely on surrogate benchtop models (balloons, rubber tubes, PBS assays) rather than in vivo testing for three of four applications. This is factually confirmed by the paper's methods section. Correct, Significant (translational validity is central), Evidence: specific methods quotes and appropriate external comparison.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues long-term biocompatibility and safety conclusions rest on short-duration assays (48h cell, 14d histology, N=3) and lack endpoint-specific, in-use condition testing. The paper's data matches these descriptions. Correct, Significant (affects long-term safety claims which are central), Evidence: specific figure captions quoted and FDA guidance cited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer's item 3 discusses wireless power transfer safety/tissue heating and absence of SAR dosimetry. The paper does not report SAR for the 15 MHz wireless system and relies on IR observations. Correct, Significant (RF safety is standard requirement), Evidence: ICNIRP cited, paper's absence specifically identified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the cardiac contractility claim conflates strain with contractility (a load-dependent vs load-independent distinction in cardiac physiology). The paper indeed interprets strain amplitude as 'myocardium strength' and 'contractility', which is physiologically imprecise. Correct, Significant (affects a key clinical claim), Evidence: specific quotes from paper plus cardiac measurement best-practice guidelines.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

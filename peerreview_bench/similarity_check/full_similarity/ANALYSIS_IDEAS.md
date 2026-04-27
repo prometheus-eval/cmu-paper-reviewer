@@ -269,7 +269,7 @@ natural scale.
 ### §15. Inter-reviewer-type quality comparison (out of this dataset's scope)
 
 Quality-comparison is answered by the other analyses in the repo
-(reviewer_rankings, meta_review). Flagging here so nobody tries to
+(reviewer_rankings, metareview_bench). Flagging here so nobody tries to
 re-derive a reviewer-quality ranking from similarity alone — similarity
 is about framing, not correctness.
 

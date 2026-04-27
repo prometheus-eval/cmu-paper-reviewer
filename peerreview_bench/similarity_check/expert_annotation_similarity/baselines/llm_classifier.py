@@ -16,10 +16,10 @@ via prompts.fourway_to_binary.
 Design choices (requested by the user):
 
 1. **Routing**: every model goes through the CMU LiteLLM proxy using the
-   shared `litellm_client.call_llm` from ../meta_review. The same three
+   shared `litellm_client.call_llm` from ../metareview_bench. The same three
    litellm_proxy ids are supported — Azure GPT-5.4, Gemini 3.1 Pro
    Preview, Anthropic Claude Opus 4.6. New models only need to appear in
-   meta_review/model_config.py.
+   metareview_bench/model_config.py.
 
 2. **Thinking mode**: `reasoning_effort="high"` is passed universally (the
    LiteLLM docs show it mapping to the appropriate per-provider knob —
@@ -33,11 +33,11 @@ Design choices (requested by the user):
    in the dataset (~106K chars ≈ ~26K tokens) easily fits.
 
 4. **Max output**: the completion `max_tokens` defaults to the per-model
-   max_output_tokens from meta_review/model_config.py (so we never cap the
+   max_output_tokens from metareview_bench/model_config.py (so we never cap the
    model below its catalog limit).
 
 5. **Multimodal**: if EITHER review item mentions a figure/table reference
-   (regex from meta_review/image_mapping.find_figure_references), we
+   (regex from metareview_bench/image_mapping.find_figure_references), we
    attach the matching images from the paper's `images_list.json`, looked
    up through the `reviewer` HF config's file_refs + the `submitted_papers`
    HF config's hash->bytes map. Pairs where neither review mentions a
@@ -81,20 +81,20 @@ os.environ.setdefault('HF_HUB_ETAG_TIMEOUT', '120')
 
 # --- Path plumbing: make sibling modules importable ------------------------
 # Insert in REVERSE priority order (sys.path.insert(0,...) bumps each one to
-# the top). Final priority: expert_annotation_similarity > bench > meta_review
+# the top). Final priority: expert_annotation_similarity > bench > metareview_bench
 # — so `from prompts import ...` resolves to our prompts.py (which sits in
-# expert_annotation_similarity/) rather than meta_review/prompts.py (they're
+# expert_annotation_similarity/) rather than metareview_bench/prompts.py (they're
 # different files with the same name).
 # Path layout after reorg:
 #   peerreview_bench/similarity_check/expert_annotation_similarity/baselines/llm_classifier.py
 #   peerreview_bench/similarity_check/expert_annotation_similarity/prompts.py  <- _EA_DIR
-#   peerreview_bench/meta_review/                                               <- _META_REVIEW_DIR
+#   peerreview_bench/metareview_bench/                                           <- _META_REVIEW_DIR
 #   peerreview_bench/load_data.py                                               <- _BENCH_DIR
 _HERE = Path(__file__).resolve().parent              # .../expert_annotation_similarity/baselines
 _EA_DIR = _HERE.parent                                 # .../expert_annotation_similarity
 _SIMCHECK_DIR = _EA_DIR.parent                         # .../similarity_check
 _BENCH_DIR = _SIMCHECK_DIR.parent                      # .../peerreview_bench
-_META_REVIEW_DIR = _BENCH_DIR / 'meta_review'
+_META_REVIEW_DIR = _BENCH_DIR / 'metareview_bench'
 
 for p in (_META_REVIEW_DIR, _BENCH_DIR, _EA_DIR):
     if str(p) not in sys.path:
@@ -112,7 +112,7 @@ from prompts import (  # noqa: E402
     fourway_to_binary,
 )
 
-# meta_review infra we reuse
+# metareview_bench infra we reuse
 from litellm_client import call_llm  # noqa: E402
 from model_config import (  # noqa: E402
     get_max_output_tokens,
@@ -478,7 +478,7 @@ def select_pair_images(
     """Attach images iff at least one of the two review items mentions a
     figure / table reference. Returns an empty list otherwise.
 
-    Uses meta_review/image_mapping.find_figure_references to detect
+    Uses metareview_bench/image_mapping.find_figure_references to detect
     mentions, and then select_images_for_review_item to resolve the
     matching images through the paper's images_list.json.
     """
@@ -642,12 +642,17 @@ def _call_llm_with_reasoning(
     """
     import litellm  # lazy import
 
-    if not model.startswith('litellm_proxy/'):
-        model = 'litellm_proxy/' + model
-
     # Reuse the api_key / base_url resolution from litellm_client by doing
     # a trivial throwaway call — actually, just inline the resolution:
     from litellm_client import _resolve_api_key, _resolve_base_url
+
+    # Only enforce litellm_proxy/ prefix when using the CMU proxy
+    base_url = _resolve_base_url()
+    if 'cmu.litellm.ai' in base_url and not model.startswith('litellm_proxy/'):
+        raise ValueError(
+            f"CMU LiteLLM proxy requires 'litellm_proxy/' prefix in model name. "
+            f"Got: '{model}'. Use e.g. 'litellm_proxy/azure_ai/gpt-5.4'."
+        )
 
     kwargs: Dict[str, Any] = {
         'model': model,
@@ -655,8 +660,9 @@ def _call_llm_with_reasoning(
         'max_tokens': max_tokens,
         'temperature': temperature,
         'api_key': _resolve_api_key(),
-        'api_base': _resolve_base_url(),
+        'api_base': base_url,
         'timeout': 600,
+        'drop_params': True,  # silently drop unsupported params (e.g., reasoning_effort for newer models)
     }
     kwargs.update(extra_kwargs)
 
@@ -724,6 +730,21 @@ def _call_llm_with_reasoning(
                 or 'does not support' in msg or 'invalid' in msg
             ):
                 kwargs.pop('temperature', None)
+                try:
+                    response = litellm.completion(**kwargs)
+                    break
+                except Exception as e2:
+                    last_err = e2
+                    if not _is_retryable_error(e2):
+                        raise
+            elif ('reasoning_effort' in msg or 'thinking' in msg) and (
+                'unsupported' in msg or 'not support' in msg
+                or 'does not support' in msg
+            ):
+                # Proxy rejects reasoning params for newer models —
+                # retry without them (model may still reason internally)
+                kwargs.pop('reasoning_effort', None)
+                kwargs.pop('thinking', None)
                 try:
                     response = litellm.completion(**kwargs)
                     break
@@ -1125,7 +1146,7 @@ def main():
     parser.add_argument('--max-tokens', type=int, default=None,
                         help='Override the completion max_tokens. Default: '
                              'the model\'s catalog-reported max_output_tokens '
-                             '(meta_review/model_config.py).')
+                             '(metareview_bench/model_config.py).')
     parser.add_argument('--temperature', type=float, default=1.0,
                         help='Sampling temperature. Default 1.0 — required '
                              'by Anthropic extended thinking, recommended '

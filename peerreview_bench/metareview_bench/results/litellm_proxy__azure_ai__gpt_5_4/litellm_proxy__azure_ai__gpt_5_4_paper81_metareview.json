@@ -1,0 +1,198 @@
+{
+  "paper_id": 81,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not a silicon-substrate diode heat-spreading mechanism. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific a silicon-substrate diode heat-spreading mechanism framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not LED current-injection limits or optical output power. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific LED current-injection limits or optical output power framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Axis judgment: Not Correct because the review item is mainly about LED temperature-dependent light emission and EQE, while the paper studies electrical impedance sensing and reports no electroluminescence result at all. It is true that the exact ambient temperature of every electrical measurement is not prominently discussed, but that peripheral point is not the substance of the item. Devil's advocate: a charitable reader could salvage a generic temperature-reporting concern, yet the request for light-emission/EQE measurements shows the criticism is aimed at the wrong manuscript. Because the main claim is mismatched, significance and evidence are null, and experts would agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not structural changes to raise optical output power. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific structural changes to raise optical output power framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not silicon-filament reproducibility across LED chips. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific silicon-filament reproducibility across LED chips framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not CMOS emitters, pn junctions, top metal contacts, or n-poly-Si contacts. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific CMOS emitters, pn junctions, top metal contacts, or n-poly-Si contacts framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not a 1100 nm LED emission spectrum and its applications. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific a 1100 nm LED emission spectrum and its applications framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not wavelength tunability of an optical emitter. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific wavelength tunability of an optical emitter framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not the position and performance effect of a silicon filament. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific the position and performance effect of a silicon filament framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Axis judgment: Not Correct because this manuscript is about PEDOT:PSS OECT impedance biosensors, not modulation speed of a micro-LED. The claim therefore targets a different paper and does not match the text, figures, or methods here. Devil's advocate: one could salvage a very generic request for more device discussion, but the specific modulation speed of a micro-LED framing makes that defense implausible. Because correctness is clear, significance and evidence are skipped, and two experts would almost certainly agree on 'incorrect'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the headline 20.2 ± 0.9 dB result is tied to one imaged T98G cell, and Figure 3 says the error bars come from n=4 measurements at different times rather than distinct cells or devices. That directly limits how well the result establishes reproducibility or biological variability. Devil's advocate on correctness: a charitable expert could say the experiment is only a proof-of-concept, but the abstract and conclusions present the gain as a headline capability, so the concern still holds. Devil's advocate on significance: one might call this a normal limitation for an initial demonstration, yet adding independent replicates would materially strengthen the paper's main experimental claim. The reviewer gives exact quotations and a figure-caption pointer, so I predict 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the paper uses a 50 µm dielectric microparticle as a surrogate and only says a cell should give a similar response in first-order approximation, without validating how membrane capacitance or adhesion-specific biology map onto that proxy. The later T98G experiment shows the optimized device works on one real cell, but it does not prove that the bead reproduces the full impedance behavior of living cells across frequency. Devil's advocate on correctness: a charitable expert could argue the paper never claims exact equivalence and only needs a reproducible proxy for optimization. Even so, the narrower criticism that the approximation is biologically incomplete and under-justified still holds and would materially improve the central methodology if addressed. The surrogate claim and the missing validation are pointed out specifically enough for 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the manuscript explicitly says fOECT was set for each sensor in order to best fit the experimental data, so the concern that the model is not independently parameterized is factually grounded. That does not make the model useless, but it does weaken the strength of the paper's wording about quantitative prediction and optimization guidance. Devil's advocate on correctness: a charitable expert could say this calibration step is acceptable because the paper also notes fOECT depends on bias and geometry. Still, the core criticism remains valid because a central gain-controlling parameter is tuned device by device instead of being independently measured or fixed. The exact quotation makes the evidence sufficient, so I predict 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Axis judgment: Not Correct because the paper does not analyze only a single frequency: it acquires spectra from 10 to 10^5 Hz, shows full before/after-trypsin spectra in Figure 3c, and reports frequency-dependent sensitivity and gain in Figure 3d-e. The reviewer is right that the time trace in Figure 3b uses 625 Hz and that the paper does not perform an ECIS-style biological parameter extraction, but that is different from saying the study is primarily single-frequency. Devil's advocate: a charitable expert could still see the lack of richer multi-frequency biological interpretation as a limitation, especially if they expect ECIS-style analysis. Because that charitable reading is plausible even though the reviewer's factual premise overstates what is missing, I predict 'disagree_on_correctness'. With my final Not Correct label, significance and evidence are null.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the paper justifies the dielectric microparticle only as a first-order approximation, yet it does not analyze how that proxy departs from real cellular impedance mechanisms such as membrane-capacitive pathways. That matters because the paper studies frequency-dependent gain and later shows cell spectra up to 10^5 Hz, where a living cell need not behave like a simple dielectric bead. Devil's advocate on correctness: one could argue the main practical gain claim sits near 625 Hz, where a simple excluded-volume picture may be more defensible, and the in-vitro experiment partially validates the optimization. Even so, the reviewer's narrower point is valid: the approximation is under-justified across the studied frequency range. The review cites the exact surrogate statement and relevant frequency range, so I predict 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Axis judgment: Not Correct because the paper does not simply ignore frequency dependence; its model explicitly yields a geometry-dependent cutoff and reproduces the measured roll-off through the frequency-dependent impedance terms Zch and ZG. It is true that gm itself is written from Bernards-style expressions rather than as an explicit gm(ω), but the manuscript still includes ionic-transport-limited AC dynamics in the total response. Devil's advocate: a charitable expert could say the reviewer is targeting a real simplification, namely that the model keeps gm static and pushes the frequency dependence into the circuit term. Because that defense is plausible even though the reviewer's stronger wording says the effect is neglected, expert meta-reviewers could disagree on correctness. With my final Not Correct label, significance and evidence are null, and the best collapsed class is 'disagree_on_correctness'.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the single-cell section presents one imaged T98G cell on one channel and computes error bars from measurements at different times, not from multiple independently repeated cell or device experiments. That is enough to support the concern that the sample size and statistical treatment do not establish reproducibility of the 20.2 dB performance claim. Devil's advocate on correctness: a generous reader could say the authors intended the experiment as an illustrative validation rather than a full reproducibility study. Still, the abstract and conclusions elevate the gain value as a main result, so replication across cells and devices would materially improve the paper. The reviewer names the exact single-cell wording and averaging procedure, so I predict 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the paper openly states that fOECT was set separately for each sensor to best fit the data, so the claim that the model is not independently parameterized is factually accurate. That does not invalidate the model outright, but it makes the paper's language about what the model correctly predicts stronger than what is demonstrated without out-of-sample validation. Devil's advocate on correctness: a charitable expert could say fitting one partially geometry-dependent parameter is a reasonable calibration step. Even so, the main point that device-specific fitting weakens the strength of the predictive claim and optimization guidance remains valid. The exact quotations make this a clear 'correct_significant_sufficient' item.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the microparticle surrogate is a controlled way to perturb electrolyte impedance, but it does not fully capture cell-specific impedance mechanisms such as membrane-capacitive pathways and other biology-dependent contributions. The manuscript itself only claims similarity in a first-order sense, so the concern that transfer from bead optimization to real cell sensing is not fully justified is fair. Devil's advocate on correctness: a charitable expert could point out that the later in-vitro single-cell experiment does provide some validation that the optimized geometry works in practice. Still, that later demonstration does not show that the microparticle reproduces the same physical impedance components as a living cell across frequencies and conditions. Because the reviewer grounds the criticism in exact paper quotes plus the missing equivalence argument, I predict 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the paper's 20.2 ± 0.9 dB single-cell gain claim is supported by repeated measurements at different times on the same experimental configuration rather than by independent biological replicates across cells or devices. The Figure 3 caption and the attached versus detached time averaging procedure make that limitation directly verifiable from the manuscript. Devil's advocate on correctness: one could argue the authors are merely reporting within-experiment variability, not claiming a full biological variance estimate. Even so, the paper uses the value as a headline performance number in the abstract and conclusions, so the lack of independent replication materially limits how robust that claim is. The evidence chain is concrete and complete, so the best prediction is 'correct_significant_sufficient'.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Axis judgment: Correct, Significant, and Sufficient because the paper explicitly claims that the 20.2 dB improvement facilitates noise pickup and digitization, yet it reports no noise spectra, noise floor, or SNR comparison for either configuration. A gain ratio alone does not establish better measurement conditions, so the reviewer is right that the conclusion goes beyond the presented evidence. Devil's advocate on correctness: a charitable expert could say higher signal amplitude often does help digitization in practice, so the authors' intuition is not unreasonable. Still, the manuscript makes the stronger empirical claim without supporting measurements, and addressing that gap would substantially strengthen the conclusion. The quoted sentence and the readily checkable absence of any noise analysis make 'correct_significant_sufficient' the best prediction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

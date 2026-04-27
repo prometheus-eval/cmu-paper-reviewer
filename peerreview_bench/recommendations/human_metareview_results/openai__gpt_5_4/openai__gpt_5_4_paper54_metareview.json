@@ -1,0 +1,228 @@
+{
+  "paper_id": 54,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper is a single-patient isolate-sequencing case study, so the reviewer's concern that the title and framing overstate novelty and impact is a fair subjective criticism. However, the item does not support the broader novelty claim with specific competing papers or a tight evidentiary comparison.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript eventually clarifies sample handling in the Methods, but the main text does not immediately make clear that the sequencing was done on cultured isolates rather than directly on patient material, nor does it clearly summarize the colony-selection details. That ambiguity matters for interpreting what the genomics result does and does not show, but the reviewer gives only a general pointer to the main text rather than a precise citation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper hypothesizes a complex infection and low-abundance plasmid variation, yet it does not discuss the limitation that only cultured isolates, not direct metagenomic patient samples, were sequenced. Raising that missing limitation is a valid and constructive criticism because direct-sample sequencing could bear on within-patient heterogeneity and alternative pathogens.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 2 shows an endotracheal aspirate first and a later blood culture, but the manuscript does not say whether blood samples were available earlier in the course. That missing clinical detail is real, but it is too minor to materially affect the scientific value of the review.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer quotes the sentence about identifying K. pneumoniae as the 'dominant pathogen,' and that wording is indeed potentially confusing because the study sequenced cultured isolates rather than an obviously mixed metagenomic sample. Clarifying that phrasing would improve a central part of the paper's presentation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper already explains that both isolates were sequenced for 15 hours and that the pre-treatment isolate received an additional 20-hour run to simulate adaptive sequencing and increase depth. Because that clarification is present in Figure 2 and the Methods, the complaint that the authors need to explain the different cutoffs does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Table 1 reports per-gene 'Accuracy' values, but the manuscript only says that calls above 90% from the EPI2ME protein homolog model were retained and does not clearly explain what those percentages mean as a quantity in the table. The paper also provides no biological or technical replicate sequencing, so the reviewer is right that stronger validation would have made the co-existing-subpopulation interpretation more convincing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper states that KPC-2 and KPC-14/KPC-159 reside on highly similar IncN plasmids, but it does not provide a richer gene-content or mobilization analysis of those plasmids. Asking for that added plasmid characterization is a valid way to strengthen the proposed evolutionary explanation, though experts could differ on how essential it is for a brief case report.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The manuscript reports KPC copy numbers and identifies the IncN plasmid carrier, but it does not summarize plasmid-replicon copy numbers alongside gene copy numbers or list additional resistance genes in the main story. Requesting those missing genomic details is a valid but relatively secondary suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer quotes a genuinely confusing passage: the main text first discusses KPC-14 as detected by the workflow and then says the analyses actually discovered a new gene, KPC-159, highly similar to KPC-14. Because gene identity is central to the paper's claim, asking the authors to disentangle whether KPC-14, KPC-159, or both are being reported is an important and well-supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The paper gives only a concise lineage assignment (ST147) and a brief plasmid description, so the request for more detailed strain/plasmid context and broader comparison to related KPC-carrying strains identifies a real omission. Still, this is more an added contextualization request than a core flaw, and the reviewer does not anchor it with a specific comparison target or standard.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer supports the novelty concern with a specific recent Nanopore paper and fairly notes that this manuscript's distinct angle is the real-time clinical application rather than rapid bacterial characterization in general. That is a plausible criticism of framing and contribution, but how important it is to the paper's improvement is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The item mixes a valid limitation claim with a stronger accusation. The paper does infer hidden heterogeneity and low-abundance KPC-14/KPC-159 evidence from the isolate data, so saying the authors simply 'failed to identify' heterogeneity is arguably too strong; however, the broader criticism that colony-based isolate sequencing may miss within-patient heterogeneity and that the paper does not adequately discuss that limitation is reasonable. Because the main point can be read either way, correctness itself is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript repeatedly calls KPC-159 a 'new KPC resistance gene' even though it is presented as a previously unseen variant with 99.9% amino-acid similarity to KPC-14 and the same phenotype. The reviewer's request to frame this more as a new allele/variant than a substantively new resistance mechanism is valid, though some experts may see it as mainly a terminology-and-framing issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does not report an initial sequencing duration of about five days; it states 15-hour sequencing runs, an additional 20-hour run for the pre-treatment isolate, and first data after roughly 1.5 hours. The reviewer appears to have confused the clinical timeline with the sequencing time, so the criticism is factually unsupported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript lists software tools and versions but does not describe the computational hardware or infrastructure used for timely basecalling and analysis, despite making claims about practical clinical deployment. Requesting that missing infrastructure detail is constructive for reproducibility and adoption discussions.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item refers to proteins, LNB, a control-vs-LNB comparison, and Figure 1 panels that do not exist in this Klebsiella nanopore paper. It is clearly about a different manuscript, so the criticism cannot be correct here.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper contains no Figure 1B with protein counts and no control/VM/LNB comparisons. Because the referenced content is absent from this manuscript, the review item does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "There is no line 145 discussion of Figure 1B versus Figure 1C in this antibiotic-resistance case report; the item plainly targets another paper. Its factual premise is therefore wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This manuscript is not a plasma proteomics study and does not discuss protein counts, short LC columns, or plasma sample depletion. The criticism is mismatched to the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Figure 3A and the labeling conventions mentioned here are not part of this paper. Since the referenced figure does not exist in the manuscript under review, the item is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper has no Figure 3B, no VM-versus-LNB protein sets, and no cited line 205 or 206 with those counts. This is another inapplicable comment from a different manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Nothing in this manuscript discusses plasma proteins such as VWF or S100A9, fold-change thresholds for CSF, or a Figure 3B legend. The review item therefore fails on basic factual applicability.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper does not contain the Figure 3B/Figure 3C cross-reference described here. Because the referenced sentence and figures are absent, this criticism is not correct for this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This item asks about consequences for a blood-based clinical test derived from plasma protein-significance thresholds, which is unrelated to the manuscript on Klebsiella resistance detection by nanopore sequencing. It is clearly about another study.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The Methods section of this paper does not describe LC conditions, MS acquisition parameters, or cited publications 44-46 about mass spectrometry. The review item is mismatched to the manuscript and thus incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    }
+  ]
+}

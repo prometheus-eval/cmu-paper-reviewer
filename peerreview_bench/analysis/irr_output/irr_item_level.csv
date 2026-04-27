@@ -1,0 +1,909 @@
+paper_id,reviewer_id,reviewer_type,model_name,item_number,correctness_primary,correctness_secondary,significance_primary,significance_secondary,evidence_primary,evidence_secondary,correctness_agree,significance_agree,evidence_agree
+6,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+6,Claude,AI,Claude,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+6,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+6,Claude,AI,Claude,4,Not Correct,Correct,,Not Significant,,,False,False,False
+6,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Requires More,True,True,False
+6,GPT,AI,GPT,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+6,GPT,AI,GPT,3,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+6,GPT,AI,GPT,4,Correct,Not Correct,Not Significant,,,,False,False,False
+6,Gemini,AI,Gemini,1,Not Correct,Not Correct,,,,,True,False,False
+6,Gemini,AI,Gemini,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+6,Gemini,AI,Gemini,4,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+6,Gemini,AI,Gemini,5,Correct,Correct,Significant,Significant,Requires More,Requires More,True,True,True
+6,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+6,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+6,Human_2,Human,,1,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+6,Human_2,Human,,2,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+6,Human_2,Human,,3,Correct,Correct,Significant,Not Significant,Requires More,,True,False,False
+6,Human_2,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+6,Human_2,Human,,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Requires More,True,False,False
+6,Human_2,Human,,6,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+6,Human_2,Human,,7,Correct,Correct,Significant,Not Significant,Sufficient,,True,False,False
+6,Human_2,Human,,8,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+6,Human_2,Human,,9,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+6,Human_3,Human,,1,Correct,Correct,Marginally Significant,Not Significant,Requires More,,True,False,False
+6,Human_3,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+6,Human_3,Human,,4,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+12,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+12,Claude,AI,Claude,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,Claude,AI,Claude,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,GPT,AI,GPT,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,Gemini,AI,Gemini,3,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,Human_1,Human,,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_1,Human,,2,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+12,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,Human_1,Human,,4,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_1,Human,,8,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+12,Human_1,Human,,9,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_2,Human,,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_2,Human,,2,Not Correct,Not Correct,,,,,True,False,False
+12,Human_2,Human,,3,Correct,Correct,Significant,Significant,Requires More,Requires More,True,True,True
+12,Human_2,Human,,4,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_2,Human,,5,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_2,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+12,Human_2,Human,,7,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_2,Human,,8,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+12,Human_2,Human,,9,Correct,Not Correct,Marginally Significant,,Requires More,,False,False,False
+12,Human_2,Human,,10,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+12,Human_2,Human,,11,Not Correct,Not Correct,,,,,True,False,False
+12,Human_2,Human,,12,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_3,Human,,1,Correct,Not Correct,Not Significant,,,,False,False,False
+12,Human_3,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_3,Human,,3,Correct,Not Correct,Marginally Significant,,Requires More,,False,False,False
+12,Human_3,Human,,4,Correct,Not Correct,Marginally Significant,,Requires More,,False,False,False
+12,Human_3,Human,,5,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+12,Human_3,Human,,6,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+14,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Claude,AI,Claude,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Claude,AI,Claude,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,GPT,AI,GPT,3,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+14,GPT,AI,GPT,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Gemini,AI,Gemini,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Gemini,AI,Gemini,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Gemini,AI,Gemini,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,7,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,8,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,9,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,11,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,12,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,13,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,14,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,15,Correct,Not Correct,Not Significant,,,,False,False,False
+14,Human_1,Human,,16,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+14,Human_1,Human,,17,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+14,Human_1,Human,,18,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,19,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,21,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,22,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,23,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,24,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,25,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,26,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,27,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,28,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,29,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,30,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,31,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,32,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,33,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,34,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,35,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_1,Human,,36,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Human_1,Human,,37,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_2,Human,,2,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+14,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Requires More,True,True,False
+14,Human_2,Human,,4,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+14,Human_2,Human,,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Requires More,True,True,False
+14,Human_2,Human,,6,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+14,Human_2,Human,,7,Not Correct,Correct,,Marginally Significant,,Requires More,False,False,False
+14,Human_2,Human,,8,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+14,Human_2,Human,,9,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Human_2,Human,,10,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Human_3,Human,,1,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+14,Human_3,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_3,Human,,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+14,Human_3,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_3,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_3,Human,,7,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+14,Human_3,Human,,8,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+14,Human_3,Human,,9,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+14,Human_3,Human,,10,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+14,Human_3,Human,,11,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+15,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Claude,AI,Claude,2,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+15,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Claude,AI,Claude,4,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+15,GPT,AI,GPT,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+15,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,GPT,AI,GPT,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+15,Gemini,AI,Gemini,3,Correct,Not Correct,Marginally Significant,,Requires More,,False,False,False
+15,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+15,Gemini,AI,Gemini,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Human_1,Human,,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+15,Human_1,Human,,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+15,Human_1,Human,,3,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+15,Human_2,Human,,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+15,Human_2,Human,,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+15,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Human_2,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+15,Human_2,Human,,5,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+15,Human_2,Human,,6,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+15,Human_2,Human,,7,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+15,Human_2,Human,,8,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+15,Human_3,Human,,1,Not Correct,Not Correct,,,,,True,False,False
+15,Human_3,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+15,Human_3,Human,,3,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+15,Human_3,Human,,4,Correct,Not Correct,Marginally Significant,,Requires More,,False,False,False
+15,Human_3,Human,,5,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+27,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+27,Claude,AI,Claude,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,GPT,AI,GPT,3,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+27,GPT,AI,GPT,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+27,GPT,AI,GPT,5,Correct,Correct,Significant,Not Significant,Sufficient,,True,False,False
+27,Gemini,AI,Gemini,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Gemini,AI,Gemini,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,Human_1,Human,,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,Human_1,Human,,6,Correct,Correct,Significant,Not Significant,Sufficient,,True,False,False
+27,Human_1,Human,,7,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,8,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,9,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_1,Human,,10,Correct,Correct,Significant,Marginally Significant,Sufficient,Requires More,True,False,False
+27,Human_1,Human,,11,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+27,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,Human_2,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+27,Human_2,Human,,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Claude,AI,Claude,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+31,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+31,Claude,AI,Claude,4,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+31,Claude,AI,Claude,5,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+31,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+31,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,GPT,AI,GPT,3,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+31,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+31,Human_1,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Human_1,Human,,5,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+31,Human_1,Human,,6,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Human_2,Human,,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+31,Human_2,Human,,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Human_2,Human,,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+31,Human_2,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Human_2,Human,,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Human_2,Human,,6,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+31,Human_2,Human,,7,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+31,Human_2,Human,,8,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+31,Human_2,Human,,9,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Requires More,True,True,False
+33,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+33,Claude,AI,Claude,2,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+33,Claude,AI,Claude,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,Claude,AI,Claude,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+33,GPT,AI,GPT,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,GPT,AI,GPT,3,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+33,GPT,AI,GPT,4,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+33,Gemini,AI,Gemini,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,Gemini,AI,Gemini,2,Correct,Correct,Significant,Not Significant,Sufficient,,True,False,False
+33,Gemini,AI,Gemini,3,Correct,Correct,Significant,Not Significant,Sufficient,,True,False,False
+33,Gemini,AI,Gemini,4,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+33,Gemini,AI,Gemini,5,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+33,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+33,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+33,Human_1,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,Human_1,Human,,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+33,Human_1,Human,,5,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+33,Human_1,Human,,6,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+33,Human_1,Human,,7,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+33,Human_1,Human,,8,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+33,Human_1,Human,,9,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+33,Human_1,Human,,10,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+33,Human_1,Human,,11,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+33,Human_1,Human,,12,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+33,Human_1,Human,,13,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+33,Human_1,Human,,14,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,Human_1,Human,,15,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+33,Human_1,Human,,16,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+33,Human_1,Human,,17,Not Correct,Correct,,Not Significant,,,False,False,False
+33,Human_1,Human,,18,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+33,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+33,Human_2,Human,,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+33,Human_2,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+33,Human_2,Human,,4,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+33,Human_2,Human,,5,Correct,Correct,Marginally Significant,Not Significant,Requires More,,True,False,False
+33,Human_2,Human,,6,Correct,Correct,Significant,Marginally Significant,Sufficient,Requires More,True,False,False
+33,Human_2,Human,,7,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+33,Human_2,Human,,8,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+33,Human_2,Human,,9,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+33,Human_2,Human,,10,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+33,Human_2,Human,,11,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+34,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+34,Claude,AI,Claude,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+34,Claude,AI,Claude,3,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+34,Claude,AI,Claude,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+34,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+34,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+34,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+34,GPT,AI,GPT,4,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+34,Gemini,AI,Gemini,1,Not Correct,Not Correct,,,,,True,False,False
+34,Gemini,AI,Gemini,2,Correct,Not Correct,Not Significant,,,,False,False,False
+34,Gemini,AI,Gemini,3,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+34,Gemini,AI,Gemini,4,Correct,Not Correct,Not Significant,,,,False,False,False
+34,Human_1,Human,,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+34,Human_1,Human,,2,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+34,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+34,Human_2,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+34,Human_2,Human,,3,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+34,Human_2,Human,,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+34,Human_2,Human,,5,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+34,Human_2,Human,,6,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+34,Human_2,Human,,7,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+34,Human_2,Human,,8,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+34,Human_3,Human,,1,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+34,Human_3,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+35,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+35,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+35,Claude,AI,Claude,3,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+35,Claude,AI,Claude,4,Not Correct,Not Correct,,,,,True,False,False
+35,Claude,AI,Claude,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+35,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+35,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+35,GPT,AI,GPT,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+35,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+35,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+35,Gemini,AI,Gemini,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+35,Human_1,Human,,1,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+35,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+35,Human_2,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Requires More,True,True,False
+35,Human_2,Human,,3,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+35,Human_2,Human,,4,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+35,Human_3,Human,,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+35,Human_3,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+35,Human_3,Human,,3,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+35,Human_3,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Requires More,True,True,False
+37,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Claude,AI,Claude,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+37,Claude,AI,Claude,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+37,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,GPT,AI,GPT,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+37,GPT,AI,GPT,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Gemini,AI,Gemini,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+37,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Human_1,Human,,1,Correct,Not Correct,Not Significant,,,,False,False,False
+37,Human_1,Human,,2,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+37,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Human_2,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Requires More,True,True,False
+37,Human_2,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Human_2,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+37,Human_2,Human,,6,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+37,Human_2,Human,,7,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+37,Human_2,Human,,8,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+37,Human_2,Human,,9,Correct,Not Correct,Not Significant,,,,False,False,False
+49,Claude,AI,Claude,1,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+49,Claude,AI,Claude,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+49,Claude,AI,Claude,3,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+49,Claude,AI,Claude,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+49,Claude,AI,Claude,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+49,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+49,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+49,GPT,AI,GPT,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+49,GPT,AI,GPT,5,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+49,Gemini,AI,Gemini,1,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+49,Gemini,AI,Gemini,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+49,Gemini,AI,Gemini,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+49,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,Human_1,Human,,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+49,Human_1,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+49,Human_1,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+49,Human_1,Human,,5,Correct,Correct,Marginally Significant,Not Significant,Requires More,,True,False,False
+49,Human_1,Human,,6,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+49,Human_1,Human,,7,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+49,Human_1,Human,,8,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+49,Human_1,Human,,9,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+49,Human_1,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,Human_2,Human,,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+49,Human_2,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+49,Human_2,Human,,4,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+49,Human_2,Human,,5,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+49,Human_2,Human,,6,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+49,Human_2,Human,,7,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+49,Human_2,Human,,8,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+49,Human_2,Human,,9,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+49,Human_3,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,Human_3,Human,,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+49,Human_3,Human,,3,Correct,Not Correct,Marginally Significant,,Requires More,,False,False,False
+49,Human_3,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+49,Human_3,Human,,5,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+49,Human_3,Human,,6,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+49,Human_3,Human,,7,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+49,Human_3,Human,,8,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+49,Human_3,Human,,9,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+50,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,Claude,AI,Claude,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+50,Claude,AI,Claude,3,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+50,Claude,AI,Claude,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+50,Claude,AI,Claude,5,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+50,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,GPT,AI,GPT,3,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+50,GPT,AI,GPT,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+50,Gemini,AI,Gemini,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+50,Gemini,AI,Gemini,3,Not Correct,Not Correct,,,,,True,False,False
+50,Gemini,AI,Gemini,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+50,Gemini,AI,Gemini,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+50,Human_1,Human,,1,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+50,Human_1,Human,,2,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+50,Human_1,Human,,3,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+50,Human_1,Human,,4,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+50,Human_1,Human,,5,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+50,Human_1,Human,,6,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+50,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+50,Human_2,Human,,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,Human_2,Human,,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+50,Human_3,Human,,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,Human_3,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+50,Human_3,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+50,Human_3,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+50,Human_3,Human,,5,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+50,Human_3,Human,,6,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+51,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+51,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+51,Claude,AI,Claude,3,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+51,Claude,AI,Claude,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+51,Claude,AI,Claude,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+51,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+51,GPT,AI,GPT,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+51,GPT,AI,GPT,3,Correct,Not Correct,Not Significant,,,,False,False,False
+51,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+51,GPT,AI,GPT,5,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+51,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+51,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+51,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+51,Gemini,AI,Gemini,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+51,Gemini,AI,Gemini,5,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+51,Human_1,Human,,1,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+51,Human_1,Human,,2,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+51,Human_1,Human,,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+51,Human_1,Human,,4,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+51,Human_1,Human,,5,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+51,Human_1,Human,,6,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+51,Human_1,Human,,7,Not Correct,Correct,,Not Significant,,,False,False,False
+51,Human_2,Human,,1,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+51,Human_2,Human,,2,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+51,Human_2,Human,,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+51,Human_2,Human,,4,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+51,Human_2,Human,,5,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+51,Human_2,Human,,6,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+51,Human_2,Human,,7,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+51,Human_2,Human,,8,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+51,Human_2,Human,,9,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+51,Human_2,Human,,10,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+52,Claude,AI,Claude,1,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+52,Claude,AI,Claude,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Claude,AI,Claude,3,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Claude,AI,Claude,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+52,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+52,GPT,AI,GPT,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+52,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,GPT,AI,GPT,5,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+52,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Gemini,AI,Gemini,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+52,Gemini,AI,Gemini,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+52,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Gemini,AI,Gemini,5,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_1,Human,,1,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+52,Human_1,Human,,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+52,Human_1,Human,,3,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+52,Human_1,Human,,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+52,Human_1,Human,,5,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_1,Human,,6,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+52,Human_1,Human,,7,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_1,Human,,8,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_1,Human,,9,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_1,Human,,10,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+52,Human_1,Human,,11,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+52,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Human_2,Human,,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Human_2,Human,,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+52,Human_2,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Human_2,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Human_2,Human,,7,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_2,Human,,8,Correct,Not Correct,Not Significant,,,,False,False,False
+52,Human_2,Human,,9,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+52,Human_2,Human,,10,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_3,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+52,Human_3,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+52,Human_3,Human,,3,Not Correct,Not Correct,,,,,True,False,False
+52,Human_3,Human,,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+52,Human_3,Human,,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+52,Human_3,Human,,6,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+52,Human_3,Human,,7,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+52,Human_3,Human,,8,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+59,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+59,Claude,AI,Claude,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+59,Claude,AI,Claude,3,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+59,Claude,AI,Claude,4,Not Correct,Not Correct,,,,,True,False,False
+59,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+59,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Requires More,True,True,True
+59,GPT,AI,GPT,4,Not Correct,Not Correct,,,,,True,False,False
+59,Gemini,AI,Gemini,1,Not Correct,Not Correct,,,,,True,False,False
+59,Gemini,AI,Gemini,3,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+59,Human_1,Human,,1,Not Correct,Not Correct,,,,,True,False,False
+59,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,Human_2,Human,,1,Correct,Correct,Significant,Marginally Significant,Requires More,Requires More,True,False,True
+59,Human_2,Human,,2,Correct,Correct,Marginally Significant,Not Significant,Requires More,,True,False,False
+59,Human_2,Human,,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+59,Human_2,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,Human_2,Human,,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+59,Human_2,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,Human_3,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,Human_3,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,Human_3,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+59,Human_3,Human,,4,Not Correct,Not Correct,,,,,True,False,False
+60,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Claude,AI,Claude,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+60,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+60,Claude,AI,Claude,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+60,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+60,GPT,AI,GPT,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+60,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Requires More,True,True,False
+60,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Gemini,AI,Gemini,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Human_1,Human,,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+60,Human_1,Human,,2,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+60,Human_1,Human,,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+60,Human_1,Human,,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+60,Human_1,Human,,6,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+60,Human_1,Human,,7,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Requires More,True,True,True
+60,Human_1,Human,,8,Correct,Correct,Marginally Significant,Not Significant,Requires More,,True,False,False
+60,Human_1,Human,,9,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+60,Human_1,Human,,10,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+60,Human_1,Human,,11,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+60,Human_1,Human,,13,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+60,Human_1,Human,,14,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+60,Human_2,Human,,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+60,Human_2,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+60,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Human_3,Human,,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+60,Human_3,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+60,Human_3,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+60,Human_3,Human,,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+60,Human_3,Human,,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+61,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+61,Claude,AI,Claude,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Requires More,True,True,False
+61,Claude,AI,Claude,5,Not Correct,Not Correct,,,,,True,False,False
+61,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+61,GPT,AI,GPT,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+61,GPT,AI,GPT,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Gemini,AI,Gemini,1,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+61,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Gemini,AI,Gemini,4,Not Correct,Not Correct,,,,,True,False,False
+61,Gemini,AI,Gemini,5,Not Correct,Not Correct,,,,,True,False,False
+61,Human_1,Human,,1,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+61,Human_1,Human,,2,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+61,Human_1,Human,,3,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+61,Human_1,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+61,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Human_1,Human,,6,Not Correct,Not Correct,,,,,True,False,False
+61,Human_1,Human,,7,Not Correct,Not Correct,,,,,True,False,False
+61,Human_1,Human,,8,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+61,Human_1,Human,,9,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+61,Human_1,Human,,10,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+61,Human_1,Human,,11,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+61,Human_1,Human,,12,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+61,Human_1,Human,,13,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Human_1,Human,,14,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+61,Human_1,Human,,15,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Human_1,Human,,16,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+61,Human_1,Human,,17,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+61,Human_1,Human,,18,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+61,Human_1,Human,,19,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+61,Human_1,Human,,20,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+61,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Human_2,Human,,2,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+61,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Human_2,Human,,4,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+61,Human_2,Human,,5,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+61,Human_2,Human,,8,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+61,Human_2,Human,,9,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+61,Human_2,Human,,10,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+61,Human_2,Human,,11,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+61,Human_3,Human,,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+61,Human_3,Human,,2,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+61,Human_3,Human,,3,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+61,Human_3,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+61,Human_3,Human,,5,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+61,Human_3,Human,,6,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+61,Human_3,Human,,7,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+61,Human_3,Human,,8,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+61,Human_3,Human,,9,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+61,Human_3,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+61,Human_3,Human,,11,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Sufficient,True,True,False
+62,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Claude,AI,Claude,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Claude,AI,Claude,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+62,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,GPT,AI,GPT,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+62,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,GPT,AI,GPT,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+62,Gemini,AI,Gemini,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Gemini,AI,Gemini,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Gemini,AI,Gemini,3,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+62,Gemini,AI,Gemini,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+62,Human_1,Human,,1,Correct,Correct,Not Significant,Significant,,Requires More,True,False,False
+62,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Requires More,True,True,False
+62,Human_1,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+62,Human_1,Human,,4,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+62,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_1,Human,,6,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Human_1,Human,,7,Not Correct,Not Correct,,,,,True,False,False
+62,Human_1,Human,,8,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+62,Human_1,Human,,9,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+62,Human_1,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_1,Human,,11,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Human_1,Human,,12,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Human_2,Human,,1,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+62,Human_2,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,7,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,8,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Human_2,Human,,9,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,11,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_2,Human,,12,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+62,Human_3,Human,,1,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+62,Human_3,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_3,Human,,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+62,Human_3,Human,,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+62,Human_3,Human,,5,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+62,Human_3,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_3,Human,,7,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+62,Human_3,Human,,8,Not Correct,Correct,,Marginally Significant,,Requires More,False,False,False
+62,Human_3,Human,,9,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+62,Human_3,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+62,Human_3,Human,,11,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+67,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+67,Claude,AI,Claude,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+67,Claude,AI,Claude,3,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+67,Claude,AI,Claude,4,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+67,GPT,AI,GPT,3,Not Correct,Not Correct,,,,,True,False,False
+67,GPT,AI,GPT,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+67,Gemini,AI,Gemini,1,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Gemini,AI,Gemini,2,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Gemini,AI,Gemini,3,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Gemini,AI,Gemini,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+67,Gemini,AI,Gemini,5,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Human_1,Human,,1,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Human_1,Human,,2,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Human_1,Human,,3,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Human_1,Human,,4,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Human_1,Human,,5,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+67,Human_1,Human,,6,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+67,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+67,Human_2,Human,,2,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+67,Human_2,Human,,3,Not Correct,Correct,,Not Significant,,,False,False,False
+67,Human_2,Human,,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+67,Human_2,Human,,5,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+67,Human_3,Human,,1,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+67,Human_3,Human,,2,Correct,Not Correct,Not Significant,,,,False,False,False
+67,Human_3,Human,,3,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+67,Human_3,Human,,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+67,Human_3,Human,,5,Correct,Not Correct,Not Significant,,,,False,False,False
+77,Claude,AI,Claude,1,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+77,Claude,AI,Claude,2,Not Correct,Not Correct,,,,,True,False,False
+77,Claude,AI,Claude,3,Not Correct,Not Correct,,,,,True,False,False
+77,Claude,AI,Claude,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+77,Claude,AI,Claude,5,Correct,Correct,Significant,Not Significant,Sufficient,,True,False,False
+77,GPT,AI,GPT,1,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+77,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+77,GPT,AI,GPT,3,Not Correct,Not Correct,,,,,True,False,False
+77,GPT,AI,GPT,4,Correct,Not Correct,Not Significant,,,,False,False,False
+77,Gemini,AI,Gemini,1,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+77,Gemini,AI,Gemini,2,Correct,Correct,Not Significant,Marginally Significant,,Requires More,True,False,False
+77,Gemini,AI,Gemini,3,Not Correct,Not Correct,,,,,True,False,False
+77,Human_1,Human,,1,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+77,Human_1,Human,,2,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+77,Human_1,Human,,3,Correct,Correct,Marginally Significant,Significant,Requires More,Sufficient,True,False,False
+77,Human_1,Human,,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+77,Human_2,Human,,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+77,Human_2,Human,,2,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+77,Human_2,Human,,3,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+77,Human_2,Human,,4,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+77,Human_2,Human,,5,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+77,Human_2,Human,,6,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+78,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,Claude,AI,Claude,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+78,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+78,Claude,AI,Claude,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+78,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+78,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Requires More,True,True,False
+78,Gemini,AI,Gemini,3,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+78,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,Human_1,Human,,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+78,Human_1,Human,,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+78,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,Human_2,Human,,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+78,Human_2,Human,,3,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+78,Human_2,Human,,4,Correct,Not Correct,Marginally Significant,,Sufficient,,False,False,False
+78,Human_2,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+78,Human_2,Human,,6,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+78,Human_2,Human,,7,Correct,Not Correct,Not Significant,,,,False,False,False
+78,Human_2,Human,,8,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+78,Human_2,Human,,10,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+78,Human_2,Human,,11,Correct,Correct,Marginally Significant,Not Significant,Sufficient,,True,False,False
+79,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Claude,AI,Claude,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,GPT,AI,GPT,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+79,GPT,AI,GPT,3,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+79,GPT,AI,GPT,4,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+79,GPT,AI,GPT,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+79,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Gemini,AI,Gemini,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+79,Gemini,AI,Gemini,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+79,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Gemini,AI,Gemini,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_1,Human,,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+79,Human_1,Human,,4,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+79,Human_1,Human,,5,Correct,Correct,Significant,Significant,Requires More,Sufficient,True,True,False
+79,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_3,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_3,Human,,2,Correct,Correct,Significant,Marginally Significant,Requires More,Sufficient,True,False,False
+79,Human_3,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_3,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+79,Human_3,Human,,5,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+80,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Claude,AI,Claude,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+80,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Claude,AI,Claude,4,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+80,Claude,AI,Claude,5,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+80,GPT,AI,GPT,1,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+80,GPT,AI,GPT,2,Not Correct,Correct,,Significant,,Sufficient,False,False,False
+80,GPT,AI,GPT,3,Not Correct,Not Correct,,,,,True,False,False
+80,GPT,AI,GPT,4,Not Correct,Not Correct,,,,,True,False,False
+80,Gemini,AI,Gemini,1,Not Correct,Not Correct,,,,,True,False,False
+80,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Gemini,AI,Gemini,3,Not Correct,Not Correct,,,,,True,False,False
+80,Gemini,AI,Gemini,4,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+80,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_1,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+80,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_1,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_1,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_1,Human,,7,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_1,Human,,8,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,2,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+80,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+80,Human_2,Human,,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+80,Human_2,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,7,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,8,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+80,Human_2,Human,,9,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,10,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+80,Human_2,Human,,11,Correct,Correct,Not Significant,Significant,,Sufficient,True,False,False
+80,Human_2,Human,,12,Not Correct,Correct,,Marginally Significant,,Sufficient,False,False,False
+80,Human_2,Human,,13,Not Correct,Not Correct,,,,,True,False,False
+80,Human_3,Human,,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+80,Human_3,Human,,3,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+80,Human_3,Human,,4,Correct,Not Correct,Significant,,Sufficient,,False,False,False
+80,Human_3,Human,,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Requires More,True,False,False
+80,Human_3,Human,,6,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+81,Claude,AI,Claude,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Claude,AI,Claude,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Claude,AI,Claude,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Claude,AI,Claude,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+81,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,GPT,AI,GPT,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Gemini,AI,Gemini,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Gemini,AI,Gemini,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+82,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Human_1,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+82,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Human_2,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+82,Human_2,Human,,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+82,Human_2,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Human_2,Human,,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+82,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Claude,AI,Claude,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+82,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Claude,AI,Claude,4,Not Correct,Not Correct,,,,,True,False,False
+82,GPT,AI,GPT,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,GPT,AI,GPT,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+82,GPT,AI,GPT,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,GPT,AI,GPT,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Gemini,AI,Gemini,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+82,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Gemini,AI,Gemini,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+82,Gemini,AI,Gemini,5,Not Correct,Not Correct,,,,,True,False,False
+81,Human_1,Human,,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_1,Human,,2,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_1,Human,,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Human_1,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_1,Human,,6,Not Correct,Not Correct,,,,,True,False,False
+81,Human_1,Human,,7,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,3,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+81,Human_2,Human,,4,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,7,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+81,Human_2,Human,,8,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_2,Human,,9,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_2,Human,,10,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_2,Human,,11,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_2,Human,,12,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_2,Human,,13,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_2,Human,,14,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_2,Human,,15,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_3,Human,,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_3,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,3,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_3,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,7,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+81,Human_3,Human,,8,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,9,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,10,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+81,Human_3,Human,,11,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+83,Claude,AI,Claude,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,Claude,AI,Claude,2,Not Correct,Not Correct,,,,,True,False,False
+83,Claude,AI,Claude,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,Claude,AI,Claude,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,Claude,AI,Claude,5,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+83,GPT,AI,GPT,1,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+83,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,GPT,AI,GPT,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,GPT,AI,GPT,5,Not Correct,Not Correct,,,,,True,False,False
+83,Gemini,AI,Gemini,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+83,Gemini,AI,Gemini,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,Gemini,AI,Gemini,3,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+83,Gemini,AI,Gemini,4,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Requires More,True,True,True
+83,Human_1,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,Human_1,Human,,2,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+83,Human_2,Human,,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+83,Human_2,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Claude,AI,Claude,1,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+84,Claude,AI,Claude,2,Not Correct,Not Correct,,,,,True,False,False
+84,Claude,AI,Claude,3,Not Correct,Not Correct,,,,,True,False,False
+84,Claude,AI,Claude,4,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+84,Claude,AI,Claude,5,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,GPT,AI,GPT,1,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+84,GPT,AI,GPT,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,GPT,AI,GPT,3,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,GPT,AI,GPT,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Gemini,AI,Gemini,1,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Gemini,AI,Gemini,2,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Gemini,AI,Gemini,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Gemini,AI,Gemini,4,Correct,Correct,Not Significant,Marginally Significant,,Sufficient,True,False,False
+84,Gemini,AI,Gemini,5,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_1,Human,,1,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,2,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,4,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,6,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,7,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+84,Human_1,Human,,8,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,9,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_1,Human,,10,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_1,Human,,11,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,12,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_1,Human,,13,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+84,Human_1,Human,,14,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_1,Human,,15,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,1,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,2,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,3,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,4,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,5,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,6,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,7,Correct,Correct,Significant,Marginally Significant,Sufficient,Sufficient,True,False,True
+84,Human_2,Human,,8,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,9,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,10,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,11,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,12,Correct,Correct,Marginally Significant,Significant,Sufficient,Sufficient,True,False,True
+84,Human_2,Human,,13,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,14,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,15,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,16,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,17,Correct,Correct,Not Significant,Marginally Significant,,Requires More,True,False,False
+84,Human_2,Human,,18,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,19,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,20,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,21,Correct,Correct,Marginally Significant,Marginally Significant,Requires More,Requires More,True,True,True
+84,Human_2,Human,,22,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,23,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,24,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,25,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,26,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,27,Correct,Correct,Marginally Significant,Marginally Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,28,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,29,Correct,Correct,Significant,Significant,Sufficient,Sufficient,True,True,True
+84,Human_2,Human,,30,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,31,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,32,Correct,Correct,Not Significant,Not Significant,,,True,True,False
+84,Human_2,Human,,33,Correct,Correct,Not Significant,Not Significant,,,True,True,False

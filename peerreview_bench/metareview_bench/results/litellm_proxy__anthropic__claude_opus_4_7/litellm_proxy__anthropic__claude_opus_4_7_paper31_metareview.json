@@ -1,0 +1,246 @@
+{
+  "paper_id": 31,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes that kcats vary under contexts and asks which specific value is taken (median/max). The paper's main text doesn't clearly spell out the selection rule (BRENDA contains multiple entries per enzyme, and the paper relies on a phylogenetic hierarchical matching + later flexibilization where the 'highest available' is used). So the concern — inadequate explanation of how specific kcat values are chosen from dispersed BRENDA entries — holds. Devil's advocate (prosecution): one could argue that the Supp Note 1 actually does show the dispersion and the hierarchical criteria are described, so the substance is adequate — a sympathetic reader might call this Not Correct. That makes correctness borderline. Significance would be Significant (methodology clarity). Evidence is sufficient (cites lines 151-152 and Supp Note 1).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the hierarchical kcat matching is the most important methodological change but details are in Supp Note 2 rather than Methods, and asks how phylogenetic distance was validated. The main text (lines ~175-176 referenced) indeed gives only a brief mention; the paper lacks validation of the phylogenetic criterion beyond KS distributional tests. Devil's advocate: an expert might argue that this is primarily a presentation critique (move material from supplement to main methods), making it Marginally Significant rather than Significant. The validation question, however, does bear on substance. Evidence is sufficient — specific line numbers and a figure reference are given.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out that the 23.97% vs 32.07% improvement is reported without any statistical test, sensitivity analysis, or held-out validation set — the paper indeed does not describe these. This directly affects how readers should interpret the main claim of improvement. Devil's advocate (prosecution): an expert could claim the error values are indicative enough and that FBA-style models typically don't split train/test — suggesting this is a methodology style critique. But in this case, given the paper emphasizes predictive improvement, the reviewer's concern is substantively valid. Evidence is sufficient (specific numbers quoted).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly suggests correlation as an alternative to SSE for Figure 3. This is a reasonable methodological/presentational suggestion. Devil's advocate: could correlation be meaningfully more informative than SSE for this comparison? An expert could argue both are useful, and correlation would complement SSE — making it Significant. Another expert might see it as pure stylistic preference — Marginally Significant. The call is borderline. Evidence is sufficient (specific figure reference).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly notes that Figure 4 shows some cases without improvement from proteomics constraints and asks about statistical significance and overfitting. The paper does say '10 out of 11' but doesn't report statistical tests — the reviewer's count-check is valid. Devil's advocate: the paper did claim '10 of 11', and the reviewer's counting of non-improving points (4) differs, so some of the critique depends on figure reading. Still, the core concern (no statistical test, possible overfitting given many parameters) is substantively valid. Significant. Evidence sufficient (explicit text/figure citations).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer correctly notes that 'wild-cards' is used in the paper (line 189 / Fig 1E) but not explicitly defined in main text (though meaning is somewhat inferable from the context of E.C. numbers). This is a terminology/clarity issue. Devil's advocate: the term's meaning might be implicitly clear from line 59 ('non-specific to their reaction mechanism' / 'introduction of wild cards into E.C. numbers'), so an uncharitable expert might say it's defined inline. The call is borderline but charitable — Marginally Significant (clarity fix). Evidence sufficient (specific line).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks how the user decides which condition-specific exchange fluxes to use — the paper does mention 'additional condition-dependent exchange fluxes of byproducts can also be used' without explaining how the user picks them. The concern about practical usability is valid. Devil's advocate: this might be considered usability documentation rather than a scientific flaw — an expert could downgrade significance. But methodological guidance for using the tool is still substantively helpful. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for a definition of 'active fluxes'. The paper uses this term (e.g., 'a reduction of at least 95% of the variability range was achieved for more than 90% of all active fluxes') without defining it explicitly. This is a minor terminology clarity issue. Devil's advocate: 'active fluxes' is fairly standard in the FBA field (nonzero fluxes), so an expert might call this Not Significant. Call is borderline between Marginal and Not Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks about handling of reactions without GPRs (e.g., exchange/transport). The paper doesn't explicitly describe how these are treated in the ecModel framework in the main text. This is a valid methodological question. Devil's advocate: an expert familiar with GECKO might say that reactions without GPRs are trivially unchanged (no enzyme constraint), making the question minor or even answerable from general understanding — Marginally Significant. Evidence is sufficient (identifies absence).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks whether a minimum kcat cut-off could be predicted for other organisms. This is more of a forward-looking suggestion/question rather than a criticism of what's in the paper. Devil's advocate: one could argue a discussion of generalization to non-model organisms would strengthen the paper — Significant. Another expert may see it as a speculative extension — Marginal or even Not Significant. Evidence is sufficient in the sense that the question is clearly posed, but it's an open query not a verifiable claim.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks about integrating multi-omics beyond proteomics. This is a suggestion for future work, not a criticism of the current paper. Devil's advocate: one could see this as a useful extension that would strengthen the paper's applicability — Significant; but another expert would call it clearly beyond scope — Marginal or Not Significant. Evidence sufficient (the question is well-posed).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer correctly notes that computing time is not reported. For a software paper, this is a reasonable concern about practical usability. Devil's advocate: an expert might consider runtime reporting standard and call this Significant; another expert might call it Marginal as FBA problems are usually fast and the paper's main claims don't hinge on performance. Evidence sufficient (identifies an absence).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer correctly observes that the paper uses 'eukaryal' (line 59) instead of 'eukaryote'/'eukaryotic'. This is a word choice/stylistic preference. Devil's advocate: 'eukaryal' is occasionally used but less common; an expert might see this as a trivial preference not worth noting — Not Significant. Evidence is sufficient (quotes implied).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer requests concrete examples to support the isozyme claim. The paper makes a general statement but doesn't elaborate with examples. Devil's advocate: isozyme elaboration is a nice-to-have; an expert might call this Marginal (presentation polish) or Significant (would strengthen the argument). Evidence is sufficient (specific lines quoted).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer asks if fastFVA was used. The paper mentions FVA utilities and uses solveLP from RAVEN but doesn't specify fastFVA. This is a narrow technical question. Devil's advocate: an expert might consider this useful for reproducibility — Significant; another would call it trivial detail — Marginal. Evidence is sufficient (identifies absence).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly points out that comparing SSE between GECKO (with flexibilization) and the iJL1678 ME-model ignores architectural and purpose-driven differences. The ME-model does have a broader scope (gene expression etc.), and the paper's comparison doesn't fully address parameterization differences. Devil's advocate: the paper does acknowledge ME-models are more detailed ('ME-models provide a much wider range of predictions'), so the critique might be partially addressed. But the main concern — that the specific SSE comparison is apples-to-oranges — is substantively valid. Significant. Evidence is sufficient (extensive quotes).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the KS test validates distributional agreement rather than individual reaction-specific accuracy — a randomly assigned set from BRENDA fungi distribution would pass the same test. This is a methodologically sound critique. Devil's advocate: distributional matching is still meaningful (prevents systematic bias), and a charitable expert might say the paper pairs it with growth-rate validation. Still, the gap between distributional and per-reaction validity is a real limitation. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that proteomics constraints only show improvement 'in some' conditions and validation is narrow (O2/CO2). This is supported by the paper's own wording. Devil's advocate: the paper does say 10 out of 11 cases improved with individual protein constraints, so an expert might argue the benefit IS demonstrated broadly. There's also a contradictory statement ('does not affect enzyme demand predictions significantly for most active enzymes'), which the reviewer correctly flags as an internal tension. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly identifies circularity: proteomics data constrains the models, and then model predictions (enzyme saturation) are used to make biological claims about the same data. This is a legitimate epistemic concern. Devil's advocate: some might argue that the saturation metric is computed as usage/abundance, where usage is a model prediction given many other constraints, so the reasoning is not fully circular. But the absence of independent experimental validation of saturation is a real gap. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that FVA reductions are shown as cumulative distributions without statistical tests. This is correct — the paper presents percentages but no formal tests. Devil's advocate: cumulative distributions can be visually compelling and statistical testing for such massive reductions may be considered unnecessary; an expert might call this Marginal. But proper reporting of statistical significance would clearly strengthen the paper. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly points out that fuzzy matching (levels 4-6, including any organism/any substrate) introduces unquantified uncertainty and that the paper provides counts but no error analysis per match level (e.g., cross-validation). This is supported by the code excerpt from fuzzyKcatMatching.m. Devil's advocate: the paper does show distributional KS-test agreement as an indirect validation, so an expert might say the reviewer is somewhat overstating; but the absence of reaction-level validation remains. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly identifies that the flexibilization loop inflates enzyme bounds/kcat to fit observed growth, creating circularity. The code excerpt supports this. The paper acknowledges 'loosening' but doesn't quantify deviation. Devil's advocate: flexibilization is explicitly disclosed and is intended to handle over-constraint; a sympathetic expert might note that similar calibration is common in ecModel pipelines. But the concern about hidden data modification is substantively valid. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly argues that comparing GECKO (fitted) vs ME-iJL1678 (ab initio) on growth rate prediction is misleading given different scopes. Very similar to claude-opus-4-5 item 1. Devil's advocate: the paper does discuss ME-model strengths in the discussion. Still, the core critique about the framed 'drastic improvement' is valid. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes the 'any organism' claim is only validated on data-rich model organisms (S. cerevisiae, E. coli, human, etc.), with no test on data-poor non-model organism. This is a real gap given the reviewer's concerns about fuzzy matching degradation at scarce data. Devil's advocate: an expert might say that the paper's claim is more about 'any organism with a GEM', not 'any organism regardless of data availability', making the critique somewhat off-target — could argue correctness borderline. But the concern about demonstrating generalizability remains valid. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that replacing limiting kcats with BRENDA's maximum value, iterating until growth matches, is a form of fitting that could cause overfitting and lack identifiability. The paper text (line 68) and code both support this claim. Devil's advocate: one could argue the 'highest' selection targets ensuring the model is at least feasible (not minimizing), and the step is documented. Still, the methodological concern about optimistic bias is substantively valid. Significant. Evidence sufficient (quotes both paper and MATLAB code).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the proteomics flexibilization discards/relaxes constraints to enforce feasibility without an audit trail (per-condition retention/relaxation rates, sensitivity analyses). Supporting code confirms this. Devil's advocate: the paper is transparent that 'constraints need to be loosened', and the sister tools similarly relax bounds — one could argue this is standard. But the call for quantitative reporting and sensitivity is valid. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly notes that the paper relies on continuously updated repositories without pinning versions, and that the provided code is labeled GECKO 3.2.4 while the paper is about GECKO 2.0. This creates a reproducibility gap. Devil's advocate: the paper does provide public GitHub repos which is more than many studies, and 'ecModels container' does version-control each model via PRs; a sympathetic expert might see this as adequate. The '3.2.4' point is actually about the benchmark snapshot, not the paper itself, which weakens that sub-point. But the broader reproducibility concern (no pinned environment, Gurobi dependency, live BRENDA retrieval) is substantively valid. Significant. Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "paper_id": 39,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper describes a separate Data Handler Agent for image optimization and analysis, but it never really explains why a distinct handler is needed instead of relying on the AFM software stack alone for the routine demonstrations shown. The reviewer's broader request for architectural rationale is therefore valid, though the claim about vendor capabilities is not itself substantiated in the review item.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript explains what the Data Handler does, but it does not compare those capabilities against standard AFM software or clarify what extra analysis functionality it contributes. That missing differentiation is a real gap for understanding the novelty of this module, although the reviewer gives little concrete support beyond posing the question.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This limitation follows directly from the design the paper describes: for critical AFM operations, code generation is constrained to predefined documentation and strict operational boundaries. That safeguard plausibly reduces flexibility for novel experiment designs outside the documented action space, so the criticism is correct and substantive.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does state the optimization algorithm: the Methods explicitly say a genetic algorithm is used for PID tuning. The second question about whether different prompts or morphologies would trigger a different optimizer is not answered, so the item mixes one false premise with one valid request for clarification and is borderline overall.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper does not clearly present an adaptive menu of edge-detection algorithms whose selection changes online across samples; instead it describes specific analysis tools and prompts for the demonstrated tasks. Because the item presupposes a selectable edge-detection algorithm while also raising a reasonable clarity concern, correctness is genuinely ambiguous.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The manuscript gives only limited discussion of robustness in algorithm choice and downstream analysis, even though those choices affect trust in the system's outputs. Asking for a clearer discussion of how reliability is maintained is therefore a fair and useful criticism, but the reviewer does not anchor it to specific methodological details.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper repeatedly describes the demonstrations as increasingly or relatively complex AFM experiments, but whether the showcased tasks are truly \"complex\" versus still fairly standard AFM workflows is a domain-judgment call. Because a charitable reader could side with either interpretation, expert meta-reviewers could plausibly split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The introduction cites prior autonomous microscopy and AFM-automation work, but it does not discuss the specific prior LLM-for-AFM effort the reviewer names. Since the review item provides a concrete relevant reference and explains why it matters for framing the paper's contribution and limitations, this is a correct, well-supported related-work criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper already references many prior autonomous microscopy and AFM-automation efforts in the introduction, including several AFM-specific or scanning-probe automation papers. Because the reviewer does not identify specific missing autonomous AFM references beyond that generic request, the claim that such prior efforts were not properly referenced does not hold up as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript does explain the multi-agent routing at a high level in the framework and methodology sections, so saying the authors did not discuss how it works is too strong. However, the paper does not compare this routing design against a single-agent alternative, making the item partially right and partially wrong in a way that different experts could weight differently.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is mainly a paper-organization complaint: the performance comparison of LLMs does indeed appear before the later real-world case studies. That ordering is exactly as described, but the issue is mostly about presentation flow rather than substance, so it is a valid but relatively minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does provide three real-world AFM case studies on physical experiments, including analysis outputs such as friction, roughness, and step-height extraction. Because the claim that the authors did not show real-world examples of AFM analysis is contradicted by the Results section, this item is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer identifies a real methodological caveat in the efficiency comparison. The paper reports average response times for models accessed through external APIs, and although it excludes scan time and incorrect answers, it does not control for network conditions or provider-side latency, so the timing comparison is not a clean measure of intrinsic model efficiency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript itself evaluates only GPT-4o and GPT-3.5-turbo-0125 and does not discuss Claude-3.5-sonnet at all. Because the criticism is built around a model and integration issue that are not part of the paper's actual experiments, it is inapplicable to this manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper's safety mechanism is essentially a hard operational boundary, and the reviewer's suggestion of a human-in-the-loop review step is a reasonable extension that could improve safety and flexibility. That makes the criticism constructive and important, but the reviewer does not provide enough concrete support to establish why this alternative is preferable in the present setting.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This criticism is well supported by the supplementary file itself. The supplement has no table of contents, much of it consists of raw terminal-style logs, and it does not provide a detailed protocol for how expert evaluators judged answers beyond the brief main-text description, so the request for clearer supplementary organization and evaluation details is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "There is no section titled \"Analysis of Prompt Structure\" in the provided manuscript source, and the cited line range does not map to a clearly identifiable standalone section in the paper text. Since the critique targets a section placement that cannot be verified from the paper as given, the item does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's experimental demonstrations are indeed fairly narrow relative to the broad promise of autonomous microscopy: they rely on specialized AFM-focused agents and tools and cover standardized tasks such as PID tuning, step-edge analysis, and load-dependent roughness. The reviewer's broader point about limited scope and task-specific tooling is valid, but it is argued at a high level without much direct support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The evaluation section does not clearly say whether each AFMBench task was run once or repeatedly per model, nor does it quantify run-to-run consistency. Since reproducibility and variance matter for a benchmark claim, requesting that missing detail is a correct and important criticism, but the review item does not point to specific places where the omission appears.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The Methods do describe the NEED HELP routing mechanism between agents, but they do not discuss a way for a user to inject additional context at that point or have that feedback stored to improve future behavior. Because the reviewer ties the suggestion to an explicit mechanism in the paper, this is a clear and well-grounded criticism of missing human-in-the-loop functionality.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The concern about prompt specificity weakening the claimed advantage of the agentic framework is reasonable in spirit, but the cited Table S2 and detailed-versus-concise prompt comparison are not recoverable from the provided manuscript sources. Because the factual premise is only partly verifiable from the available paper materials, correctness is genuinely borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper presents a two-agent design with AFM control tools assigned to one agent and analysis tools to the other, but it does not compare this decomposition against alternatives such as a single agent with all tools or one agent per tool. That is a meaningful missing architectural ablation, and the reviewer states it precisely enough to verify from the framework description.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper defines agents and tools, but because Figure 2 foregrounds \"tool requirements\" and \"agent requirements\" while the surrounding exposition is not especially careful about that conceptual boundary, a reader could reasonably find the distinction unclear. This is a real clarity issue about a central design concept, though its practical importance is somewhat debatable and the supporting citation is not very strong.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper already reports coarse error categories, with code generation being the dominant failure mode, but it does not break code-generation failures down further or evaluate whether iterative debugging would recover them. Asking for finer bug-type quantification and mitigation analysis is therefore a correct and important criticism, and it is grounded in the model-limitation section itself.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript does place substantial emphasis on comparing a small set of named models, and the reviewer is right that such model-specific comparisons age quickly. Still, the suggestion to shift emphasis toward more model-agnostic evaluation metrics is partly a framing preference rather than a clear flaw, so the issue is real but its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is one of the strongest reviewer points. The supplementary log for the Figure 5 case study uses the exact prompt the reviewer quotes, which explicitly tells AILA to optimize PID values using a genetic algorithm and not correct the baseline. The paper does not analyze whether the framework could infer that strategy from a more open-ended objective, so the autonomy claim would indeed be stronger with that comparison.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The first part of the discussion mostly rephrases results already presented in Sections 2.3 to 2.6 before briefly turning to broader implications. That makes this a valid organization and writing suggestion, but it is mainly a presentational improvement rather than a substantive scientific issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The optimization case study does not clearly foreground that the genetic algorithm lives inside a prebuilt Image Optimizer tool rather than being generated on the fly by the LLM, so a request for clarification is fair. The follow-up suggestion about separately evaluating code writing or adding a code-writer module would also materially change the autonomy claim, but the reviewer does not support those proposals in much detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "For AFM control, the paper actually says the AFM Handler retrieves predefined code chunks from documentation and modifies them rather than writing new control code; for image analysis, dynamic code can still be generated. Because the item asks a mixed question that is partly answered and partly component-dependent, correctness is ambiguous rather than cleanly right.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The paper does provide access to AFMBench questions and logs on GitHub, and the accompanying code repository includes setup instructions, so the benchmark is not simply unavailable. At the same time, full evaluation still depends on physical AFM infrastructure, so the reviewer's broader accessibility concern is understandable; this makes the item borderline on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

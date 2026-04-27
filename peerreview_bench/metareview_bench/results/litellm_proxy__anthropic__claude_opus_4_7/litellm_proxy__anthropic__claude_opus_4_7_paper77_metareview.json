@@ -1,0 +1,206 @@
+{
+  "paper_id": 77,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that benzene is not typically reactive in electrocyclization reactions, suggests investigation of benzene-containing substrates, and asks whether ring-enlargement products from cyclopropane strain release were observed. The paper does indeed only use heteroaromatic π-components (pyridine, thiophene, indole, benzofuran) and does not report benzene substrates, and no ring-enlargement side products are discussed — so the reviewer's observations are factually correct. Addressing this would meaningfully broaden scope and strengthen mechanistic understanding, making it Significant. Devil's advocate: one could argue this is asking for additional experiments rather than pointing at a flaw (downgrade to Marginal?), but the criticism is constructive for improving the paper. Evidence is borderline: the reviewer states the concern clearly but doesn't cite a specific passage; a meta-reviewer can still verify the omission by scanning the scope tables. Two experts might split on whether a short suggestion counts as sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out the typo \"wittig regent\" instead of \"wittig reagent\" in the SI. I verified this appears literally in the SI (lines 190, 218). This is a minor typographical error that does not affect substance. Marginally Significant — it's a valid point but does not improve the paper's scientific content. Devil's advocate on significance: one could argue typos are Not Significant and better removed, but since the review flags a real error, Marginal is more appropriate. Evidence is sufficient — the reviewer names the exact phrase. Two experts may split between Marginal and Not Significant for a typo.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks a mechanistic question: could the metal carbene be directly captured by nucleophiles when the propargyl position is a quaternary carbon rather than a cyclopropane? This is a valid open question and the paper indeed does not explore that substrate variant. It is framed as a question rather than a sharp criticism, which makes correctness borderline — the 'claim' is really a request for an experiment. Addressing it could clarify whether the cyclopropane is essential for the C-C cleavage pathway, so Significant. Devil's advocate: the question is somewhat vague and open-ended; a strict expert might call it insufficiently specific as a criticism. Evidence is brief, with no quote, making it Requires More by a strict reader but arguably sufficient since the absence is easy to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks where the deuterium went in the 1a' labeling experiment. The paper states '1a' gives 2a rather than 2a'', meaning the deuterium label is lost. The paper interprets this as ruling out 1,2-hydride shift and uses the D2O experiment to show water provides the protons, but does not explicitly trace where the original deuterium label ended up. The reviewer's request for explicit explanation is a valid request for clarity. Significant because the mechanistic proposal hinges on these labeling experiments. Devil's advocate: one could argue the paper does effectively address this (deuterium exchange with H2O), so a charitable reader would call the item Not Correct. The evidence is a pointed specific question but no quote; verifiability is moderate.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks for the diastereomer ratio of substrate 3 (cyclopropyl-containing), whether it is a single diastereomer, and for confirmation of its relative configuration and dr. The paper does not report dr or configuration for substrate 3 or its precursors in the main text, and the cyclopropane ring does create stereocenters. This is Correct — a legitimate reproducibility/structural concern. Significant because downstream product stereochemistry depends on this. Devil's advocate: one could argue the relative configuration is shown in the CIF for 3a and thus partially addressed, but the main text does not discuss dr. Evidence is concise and the absence is directly verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer raises that when NaOAc is used as nucleophile, NaOH could be generated as a side product which might affect yield, and suggests trying acetic acid. The chemistry point is plausible (stoichiometry of nucleophilic substitution generating base) and the paper does not address acetic acid as an alternative nucleophile. Correct and Significant (would strengthen optimization). Devil's advocate: strictly, the paper is about substitution products and a small amount of base would not necessarily impact reactivity — an uncharitable expert might call this a speculative chemistry detail rather than a solid criticism. The evidence is brief but the concern is self-contained and verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks why DDQ oxidizes the side chain rather than the core tricycle single bond, and says 'the result should be discussed in the manuscript'. However, the paper DOES provide a brief rationale: 'This selective oxidation might be attributed to the stability of the tertiary radical at the α-position of phenyl and the oxygen atom.' So the claim 'should be discussed' is partly inaccurate — it is discussed, though briefly. A charitable reader would say the discussion is inadequate and the broader concern holds; an uncharitable reader would say the criticism is factually wrong because an explanation is already given. This is genuinely borderline on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks how the amount of water is controlled, noting that water acts as a proton donor. The paper confirms H2O in solvent is the proton source via D2O experiment but does not describe water content control in the general procedure. Correct — this is a reproducibility detail that is absent. Significant for reproducibility. Devil's advocate: one could argue standard practice with undried toluene implies ambient water, so experienced chemists would know — but for reproducibility the amount/source should be stated. Evidence is short and the omission is verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks whether a benzene ring (rather than heteroaromatic) can participate in the cyclization and requests this be investigated. Verified: the paper only uses pyridine-containing substrates with heteroaromatic/alkenyl π-components; benzene is not tested. Correct and Significant for scope expansion. Devil's advocate: the paper is specifically focused on NCPC (nitrogen-centered) scaffolds, so benzene replacement may be outside the declared scope; a strict expert might downgrade to Marginal. Evidence is short but the absence is obvious from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer says the title of Fig. 4a should be revised because it is not 'a deuterium experiment' but rather 'a reaction of deuterated substrate.' This is a terminology nit — in common chemistry usage, both phrasings are used interchangeably. The correction is minor and does not affect understanding. Marginally Significant at most, possibly Not Significant. Devil's advocate on correctness: one could say the reviewer has a legitimate point about precision of language; an uncharitable reader would say this is purely a stylistic preference. Evidence is self-contained (points at Fig. 4a label).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the paper lacks DFT computational studies to validate the proposed 8π electrocyclization + metal carbene mechanism. Verified: the paper provides only product outcomes and deuterium labeling; there are no DFT calculations. Correct. Significant — computational support is commonly expected for novel cascade mechanisms. Devil's advocate: experimental synthetic methodology papers are not universally required to include DFT; some highly-respected papers rely solely on experimental mechanistic probes. A strict expert may still call it Significant; a charitable expert may call it Marginal. Evidence is thorough with quoted passages and external references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly points out that the paper invokes 8π electrocyclization (which under thermal conditions must be conrotatory per Woodward-Hoffmann) but never discusses the stereochemical consequences or provides stereochemical evidence. Verified — the paper cites Woodward-Hoffmann (refs 44-45) but does not analyze the stereochemical outcome of the electrocyclization step. Correct and Significant for mechanistic rigor. Devil's advocate: once the intermediate is protonated and isomerized to the final polyene product, the initial conrotatory stereocenters are destroyed (the products are mostly flat polycyclic aromatics), so there may be nothing stereochemically meaningful to report from that step. A strict expert would keep this Significant; a charitable expert would note this concern is largely moot given the final product flatness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the 'late-stage modification of pharmaceuticals' claim does not meet the accepted LSF definition because the pharmaceutical fragments are incorporated/attached, not directly functionalized. Looking at Fig. 2 context, the pharmaceuticals (with -OH or -COOH) appear to serve as nucleophiles attacking the NCPC carbocation — this is conjugation of a pharmaceutical to the NCPC core, which is more accurately called 'pharmaceutical-nucleophile incorporation' than classical Ritter-style LSF. The reviewer's core concern about terminology is defensible but this is a judgment call; in synthetic methodology literature, 'late-stage' is often used loosely for any reaction on a complex/drug molecule. Correct by a charitable reading but a skeptical expert could call it Not Correct — the pharmaceuticals ARE modified (they get a new polycycle attached).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly observes that the deuterium labeling experiments address the H source but do not directly prove 8π electrocyclization versus alternative stepwise cyclizations. Verified: the D experiments speak to the protonation step, not to ring-forming mechanism. Correct and Significant because the mechanism is framed as a central conceptual contribution. Devil's advocate: a charitable reader might say the proposal is explicitly labeled 'plausible' and not definitive, so the critique is somewhat moot — but the abstract still asserts the 8π step as a 'key characteristic'. Evidence is thorough with paper quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly identifies that the paper offers only a vague 'subtle differences' explanation for why CuTc favors C-H cleavage while Ag3PO4 is required for C-C cleavage, despite both being described as carbene-mediated. Verified — the paper's discussion of this divergence is indeed minimal. Correct and Significant for mechanistic coherence. Devil's advocate: a charitable expert could argue that it's acceptable to observe the empirical catalyst dependence without full mechanistic dissection, especially as a methodology paper; this might downgrade to Marginal. Evidence is strong with multiple quoted passages.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies a systematic mismatch between compound definitions in Table 1 of the SI (1d = 4-F-Ph, 1f = 4-Br-Ph) and the characterization data (1d characterization corresponds to p-tolyl per HRMS C25H32NOSi = 390.2248; 1f characterization corresponds to 4-F-Ph per HRMS C24H29FNOSi = 394.1997 and 19F NMR). I verified these in the SI. This is a real, verifiable inconsistency undermining reproducibility. Correct and Significant. Devil's advocate: a charitable expert might view this as a presentation error that is easily fixed and thus Marginal — but systematic mislabeling of characterization data is a serious concern. Evidence is exemplary with exact quoted lines and specific compound numbers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer states that 8π electrocyclization typically yields 8-membered rings (per textbook octatetraene examples) whereas the paper claims a 7-membered ring from an 8π system, and that no computational/kinetic evidence supports this non-trivial claim. The concern about the atypical ring size and lack of DFT is legitimate. Correct and Significant for mechanistic validation. Devil's advocate: a charitable reader familiar with 8π electrocyclizations in non-octatetraene systems (e.g., amino-octatrienyl systems can form 7-membered rings) would note that 8π→7-membered-ring is possible; an uncharitable expert would still demand computational support. Evidence includes a specific literature citation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that the terms 'α-C-H cleavage' and 'α-C-C cleavage' are used imprecisely — deprotonation is not properly 'C-H cleavage' in the carbene-insertion sense, and the cyclopropyl ring-opening is better described as nucleophilic ring-opening of a donor-acceptor / metal-activated cyclopropane. This is a legitimate terminological concern. Correct and Significant for clarity. Devil's advocate: the terms 'C-H cleavage' and 'C-C cleavage' are used flexibly in the literature and the paper's own mechanism in Fig 4c describes the steps in more detail; a charitable expert would call this pedantic and Marginal. Evidence is sufficient with quoted passages and a reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the paper's mechanistic claims (8π electrocyclization + metal carbene driving α-C-H/C-C cleavage) are not sufficiently supported by the provided evidence (deuterated-substrate and D2O experiments), lacking kinetic/stereochemical/crossover/trapping/computational data. Verified — the mechanistic section relies only on the two deuterium experiments. Correct and Significant for mechanistic rigor. Devil's advocate: methodology papers often present mechanisms as plausible proposals and this paper does use hedging language ('speculated', 'plausible'); a charitable expert might say the claim is already appropriately tentative. Evidence is extensive with quoted passages and external references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes the abstract claims 'stereo-controlled late-stage modification' but neither the main text nor the SI reports dr/er values for the late-stage modification products (4t-4x) or any new stereocenter analysis. Verified — I found no dr/ee data for 4t-4x. Correct and Significant for substantiating stereochemical claims. Devil's advocate: 'stereo-controlled' could be interpreted loosely as referring to the preserved pharmaceutical-fragment stereocenters rather than newly formed centers; a charitable reader might downgrade the significance. Evidence is thorough with explicit quoted passages and community guidelines.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points to a CuTc (main text/Methods) vs CuTe (SI lines 367, 376) inconsistency. I verified CuTe does appear in the SI's general procedure. This is almost certainly an OCR/typographical error (CuTc = copper thiophene-2-carboxylate is a standard catalyst; CuTe would be copper telluride, which is nonsensical here). As-presented the inconsistency is real, but it is a typo/OCR artifact. Correct on the face of the text. Significance: for a strict reproducibility-oriented expert this is Significant, but for a charitable reader who recognizes the typo, it's Marginal. Evidence is strong with specific quoted lines.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the checkCIF report for 2z states 'You have not supplied any structure factors' — verified by direct inspection of the 2z.md supplementary. This prevents full crystallographic validation and weakens the evidentiary basis since 2z is used as an exemplar for broader NMR-based structural inference. Correct and Significant for reproducibility and structural-claim reliability. Devil's advocate: structure factors are commonly uploaded separately to CCDC and the absence in the checkCIF bundle does not necessarily mean they are missing from the official deposition; a charitable expert could call this Marginal. Evidence is exemplary with direct quotes from the checkCIF report.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

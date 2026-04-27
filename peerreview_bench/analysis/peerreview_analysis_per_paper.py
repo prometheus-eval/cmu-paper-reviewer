@@ -43,9 +43,26 @@ from load_data import ReviewItem, load_annotations
 warnings.filterwarnings('ignore')
 
 ALPHA = 0.05
+N_BOOTSTRAP = 10_000
+RANDOM_SEED = 42
 
 COHENS_D_THRESHOLDS = {'negligible': 0.20, 'small': 0.50, 'medium': 0.80}
 RANK_BISERIAL_THRESHOLDS = {'negligible': 0.10, 'small': 0.30, 'medium': 0.50}
+
+
+def bootstrap_ci(rates: List[float], alpha: float = ALPHA,
+                 n_bootstrap: int = N_BOOTSTRAP) -> Tuple[float, float]:
+    """Paper-level percentile bootstrap CI on the mean of per-paper rates."""
+    n = len(rates)
+    if n < 2:
+        return (np.nan, np.nan)
+    rng = np.random.default_rng(RANDOM_SEED)
+    arr = np.asarray(rates)
+    boot_means = np.empty(n_bootstrap)
+    for i in range(n_bootstrap):
+        boot_means[i] = np.mean(rng.choice(arr, size=n, replace=True))
+    return (float(np.percentile(boot_means, 100 * alpha / 2)),
+            float(np.percentile(boot_means, 100 * (1 - alpha / 2))))
 
 
 # ============================================================================
@@ -221,11 +238,7 @@ def aggregate_paper_stats(paper_stats: List[PaperGroupStats], group_name: str,
     mean_r = float(np.mean(rates))
     std_r = float(np.std(rates, ddof=1)) if n > 1 else 0.0
     se_r = std_r / np.sqrt(n) if n > 0 else np.nan
-    if n > 1:
-        t_crit = stats.t.ppf(0.975, df=n - 1)
-        ci_lo, ci_hi = mean_r - t_crit * se_r, mean_r + t_crit * se_r
-    else:
-        ci_lo = ci_hi = mean_r
+    ci_lo, ci_hi = bootstrap_ci(rates)
     return GroupSummaryStats(
         group_name=group_name, metric=metric,
         total_items=total_items, positive_items=positive_items,
@@ -645,19 +658,19 @@ def generate_full_report(groups: Dict[str, List[ReviewItem]],
     lines.append("  Per-metric test, effect size, and confidence interval:")
     lines.append("")
     lines.append("    Correctness (binary: Correct / Not Correct)")
-    lines.append("      - Item-level rate CI:   Wilson score interval")
+    lines.append("      - Group CI:             paper-level percentile bootstrap (10,000 resamples)")
     lines.append("      - Paired paper-level:   paired t-test on per-paper rate differences")
     lines.append("      - Effect size:          Cohen's d (paired) = mean(diff) / SD(diff)")
     lines.append("      - Diff CI:              t-interval on the paired paper-level differences")
     lines.append("")
     lines.append("    Significance (ordinal 3-class: Not Sig / Marginally Sig / Significant, encoded 0/1/2)")
-    lines.append("      - Item-level mean CI:   t-interval on per-paper means")
+    lines.append("      - Group CI:             paper-level percentile bootstrap (10,000 resamples)")
     lines.append("      - Paired paper-level:   Wilcoxon signed-rank on per-paper mean differences")
     lines.append("      - Effect size:          rank-biserial r (Kerby 2014)")
     lines.append("      - Diff CI:              t-interval on the paired paper-level differences")
     lines.append("")
     lines.append("    Evidence (binary: Sufficient / Requires More)")
-    lines.append("      - Item-level rate CI:   Wilson score interval")
+    lines.append("      - Group CI:             paper-level percentile bootstrap (10,000 resamples)")
     lines.append("      - Paired paper-level:   paired t-test on per-paper rate differences")
     lines.append("      - Effect size:          Cohen's d (paired) = mean(diff) / SD(diff)")
     lines.append("      - Diff CI:              t-interval on the paired paper-level differences")

@@ -72,9 +72,18 @@ class AnnotationResponse(BaseModel):
 
 # ── Debate schemas ───────────────────────────────────────────────────────────
 
+class UserAnnotations(BaseModel):
+    correctness: str | None = None
+    significance: str | None = None
+    evidence_quality: str | None = None
+    action_item_quality: str | None = None
+    free_text: str | None = None
+
+
 class DebateStartRequest(BaseModel):
     item_number: int
     annotator_id: str = "anonymous"
+    user_annotations: UserAnnotations | None = None
 
 
 class DebateStartResponse(BaseModel):

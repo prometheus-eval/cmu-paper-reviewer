@@ -27,8 +27,8 @@
 
     <div class="card">
       <div class="mode-toggle">
-        <button class="mode-pill active" data-mode="queue">Submit with Email</button>
-        <button class="mode-pill" data-mode="byok">Use Your Own Keys</button>
+        <button class="mode-pill active" data-mode="queue">Free Trial (3 trials per day)</button>
+        <button class="mode-pill" data-mode="byok">Use Your Own API Keys (Unlimited)</button>
       </div>
 
       <form id="upload-form">
@@ -52,20 +52,24 @@
 
         <!-- BYOK fields -->
         <div id="byok-fields" style="display:none;">
-          <label for="byok-email">Email address <span class="optional">(optional)</span></label>
+          <label for="byok-email">Email address <span class="required">*</span></label>
           <input type="email" id="byok-email" placeholder="you@example.com">
 
           <label for="mistral-key">Mistral API Key <span class="required">*</span></label>
           <input type="password" id="mistral-key" placeholder="Enter your Mistral API key">
+          <div class="field-hint">Used for OCR of the paper (converting the PDF to text).</div>
 
           <label for="litellm-key">LiteLLM API Key <span class="required">*</span></label>
           <input type="password" id="litellm-key" placeholder="Enter your LiteLLM API key">
+          <div class="field-hint">Used for running the AI Reviewer.</div>
 
-          <label for="litellm-url">LiteLLM Base URL <span class="optional">(optional — defaults to cmu.litellm.ai)</span></label>
-          <input type="text" id="litellm-url" placeholder="https://cmu.litellm.ai">
+          <label for="litellm-url">LiteLLM Base URL <span class="required">*</span></label>
+          <input type="text" id="litellm-url" placeholder="https://your-litellm-proxy.example.com">
+          <div class="field-hint">The base URL of your LiteLLM proxy server.</div>
 
           <label for="tavily-key">Tavily API Key <span class="optional">(optional)</span></label>
           <input type="password" id="tavily-key" placeholder="Enter your Tavily API key">
+          <div class="field-hint">Used for searching relevant information (papers, code repositories) to write a better review. Review quality is highly dependent on this key being provided.</div>
         </div>
 
         <div class="drop-zone" id="drop-zone">
@@ -94,6 +98,13 @@
             <input type="file" id="supp-input" accept=".pdf" style="display:none">
             <span id="supp-file-name" class="file-tag"></span>
           </label>
+        </div>
+
+        <!-- Focused feedback (optional) -->
+        <div class="focused-feedback-section">
+          <label for="focus-area">Request feedback on a specific section or topic <span class="optional">(optional)</span></label>
+          <textarea id="focus-area" rows="2" placeholder="e.g., &quot;Please focus on the methodology in Section 3&quot; or &quot;I'd like feedback on the statistical analysis&quot;"></textarea>
+          <div class="field-hint">By default, the reviewer evaluates the overall paper. If you specify a section or topic, the reviewer will focus its criticism on that part and ensure each item is distinct.</div>
         </div>
 
         <!-- Review Settings -->

@@ -1,0 +1,611 @@
+{
+  "paper_id": 14,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I lean Not Correct because the paper explicitly states a concrete objective in the introduction and keeps a clear descriptive focus on circadian patterns, so the claim that it has no clear focus or objective overreaches. A charitable expert could instead say the link from the descriptive results back to concrete aDBS strategy is fairly loose and some experts may treat that underdeveloped framing as a real focus problem, and that alternative reading is plausible. That makes the factual core borderline enough that downstream significance and evidence are not stable, so I leave them null. Overall, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct because the manuscript lacks external sleep measures, does not control for chronotype or daily activity, and has a much smaller STN subgroup, so interpretability and generalizability are limited. A skeptical expert could say retrospective home-recording studies inevitably cannot control every confound and the paper does acknowledge some limitations, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the specific missing controls and the absence of objective sleep metrics, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge the main point Correct because the methods define day and night from the neural signal itself, use event markers only sparsely as a wakefulness surrogate, and give no artifact-handling description, so the reviewer's methodological concern is valid. A skeptical expert could say the authors did at least validate event timing in a subset and frame the study as retrospective, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the exact day/night procedure and identifies the missing external validation and artifact handling, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge the main point Correct because the paper reports an association with extended-release levodopa but does not explain medication timing or dosing context, so the interpretation of the medication effect is under-specified. A skeptical expert could say the analysis is observational and the authors only claim association rather than a dosing experiment, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies the exact medication claim and the missing schedule information needed to interpret it, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge the main point Correct because the manuscript repeatedly slides between day/night and awake/asleep terminology even though sleep was not directly measured, so the terminology concern is real. A skeptical expert could say readers may infer the intended limitation from context and from the discussion section, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the repeated terminology choice and the lack of direct sleep-state measurement, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge the main point Correct because the abstract wording \"altered by circadian rhythms\" reads more causally than a retrospective observational analysis warrants. A skeptical expert could say many readers would treat this as ordinary shorthand rather than a strict causal claim, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer quotes the exact phrase that creates the ambiguity, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I judge the main point Correct because the abstract says the effect depended on frequency band but never names the bands, so the summary is somewhat vague. A skeptical expert could say the abstract is allowed to stay high level because the detailed bands appear in the main text and figures, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer identifies the exact abstract phrase that lacks specificity, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I judge the main point Correct because the phrase \"direction of circadian rhythm\" is less clear than directly saying activity increased or decreased at night. A skeptical expert could say the parenthetical gloss already makes the intended meaning recoverable, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer quotes the exact wording whose meaning could be sharpened, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I judge the main point Correct because the abstract does not break out the hemisphere counts by target even though that split is central to the cohort description. A skeptical expert could say abstract space is limited and the totals are given later in the paper, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer identifies a concrete missing summary statistic in the abstract, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "I judge the main point Correct because the introduction spends substantial space motivating aDBS even though the study itself is descriptive and does not test an aDBS algorithm, so the framing could be tightened. A skeptical expert could say the discussion does bring the findings back to possible aDBS implications, so the framing is not wholly disconnected, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that better framing around aDBS would materially improve how readers understand the paper's motivation and contribution, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer points to the mismatch between the introductory emphasis and the descriptive analyses, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "I lean Not Correct because the criticism depends on the content of an external cited paper rather than something verifiable from the provided manuscript, so I cannot confirm that the authors mischaracterized that prior study. A charitable expert could instead say a domain expert familiar with van Rheede et al. could reasonably agree that the manuscript overstates sleep-state certainty, and that alternative reading is plausible. That makes the factual core borderline enough that downstream significance and evidence are not stable, so I leave them null. Overall, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "I judge the main point Correct because the detailed claim about acute STN sleep-stage changes is not paired with a clear inline citation in the sentence itself, so asking for a reference is fair. A skeptical expert could say the surrounding paragraph contains nearby references and a reader may infer which studies are meant, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that a missing citation for a detailed physiological claim affects contextual grounding enough to count as Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer points to the specific uncited factual statement, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "I lean Not Correct because the paper did not choose a 13 ± 35 day window as an analysis parameter; that number is just the observed average start time after selecting the first qualifying chronic recording. A charitable expert could instead say the reviewer may simply be asking for clearer explanation of how recording start time related to programming and implantation, and that alternative reading is plausible. That makes the factual core borderline enough that downstream significance and evidence are not stable, so I leave them null. Overall, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "I judge the main point Correct because the manuscript says clinicians selected the chronic sensing frequency during programming but does not state whether that happened on or off medication, which could affect beta-band interpretation. A skeptical expert could say the study is descriptive across many clinically selected frequencies, so exact programming state might not change the broad circadian finding, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies a concrete methodological detail that is missing from the recording-selection description, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "I judge the main point Correct because the paper mentions that chronic sensing usually required sensing-compatible therapy configurations but does not describe exclusions or how often this constrained the cohort. A skeptical expert could say the reporting summary later says no patients were excluded from the initial Percept cohort, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the specific selection mechanism that is not fully reported in the manuscript, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "I judge the main point Correct because the results name only the most common frequency bands in each target and do not provide the full band distribution across hemispheres in the text. A skeptical expert could say the figure later shows per-band counts for the main comparison, so some of that information can be recovered indirectly, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies the missing frequency-band breakdown in the cohort description, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "I judge the main point Correct because the word \"reordered\" is plainly a typo for \"recorded\". A skeptical expert could say a reader can still infer the intended meaning without difficulty, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer points to the exact incorrect word, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "I judge the main point Correct because the paper explicitly says some gamma recordings were chosen because of physiology peaks or dyskinetic symptoms, which is a different selection logic from the other bands and makes inclusion worth justifying. A skeptical expert could say the authors might reasonably view any clinically chosen tracked frequency as part of the real-world sensing landscape they want to characterize, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the stated basis for including gamma recordings and the small gamma subgroup, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "I judge the main point Correct because the representative five-day figure excerpts are not contextualized by total recording duration, selection rationale, or hemisphere identity, so the examples are under-described. A skeptical expert could say the figures are meant only as illustrations and the core quantitative claims come from the full cohort analyses, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that fuller description of the examples would materially help readers evaluate central visual evidence, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer identifies specific missing details about the example traces and captions, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "I judge the main point Correct because the sentence reporting the ANOVA does not explicitly restate that the dependent variable is the day-night power change, so the result could be stated more clearly. A skeptical expert could say the immediately preceding sentences make the intended dependent variable inferable, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact statistical sentence whose target variable is left implicit, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "I judge the main point Correct because the manuscript gives little justification for mixing non-parametric within-band tests with ANOVA across bands and leaves the organization of the ANOVA inputs under-explained. A skeptical expert could say such mixed testing choices can be reasonable if the underlying questions differ, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies the exact statistical choices and the missing explanation for them, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "I judge the main point Correct because the STN theta/alpha result is described qualitatively without an accompanying p-value, unlike the neighboring results. A skeptical expert could say the absence does not block understanding of the overall direction of the finding, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact missing statistic in the results narrative, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "I judge the main point Correct because the GLM section alternates between calling the dependent variable the change in beta power and the direction of circadian rhythm, so the modeled quantity is not crisply defined. A skeptical expert could say Table 2 makes clear that some numeric dependent variable was fit, so readers can infer it was a signed day-night difference, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies the specific ambiguity in the model description, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "I judge the main point Correct because the abstract, introduction, results, and reporting summary say 119 subjects while the methods say 117, so there is a real internal inconsistency in sample size reporting. A skeptical expert could say this could be a simple typo that does not change the actual analyses, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the conflicting subject counts, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "I judge the main point Correct because the manuscript does not report the unilateral/bilateral split, lead-type split, or stimulation configuration breakdown that would better characterize the cohort and hardware context. A skeptical expert could say Table 1 already gives the main demographics and therapy summaries needed for the paper's primary claims, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that these hardware and implantation details are important enough for reproducibility and interpretation to be Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer identifies concrete missing cohort descriptors, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "I judge the main point Correct because the methods mention examples of patient-marked events but do not say which event categories were actually used in validation or what instructions patients had received, which weakens the wakefulness surrogate. A skeptical expert could say the paper only uses the event times as a rough corroboration rather than as a full sleep-labeling system, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the event-based validation step and the missing details about event use, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "I judge the main point Correct because the methods do not explain how missing timeline samples or artifacts were detected and handled in long home recordings. A skeptical expert could say z-scoring and averaging across days may blunt some isolated artifacts even without a detailed description, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies a clear missing processing detail for noisy chronic data, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "I judge the main point Correct because the methods use broad terms such as brain recording and neural signal without clearly defining the measurement or its units in the text. A skeptical expert could say the figures do label raw traces as power in arbitrary units and normalized traces as z-scores, so a reader can piece the meaning together, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer points to the vague terminology and missing definitions, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "I judge the main point Correct because the phrase \"sensing-available configurations\" is device-specific jargon that is not explained for general readers. A skeptical expert could say specialist readers in DBS may already know what configurations the Percept system allows, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer identifies the exact unexplained term, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "I judge the main point Correct because the manuscript reports LEDD but does not describe how it was calculated or cite the conversion method, which hurts reproducibility. A skeptical expert could say LEDD is a standard clinical summary and many readers know common conversion conventions, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the missing calculation or reference for a reported covariate, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "I judge the main point Not Correct because the discussion does not say stimulation parameters were unavailable; it says the therapeutic effect of each parameter was unavailable, which is different from the methods claim that parameter values were extracted. A charitable reading would be the two passages both discuss stimulation and could initially feel loosely worded or confusing, but I do not think that rescues the item's core factual premise. Because the claim itself does not hold up, significance and evidence are null. Overall, I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "I judge the main point Correct because the figure annotations are indeed incomplete: event types are not identified, polar radial scales are unlabeled, and the heatmap generation is only partially described. A skeptical expert could say the examples and captions still communicate the broad intended pattern to a specialist reader, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to concrete missing labels and explanations in Figures 1 and 2, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "I judge the main point Correct because the frequency-band figure is mislabeled as Figure 2 in its caption and the significance symbols are not explicitly decoded in the legend or caption. A skeptical expert could say the surrounding text partially describes which pairwise comparisons were significant, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the mislabeled figure caption and the unexplained symbols, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 34,
+          "reasoning": "I judge the main point Correct because the extended-release violin plot is stored as Figure 4 but captioned as Figure 3, and the text refers to it as Figure 3C even though no such panel exists in the main Figure 3 image. A skeptical expert could say readers can still infer which figure the text intends from context, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies the exact figure-number mismatch between image, caption, and text, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 35,
+          "reasoning": "I judge the main point Correct because Table 2 includes a predictor called channel even though the text only generally mentions therapy contact, so the variable definition is under-specified. A skeptical expert could say readers may infer that channel refers to the dorsal versus ventral contact coding described in the methods, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to a concrete undefined model variable in a key results table, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 36,
+          "reasoning": "I judge the main point Correct because the reviewer is fairly asking whether the supplementary stimulation effect might partly reflect a floor effect rather than disappearance of relative rhythmicity, because the paper only gives a brief visual interpretation. A skeptical expert could say the authors themselves present the effect as within-subject and only as an illustrative limitation, not as a headline quantitative claim, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that this is only a secondary visual nuance in supplementary material and therefore merely Marginally Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer points to a specific supplementary figure interpretation and offers a concrete alternative explanation, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 37,
+          "reasoning": "I judge the main point Correct because the manuscript does contain several obvious typos and small label errors, even if one or two line-specific examples may be noisy because of reconstruction. A skeptical expert could say most of these errors do not block understanding of the science, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer provides multiple concrete typo and labeling examples, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge the main point Correct because the paper presents the nighttime-beta-increase subgroup as a key novelty but gives limited mechanistic explanation and no deeper subgroup analysis to explain it. A skeptical expert could say a descriptive cohort paper need not fully resolve mechanism to contribute a new empirical observation, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact novel finding and the missing analyses or discussion around it, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct because Figures 1C and 2C pool recordings from multiple sensed frequency bands even though the left example panels are beta examples and the band effects differ by frequency, so the heatmaps are easy to misread as beta-only. A skeptical expert could say the captions do say each heatmap includes all recordings and the later figure disentangles frequency bands, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the heatmaps, the example beta traces, and the recorded band distribution, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge the main point Correct because the automated day/night labeling lacks objective sleep validation and could misclassify atypical sleep schedules, which matters for interpreting the reported rhythms. A skeptical expert could say the event-marker corroboration in a subset gives some limited sanity check, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact classification procedure and a concrete failure mode, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge the main point Correct because because medication timing can shape neural power, asking how extended-release levodopa timing interacts with the sleep/wake classification is a fair follow-up that the paper does not address. A skeptical expert could say the classifier is already weakly validated for broader reasons, so this extra medication-timing request may be seen as beyond the paper's realistic scope, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that medication-timing effects on the classifier are central enough to warrant a Significant label, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer identifies the specific missing analysis of medication timing in relation to the classification algorithm, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge the main point Correct because the manuscript does not report sleep questionnaires or scales that might help interpret between-subject differences in circadian profiles. A skeptical expert could say the paper never promises a clinical sleep-phenotyping analysis and already lacks direct sleep staging, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that these scales would substantially improve interpretation of the heterogeneous profiles and should be Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer asks for concrete sleep-related clinical measures that are absent from the report, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge the main point Correct because the GPi versus STN implantation imbalance is large and the paper does not explain target selection or discuss how target choice may correlate with clinical differences. A skeptical expert could say the manuscript does compare a few demographics and is primarily descriptive rather than causal across targets, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact imbalance and the missing target-selection explanation, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I judge the main point Correct because the paper does not show contact locations or compare them between inverse-profile groups, so the suggested follow-up analysis is genuinely absent. A skeptical expert could say contact-location subgrouping may be more exploratory than necessary for the current main claims, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that contact location is important enough for interpreting inverse circadian profiles to make this Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer requests a concrete anatomical comparison that is not presented, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I judge the main point Correct because the reviewer is asking for explanation of a visually identified supplementary pattern, and the paper does not discuss that apparent nighttime increase after stronger stimulation in any detail. A skeptical expert could say the supplementary figure is illustrative and the visual interpretation may be debatable, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the supplementary stimulation effect bears directly on interpretation of a core confound and should be Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer anchors the concern to a specific supplementary figure observation, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I judge the main point Correct because the 119-versus-117 subject discrepancy is real in the manuscript. A skeptical expert could say it may be only a typo rather than an analysis problem, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the conflicting counts across sections, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "I judge the main point Correct because the manuscript indeed contains two figures labeled Figure 2 because the later frequency-band figure caption is misnumbered. A skeptical expert could say the sequence is easy to infer once the images are viewed, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the duplicated figure number, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge the main point Correct because the paper reports signed day-night differences but does not separate whether inverse profiles are driven by higher nighttime power, lower daytime power, or both. A skeptical expert could say the signed difference alone is sufficient for the paper's narrow descriptive claim, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer identifies the missing decomposition of the reported day-night effect, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct because nighttime increases cluster mainly at lower sensed frequencies where the recorded 5 Hz window overlaps the spindle range, and the paper does not directly rule out spindle contamination beyond a brief alpha-contamination discussion. A skeptical expert could say the paper does acknowledge low-frequency contamination concerns and lacks PSG by design, so only limited follow-up is possible, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the relevant figure region, the sensing-window overlap, and a specific external confound, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge the main point Correct because the paper does not test whether inverse circadian profiles align with clinical subtype, so that explanatory analysis is absent. A skeptical expert could say subtype analysis would be exploratory and not strictly required for the paper's main descriptive message, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that clinical subtype could materially explain the novel inverse-profile group and therefore should make this Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer requests a concrete phenotype comparison that is not shown, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge the main point Correct because the manuscript gives little discussion of ECG, motion, or other artifact sources despite uncontrolled home recordings and no explicit artifact pipeline. A skeptical expert could say z-scoring and long recording durations may dilute some artifact influence, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to specific artifact classes and the lack of artifact discussion, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge the main point Correct because the paper does not analyze whether bilateral hemispheres within a patient show related circadian profiles, even though that would be informative for the claim of patient specificity. A skeptical expert could say the study is already complex and does not need every possible within-subject secondary analysis, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that bilateral consistency is central enough to the interpretation of patient-specific rhythms to make this Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer identifies a concrete within-patient analysis that is absent, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge the main point Correct because the introduction and discussion do not adequately engage with sleep spindles or sleep-stage-specific meanings of the canonical bands, even though those issues bear directly on the low-frequency nighttime increases. A skeptical expert could say the paper is primarily about circadian trends rather than full sleep physiology, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to a specific omitted interpretive framework for the key frequency-band result, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "I judge the main point Correct because the heatmaps use antialiased interpolation and pool all recordings in one sorted image, which visually smooths across independent recordings and would be clearer if split by band. A skeptical expert could say the interpolation is a display choice rather than an analysis step and the later band figure partly addresses the grouping issue, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the figure panels and the code that uses interpolated heatmap rendering, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I judge the main point Correct because the paper only briefly comments on the supplementary stimulation effect, so asking for explanation of the apparent daytime decrease plus nighttime increase pattern is fair. A skeptical expert could say this is supplementary, visually interpreted material rather than a central quantitative result, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the stimulation effect is important enough as a confound to make this Significant, and that counterargument is plausible enough that I expect disagreement on significance. The reviewer ties the concern to a specific supplementary figure observation, so the evidence is Sufficient. Overall, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "I judge the main point Correct because the manuscript does use day/night and sleep/wake language inconsistently and does not clearly explain how the labels map onto inverse-profile recordings or null recordings. A skeptical expert could say a careful reader can reconstruct the intended signed-difference convention from the methods and figures, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact terminology mismatch and the under-explained edge cases, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "I judge the main point Correct because several figure labels and panel texts are indeed small relative to the figure size. A skeptical expert could say the figures remain legible when enlarged digitally, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer points to a directly inspectable presentation issue, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "I judge the main point Correct because the manuscript contains multiple typos and labeling mistakes, so a proofreading request is justified. A skeptical expert could say the scientific content is still mostly understandable despite those errors, but that does not overturn the core concern. If addressed, this would modestly improve clarity or reporting, so I mark it Marginally Significant. An opposing view is that the point is too minor to matter, but I do not think that is the better read. The reviewer points to an overall pattern of visible proofreading issues, so the evidence is Sufficient. Overall, I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge the main point Correct because the methods define day and night from extrema of the same neural signal later compared, and there is no gold-standard sleep labeling, so the circularity concern is well founded at the manuscript level. A skeptical expert could say the authors do use event markers as a limited wakefulness check and openly acknowledge the retrospective limitation, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the exact algorithm and the lack of independent sleep assessment, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct because the methods sentence claiming a Mann-Whitney U test against zero is statistically wrong on its face, and the shared code also shows one-sample t-tests instead. A skeptical expert could say the authors might have meant another non-parametric one-sample procedure and simply named it imprecisely, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes both the manuscript test description and the contradictory code, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge the main point Correct because the study averages all nighttime data together even though REM and NREM are known to differ and the paper does not stage sleep, so the reviewer's confounding concern is valid. A skeptical expert could say the paper never claims to resolve sleep-stage physiology and is framed as day-night rather than REM-NREM analysis, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact night-averaging definition and the missing sleep-stage separation, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge the main point Correct because all recordings were obtained under continuous therapeutic stimulation and the paper itself acknowledges stimulation can shape LFP rhythms, so confounding by stimulation is a real methodological limitation. A skeptical expert could say the authors do include TEED and other therapy variables in the analysis and discuss the limitation explicitly, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the stimulation-on recording condition, the limited covariate control, and the paper's own limitation statement, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge the main point Correct because the STN cohort and its within-band subgroups are much smaller than GPi, which genuinely limits power for STN-specific and cross-target conclusions. A skeptical expert could say the paper does acknowledge low STN power in the discussion of the medication analysis, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact GPi/STN and per-band sample counts, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge the main point Correct because the manuscript describes an adaptive max/min-bin circadian algorithm while the shared script hardcodes fixed day and night windows, so there is a real contradiction between reported and shared methods. A skeptical expert could say the shared code may be an older or simplified analysis script rather than the exact final pipeline used for the paper, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the manuscript algorithm and the contradictory code lines, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct because whether one looks at the manuscript's signal-derived periods or the code's fixed windows, the study still lacks externally validated circadian phase labels, so the day/night definition is methodologically weak. A skeptical expert could say retrospective home DBS studies often must rely on imperfect proxies rather than PSG, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact fixed windows, the signal-derived alternative, and the absence of objective validation, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge the main point Correct because the study uses patient-marked events only as a partial wakefulness proxy and has no objective sleep verification for many recordings, which weakens claims about circadian or sleep-related rhythms. A skeptical expert could say event markers were never presented as a full sleep-staging system, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the event-proxy description and the 61% subset validation, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge the main point Correct because clinicians selected the sensed frequency based on prominent peaks, so the per-band cohorts are selection-shaped rather than uniform samples of all patients. A skeptical expert could say the goal of the paper is partly to characterize what was actually tracked in real clinical practice, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the clinician-selected sensing-frequency procedure and the wide frequency range, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge the main point Correct because phrases such as \"modulate\" and \"influenced\" do sound more causal than a retrospective association study can support, especially for the headline medication result. A skeptical expert could say many readers would interpret that language as informal shorthand for association rather than strict causation, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the exact medication wording in the heading and results, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge the main point Correct because the manuscript-defined circadian outcome is computed after selecting high- and low-signal periods from the same neural series, without independent phase labels, so the reviewer's selection-on-the-outcome concern is valid for the paper as written. A skeptical expert could say the shared code suggests a different fixed-window implementation, which means the exact source of bias is somewhat muddied by reproducibility problems, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the exact manuscript segmentation rule and the downstream day-night difference definition, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge the main point Correct because the analyses operate on 165 hemispheres from 119 patients with no described patient-level clustering adjustment, even though many covariates are patient-level and bilateral hemispheres are not independent. A skeptical expert could say one can argue that hemisphere is the intended unit of analysis in DBS studies and that using one recording per hemisphere mitigates some dependence, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the subject/hemisphere counts and the absence of hierarchical modeling, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge the main point Correct because the available code requires private BRAVO infrastructure and missing spreadsheets, while the data availability statement offers only request-based access, so the work is not computationally reproducible from the supplied artifacts. A skeptical expert could say clinical privacy constraints sometimes make perfect public reproducibility impossible, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer quotes the private-module imports, private server dependency, missing local files, and restrictive data statement, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge the main point Correct because the paper really does contain inconsistent GLM statistics for levodopa ER and a mismatch between the stated non-parametric/FDR-corrected band tests and the shared code. A skeptical expert could say the code could be incomplete or outdated relative to the final manuscript analyses, but that does not overturn the core concern. If addressed, this would meaningfully strengthen the paper, so I mark it Significant. An opposing view is that the point is mostly about wording or reporting rather than substance, but I do not think that is the better read. The reviewer points to the conflicting text-versus-table numbers and the exact testing code, so the evidence is Sufficient. Overall, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "paper_id": 15,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks why 19-31h was chosen as the circadian range and why 36h was used as a rolling window. Checking the paper: the 19-31h range is stated but not justified, and Methods section 2.5/4 gives the 36h window but no rationale. The criticism is factually correct — these are arbitrary choices in the paper that are not defended. Significance: these are core methodological choices that affect all main results, so explaining them would genuinely improve the paper. Devil's advocate on significance: one could see this as a presentation/clarification point rather than a substantive fix; still, in chronobiology these ranges are a core methodological choice and most experts would view this as substantive. Evidence: the reviewer points at specific methods choices precisely — verifiable by opening the paper. Experts likely agree this is a substantive, well-pointed concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that strictly, 'circadian' describes a free-running rhythm in constant conditions, and that these patients are in an entrained (time-of-day signals) environment, so 'daily' would be more appropriate. This is a genuine convention in chronobiology, so the core factual claim is correct. Significance: chronobiologists would see this as a substantive terminology issue affecting interpretation; neuroscientists/clinicians may see it as a stylistic terminology preference (the paper's usage matches common loose usage in neuroscience). Devil's advocate plausibly downgrades to Marginal. Evidence: the reviewer appeals to domain convention specifically enough for a chronobiologist to verify. Experts would likely disagree on whether this is substantive or merely stylistic.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer identifies an apparent tension between two claims in the Discussion: 'no evidence of disrupted rhythms causing seizures' vs. the vicious-circle framing that disrupted rhythms may exacerbate disease. Verifying the paper: both statements exist (lines 164 and 168-169). These aren't strictly contradictory (causing seizures ≠ exacerbating symptoms), but the wording does create confusion that clarification would fix. Correct observation. Significant: internal-consistency/clarity issues in a headline Discussion claim are substantive. Evidence: reviewer points at the specific location and quotes the gist of both statements — verifiable. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests renaming 'pathological tissue' to 'epileptic foci' because surgery isn't always successful and perilesional areas may be dysfunctional. Verifying: the paper explicitly defines 'pathological tissue' as a broad term to refer to SOZ and/or resected tissue and explicitly discusses the possibility of broader pathology as a limitation. The reviewer acknowledges this doesn't change results. Correct observation but paper has largely addressed the concern by explicit definition. Significance is ambiguous — some experts would see it as a minor terminology preference (Marginal); others in epilepsy field would see clearer terminology as substantively important. Evidence sufficient via domain appeal. Experts likely disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer recommends adding one or two sentences in the main text summarizing what was considered (all bands, no sex/age difference) since these are all relegated to supplementary. Correct observation — the main text indeed pushes secondary analyses into supplement. Significance: this is a presentation/organization suggestion; addressing it would modestly improve reader experience but doesn't affect core evaluation of the paper. Devil's advocate for upgrading: in a paper that emphasizes generality across bands, including these in-main would strengthen the story — so some experts might call this Significant. Evidence: pointed at supplement vs main text. Borderline between Marginal-Sufficient and Significant; most likely Marginal given it's really a reorganization suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer flags lack of cohort characterization: diagnosis, genetic info, anti-epileptic medication, and whether findings generalize beyond drug-refractory focal epilepsy. Verifying: Table 1 gives minimal demographics (age, sex, temporal/extratemporal); paper never reports ASM status or specific clinical diagnoses per patient, and Suppl. S6 mentions pathology types but not analysis controlling for them. This is a substantive methodological concern. Correct and significant — addressing would materially strengthen the paper's claims. Evidence: points specifically at what's missing (medications, clinical diagnosis). Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks whether seizures themselves are circadian in this cohort and whether the post-ictal period was checked. Verifying: the paper examines peri-ictal (1h before to 1h after seizure) and inter-ictal but does not separately examine post-ictal, and does not explicitly analyze circadian distribution of seizures in this cohort. Correct observation. Significance: adding post-ictal analysis and checking seizure circadian timing would strengthen the independence-from-seizures claim. Evidence: precisely points at what is missing. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer suggests assessing whether diminished rhythms can predictively localize seizure foci as a clinical biomarker. Correct — this is a natural extension the paper doesn't pursue. Significance: adding a prediction/biomarker analysis would considerably strengthen clinical impact, though it's not strictly necessary for the paper's current scientific claim. Devil's advocate: a strict meta-reviewer might say this is a 'future work' suggestion rather than required for acceptance, arguing Marginal. Evidence: clear concrete suggestion, verifiable that paper doesn't do this. Experts plausibly disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer suggests replacing 'are reported' with 'have been reported' in the Introduction. This is a pure grammatical/stylistic preference. Correct in the trivial sense. Marginally Significant — does not affect substance. Evidence: exact quoted location. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer calls the Discussion claim about 'link between rhythm strength and healthy functioning' too strong. Correct observation — the study is correlational and the claim of 'initial evidence' has some hedging but still leaps to 'healthy functioning.' Significance: toning down overclaiming is substantive for scientific accuracy. Devil's advocate: the paper already says 'initial evidence' which is hedged, so some experts might see this as minor. Evidence: exact quote provided. Experts plausibly disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer flags a specific sentence as confusing and suggests rephrasing. Correct in the subjective-readability sense. This is a pure wording clarity issue that doesn't affect the substance of the analysis. Marginally Significant. Evidence: quoted location. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes AUC as a 'crude' measure and recommends established chronobiology techniques like cosinor analysis (providing a specific reference) and wavelet transforms. Verifying the paper: indeed, the analysis relies on bandpass filter + AUC comparisons without amplitude/phase cosinor analysis, which is the field-standard approach for circadian data. Correct methodological concern. Significant because adding cosinor/wavelet analysis would substantively strengthen the rhythm characterization. Evidence: specific external reference and named methods — verifiable. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer asks for deeper cohort characterization (seizure phenotype, entrainment, sleep/wake), justification of 19-31h period (when entrained patients should show close to 24h rhythms), and temporal relationship between EEG and surgery. Correct observations — the paper lacks this detail. Significant because addressing each of these would strengthen interpretability. Evidence: specifies concrete gaps in cohort description. Experts likely agree this is substantive.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer suggests internal-consistency checks by comparing curve characteristics (amplitude, phase) on 24-hour bins with/without seizures, and factoring disease severity. The paper does compare peri-ictal vs inter-ictal but not with amplitude/phase on 24h bins nor disease severity. Correct that these analyses are missing. Significant — more granular within-subject comparisons would strengthen the independence-from-seizures claim. Evidence: constructive specific proposals. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer recommends strengthening the introduction's literature summary and specifying 'rhythms of ...' in the title. This conflates a substantive suggestion (better literature context and hypothesis statement) with a stylistic/terminology preference. Correct that the intro is compact and rhythms is underspecified. Significance is borderline: some experts see better literature framing as substantively improving the paper; others see it as writing/presentation style. Evidence: brief but concrete pointers. Experts plausibly disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer observes that Figure 1a appears to show amplitude loss across days and edge effects on day 1 and day 7. This is a reasonable observation from the figure — edge effects are expected from zero-phase Butterworth bandpass filtering on bounded data. Correct. Significant: if the apparent rhythm reflects filter edge artifacts and non-stationarity rather than persistent rhythms, that affects interpretation. Evidence: specific figure-panel observation, verifiable by opening Figure 1. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer flags absence of multiple comparisons correction across the 30+ AUC tests (Table S2.1) and another 30 mixed-effects tests (Table S2.2). Verifying: both supplementary tables do list many p-values and the paper never mentions FDR/Bonferroni correction. Correct. Significant: a headline claim is 'consistent across bands and rhythms,' which directly depends on multiple-testing control. Evidence: reviewer quotes specific p-values from the tables and cites standards — sufficient. Experts likely agree this is a substantive, well-supported concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues there is no healthy-control comparator; SOZ vs non-SOZ comparisons are all within patients with refractory focal epilepsy. Verifying: this is explicitly the design, and the paper itself acknowledges both that pathology may be broader than SOZ and that future work should build normative maps from healthy tissue. Correct. Significant: absence of healthy controls is a fundamental interpretive limitation. Evidence: reviewer quotes paper's own acknowledgments and cites the Bmal1 ex-vivo study the authors cite. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues significant confounders (ASM tapering, hospital environment, post-implantation effects) are acknowledged but not controlled for. Verifying: the paper's limitations paragraph does acknowledge these exact items but provides no analysis. Correct. Significant: if ASM changes systematically affect different regions differently (as the cited literature suggests), the core result could be confounded. Evidence: reviewer quotes the paper's admission plus external references on ASM-circadian interactions. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer calls the median AUC of 0.62 and 66% consistent subjects 'modest' / 'weak' discrimination. Correct about the numbers and the common interpretation of 0.6-0.7 AUC. Significance is debatable: the paper does present the numbers honestly with percentages and doesn't claim this is a clinical biomarker; the scientific claim is about a population-level effect, where a modest effect size is still informative. Some experts would call this a substantive point about overinterpretation; others would say the paper already reports effect sizes faithfully. Evidence: reviewer cites the exact numbers and standard AUC interpretation. Experts plausibly disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues ASMs are not controlled for and can confound the rhythm findings. Correct — paper never analyzes medication. Significant because ASMs can alter EEG spectra and circadian rhythms per cited references. Evidence: quotes from paper plus two specific external references (ASM-EEG and ASM-circadian). Experts likely agree this is a substantive, well-supported concern — overlaps with claude Item 3 and Human_2 Item 3.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer proposes the alternative hypothesis that diminished 'circadian rhythm' in delta reflects disrupted local sleep architecture in SOZ rather than clock dysfunction. Correct: paper itself says sleep was not investigated, yet delta power in sleep is strongly modulated by local slow-wave activity and sleep-spindles; SOZ has documented local sleep architecture disruption. This is a substantive alternative explanation that the paper should address. Significant. Evidence: paper's own sleep-not-investigated admission, plus two references anchoring the alternative. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer criticizes the 2-day minimum recording as insufficient for reliable circadian estimation. Verifying: paper says 'recording duration between 2-21 days' with mean ~111.5 hours, so some subjects indeed have only 2 days. Two circadian cycles is arguably borderline for reliable rhythm estimation. Correct. Significant. Evidence: cites a chronobiology guideline reference. Devil's advocate: one could argue the band-pass approach extracts rhythm power that is defined regardless of stability; but the reviewer's concern about edge effects and noise in short recordings is valid. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues SOZ vs non-SOZ within the same epileptic brain is not a clean comparison because non-SOZ is also part of the epileptic network. Same concern as claude Item 2. Correct, significant, sufficient. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer argues bandpass filtering on short data with noise-added imputation can create ringing artifacts and false rhythmicity. Verifying code and supplementary S1: indeed, imputation adds Gaussian noise and filtering is applied afterward, and short records are filtered with 2nd-order Butterworth. This is a real technical concern and matches the actual methods. Correct. Significant: if filter artifacts contribute to rhythm power estimates, results could be biased. Evidence: quotes code and supplement. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues imputation uses stochastic noise injection before forward-backward filtering, and though imputed samples are masked afterward, filter leakage from imputed values into nearby non-imputed samples biases the rhythm power estimates. Verifying: supplement S1 does describe noise-added imputation, and code calls sosfiltfilt after imputing. The reviewer also notes no random seed — confirmed. Correct methodological concern and inconsistency (the main text says imputed data weren't used but supplement says they were). Significant — rhythm power is the central quantity. Evidence: exact quotes from paper and code. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes the statistical test type for AUC > 0.5 is not specified, and multiple comparisons across 30 rhythm×band entries are not corrected. Verifying: the paper reports p-values but indeed doesn't specify the test name (e.g., signed-rank), and no multiple comparison correction is mentioned. Correct. Significant: basic reporting transparency and multiplicity both affect core claims. Evidence: exact quotes and external references. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer flags that paired t-test on rolling-window AUCs with overlapping windows violates independence assumptions and is used to claim no peri-ictal difference. Also notes Figure 4 is not covered by any script in the public code (P1-P5 in README end at figure 3). Verified: README indeed lacks any Figure 4 reproduction script. Correct on both sub-points. Significant: affects a headline seizure-independence claim. Evidence: direct quotes from methods/caption plus README excerpt. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer notes (a) the supplement reports Wald z-tests rather than LRT p-values despite the main text saying LRT is used, and (b) the code uses chi2.sf(LR_statistic, 2) with df=2, though the nested vs reduced models differ by a single fixed effect (is_soz). Verified in P4.mixedeffects.py: the nested model adds only is_soz to the reduced model; the chi-square survival uses df=2, which is likely an implementation bug (should be df=1). This would produce conservatively-wrong p-values in Table S2.2 or in downstream summaries. Correct. Significant — affects the core 'independent of brain region' claim. Evidence: precise code quote and specific test-name discrepancy. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

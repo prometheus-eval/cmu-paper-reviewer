@@ -11,8 +11,8 @@ build/
 venv/
 *.db
 *.sqlite3
-./annotations.json
-./annotations_debates.json
+/annotations.json
+/annotations_debates.json
 scripts/download_annotations_.py
 scripts/deploy_.sh
 scripts/download_annotation_.sh
@@ -23,3 +23,7 @@ peerreview_bench/outputs/
 peerreview_bench/papers/
 peerreview_bench/**/agent_trajectories/
 peerreview_bench/**/*_trajectory/
+peerreview_bench/**/conversations/
+peerreview_bench/metareview_bench/results_v*/
+peerreview_bench/openhands/
+peerreview_bench/update_hf_drop_three_papers.py

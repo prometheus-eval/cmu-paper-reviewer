@@ -71,6 +71,8 @@ MODEL_COLORS = {
 OUTPUT_DIR = _HERE / 'main_results'
 FIG_SVG = OUTPUT_DIR / 'figure3.svg'
 FIG_PNG = OUTPUT_DIR / 'figure3.png'
+FIG_B_SVG = OUTPUT_DIR / 'figure3-b.svg'
+FIG_B_PNG = OUTPUT_DIR / 'figure3-b.png'
 
 RANDOM_SEED = 42
 N_BOOTSTRAP = 2000
@@ -316,6 +318,154 @@ def plot_figure(metrics: Dict, ks: List[int]):
 
 
 # ---------------------------------------------------------------------------
+# PER-POSITION COMPUTATION (figure 3-b)
+# ---------------------------------------------------------------------------
+
+def _item_level_binary(items: List[ReviewItem], metric: str) -> Tuple[float, float, float]:
+    """Item-level rate with bootstrap CI for a binary metric."""
+    if metric == 'correctness':
+        filtered = get_items_for_correctness(items)
+        vals = [i.correctness_numeric for i in filtered]
+    elif metric == 'evidence':
+        filtered = get_items_for_evidence(items)
+        vals = [i.evidence_numeric for i in filtered]
+    elif metric == 'fully_good':
+        vals = [1 if is_fully_good(i) else 0 for i in items]
+    else:
+        raise ValueError(f"Unknown metric: {metric}")
+    if not vals:
+        return (float('nan'),) * 3
+    return _bootstrap_ci([float(v) for v in vals])
+
+
+def _item_level_ordinal(items: List[ReviewItem]) -> Tuple[float, float, float]:
+    """Item-level mean significance with bootstrap CI."""
+    filtered = get_items_for_significance(items)
+    vals = [float(i.significance_numeric) for i in filtered]
+    if not vals:
+        return (float('nan'),) * 3
+    return _bootstrap_ci(vals)
+
+
+def compute_metrics_by_position(groups: Dict[str, List[ReviewItem]],
+                                 positions: List[int]
+                                 ) -> Dict[str, Dict[int, Dict[str, Tuple[float, float, float]]]]:
+    """For each AI model and position p, compute metrics on items with
+    review_item_number == p exactly. Human groups are computed once
+    (all items) since position doesn't apply to them."""
+    out: Dict[str, Dict[int, Dict[str, Tuple[float, float, float]]]] = {}
+
+    for name, items in groups.items():
+        out[name] = {}
+        is_ai = name not in HUMAN_GROUPS
+        for p in positions:
+            if is_ai:
+                pos_items = [it for it in items if it.item_number == p]
+            else:
+                pos_items = items
+            out[name][p] = {
+                'correctness':  _item_level_binary(pos_items, 'correctness'),
+                'significance': _item_level_ordinal(pos_items),
+                'evidence':     _item_level_binary(pos_items, 'evidence'),
+                'fully_good':   _item_level_binary(pos_items, 'fully_good'),
+                '_n_items': len(pos_items),
+            }
+    return out
+
+
+def plot_figure_b(metrics: Dict, positions: List[int]):
+    """Plot per-position quality (figure 3-b)."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    plt.rcParams.update({
+        'font.family': 'DejaVu Sans',
+        'font.size': 11,
+        'axes.titlesize': 12.5,
+        'axes.labelsize': 11,
+        'xtick.labelsize': 10,
+        'ytick.labelsize': 10,
+        'legend.fontsize': 10,
+        'figure.dpi': 150,
+        'savefig.dpi': 150,
+    })
+
+    fig, axes = plt.subplots(2, 2, figsize=(10.5, 8.5), sharex=True)
+
+    panels = [
+        ('correctness',  'Correctness rate',         '%',   50.0, 100.0, axes[0, 0]),
+        ('significance', 'Significance mean',        '0–2', 0.80, 2.00,  axes[0, 1]),
+        ('evidence',     'Evidence sufficiency rate', '%',   75.0, 100.0, axes[1, 0]),
+        ('fully_good',   'Fully good rate',          '%',   20.0, 80.0,  axes[1, 1]),
+    ]
+
+    for metric_key, title, unit, y_min, y_max, ax in panels:
+        y_scale = 100.0 if unit == '%' else 1.0
+        clip_hi = 100.0 if unit == '%' else float('inf')
+        clip_lo = 0.0
+
+        # AI model lines
+        for model in AI_MODELS:
+            means, lows, highs = [], [], []
+            for p in positions:
+                m, lo, hi = metrics[model][p][metric_key]
+                means.append(m * y_scale)
+                lows.append(max(lo * y_scale, clip_lo))
+                highs.append(min(hi * y_scale, clip_hi))
+            ax.plot(positions, means, marker='o', linewidth=2.2, markersize=7,
+                    color=MODEL_COLORS[model], label=model, zorder=5)
+            ax.fill_between(positions, lows, highs, alpha=0.16,
+                            color=MODEL_COLORS[model], zorder=3, linewidth=0)
+
+        # Human reference lines (constant across positions)
+        p_ref = positions[-1]
+        for human_name, line_style in (
+            ('Top-Rated Human', '--'),
+            ('Lowest-Rated Human', ':'),
+        ):
+            m, _, _ = metrics[human_name][p_ref][metric_key]
+            ax.axhline(m * y_scale,
+                       color=MODEL_COLORS[human_name],
+                       linestyle=line_style,
+                       linewidth=1.6,
+                       label=human_name,
+                       zorder=2)
+
+        ax.set_title(title, pad=8)
+        if unit == '%':
+            ax.set_ylabel(f'{title} (%)')
+        else:
+            ax.set_ylabel(f'{title}')
+        ax.set_xticks(positions)
+        ax.set_xticklabels([f'Item {p}' for p in positions])
+        ax.set_xlim(positions[0] - 0.25, positions[-1] + 0.25)
+        ax.set_ylim(y_min, y_max)
+        ax.grid(alpha=0.25, linestyle=':')
+        for spine in ('top', 'right'):
+            ax.spines[spine].set_visible(False)
+
+    for col in range(2):
+        axes[1, col].set_xlabel('Review item position (1 = most important)')
+
+    order = AI_MODELS + HUMAN_GROUPS
+    handles_labels = axes[0, 0].get_legend_handles_labels()
+    h_map = dict(zip(handles_labels[1], handles_labels[0]))
+    ordered = [(h_map[l], l) for l in order if l in h_map]
+    fig.legend(
+        [u[0] for u in ordered],
+        [u[1] for u in ordered],
+        loc='lower center',
+        ncol=len(ordered),
+        bbox_to_anchor=(0.5, 0.005),
+        frameon=False,
+    )
+
+    fig.tight_layout(rect=[0, 0.05, 1, 1.0])
+    fig.savefig(FIG_B_SVG, format='svg', bbox_inches='tight')
+    fig.savefig(FIG_B_PNG, format='png', bbox_inches='tight', dpi=160)
+    plt.close(fig)
+
+
+# ---------------------------------------------------------------------------
 # TERMINAL REPORT
 # ---------------------------------------------------------------------------
 
@@ -365,6 +515,11 @@ def main():
     plot_figure(metrics, MAX_ITEMS_RANGE)
     print(f"  -> wrote {FIG_SVG}")
     print(f"  -> wrote {FIG_PNG}")
+
+    pos_metrics = compute_metrics_by_position(groups, MAX_ITEMS_RANGE)
+    plot_figure_b(pos_metrics, MAX_ITEMS_RANGE)
+    print(f"  -> wrote {FIG_B_SVG}")
+    print(f"  -> wrote {FIG_B_PNG}")
 
 
 if __name__ == '__main__':

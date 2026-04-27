@@ -40,7 +40,7 @@ _BENCH_DIR = _HERE.parent
 _EA_SIM_DIR = _BENCH_DIR / 'similarity_check' / 'expert_annotation_similarity'
 
 for p in (_HERE, _BENCH_DIR, _EA_SIM_DIR, _EA_SIM_DIR / 'baselines',
-          _BENCH_DIR / 'meta_review'):
+          _BENCH_DIR / 'metareview_bench'):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
@@ -83,17 +83,49 @@ def _judge_pair(
     reasoning_kwargs: Dict[str, Any],
 ) -> Dict[str, Any]:
     """Run the 4-way similarity judge on one (rubric_item, ai_item) pair.
-    Returns {parsed_answer, parsed_binary, error}."""
-    user_text = FOURWAY_USER_PROMPT_TEMPLATE.format(
-        paper_text=paper_content,
-        reviewer_a='Human (rubric)',
-        reviewer_b='AI Reviewer',
-        item_a=rubric_text,
-        item_b=ai_text,
+    Returns {parsed_answer, parsed_binary, error}.
+
+    Uses prompt caching: system prompt and paper content are marked with
+    cache_control so they're reused across all pairs from the same paper
+    (~50 pairs/paper for recall). Saves ~90% on input costs for Anthropic.
+    """
+    item_text = (
+        "### Item A (from Human rubric)\n"
+        f"{rubric_text}\n\n"
+        "### Item B (from AI Reviewer)\n"
+        f"{ai_text}\n\n"
+        "---\n\n"
+        "Using the four-category taxonomy from the system prompt, classify "
+        "the relationship between Item A and Item B. Apply the decision "
+        "procedure rigorously: subject first, then argument, then evidence.\n\n"
+        "Provide your final answer at the very end wrapped in answer tags using "
+        "exactly one of the four full label strings from the system prompt."
     )
     messages = [
-        {'role': 'system', 'content': FOURWAY_SYSTEM_PROMPT},
-        {'role': 'user', 'content': user_text},
+        {
+            'role': 'system',
+            'content': [
+                {
+                    'type': 'text',
+                    'text': FOURWAY_SYSTEM_PROMPT,
+                    'cache_control': {'type': 'ephemeral'},
+                }
+            ],
+        },
+        {
+            'role': 'user',
+            'content': [
+                {
+                    'type': 'text',
+                    'text': f"### Paper\n{paper_content}\n\n---\n\n",
+                    'cache_control': {'type': 'ephemeral'},
+                },
+                {
+                    'type': 'text',
+                    'text': item_text,
+                },
+            ],
+        },
     ]
 
     try:
@@ -232,8 +264,8 @@ def main():
     parser.add_argument('--byoj', action='store_true',
                         help='Use any review_items_*.json found in review/ dirs')
     parser.add_argument('--similarity-model', type=str,
-                        default='litellm_proxy/anthropic/claude-opus-4-6',
-                        help='LLM judge for 4-way similarity')
+                        default=None,
+                        help='LLM judge for 4-way similarity (default: litellm_proxy/azure_ai/gpt-5.4 for CMU proxy)')
     parser.add_argument('--concurrency', type=int, default=16)
     parser.add_argument('--temperature', type=float, default=1.0)
     parser.add_argument('--limit', type=int, default=None)
@@ -248,6 +280,17 @@ def main():
     print(f'  {len(rubric)} papers, {total_rubric} rubric items '
           f'({len(dropped)} papers dropped)')
 
+    # Resolve default similarity model based on active base URL
+    if args.similarity_model is None:
+        base_url_file = _BENCH_DIR / 'api_key' / 'base_url.txt'
+        base_url = ''
+        if base_url_file.is_file():
+            base_url = base_url_file.read_text(encoding='utf-8').strip()
+        if 'cmu.litellm.ai' in base_url or not base_url:
+            args.similarity_model = 'litellm_proxy/azure_ai/gpt-5.4'
+        else:
+            args.similarity_model = 'openai/gpt-5.4'
+
     # Set up similarity judge
     bare_model = args.similarity_model
     if bare_model.startswith('litellm_proxy/'):
@@ -257,11 +300,16 @@ def main():
     print(f'  Similarity judge: {args.similarity_model}')
     print(f'  Concurrency: {args.concurrency}')
 
-    # Load paper content for prompts
-    from load_data import load_reviewer  # noqa: E402
-    reviewer_rows = load_reviewer()
-    paper_content_by_id = {int(r['paper_id']): r.get('paper_content', '')
-                           for r in reviewer_rows}
+    # Load paper content from disk (preprint.md files)
+    paper_content_by_id: Dict[int, str] = {}
+    for pd in args.paper_root.glob('paper*'):
+        try:
+            pid = int(pd.name.replace('paper', ''))
+        except ValueError:
+            continue
+        preprint_md = pd / 'preprint' / 'preprint.md'
+        if preprint_md.exists():
+            paper_content_by_id[pid] = preprint_md.read_text(encoding='utf-8')
 
     # Iterate over papers
     paper_ids = sorted(rubric.keys())

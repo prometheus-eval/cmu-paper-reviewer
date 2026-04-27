@@ -1,0 +1,363 @@
+{
+  "paper_id": 80,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that the paper's multiplicative model O_ij=S_i C_j A_ij E_ij applies only to non-zero entries (conditional on M_ij=1), as explicitly stated in the Methods. The concern that zeros may actually be structural versus induced by low sequencing efficiency is substantive and would meaningfully improve the method if addressed. Devil's advocate: one could argue the presence indicator M_ij is a separate mechanism by design and justified in scope; however, the reviewer's concern about sensitivity to violation is still constructive. Evidence: reviewer explicitly references how model handles zeros and requests sensitivity analysis — sufficient for verification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Main point: the hypothesis testing procedure for p-values and the thresholding mechanism are not clearly described. The paper defines the thresholding estimator and gives a λ selection criterion but indeed omits details on how p-values are computed for distance correlation and for cross-validation details. Correct and significant (reproducibility). Devil's advocate: some details are in supplementary notes; a skeptical expert might say the paper does reference thresholding details — so might be borderline. Evidence: vague (doesn't point to specific lines), which makes evidence borderline between sufficient and requires more.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks about pseudo-count sensitivity. The paper applies log transformation conditional on non-zero entries (M_ij=1), so pseudo-counts may not be strictly applied. A charitable reader sees this as asking about zero handling/log-transform sensitivity, which is indeed unaddressed in the paper. Devil's advocate: one could argue pseudo-counts aren't strictly used since zeros are handled separately — making the question technically misdirected. This borderline interpretation suggests experts would disagree on correctness. Evidence is minimal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks whether the method provides theoretical FDR guarantees. The paper in fact explicitly acknowledges it does NOT provide FDR control (as noted in supplementary/methods discussion about alpha being heuristic). This is a substantive, correct observation. Fixing/clarifying would meaningfully help. Devil's advocate: the paper already acknowledges this, so one expert might say the reviewer's critique is already addressed — but the question is specifically asking for theoretical guarantees which the paper does not provide, so the criticism stands. Evidence is short but relates to a specific absence verifiable against paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks whether the model is consistent with a compositional model using only taxon-specific vectors. This is a conceptual clarification question that touches on important identifiability issues (same concerns raised by gemini/gpt-5.2). Correct and significant because the relationship between the multiplicative model and a pure compositional model is non-trivial and deserves clarification. Devil's advocate: this is a question rather than a critique, so one reviewer might downgrade to marginal — experts may disagree on significance. Evidence is minimal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer states the extension of the model to multiple ecosystems is not clearly described. Reviewing the paper: the main paper does mention between-ecosystem estimation and shows Figure 4 evaluating it, but the detailed methodology for cross-ecosystem correlation estimation is not explicitly laid out in Methods. The concern is valid. Devil's advocate: a skeptic might say details are in supplementary notes. Evidence is minimal — the reviewer does not point to a specific section where more detail is needed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer raises specific concerns about supplementary figure 2: whether axes are log-transformed, discrepancy in sample count, and LOESS curve overfitting. These are specific visual claims about a figure the reviewer identifies. Without access to the PDF I cannot fully verify, but the concerns described (LOESS peak at 1.5 with no data there) are specific enough to be plausible and verifiable by anyone viewing the figure. Devil's advocate: some details may be misread; this is borderline. The critique is somewhat minor (one supplementary figure) so may be marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks for intuitive interpretation of assumptions underlying theorems. This is a constructive writing/exposition suggestion that would improve accessibility. Correct and significant because the paper does state assumptions (0.1, 0.2, 0.3) without intuitive discussion. Devil's advocate: one could argue this is just a writing preference rather than substantive — might be downgraded to marginal. Evidence is minimal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer was confused about what 'ecosystem' means in human microbiome context — a sample, a group, a phenotype? The paper indeed uses 'ecosystem' in the multivariate statistical sense without early clarification. Correct observation about clarity, would improve readability. Devil's advocate: the paper does discuss gut/oral environments as examples, so a careful reader could infer; thus it might be marginal. Evidence: reviewer clearly describes their confusion about specific terminology — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Closely related to item 1 — suggests providing early explicit examples. Correct, constructive for clarity/exposition. Devil's advocate: this is more a suggestion than a critique of substance — could be marginal. Evidence is minimal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer notes that SECOM's sparsification via p-value filtering is conceptually similar to SparCC's 0.3 cutoff, weakening a claimed differentiator. This is a substantive and correct observation — the paper does criticize SparCC's arbitrary cutoff while using its own filtering mechanism. Devil's advocate: SECOM uses p-values which have statistical interpretation while SparCC uses correlation magnitude — these are distinct. Still, the paper's own discussion of sparsity selection is partly circular. Evidence is specific and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks about the specific source of SparCC's 0.3 cutoff and notes SparCC itself estimates correlations differently. This is a factual accuracy point about description of SparCC. Minor but improves precision. Devil's advocate: it's a small accuracy suggestion — likely marginal. Evidence: quotes directly from SparCC paper — sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer suggests reframing the Discussion to focus on meaningful comparators (SparCC, SPIEC-EASI) rather than Pearson. This is a constructive writing suggestion. Correct and would improve the paper. Devil's advocate: this is arguably just presentation preference; some experts might downgrade to marginal. Evidence is clearly articulated.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer points out that 50/100 taxa being correlated is not sparse, and questions the simulation setting. This overlaps with gpt-5.2's item 2. The reviewer correctly identifies potential tension between the paper's sparsity narrative and the simulation design. Correct and significant because it affects the benchmark's relevance. Devil's advocate: the simulation may still be informative; one might consider it minor. Evidence: quotes equation and compares to SparCC's stated assumption — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer asks whether the joint pair (linear, distance) correlations identify the form of association in simulations. This is a constructive suggestion that would strengthen the evaluation by directly testing the stated use-case in Remark 3. Correct and significant. Devil's advocate: could be considered a nice-to-have — but since the paper makes specific claims about how to interpret the pair, testing this is valuable. Evidence is specific.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer asks about realism of the assumptions, particularly signal-to-noise. Correct — the paper does make strong assumptions (0.2 small noise-to-signal) without empirical validation. Aligns with gemini item 2 and gpt-5.2 item 4. Devil's advocate: the reviewer's phrasing is a mild question rather than a firm critique. Evidence is brief.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Stylistic suggestion about Figure 1 grid alignment. Correct observation, but this is pure presentation preference. Marginally significant — would help readability but doesn't affect substance. Evidence is clear (reviewer names the specific panels).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Like Human_1 item 7 — concern about LOESS overfitting in Supplementary Figure 2. Correct (specific observation about curve behavior). Marginally significant — about a supplementary illustration. Evidence is specific to the figure content.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Reviewer asks for an example/context for the claim that existing methods are not scale invariant across ecosystems. The paper states this but doesn't illustrate. Correct and would improve clarity. Devil's advocate: this is minor exposition — could be marginal. Evidence points to specific passage.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Reviewer notes that in Figure 2, Pearson's bad performance obscures comparison among compositional methods. Correct observation about figure readability. Marginally significant — presentation issue. Evidence is clear (reviewer explicitly points at Figure 2).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Reviewer points out the Supp Fig 5 legend discrepancy. Correct minor presentation issue. Marginally significant / near-trivial. Evidence is specific.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer notes SECOM is not packaged as an easy-to-install tool (e.g., Bioconductor). Correct — the paper points to a GitHub code archive but not a formal package. This affects reproducibility and adoption. Devil's advocate: for a Nature-type venue, the methodological contribution may be more important than packaging — some experts would consider this marginal. Evidence is clear (reviewer references specific distribution venues).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer correctly notes the Norwegian infant gut data section only applies SECOM, without comparing to alternatives. Confirmed by reading the paper. This is a substantive criticism: without comparison on real data, the method's advantage on the real case isn't demonstrated. Devil's advocate: real-data validation without ground truth is limited anyway — but comparison could still highlight qualitative differences. Evidence: specific reference to the section title — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Follow-up to item 2 — Norwegian data section is purely descriptive and wouldn't strongly argue for SECOM's superiority even with comparisons. Correct and significant for demonstrating real-world value. Devil's advocate: the descriptive nature is acknowledged in the paper as 'proof of concept' — so perhaps marginal. Evidence is clear as it builds on item 2.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer claims authors conflate 'linear' with 'monotonic', pointing specifically to the Spearman example. This is technically correct: Spearman measures monotonic, not just linear, relationships, and fails on non-monotonic (parabolic) relationships. The paper does loosely describe Spearman as 'measure of linear associations'. This is a substantive terminology point that affects how the paper frames its contribution. Devil's advocate: the paper's usage follows common loose convention in some statistics literature — experts may differ on how serious this is. Evidence: reviewer quotes the exact passage — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer argues the paper's claim that relationships are 'not always linear' isn't demonstrated by the paper itself. This is a valid critique of overreach, tying into item 4 about terminology. Correct. Devil's advocate: the paper does show distance correlations that differ from linear correlations in the real data — which could be considered demonstration. Borderline correctness. Evidence sufficient — quotes the claim.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer suggests better motivation for multi-ecosystem setting and mentions FlashWeave as a method not considered that works across ecosystems. Correct — the paper does not compare to FlashWeave and the motivation for the multi-ecosystem simulation is indeed thin. Significant — missing relevant baseline. Evidence: specific reference to FlashWeave with DOI — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer identifies a mismatch between the sub-Gaussian assumption in Theorem/Lemma 0.1 and Negative-Binomial simulation data. The concern is technically correct: the theoretical guarantees assume sub-Gaussian, NB is heavy-tailed. Devil's advocate: after log transformation (conditional on non-zero), NB becomes more Gaussian-like; this may partially satisfy sub-Gaussianity in practice. Significance: this is a substantive theoretical-empirical gap. Evidence: reviewer quotes specific passages from the paper and supplementary — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes unequal sparsification strategies across methods disadvantage competitors. Correct — different methods use different (sometimes ad-hoc) thresholds: SparCC's 0.3, proportionality's 5th percentile, SECOM's p-value or cross-validation. This is a substantive evaluation-fairness concern. Devil's advocate: following each method's 'recommended' cutoff is arguably the most natural choice. Evidence: reviewer quotes specific simulation-methodology passages — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer notes small sample sizes (34-46) for the NoMIC analysis without CIs or error bars, undermining the real-data conclusions. Correct — the paper reports point estimates without uncertainty quantification for the biological findings. Significant — these findings are a key part of the paper's illustration. Devil's advocate: the paper is explicit that this is 'proof of concept' — but the biological narrative still makes strong claims. Evidence: specific sample size quotes and reference to sample-size recommendations — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues distance correlation detects any dependence (heteroscedasticity, mixtures, outliers), not specifically nonlinear functional relationships, so biological interpretation may be overreach. Correct and substantive. Devil's advocate: the paper's framing is standard in the dCor literature; some would say 'nonlinear' is fine as shorthand. Evidence: specific quotes about biological pairs — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer notes only quadratic nonlinearity tested; no threshold, sigmoid, exponential, etc. Correct observation about simulation scope. Significant — expanded nonlinearity scenarios would strengthen the paper's claims. Devil's advocate: quadratic is a common starting point; some reviewers might consider this a marginal extension rather than necessary. Evidence: specific quote of simulation setup — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer claims the method's ability to infer absolute abundances from relative data without external reference is mathematically impossible (identifiability). The paper does claim corrected counts support inference 'in a unit volume of ecosystem'. The identifiability critique has technical merit — without spike-ins or mock communities, absolute abundances are not identifiable in general. Devil's advocate: SECOM uses assumptions (sparsity, zero-mean residuals) that partially address identifiability; whether the paper's claims are truly 'impossible' vs 'overstated' is a domain-expert judgment call. Experts likely disagree on correctness given this nuance. Evidence: specific paper quotes plus foundational compositional-data literature — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer critiques the small noise-to-signal ratio assumption (σ_e^2 << σ_ll^0) as unrealistic. Correct — this is a strong assumption acknowledged by the paper. Microbiome data IS known to be overdispersed/noisy. Aligns with Human_2 item 8, gpt-5.2 item 4. Devil's advocate: the assumption is approximate and the paper acknowledges it; some reviewers consider it standard. Evidence: quotes the assumption and the derivation — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues distance correlation on bias-corrected compositional data may detect spurious dependence from the sum constraint. Technically correct — compositional constraint induces dependence. However, SECOM's 'bias-corrected' values are not actually a closed composition but a centered log-space estimate, so the reviewer's critique may not fully apply. Borderline correctness; experts may differ on whether the concern is valid post-correction. Evidence: quotes plus references to compositional data literature — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer points out that the variance in the weighted estimator w_j is not clearly specified. Correct — the paper indeed defines w_j using Var(o_ij - \\bar{o}_j) but does not explain how this variance is estimated in practice, creating a potential circularity. Significant for reproducibility. Devil's advocate: a charitable reader might assume a standard sample variance, but this is indeed not stated. Evidence: specific quote identifying the ambiguous passage — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues the novelty claim 'there are no measures in the literature that quantify these nonlinear relationships' is factually wrong (e.g., mutual information, distance correlation itself pre-existed; CoNet uses both). Correct — MI and dCor have been used in microbiome network inference. Significant — affects the paper's framing. Devil's advocate: perhaps the authors meant 'no methods tailored to compositional microbiome data with bias correction' — but the claim as written is too broad. Evidence: quotes the specific claim and an external tool (CoNet) supporting MI/dCor — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes a discrepancy between the prose ('adjacent taxon') and the formula (all pairs within the first 50 taxa are correlated) in the simulation setup, making ground truth ambiguous. This overlaps with Human_2 item 6. Without access to supplementary material I cannot fully verify, but the concern is specific and plausible. Significant for reproducibility of benchmarks. Devil's advocate: this may be an OCR or typo in the supplementary. Evidence: direct quotes from supplementary — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer critiques the optimization formulation (with PD constraint and unit diagonal) being replaced with simple soft-thresholding without explanation, and the CV criterion min_λ ||R̂ - R_n||_F which is odd. Correct — the stated CV criterion is not a proper cross-validation (it compares estimator to same empirical matrix), and the substitution of constrained optimization with soft-thresholding is not justified. Aligns with Human_1 item 2. Devil's advocate: this may be a citation error — the original Rothman et al thresholding does use a proper CV; the paper may be citing that without restating. Evidence: specific quotes — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues the claim of 'explicit estimation' of sampling fractions and sequencing efficiencies is not supported by the centering-based elimination described. Correct — c_j is eliminated by centering, not estimated. And claims of 'absolute abundance' inference rest on strong assumptions. Overlaps with gemini item 1, Human_1 item 5. Significant for evaluating the paper's stated contribution. Devil's advocate: in a loose sense, centering does 'account for' efficiencies; some might consider the discrepancy minor. Evidence: specific quotes from intro and methods — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer critiques the p-value filtering lacking FWER/FDR control while the paper claims advantages in avoiding inflated false correlations. Correct — the paper explicitly acknowledges it does not control error rates, yet makes strong FPR claims. Overlaps with Human_1 item 4. Significant. Devil's advocate: the paper does disclose this limitation. Evidence: specific quotes from multiple paper sections plus multiple-testing literature — sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

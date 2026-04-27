@@ -1,0 +1,246 @@
+{
+  "paper_id": 37,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The item asks how reproducibility for 'the same samples' is handled. The wording 'samples' is oddly suited to an EHR/ICD code paper and suggests the reviewer may be thinking of a different domain, but the core concern—that reproducibility is not adequately shared—can charitably be read as applicable since the paper's code omits a critical dataset.py module. Devil's advocate (for correctness): a strict reader would find the claim too vague and possibly about a different paper entirely, since the paper does include methods and code; a charitable reader would still note reproducibility gaps. Because the item's applicability is genuinely borderline, I predict experts would disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The item talks about 'inhomogeneous deposition of the film,' 'coffee ring,' 'thickness variation,' and 'ageing of the thin film.' None of this applies to the Enformer EHR paper — it is clearly a review item copied from or intended for a different (materials/thin-film) paper. Devil's advocate: there is no charitable reading under which film deposition and ageing concerns are meaningful for an EHR transformer study. The main point is factually inapplicable. Experts would almost certainly agree this item is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The item is empty — no content was provided. With no claim to evaluate, there is no main point that can be correct. Devil's advocate: there is no way to charitably construe content that does not exist. Both experts would agree this item has no valid review claim.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The item is empty — no content was provided. There is nothing to verify against the paper. Devil's advocate: no charitable reconstruction is possible from blank content. Experts would agree this is Not Correct by default.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The item is empty — no content was provided. No claim exists to judge. Devil's advocate: there is no charitable reading of empty content. Both experts would mark this Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper quotes Ross et al. that a practical suicide-prevention tool must achieve above 1.7% PPV, and notes Enformer's 8.45% PPV. The reviewer points out that an 8.45% PPV still means ~91.5% of interventions target patients who will not self-harm, and that 'minimizes resource cost and intrusion' is not literally true as stated. This is factually correct and constructive for clarifying the clinical utility framing. Devil's advocate: a charitable reading of the paper says Enformer exceeds the minimum threshold, and the 'minimize' wording is from the cited reference; but the reviewer's objection to the claim as written is valid. The item is Correct, Significant (affects interpretation of main clinical claim), and the reviewer quotes specific lines — Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer requests clarification on what ICD codes actually represent in the VA setting (billing vs clinical problem lists), which is a substantive methodological concern — the meaning of the prediction target affects interpretation of all downstream claims. Devil's advocate: some readers might see this as background knowledge that ICD codes serve multiple purposes, making the criticism less pressing; but given the paper's clinical deployment claims, clarity about target codes is genuinely important. Correct, Significant, and Sufficient (the reviewer's framing makes the issue clear without needing outside lookup).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes the clinical dissimilarity between VA (general veteran) and MIMIC (ICU) populations, and asks about concrete task definitions. This is a valid generalizability concern — the paper uses MIMIC only for DOAP, without explaining the population mismatch. Devil's advocate: a strict reviewer might note that Jaccard similarity on ICD codes is domain-agnostic enough that ICU vs general differences may not materially affect the claim; but the reviewer's call for more information is reasonable. Correct, Significant, Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly observes that PPV improvement over BERT for self-harm full history (7.14% to 8.67%) is modest in absolute terms, and asks about clinical significance. The numbers are verified against Table 3. Devil's advocate: the reviewer could be charged with ignoring the relative improvement (~21%) and the AUPRC gain; but asking about clinical translation of discrimination gains is a standard and constructive query. Correct, Significant, Sufficient (specific numbers cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer raises a substantive concern: the model predicts when a clinician will enter a pancreatic cancer ICD code, not the biological onset of disease, and visit intervals vary. This is a valid critique of clinical utility that the paper does not address. Devil's advocate: a charitable reader could say that predicting ICD code assignment one visit earlier still enables earlier screening; but the reviewer's structural points (billing vs clinical reality, variable inter-visit duration, inpatient/outpatient differences) are all legitimate and constructive. Correct, Significant, Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer identifies an awkward sentence and requests rephrasing. This is a pure wording/style issue — Marginally Significant. Devil's advocate for significance: upgrading to Significant would require the unclear phrasing to obscure the paper's substance, which this doesn't. Correct, Marginally Significant, Sufficient (specific line number and quote).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer points out a dropped word or clarification needed in a sentence at line 75. This is a minor clarity/typo fix. Devil's advocate: one could argue that 'uncommon' needing a noun is a substantive ambiguity, but it's obvious from context. Correct, Marginally Significant, Sufficient (specific line and phrase).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figure 1 is shown and indeed contains 'Exam to Educational Institution' as a code label. The reviewer is asking what this means, which is a minor clarity question about a figure element. Devil's advocate: a careful reader could recognize this as the literal ICD-10 Z02.0 category or similar exam code, so it's clear to experts; but for a broad readership the label is confusing. Correct, Marginally Significant (doesn't undermine core claims but would improve figure readability), Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure 3 shows the word 'pateint' which is a typo for 'patient'. Verified in the figure. This is a clear typo. Devil's advocate: typos are never substantively important. Correct, Marginally Significant, Sufficient (directly identifies the typo).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's external validation on MIMIC-IV is indeed limited to the DOAP task (Jaccard similarity), not to the primary clinical tasks (pancreatic cancer, self-harm). The reviewer also correctly notes the dataset is much smaller than pretraining. This is a substantive generalizability critique. Devil's advocate: some experts would note that external validation of clinical tasks on MIMIC is hard because MIMIC wouldn't have equivalent PTSD/pancreatic cancer cohorts; but the reviewer's point about asymmetry between claims and evidence is well supported by direct paper quotes. Correct, Significant, Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper's ablation analysis for the three components (visit masking, encoder-decoder, date embedding) is indeed only reported for the DOAP task using Jaccard similarity, with results in Supplementary Table 3. The reviewer correctly notes ablations are not shown for the headline clinical tasks. Devil's advocate: one could argue that since DOAP is the pretraining objective, ablations there are the right place to evaluate components; but downstream task ablations would strengthen the paper. Correct, Significant, Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Verified: main_bart.py imports from dataset (DataCollatorForICDBERT etc., prepare_dataset) and no dataset.py file exists in the code directory. This is a concrete reproducibility problem. Devil's advocate: the code may be partial/illustrative only, and the reviewer doesn't acknowledge the provided sample_load.py; but the missing file does block running main_bart.py as written. Correct, Significant, Sufficient (exact quotes from code lines).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Verified from Table 2: Enformer 82.73 (81.81-83.65) vs BERT 81.11 (80.53-81.69). The upper bound of BERT (81.69) is below the lower bound of Enformer (81.81), so CIs are actually adjacent not overlapping in the strict sense — the reviewer's claim of overlap is slightly inaccurate. However, the broader point (small absolute gain ~1.6 points, clinical significance unclear) is correct and constructive. Devil's advocate: a strict expert could call this Not Correct because the CIs as reported do not overlap; but the main concern about clinical meaningfulness of a small gain still holds. Borderline → predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper does name the model 'Enformer,' which collides with the DeepMind Enformer published in Nature Methods (2021). The code README also uses 'TransformEHR,' which the reviewer correctly observes as an inconsistency. Devil's advocate on significance: is a name collision a substantive issue that would improve the paper if fixed? Some experts would say yes — scholarly communication and citation hygiene matter. Others would call this a stylistic/naming preference, Marginally Significant. The underlying factual claim is clearly correct, but whether it is Significant vs Marginally Significant is genuinely debatable. Predict disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Same name-collision observation as claude-opus-4-5 Item 5. Factually correct — the DeepMind Enformer in Nature Methods (2021) uses this exact name. Devil's advocate on significance: as with the other reviewer, whether a name clash is Significant (scholarly confusion, search collisions) or Marginally Significant (stylistic preference) is genuinely debatable. Evidence is specific (named citation). Predict disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Verified from icdmodelbart.py lines 1205–1218: the DateYearMonthDayEmbedding.forward method asserts `type(input) == datetime.datetime` and calls self.embed_year(input.year) on an integer, while embed_year is a SinusoidalPositionalEmbedding expecting a tensor. This is a concrete code defect for a headline component (date embedding). Devil's advocate: the paper's results could have used a different (internal) working implementation; but as released, the code would crash as the reviewer describes, which is a valid reproducibility concern. Correct, Significant, Sufficient (quote with line-level detail).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly notes that predicting all ICD codes of a next visit is not fundamentally novel — Doctor AI (Choi et al. 2016) already predicted next visit diagnoses using RNNs. The paper frames this as a novel pretraining objective. Devil's advocate: the paper's specific contribution (visit-level masking in a seq2seq pretraining framework at 6.5M scale) could be argued as distinct from Doctor AI's direct supervised next-visit prediction; an expert might partially defend the paper's framing. But the reviewer's main point — that 'next visit prediction' itself is not novel — holds. Correct, Significant (affects novelty positioning), Sufficient (named specific reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper compares only to a generic BERT baseline pretrained on the VHA cohort. The reviewer complains that Med-BERT and BEHRT are not explicit baselines. However, the paper states that BERT was pretrained on the same VHA cohort with Med-BERT-style preprocessing, arguably approximating Med-BERT (and the paper uses multi-level embeddings following Med-BERT). Devil's advocate: a charitable reader may say the paper's BERT IS an implementation-matched Med-BERT, making the criticism partially incorrect; an uncharitable reader would say the baselines should be explicitly named as Med-BERT/BEHRT with their full pretraining objectives. The claim is genuinely borderline — predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that the pancreatic cancer cohort has ~47% case fraction (case-control sampling enriched), while the self-harm cohort description is internally confusing (70,967 PTSD patients, but 1,342 cases and 281 controls don't cleanly reconcile with a 1.9% rate). AUPRC is prevalence-dependent, so this matters for the central claim. Devil's advocate: one could argue that case-control enrichment is standard in rare-disease studies and that the authors do state the 1.9% rate; but the inconsistencies are real and relevant to interpreting AUPRC/PPV. Correct, Significant, Sufficient (quotes specific numbers).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper states: '5 random seeds', 'One sided student's t-test'. The reviewer correctly flags: small n, one-sided testing without pre-registration, no multiplicity correction across tasks/metrics/baselines. These are well-established concerns in ML benchmarking. Devil's advocate: a charitable reader might accept 5 seeds with t-test as common in the field; but the p<0.001 claim in the abstract does demand more rigor. Correct, Significant (statistical rigor affects headline claim), Sufficient (specific quotes + named reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Verified in trainer.py: calc_overlap_bart is called per batch (lines 1003, 1017), and meanap/num_meanap are accumulated (sum of batch AUROCs / number of batches) — this is an averaging of per-batch AUROCs, not a dataset-level AUROC. The reviewer also notes the unusual yhat_raw construction with per-position min. The metric is also stored under 'map' key. All verifiable from the shown code. Devil's advocate: the paper's reported numbers may come from a different (unreleased) evaluation path, so this may not directly affect paper results; but releasing a miscomputed evaluation metric is a legitimate reproducibility concern. Correct, Significant, Sufficient (full code quotes).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Same missing dataset.py observation as claude-opus-4-5 Item 3, plus additional concern that the task-specific binary classifier finetuning for pancreatic cancer/self-harm is not clearly implemented in the released code. Verified: dataset.py is absent, and the main training entrypoint is oriented toward sequence-generation pretraining. Devil's advocate: the code is labeled as finetuning code in the README, so partial code may still illustrate the method even if not runnable; but the reviewer's point about completeness for the headline clinical tasks stands. Correct, Significant, Sufficient (exact code reference + TRIPOD+AI standard citation).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}
