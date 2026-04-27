@@ -1,0 +1,172 @@
+{
+  "paper_id": 3,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper claims NQEs matter up to about 473 K and only briefly mentions milder-condition examples such as biomass conversion, so asking for clearer discussion of which zeolite reactions are actually affected is a fair scope/relevance criticism. The concern is real, but its importance is somewhat debatable because the paper already gives at least one example.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper reports a quantum-inclusive activation energy of 55.8 kJ/mol and explains lower experimental barriers mainly by residual water and other non-ideal features. The reviewer correctly notes that comparing an ideal isolated-site H-CHA model to real materials is not fully fair and that the discussion of experimental discrepancies is somewhat sweeping. The item cites specific values, figures, and literature, so it is well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This criticism does not hold up because the paper already uses umbrella sampling and also adds lower-temperature DFT umbrella-sampling validations at 273 K and 573 K for the 2-3 hop to test transferability beyond the 873 K training data. The claim that low-temperature simulations should be added is therefore factually off as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper itself argues that low experimental barriers are likely related to water in zeolites, yet all simulations here are for the dry framework. Suggesting an explicit hydrated calculation is therefore a valid and constructive request that would improve comparison with experiment. The evidence is sufficient because the missing case is clearly specified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The figures show that the barrier/free-energy profiles change with temperature, but the manuscript does not clearly explain the physical reason for the higher-temperature trend. Requesting a clearer explanation of that trend is a valid methodological/interpretive comment and would improve the paper. The reviewer points to the relevant figures, which is enough to verify the issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure S8 shows validation MAE steadily decreasing and then flattening, not turning upward, so it does not indicate overtraining in the usual sense. The reviewer may be asking about training efficiency or an early stopping criterion, but the stated overtraining concern is not supported by the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper does not publicly provide the trained potential files, and making them available would materially improve reproducibility and reuse. Asking for exportable model files is therefore a valid reproducibility criticism rather than a mere convenience request. The evidence is sufficient because the absence of such files from the paper/supplement can be directly checked.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The manuscript does not describe an active-learning or outlier-detection loop for configurations encountered during MLP-driven MD/PIMD, even though extrapolation beyond the training set is a real concern for learned potentials. That makes the reviewer's request for clarification valid and substantively useful. However, the item gives only a generic question and little justification, so the evidence is somewhat borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Whether Figure 5 belongs in the main text is a subjective presentation judgment, so it is acceptable as a review comment. But it is only about figure placement, not substance, and it is close to the line between a minor presentational nit and something that could simply be omitted.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is a real inconsistency: the paper is about H-CHA, yet Figure S3 is labeled H-SSZ-13. That is a minor presentation/nomenclature issue, but the reviewer identifies it precisely enough for easy verification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure S9 uses distance-style axis labels while Eq. S5.9 itself uses r for the proton-oxygen distances, so the reviewer correctly flags a notation inconsistency. This is a minor but valid presentational point with exact pointers to the affected figure and equation.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explains why a high-temperature training regime is useful for sampling reactive regions, but it does not really justify why 873 K in particular was chosen. So the comment is understandable, though some readers may feel the general rationale already suffices. That makes correctness somewhat borderline across meta-reviewers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer quotes the exact passage and is right that presenting transferability as a success because the simulation did not blow up is weak, especially when the reported force errors for unrelated frameworks are still around 196-258 meV/A. Requesting more careful language about what those tests do and do not show is a valid substantive comment on overclaiming.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The methods specify Nos\u00e9-Hoover chains and bead counts but do not give the thermostat mass/time-scale details the reviewer asks for. That is a legitimate reproducibility concern, and the requested missing parameter is specific enough to verify directly from the methods.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does not publicly release the amassed DFT data, trained potential files, or input files; it only provides correspondence/contact information. The reviewer is therefore correct that public sharing would substantially improve reproducibility and scientific value. The criticism is specific and easy to verify from what is absent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "A central part of this comment is valid: the paper discusses NQE enhancement relative to a classical baseline, which is not directly measurable experimentally, and it does not compute a more experimentally accessible quantity such as an H/D isotope effect. However, the reviewer also folds in a broader claim about lack of relevance to a wider audience, so the main point is mixed enough that experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "It is true in a broad sense that ML-accelerated PIMD and related ideas are not new, and the reviewer provides concrete external references. But the paper does not claim to invent ML+PIMD in general; it claims a first application to an activated event in heterogeneous catalysis and already cites prior ML/PIMD work. Because the criticism partially applies yet partially misses the paper's scoped novelty claim, correctness is likely to split experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer fairly raises that barrier errors of up to about 5 kJ/mol can matter for Arrhenius rates and that training on classical high-temperature data may not obviously cover all regions relevant for quantum simulations. The paper does include one explicit DFT-PIMD validation case, so the concern is not fatal, but broader accuracy concerns remain reasonable. The support is meaningful but not fully complete, making evidence borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Parts of this item are valid, such as asking for earlier citation context around centroid-based quantum TST and clearer framing of RPMD approximations. But the reviewer also criticizes the paper for making a Matsubara-dynamics claim that does not appear in the manuscript. Because the item mixes correct citation/framing points with a mis-targeted subclaim, expert meta-reviewers could plausibly disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

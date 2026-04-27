@@ -1,0 +1,315 @@
+{
+  "paper_id": 60,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests deleting a parenthetical phrase in L122-123. This is a minor stylistic preference that does not affect the substance of the paper. Correct as a subjective editorial suggestion, evidence is a specific line reference. Devil's advocate for correctness: there's nothing factually contestable. For significance, this is a word-choice nit, not an issue that would substantively improve the paper. Experts would agree it is Correct, Marginally Significant (not worth removing from the review but not constructive), Sufficient (specific line reference).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer questions whether the mortality ratio is a valid indicator of 'health services demand.' This is a legitimate methodological/interpretational concern since the paper's statement that 'demand on regional health services was 1.7 to 3.8-fold' conflates mortality with demand. Correct (the concept conflation is real). Significant (affects interpretation). Evidence is a specific line reference. Devil's advocate for significance: an expert might view this as a minor wording issue rather than a substantive methodological problem, leading to possible significance disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Suggestion to add maps of ratios a/c and b/d to Figure 3, referenced in specific lines. This is a constructive suggestion that would make the compound amplification claim more transparent. Correct (valid suggestion). Significant (would meaningfully improve the paper's presentation of key results). Sufficient (specific figure and line references). Devil's advocate: some experts might see this as a presentation preference rather than substantive. Likely agreement on Correct+Significant+Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Rewording suggestion for a sentence describing Figure 4, including replacing 'lines' with 'ellipse contour'. Looking at the paper, 'lines' is indeed used to describe ellipse contours, which is imprecise. Correct (the rewording is a valid clarity improvement). Marginally Significant to Significant - it's a wording fix, not substantive, but does aid clarity. Sufficient (specific line references). Devil's advocate: an expert might upgrade to Significant since the paper's current wording is technically inaccurate (ellipses not lines).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Suggestion to cite air conditioning/heating literature as adaptation measures for L296-303. The paper currently lists tree coverage, reflective roofs, shutters, and ventilation but not AC/heating explicitly. The suggested references are specific and relevant. Correct. Significant (would strengthen discussion). Sufficient (specific references provided). Likely clear agreement on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Methods should use past tense - a stylistic/convention issue. Correct as a stylistic convention in scientific writing. Marginally Significant (doesn't affect paper substance). Sufficient (self-evident). Devil's advocate for significance: unlikely to be significant. Clear-cut minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Question whether mortality data were available at finer geographical scale (e.g., counties). This points to the regional aggregation being relatively coarse. Correct (valid methodological suggestion). Significant (finer scale would strengthen the analysis). Sufficient (specific suggestion). Devil's advocate for significance: some experts might see the regional scale as adequate and downgrade to Marginally Significant since the paper explicitly chose this scale. Possible significance disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Asks what the spatial resolution of HadUK-Grid is. The paper does not specify the resolution in the main text. Correct (info is missing). Significant (methodological detail that should be reported). Sufficient (specific missing detail). Devil's advocate: some experts might see this as a minor detail since HadUK-Grid is a well-known dataset. Possible significance disagreement but likely agreement that it should be added.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Suggestion to weight temperature by population density. This is a standard and important methodological consideration for regional-scale analyses. Correct (valid concern). Significant (would improve analysis validity). Sufficient (clear concrete methodological critique). Devil's advocate: the paper might argue administrative regions are adequate. Likely agreement on Correct+Significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Points out that modelling choices (e.g., DF for seasonality) are not sufficiently justified and sensitivity analysis is missing. Verified by reading Methods: paper states 8 DF/year but doesn't justify or test alternatives. Correct. Significant (sensitivity analyses are standard and would strengthen the paper). Sufficient (specific items named). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Suggests improving description of time-series regression model and DLNM at L386-398. Correct (description is indeed terse). Significant (better methodological description would help reproducibility). Evidence is borderline: the reviewer points at specific lines but doesn't say what specifically needs more detail. A strict expert might call this Requires More, a charitable expert Sufficient. Likely disagreement on evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Suggests including the formula of the time-series regression model. Correct (formula is indeed absent). Significant (explicit formula improves methodological clarity and reproducibility). Sufficient (specific missing element). Clear-cut.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Suggests reporting region-specific temperature-mortality association curves in Supplement. Correct (these are standard additions for DLNM papers). Significant (important for readers to see the underlying associations). Sufficient (concrete suggestion). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Asks how heat- and cold-related mortality were calculated referencing L410-411. The paper does describe this in Methods but the description may benefit from more detail. Correct (valid request for clarification). Significant (central computation merits clear explanation). Sufficient (specific line reference). Devil's advocate: a strict expert might say this is adequately described and downgrade; possible significance disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Suggest replacing 'social restriction' with 'physical distancing'. Pure terminology preference. Correct as a stylistic suggestion. Marginally Significant. Sufficient (specific line and replacement). Clear-cut minor wording point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer claims the statement about temperature deaths being 'more under-reported' than COVID is unsupported. The paper's data shows temp mortality was 58-75% of COVID deaths in most regions and only exceeded in South West England. The 'under-reporting' claim is about media/public attention, not numerical magnitudes, so the reviewer somewhat misreads the point. However, the core concern that the claim isn't strongly data-supported is valid. Correct (the claim about under-reporting is interpretive and not rigorously shown). Significant (affects a key message). Sufficient. Devil's advocate: the paper's claim is about public perception/attention not the numerical magnitude, so a charitable expert might say the reviewer misreads. Possible correctness disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer points out age structure varies across regions (median age 44 in SW vs 35 in London) and recommends age-adjusted rates. This is a significant methodological concern since the regional comparisons are confounded by age. Correct. Significant (age-adjustment is standard for cross-regional mortality comparisons). Sufficient (specific example with source). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer notes that in low-capacity settings like Pakistan and Africa, vital registration is incomplete, so the mortality figures cited in the intro aren't directly comparable to UK excess deaths. Correct (well-established point about vital registration). Significant (nuance that should be added to contextualize). Sufficient (cites specific authoritative sources). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Points out that the 7M COVID deaths figure is officially reported only, while excess deaths (WHO estimate) are much higher. Since the paper is about excess mortality, this distinction is relevant. Correct. Significant (more appropriate comparison for a paper about excess mortality). Sufficient (cites specific WHO Nature study). Likely agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer asks if Figure 1 is a sum of regional models or a model fitted on the total. The paper does not clearly answer this. Correct (legitimate clarity question). Significant (affects interpretation of confidence intervals). Sufficient (clear specific question pointing to a specific figure). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer notes that only mid-2021 population counts are cited but deaths per 100,000 are compared for 2010-2019 vs 2020-2022. What population counts were used for 2010-2019? Looking at Methods, only mid-2021 is cited. The code used by gpt-5.2 reviewer shows that 'reg_pops_15' is used for previous decade, but this isn't disclosed in the paper. Correct. Significant (important methodological detail). Sufficient (specific gap identified). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Points out cold-related deaths also carry ILI/respiratory confounders, making attribution difficult. Correct (epidemiologically valid point). Significant (adds nuance to the paper's interpretation). Sufficient (reasoning is self-evident to domain experts). Devil's advocate for significance: this may be a minor supplementary point rather than central. Slight possible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues the independence assumption between temperature and COVID deaths is violated due to overlapping vulnerable populations. The paper explicitly states this assumption. The reviewer cites relevant literature (Ali et al. 2025). Correct (the critique is substantively valid and echoed by the paper's own limitation section). Significant (central methodological concern). Sufficient (quotes paper text and cites specific literature). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Critiques using 1981-2022 data with COVID deaths removed, which may not capture pandemic-specific relationships. The paper acknowledges this limitation but proceeds. Correct (valid methodological concern). Significant (affects validity of temperature mortality estimates during COVID period). Sufficient (quotes paper and cites relevant literature). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Critiques KS tests with small sample sizes (10-22 events). The paper does use KS tests as quoted. Correct (the sample size concern is real). Significant (affects the statistical reliability of a key finding). Sufficient (quotes paper, cites power analysis reference, explains reasoning). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Identifies that the paper states the July 2022 heatwave alerts were issued in July 2021, which appears to be a factual error (the 40.3°C event was in July 2022). Verified in the paper text. Correct (clear factual error/typo). Significant to Marginally Significant - it's a factual error but essentially a typo that doesn't affect the analysis. Sufficient (quotes paper, cites Met Office/Wikipedia). Devil's advocate for significance: the reviewer themselves notes this doesn't affect quantitative analysis. A strict expert might call it Marginally Significant (typo); another might call it Significant (factual error in paper). Clear significance disagreement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Points out that using a constant 40-year average of daily deaths as baseline ignores temporal trends in mortality. Verified in code - the paper uses deathdoy averaged across all years. Correct (important methodological point). Significant (affects absolute attributable death estimates). Sufficient (code quote, reference to Gasparrini standard practice). Clear agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Critiques the independence claim after removing COVID deaths, pointing out pandemic indirect effects on non-COVID mortality. Correct (valid concern). Significant (affects the paper's central methodological claim). Sufficient (quotes paper, cites relevant literature). This largely overlaps with claude-opus item 1 but focuses on the 'theoretically independent' claim specifically. Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Argues the additive compound definition doesn't capture interactive effects between hazards. Correct and well-supported. Significant (affects definitional meaning of 'compound'). Sufficient (quotes paper, cites Phillips et al). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Raises the harvesting/mortality displacement effect - COVID depleting vulnerable population might bias temperature mortality estimates. Correct (well-documented phenomenon). Significant (potential systematic bias not addressed in paper). Sufficient (cites Toulemon & Barbieri reference). Devil's advocate: some experts might argue harvesting effects are typically small over short windows, possibly downgrading significance. Possible minor significance disagreement, but the substantive issue is clear. Leaning agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Points out the comparison Heat+COVID vs Heat-only is trivially higher because COVID adds deaths. Correct (valid critique of the '1.7-3.8 fold' statement). Significant (undermines a key quantitative claim). Sufficient (specific quote, clear logical argument). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Detailed critique of the independence/additivity assumption in the compound calculation, with code quotes showing how components are summed directly without uncertainty propagation or interaction modeling. Correct (valid and thorough critique). Significant (central methodological concern). Sufficient (extensive quotes from paper, code, and literature). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Critiques the exposure-response estimated over 1981-2022 and climatological calendar-day baseline. Verified via code that deathexp is calendar-day average. Correct (well-founded methodological concern). Significant (affects absolute attributable numbers). Sufficient (paper and code quotes, reference to Vicedo-Cabrera/Gasparrini). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Critiques the ~2x decade comparison claim as not robust due to 70-day scaling and differing event identification criteria across periods. Verified via code and Methods. Correct. Significant (affects headline claim). Sufficient (code, paper quotes, logical argument). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Code/data reproducibility critique: absolute hardcoded paths, missing intermediate outputs, missing input data. Verified by inspection of README and scripts. Correct (clear reproducibility issues). Significant (important for transparency in computational epidemiology). Sufficient (specific code quotes, README content). Clear agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

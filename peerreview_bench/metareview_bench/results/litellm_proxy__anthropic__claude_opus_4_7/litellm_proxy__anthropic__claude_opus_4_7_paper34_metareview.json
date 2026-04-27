@@ -1,0 +1,227 @@
+{
+  "paper_id": 34,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer's main point is that the impedance analysis is problematic — spectra do not start at the origin, and given low pellet densities (70–77%) the measured conductivity likely includes grain boundary contributions, which makes the direct comparison with kMC bulk predictions suspect. This is verifiable: Figure 4c indeed shows a semicircle offset, and the SI reports compacities of 69–77%. The paper compares ~0.1 S/cm measured vs ~0.2 S/cm computed and calls it 'excellent agreement', so the critique directly challenges a central claim. Devil's advocate: an expert could counter that NASICON total-pellet conductivities are routinely used as proxies for bulk at high T, so the comparison is defensible — but the reviewer's point about pellet density and bulk/GB separation is well-grounded and standard in the field. Significant (would improve the paper by forcing proper bulk/GB separation). Evidence is specific (Figure 4c, pellet density numbers, Au-alloy mechanism), making it sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is essentially a publication recommendation contingent on Item 1 — the reviewer states that because the impedance analysis is flawed and it supports a key claim, the manuscript cannot be recommended. The factual premise (impedance supports the bridge-theory-and-experiment claim) is correct: the paper's abstract and discussion do emphasize 'robust link between measurements and theory'. Devil's advocate: some experts would consider a bare recommendation statement not to be an independent criticism worth separate judgment — it's a summary that adds little. Others would view it as a substantive escalation that highlights why Item 1's concern is pivotal. This divergence makes significance debatable: some would downgrade to Not Significant (just a recommendation) while others keep Marginal/Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the kMC does not include grain boundaries, yet experiment includes both bulk and GB contributions, and suggests low-T measurements plus SEM to decouple. The main point is correct — the paper's kMC is bulk-only and the experimental samples have variable density (69–77%) with no reported microstructure. Devil's advocate: the paper already frames the computation as 'bulk' and discusses variance; but the criticism that limitations should be explicitly discussed and microstructure documented is well-founded. Significant — SEM and explicit decoupling would materially strengthen the theory–experiment comparison. Evidence is sufficiently specific (calls out bulk/GB mismatch, different synthesis methods, relative densities).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the kMC freezes the host framework (only Na hops) and asks whether the paddle-wheel effect (polyanion rotations) may be a missing effect. This is factually correct — the paper explicitly states 'only Na ions can hop while the remaining atoms are frozen'. Devil's advocate: paddle-wheel is typically relevant to plastic crystals/sulfides; for oxide NASICONs it's arguably minor, so an expert could downgrade significance. However, the authors do plan to extend methodology to sulfides, so the paddle-wheel discussion is germane. Significant — addressing this would clarify the method's scope. Evidence invokes a well-known effect (paddle-wheel) which is a specific enough domain pointer.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer raises that NEB is done at 0 K while experiments are at >300 K, and asks whether Arrhenius behavior can be assumed across the full range. Correct — the paper's NEB is indeed at 0 K; the authors use KRA barriers to parameterize the kMC, and thermal effects on barriers are not explored. Devil's advocate: the KRA/kMC framework implicitly assumes T-invariant barriers, a standard approximation; some experts may consider this routine and only marginally significant. But given the paper's experimental comparison spans a phase transition, the question is constructive. Evidence: reasonably specific (NEB at 0 K vs finite-T experiments; Arrhenius applicability). Borderline on evidence — one might want a specific numeric/temperature comparison.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises multiple points: (i) 1500 K structure vs experimental slow cooling, (ii) should use Rietveld not Le Bail to get Na occupancies and quantify ZrO2 impurities, (iii) phase purity claim should be revised. Main point is correct — paper uses Le Bail (per Figure 4a caption) which doesn't yield site occupancies, and the paper does claim phase purity. Whether ZrO2 impurity is visible is not directly shown in main text but is a reasonable concern. Devil's advocate: some experts might accept Le Bail as sufficient for lattice constants only and not require Rietveld; others would insist Rietveld is necessary to back up the Na-site-occupancy comparisons used in Figure 3. Significant — Rietveld refinement would substantially strengthen the structural interpretation and the theory-experiment comparison. Evidence is reasonably grounded (cites Le Bail, phase purity claim) but doesn't quote the phase purity passage directly.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks for inclusion of structural parameters of the models used and clarification of their symmetry (given monoclinic-rhombohedral transitions). Correct — the paper doesn't explicitly provide the structural models used in the kMC in the main text (supplementary has some detail but symmetry of quenched 1500 K structures isn't clearly stated). Devil's advocate: these details are arguably in the SI / code repository, so some experts might mark this marginal. But it is a reproducibility concern that would help the paper if addressed. Significant. Evidence specifies precisely what's missing (symmetry, Na occupancies) which is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks for calculation/quantification of window/bottleneck sizes when replacing P5+ with Si4+, correlated with conductivity trends. The paper qualitatively says 'Si-rich migration units will be larger, facilitating migration' but does not quantify bottleneck sizes. So the broader concern (quantification missing) holds. Devil's advocate: since the paper provides NEB barriers that implicitly capture geometric effects, an expert might argue explicit window-size analysis is redundant → Marginal. Another expert would value a quantitative structural correlation as a real improvement → Significant. Evidence: reviewer identifies a specific missing calculation but doesn't acknowledge the paper's qualitative discussion, leaving the evidence chain borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Two sub-claims: (a) abstract should specify temperature for the 0.1 S/cm value; (b) a claim that 0.1 mS/cm at 200 °C is high should be revised in light of current state-of-the-art. (a) is clearly correct — the abstract's 0.1 S/cm value has no temperature qualifier, and similar values in literature are reported at 25 °C. Devil's advocate: some experts might view abstract conciseness as OK if context is clear; but standard practice is to specify temperature. Significant — this affects how the paper's headline claim is interpreted. Sufficient — the reviewer points to specific text.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks authors to consider the effect of higher/optimal Na stoichiometry when discussing the positive effect of P→Si substitution. The paper does mention 'maintaining high Na content' and 'combining high Si content with trivalent doping', so the concept is partially addressed. The reviewer's broader concern — that the Na-Si interplay deserves more explicit discussion in the stated context — could still hold. Devil's advocate: since the paper does discuss both Na and Si roles, an expert could mark this Not Correct (criticism already addressed). Alternatively, if the reviewer is asking for deeper/explicit integration in that specific paragraph, the point remains valid. Borderline correctness — I judge it barely Correct; significance is Marginal since the paper largely covers this. Evidence is specific (cites page 26).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the paper calls ~0.2 S/cm (computed) vs ~0.1 S/cm (measured) 'excellent agreement', which is a 2× (100%) overestimate. Correct — the paper does make this 'excellent agreement' claim for a 2× factor. Devil's advocate: in solid-electrolyte computational work, agreement within a factor of 2 is often considered very good given DFT and statistical uncertainties (a single order of magnitude in diffusivity is commonly quoted as acceptable); some experts might mark 'excellent' as defensible. Others would insist 2× is not 'excellent' when headline claims ride on it. The specific factual observation is correct; the significance/interpretation is where experts would differ. Significant — it affects how the paper's validation narrative reads. Sufficient (direct quote).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the SI's NEB relaxation criterion of 0.29 GPa stress is unusually high (typically 0.05 GPa or less). The quoted value (0.29 GPa) matches the SI verbatim. Correct domain observation — a residual stress of 0.29 GPa is indeed loose for DFT convergence in fixed-volume NEB; however this was for initial/final image optimization, and a moderately high tolerance is not necessarily damaging if cell shape is reasonable. Devil's advocate: many experts consider 0.29 GPa stress still acceptable for saddle-point interpolation; others would insist on tighter tolerances. Significance is debatable: likely Marginal for a paper focused on macroscopic transport, since small residual stress is unlikely to substantially change KRA barriers. Some experts would call it Not Significant as a minor technical nit, others would call it Marginally/Significant for methodological rigor. Sufficient evidence (specific quote).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes the direct comparison of kMC bulk with experimental total-pellet conductivity, citing low compacities (69–77%) and the use of different equivalent circuits for x=1.5 vs x=2.0/2.4. All quotes match the paper/SI; the use of a one-phenomenon Debye model for x=2.0/2.4 indeed precludes bulk/GB decoupling. Core concern is well-founded. Devil's advocate: the paper does discuss this to an extent and notes literature variability; some experts might see the comparison as acceptable given temperatures and variability. But standard practice in the field is clearly to separate bulk and GB contributions. Significant — it attacks the central agreement claim. Evidence is specific and well-supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the kMC is built on the R-3c rhombohedral structure, while experiments at 373 K for x=2.0, 2.4 are in the monoclinic C2/c phase — a structural mismatch undermining low-T comparisons. The paper explicitly states the monoclinic-to-rhombohedral transition at ~433 K and uses that to interpret the two Arrhenius domains, but the simulations do not model the monoclinic phase. Devil's advocate: in NASICONs, the monoclinic phase is often considered a small distortion of the rhombohedral parent, so some experts might view the single-lattice approximation as acceptable for averaged transport properties. Others will see it as a significant methodological gap. Overall Significant — addressing it (or justifying the approximation) would meaningfully improve the paper. Evidence is specific (exact quotes from paper and Figure 4 caption).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes a fixed attempt frequency ν=5×10^12 Hz is used without sensitivity analysis or strong justification, affecting absolute D and σ linearly. Checking: SI states 'taken as 5×10^12 Hz in this study' with minimal justification; code has v=0.5×10^13 (same value). Correct. Devil's advocate: 5 THz is a very common default in the field, and the paper primarily reports relative compositional trends, so an expert might consider sensitivity analysis unnecessary → Marginal. But since the paper explicitly claims quantitative agreement with experiment, the missing uncertainty propagation is a real gap → Significant. I lean Significant. Evidence is specific (exact code line and SI quote).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that 11 compositions are computationally predicted but only 3 are experimentally validated, all in the high-conductivity regime. This is factually correct. Devil's advocate: it is unreasonable to expect full experimental validation of every computational composition; many papers of this kind do not attempt systematic experimental coverage. Some experts will find this a weak criticism (Marginal or Not Significant) while others value broader validation (Significant). Significance is clearly debatable. Evidence is specific (quotes both the computational scope and the experimental list) and sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims that running the provided KMC code yields higher conductivity at x=1.8 (~9 mS/cm) than at x=2.4 (~1.75 mS/cm), contradicting the paper's predicted peak at x=2.4. However, inspecting the provided results_0.2_1.csv.gz (which is the pre-computed output for comp=0.2, i.e., x=2.4) shows ~59 mS/cm at the final pass, not 1.75 mS/cm as claimed. The reviewer's quoted numbers therefore do not match the repository's own outputs at face value, suggesting either a non-default run (different T or seed) or misreading. The claim that x=2.4 is not the peak is not confirmed by the repo data; to confirm, one would need to run all compositions under consistent conditions. Devil's advocate: a charitable expert could argue the reviewer may have run at a different T and the relative trend could still be real; an uncharitable expert would dismiss the quantitative claim as unreproducible. Correctness is genuinely borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims running the code at x=2.4, 573 K yields ~1.75 mS/cm, ~100× lower than the paper's claimed 0.2 S/cm. However, the provided pre-computed results file at comp=0.2 shows conductivity of ~59 mS/cm at the last pass — about 3× lower than paper's 200 mS/cm, not 100× lower. The reviewer's 100× discrepancy claim is not directly reproducible from the repository's own output files. Charitable reading: the reviewer may be running at a different temperature (e.g., 373 K) where conductivity is lower, but they explicitly state 573 K. Uncharitable reading: the reviewer's code run was misconfigured. Correctness is genuinely ambiguous given this inconsistency with the repo's own output.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out that Hong (1976) reported 0.2 S/cm at 300 °C for standard NASICON (x=2), so the paper's 0.1 S/cm at ~300 °C is not a record and the 'highest ionic conductivity' framing is misleading without qualification. The paper does claim 'highest ionic conductivity (~0.1 S cm^-1) is achieved in Na_{3.4}Zr_2Si_{2.4}P_{0.6}O_{12}', which a reader can interpret as a record claim. Devil's advocate: one could read the paper as meaning 'highest within our samples/compositions', not 'highest ever'; an expert could downgrade to Marginal. But the wording is indeed ambiguous and a direct comparison to established literature benchmarks is a reasonable request. Significant. Evidence is specific (explicit Hong quote with citation).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims that with kmc_pass=3000 in the provided code, simulations only reach ~microseconds, not the 'milliseconds' claimed in the abstract. Examining results_0.2_1.csv.gz confirms that at pass 2999 the simulated time is ~1.8×10^-6 s (1.8 μs) — three orders of magnitude short of 1 ms. The paper's methods state 14M steps per simulation; even if a 'step' corresponds to ~one event and passes contain multiple events, reaching 1 ms would require far more passes than the repo configuration. So the reviewer's claim that the 'milliseconds' statement is not supported by the provided code is factually consistent with the repository. Devil's advocate: an expert could argue that at different T, different compositions, or with a longer production run (as stated in Methods), milliseconds could be reached — thus the reviewer's extrapolation is unfair. But as written, the paper's claim and the provided configuration are inconsistent. Significant — this affects the paper's headline methodological claim. Evidence is specific (exact pass count, simulated time calculation).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the paper's bridge-the-gap claim is undermined by comparing kMC 'bulk' conductivities to 'total' pellet conductivities without consistent bulk/GB separation, with pellet compacities of only 69–77% and changing equivalent circuits across compositions. All cited quotes match the paper and SI. This is the same substantive critique as Human_1 Item 1 and claude-opus-4-5 Item 1, and it is well-founded. Devil's advocate: the paper does discuss variability and acknowledges the difficulty; an expert could argue the comparison is qualitatively reasonable. But the reviewer's point on bulk-vs-total is a standard solid-electrolyte community concern that would clearly strengthen the paper if addressed. Significant. Evidence is specific and thorough (Figure 2 caption, Figure 4c method, Table S6, external benchmark quote).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that kMC uses a single R-3c lattice with frozen framework, but experiments traverse a monoclinic-to-rhombohedral phase transition ~433 K affecting activation energies. Code evidence (single prim.json, fixed lattice vectors) is provided. Same core critique as claude-opus-4-5 Item 2 but with richer code-level evidence. Correct and verifiable. Devil's advocate: some experts might see this as an acceptable approximation for averaged transport trends; others will consider it a substantive validity concern. I lean Significant. Evidence is highly specific (multiple quotes plus code and JSON snippets).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that the abstract's ~0.1 S/cm value lacks a temperature qualifier, while the main text anchors this magnitude to 573 K. Verifiable — the abstract indeed omits temperature, and the main text attributes the value to 573 K. Devil's advocate: a charitable reader may assume knowledgeable audiences infer elevated-T reporting; but standard convention is to state temperature explicitly, and literature benchmarks exist at 25 °C. Significant — this affects the interpretability of the headline claim. Evidence is specific (direct quotes plus external benchmark at 25 °C). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the paper's conclusion that diffusivity/conductivity 'cannot be used' to identify phase separation is not supported because the paper asserts a ~1-order-of-magnitude dip is 'within error' without quantifying experimental/computational uncertainties or conducting a sensitivity analysis. Verifiable — the paper does phrase the conclusion strongly and does not quantify detectability. Devil's advocate: the paper provides a grey confidence band and references Figure S6 for experimental variance; some experts might find this adequate and mark the critique Marginal. Others will view the absence of formal uncertainty analysis for a negative claim generalized beyond NASICON as a real gap — Significant. Overall I judge Significant. Evidence is specific (exact quotes plus domain reference to AIMD statistics).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    }
+  ]
+}

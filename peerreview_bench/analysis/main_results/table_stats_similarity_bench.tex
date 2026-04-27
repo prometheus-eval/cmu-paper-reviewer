@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10.5}\selectfont
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lr}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+Expert-annotated pairs & 164 \\
+Papers represented & 32 \\
+\midrule
+Pair types & \\
+\quad AI--Human & 79 \\
+\quad AI--AI & 85 \\
+\midrule
+Binary labels & \\
+\quad Similar & 70 (42.7\%) \\
+\quad Not similar & 94 (57.3\%) \\
+\midrule
+Fine-grained labels (4-way) & \\
+\quad Same issue, same criticism, same evidence & 22 (13.4\%) \\
+\quad Same issue, same criticism, diff.\ evidence & 48 (29.3\%) \\
+\quad Same issue, different criticism & 27 (16.5\%) \\
+\quad Different issue & 67 (40.9\%) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{\textsc{Similarity Bench} statistics.}
+A stratified sample of 164 review-item pairs, each independently labeled by an expert annotator with a binary similarity label and a 4-way fine-grained overlap category.
+Used to validate the LLM similarity judge (GPT-5.4, 92.7\% binary accuracy) that powers the recall evaluation in \textsc{PeerReview Bench}.
+}
+\label{tab:stats-similarity-bench}
+\end{table}

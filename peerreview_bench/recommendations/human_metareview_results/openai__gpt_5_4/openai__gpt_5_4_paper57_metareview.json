@@ -1,0 +1,183 @@
+{
+  "paper_id": 57,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper claims in Fig. 1b that longer slncRNAs yield larger structures, but the main text and caption provide only representative images and no size quantification or statistical test. Asking for measured granule sizes would directly strengthen this interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper tests all RNAs at one equal concentration (8.5 nM) and reports no visible puncta for PCP-3x, so asking whether PCP-3x was tested at higher concentration is a valid way to probe whether the negative result is a valency threshold or just a concentration effect. The item names the exact condition but gives only limited justification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This concern is valid because raw 488 nm intensity would scale with labeled uracil content, and longer constructs do contain more uracils; the main paper does not clearly explain the normalization used for Fig. 1c even though the code normalizes by estimated uracil count. Clarifying this would materially improve interpretation of the fluorescence comparison.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer’s underlying point is that the Poisson-fit and K0 interpretation in Fig. 1d-e should be explained in light of fluorescence normalization, which is not made clear in the paper text. That is a real interpretability issue, but the comment is imprecise about which normalization or figure linkage is missing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is correct: Fig. 2b shows only the hairpin-containing RNAs, while the key negative control—an RNA of similar length and GC content without designed hairpins—is only mentioned in text as “data not shown.” Showing that control would substantially strengthen the claim that hairpins, rather than any RNA-RBP mixture, drive granule formation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper does not include an alternative-RBP control, so the suggestion to test whether granule formation is specific to PCP-hairpin binding rather than generic RBP physicochemical effects is valid. Such a control would strengthen the mechanistic interpretation of Fig. 2b.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This is not correct as stated. The paper’s analysis code already applies uracil-count normalization to the RNA-channel comparison in Fig. 2d, while Fig. 2c is protein fluorescence and does not take the same normalization as Fig. 1.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "A competitor titration or displacement experiment is a reasonable additional characterization of exchange dynamics, but it is not necessary to establish the current main claims and the reviewer gives little paper-specific justification beyond saying it would be interesting. That makes it a valid but more optional suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is another plausible competition or displacement experiment that could probe exchange after granule formation, but it is framed as a loose suggestion rather than a clearly needed fix for a specific flaw in the current paper. The justification is minimal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper explicitly interprets the negative-burst bias in Fig. 3b as being consistent with RNA degradation in vitro, so proposing an RNase perturbation to test that hypothesis is directly relevant. It targets a central mechanistic interpretation and is specific enough to verify from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This comment is too vague to judge as a concrete criticism: it asks whether some competition or titration experiment is possible for Fig. 3e-g, but does not specify what claim it would test or what deficiency in those panels it addresses.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "This is not correct because the paper already includes a negative-control RNA condition for the in vivo experiment in Fig. 4c and discusses the absence of puncta there. The critique claims a missing control that is in fact present.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "This is a subjective but valid presentation comment. The microscopy panels in Fig. 4b, 4c, and 4e are relatively coarse and low-resolution, so asking for clearer images is reasonable, though it would mainly improve presentation rather than the substance of the results.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The paper already briefly discusses natural granules, stress, and biotechnology implications, but a fuller discussion of how these dynamics relate to broader biological processes and disease contexts would still improve context. This is a broad discussion suggestion rather than a core methodological flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The buffer and composition concern is scientifically relevant, and asking for a no-hairpin RNA control is sensible; however, the paper does report such a control later, stating that a same-length and GC-matched control RNA did not form condensates, albeit only as “data not shown.” Because the concern is real but the paper partially addresses it, correctness is somewhat borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is correct. Differences in labeled uracil content would directly affect fluorescence comparisons, and the main paper does not clearly explain that the RNA-channel analyses were normalized for estimated uracil count; the visual background differences in Fig. 1b make the clarification even more important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is a valid methodological critique of the authors’ interpretation of Fig. 1c-e: fluorescence intensity alone does not identify how many RNA molecules are in a granule, so attributing nonlinearity solely to hairpin number is confounded by oligomer size and composition. Addressing this would strengthen the mechanistic claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is correct overall. The in vitro RNA-protein experiments do not fully disentangle RNA-driven from protein-assisted condensation in the displayed data, and protein-only or nonbinding-protein controls are not shown; moreover, equal molar RNA amounts are not clearly restated for these assays. Those omissions make the interpretation less secure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This does not hold up factually. Fig. 2e includes a 2 µm scale bar in the image and caption, and Fig. 2f also has a scale bar noted in the caption; the complaint about missing scale bars is therefore inaccurate.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer’s specific claim about Fig. 4c showing a diffraction-limited spot is not supported by the paper’s caption or the displayed control image, which is described as weak and uniform. Still, the image is somewhat low-resolution, so a charitable reader could see why the control quantification felt insufficient.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This is a strong, paper-grounded criticism. The Results explain the in vitro negative-burst bias using degradation and non-equilibrium considerations, yet the Discussion moves quickly to a programmable release and capacitor analogy; asking the authors to reconcile those ideas and discuss equilibrium assumptions would substantially improve the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -157,14 +157,16 @@ function updateSubmitButton() {
     const email = document.getElementById("email").value.trim();
     submitBtn.disabled = !email;
   } else {
+    const byokEmail = document.getElementById("byok-email").value.trim();
     const mistral = document.getElementById("mistral-key").value.trim();
     const litellm = document.getElementById("litellm-key").value.trim();
-    submitBtn.disabled = !mistral || !litellm;
+    const litellmUrl = document.getElementById("litellm-url").value.trim();
+    submitBtn.disabled = !byokEmail || !mistral || !litellm || !litellmUrl;
   }
 }
 
 // Listen for input changes on relevant fields
-["email", "mistral-key", "litellm-key"].forEach((id) => {
+["email", "byok-email", "mistral-key", "litellm-key", "litellm-url"].forEach((id) => {
   const el = document.getElementById(id);
   if (el) el.addEventListener("input", updateSubmitButton);
 });
@@ -517,15 +519,19 @@ form.addEventListener("submit", async (e) => {
   if (mode === "queue") {
     formData.append("email", document.getElementById("email").value);
   } else {
-    // BYOK mode
-    const byokEmail = document.getElementById("byok-email").value.trim();
-    if (byokEmail) formData.append("email", byokEmail);
+    // BYOK mode — email is now required
+    formData.append("email", document.getElementById("byok-email").value.trim());
     formData.append("user_mistral_api_key", document.getElementById("mistral-key").value);
     formData.append("user_litellm_api_key", document.getElementById("litellm-key").value);
-    const litellmUrl = document.getElementById("litellm-url").value.trim();
-    if (litellmUrl) formData.append("user_litellm_base_url", litellmUrl);
+    formData.append("user_litellm_base_url", document.getElementById("litellm-url").value.trim());
     const tavily = document.getElementById("tavily-key").value.trim();
     if (tavily) formData.append("user_tavily_api_key", tavily);
+  }
+
+  // Focus area (optional)
+  const focusArea = document.getElementById("focus-area").value.trim();
+  if (focusArea) {
+    reviewSettings.focus_area = focusArea;
   }
 
   // Optional files

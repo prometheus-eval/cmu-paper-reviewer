@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\fontsize{7.5}{9.5}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l r cccc c}
+\toprule
+\textbf{Pair type} & \textbf{$N$} & \textbf{P(near-para)} & \textbf{P(convergent)} & \textbf{P(topical)} & \textbf{P(unrelated)} & \textbf{P(similar)} \\
+\midrule
+H--H (all) & 34,931 & 0.4{\scriptsize\,[0.0, 0.7]} & 4.1{\scriptsize\,[0.0, 8.2]} & 8.4{\scriptsize\,[6.9, 10.5]} & 87.1{\scriptsize\,[81.4, 91.8]} & 4.5{\scriptsize\,[0.0, 8.9]} \\
+\quad same reviewer & 15,030 & 0.5{\scriptsize\,[0.1, 0.9]} & 5.5{\scriptsize\,[0.9, 9.7]} & 8.4{\scriptsize\,[6.9, 10.5]} & 85.7{\scriptsize\,[79.8, 90.9]} & 6.0{\scriptsize\,[0.9, 10.5]} \\
+\quad diff reviewer & 19,901 & 0.3{\scriptsize\,[0.0, 0.6]} & 3.1{\scriptsize\,[0.0, 7.1]} & 8.4{\scriptsize\,[6.9, 10.8]} & 88.3{\scriptsize\,[82.6, 92.3]} & 3.4{\scriptsize\,[0.0, 7.7]} \\
+\midrule
+A--A (all) & 6,053 & 2.2{\scriptsize\,[1.6, 2.8]} & 16.6{\scriptsize\,[12.3, 20.6]} & 20.7{\scriptsize\,[18.3, 23.3]} & 60.5{\scriptsize\,[56.4, 64.8]} & 18.8{\scriptsize\,[14.0, 23.2]} \\
+\quad same model & 1,724 & 0.1{\scriptsize\,[0.0, 0.3]} & 13.4{\scriptsize\,[8.2, 17.9]} & 22.0{\scriptsize\,[19.0, 25.2]} & 64.6{\scriptsize\,[60.0, 69.6]} & 13.5{\scriptsize\,[8.3, 18.1]} \\
+\quad diff model & 4,329 & 3.1{\scriptsize\,[2.3, 3.9]} & 17.9{\scriptsize\,[13.8, 21.8]} & 20.2{\scriptsize\,[17.7, 22.7]} & 58.9{\scriptsize\,[54.9, 63.0]} & 20.9{\scriptsize\,[16.2, 25.4]} \\
+\midrule
+H--A & 23,642 & 0.3{\scriptsize\,[0.0, 0.5]} & 4.9{\scriptsize\,[0.2, 8.5]} & 14.8{\scriptsize\,[13.3, 16.5]} & 80.1{\scriptsize\,[76.2, 84.4]} & 5.1{\scriptsize\,[0.3, 9.0]} \\
+\bottomrule
+\end{tabular}
+\caption{Review-item-pair similarity across pair types. \textit{P(similar)} is the sum of near-paraphrase and convergent-conclusion fractions. Within H--H and A--A, rows are further split by whether both items come from the same reviewer (or from the same AI model within a paper). The ``same reviewer'' and ``same model'' rows capture within-reviewer pairs (diversity across items raised by a single reviewer), while ``diff reviewer'' and ``diff model'' rows capture between-reviewer pairs (agreement across different reviewers). All pairs are within the same paper. All values are Rogan-Gladen-corrected; 95\% CIs from 10{,}000-iteration paper-level bootstrap with resampled sensitivity/specificity.}
+\label{tab:similarity-headline}
+\end{table}

@@ -1,0 +1,315 @@
+{
+  "paper_id": 60,
+  "reviewers": [
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that simply assuming independence between temperature and COVID-19 mortality might misrepresent compound effects, as they share vulnerabilities. This is factually accurate and quotes the paper's own acknowledgment. This is a significant methodological flaw that affects the core estimates. Evidence is sufficient as it quotes the paper and provides a recent relevant reference. A devil's advocate could argue the paper already acknowledged this, making it less significant, but the core estimates rely on it, making it genuinely significant. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques the use of pre-pandemic data to derive the temperature-mortality relationship applied to the pandemic period. This is a valid concern, as pandemic conditions likely altered this relationship. The issue is significant as it affects the accuracy of the baseline models. Evidence is sufficient with quotes from the text. A devil's advocate might argue the paper explicitly noted insufficient pandemic data as the reason for this choice, but the criticism of the resulting bias remains valid. Experts would agree it is correct and significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the K-S tests rely on a small number of extreme events, and points out a potential pseudo-replication issue if regions are treated as independent. This is a strong and factually correct critique of the statistical methodology. The issue is significant because it challenges a stated conclusion about differing distributions. The evidence is sufficient, grounded in the paper's own descriptions and basic statistical principles. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer finds a typo in the dates of the Heat Health Alerts, where 'July 2021' is written instead of 'July 2022'. This is factually correct. The issue is only marginally significant as it is a typo that causes some timeline confusion but does not affect the quantitative analysis. The evidence is sufficient, providing the correct dates and external references. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that using a constant 40-year average for daily deaths as the baseline ignores temporal trends and underestimates expected deaths. This is factually accurate based on the provided R code. It is a significant methodological issue that directly biases the attributable mortality estimates. The evidence is sufficient as it directly cites the paper's code. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques the paper's assumption that removing COVID-19 deaths makes the remaining mortality independent of the pandemic. This correctly targets a core, and likely flawed, methodological assumption in the paper. It is a significant issue because indirect pandemic effects could strongly confound the temperature-mortality relationship. The evidence is sufficient, quoting the paper's explicit claim. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that adding the deaths together fails to capture interactive compound risks. This is factually correct as the paper explicitly uses an additive approach. It is significant as it challenges the interpretation of 'compound mortality'. The evidence is sufficient with quotes and a reference. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer identifies that the 'harvesting' effect of COVID-19 may have removed frail individuals, violating the assumption that the 2020-2022 population vulnerability matched the 40-year historical average. This is a very insightful and factually plausible criticism. It is significant because it could lead to an overestimation of temperature-related deaths. Evidence is sufficient through logical deduction based on known phenomena. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer argues that comparing compound mortality (Heat+COVID) to historical heat-only mortality is trivial and mathematically inevitable. A devil's advocate could argue that the paper's goal was simply to quantify this total additive burden on health systems, so the magnitude of the increase is still meaningful empirical information, not trivial. A charitable reading agrees with the reviewer's desire for an interactive baseline, while an uncharitable reading sees this as imposing an unintended estimand. Therefore, experts would likely disagree on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer critiques the paper's additive decomposition of compound mortality, arguing that it assumes independence and ignores interactions. This is factually correct as the paper adds them and acknowledges shared vulnerabilities. The criticism is significant as it affects the interpretation of the core metric. The evidence is sufficient, citing the paper, the code, and relevant literature. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that using an exposure-response function and an average baseline from 1981-2022 ignores structural changes during the COVID era. This is factually correct and targets the core modeling strategy. It is significant because it threatens the validity of the reported temperature-related death totals. Evidence is sufficient, pointing to specific methodological steps and code. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the comparison to the previous decade is flawed because the baseline is constructed by scaling an average to 70 days and uses different event-identification criteria (alerts vs temperature thresholds). This is a factually correct observation of the paper's methodology. It is highly significant as it could artificially distort the central claim of a ~2x amplification. Evidence is sufficient, with quotes from the methods and code. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer highlights reproducibility issues, specifically that the code relies on hardcoded absolute paths and requires precomputed outputs that are missing from the repository. This is factually correct upon inspecting the code files. It is significant because it prevents independent verification of the primary results. Evidence is sufficient, citing the specific code lines and paths. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests a minor text deletion. This is a correct observation that the text might be slightly wordy. It is only marginally significant as it is a pure stylistic preference. The evidence is sufficient as it points exactly to the text to be deleted. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer questions the use of a mortality ratio as an indicator of health services demand. This is a valid observation, as mortality does not perfectly proxy hospitalization or service demand. A devil's advocate could argue this is just a minor wording issue, making it marginally significant, while others might see it as a significant overreach in interpretation. Thus, experts would likely disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer suggests adding a third row of maps to Figure 3 to show the ratios directly. This is a valid suggestion that would visually support the text. It is marginally significant as it is a nice-to-have presentation improvement rather than a core methodological fix. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out a typo where the text swapped the styles (dashed vs solid) compared to the figure caption. This is factually correct. It is marginally significant as it is a minor presentation error that causes some confusion but doesn't affect the results. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer suggests adding references about air conditioning and heating as adaptive measures in the discussion. This is factually appropriate. It is marginally significant as it merely adds context to the discussion. Evidence is sufficient as specific references are provided. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer suggests the methods should be in past tense. This is a standard stylistic preference. It is marginally significant as it doesn't affect the paper's substance. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks if mortality data were not available at a finer scale. While asking about spatial scale is valid, the paper already explains that regional models were pre-existing. As just a question, it is only marginally significant and lacks sufficient evidence or justification for why finer scale is strictly necessary here. Experts would agree it requires more.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks for the spatial resolution of the HadUK-Grid. The paper mentions it is aggregated to administrative regions, so the question is somewhat answered by the text. As a simple question without a specific critique, it is marginally significant and requires more evidence to form a complete criticism. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer suggests temperature values should be weighted by population density because regions are large. This is a valid and correct epidemiological critique, as simple spatial averages can misrepresent population exposure. It is significant as it could affect the exposure variables. Evidence is sufficient, relying on the domain knowledge that regions are large. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notes that sensitivity analyses for modeling choices are missing. This is factually correct. It is significant as it is standard practice to verify the robustness of DLNMs. Evidence is sufficient as it correctly points out the absence of these analyses. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer vaguely states that the description of the time-series regression model could be improved. This claim is too vague to determine what specific criticism is being made. A devil's advocate cannot defend such a vague statement, so experts would agree it is not a correct/valid review item.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer suggests including the formula of the time-series regression model. The formula is indeed absent, making this correct. It is marginally significant as the model is described in text, so the formula is a nice-to-have clarification. Evidence is sufficient by pointing out the absence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer suggests reporting the region-specific risk curves in the supplement. This is factually correct that they are missing. It is marginally significant as it would provide more detail, though not strictly necessary. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The reviewer asks how heat- and cold-related mortality were calculated. The paper explicitly and adequately explains this in the final paragraph of the methods section. Therefore, the reviewer's premise that this information is missing is factually wrong. Experts would agree it is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests replacing 'social restriction' with 'physical distancing'. This is a correct stylistic suggestion. It is marginally significant as it merely changes wording preference. Evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the claim that temperatures were a 'comparable' and 'under-reported' killer is unsupported because COVID deaths exceeded temperature deaths in most regions. A charitable reading recognizes that COVID deaths were strictly higher, making 'comparable' an overstatement. An uncharitable reading argues that 58-75% is indeed 'comparable' in magnitude, and 'under-reported' refers to media attention, not raw counts. Experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that comparing unadjusted per capita rates across regions is biased due to different age structures. This is a factually correct and very important epidemiological point. It is significant as it affects the interpretation of regional differences. Evidence is sufficient, providing external census data to prove the demographic differences. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests emphasizing that figures from Pakistan and Africa are not perfectly comparable to the UK due to vital registration differences. While the paper only lists these as examples and doesn't directly compare their statistics, adding this caveat is factually correct. It is marginally significant as it only affects introductory context. Evidence is sufficient, with external references. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the 7M COVID deaths cited in the intro is only the officially reported number, and excess deaths are much higher. This is factually correct. It is marginally significant as it improves the introductory framing. Evidence is sufficient, providing a WHO reference. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer finds it unclear whether the national totals in Figure 1 are the sum of regional models or a separate national model. This is factually correct as the text implies but does not explicitly state it. It is marginally significant as a minor clarification. Evidence is sufficient by pointing out the ambiguity. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the population counts used for the 2010-2019 baseline are not described, given only 2021 counts are mentioned. This is a correct observation. It is significant because population denominators are crucial for the per-100k rate comparisons. Evidence is sufficient by pointing out the specific absence in the Methods. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer adds that low temperatures carry ILI and respiratory diseases, complicating attribution. This is a factually correct point. It is marginally significant as an additional point for the discussion. However, it lacks specific references or deep integration, making the evidence require more. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    }
+  ]
+}

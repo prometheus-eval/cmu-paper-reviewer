@@ -1,0 +1,174 @@
+{
+  "paper_id": 83,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer questions the authors' explanation for poor PPG signal quality (rigidity/roughness of ZnO in the ultraflexible OPD), arguing that a single ZnO layer should not be a concern in an already-ultraflexible OPD. The paper does state: 'this work used the inverted structure OPD with ZnO, which is air stable, but would have a higher rigidity and roughness, which would leads high dark current of OPD and poor signal quality'. The reviewer's critique is a valid substantive concern that the authors' proffered explanation is insufficient/implausible and warrants further clarification. This is Significant because understanding the true cause of the noise matters for improving the device. Evidence is Sufficient — the reviewer points directly to the authors' stated explanation and gives a reasonable counter-argument. Devil's advocate: a skeptical expert might argue that the authors' explanation is simply a tentative hypothesis (they wrote 'might be') and not meant as a firm conclusion, so the critique could be seen as overreach — this suggests some possibility of significance disagreement, but experts would likely agree the call-for-clarification is substantive.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the paper reports 1 ms rise/fall times for the OPD (Supp. Fig. 10) but does not specify the light intensity used. Response speed of OPDs is indeed intensity-dependent, so this is a methodologically relevant concern. Checking the paper, the supplementary text is not available but the main text only says 'The rising time and falling time were calculated as 1 ms' with no intensity specified. The item is Correct. Significance: specifying measurement conditions for characterization is a methodological concern that would improve the paper — this is Significant rather than trivial. Evidence is Sufficient since the reviewer points to the specific claim and what's missing. Devil's advocate: an expert could view this as a minor reporting detail rather than a substantive concern, so significance could be downgraded to Marginally Significant by some reviewers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that Fig. 2c shows non-diode behavior for the ultraflexible device and asks for the same AFM/morphology characterization for the glass device to support the ZnO roughness explanation. The paper indeed confirms 'non-diode behaviour of our ultraflexible PLED (Fig. 2c)' and attributes it to ZnO roughness based on AFM, but the AFM comparison in Supp. Fig. 9 compares bare ITO vs ZnO vs ZnO+Liq — not glass vs ultraflexible substrate. Since the authors claim the glass device works properly (diode behavior) while the ultraflexible does not, but blame ZnO roughness common to both, a control morphology comparison across substrates is indeed missing. This is a substantive, specific methodological request. Evidence is Sufficient because the reviewer points precisely to Fig. 2c and what control characterization is missing. Devil's advocate: some experts might argue the existing AFM data already suffices or that the issue is secondary; but the internal logical gap is real.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that connecting OPV directly to the PLED without power regulation/storage will cause variable drive current and hence unreliable bio-signals, and asks the authors to state this in the figure caption and manuscript. This concern is substantively correct — the paper itself acknowledges this problem ('the OPV module differs their current and voltage by the light intensity') and discusses AVR/battery as future additions. However, the criticism is a bit conflated with a mere request for disclosure in caption. The underlying technical concern (variable drive current affecting signal reliability) is valid. Significance: this is a fundamental limitation of the demonstration system, so addressing it/disclosing clearly would meaningfully strengthen the paper. Evidence is borderline — the reviewer does not cite specific passages or show the exact variability, just asserts the physics. An expert could call this Sufficient (appeal to domain knowledge about LED operation with variable supply) or Requires More (no specific numbers or quoted text from the paper). Devil's advocate: a strict expert could say the paper already discusses AVR and future regulation, so the critique is somewhat redundant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out the mismatch between 'long-term stable monitoring' claims and the actual 7-second ultraflexible PPG demonstration. The paper does indeed make both claims: abstract says 'long-term stable monitoring' and text says 'blood pulse monitoring during 7 s'. This is a clear internal inconsistency and a substantive concern. The reviewer supports with a specific external citation (2023 PPG roadmap) noting that even 4 days is 'very low' compared to inorganic devices. Significance: yes, this directly affects validity of the abstract's headline claim. Evidence is Sufficient — exact quotes provided. Devil's advocate: no strong counter — the gap is obvious and factual.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer checks whether Yokota et al. (ref 28) actually reports 4 h as the lifetime, noting Yokota reports 2 h (T50) without passivation and 29 h with it, and that T50 and T70 differ as metrics. This is a verifiable factual claim — the cited Yokota paper's reported value indeed differs from '4 h' and uses T50. The main point (the cited reference doesn't give a 4 h value and metrics differ) is a substantive factual inconsistency, making the 3x improvement claim questionable. Significance: this is a headline quantitative comparison in the paper, so it's Significant. Evidence is Sufficient — reviewer cites both papers. Devil's advocate: perhaps the '4 h' comes from a different derivation or Yokota's unpassivated freestanding value, or from a supplementary figure — a charitable expert might say there's ambiguity in the original Yokota report; but the metric-mismatch (T50 vs T70) problem alone makes the comparison questionable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes no quantitative signal quality metrics (SNR, MAE, etc.) are provided for the ultraflexible PPG sensor, despite the paper acknowledging large noise and poor signal quality. This is factually correct — the paper only qualitatively says 'large noise' and 'poor signal quality' without quantifying. This is Significant because without quantification one cannot judge practical utility. Evidence is Sufficient — the reviewer cites the paper's own qualitative admissions plus an external reference showing standard practice. Devil's advocate: some experts might view this as a materials/devices paper rather than a clinical PPG study, so clinical metrics are not required — this is a plausible downgrade to Marginally Significant but seems unlikely given the paper frames itself as a PPG sensor.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the paper presents device performance (lifetimes, efficiency) as single numbers without error bars, standard deviations, or sample sizes. This is factually correct — the paper reports '14.7 h', '33.4 h', '11.3 h' with no uncertainty or device count. Fig. 2f shows single curves. Statistical reporting is standard practice in OLED research. Significance: reproducibility and reliability are core concerns, so this is Significant. Evidence is Sufficient — reviewer points to specific numbers and the absent error information. Devil's advocate: some experts might consider point-estimate reporting acceptable for a proof-of-concept paper — minor possibility of downgrade. Overall agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the self-powered demonstration only works under 1-sun simulated sunlight, while indoor operation is only theoretically calculated. The paper confirms: 'should work under 1000 lux of indoor light' is a prediction, and demonstrations use simulated sunlight. This is Correct and Significant since 'self-powered' for wearables implies realistic lighting conditions. Evidence is Sufficient — quotes are exact. Devil's advocate: no strong rebuttal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues 50 cycles at 5 mm bending radius is not rigorous enough compared to state-of-the-art (Yokota: 1000 cycles at 100 μm; Kaltenbrunner: 5 μm radius). The paper indeed reports this testing (Supp. Fig. 8). The comparison to established benchmarks in the cited references is a valid, substantive critique for a device claiming 'ultraflexible'. Significance: standards for mechanical durability directly affect the 'ultraflexible' claim. Evidence is Sufficient — specific references with specific numbers cited. Devil's advocate: an expert might argue that OPD also passed 150 cycles test, and paper's focus is primarily on operational stability rather than bending; still the mechanical testing is a core claim backing 'ultraflexible'. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that 'continuous bio-signal detection' is contradicted by the system shutting off in the dark. The paper confirms this: 'The PLED switched on when the OPV module was exposed to the sunlight, and it switched off when the OPV module was stored in the dark.' The auxiliary battery is only discussed conceptually in Supp. Fig. 20 without integration. Thus the 'continuous' claim is unsupported. This is Correct and Significant. Evidence is Sufficient — exact quotes. Devil's advocate: an expert might argue the paper is presenting a proof-of-concept and acknowledges the limitation (discussing battery as future work), so critique is less urgent. But the core claim/evidence mismatch stands.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer highlights the indoor operation is only calculated, not demonstrated. The paper confirms this: 'our self-powered PPG system should work under 1000 lux of indoor light' — a prediction, not experiment. Correct and Significant (same topic as claude Item 5). Evidence is Sufficient with exact quotes. The additional comment about 5000 µW/cm² vs indoor light intensity range (100-200 µW/cm²) is a reasonable quantitative comparison. Devil's advocate: minor possibility of disagreement about whether experimental demonstration is strictly necessary given the explicit calculation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises concerns about the PPG signal quality (large noise, poor signal quality) and absence of quantitative SNR/error rate analysis. The paper itself uses these exact qualitative admissions. This is factually correct and Significant for the paper's primary bio-signal application. Evidence is Sufficient — exact quotes given. Overlaps substantially with claude Item 3. Devil's advocate: same as claude Item 3 — perhaps some experts downgrade if considering this a device-physics paper rather than PPG study; unlikely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies an internal inconsistency: the abstract says the ultraflexible PLED has 'no passivation' / 'without external encapsulation', but Figure 2 caption explicitly states the ultraflexible-substrate measurement used 'parylene encapsulation'. Verifying: the abstract literally states 'Ultraflexible PLEDs with no passivation retain 70% of the initial luminance lifetime of 11.3 h'; the Methods section says 'Finally, a 1-μm-thick parylene layer was deposited via CVD to form a passivation layer' for PLED fabrication; and Figure 2f caption says blue line (ultraflexible) is 'with parylene encapsulation'. This is a substantive internal inconsistency. Significance: this directly affects the headline stability claim — Significant. Evidence is Sufficient — exact quotes from paper. Devil's advocate: a charitable reading is that 'passivation' refers to external multilayer barrier films (ALD-based) not simple parylene, which is why the authors might view 1 μm parylene as 'no passivation'. But the figure caption uses 'parylene encapsulation' — so inconsistent terminology is still a real problem. Experts would likely agree on correctness and significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that 'self-powered' and 'long-term stable monitoring' claims are undermined because the setup uses a solar simulator and oscilloscope — external lab infrastructure. The paper confirms both facts: 'PPG data obtained from the OPD was transferred to the oscilloscope'; 'with one-sun illumination from a solar simulator'. Thus the system-level self-powered claim is not truly autonomous. Correct and Significant — directly affects the system-level conclusion. Evidence is Sufficient with exact quotes. Devil's advocate: an expert could argue oscilloscope is used for demonstration/readout while the core energy chain (OPV→PLED+OPD) is indeed self-powered, so the critique slightly overstates; but the 'solar simulator' point is legitimate. Likely agreement on substance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes the lifetime metrics are inconsistently defined (70% in abstract, 'half of initial luminance' in Supp. Fig. 3d) and initial luminance/driving conditions are not specified for the lifetime test. Verifying: the main text reports 14.7 h, 33.4 h, 11.3 h at 70% with '8 mA/cm²' driving but no explicit initial luminance; Supp. Fig. 3d uses T50 ('half'). This is indeed an inconsistency in lifetime reporting, and a methodologically meaningful gap for OLED comparisons. Correct and Significant. Evidence is Sufficient — exact quotes and external reference to standard OLED lifetime notation (LT50 at 1000 cd/m²). Devil's advocate: mild — expert might argue T70 at 8 mA/cm² is sufficient as reported, but the inconsistency between metrics in different parts is hard to defend.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the PPG demonstration is extremely short (7s), lacks ECG/reference validation, and lacks quantitative agreement metrics. The paper confirms a single 7-second measurement with no reference validation. This heavily overlaps with claude Item 1 and gemini Item 4. Correct, Significant (directly affects validity of biosignal monitoring claim), and Sufficient evidence (exact quotes plus external reference showing standard practice with bias/SD/PCC/MAPE). Devil's advocate: possibly an expert views this as a first-stage demonstration where ECG validation is premature — but the paper explicitly claims 'long-term stable monitoring' so validation is warranted. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes the 'available upon reasonable request' data policy, arguing it doesn't meet FAIR principles and key time-series (lifetime traces, PPG) should be deposited. Factually correct — the paper uses this exact language in Data Availability. Significance: this is more of a publication-policy/practice concern rather than a scientific content flaw. Fields differ on how strict FAIR adherence is required; in this field, 'upon request' is still common. This could be viewed as Significant (reproducibility is important) or Marginally Significant (it's a policy preference not a substantive scientific issue). Evidence is Sufficient — direct quote and FAIR citation. Devil's advocate: a strict expert would call this Significant (reproducibility); a more lenient expert would call it Marginally Significant (a convention issue). I predict experts disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

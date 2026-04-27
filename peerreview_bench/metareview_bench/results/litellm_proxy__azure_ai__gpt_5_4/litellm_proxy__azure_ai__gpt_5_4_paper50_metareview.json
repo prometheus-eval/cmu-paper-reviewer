@@ -1,0 +1,275 @@
+{
+  "paper_id": 50,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correctness: Correct because the paper shows single-stretch and hysteresis results but no cyclic electrical durability test or explicit strain test of soldered chip interconnect performance. Significance: Significant because long-term mechanical reliability is central for a stretchable wearable patch; treating this as a mere materials nit is not very plausible. A devil's-advocate defense is that Fig. 3h to 3j and the deformation photos partly address robustness, but they do not answer whether performance degrades after repeated stretching. The evidence is Sufficient because the item pinpoints the missing stretched and cyclic tests, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correctness: Correct because the paper carefully characterizes hydrogel skin contact and impedance but does not separately analyze the hydrogel metal electrode interface that enables the integrated device. Significance: Significant because that interface affects signal transfer and reproducibility, though one could try to downgrade it to a secondary materials detail. The downgrade is not very plausible since the claimed system contribution is precisely the integrated hydrogel circuit patch, and the review item identifies a concrete missing characterization. The evidence is Sufficient because the absence is specific and easy to verify from the characterization sections, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correctness: Correct because the experiments classify single labeled activities with some artifact conditions, but they do not demonstrate separation of truly concurrent motions such as talking while walking. Significance: Significant because practical deployment would be stronger if the system handled simultaneous activities; downgrading this to a minor request is not very persuasive. A devil's-advocate reply is that the manuscript includes mixed-noise examples such as drinking while coughing, but that is not the same as evaluating concurrent multi-activity classification as the reviewer asks. The evidence is Sufficient because the missing demonstration is clearly specified, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correctness: Correct because the methods describe patch fabrication broadly but do not explain how the via hole mentioned in Fig. S13 is made. Significance: I judge this Significant as a reproducibility detail for the custom device, but a reasonable expert could downgrade it to a more marginal fabrication question. That downgrade is plausible because the point concerns one supplemental construction detail rather than a headline result. The evidence is Sufficient because the item names the exact figure and missing information, so the predicted class is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correctness: Not Correct because the available paper materials show the device operating in the intended orientation and the methods describe forming hydrogel interfaced electrodes on the exposed copper side, not attaching the patch backwards. A charitable defense is that some supplementary fabrication image may have been visually confusing, but the main paper does not support the claim that the device is worn on the wrong side. Since the factual premise does not hold up, significance and evidence are null. Experts would likely agree on incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correctness: Correct because the paper claims benefits from combining sEMG and acceleration but does not provide an ablation or comparison that isolates the gain from multimodal integration over prior single modality approaches. Significance: Significant because such evidence would clarify the real contribution of the system; downgrading it to a minor presentation suggestion is not convincing. A devil's-advocate reply is that the high overall accuracy and prior-work tables imply an advantage, but they do not directly show what the second modality adds. The evidence is Sufficient because the missing comparison is clearly identified, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correctness: Correct because the manuscript does make its multidisciplinary contribution somewhat diffuse, with standard circuit parts, conventional CNN language, and only limited direct comparison to prior flexible systems. Significance: Significant because clearer articulation of what is new would materially improve how readers judge the paper; treating it as a mere stylistic preference is not very plausible. A devil's-advocate reply is that the integration of hydrogel electrodes, wireless hardware, and cloud analysis is itself novel enough, but the reviewer is still right that the specific advance of each part is not sharply stated. The evidence is Sufficient because the item gives concrete examples of where novelty feels under-argued, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correctness: Correct because the paper bases clinically framed claims on only five training subjects and two additional healthy test subjects, which is too little to strongly support clinical meaning. Significance: Significant because clinical interpretation is a central part of the manuscript; a downgrade to a marginal comment is not plausible. A devil's-advocate reply is that the paper only claims a proof of concept and says it paves the way, but the clinical framing still overreaches relative to the small sample. The evidence is Sufficient because the concern is the specifically missing scale of validation, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correctness: Correct in its main point that the machine learning evaluation is still early and limited by the very small subject pool, even though the aside that the tasks are easy is not fully demonstrated. Significance: Significant because stronger analysis and longitudinal or clinically relevant evaluation would materially improve the paper. A devil's-advocate reply is that the paper already includes 13 classes and artifact conditions, so the evaluation is not trivial, but that does not remove the small-sample limitation. The evidence Requires More because the item does not substantiate its claim that the tasks are easy or specify what additional analysis is most needed, so experts would likely agree on correct_significant_insufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correctness: Not Correct because the item is too vague and mainly equates reproducibility with small dataset size, which is not the right target of a reproducibility criticism. A charitable reading is that the reviewer really means the evaluation and methodological detail are insufficient for others to replicate the work, and that defense is plausible. Because that charitable interpretation could sway one expert while another would reject the item as misframed, significance and evidence are null under my label but the expert prediction is disagree_on_correctness. The predicted class is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correctness: Correct because the paper uses clinically awkward or inaccurate framing such as genetic choking, narrows swallowing rehabilitation largely to neck cancer and post surgical cases, and leaves some task distinctions unclear. Significance: I judge this Significant because clinical terminology and framing affect how the whole paper is interpreted, although one expert could see parts of it as mainly editorial. That downgrade is plausible because several subpoints are wording fixes, even though the broader concern about needing swallowing-domain input is substantive. The evidence is Sufficient because the reviewer points to concrete phrases and locations, so the predicted class is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correctness: Correct because Fig. 1b appears to place the patch higher on the anterior neck than the precise suprasternal notch, so the anatomical description looks imprecise. Significance: Significant because anatomical placement matters for interpreting what signals the patch captures. A devil's-advocate reply is that the patch is still in the lower throat region and some authors might use suprasternal more loosely, so disagreement on correctness is plausible. The evidence is Sufficient because the paper image and wording give a concrete target, and the predicted class is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correctness: Not Correct because the manuscript does not explicitly say that references 22 and 24 themselves reported all of the listed shortcomings; the sentence uses other citations for the limitations. A charitable defense is that the prose still groups 22 and 24 with the criticized class of flexible sensors, so another expert could view the wording as unfairly implying those deficits. Since that ambiguity is real, I expect disagreement on correctness even though my own label is Not Correct. Significance and evidence are null under my label, and the predicted class is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correctness: Correct in substance because the paper makes swallowing-rehabilitation claims from a throat location without validating against an accepted clinical reference standard, so concern about signal validity is reasonable. Significance: Significant because if the location is not well justified or validated, that affects the clinical interpretation of the whole system. A devil's-advocate reply is that the paper presents only a proof of concept and prior throat-sensor literature exists, so some experts may resist the stronger claim that this is not an ideal location at all; that makes correctness disagreement plausible. The evidence Requires More because the reviewer relies on external swallowing-domain knowledge without citing specific sources, so the predicted class is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correctness: Correct because the clinically framed statement about evaluating post surgical state is not supported by testing only healthy adults. Significance: Significant because this is a direct overgeneralization of the population studied, and downgrading it to a minor point is not plausible. A devil's-advocate reply is that the paper says proof of concept and future application, but the wording still suggests more clinical support than the data provide. The evidence is Sufficient because the mismatch between subjects and claim is explicit in the paper, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correctness: Correct because the paper introduces an eight level pathological rehabilitative degree but does not explain how those levels were defined or validated. Significance: Significant because this grading is part of the clinical interface and readers need to know what the levels mean; downgrading it to a mere wording fix is not persuasive. A devil's-advocate reply is that the Methods briefly say the levels depend on swallowing, drinking, and talking conditions, but that is far too underspecified to resolve the concern. The evidence is Sufficient because the reviewer points to the exact missing definition, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correctness: Correct in substance because the paper repeatedly states that analysis and evaluation occur on a cloud server, so the system is clearly not presented as local on device machine learning in the body of the paper. Significance: Significant because the architecture distinction affects latency, privacy, power, and the scope of the contribution. A devil's-advocate reply is that the local paper files do not actually show the quoted in sensor title phrase, and the abstract itself is less explicit than the review suggests, so one expert could resist the factual overstatement. The evidence is Sufficient because the cloud-processing passages are concrete, and the predicted class is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correctness: Correct because the paper draws clinical and disease oriented conclusions while validating only healthy volunteers, with no patient cohort at all. Significance: Significant because this directly limits the credibility of the clinical applicability claims, and a downgrade is not plausible. A devil's-advocate reply is that the manuscript sometimes uses future facing language such as paving the way, but it still goes beyond the data when discussing disease evaluation. The evidence is Sufficient because the reviewer cites both the healthy-subject sample and the clinical claims, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correctness: Correct because the text says HR and RR are 19.2 and 50.4 per minute, while Fig. 4f labels the slow trace as respiration at 19.2 rpm and the faster trace as heart rate at 50.4 bpm, making the text internally inconsistent and likely swapped. Significance: Significant because a physiologically implausible or misreported vital-sign value undermines confidence in the monitoring results. A devil's-advocate reply is that the authors may simply have transposed the labels in one sentence, but that still leaves the criticism valid as an error in a core result description. The evidence is Sufficient because the contradiction is directly verifiable from the paper and figure, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correctness: Correct because the evaluation really uses only five training subjects and two test subjects, and the paper does not report a stronger cross subject validation scheme. Significance: Significant because claims about adaptation to new subjects rest on this evaluation design, though one could argue the absence of leave one subject out is a methodological preference rather than a strict error. That downgrade is not very plausible here because the very small subject count makes the weakness consequential rather than cosmetic. The evidence is Sufficient because the reviewer cites the exact split and evaluation description, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correctness: Correct because the provided training script depends on missing local modules, uses a 10 class setup, and therefore does not reproduce the 13 class experiment described in the paper. Significance: Significant because reproducibility of the machine learning result is central to the paper, and treating this as minor is not plausible. A devil's-advocate reply is that the repository may be incomplete rather than wrong, but the reviewer is still correct that the supplied materials do not support reproduction as provided. The evidence is Sufficient because the imports and class definitions are explicit in the code, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correctness: Correct in substance because the paper body clearly describes cloud based processing rather than local sensor node inference, so the architecture does not match a strict reading of in sensor machine learning. Significance: Significant because this affects what contribution the paper is actually making. A devil's-advocate reply is that the local source files do not contain the quoted title wording and the reviewer somewhat overstates what the abstract alone claims, so disagreement on correctness is plausible. The evidence is Sufficient because the cloud-processing passages and code context are concrete, and the predicted class is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correctness: Not Correct because the 500 ms delay in sketch_may06a.ino only shows that this particular Arduino sketch is a low rate demo, not that the paper's actual patch hardware cannot sample at the 800 Hz claimed in the manuscript. A charitable defense is that the code directory provides no better acquisition firmware, so another expert could treat the sketch as the intended implementation and therefore see a reproducibility problem. That defense is plausible, which creates disagreement on correctness even though the item overstates what follows from the sketch. Significance and evidence are null under my label, and the predicted class is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correctness: Correct in its broader point that the supplied materials are not sufficiently reproducible, because the code is incomplete and the machine learning pipeline cannot be run from what is provided. Significance: Significant because methodological transparency is central for evaluating the paper. A devil's-advocate reply is that the specific claim that the Methods section is missing is factually wrong since a Methods section is present, so another expert could reject the item on correctness grounds even while sharing the broader reproducibility concern. The evidence Requires More because one of the reviewer's main factual premises is inaccurate, and the predicted class is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correctness: Correct in substance because the paper claims adaptation to new subjects but does not define any adaptation protocol, while the supplied training code shows only an ordinary offline supervised training loop. Significance: Significant because adaptation is one of the headline machine learning claims. A devil's-advocate reply is that the authors may be using adapt loosely to mean generalize to new subjects rather than online model updating, so some experts could disagree on correctness. The evidence is Sufficient because the item cites both the adaptation claim and the static code structure, and the predicted class is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correctness: Correct because the code labels only ten classes centered on pinyin and vowels plus drink water, whereas the paper describes a 13 state task that also includes swallowing and coughing. Significance: Significant because this mismatch directly affects whether the reported machine learning experiment can be trusted or reproduced, and a downgrade is not plausible. A devil's-advocate reply is that the code could be an older partial version, but that still leaves the reviewer correct about the mismatch in the supplied materials. The evidence is Sufficient because the class dictionary and paper task description are explicit, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correctness: Correct because the paper invokes clinical gold standard language and an eight level pathological grading without validating either against accepted swallowing assessments or patient ground truth. Significance: Significant because this directly affects the validity of the medical interpretation, and downgrading it to a minor point is not plausible. A devil's-advocate reply is that the authors may mean only a proof of concept interface rather than a validated clinical scale, but the current wording still overstates what the data support. The evidence is Sufficient because the reviewer ties the criticism to exact clinically framed claims and named reference standards, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correctness: Correct because the dataset is very small, the random sequence generation is underdescribed for time series data, and the paper reports no uncertainty or subject level robustness analysis around the 98.2 percent and 92 percent figures. Significance: Significant because these issues bear directly on the strength of the paper's central machine learning claims. A devil's-advocate reply is that the subject split is at least nominally separated and the paper is positioned as a proof of concept, but that does not remove the need for clearer evaluation methodology and uncertainty reporting. The evidence is Sufficient because the reviewer cites the exact split, windowing description, and unsupported strong accuracy claims, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correctness: Correct because the supplied code cannot run as is and also mismatches the manuscript on key experimental details such as class count and training epochs. Significance: Significant because the paper's headline machine learning result cannot be independently reproduced from the provided materials, and treating this as minor is not plausible. A devil's-advocate reply is that the repository may be incomplete rather than intentionally misleading, but the reviewer's claim about nonreproducibility still stands. The evidence is Sufficient because the missing imports and explicit code-paper mismatches are concrete, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correctness: Correct because the manuscript explicitly treats the lowest SNR as evidence of better sEMG quality without defining a nonstandard metric, which conflicts with the conventional interpretation of signal to noise ratio. Significance: Significant because this quantitative claim is used to support a core hardware advantage, so fixing it would materially improve the paper. A devil's-advocate reply is that the authors might have computed an inverted or unconventional ratio, but they never define it, so the criticism still holds. The evidence is Sufficient because the contradictory sentence is quoted and Figure 3g is directly checkable, so experts would likely agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

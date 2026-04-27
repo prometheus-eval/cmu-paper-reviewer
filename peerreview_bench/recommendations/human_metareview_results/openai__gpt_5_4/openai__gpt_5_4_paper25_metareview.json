@@ -1,0 +1,444 @@
+{
+  "paper_id": 25,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper’s “no evidence” claim relies on coherence from 1,000 random neuron pairs over the whole network, so asking for nearby-pair correlations and comparison with Huang et al. is substantively fair. The item is somewhat diffuse, though, because it mixes a literature-comparison point with a local-correlation hypothesis without fully tying them together.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper uses “sparsely modulated” in Figure 7/results but does not define the term explicitly. This is a small terminology-clarification request and is directly supported by the quoted phrase.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The discussion mentions only a narrow slice of prior delay-related wave literature, and the reviewer supplies concrete older references on delays and traveling waves. Adding that context would materially improve the paper’s positioning.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item raises a real clarity concern about Figure 1c/1e and the role of wave motion, but it mixes subjective readability with a stronger conceptual objection that is less cleanly established from the paper alone. Because the paper’s intended mechanism is retinotopic alignment rather than stimulus motion per se, experts could split on whether the criticism fairly targets a real omission.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper is not “unaware” of Huang et al.: Ref. 54 is cited explicitly and discussed in the Discussion. The suggestion to analyze simpler 1-D or mean-field models may be reasonable, but the main factual premise of unawareness does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer is right that the paper does not isolate topographic connectivity from distance-dependent delays with separate ablations, and the mechanism is therefore only partially unpacked. However, the item bundles several points—parameter omissions, Figure 3c confusion, and mechanistic speculation—so the support for the whole package is somewhat uneven.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper’s reported wavelengths are indeed on the order of or larger than the analyzed network extent, so a request to clarify that interpretation is understandable. But whether that undermines calling the patterns traveling waves is debatable, since waves can have wavelengths longer than the observation window.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figure 7c correlates the LFP proxy with an E-I difference measure, and the LFP proxy itself is defined from excitatory and inhibitory currents, so the strong anticorrelation is partly expected by construction. That makes the panel’s interpretation worth qualifying.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The methods give τ=6 ms and α=1.65 for the LFP proxy and cite the prior proxy paper, but they do not explain those parameter choices in this manuscript. Asking for that provenance is reasonable, though some experts may feel the citation to the source paper already suffices.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The bibliography contains two different Ermentrout papers, not the same reference duplicated. The item therefore does not hold up as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The central claim of a “sparse-wave” regime is defined only verbally and indirectly via coherence; the paper never gives a direct measure of fraction of neurons participating per wave. A precise quantitative definition would strengthen a core concept.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The methods state that coherence is computed from 1,000 random neuron pairs across the full network. That could miss short-range structure, so asking for local coherence is a well-supported and important critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figures 2i and S1b suggest that the main difference between sparse and dense regimes is not just coherence magnitude but also the presence of a band-limited peak. The paper does not state this distinction cleanly, so the request for clearer criteria is justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper explicitly equalizes spike counts by deleting spikes before coherence estimation but does not provide a mathematical definition of coherence. The request for a formula is clearly justified, while the artifact concern is plausible but not fully demonstrated, making the evidence somewhat borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Coherence is a central diagnostic in Figure 2, yet the companion power spectrum that shapes its interpretation is only shown for the dense network in S1. Showing the PSD for the sparse regime would sharpen a core analysis.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper uses similarity to a random no-wave network as part of the sparse-wave characterization, but that criterion is model-specific and the same comparison is not shown for the dense-wave case. That is a fair limitation of the current presentation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The delay literature discussion is selective, and the reviewer provides concrete references on delays and traveling waves that are not engaged. Better situating the contribution relative to that literature would materially improve the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript emphasizes distance-dependent delays but does not directly compare them against fixed-delay alternatives, even though the Discussion itself acknowledges waves can occur without distance-dependent delays in some models. A more explicit discussion of what distance dependence adds is warranted.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Ref. 54 is cited, but the paper does not directly compare its sparse-wave regime against Huang et al.’s model on the reviewer’s requested phenomena. That missing comparison is central to positioning the contribution.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The suggested link to sparse synchrony is a reasonable related-work connection, but it is more contextual than load-bearing for the paper’s main claims. Keeping it in the review is fine, but it is not a major weakness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Figure 1A-B are motivational experimental results, but the transition from those panels to the modeling questions is not especially clear and the reviewer pinpoints the problematic stretch around line 119. Clarifying that bridge would improve the paper’s framing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The paper’s “similar magnitude” claim is based on single-trial LFP fluctuation power, and the reviewer reasonably notes that such a result can arise from a simple signal-plus-noise decomposition without proving a deeper point. That is a legitimate concern about overinterpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The main text uses -200 to 0 ms and 0 to +200 ms for the comparison window, while the Figure 1 caption says -100 ms to onset and onset to 100 ms. This is a clear inconsistency.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The paper reports pairwise coherence in Fig. 2i but does not say whether pairs are within-type or across excitatory and inhibitory cells. That is a small but real methods omission.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The manuscript uses micrometer notation awkwardly and, at least in the available source, repeatedly writes μM where μm is intended. This is a minor presentation issue worth flagging.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The paper repeatedly invokes balanced excitation and inhibition but does not show an explicit balance diagnostic or explain how that regime was verified beyond firing/CV/correlation criteria. Since balance is part of the model framing, asking for clarification is justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The mixed topographic/random connectivity in Figure 5c could plausibly be read as small-world-like, but the paper never makes that claim or analyzes the network in those terms. Experts could disagree on whether this is a real omission or just the reviewer’s analogy.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "Spike-phase coupling is central to Figure 7 and the comparison to data, yet the manuscript gives no explicit mathematical definition of the measure itself. That is a substantive clarity/reproducibility gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The paper infers sparse-wave and dense-wave conductance states indirectly from membrane-potential distributions rather than plotting conductances directly. Since the claim is about conductance state, asking for explicit conductance measurements is well founded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "Figure 7d uses z-scored spike-phase coupling values without defining the metric mathematically, which makes interpretation difficult. Because this figure supports a key model/data comparison, the request is important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The manuscript reports circular-resultant values but does not define the quantity. This is a small but valid notation/terminology clarification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "This is a tiny notation correction rather than a substantive criticism. The phrase in the paper is indeed awkward, but fixing it would not meaningfully affect the review.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The paper already notes that the random network shows the weakest spike-phase relationship and gives an intuitive explanation for why it need not be perfectly flat. The reviewer’s premise that it “should” be flat is not established.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "In the Discussion, the sentence about scale dependence points to Fig. 4B even though the relevant scale effect is shown in panel 4D/4C, not 4B. This looks like a straightforward cross-reference error.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The methods notation is somewhat overloaded, and the reviewer is right that the indexing/type symbols could be made more consistent. This is mainly a notation clean-up issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The model description gives spike/reset rules but does not explicitly mention the absolute refractory period in the manuscript text, even though a refractory-time parameter exists in the code/parameters. Asking for that clarification is reasonable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "There is a real notation-consistency issue around conductance/weight symbols and units across the manuscript and tables. But the specific claim that w_{e,i} “should” be G_{e,i} is less certain, so experts could split on the item’s correctness as written.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "The spike/reset equation is written as if conductance increments occur immediately, while delays are defined separately later. It would be clearer to indicate explicitly that synaptic effects are applied after the stated delay.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "The manuscript defines τ_e and τ_i but does not report the actual values in the text or supplementary tables. That is a genuine reproducibility omission for parameters that can matter dynamically.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "The paper says neurons are distributed over a 2-D sheet but does not spell out how excitatory and inhibitory cells are spatially arranged. That missing implementation detail matters for reproducibility and interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "The methods specify toroidal periodic boundaries but do not explain why this is a good modeling choice or how strongly it might influence the reported waves. Since boundary conditions can shape spatial dynamics, this is a substantive question.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "The delay equation introduces τ_s, but the manuscript never gives its numerical value; the value only appears in the code/parameter files. That is a clear reproducibility gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "The methods say coherence was normalized by the pooled power spectrum, which is confusing because coherence is normally already normalized by power spectra. Without a formula, the exact computation is hard to recover.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 34,
+          "reasoning": "The paper says it cross-checked NETSIM against Brian2, but the provided code bundle centers on NETSIM/MATLAB and does not include Brian2 code here. Asking for that auxiliary code is a fair reproducibility request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 35,
+          "reasoning": "The LFP-proxy equation sums over m excitatory cells but then uses the same upper limit for the inhibitory term in a 10x10 pool, which makes the notation internally inconsistent. The reviewer’s request to spell out m and the indexing is well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 36,
+          "reasoning": "The wave analysis depends on spatial derivatives, yet the methods only say “forward and centered finite differences” without explicit formulas. For a core analysis pipeline, that level of detail is reasonably requested.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 37,
+          "reasoning": "Likewise, saying that phase derivatives were implemented as multiplications in the complex plane is too terse to reproduce without formulas. This is a valid request for more methodological detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 38,
+          "reasoning": "Wave speed is defined using instantaneous frequency, but the paper never states how instantaneous frequency was computed. Since speed is a reported main result, this omission is important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 39,
+          "reasoning": "Figure 1 bundles several nonstandard quantities and alignments, and the caption does not fully define all of them. The reviewer’s sub-questions therefore mostly point to real exposition gaps in a key figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 40,
+          "reasoning": "Figure 2’s caption explains some elements, but important details—especially the raster plotting convention, which neurons contribute to the mean rate, and why the traces are z-scored—remain underexplained. Clarifying these would improve interpretability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 41,
+          "reasoning": "The paper does define Figure 4a as the percentage of time network activity is significantly organized into traveling waves, so the requested definition is already present in the text/caption. The reviewer’s specific interpretation is therefore off target.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 42,
+          "reasoning": "In the available supplementary source, Figure S1 contains panels a and b but no visible panel c, even though the caption refers to one. This is a small but concrete presentation problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The item overstates the external papers as refuting the manuscript’s modeling premise; those studies show thalamic input can be important, but they do not directly invalidate using a self-sustained cortical model to study wave generation. Still, because the criticism turns on broader field judgments about cortical drive and modeling scope, experts could plausibly disagree on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

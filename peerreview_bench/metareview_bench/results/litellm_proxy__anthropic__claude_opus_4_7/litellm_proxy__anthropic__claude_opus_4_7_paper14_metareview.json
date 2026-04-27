@@ -1,0 +1,611 @@
+{
+  "paper_id": 14,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues the paper lacks a clear objective/hypothesis and that the aDBS framing in the intro is not well linked back to the results. This is substantively correct: the introduction devotes a long section to aDBS, but the actual results are descriptive observational characterizations, and conclusions are vague generalizations. Devil's advocate: one could argue that descriptive characterization IS the stated objective (line 24), and the aDBS framing is offered as motivation, not analysis target — a charitable expert might find the critique overstated. Significance: addressing the framing/focus would meaningfully improve the paper, so Significant. Evidence: specific quotes are provided. Some experts might downgrade to Marginal (a framing concern).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer flags lack of control for chronotype/daily living activities and weak sleep verification. The concern is valid — the study only has event markers. Devil's advocate: as a retrospective study the paper does acknowledge these limits. Significance: yes, controlling would strengthen conclusions. Evidence: somewhat general — no specific pointers beyond mentioning event markers and disparity between GPi/STN sample sizes. Some experts could call it insufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues the day/night definition based on LFP power is circular — the outcome variable is used to define groups. Verified against the Methods. This is a major methodological concern that is well articulated. Devil's advocate: the paper does have event markers in 61% as external validation; some charitable experts might find this partially addresses the circularity. However, the main circularity concern stands. Significant. Evidence: quotes the methods precisely. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer notes that medication timing (especially ER levodopa at bedtime vs multiple times per day) is not specified, which affects interpretation of the circadian result. Correct — the paper does not describe ER dosing schedules. Devil's advocate: the GLM treats ER as a binary covariate, so timing doesn't enter the model; a charitable reader could say the claim is about presence/absence. Significant: addressing this would clarify interpretation of the medication-modulation finding, which is central. Evidence: specific line references. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer points out that day/night is conflated with awake/asleep throughout (including Methods). Verified — the paper uses these interchangeably despite the text deploying the LFP-based detection algorithm. Significant: this conflation affects the core interpretation of the results. Evidence: explicit line reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Abstract phrasing 'altered by circadian rhythms' implies causality. Correct as a semantic observation. Devil's advocate: 'altered' in biomedical writing is commonly used for associations, not strict causal claims, so some reviewers wouldn't flag it. Significance: a pure wording issue that doesn't change paper's substance — Marginally Significant. Evidence: quote from abstract. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer suggests clarifying the frequency band reference in the abstract. Correct — the abstract is indeed vague about which bands. Marginally Significant — purely presentation/writing. Evidence: refers directly to abstract. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Suggestion to rephrase 'direction of circadian rhythm' in abstract for clarity. Correct — the phrasing is ambiguous. Marginally Significant (pure wording). Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer suggests including breakdown of GPi vs STN hemispheres in abstract. Correct — abstract reports total hemispheres but not the breakdown. Marginally Significant. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Reviewer questions relevance of aDBS paragraph and notes aDBS is not limited to LFP-based approaches. Overlaps with Item 1 but adds technical nuance about aDBS implementation strategies. Correct. Significant: framing of motivation matters. Evidence: specific section reference. Some could see this as a Marginal framing note.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Reviewer notes the van Rheede citation is used to support a 'sleep' claim but that study did not validate sleep-wake state. This requires familiarity with van Rheede 2022 to verify. Likely correct (van Rheede used time-of-day, not sleep staging). Significant: affects accuracy of paper's related-work framing. Evidence: names the specific reference but asks meta-reviewer to look up van Rheede methods — some strict experts may find this requires independent verification, others would accept the appeal to domain knowledge.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Reviewer notes a missing reference for the acute STN recording claim. Verified — that sentence contains no citation. Significant: scholarly completeness. Evidence: specific line quoted. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Reviewer asks why the 13±35 days post-implantation window was chosen. The paper does not justify this choice beyond 'first chronic recording with >5 days'. Correct — justification is absent. Significance: methodological clarification would help reproducibility. Could be Marginal (a clarification request) or Significant (methodological choice).",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Reviewer asks whether sensing frequency was chosen in on- or off-medication state, since on-med could suppress beta and skew results. Correct — the paper does not specify the medication state during the survey recording. Significant: could materially affect interpretation. Evidence: specific line. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "Reviewer asks about inclusion/exclusion criteria for sensing-compatible configurations. Correct — the paper does not specify this. Significant for reproducibility and selection bias understanding. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "Reviewer notes that only the largest band fraction is reported. Verified — paper gives 46.7% and 37.0% for GPi's two largest bands and 63.3% for STN low-beta but not full breakdowns. Significant: completeness of reporting matters for interpreting distribution of bands across cohort. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "Typo 'reordered' → 'recorded' at line 122. Verified in paper text. Marginally Significant (typo). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "Reviewer questions inclusion of gamma band when its peak-selection criterion differs (based on dyskinesia). Correct — paper says 'In some participants, the gamma band was tracked either due to the presence of a physiology peak or documentation of dyskinetic symptoms.' This is a valid selection-bias concern. Significant. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "Reviewer asks for total days recorded, weekday status, and hemisphere labels for Fig 1/2 representative subjects. Correct — these details are absent from figure legends and text. Significant: reproducibility. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "Reviewer asks that the ANOVA comparison be stated explicitly (that it tests sensing frequency effect on day-night difference). Correct — the text is ambiguous. Significant: clarity of statistical reporting. Evidence: specific line. Sufficient. Could be considered Marginal by some.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "Reviewer questions arbitrary mix of non-parametric and parametric tests. Valid statistical concern — paper uses ANOVA (parametric) across bands and Mann-Whitney U (non-parametric per-band). Correct. Significant: statistical methodology. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "Reviewer asks for p-value for theta/alpha at line 180 (STN section). Verified — in the STN paragraph (line 49) p-values are only given for low-beta and high-beta; theta/alpha p-value is not stated. Correct. Marginal-to-Significant (statistical completeness). Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "Reviewer asks what exactly is the dependent variable in the GLM (magnitude vs direction of change). Correct — the wording 'change in beta power' is ambiguous. Significant: interpretation of headline medication result depends on this. Evidence: specific line. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "Reviewer flags discrepancy 119 vs 117 subjects. Verified: Methods reads '117 provided informed consent' while Abstract/Intro say 119. Correct. Significant: factual inconsistency that readers will notice. Evidence: specific. Sufficient. Some might say Marginal (could be minor bookkeeping).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "Reviewer lists missing demographic data (unilateral/bilateral split, lead type, stim configuration). Correct — these breakdowns are absent from Table 1. Significant: relevant for generalizing results. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "Reviewer notes lack of description of what events patients marked and how they were advised. Correct — the paper gives only generic examples ('medication intake, presence of dyskinesia'). Significant: these events drive the validation step. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "Reviewer notes artifact/missing data handling is undescribed. Correct — Methods does not describe this. Significant for methodological rigor. Evidence: specific absence. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "Reviewer asks for units (µVp) and definition for 'brain recording' / 'neural signal'. Correct — paper uses these terms without full definitions or units. Significant for precision, though some would call it Marginal (technical nit). Evidence: specific lines. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "Reviewer asks that sensing-available configurations be described. Correct — they are not. Significant for reader comprehension and reproducibility. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "Reviewer asks for LEDD calculation method or reference. Correct — no reference is provided for LEDD calculation. Marginal to Significant (scholarship/reproducibility). Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "Reviewer claims contradiction: Discussion says stim parameters not available in dataset, Methods says they were extracted. Re-reading, the Discussion actually says 'the therapeutic EFFECT of each stimulation parameter ... is not available', not the parameters themselves. So the reviewer is (perhaps) misreading. Devil's advocate: the phrasing is ambiguous enough that a reader could reasonably see a contradiction. This is borderline — a charitable expert would say reviewer's observation points to a real ambiguity; a strict expert would say the reviewer misread.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "Multi-part figure critique: no description of event markers, no polar plot scale, unclear algorithm behavior when power is inverted, no description of how heatmaps were generated. All substantively correct observations. Significant: figure clarity is important. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "Figure labeled 'Figure 2' when it should be Figure 3; also asterisk symbols undefined. Verified in images_list.json captions. Correct. Significant: figure numbering errors genuinely confuse readers. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 34,
+          "reasoning": "Figure 4 labeled 'Figure 3'; text refers to Figure 3C. Verified. Correct. Significant (numbering/reference inconsistency). Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 35,
+          "reasoning": "Reviewer notes 'channel' in Table 2 is undefined. Correct — text describes covariate as 'contact used for stimulation (dorsal/ventral)' but table uses 'channel'. Significant: interpretation of GLM. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 36,
+          "reasoning": "Reviewer posits floor-effect alternative explanation for Supp Fig 1 observation. Valid alternative hypothesis. Correct (raises legitimate concern). Significant: interpretation of stimulation effect. Evidence: specific figure reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 37,
+          "reasoning": "List of specific typos to fix. All verifiable and correct. Marginally Significant (cosmetic). Evidence: specific line numbers. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer argues the novel beta-increase-at-night finding is underexplored — no artifact analysis, no beta burst analysis, no sleep-stage decomposition. Correct and substantive. Devil's advocate: the paper is explicitly descriptive and the authors note limitations about sleep staging. But more analyses would clearly strengthen this key novel finding. Significant. Evidence: extensive with concrete suggestions and references (sleep spindle hypothesis). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes heatmaps combine different frequency bands (Fig 1C/2C). Correct — the heatmaps include all recordings regardless of band (135 GPi, 30 STN). Bands have different modulation directions, making the combined heatmap potentially misleading. Significant: visualization clarity. Evidence: references specific figures. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues detection algorithm could mislabel insomnia patients. Correct — this is a clear failure mode given the data-driven day/night definition. Significant. Evidence: specific hypothetical scenario with figure reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer asks about incorporation of ER levodopa timing into sleep/wake classification. Correct — the paper doesn't discuss how medication timing interacts with signal-derived classification. Significant: affects validity of classification especially for beta. Evidence: concrete suggestion. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer asks whether sleep scales (PSQI, PDSS, RBDSQ) were collected. Correct — paper doesn't mention these. Significant: would help explain inter-subject variability. Evidence: names specific scales. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer asks about GPi vs STN imbalance (clinical selection rationale). Correct — paper doesn't explain target selection. Significant: relevant for interpreting differences between groups. Evidence: refers to cohort numbers. Sufficient. Some experts might call this marginal (not central to findings).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer asks for contact location comparison between beta-inc and beta-dec groups. Correct — paper doesn't show this. Significant: could explain directional differences. Evidence: specific suggestion. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer observes Supp Fig 1 shows slight beta increase during sleep with higher stim amplitude. This is a specific visual observation of the supp figure. Correct (assuming faithful figure reading). Significant: alternative interpretation for stimulation effect. Evidence: specific figure reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "119 vs 117 subject discrepancy. Verified. Correct. Significant (factual inconsistency). Evidence: specific. Sufficient. Some might downgrade to Marginal.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Two Figure 2s in manuscript; latter should be Figure 3. Verified in images_list.json. Correct. Significant (numbering confuses reference-following). Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer asks whether day-night differences are driven by daytime or nighttime changes in absolute power. Correct — the paper only reports relative differences. Significant: distinguishing these drivers would clarify the novel finding. Evidence: concrete analytic suggestion. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer raises sleep spindles (9-16 Hz) as potential confound for night-time 'beta' increases, especially since sensing band is 2.5 Hz either side and overlaps. Correct and highly technical critique, supported by a citation. Significant: addresses a plausible alternative mechanism. Evidence: specific band ranges, DOI, and analytic suggestions. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer suggests tremor-dominant phenotype might explain inverse circadian profiles. Correct hypothesis based on established beta/phenotype link. Significant: provides a testable alternative. Evidence: appeals to known clinical association. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer asks for discussion of data quality/artifact sources given at-home recording. Correct — paper doesn't discuss cardiac/motion artifacts. Significant: important for at-home data. Evidence: appeal to known artifact issues. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer asks about within-patient hemisphere consistency. Correct — paper doesn't analyze this. Significant: addresses whether effect is patient-specific vs hemisphere-specific. Evidence: specific question. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Reviewer asks for more thorough discussion of canonical frequency band meanings, especially sleep spindles. Correct — paper's discussion is thin on physiological interpretation. Significant: framing. Evidence: specific gap named. Sufficient. Some could see this as overlap with Item 2 but it's about introduction/discussion completeness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Reviewer critiques heatmap vertical-axis smoothing across patients and suggests splitting by band. Correct — valid visualization concern overlapping with Human_2's Item 2. Significant. Evidence: specific figure. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer asks about supp figure effect (stim reduces circadian profile via both day reduction and night increase). Correct visual observation. Significant: seeks interpretation. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer notes confusing day/night vs sleep/wake terminology and asks how the 'high signal = day or night' mapping is done, and how ties are handled. Correct — paper doesn't clearly describe directionality assignment. Significant: methodological clarity. Evidence: specific. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Figure font sizes are small. Subjective presentational observation. Correct (accept reviewer's reading experience). Marginally Significant. Evidence: general observation but verifiable. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "'Manuscript has many typos' — a general claim without specific examples. Correct (paper does have typos as Human_1 Item 37 confirms). Marginally Significant. Evidence: no specific examples given, so Requires More.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer raises the circular-methodology concern and supplements with lit citation (Yin et al. using PSG). Correct, major methodological issue already flagged by multiple reviewers. Significant. Evidence: extensive with specific paper quotes, code-like reasoning, and external standard citation. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer flags mismatch: paper says Mann-Whitney U for one-sample test (wrong test family) and code uses ttest_1samp. Verified in code (lines 431-434). Correct. Significant: fundamental statistical test mismatch between described and implemented methods. Evidence: specific quotes from code. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer raises NREM vs REM heterogeneity confound. Correct — paper treats night as single state. Significant: inter-patient differences in sleep architecture could drive apparent 'circadian' differences. Evidence: specific paper quote and supporting Yin et al. quote. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues DBS therapy confound isn't adequately addressed beyond TEED. Correct — paper acknowledges this partially but does not provide rigorous analysis. Significant: affects generalizability of findings. Evidence: specific quotes, argues TEED doesn't capture therapeutic efficacy. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer flags GPi/STN sample imbalance (135 vs 30) limiting STN statistical power. Correct — imbalance is large. Significant: affects validity of cross-target claims. Evidence: specific sample sizes. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer flags fundamental contradiction between manuscript's described adaptive algorithm and the code's hardcoded [0,5] night / [15,20] day windows. Verified — code at lines 246-247 uses these fixed windows. Correct and a critical finding. Significant: reproducibility and methods accuracy. Evidence: both paper quote and code quote. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer argues fixed time windows arbitrary and signal-derived periods circular; either approach lacks validation. Correct. Significant: core methodological concern overlapping with other reviewers. Evidence: specific code lines and external comparison (van Rheede). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues patient-marked events insufficient as wakefulness proxy. Correct — 39% of recordings have no event markers at all, and events are sparse/instantaneous. Significant. Evidence: specific paper quotes and comparison to Yin et al PSG standard. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer flags clinician-selection bias in sensing-frequency choice (prominent peaks only). Correct — this IS a selection bias and limits generalizability. Significant. Evidence: specific paper quotes. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer critiques causal language ('modulate') in observational study. Correct semantic observation. Significance borderline — 'modulate' is commonly used for associations in biomedical text; some experts would say this is a writing/framing concern (Marginal), others would insist observational studies must avoid causal verbs (Significant). Evidence: specific quotes. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer raises selection-on-outcome bias in day/night determination AND questions day-night subtraction as circadian measure (vs proper rhythmometry). Deep technical critique with multiple angles. Correct. Significant: fundamental methodological issue central to paper's conclusions. Evidence: specific quotes from paper and relevant methodological references (cosinor-based rhythmometry). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer raises pseudoreplication: hemispheres treated as independent despite being nested within patients. Correct — paper doesn't use mixed-effects modeling. Significant: could materially affect reported p-values. Evidence: specific paper quote, methodological reference (Lazic). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer raises reproducibility: code depends on internal BRAVO server, private IPs, and unavailable Excel tables. Verified in code. Correct. Significant: reproducibility/transparency. Evidence: specific code quotes and relevant reproducibility references. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer flags internal inconsistency between text (z=2.46, p=0.016) and Table 2 (z=2.825, p=0.005) for levodopa ER; also flags that described Mann-Whitney tests are t-tests in code and FDR correction omits gamma. Both verified. Correct. Significant: central medication claim is based on mismatched values and implementation. Evidence: specific quotes from paper, table, and code. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

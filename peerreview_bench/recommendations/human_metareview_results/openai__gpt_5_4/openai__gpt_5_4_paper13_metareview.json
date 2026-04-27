@@ -1,0 +1,188 @@
+{
+  "paper_id": 13,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The methods instruct participants to stay awake with eyes open but do not report EEG, eye-tracking, camera monitoring, or acquisition-time covariates. Given the paper's goal of linking sleep health to resting-state connectivity, unmeasured drowsiness and scan-time effects are real confounds, so this is a valid and important criticism of missing controls.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer quotes the exact introduction sentence, and the manuscript does not really unpack what the claimed dependence and interaction across sleep-health domains concretely are. Asking for clearer explanation of that central framing claim is a valid and important clarity criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper frames neurotransmitter-map correlations as research question 3 and later lists sleep-relevant systems, but it gives only brief motivation for why this spatial-correlation analysis is informative. Asking for a clearer rationale is a valid, substantive request that is specific enough to verify from the manuscript.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper already excludes high-motion subjects, scrubs bad volumes, regresses motion from both RSFC and behavior, and even reports a control analysis adding motion into the phenotypic data. The specific suggested composite-motion correlation is not shown, but the broader motion-confounding concern is largely already addressed, making this criticism borderline rather than clearly correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript already performs multiple robustness analyses, but PCA on behavioral measures alone would not test the same brain-behavior covariance structure as the PLS latent variable. So the suggestion has some intuitive appeal yet is not clearly the right criticism of this paper's analysis.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript explains what PLS does but does not say why it was preferred over CCA for this problem. Because the multivariate method choice is central, a short rationale would improve the paper, although experts could reasonably differ on whether that is a major issue or a more modest clarification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The study uses a very high-dimensional RSFC feature set and does not report dimensionality reduction or regularization, instead relying on cross-validation and control analyses. Requesting a clearer justification for that design choice is a real methodological point, but its practical importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The classification experiment uses only 52 insomnia patients and 49 controls, and the paper does not test the classifier on a second independent clinical dataset. Because the manuscript makes biomarker and clinical-translation claims, asking for stronger external classification generalization is a correct and important criticism supported by the reported sample sizes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper reports the insomnia-classification result but gives little discussion of how that performance compares with the broader RSFC-based insomnia-classification literature. More contextualization would strengthen the clinical interpretation, but the reviewer does not identify any specific missing studies or benchmark, so the support is weak.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure 5 itself is unlabeled, but the paper already highlights the top positive and negative regions in Figure 3b and discusses key regions in the text. Because the requested information is partly already present elsewhere in the manuscript, this criticism is borderline rather than clearly correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The main analyses are cross-sectional associations, and the discussion lists several limitations but does not explicitly acknowledge that causal inferences cannot be drawn. Given the paper's biomarker and translational framing, flagging that limitation would meaningfully improve the manuscript.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper already has a principled reason to focus on LV1 because it is the only latent variable surviving permutation and FDR testing, and the suggested comparison to PSQI-based insomnia classification is only one possible auxiliary analysis rather than a necessary test of whether LV1 is the best sleep-health representation. The underlying desire to compare against a single measure is understandable, but the criticism is muddled enough that experts could split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The neuromolecular claim rests on correlations with a selected set of receptor maps, and the paper does not show whether similarly strong correlations would also appear for alternative molecular maps. A specificity analysis would be a meaningful improvement, but the reviewer does not name concrete comparator maps or a precise benchmark.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reported insomnia-classification accuracy is indeed 79.12%, but the proposed fix of testing only the top ten strongest weighted-degree features because that would be more clinically translatable is speculative and not justified from the paper itself. This makes the item genuinely borderline on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript says the discovery and replication datasets were split by collection period into independent samples from 2019 and 2020, which largely answers the overlap question, though it never literally states that no subjects overlap. Because the clarification request hinges on how explicit that wording must be, experts could reasonably differ on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item's factual premise does not hold up. The manuscript reports 1000 permutations but does not report 500 bootstraps, and the included code bundle also does not support the claimed numbers. Because the core numerical premise is wrong, the criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer is right that the paper thresholds PLS-derived edge results using p-values and FDR, but the stronger claim that multiple-comparison correction is unnecessary in PLS is methodologically contestable and too absolute. Some experts would view this as a valid PLS-norm objection while others would reject its premise, so correctness is borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper reports external-validation correlations of 0.18 for the PLS-informed connectome and 0.16 for the whole connectome and then says the former performs slightly better, but it does not test whether that difference is statistically meaningful. It also reports only correlations, not an error metric such as MAE, so the criticism is specific, valid, and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "For the clinical SVM, the manuscript says C and γ were tuned by grid search in an inner loop but never states the search range. That omission is a genuine reproducibility issue, though experts could differ on whether it is a major substantive problem or a relatively minor methods detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Table 1 is explicitly a demographics table, so family income is not out of place, but the reviewer's suggestion to replace it with sleep characteristics is a reasonable presentation preference. This is a valid but minor comment tied to a specific table.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The opening nutrition analogy is a stylistic choice rather than a scientific problem. Removing it would not materially improve the paper, so this is best treated as a trivial subjective nit.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "paper_id": 21,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explicitly estimates the outflow velocity as v_out = |Δv| + 2σ and then uses it in the mass-outflow-rate calculation (preprint.md lines 34, 247, 303). The reviewer is substantively right that this is a maximum-velocity-style proxy rather than the velocity of most of the gas, so asking for a sensitivity check with smaller characteristic velocities is a meaningful methodological concern. However, because the paper is also following a standard convention cited from the outflow literature, some experts could disagree on whether this makes the criticism strictly correct versus only debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism matches a real overreach in the paper's discussion. The manuscript says the molecular phase is expected to be equally effective as the neutral phase and later assumes the neutral phase is comparable to the molecular phase, while simultaneously emphasizing that COSMOS-11142 is gas-poor and quiescent (preprint.md lines 56-57, 307, 340). The reviewer gives a concrete external pointer and a clear rationale for why those statements should be toned down, so the evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper reports no X-ray or radio detection while also quoting an AGN bolometric-luminosity estimate of log L_bol ~ 45.3 from [O III] (preprint.md lines 22, 57, 340). It offers only a very brief caveat that this luminosity is an upper limit and may be overestimated by shock excitation, so the reviewer's request for a short discussion of possible explanations is fair. The issue is real, but experts could differ on whether this missing discussion is a major substantive omission or just a modest contextual clarification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 4 and the methods make clear that the four MSA shutters cover only part of the galaxy, and the paper derives a slit-loss correction of about 2 by assuming that the shutter spectrum is just a rescaled version of the whole-galaxy photometry, explicitly neglecting strong color gradients (preprint.md lines 69, 73, 206; Figure 4 caption). The reviewer is therefore correct that line-derived outflow quantities could suffer additional uncertainty if the absorption and emission are spatially inhomogeneous. Because those line measurements underlie the outflow masses and rates, this is a significant and well-supported concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer is correct that the stellar mass is stated as log M*/Msun = 10.9 without an uncertainty, even though the paper later discusses a discrepancy between the stellar and dynamical masses (preprint.md lines 23, 210-215). Without an uncertainty on M*, readers cannot judge how meaningful that discrepancy is. The item points directly to the relevant parts of the paper and asks for a quantitative significance estimate, so the evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper itself calls the proposed explanation for the Hα versus [N II] offset only 'a possible interpretation' and says Hα must be slightly blueshifted relative to [N II] to fit the blend (preprint.md lines 230-231; Table 1 lines 163-176). Given that both lines trace warm ionized gas, the reviewer's request for clearer physical justification is fair. This matters because the fit affects line kinematics and downstream interpretation, and the evidence is sufficient because the relevant fitting choice and speculation are explicitly identified in the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "In the neutral-outflow derivation the paper says it adopts 'canonical values' for the sodium abundance and dust depletion, but it does not explicitly state in the main text that this depletion assumption is Milky-Way-based (preprint.md lines 277-283). Asking the authors to name that assumption more explicitly is a valid clarity suggestion, but it is mainly presentational rather than a major scientific issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript labels the [N II]/Hα and [S II]/Hα panels collectively as 'BPT diagrams' (preprint.md lines 299, 305, 332), and the reviewer is historically correct that the [S II] diagnostic is more properly associated with Veilleux & Osterbrock (1987) rather than the original BPT paper. This is a precise nomenclature correction with enough explanation to verify, but it is only a minor framing issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does rely on NIRSpec MSA spectroscopy with moderate resolution (R ~ 1000) and limited spatial information rather than IFU data (preprint.md lines 63, 69), so the reviewer's concern about data limitations is grounded. But the main thrust of the item is also a venue recommendation, which is inherently subjective and only partly tied to verifiable deficiencies in the paper. Experts are therefore likely to agree the point is real while differing on how important it is for the review.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is a substantively correct methodology criticism. The methods state that most emission lines are fit separately with single Gaussians, with only a few tied parameters for unresolved blends, despite low S/N and limited resolution (preprint.md lines 219-231). The reviewer supports that concern with concrete examples from the figures and named lines such as [S II], [O II], [O III], [O I], and [N I], so the evidence is sufficient and the issue is important because the line fitting underpins the kinematics, diagnostics, and outflow-rate estimates.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper's interpretation of the [S III] and He I kinematics is indeed largely qualitative and tied to dust attenuation and resonant-transfer arguments rather than to a quantified extinction analysis (preprint.md lines 29, 230-235, 245). Asking for a wavelength-dependent extinction treatment and for stronger discussion of gas extinction is therefore a fair and important request. The reviewer names the specific lines and interpretive claims, but the support is concise enough that some experts may still differ on whether it fully substantiates every step of the criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "As in Human_1 Item 1, the paper uses v_out = |Δv| + 2σ in the outflow-rate calculation (preprint.md lines 34, 247, 303), so the reviewer is reasonably targeting a maximum-velocity-style estimate being used as the bulk outflow velocity. That concern is important because it directly rescales the reported mass outflow rates. Still, this criticism is partly normative because the paper is following an established convention, so meta-reviewers could plausibly disagree on correctness itself, and the item gives only limited supporting detail beyond the general claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper claims the [O III] emission is clearly spatially resolved after continuum subtraction and uses that to set R_out ~ 3 kpc (preprint.md lines 248, 303), but Figure 8 does not make it fully obvious which velocity components are resolved well enough to justify assigning that size to the highest-velocity outflowing gas. Because the size enters directly into the mass-outflow-rate estimate, the concern is significant. At the same time, the figure is somewhat open to interpretation, so experts could disagree on whether the criticism is strictly correct or just a tougher reading of the evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The AGN claim in Figure 9 is indeed contextualized mainly with local galaxies and local dividing curves, while the paper adds only a brief comparison to high-redshift quasar outflows rather than to a broader high-redshift star-forming and AGN population (preprint.md lines 299, 305, 338). Since line-ratio offsets with redshift are a real concern, asking for stronger high-z contextualization is an important criticism. The support is directionally good but not heavily referenced, so evidence sufficiency is somewhat borderline across experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper does discuss covering fraction and explicitly says that, without a constrained Na I or Ca II doublet ratio, only the product of covering fraction and column density can be measured robustly; it therefore assumes unity covering fraction for simplicity while noting the lower bound from line depth (preprint.md lines 307-308). The reviewer's blanket statement that the covering fraction can in fact be determined from the existing data does not hold up against the actual data limitations described in the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This item raises a real concern about optical-depth and covering-factor assumptions in the neutral-line analysis, which matters because those assumptions feed directly into the neutral outflow mass and rate (preprint.md lines 223, 307-308, 331). However, some supporting details are off or overstated: the paper already says the Ca II ratio is noisy but consistent with 2, explicitly treats the optically thin conversion as a lower limit, and reports that freeing the Na I doublet ratio does not substantially change the result. Because the reviewer's main point is partly right but partly undermined by what is already in the paper, correctness itself is likely to be disputed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer is right that the paper's introductory phrases about 'relatively weak emission lines' and Balmer absorption as indicators of quiescence and post-starburst status are qualitative, while a more quantitative framing in terms of Balmer emission equivalent width would be clearer (preprint.md lines 23, 89-198, 235). The underlying point is valid and easy to verify from the paper, but experts could disagree on whether this is a genuinely substantive improvement or just a modest presentation refinement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

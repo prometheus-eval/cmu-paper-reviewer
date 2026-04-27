@@ -1,0 +1,228 @@
+{
+  "paper_id": 4,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The model aligns the same atom-pair indices across reactant, product, and interpolated structures, and the experiments rely on the mapped Grambow dataset. Because the manuscript makes broad general-applicability claims without discussing this prerequisite, the reviewer raises a real and important scope limitation with enough detail to verify it.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper reports only a single random 80/10/10 split result and does not show how accuracy changes with training-set size. Asking for a learning curve is a constructive ML evaluation request that would help readers judge data efficiency, and the missing analysis is specified clearly enough.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 2 is genuinely hard to read: the text is tiny and the warm colors are close enough that the key result is not easy to parse. That is a valid complaint about an important figure, though meta-reviewers could plausibly differ on whether it is a substantive issue or mainly a presentation nit.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript does briefly explain TTA as averaging forward and reverse reaction predictions, so the comment somewhat overstates what is missing. Still, some readers could reasonably find that explanation too terse, making this a borderline clarity complaint rather than a clearly right-or-wrong factual point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Figure 4 uses wording like \u201cSuccess (Before Opt.)\u201d, which is ambiguous because success is only determined by the later optimization outcome. Asking the author to rename or clarify that category is a valid request that would improve interpretation of a central validation figure, although some meta-reviewers may still see it as only a wording issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The apparent extra yellow and dark colors in Figure 4 come from overlapping semi-transparent histograms, not from unlabeled additional categories. The broader readability concern has some merit, but the item\u2019s central factual claim about missing legend entries is shaky enough that correctness itself is debatable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The quoted phrase appears in the manuscript and is awkward English. This is a minor but valid wording correction, and the reviewer identifies it precisely enough for straightforward verification.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The methods only say that TS optimization was performed with QChem, without specifying the exact saddle-point algorithm or convergence criteria. That omission is a real reproducibility issue, and the reviewer names the missing details specifically enough to verify the gap directly from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The methods text says the auxiliary readout predicts rotational and translational entropy, but the notation shown is S_vib and S_rot, so there is an internal mismatch in what the symbols mean. Clarifying the entropy terms and why only two entropy components are used would materially improve the methodological description.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The manuscript clearly contains many grammatical and typographical issues, so the underlying complaint is valid. But this item gives no concrete examples, which makes it weakly supported even though it is a routine copyediting point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper repeatedly says the ML model predicts only interatomic distances and never explains how chirality or stereochemical ambiguity would be handled, so the reviewer raises a substantive concern. However, the later reconstruction starts from an interpolated geometry, so how fatal the chirality issue is remains debatable, making correctness itself borderline across experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper has many grammatical problems, so this copyediting complaint is valid. But it is still only a language-polish point, and the reviewer does not list any concrete examples to substantiate the claim.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does include a proof-of-concept showing that the overall approach can recover multiple TS structures for one reactant/product pair, so the praise broadly matches the manuscript. But this is commendation rather than actionable criticism, so it is not useful feedback for improving the paper.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The methods already explain that the 11,961-reaction Grambow dataset was split randomly 80/10/10, which naturally gives about 1,196 test cases. So the implication that the paper leaves the test-set selection unexplained does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper talks about \u201cabsolute energy error\u201d for optimized structures, but that quantity is conceptually nontrivial because the optimized TS is itself a DFT structure and may legitimately differ from the reference TS. Asking the author to clarify exactly what is being compared and why it should be interpreted as an error is therefore a valid and important interpretive request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The item\u2019s main factual premise is shaky because this paper\u2019s TTA is an inference-time average over forward and reverse reactions, not a training-data augmentation scheme that would itself create an overfitting risk. The closing request for training curves is reasonable, but the mixed item is ambiguous enough that experts could split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper shows only a small number of qualitative examples, mainly the extreme cases and one multi-TS exploration, so asking for more representative good and bad predictions is fair. Such examples would help readers understand model behavior, though experts could differ on whether this is substantively important or mostly a presentation enhancement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The model is explicitly defined to predict a ratio relative to the interpolated distance matrix, and the paper does not report a direct-distance alternative. Asking whether direct prediction was tested is a valid design question, but even the reviewer frames it as nonessential, so its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 2 shows only a small gain from TTA relative to the base model, so the suggestion that TTA may be over-emphasized is factually grounded. But this is mostly a matter of how strongly to market a minor component rather than a central methodological flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 3b is indeed busy and hard to parse because the panel is small and the colored histograms overlap heavily. Improving its readability would help readers follow the paper\u2019s key error analysis, although some experts may still regard this as mainly a presentation issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper reports successful TS optimizations and selective IRC checks, but it does not explicitly state that all converged structures were verified to have exactly one imaginary frequency. Requesting that standard TS check is defensible and important, yet because TS optimization plus IRC already provide substantial validation, meta-reviewers could still disagree on whether the criticism is strictly correct as stated.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The method relies on QM-optimized reactant and product geometries from the Grambow dataset and, for bimolecular reactions, on pre-aligned reacting complexes that are implicit in that dataset construction. The manuscript does not clearly foreground these deployment limitations despite broad claims of general applicability, and the reviewer supports the concern with specific workflow details.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper explicitly uses a random split on the Grambow dataset, and the reviewer gives concrete literature support for why that can leak reactant identity and yield optimistic estimates. Reproducing the main accuracy comparison under a reactant-based split would materially strengthen the evaluation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The description of the auxiliary readout and loss is somewhat confusing about whether energies and entropies are predicted per structure or only as reaction-property differences, and the paper provides no ablation showing whether these multitask heads help. Clarifying that section and ablating the readout layers would make the method much easier to evaluate.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Section 4.5 overstates prior work by saying earlier models directly predicted 3D positions, even though Pattanaik et al. also uses a distance-matrix-style intermediate with optimization, and the related Mako\u015b paper is missing from the citations. The reviewer gives exact references and a precise target passage, making this a strong novelty-and-context criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper does use a 90-model ensemble and explains only how that number was assembled, not whether so many models are actually necessary for the observed gain. Asking for an efficiency-versus-performance analysis is reasonable, but experts could differ on whether this is an important practical issue or just a nice-to-have ablation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

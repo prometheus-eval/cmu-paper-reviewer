@@ -1,0 +1,127 @@
+{
+  "paper_id": 10,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explicitly advances a molecular-like interpretation via compositeness and size estimates and an off-shell D*+-dominated decay picture, while also noting that the multiplicity behaviour is unexpected for such a large state and only showing that the D0π spectrum is consistent with the off-shell D*+ hypothesis. So the reviewer’s broader skepticism about how solid that interpretation is is fair and important, but the item gives only high-level assertions and no precise paper pointer or external standard for the claimed molecule expectation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is simply the reviewer’s overall impact judgment. As a subjective assessment it is understandable, but it does not identify a concrete paper issue the authors could fix and is therefore not useful as a review item.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The page-4/5 discussion around Tables 3 and 4 is indeed hard to parse: the paper says the two fitted FWHM values look contradictory, then uses pseudoexperiments to argue they are nevertheless consistent, but the logic is dense and easy to lose. Rewriting this would materially improve understanding of an important methodological point, and the reviewer gives an exact location.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does test a more general background family that adds a three-body phase-space term, but it does not report how the headline signal significance behaves under that alternative. Read charitably, the reviewer is asking for robustness details on a central claim, though the wording also assumes the significance would drop without actually supporting that assumption, so correctness is genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The discussion concerns a near-threshold measurement where detector and natural-width scales matter, but it does not spell out a numerical D*+ width or resolution value at the cited point. Asking for that quantity is a valid clarity request, though it is mainly a supporting-detail issue rather than a major scientific flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Extended Data Fig. 10 is the figure the paper uses to support the intermediate off-shell D*+ interpretation, and it is fair to say that this alone may not conclusively exclude every alternative dynamical picture. However, the reviewer’s specific alternatives are muddled—the figure is not itself a D0D0 Dalitz plot and invoking a D*0 resonance in D0D0π+ is not straightforward—so experts could split on whether the item’s core claim is substantively right or too confused.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The D+D0 near-threshold structure is interpreted as partially reconstructed Tcc+→D*D decays with unreconstructed π0 or γ, and the analysis indeed does not reconstruct those neutral particles directly. Requesting more support for that interpretation is a valid and important criticism because it bears on the claimed decay pattern and isospin argument, and the reviewer states the missing piece clearly.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This inference does not hold up. The paper explicitly says the relative yields in the D0D0π+, D0D0, and D+D0 spectra are consistent with the authors’ isoscalar off-shell D* model, so the fact that the D0D0 yield exceeds the fully reconstructed D0D0π+ yield does not by itself imply extra sources such as a Tcc^0 state.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper only gives a short discussion-level attribution of the D0D̄0 threshold enhancement to partially reconstructed χc1(3872) decays, so asking for stronger support is reasonable. But the item also adds a dubious width argument—partial-reconstruction broadening is not determined only by the intrinsic ~1 MeV width—making the overall correctness genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This is only a question about whether the D0→Kπππ mode could already be reconstructed. The paper already frames that channel as something for future larger-dataset studies, and the reviewer does not articulate a specific, paper-checkable criticism beyond that open-ended query, so the item is too vague to count as a clearly correct criticism.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Independent confirmation by Belle or Belle II would certainly be valuable, and full experimental reproduction from the manuscript alone would be difficult. But this item does not point to any concrete missing methodological detail in the paper and mostly asks for other experiments to repeat the result, which is not a constructive manuscript revision request.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is a valid clarity criticism. The paragraph spanning the bottom of page 4 into page 5 tries to reconcile very different FWHM values from the two signal models via pseudoexperiments, but the explanation is genuinely hard to follow and would benefit from rewriting or a schematic.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Figure 3’s legend includes a background component even though the text says the background vanishes in the fit, so the unexplained legend entry can confuse readers. This is a real but minor presentation issue, and the reviewer points to the exact figure.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 9 uses a suppressed-zero or broken-axis presentation in the top panel, but the axis itself does not explicitly explain or mark that break. That is a genuine but minor presentation problem, and the reviewer identifies the exact figure and a straightforward fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

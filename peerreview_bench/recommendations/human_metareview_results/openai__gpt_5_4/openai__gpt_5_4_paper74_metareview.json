@@ -1,0 +1,148 @@
+{
+  "paper_id": 74,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does explain SurVClusterer-based comparison in the supplementary methods, including match criteria and code links (Supplementary Methods around lines 434-453), so the procedure is not absent. But the main manuscript gives only a light treatment of how callsets are compared and how the benchmark metrics are operationalized, so asking for clearer exposition is a valid reproducibility concern. The reviewer names the exact component at issue, yet does not point to the specific missing step in the paper, so evidence is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This does not match the paper. Figure 1 is a schematic illustration of deletion/duplication breakpoint scenarios, and panels c and d are conceptual cartoons described in the caption rather than quantitative plots with measurable axes. The complaint about an unlabeled y-axis is therefore factually unsupported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper compares a human-trained model with species-specific retraining on non-human datasets, but it does not explore a mixed-species training regime. So the curiosity behind this suggestion is grounded in something the paper leaves open. However, the reviewer explicitly frames it as non-crucial and it is more future-work speculation than material feedback for improving this manuscript.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Figure 2a does report that more than 93% of HG002 tandem duplications are contained in tandem repeats, and the paper does not further stratify those regions. Requesting a subtype breakdown is therefore a real, paper-grounded suggestion. Still, whether that extra bar-chart detail would materially strengthen the paper or is just a nice-to-have interpretive addition is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism matches the manuscript. Section 2.2 says the filtering step uses a pre-trained random forest, and Section 2.3 says HGSCV2 samples are evaluated with leave-one-out training, but the paper gives little methodological detail about the classifier itself beyond the feature categories and training setup. Because the reviewer cites the relevant section and the specific missing method description, the support is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper benchmarks Delly, Lumpy/Smoove, and Manta in Section 2.3 but does not explain what filtering settings or thresholds were used for those external callers, nor does it explore how alternative cutoffs would move the precision-sensitivity tradeoff. Since Figure 4 presents one operating point per caller, the reviewer's fairness concern about unreported filtering strategy is valid and would meaningfully improve the benchmarking section if addressed. The item names concrete tools and concrete missing information, so the evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The request to visualize HG002 alongside the other samples is understandable, because HG002 is discussed separately rather than shown in Figure 4. However, the factual premise that the paper reports only HG002 sensitivity and not precision is wrong: Section 2.3 explicitly gives both sensitivity and precision for HG002 for deletions and duplications. Because the item mixes a valid presentation suggestion with an incorrect premise, expert meta-reviewers could plausibly split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is a reasonable missing-baseline criticism. The paper says Delly, Lumpy, and Manta were chosen based on a recent benchmark, but another strong SV caller such as GRIDSS is not included. Although the specific citation to GRIDSS2 + PURPLE is more somatic-oriented than the manuscript's germline setting, the core point that an additional competitive baseline could strengthen the comparison is valid and well specified by naming the tool and citation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper does show that SurVIndel and SurVIndel2 remain more sensitive than other callers even when support is weak or absent, and Section 2.7 discusses why many CNVs lack support. But it does not directly analyze why SurVIndel2 still recovers more of those difficult CNVs than competing callers, nor does it report a dedicated true-positive rate for the unsupported subset. That would be a meaningful extension, though the reviewer does not point to a precise figure panel or complete the evidentiary chain in detail, making sufficiency borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This criticism is not well targeted to the paper's scope. The manuscript is about germline deletions and tandem duplications in population-scale short-read whole-genome sequencing, not somatic CNV detection in cancer, so the absence of a cancer-mode discussion is not a genuine limitation of the stated contribution. The premise that this caveat should be highlighted against the current benchmark is therefore inapplicable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explicitly focuses on deletions and tandem duplications and states in the introduction that these unbalanced SVs alter copy number and will be referred to as CNVs in the manuscript. That terminology is standard enough for this scope, and the reviewer's premise that such events should not be called CNVs does not hold here. The criticism therefore targets a naming choice that the paper clearly defines and justifies.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is not a correct criticism of the method. SurVIndel2 runs on short-read BAM/CRAM input and uses long-read-derived truth labels only to train a filtering model; that does not make the caller itself non-short-read-based. The fairness objection is likewise misplaced, because using external truth to train or validate a classifier is different from supplying long-read evidence at test time, and the aside about Lumpy is also inaccurate for the benchmarked deletion/duplication setting.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is largely correct. The paper has no standalone Methods section in the main body; methodological material is distributed under the Results section and a late Supplementary Methods appendix. Although Section 2.3 does mention comparison tools and truth sets, and the code is open source, the manuscript does not provide the full callsets, commands, or result-generation scripts needed for straightforward reproduction. Reorganizing and expanding reproducibility details would materially improve the paper, and the item is specific enough to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item mixes a few fair requests with several incorrect premises. The paper already states that HGSVC2 is a long-read and Strand-seq catalogue of insertions and deletions in 35 genomes, and Section 2.3 clearly benchmarks deletions and tandem duplications rather than an unspecified whole-SV set. It also does report deletion precision, contrary to the reviewer's final question. Still, the bundled suggestions about releasing callsets or adding an extra benchmark could sound reasonable to a charitable reader, so disagreement on correctness is plausible.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The central factual premise is wrong: Delly, Lumpy, and Manta are all SV callers that do detect deletions and/or duplications, so it is inaccurate to say the comparison contains no tools designed for CNV-like events. Suggesting CNVnator as an additional baseline is optional rather than clearly required, and the DRAGEN mismatch claim is not substantiated with a specific contradictory number from the paper. Because there is a reasonable missing-baseline reading of part of the comment, expert disagreement on correctness is possible even though the item is mostly not supported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper does define tandem repeats and, in the supplementary methods, says tandem-repeat annotations come from UCSC TRF with a 90% overlap criterion. But the manuscript also uses broader language such as repetitive regions and tandem repetitive regions without always operationalizing those categories in the main text or providing an annotation file, so the reviewer's clarity concern has a real basis. Since these region definitions matter to the paper's central argument, the issue is significant, but the item does not point to the exact passages where the ambiguity matters most, making evidence borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "paper_id": 17,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper says Eqs. 1 and 2 are stationary Harris-sheet solutions only when two equilibrium conditions hold, then later uses the same functional form for an under-heated, non-equilibrium initial state to derive Eq. 3. The reviewer's underlying complaint is that this central transition is not explained clearly enough.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The introduction explains that current sheets and bifurcated structures matter, but it still frames the motivation mostly for specialists. The reviewer is making a broadly understandable request for clearer significance and audience-facing motivation, though without pointing to a specific missing passage.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "In the MMS comparison, the paper notes the observed sheet is electron-scale and undergoing reconnection, but it does not really unpack how that affects thickness matching, equilibrium status, or whether reconnection-driven thinning explains differences from the simulation. This is a real issue in a central comparison, though the reviewer's phrasing about the authors explicitly stating the thickness mismatch is somewhat loose.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Figure 5 compares observations on a time axis with simulations on an x/λ axis, and the caption states those axes without giving a conversion or alignment. Asking for a quantitative mapping is valid for a central observation-simulation comparison and is directly anchored to the figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Panels 4d and 4i are signed difference plots, so centering the colormap at zero would make gains versus losses easier to read. This is a valid but minor presentation suggestion tied to specific panels.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript uses R_e when giving the MMS spacecraft position but does not spell out that this denotes Earth radii. The reviewer gives an exact location and the issue is a small clarity nit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The text says the observed sheet has thickness <10d_e but never explicitly defines d_e in the prose. That is a real but minor notation-clarity issue, and the reviewer points to the exact location.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The discussion contains the typo “It fact” where “In fact” is intended. This is an exact, straightforward copyediting point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

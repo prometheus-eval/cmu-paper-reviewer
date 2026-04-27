@@ -1,0 +1,124 @@
+{
+  "paper_id": 47,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper itself situates the work against prior block-copolymer self-assembly PUF/tag studies, including ref. 20, and the abstract does not clearly spell out what is newly added beyond earlier pattern-based authentication approaches. Asking for clearer novelty framing in the abstract is therefore a valid and constructive criticism. However, the reviewer does not name the earlier studies or precisely document the overlap, so the support is weaker than the importance of the point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript\u2019s authentication flow relies on SEM imaging of nanoscale patterns while also motivating supply-chain use cases in Figure 1b. The paper briefly notes in the discussion that electron-microscope readout is an obstacle, but it does not substantially discuss the practical measurement constraints this creates for real deployment. The reviewer clearly ties the concern to the nanometer-scale tag and the claimed application scenario, which is enough to verify the issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 1f-i and its surrounding discussion demonstrate pattern transfer on flat material samples such as diamond, Si, quartz, and SiO2, but the panel icons can easily suggest direct realization on finished products like jewelry or cameras. Since the paper does not explain what would be required to extend the process to genuinely uneven product surfaces, the reviewer is right that the figure/application claim could mislead readers and deserves clarification. The item directly points to the relevant figure panels, so its support is specific enough.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper states that the uniqueness of the PUF response is guaranteed by the intrinsic randomness of self-assembly, and the reviewer reasonably asks for sharper clarification between randomness of the structure and uniqueness of the resulting response. That concern targets a central claim and is understandable. Still, because this study fixes the readout mechanism and also evaluates uniqueness empirically through HD and entropy analyses, some experts could see the criticism as partly inapplicable to the paper\u2019s chosen challenge-response setup.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This criticism does not hold up because the paper does not stop at binary encoding by mere minutiae presence or density. Figure 3j and the accompanying text explicitly discuss refining the encoding/authentication protocol using defect types, and the discussion also notes further morphological features that could be incorporated. Since the reviewer\u2019s central premise is that the paper fails to discuss these richer uses of the enhanced image information, the item is not factually accurate.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper\u2019s thermal-stability experiment is performed on SiO2-based devices at 200\u00b0C for 30 minutes, so the reviewer is right that generalizing thermal robustness across arbitrary substrate materials would require more qualification. The discussion does acknowledge that environmental stability depends on the engraved substrate, but it does not give concrete operating limits for different materials. Because the omission is only partially addressed already, experts could reasonably split on whether this item is fully correct.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer raises a real definitional concern: this work authenticates objects by imaging and matching an internal nanoscale pattern, which some experts would describe as closer to an anti-counterfeiting identifier than to a classical challenge-response PUF. The manuscript does frame the SEM scan as the challenge and the nanopattern-derived readout as the response, so the authors do provide a PUF interpretation. Because the validity of the criticism depends on how strictly one interprets PUF terminology, disagreement on correctness is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer is correct that the manuscript uses the abbreviation RCP before spelling out random copolymer in full, and abbreviation hygiene plus small proofreading fixes would improve readability. The specific examples about RCP and typos make the point easy to verify. This is a minor but legitimate presentation issue rather than a substantive methodological problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript\u2019s readout and matching pipeline depends on SEM images of the nanopattern, and the discussion itself admits that requiring an electron microscope can be an obstacle for deployment. The reviewer\u2019s stronger practical argument about packaged-chip or field use is therefore well grounded in the paper\u2019s setup, even if some application details go beyond what the authors explicitly analyze. Because the item clearly identifies the SEM-based readout as the limiting factor, the support is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The abstract describes the structures as unclonable, but the paper later concedes that advanced lithographic tools could in principle clone the nanopattern and suggests richer 3D or roughness-sensitive readouts as harder-to-reproduce alternatives. The reviewer therefore correctly identifies a tension between the strong unclonability claim and an image-based 2D authentication method that may be reproducible by high-end fabrication. The item is detailed and specific about the readout assumptions and candidate cloning routes, so it is well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper argues for randomness mainly through bit uniformity, entropy, and inter-HD statistics, so it does contain randomness analysis, but it does not include broader statistical testing such as autocorrelation or NIST SP 800-22-style checks. Requesting a more comprehensive randomness evaluation is therefore a valid suggestion aimed at a core PUF property. The reviewer names concrete additional tests, which makes the missing evidence straightforward to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript reports aging stability and a high-temperature thermal test, but it does not provide any low-temperature reliability data. Since robustness across environmental conditions is one of the paper\u2019s advertised strengths, asking about performance from -40\u00b0C to 0\u00b0C is a legitimate request for missing validation rather than a misunderstanding. The absence of such results is easy to confirm from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper cites prior PUF-related work in the introduction, but it does not present a direct quantitative comparison against existing PUF materials or techniques using common figures of merit such as reliability, randomness, uniqueness, and area efficiency. Adding such a comparison would materially improve contextualization of the contribution. Because the reviewer explicitly names the missing comparison target and the relevant metrics, the criticism is specific enough to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

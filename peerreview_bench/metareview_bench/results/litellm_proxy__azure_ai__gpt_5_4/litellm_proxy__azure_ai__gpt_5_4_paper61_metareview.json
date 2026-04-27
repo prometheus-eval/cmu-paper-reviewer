@@ -1,0 +1,491 @@
+{
+  "paper_id": 61,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that the title is awkward and could be clearer. I judge it Correct because the title is grammatically clunky and the suggested rewrite captures the same contribution more cleanly. A skeptical expert could argue that the existing title is still understandable and scientifically accurate, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is mainly a presentation improvement to the title rather than a substantive methodological change; upgrading it to a core contribution problem is not very plausible here. The item points directly to the title text and the proposed clearer wording, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that using air pollution instead of bare pollution would improve precision. I judge it Correct because the paper repeatedly studies air pollution specifically, so the fuller term is the more precise phrasing. A skeptical expert could argue that the topic is obvious from context, so shorter wording is acceptable, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is a terminology clean-up that would polish the prose without changing the science; upgrading it to a major conceptual issue is not very plausible here. The item identifies the recurring wording choice the meta-reviewer can verify in the paper, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the acronym DAPP is nonstandard and not well justified. I judge it Correct because the paper introduces and heavily uses DAPP without showing that it is a broadly established community term. A skeptical expert could argue that specialized acronyms are common and the paper defines DAPP clearly on first use, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is mostly a stylistic nomenclature concern rather than a change to the substance of the study; upgrading it to a major methodological concern is not very plausible here. The item does not provide a specific source showing that DAPP is uncommon, so the evidence is Requires More and I predict correct_marginal_insufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is that the abstract should briefly explain what the scenarios mean. I judge it Correct because the abstract names SSP1-2.6, SSP2-4.5, and SSP5-8.5 but does not give readers any short interpretive gloss for those scenarios. A skeptical expert could argue that specialist readers may already know the SSP labels, but that prosecution is not very plausible against the paper. I rate it Significant because clarifying the scenarios in the abstract would materially improve accessibility to the paper's central setup; downgrading it to a minor wording tweak is not very plausible here. The item points to a specific omission in the abstract that can be checked directly, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is that the abstract is confusing because total DAPP decreases while aging is said to increase DAPP. I judge it Correct because the abstract first reports net declines and then immediately says aging contributes to an increase, which needs clearer phrasing about offsetting forces. A skeptical expert could argue that careful readers can infer that the second sentence refers to one driver rather than the net outcome, but that prosecution is not very plausible against the paper. I rate it Significant because the abstract states the headline result, so clarifying this contrast would improve readers' understanding of the paper's main conclusion; downgrading it to a merely stylistic issue is not very plausible here. The item quotes the exact conflicting abstract statements that a meta-reviewer can compare with the paper, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The main point is that the introduction passage is ambiguous about whether it is about China or the world. I judge it Not Correct because the cited introduction lines already say globally, the world's population, and other explicit global markers, so the intended scope is actually stated. A charitable reading would be that the transition to China in the next paragraph may make the opening feel slightly abrupt, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The main point is that the paper fails to explain that RCPs are greenhouse-gas concentration pathways rather than air-pollution pathways. I judge it Not Correct because the introduction already says that RCPs are global scenarios of greenhouse gases defined by radiative forcing, so the complained-about clarification is present. A charitable reading would be that the paper could have contrasted greenhouse gases and air pollutants even more explicitly, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The main point is that the purpose statement could say more clearly that the study is about DAPP in China. I judge it Correct because the current wording is understandable but the suggested phrasing would more directly foreground the geographic target. A skeptical expert could argue that the sentence already makes the setting inferable, so no clarification is strictly needed, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is a local wording refinement rather than a substantive change to the argument; upgrading it to a major substantive issue is not very plausible here. The item points to a specific sentence where the alternative phrasing can be checked, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The main point is that the sentence beginning In addition, it is worth noting is confusing. I judge it Correct because that sentence in the Figure 2 results is visibly incomplete and difficult to parse. A skeptical expert could argue that a reader can reconstruct the intended regional comparison from surrounding context, but that prosecution is not very plausible against the paper. I rate it Significant because this is in the main results narrative, so fixing it would materially improve comprehension of the reported regional findings; downgrading it to only a wording nit is not very plausible here. The item identifies the exact sentence whose broken syntax can be verified directly, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The main point is that the sentence beginning In the sustainability scenario is confusing. I judge it Correct because the province-level results sentence is grammatically broken and hard to interpret as written. A skeptical expert could argue that the surrounding figure and numbers let a reader guess the intended point, but that prosecution is not very plausible against the paper. I rate it Significant because this sentence interprets key spatial results, so clarifying it would improve the paper in a meaningful way; downgrading it to a minor presentation nit is not very plausible here. The item points to the specific results sentence in question, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The main point is that the results wording is confusing because it can sound like total DAPP increases from 2017 to 2035. I judge it Correct because the text describes aging-driven increases immediately after net DAPP trends, so the distinction between component growth and total change is easy to misread. A skeptical expert could argue that a technical reader may understand that the claim is about one decomposition component, but that prosecution is not very plausible against the paper. I rate it Significant because the issue concerns interpretation of a central decomposition result, not a trivial wording preference; downgrading it to just a stylistic issue is not very plausible here. The item refers to a specific results sentence and the nearby net-trend discussion, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The main point is that Figure 3 needs a brief explanation of how to read the plots. I judge it Correct because Figure 3 uses waterfall-style component bars and totals without much in-figure guidance, making the decomposition harder to follow. A skeptical expert could argue that readers familiar with waterfall charts may manage without extra help, but that prosecution is not very plausible against the paper. I rate it Significant because Figure 3 is central to the paper's driver analysis, so better interpretive guidance would materially help evaluation of the main results; downgrading it to only a cosmetic figure tweak is not very plausible here. The item points to a specific figure whose readability the meta-reviewer can inspect, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The main point is that the paper should explain how it differs from Wang et al because that study is not discussed in the introduction. I judge it Correct because Wang et al is cited in the discussion as supportive prior work, but the introduction does not use it to position the paper's contribution. A skeptical expert could argue that the authors do compare against some other prior studies in the introduction, so readers can still infer partial novelty claims, but that prosecution is not very plausible against the paper. I rate it Significant because clearer comparison to close prior work would strengthen the paper's contribution framing; downgrading it to only a minor citation preference is not very plausible here. The item points to an identifiable related-work omission that can be checked from the introduction and discussion, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The main point is that the paragraph promises two aspects but enumerates the discussion inconsistently. I judge it Correct because the discussion says two aspects and then uses First and Third, so the internal structure is inconsistent. A skeptical expert could argue that this may just be a numbering typo rather than a deeper organizational flaw, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because the issue is real but mainly about paragraph organization rather than substance; upgrading it to a major contribution problem is not very plausible here. The item quotes the visible enumeration mismatch in the discussion paragraph, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The main point is that the KAYA model needs a short description and a reference. I judge it Correct because the paper invokes the KAYA model for a mediating-effect analysis but gives neither a citation nor enough explanation in the main text. A skeptical expert could argue that details may exist in the unavailable supplementary text, so the omission could be partly due to compression in the main paper, but that prosecution is not very plausible against the paper. I rate it Significant because the model supports an added analytical claim in the discussion, so basic description and citation would substantively improve transparency; downgrading it to only a citation nit is not very plausible here. The item identifies the exact place where the model is invoked without adequate explanation, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The main point is that a discussion paragraph is hard to follow and may not add much. I judge it Correct because the cited paragraph is diffuse and not tightly connected to a concrete new analytic result, so the concern about trimming or sharpening it is reasonable. A skeptical expert could argue that some readers may welcome the broader contextual discussion even if it is loose, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is mainly about tightening discussion prose rather than correcting a central scientific defect; upgrading it to a major substantive issue is not very plausible here. The item points to a specific paragraph whose relevance and clarity can be evaluated directly, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The main point is that the pension-focused recommendations feel outside the paper's direct findings. I judge it Correct because the recommendations move from DAPP results to broad pension policy claims with only an indirect evidentiary bridge. A skeptical expert could argue that the study is explicitly about aging and public-health policy, so some broader recommendations are defensible, but that prosecution is not very plausible against the paper. I lean Significant because linking recommendations more tightly to the paper's evidence would improve the discussion in a meaningful way, although one could plausibly see it as Marginally Significant because it is mainly a discussion-framing issue. The item points to a concrete paragraph and a concrete example such as pensions that can be checked, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The main point is that the phrase about adjusting the population structure is unclear. I judge it Correct because the conclusion uses the phrase adjust the population structure without explaining what policy action is actually meant. A skeptical expert could argue that some readers may infer that it refers generically to managing aging demographics, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is a local clarity problem in the conclusion rather than a substantive flaw in the analysis; upgrading it to a major substantive issue is not very plausible here. The item quotes a specific vague phrase that is easy to verify, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The main point is that the methods give too little detail on how CMIP6 supports PM2.5 estimation. I judge it Correct because future PM2.5 estimation is central to the study, yet the main text gives only a brief empirical formula and little explanation of the CMIP6 inputs behind it. A skeptical expert could argue that the authors do provide the core equations and cite the underlying sources, but that prosecution is not very plausible against the paper. I rate it Significant because more methodological detail here would materially improve reproducibility and confidence in a central analysis step; downgrading it to only a minor methods polish is not very plausible here. The item identifies a specific methods omission around the core PM2.5 projection pipeline, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The main point is that the methods should clarify which inputs come from CMIP6 and why the Chowdhury and Van Donkelaar formula is appropriate. I judge it Correct because the paper cites the formula and CMIP6 composition data but does not spell out the provenance of every input or justify the empirical formula in much detail. A skeptical expert could argue that specialist readers may already recognize the borrowed formula and infer the input sources, but that prosecution is not very plausible against the paper. I rate it Significant because this formula drives future exposure estimates, so clearer provenance and justification would substantively strengthen the methods; downgrading it to a merely stylistic note is not very plausible here. The item points to a concrete methods passage and named sources that a meta-reviewer can inspect, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that the results section needs a short method and data setup so the drivers are understandable. I judge it Correct because the paper presents driver-based results before the detailed methods, and the decomposition of population growth versus aging is not explained in the early results text. A skeptical expert could argue that many journals place methods later, so some readers may tolerate learning the drivers after seeing the figures, but that prosecution is not very plausible against the paper. I rate it Significant because adding a brief orienting explanation before the core results would materially improve readers' ability to interpret the main analysis; downgrading it to just a structural preference is not very plausible here. The item identifies a specific absence in the results presentation that can be checked directly, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that Figure 3 is hard to read. I judge it Correct because the figure is visually dense and its waterfall encoding is not immediately transparent. A skeptical expert could argue that readers used to decomposition plots may still find it acceptable, but that prosecution is not very plausible against the paper. I rate it Significant because this is a key results figure, so improving its readability would meaningfully help evaluation of the main claims; downgrading it to only a cosmetic preference is not very plausible here. The item points to a specific figure that can be visually inspected, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the text overstates aging as increasing DAPP when total DAPP often decreases or stays flat. I judge it Correct because the paper's wording mixes a positive contribution from aging with the net outcome, so the reviewer's suggested framing about attenuating mitigation benefits is indeed clearer. A skeptical expert could argue that technically minded readers may understand that the claim concerns one decomposition component rather than the net total, but that prosecution is not very plausible against the paper. I rate it Significant because this concerns interpretation of the paper's headline driver result; downgrading it to just a phrasing issue is not very plausible here. The item cites specific tensions between the results and discussion that can be checked, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is that Figure 6 is too complex and needs simplification or more explanation. I judge it Correct because Figure 6 packs six radial subplots, multiple colors, arrows, and regional abbreviations into one figure, making it hard to parse quickly. A skeptical expert could argue that a patient expert reader can still decode it from the legend and caption, but that prosecution is not very plausible against the paper. I rate it Significant because Figure 6 supports one of the main discussion claims, so clearer presentation would be meaningfully helpful; downgrading it to only a minor figure preference is not very plausible here. The item points to a specific figure whose complexity is directly visible, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is that Figure 4 could be moved to the supplement. I judge it Correct because this is a presentation preference about figure placement rather than a factual problem with the analysis. A skeptical expert could argue that keeping a dense province-level figure in the main text is justified for transparency, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because moving a figure is a minor organizational choice rather than a substantive improvement to the science; upgrading it to a major issue affecting the claims is not very plausible here. The item identifies the exact figure under discussion, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The main point is that the paper should report time intervals instead of specific years because single years may reflect artifacts. I judge it Not Correct because the paper already reports multi-year intervals such as 2017-2025 and 2025-2035 for major trends, and the claim about artifact-driven abrupt changes is speculative from the review text. A charitable reading would be that one might still prefer smoother interval summaries for presentation, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The main point is that the paper should discuss limitations such as assuming constant PM2.5-vulnerability relationships over time. I judge it Correct because the discussion lacks an explicit treatment of fixed exposure-response assumptions or changing future vulnerability. A skeptical expert could argue that some limitations are hinted at indirectly, such as ignoring indoor pollution, but that prosecution is not very plausible against the paper. I rate it Significant because a limitations discussion on this assumption would materially improve interpretation of the projections; downgrading it to only a routine add-on is not very plausible here. The item points to a specific absent limitation that a meta-reviewer can verify is not discussed, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The main point is that Figure 5 shows proportions by cause but not actual cause-specific DAPP changes. I judge it Correct because the figure only reports the elderly share of DAPP by disease and does not show the absolute change in DAPP for each disease. A skeptical expert could argue that the paper's main message is about aging share, so absolute cause-specific changes may be considered secondary, but that prosecution is not very plausible against the paper. I rate it Significant because showing actual cause-specific changes would strengthen interpretation of the disease-level results; downgrading it to only a nice-to-have detail is not very plausible here. The item points to the content of Figure 5, which can be checked directly, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The main point is that the introduction should summarize findings from prior assessments, not just mention them. I judge it Correct because the related-work discussion focuses on what prior studies omitted and gives little overview of what they actually found. A skeptical expert could argue that the introduction is already quite long and the authors may have prioritized gap-setting over full summary, but that prosecution is not very plausible against the paper. I rate it Significant because better contextualizing prior findings would strengthen the contribution framing and help readers evaluate novelty; downgrading it to only a minor literature-style preference is not very plausible here. The item identifies an absence in the related-work discussion that is directly verifiable, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The main point is that using elderly is outdated and older adults or older population would be better. I judge it Correct because the paper relies heavily on elderly, and many readers would indeed prefer more contemporary wording. A skeptical expert could still argue that terminology norms vary across fields and authors, and that prosecution is plausible enough that two experts might split on correctness. I rate it Marginally Significant because this is mainly a terminology refinement rather than a change to the paper's substantive claims; upgrading it to a major substantive issue is not very plausible here. The item does not cite a concrete style guide or domain standard, so the evidence is Requires More and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The main point is that the regional bars in Figure 2 are too small to read well in print. I judge it Correct because the inset-like bar groups on the maps are visually tiny and hard to inspect at normal scale. A skeptical expert could argue that online readers can zoom the figure and extract the gist from the text, but that prosecution is not very plausible against the paper. I rate it Significant because figure readability affects evaluation of the regional results, so this is more than a trivial formatting nit; downgrading it to only a cosmetic issue is not very plausible here. The item points to a specific figure whose small bar charts are directly visible, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that the abstract does not clearly connect the reported DAPP numbers to the scenarios, and the reviewer suspects inconsistency with the results. I judge it Correct because the abstract names only the three scenarios with net decreases and does not explicitly map each number to each scenario, so the presentation is somewhat hard to parse even though the values match Figure 2. A skeptical expert could still argue that the reviewer's inconsistency wording overstates the problem, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because improving the abstract's scenario-to-number mapping would materially clarify the paper's headline quantitative result; downgrading it to a small wording matter is not very plausible here. The item points to the abstract numbers and the results figure, which can be compared directly, so the evidence is Sufficient and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that the first introduction sentence is overgeneralized and should be contextualized. I judge it Correct because the opening line states that PM2.5 pollution has increased dramatically without qualifying region or period, so a request for more context is reasonable. A skeptical expert could still argue that the cited source may support a broad global increase, and that prosecution is plausible enough that two experts might split on correctness. I rate it Marginally Significant because this is a background-framing refinement rather than a change to the core analysis; upgrading it to a major substantive problem is not very plausible here. The item does not provide a specific external source showing the paper's broad statement is false, so the evidence is Requires More and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the paper lacks references on PM2.5 health effects in the elderly. I judge it Not Correct because the introduction already cites several aging-related air-pollution references and gives explicit elderly-focused statistics. A charitable reading would be that one could still want more elderly-specific citations beyond the few already present, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is that the phrase about climate change affecting transformation and diffusion of air pollution is too vague. I judge it Correct because the introduction uses that phrase without identifying the climate variables or mechanisms it has in mind. A skeptical expert could argue that a climate-and-air-pollution specialist may infer the intended mechanisms without extra wording, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is a local clarity issue in the motivation rather than a flaw in the results; upgrading it to a major methodological problem is not very plausible here. The item quotes a specific vague phrase that can be checked directly, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is that the driving factors and their decomposition are not explained clearly enough in the results. I judge it Correct because the paper names the drivers, but the decomposition framework is not very well explained before readers encounter the results figures. A skeptical expert could argue that the figures and later methods do reveal the four drivers, so some readers may find the explanation adequate, but that prosecution is not very plausible against the paper. I rate it Significant because the driver decomposition is central to the paper, so clearer explanation would materially improve the paper; downgrading it to only a presentation tweak is not very plausible here. The item identifies a core interpretability issue around the main results figures, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The main point is that the paper fails to consider whether decreasing disease mortality could be outweighed by aging. I judge it Not Correct because the paper explicitly makes that point in the decomposition results and discussion, saying aging offsets reductions from disease mortality. A charitable reading would be that the reviewer wanted that message emphasized earlier, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The main point is that the paper should discuss heat waves and other meteorological effects on the elderly under the scenarios. I judge it Not Correct because the study is scoped to PM2.5-attributable deaths rather than the broader climate-health burden from heat, so this asks for a different analysis than the paper claims to do. A charitable reading would be that one could still ask for a short limitation note that other climate stressors also matter for older adults, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The main point is that the figure legends need more information to make the figures understandable. I judge it Correct because multiple figures, especially Figures 3 and 6, do not fully explain how to interpret all plotted elements. A skeptical expert could argue that some readers may infer the meaning from the main text and captions, but that prosecution is not very plausible against the paper. I rate it Significant because figure interpretability is important for evaluating the core results, so this would materially improve the paper; downgrading it to only a minor formatting issue is not very plausible here. The item points to specific figures whose legends and captions can be inspected, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The main point is that Figure 3 is unclear because DAPP is shown alongside its drivers without enough explanation. I judge it Correct because the figure includes gray DAPP totals plus driver contributions in the same panel and is not self-explanatory. A skeptical expert could argue that experienced readers may recognize the intended waterfall logic, but that prosecution is not very plausible against the paper. I rate it Significant because this is a key results figure, so clarifying it would substantially improve the paper; downgrading it to just a cosmetic preference is not very plausible here. The item points to a visible interpretability issue in a specific figure, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The main point is that the KAYA model needs a reference. I judge it Correct because the paper names the KAYA model in the discussion without citing a source. A skeptical expert could argue that details may exist in supplementary material, though the main text still lacks the citation, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this is a valid but fairly contained citation and transparency issue; upgrading it to a major methodological gap is not very plausible here. The item identifies the exact uncited model mention in the discussion, so the evidence is Sufficient and I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The main point is that the recommendation to stay indoors during high pollution is too simplistic because indoor air can also be polluted. I judge it Correct because the paper recommends indoor activity as a blanket mitigation step without discussing indoor pollution as a caveat. A skeptical expert could argue that the recommendation is a reasonable high-level public-health simplification rather than a real flaw, but that prosecution is not very plausible against the paper. I rate it Marginally Significant because this would refine a policy recommendation, but it is secondary to the main analysis; upgrading it to a core validity problem is not very plausible here. The item offers only a general example and no concrete source, so the evidence is Requires More and I predict correct_marginal_insufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that Figure 3 uses nonstandard SSP labels and this raises concern about scenario handling. I judge it Correct because Figure 3 visibly labels panels as SSP1-2.5 and SSP3-7.5 even though the paper elsewhere uses SSP1-2.6 and SSP3-7.0. A skeptical expert could still argue that this is a mere labeling typo and not evidence that the wrong scenarios were analyzed, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because wrong scenario labels in a core results figure materially affect readers' trust and interpretation of the analysis; downgrading it to a marginal typographical issue is not very plausible here. The item points to exact figure labels that can be checked directly, so the evidence is Sufficient and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that the paper does not explain how national-style GBD forecasting was adapted to provincial mortality projections. I judge it Correct because the methods cite Foreman et al and show only generic equations, without saying how province-level mortality forecasts were actually operationalized. A skeptical expert could argue that some implementation details may have been omitted for brevity rather than absent from the analysis, but that prosecution is not very plausible against the paper. I rate it Significant because this is central to reproducibility, since provincial mortality is one of the main claimed drivers; downgrading it to only a documentation nicety is not very plausible here. The item identifies a concrete missing methodological bridge in the paper, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the validation does not establish the accuracy of the provincial estimates. I judge it Correct because the paper reports Pearson-correlation validation against prior studies but does not show any direct provincial-level validation in the main text. A skeptical expert could still argue that the reviewer overstates the point by calling the comparison national-level only, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because provincial differentiation is part of the paper's claimed contribution, so stronger validation would materially improve the paper; downgrading it to a secondary detail is not very plausible here. The item does not fully justify the national-level-only part of the claim, so the evidence is Requires More and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is that the uncertainty propagation is incompletely described and likely ignores interactions among uncertainty sources. I judge it Correct because the paper gives separate uncertainty formulas and says DAPP bounds are determined by upper and lower bounds from several sources, but it does not describe a joint propagation procedure. A skeptical expert could argue that the authors may have used a reasonable internal workflow that was just compressed in the write-up, but that prosecution is not very plausible against the paper. I rate it Significant because reported confidence intervals are central to the quantitative claims; downgrading it to only a technical reporting preference is not very plausible here. The item quotes the uncertainty section closely enough for the meta-reviewer to verify the gap, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is that the paper neither discusses nor corrects the known CMIP6 underestimation of PM2.5. I judge it Not Correct because the methods explicitly recognize that simulated PM2.5 is lower than observations and apply a calibration formula, so the paper does attempt a correction. A charitable expert could still argue that the discussion and correction are inadequate relative to the known bias problem, so correctness is genuinely debatable here. Because I ultimately lean Not Correct, significance and evidence are null. I therefore predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that using 1 degree CMIP6 data for future PM2.5 is likely too coarse for provincial health estimation. I judge it Correct because the future PM2.5 inputs are indeed much coarser than the historical 0.1 degree data, and that mismatch plausibly weakens provincial exposure estimates. A skeptical expert could still argue that this is an unavoidable scenario-data limitation, especially because the paper calibrates future concentrations, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because spatial resolution is central to provincial exposure and burden estimates; downgrading it to only a minor technical preference is not very plausible here. The item cites the exact spatial resolutions and the historical-future mismatch visible in the methods, so the evidence is Sufficient and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that the paper does not clearly describe how future disease mortality rates are projected. I judge it Correct because the methods cite Foreman et al and give only high-level equations, without enough operational detail to reproduce the province-level mortality forecasts. A skeptical expert could argue that supplementary material may contain some of the omitted detail, but that prosecution is not very plausible against the paper. I rate it Significant because mortality trajectories are one of the paper's four main drivers, so this gap is substantively important; downgrading it to only a routine methods elaboration is not very plausible here. The item points to a specific methodological omission in the paper, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the paper falsely claims prior work has not considered multiple drivers. I judge it Not Correct because the introduction already narrows its novelty claim to future dynamics, scenario coupling, and provincial differences, so citing one historical decomposition paper does not make the paper's stated gap clearly false. A charitable expert could still think the introduction overstates novelty by saying most studies focus on single factors, so correctness is genuinely debatable here. Because I ultimately lean Not Correct, significance and evidence are null. I therefore predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is that the study is deficient because it ignores ozone. I judge it Not Correct because the paper is explicitly scoped to PM2.5-attributable deaths, so not adding ozone is a scope expansion rather than a factual omission relative to its stated goal. A charitable reading would be that one could still ask for a limitation note about other pollutants, but that defense is weak against what the paper actually says. With correctness failing, significance and evidence are null. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is that the paper should test whether using the GBD-style risk function understates burden relative to GEMM. I judge it Correct because the paper uses a GBD or MR-BRT risk function and itself notes that GEMM gives higher estimates, so a sensitivity-analysis request is substantively reasonable despite the reviewer's imprecise IER wording. A skeptical expert could still focus on that method conflation and say the item is factually off-target, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because risk-function choice affects absolute burden estimates and would materially improve robustness if explored; downgrading it to only a nice-to-have sensitivity check is not very plausible here. The item cites both the paper's chosen framework and its own acknowledgement that GEMM gives higher estimates, so the evidence is Sufficient and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that the PM2.5 reconstruction may be biased because the formula omits nitrate and simplifies ammonium. I judge it Correct because the paper's equations do omit nitrate and tie ammonium only to sulfate, so the chemical simplification the reviewer identifies is real. A skeptical expert could still argue that this is a borrowed empirical approximation plus calibration rather than a demonstrably invalid reconstruction, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because this would affect the core exposure estimates that feed every downstream DAPP result; downgrading it to only a minor chemistry detail is not very plausible here. The item quotes the exact reconstruction equations, so the evidence is Sufficient and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The main point is that the mortality-projection and risk-function pipeline lacks enough operational detail to reproduce the results. I judge it Correct because the paper gives only generic equations and citations for the mortality and RR components, without the coefficients, fitted models, or implementation choices needed for replication. A skeptical expert could argue that some readers may accept citation to established frameworks as sufficient for a brief article, but that prosecution is not very plausible against the paper. I rate it Significant because these are core components of the DAPP pipeline, so the missing detail materially weakens reproducibility; downgrading it to only a documentation nicety is not very plausible here. The item points to specific missing implementation details that can be checked directly against the methods, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that validating historical DAPP with Pearson correlation against other studies is methodologically weak. I judge it Correct because the paper explicitly says it used Pearson correlation to verify reliability, which supports the reviewer's concern that association is being used as validation. A skeptical expert could argue that trend agreement with prior studies is still a reasonable lightweight sanity check rather than a full validation exercise, but that prosecution is not very plausible against the paper. I rate it Significant because validation quality matters for confidence in the headline quantitative estimates; downgrading it to only a methodological style preference is not very plausible here. The item quotes the exact validation statement and comparison setup, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is that the PM2.5 uncertainty intervals are statistically fragile because CMIP6 ensemble spread is treated as a t-based confidence interval. I judge it Correct because the paper explicitly assumes the 11 CMIP6 model outputs conform to a t-distribution and builds a 95 percent interval from that assumption. A skeptical expert could still argue that this is a rough pragmatic approximation rather than a clearly incorrect uncertainty treatment, and that prosecution is plausible enough that two experts might split on correctness. I rate it Significant because the paper repeatedly reports 95 percent confidence intervals, so the meaning of those intervals is substantively important; downgrading it to only a technical subtlety is not very plausible here. The item quotes the exact CI formula and ensemble assumption from the methods, so the evidence is Sufficient and I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is that the manuscript reports inconsistent numbers and confidence intervals for key driver contributions. I judge it Correct because the paper contains directly checkable inconsistencies, including SSP1-2.6 and SSP5-8.5 aging contributions that conflict across passages and a malformed interval written as 658(608-656). A skeptical expert could argue that some of these are typographical rather than computational errors, but that prosecution is not very plausible against the paper. I rate it Significant because these numbers support the paper's central decomposition claim, so internal inconsistency is a substantive problem; downgrading it to only a minor editing issue is not very plausible here. The item cites exact conflicting values and a visibly incoherent confidence interval, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

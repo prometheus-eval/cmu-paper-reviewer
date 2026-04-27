@@ -1,0 +1,62 @@
+============================================================================================================
+PEERREVIEW BENCH — INTER-RATER RELIABILITY REPORT
+============================================================================================================
+
+  Shared items compared: 908
+  Papers covered:        27
+  Unique reviewers:      6
+  By reviewer type:
+    AI       340 items
+    Human    568 items
+
+AGREEMENT INTERPRETATION (Landis & Koch 1977, same labels used for κ and AC1):
+  ≤ 0.00  : poor
+  0.00 – 0.20 : slight
+  0.21 – 0.40 : fair
+  0.41 – 0.60 : moderate
+  0.61 – 0.80 : substantial
+  0.81 – 1.00 : almost perfect
+
+Note on Gwet's AC1: more robust to class imbalance than Cohen's κ.
+When one category dominates, κ can understate agreement (the 'kappa paradox').
+AC1 does not suffer from this and tends to be the better single-number summary.
+
+============================================================================================================
+AGREEMENT TABLE
+============================================================================================================
+Metric         Reviewer type        N   Percent agreement       κ κ label              AC1 AC1 label       
+------------------------------------------------------------------------------------------------------------
+Correctness    Human              568               84.7%    0.12 slight              0.81 almost perfect  
+Correctness    AI                 340               87.6%    0.47 moderate            0.84 almost perfect  
+Significance   Human              470               60.2%    0.34 fair                0.43 moderate        
+Significance   AI                 273               59.3%    0.22 fair                0.45 moderate        
+Evidence       Human              353               83.9%    0.06 slight              0.81 almost perfect  
+Evidence       AI                 230               94.3%    0.29 fair                0.94 almost perfect  
+
+Overall (combined)
+------------------------------------------------------------------------------------------------------------
+Correctness    All                908               85.8%    0.28 fair                0.82 almost perfect  
+Significance   All                743               59.9%    0.31 fair                0.44 moderate        
+Evidence       All                583               88.0%    0.12 slight              0.86 almost perfect  
+
+
+============================================================================================================
+META-REVIEWER LABEL DISTRIBUTION (10-class joint outcome)
+============================================================================================================
+Source: `meta_reviewer` HF config. Each item is one of the 10 classes that
+encode the joint primary/secondary cascade outcome plus per-axis agreement.
+
+  #  Label                                           Count       %
+----------------------------------------------------------------------
+  1  correct_significant_sufficient                    277   30.5%
+  2  correct_significant_insufficient                    2    0.2%
+  3  correct_significant_disagree_on_evidence           20    2.2%
+  4  correct_marginal_sufficient                        74    8.1%
+  5  correct_marginal_insufficient                       4    0.4%
+  6  correct_marginal_disagree_on_evidence              13    1.4%
+  7  correct_not_significant                            55    6.1%
+  8  correct_disagree_on_significance                  298   32.8%
+  9  incorrect                                          36    4.0%
+ 10  disagree_on_correctness                           129   14.2%
+----------------------------------------------------------------------
+Total                                                    908  100.0%

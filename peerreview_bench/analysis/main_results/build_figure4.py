@@ -42,7 +42,7 @@ W_LABELS = {
     'W5':  'Vague / verbose / no actionable rec.',
     'W6':  'Trivial / nitpicking (typo, style)',
     'W7':  'Technical term-of-art confusion',
-    'W8':  'Cites evidence from after the preprint',
+    'W8':  'Cites evidence that appeared after the preprint',
     'W9':  'Over-inflates small code/text mismatches',
     'W10': 'Criticizes what authors already flagged',
     'W11': 'AI misreads a figure or caption',
@@ -63,11 +63,11 @@ S_LABELS = {
 }
 
 
-# Colors
-COL_ITEM_W = '#C24C4C'
-COL_PAPER_W = '#E89896'
-COL_ITEM_S = '#3B6EA6'
-COL_PAPER_S = '#8FB4D8'
+# Colors — matched to §2.4 category box styles
+COL_ITEM_W = '#B4463C'   # muted terracotta
+COL_PAPER_W = '#DC9B91'  # lighter tint
+COL_ITEM_S = '#3C784B'   # muted forest green
+COL_PAPER_S = '#91C3A0'  # lighter tint
 
 
 def load_counts():
@@ -98,8 +98,8 @@ def main():
 
     fig, (ax_w, ax_s) = plt.subplots(
         1, 2,
-        figsize=(13.6, 6.2),
-        gridspec_kw={'width_ratios': [1.05, 0.95], 'wspace': 0.48},
+        figsize=(22, 12),
+        gridspec_kw={'width_ratios': [1.05, 0.95], 'wspace': 0.55},
     )
 
     # ---- WEAKNESSES ----------------------------------------------------
@@ -116,28 +116,28 @@ def main():
     for yi, ti, ii, pi_ in zip(y_w, w_total, w_item, w_paper):
         if ti == 0:
             continue
-        ax_w.text(ti + 0.6, yi, f'{ti}', va='center', fontsize=9,
+        ax_w.text(ti + 0.6, yi, f'{ti}', va='center', fontsize=14,
                   fontweight='bold', color='#222')
         if ii > 0 and pi_ > 0:
             split_txt = f'  ({ii}/{pi_})'
-            ax_w.text(ti + 3.1, yi, split_txt, va='center', fontsize=7.5, color='#555')
+            ax_w.text(ti + 3.1, yi, split_txt, va='center', fontsize=12, color='#333')
 
     ax_w.set_yticks(y_w)
     # Bold category code + normal-weight name using mathtext
     y_labels_w = [
         rf'$\mathbf{{{c}}}$  {W_LABELS[c]}' for c in w_codes
     ]
-    ax_w.set_yticklabels(y_labels_w, fontsize=9)
+    ax_w.set_yticklabels(y_labels_w, fontsize=14)
     ax_w.invert_yaxis()
-    ax_w.set_xlabel('Number of expert annotator comments', fontsize=10)
+    ax_w.set_xlabel('Number of expert annotator comments', fontsize=15)
     ax_w.set_title(
         f'Weaknesses of AI reviewers (n = {w_n})',
-        fontsize=11.5, fontweight='bold', pad=10,
+        fontsize=16, fontweight='bold', pad=14,
     )
     ax_w.set_xlim(0, max(w_total) * 1.22)
     ax_w.spines['top'].set_visible(False)
     ax_w.spines['right'].set_visible(False)
-    ax_w.tick_params(axis='x', labelsize=9)
+    ax_w.tick_params(axis='x', labelsize=13)
     ax_w.grid(axis='x', alpha=0.25, linestyle=':')
 
     # ---- STRENGTHS -----------------------------------------------------
@@ -154,27 +154,27 @@ def main():
     for yi, ti, ii, pi_ in zip(y_s, s_total, s_item, s_paper):
         if ti == 0:
             continue
-        ax_s.text(ti + 0.6, yi, f'{ti}', va='center', fontsize=9,
+        ax_s.text(ti + 0.6, yi, f'{ti}', va='center', fontsize=14,
                   fontweight='bold', color='#222')
         if ii > 0 and pi_ > 0:
             split_txt = f'  ({ii}/{pi_})'
-            ax_s.text(ti + 3.1, yi, split_txt, va='center', fontsize=7.5, color='#555')
+            ax_s.text(ti + 3.1, yi, split_txt, va='center', fontsize=12, color='#333')
 
     ax_s.set_yticks(y_s)
     y_labels_s = [
         rf'$\mathbf{{{c}}}$  {S_LABELS[c]}' for c in s_codes
     ]
-    ax_s.set_yticklabels(y_labels_s, fontsize=9)
+    ax_s.set_yticklabels(y_labels_s, fontsize=14)
     ax_s.invert_yaxis()
-    ax_s.set_xlabel('Number of expert annotator comments', fontsize=10)
+    ax_s.set_xlabel('Number of expert annotator comments', fontsize=15)
     ax_s.set_title(
         f'Strengths of AI reviewers (n = {s_n})',
-        fontsize=11.5, fontweight='bold', pad=10,
+        fontsize=16, fontweight='bold', pad=14,
     )
     ax_s.set_xlim(0, max(s_total) * 1.22)
     ax_s.spines['top'].set_visible(False)
     ax_s.spines['right'].set_visible(False)
-    ax_s.tick_params(axis='x', labelsize=9)
+    ax_s.tick_params(axis='x', labelsize=13)
     ax_s.grid(axis='x', alpha=0.25, linestyle=':')
 
     # Legend — centered on the full figure, below both panels
@@ -193,14 +193,14 @@ def main():
         loc='lower center',
         ncol=4,
         frameon=False,
-        fontsize=9.5,
+        fontsize=14,
         bbox_to_anchor=(0.5, -0.01),
     )
 
     fig.suptitle(
         f'Expert-annotator classification of AI-reviewer behaviors '
-        f'(n = {w_n + s_n} specific S/W tags across 85 papers, 3 AI reviewers)',
-        fontsize=12, fontweight='bold', y=0.995,
+        f'(n = {w_n + s_n} specific S/W tags across 82 papers, 3 AI reviewers)',
+        fontsize=18, fontweight='bold', y=0.995,
     )
 
     fig.tight_layout(rect=(0, 0.06, 1, 0.96))

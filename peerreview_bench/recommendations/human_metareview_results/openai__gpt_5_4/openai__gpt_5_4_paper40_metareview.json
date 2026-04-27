@@ -1,0 +1,164 @@
+{
+  "paper_id": 40,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper links density-like mixture loading mainly to compressive strength and only indirectly to electrical behavior, and it never explains how density relates to the A/B/C integrity grades. So the request for clarification points to a real gap, but whether that gap is central to the paper is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript already identifies the ML inputs as MXene, CNF, gelatin, GA loadings and mixture loading in the figure, methods, supplement, and accompanying code, and it also gives rationale for the building-block and framework choices. As a claim that these descriptors are missing or unexplained, this does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure S5 is specifically a map of the feasible design space over the variables the model actually varies, namely composition ratios and mixture loading. Temperatures and pressures are fixed process conditions and are already reported in the methods, so criticizing Figure S5 for not including them targets the wrong thing.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper states that over 5,300 experiments would be needed and points to Note S2, but neither the main text nor Note S2 actually shows the combinatorial calculation. Since this number motivates the whole active-learning strategy, asking the authors to spell out the derivation is a valid and useful criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "In Fig. 1(b) and (c), MXene and CNF are explicitly labeled on the ternary axes, while gelatin is only implicit as the remaining fraction. That makes the figure genuinely unclear on this point, although experts could differ on whether this is a substantive issue or just a presentation detail.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The manuscript explicitly says the final database includes both actual and virtual data points and earlier states that both real and virtual data are used to train the ANN model. So the concern that it is unclear whether the approximately 160,000 points are employed in prediction is contradicted by the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper cites some broader AI/ML materials references, but it does not really summarize recent automated-experimentation efforts in materials development or compare the proposed workflow against them in terms of novelty, strengths, and weaknesses. That contextualization gap is real, but the reviewer does not name concrete missing works.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The introduction says correlations among ingredients are \u201clargely unexplored,\u201d yet it does not explain what partial correlations are already known despite citing prior literature. Clarifying that background would strengthen the framing and could better motivate the experimental strategy, so this criticism is valid and well grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript uses SHAP and FE simulations to interpret the model, but it does not compare the value of that interpretability package against more traditional experimental design or optimization approaches. That is a meaningful contextual omission, though the review item supports it only at a fairly general level.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is a strong point. The conclusion claims the hybrid workflow is more efficient than conventional design of experiment, but the paper gives no quantitative DoE baseline such as the number of runs needed for comparable information or predictive performance. The missing comparison directly affects a central efficiency claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer gives concrete examples of minor wording and clarity problems, including awkward punctuation and the vague statement about \u201cmultiple blind tests\u201d without a count. Those are real editorial issues, but they are mostly minor improvements rather than substantive methodological flaws.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Because the paper emphasizes robotics-accelerated experimentation, it is genuinely unclear from the main text whether freeze-drying itself is automated or simply a manual step in an otherwise automated workflow. That clarification matters for understanding the scope of the automation claim, but the reviewer only supports it indirectly.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper reports compression and electrical measurements but never clearly states whether the same physical specimens were reused across tests or whether separate replicates were made for each measurement. Since sample reuse could affect the electrical results after mechanical loading, this is a real and important methodological ambiguity.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer is right that MXene/CNF conductive aerogels are not entirely novel, but saying the machine-learning component only replaces \u201cfeeding and matching\u201d understates what the paper actually does through active learning, inverse design, SHAP interpretation, and FE analysis. Because the item mixes a fair novelty concern with an overstated factual premise, correctness is genuinely borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item asserts that MXene/CNF aerogels are widely reported and that optimization schemes can be chosen from known thresholds, but it never states a specific paper-verifiable criticism of the manuscript. The main point is too vague to evaluate strictly against the paper, so it is not correct as a review item.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript does contain a screening scheme (the SVM feasible-space filter), analysis (SHAP and FE simulation), and iterative self-correction through active learning loops. So the claim that the workflow lacks screening, analysis, self-correction, and conclusion-drawing does not match what the paper describes.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper already provides a rationale for choosing the MXene/CNF/gelatin/GA system in Note S1 and points to Fig. S1 for the selection strategy, but it does not discuss MXene oxidation issues in depth. Since the reviewer combines one question the paper already answers with another omission it does not address, the overall correctness is borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "A general complaint about typos and grammar is plausible for this manuscript, which contains several awkward phrasings, so the underlying point is fair. But without concrete examples it remains a minor editorial comment with weak support.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    }
+  ]
+}

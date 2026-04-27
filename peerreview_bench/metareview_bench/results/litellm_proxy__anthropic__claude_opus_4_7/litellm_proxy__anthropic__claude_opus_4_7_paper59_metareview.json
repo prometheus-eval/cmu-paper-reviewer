@@ -1,0 +1,219 @@
+{
+  "paper_id": 59,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks why ISI, power, and cement industries were selected and what their contribution is. The paper (introduction, line 15) does state these are the three most polluting industrial sectors and have the highest production and consumption worldwide, so the sector choice IS partially justified. However, the paper does not quantify the sectors' specific contribution to ambient air pollution/PM2.5 levels — the reviewer's request for such quantification is reasonable and would strengthen the paper's motivation. Devil's advocate: a strict expert might call this Not Correct because the paper does justify the choice generally; a charitable expert might say the justification is inadequate and quantification is needed. Significance is also borderline between Marginally and Significant. Evidence: reviewer cites 'Lines 70-71' but the substance is a general open question without specific pointers to inadequate sections. I judge Correct, Marginally Significant, Requires More — but significance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer raises a substantive methodological concern: the OS potency calculation via the concentration addition reference model (Jin et al. 2019) requires valence-specific metals (e.g., Cr(III) vs Cr(VI)), but ICP-MS does not distinguish valence states. The paper's methods indeed use ICP-MS (Supp Note 6) and cite the Jin et al. reference model. The reviewer's factual premise about ICP-MS not measuring valence is correct, and this is a genuine concern about transparency of the OP calculation. Devil's advocate: the paper could claim the model has default assumptions for metal species distribution, but this isn't stated in the paper either. Evidence: reviewer points to a specific computation approach and cites the source reference. It's verifiable but borderline — a meta-reviewer can check the Jin et al. paper, but the reviewer doesn't quote specific paper text showing the gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks whether prior experimental studies investigated toxic effects of industrial PM2.5 and whether findings should be compared with earlier research. This is a vague/generic request. The paper does cite some toxicological studies (refs 16, 17, 26, 27, 34, 37, 40, 41, 42) but may not have a thorough comparison section. The reviewer's claim is factually reasonable but doesn't pinpoint specific missing comparisons. Devil's advocate: some experts would find this too vague to be actionable; others would consider it a valid call for more literature comparison. Evidence: no specific references provided by reviewer — they simply ask the authors to compare. This is Requires More.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Similar to Item 1 but asking for comparison with epidemiology studies. The reviewer's claim — that numerous epidemiology studies have investigated PM2.5 composition and public health — is factually correct. But the reviewer doesn't cite specific studies or identify specific gaps. It's essentially a generic call for more discussion. Devil's advocate: an expert might call this Significant because linking to epidemiology is central to the paper's policy claims (similar to claude/gpt items); another might call it Marginally Significant due to vagueness. Evidence is weak (no specific references).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the paper's statement that 'inorganic sulfate and nitrate are commonly considered innocuous species' (line 13 of preprint citing ref 17, a 2012 paper) is out of date, and notes that many epidemiology studies have found toxicity of inorganic sulfate. This is a correct and substantive concern — the literature has evolved, and sulfate toxicity (especially via acidic interactions with metals) is documented (as Human_3 and gemini also note). Devil's advocate: the paper is citing the statement from ref 17 accurately; some experts might argue the statement isn't central to the paper's conclusions. But the dismissal affects how the paper frames primary vs secondary PM toxicity. Evidence: reviewer identifies the specific line and critiques the reference currency — a meta-reviewer can verify the reference date.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks why black carbon / elemental carbon is not targeted in the toxicity analysis. This is a valid methodological question — BC is a known health-relevant component. The paper says 'the targeted chemicals are focused on metals and PAHs, which are commonly regarded as key toxic components' but doesn't explain why BC/EC is excluded. Devil's advocate: the paper's choice is defensible because it cites refs 16, 17 for metals and PAHs as key toxic components; but omitting BC without justification is a fair criticism. Evidence: reviewer cites the specific passage (line 140-142).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer recommends including proportions of key constituents (inorganic sulfate, nitrate) in Supp Table 4. This is a minor presentation/completeness recommendation. The paper does discuss that chemical composition varied among sectors (line 25 mentions water soluble inorganic ions are in Supp Table 4). Devil's advocate: if the table already includes these, this request may be redundant; if it doesn't, the request is constructive for completeness. Without checking the table exactly, this is a Marginally Significant request. Evidence: reviewer specifies the table but doesn't verify absence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks about methodology for computing Supp Fig 7a (relative contributions of metals and PAHs to OS potency). The paper mentions this is 'quantified via the concentration addition reference model' (line 29, citing ref 34) and Supp Note 9 would contain details. So there IS a methodology description, though the reviewer wants more transparency. Devil's advocate: the paper does reference the model and its source, so this could be called Not Correct as the info is present. A charitable reader agrees more explanation would help. Significance: Marginally Significant — a clarification question.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the sampling method (US EPA Method 17/201A, isokinetic with heated filter at 120°C) fails to collect condensible PM, and recommends dilution sampling with a specific reference (England et al. 2007). This is a substantive, correct methodological critique — the paper's heated filter approach explicitly prevents vapor condensation, meaning condensable organics/nitrates are NOT captured. For toxicity comparison this is a real limitation. Devil's advocate: the paper cites standard EPA methods, and some experts would accept them as appropriate for stack measurement; but for toxicity studies reflecting atmospheric particle behavior, dilution sampling is indeed more representative. Evidence: reviewer cites a specific alternative method paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims no mention is made of post-collection sample handling for acidity preservation, and cites Fang et al. 2017 supporting that acidic sulfur activates transition metals making them bioavailable. Checking the methods (line 57-61): the paper describes sampling and extraction (methanol/water sonication) but doesn't mention storage with citric-acid-coated material or ammonia-free conditions. Devil's advocate: some experts would consider this an unusual level of care not standard in all studies; others would consider acidity preservation critical for metal bioavailability research. Evidence: specific method with citation provided.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that the paper dismisses sulfate as non-toxic but doesn't acknowledge the epidemiological evidence of sulfate's role in combination with metals, citing Weichenthal et al. 2021. The paper's statement at line 13 does characterize inorganic sulfate as innocuous. This is a correct, substantive criticism — the role of acidic sulfate in activating metals is widely documented. Devil's advocate: the paper's focus is on primary industrial PM composition, not ambient mixtures, so some experts might view this as out of scope. Evidence: specific citation provided.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is essentially a summary/conclusion statement expressing that the methodological flaws undermine what could have been valuable toxicological insights. It doesn't raise a new concern, just restates Items 1-3 in summary form. Devil's advocate: could be considered as just a closing remark that doesn't add content; a charitable reader sees it as a summary judgment. Not Significant — the review is fine without this item since it just repeats earlier points. Some experts might consider it Marginally Significant as wrap-up. I'll call Correct but Marginally/Not Significant, expert judgment likely disagrees.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the paper's 'health-oriented' strategy rests on in vitro EC1.5/IC20 endpoints from A549 cells without epidemiological validation linking these specific metrics to population health outcomes. This is a substantive, correct concern — the paper does not provide epidemiological validation for these in vitro measurements as surrogates for population-level health effects. The reviewer provides specific paper quotes, a counter-reference (Zhang 2023, Bates 2019) and explains why the DCFH-DA cellular ROS assay differs from epidemiologically-validated OP assays (DTT). Devil's advocate: a charitable expert could argue that in vitro potency differences are indicative and don't require epidemiological validation to motivate prioritization; but the paper's use of the term 'health-oriented' implies more. Evidence: sufficient with specific quotes and references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that methanol-water sonication extraction may recover different fractions across sources (metals vs organics), biasing inter-sector toxicity comparisons. They cite Roper 2019 (which the paper itself references as ref 41) documenting how extraction methods affect both chemistry and toxicity. This is a well-supported, substantive concern. Devil's advocate: the paper uses a consistent protocol across all samples, so relative differences could still be valid; but the critique about recovering different bioavailable fractions from different source types is legitimate. Evidence: extensive with direct paper quotes from the cited reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that cement industry TU/TE values are identical across all provinces in Supp Table 7 (OS: 1.07±0.47; CT: 1.37±0.69) despite paper acknowledgment of variation between kiln head/tail processes. The supplementary data confirms this uniform application. The paper itself states (per supplementary) 'The same TU values were adopted for the cement plants across different provinces'. Devil's advocate: the paper does justify this by claiming technological similarity, and precalciner kilns dominate; some experts may find this acceptable. But the reviewer correctly notes this contradicts the paper's own within-sector variation data. Evidence: sufficient with direct quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer criticizes the linear TPAE formulation and cost-effectiveness calculation for ignoring non-linear exposure-response relationships documented in PM2.5 epidemiology (citing Burnett 2018 GEMM supralinear curve). This is a correct methodological concern — the paper does use simple multiplicative TPAE = C × OS_eq scaling. Devil's advocate: some might argue the paper's linear TU approach is a first-order approximation valid for ranking; others would say non-linear CR functions are essential for health benefit claims. Evidence: specific equation quotes and external reference to Burnett 2018.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the 'zero-out' method captures total ambient PM2.5 (including secondary) and the paper applies primary-PM toxicity to this total, creating a bias. However, the paper's method description states 'Emission inventories excluding primary PM2.5 emissions' — only primary PM is zeroed out, NOT the gaseous precursors (SO2, NOx). So the attributed C_i,s is essentially primary PM only, not total ambient. The reviewer's core factual premise about what the zero-out captures is largely incorrect. Devil's advocate: a charitable reader could interpret the concern more broadly — that primary PM attribution misses the sector's full responsibility including precursor-driven secondary, or that ambient inhalation still mixes primary with secondary. The underlying concern overlaps with gpt-5.2 Item 3, which is a real issue. So experts could reasonably disagree on whether the reviewer's main point is correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the abstract's framing of 'current strategy vs proposed' is misleading since power-sector ULE retrofitting is largely complete, not a competing future option. The paper explicitly uses ELE_noULE as a counterfactual pre-2017 scenario (line 67 acknowledges this). This is a valid framing/presentation concern. Devil's advocate: the paper's retrospective comparison has analytical value, and the abstract could be read as 'comparing potential reductions' rather than 'choosing between'; but the framing language does suggest a forward-looking choice. Evidence: cites specific abstract text and the supplementary context.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues methanol-water extraction likely underestimates ISI toxicity because iron oxides are insoluble at neutral pH and surface reactivity of insoluble particles is missed. This overlaps with claude-opus Item 2 but has a different angle (solubility specifically for iron oxides). The concern is correct — iron is dominant in ISI PM (62.6-98.3%) and is often in insoluble oxide form. However, the reviewer also notes this 'does not necessarily invalidate the relative ranking', acknowledging it may affect absolute toxicity more than ranking. Devil's advocate: some experts would note that cellular assays are designed to reflect bioavailable fractions, and the chosen extraction is consistent with prior work. Evidence: multiple specific references and citations.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies a specific mathematical inconsistency: the paper defines TU = 1/EC for samples (correct for a potency unit), but then aggregates provincial TU as 1/Σ(EC × WF) — i.e., reciprocal of weighted arithmetic mean of EC, not weighted mean of 1/EC. These are mathematically non-equivalent (by Jensen's inequality) and the difference is large under heterogeneity, which the paper emphasizes. I verified this in the supplementary (Note 9, line 82-83). This is a substantive, technically correct critique with direct quotation of the paper's formulas. Devil's advocate: some experts might defend the reciprocal-of-mean as a choice of aggregation rule for the emission-weighted EC, not TU; but then the downstream TU would not match the stated TU definition. Evidence: precise formula quotations.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the paper's TPAE is built from A549 in vitro assays without validation as a surrogate for human health outcomes. Overlaps substantially with claude-opus Item 1. The concern is correct — the paper uses cell-line endpoints with linear scaling C × OS_eq without demonstrating empirical correlation with morbidity/mortality. Devil's advocate: some experts could accept TPAE as an exploratory index whose relative differences are informative; but the paper's 'health-oriented' and 'urgently required' language goes beyond exploratory claims. Evidence: specific paper quotes and multiple external references (including explicit citations [1] and [5]).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the paper's sector-attribution omits secondary PM formation from industrial precursors — the NoXXX scenarios zero out only primary PM, not gaseous precursors — which can materially change both magnitude and ranking of sector contributions. The paper itself acknowledges this as a limitation (per the quote provided). This is a correct, substantive methodological concern. Devil's advocate: the paper explicitly acknowledges the limitation, so some experts might say the authors have already addressed it; but the reviewer correctly points out that the acknowledgment is not enough when it materially affects the policy ranking. Evidence: direct quotes from the paper and supporting references.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises a reproducibility concern: the provided code is only WRF v3.9 (meteorology), missing CMAQ (chemistry), ABaCAS emission inventory, scenario implementation scripts, and TPAE/cost calculation scripts. I confirmed the code/ directory contains only WRF source code. This is a correct, verifiable concern about reproducibility. Devil's advocate: some experts are lenient about reproducibility for environmental-modeling papers given confidentiality constraints on industrial data; others hold a strict bar. Evidence: direct paper quotes and direct inspection of provided code artifacts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

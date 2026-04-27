@@ -1,0 +1,32 @@
+{
+  "method": "Ridge regression on paper\u00d7model features",
+  "features": [
+    "meta_corr_rate",
+    "log_review_words",
+    "family_sig_fpr"
+  ],
+  "scaler_mean": [
+    0.9279835390946503,
+    6.006693403833504,
+    0.3989008676508676
+  ],
+  "scaler_scale": [
+    0.17324125364640564,
+    0.5676524589677199,
+    0.07608987484828728
+  ],
+  "ridge_coef": [
+    0.06524078602112976,
+    -0.04575299579245048,
+    -0.018888666966309184
+  ],
+  "ridge_intercept": 0.49938271604938267,
+  "ridge_alpha": 10.0,
+  "family_sig_fpr": {
+    "GPT": 0.47474747474747475,
+    "Claude": 0.4270833333333333,
+    "Gemini": 0.2948717948717949
+  },
+  "n_calibration_points": 81,
+  "calibration_r2": 0.06901710116027104
+}

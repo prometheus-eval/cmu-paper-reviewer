@@ -29,7 +29,7 @@ router = APIRouter(prefix="/api", tags=["debates"])
 # ─── Helpers ─────────────────────────────────────────────────────────────────
 
 
-def _build_debate_system_prompt(key: str, item_number: int) -> str:
+def _build_debate_system_prompt(key: str, item_number: int, user_annotations=None) -> str:
     """Build a system prompt for the debate LLM based on the review item and paper."""
     from backend.services.storage_service import get_review_markdown, preprint_md_path
     from backend.services.pdf_service import _parse_review
@@ -77,12 +77,36 @@ def _build_debate_system_prompt(key: str, item_number: int) -> str:
     if len(paper_md) > 30000:
         paper_md = paper_md[:30000] + "\n\n[... truncated ...]"
 
+    # ── Build user annotation context ──────────────────────────────────────
+    annotation_block = ""
+    if user_annotations:
+        parts = []
+        if user_annotations.correctness:
+            parts.append(f"- Correctness: {user_annotations.correctness}")
+        if user_annotations.significance:
+            parts.append(f"- Significance: {user_annotations.significance}")
+        if user_annotations.evidence_quality:
+            parts.append(f"- Evidence quality: {user_annotations.evidence_quality}")
+        if user_annotations.action_item_quality:
+            parts.append(f"- Action item helpfulness: {user_annotations.action_item_quality}")
+        if user_annotations.free_text:
+            parts.append(f"- Author's comments: {user_annotations.free_text}")
+        if parts:
+            annotation_block = (
+                "\n## Author's Annotation on This Item\n"
+                "The author has provided the following assessment before starting this debate:\n"
+                + "\n".join(parts)
+                + "\n\nUse this context to understand which aspects of your criticism "
+                "the author disagrees with, and focus your defense accordingly.\n"
+            )
+
     # ── Assemble system prompt ───────────────────────────────────────────────
     system_prompt = (
         "You are a rigorous academic reviewer defending a specific criticism you "
         "raised about a research paper. A human author is now debating you.\n\n"
         "## Your Review Item\n"
         f"{item_block}\n"
+        f"{annotation_block}"
         "## Paper Content\n"
         f"{paper_md}\n\n"
         "## Instructions\n"
@@ -133,7 +157,7 @@ async def start_debate(
     await session.flush()  # populate debate.id
 
     # Build system prompt and persist as the first message
-    system_prompt = _build_debate_system_prompt(key, body.item_number)
+    system_prompt = _build_debate_system_prompt(key, body.item_number, body.user_annotations)
     system_msg = DebateMessage(
         session_id=debate.id,
         role="system",

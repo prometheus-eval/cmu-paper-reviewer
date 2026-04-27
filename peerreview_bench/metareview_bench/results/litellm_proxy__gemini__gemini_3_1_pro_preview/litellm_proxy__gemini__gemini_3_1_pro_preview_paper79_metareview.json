@@ -1,0 +1,235 @@
+{
+  "paper_id": 79,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the paper does not provide crystal structures of the protein-ligand complexes. This is factually correct. However, while obtaining a crystal structure is beneficial for understanding binding modes, many medicinal chemistry studies proceed with enzymatic and cellular characterization without explicit crystal structures. A strict meta-reviewer might view the lack of crystal structures as a significant limitation, whereas a more charitable meta-reviewer would argue that it is not strictly required given the scope of the paper, leading to disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the direct binding of AVX420 to cPLA2\u03b1 was not characterized (e.g., via SPR or ITC). This is correct, as the paper relies on enzymatic activity assays and cellular assays. While confirming direct binding is helpful to rule out off-target suppression, the extensive enzymatic assays strongly imply binding. Experts would likely disagree on whether the lack of a direct binding assay is a significant flaw or just a nice-to-have, thus disagreeing on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the hypothesis about the methyl group increasing stability did not pan out, and asks for further exploration. The paper explicitly states that the methyl substitution reduced potency, which is why the authors proceeded with the non-methylated AVX420. Pointing out that a hypothesis failed and demanding further structure optimization is not constructive when the authors successfully found a potent lead. Thus, this point does not genuinely improve the paper and is considered Not Significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly identifies a contradiction where the text claims 'minimal inhibition' of GVIA iPLA2 and GV sPLA2 for the \u03b1-methyl substituted analogs, but Table 1 shows up to 67% inhibition for these compounds. This is a clear factual error in the text that affects the interpretation of the compounds' selectivity. This is a significant issue. The evidence directly points to the disparity between the text and Table 1. Experts would agree this is a correct and significant criticism with sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims that in vivo and PK studies are required to validate the mechanism. While it is true the paper lacks in vivo data for the new compound, claiming they are 'required' is debatable. A charitable meta-reviewer would argue that the extensive cellular and transcriptomic characterization is sufficient for a single paper, while a demanding one might insist on in vivo validation. This represents a fundamental disagreement on the necessary scope of the paper, leading to disagreement on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asserts that the manuscript is deficient in crucial animal experiments and PK studies, and therefore does not meet publication criteria. While it is true the paper lacks in vivo data for AVX420, asserting that it is unconditionally required for publication is subjective. Some experts would agree that in vivo validation is necessary for a 'chemotherapeutic mechanism', while others would find the novel cellular mechanism and synthesis sufficient. Thus, experts will disagree on the correctness of the claim that the paper is fatally deficient without this data.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests using genetic manipulation (e.g., knockdown of cPLA2) to confirm that the observed cellular effects of GK420 are on-target, rather than off-target. This is factually correct as the paper relies solely on pharmacological inhibition. Demonstrating on-target specificity via an orthogonal genetic approach is a standard, significant requirement that would substantially improve the paper. The reviewer clearly points out what is missing. Experts would agree this is a valid, well-supported point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks if the mechanism of action depends on inhibiting cPLA2-induced AA release and lipid mediator generation, suggesting an add-back or rescue experiment. The paper does not show whether exogenous AA or PGE2 rescues the cancer cells from AVX420-induced cell death. This is a critical missing piece of evidence for linking the proposed lipid signaling to the downstream phenotypic effects, making it a significant criticism. The reasoning is clear and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer questions whether genetic manipulation of cPLA2 would alter epigenetic mechanisms as predicted by the in silico analyses, pointing out a gap in the validation of the epigenetic claims. The paper uses correlations and transcriptomics but does not genetically validate the cPLA2-epigenetic link. This is a significant point that addresses a core mechanistic claim. The evidence provided is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests a series of complex mechanistic experiments (combinatorial targeting of Nrf2 and cPLA2, timeline of ER stress, connecting cPLA2 to ATF4 and PRC2 via genetic manipulation). While the lack of these experiments is correct, a meta-reviewer might argue that this extensive list of demands is beyond the scope of a single study. Thus, experts would likely disagree on whether this full suite of experiments is truly significant to mandate, or if it crosses into 'Requires More' scope.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that the resolution of Figure S3 should be improved. This is a minor presentation issue that does not affect the scientific validity of the core claims but would marginally improve the reading experience. It is thus Marginally Significant. The evidence is simply pointing to the specific figure, which is sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the paper's claim of cPLA2\u03b1 regulating transcriptional repression by EZH2 lacks direct biochemical validation (e.g., measuring H3K27me3 levels or EZH2 activity), relying only on drug sensitivity correlations. This is correct. Validating a novel epigenetic mechanism is crucial for the paper's core model, making this a significant criticism. The reviewer provides specific quotes and details the exact missing biochemical assays, making the evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out the lack of genetic validation (siRNA/CRISPR) to confirm that the ROS induction is specifically due to cPLA2\u03b1 inhibition. This is correct and highly significant, as chemical inhibitors can have off-target effects, and proving the source of ROS is central to the proposed mechanism. The reviewer quotes the paper's admission that the ROS mechanism is unclear and references standard validation practices, providing sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer criticizes the lack of in vivo efficacy data in leukemia animal models to support the therapeutic claims. While the paper lacks this data, arguing that cell line data is 'insufficient to support therapeutic claims' (which the authors frame as 'potential to treat') is debatable. Some experts demand in vivo data for any therapeutic claim, while others consider in vitro/ex vivo sufficient for early-stage leads. Experts will disagree on the correctness of calling this a flaw.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out that the proposed alternative mechanism (EZH2-mediated repression loss leading to ATF4 target activation) is not directly tested, lacking H3K27me3 measurements at target promoters. This is correct. Since the paper explicitly proposes this mechanism after ruling out classical ISR, the lack of direct chromatin-level evidence is a significant gap. The evidence is precise and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer highlights that the proposed mechanism involving PRC2-mediated repression lacks direct biochemical validation like measuring H3K27me3 levels. This is correct and targets a central claim of the paper that relies heavily on correlations. Addressing this would substantively improve the paper, making it significant. The reviewer quotes the text and identifies the specific missing biochemical proofs, providing sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the authors claim an ATF4-dependent mechanism but fail to demonstrate increased ATF4 protein levels, relying instead on speculation about ATF3 stabilization. This is correct and significant, as the absence of a Western blot for ATF4 leaves a major gap in proving the pathway is actually ATF4-dependent. The evidence is specific and sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that attributing the ROS increase to mitochondrial fatty acid oxidation is speculative and lacks experimental support (e.g., no Seahorse assay or metabolic data). This is correct. The paper incorporates FAO into its core model (Fig. 6d) without direct metabolic measurements, making this a significant criticism. The reviewer clearly points out the missing experiments, providing sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer criticizes the lack of in vivo evaluation for the new lead GK420, arguing it is necessary to confirm its 'chemotherapeutic potential'. Like previous reviewers, this demand for in vivo models in an early-stage study is a point of contention among experts. Some view in vitro data as sufficient for a 'lead', while others demand animal models. This will lead to disagreement on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that the claim of 'selective' inhibition is contradicted by Table 1, which shows 46% inhibition of GV sPLA2 for GK420, and points out the limited panel of tested isoforms. This is factually correct. Overstating selectivity is a significant issue because it underpins the assumption that downstream effects are on-target. The evidence directly references Table 1, making it sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes the lack of causal evidence for the proposed epigenetic and ATF4 mechanisms, which rely on correlational drug-screen data rather than biochemical or chromatin assays. This is correct. Since the paper presents this as a 'novel function', the lack of causal validation is a significant weakness. The reviewer provides detailed quotes and outlines the missing perturbation experiments, constituting sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer identifies that the paper overstates the selectivity of the compounds, specifically pointing out that GK420 inhibits sPLA2 by 46% and GK439 by 53%. This is correct and directly contradicts the text's claim of 'minimal inhibition'. Correcting this overstatement is significant as it affects the interpretation of all downstream phenotypic assays. The evidence explicitly references the values in Table 1.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer complains that essential methodological details for the 66-cell-line screen are deferred to the supplementary materials, limiting reproducibility. While it is true that the details are in the supplement, journals often allow or encourage this. A charitable meta-reviewer would argue that as long as the methods are provided (even if supplementary), it is not a significant flaw, leading to disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out that the RNA-Seq data was processed using a proprietary pipeline (Eclipsebio) and lacks a public data accession (e.g., GEO) in the main text. This is correct. Data availability is a critical aspect of modern genomics research, and the inability to access or independently reproduce the sequencing analysis is a significant limitation. The evidence points to the specific proprietary tool used, which is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes the permissive statistical conventions, such as treating p<0.1 as a starred result and relaxing the FDR to 20%. This is factually correct as stated in the text and figure legends. Using such permissive thresholds increases the risk of false positives, which weakens the robustness of the pathway narratives built upon them. This is a significant statistical concern. The evidence quotes the specific thresholds used.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

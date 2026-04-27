@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10.5}\selectfont
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l cccc}
+\toprule
+\textbf{Meta-Reviewer} & \textsc{All} & \textsc{Human} & \textsc{AI} & \textsc{Self} \\
+\midrule
+\textsc{Random Baseline} & 10.0\% & 10.0\% & 10.0\% & 10.0\% \\
+\textsc{Human (agreement)} & 49.3\% & 47.2\% & 52.9\% & --- \\
+\midrule
+\textsc{Claude-Opus-4.7} & 44.3\% & 40.0\% & 51.2\% & 47.9\% \\
+\textsc{GPT-5.4} & 30.1\% & 31.2\% & 28.2\% & 29.1\% \\
+\textsc{Gemini-3.1-Pro} & 29.0\% & 26.1\% & 33.8\% & 39.6\% \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Ten-class meta-reviewer accuracy on the 908-item benchmark (vs.\ primary annotator).}
+The 10-class label encodes both the annotation cascade outcome (correctness $\to$ significance $\to$ evidence)
+and inter-annotator agreement/disagreement, making it a much harder prediction target than per-axis accuracy.
+Columns show accuracy across four review subsets: all items, human review items only, AI review items only,
+and ``self review'' where the meta-reviewer judges items from its own model family.
+The human baseline (secondary annotator vs.\ primary) achieves 49.3\%, reflecting the substantial
+inter-annotator disagreement on the fine-grained 10-class taxonomy.
+``Self review'' is not applicable (---) for the human baseline.}
+\label{tab:metareview-uncertainty-accuracy}
+\end{table}

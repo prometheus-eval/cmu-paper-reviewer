@@ -1,0 +1,388 @@
+{
+  "paper_id": 85,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper indeed extends previously known links between transcription and CID-like boundaries to Streptomyces, and much of the result is confirmatory/correlative rather than mechanistically novel. The reviewer supports this with specific prior work and an accurate summary of the manuscript\u2019s main finding.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is a fair criticism: the study is mostly descriptive and does not deeply pursue mechanism or biological consequence, so adding that focus would likely raise the paper\u2019s impact. But the item is broad and gives little concrete support beyond the general claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript argues that increased inter-arm contacts may involve ParB/Smc-like machinery but does not test this genetically. Asking whether ParB/parS and Smc-ScpAB are required is therefore an accurate and important missing experiment.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "In context, \u201cthese proteins\u201d refers to the candidate chromosome-organizing factors discussed just before, and the paper does not measure their developmental abundance. That would help mechanism, but the item is terse and under-justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The authors correlate transcriptional changes with increased inter-arm contacts but do not test whether reduced transcription is causal. The suggested perturbation directly targets that causal gap and would materially strengthen the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper does not test whether the observed higher inter-arm contacts matter for development, even though it discusses likely ParB/Smc involvement. A functional test in mutants would address a central biological-relevance gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper repeatedly uses \u201cremodeling\u201d for chromosome changes that are only shown correlatively, and the reviewer is fairly flagging possible over-interpretation. Still, whether \u201cremodeling\u201d necessarily implies an active dedicated mechanism is a semantic point on which experts could differ.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figure 3A does show a faint secondary/off-diagonal signal, so the reviewer is plausibly right that the \u201copen\u201d versus \u201cclosed\u201d language is somewhat overstated. But the paper already hedges this terminology with quotation marks, so experts could split on whether the criticism is really correct.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The schematic in Fig. 4F simplifies the contact-map data and does appear to exaggerate arm alignment relative to Fig. 4E, especially at 48 h where strongest contacts are nearer oriC. This is a real presentation issue, though its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The introduction does not really explain why S. ambofaciens was chosen instead of more standard Streptomyces models, beyond practical details later in the paper. That contextual omission is valid but fairly minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Figure 1 and the text note that synteny fades in the terminal arms and the two arms have different extents, but the manuscript does not spend much time explaining how those asymmetries relate. This is a legitimate clarification request about interpretation of a main genomic feature.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is a plausible presentation complaint: the paper uses both Extended Data and Supplementary figures. However, the reviewer does not identify a concrete point of confusion or inconsistency, so the support is weak.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The methods clearly use an adapted YEME medium with 10.3% sucrose, so it is fair to ask for clearer labeling and discussion of possible medium effects. But whether this makes the biological conclusions meaningfully problematic is partly a judgment call, so experts could disagree on correctness of the broader criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper speculates that the outer rDNA boundaries may act as evolutionary barriers limiting recombination, but it does not connect those ideas to the well-known genomic instability of Streptomyces arms across growth phases. That is a fair discussion prompt, though its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This is just a stylistic rephrasing suggestion, not a substantive problem with the paper. It may slightly improve wording, but it is too minor to matter for the review.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests replacing \u201ce.g.\u201d with \u201ci.e.\u201d, but the manuscript is giving examples of morphological differentiation (such as secondary mycelium formation and sporulation), so \u201ce.g.\u201d is appropriate. The criticism does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "A request for a broader literature citation is reasonable, but the reviewer does not name any specific missing work despite asking for \u201cother labs.\u201d Since the paper already cites several relevant references on genome rearrangements, this remains weakly supported.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is a grammatical/wording tweak to a sentence about available Streptomyces sequences. It is too small to retain as a meaningful review point.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The manuscript says gene persistence is used as \u201ca new indicator\u201d for describing Streptomyces genome organization in this study, not that the concept is globally novel across all biology. The reviewer\u2019s objection therefore overstates the claim.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The phrase \u201cfurther shorten\u201d in the manuscript is awkward English, and the suggested replacement is a legitimate copyedit. Still, it is only a tiny wording fix.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The manuscript indeed uses \u201cterminals arms,\u201d which is a small grammatical error; \u201cterminal arms\u201d is the correct form. This is a trivial typo-level point.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "This is essentially a style preference about removing a repeated \u201cby S. ambofaciens\u201d from the medium-description sentence. It is not an important review point.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "As a methods question, asking what filters were used is a fair reproducibility request if the referenced step is under-specified. It is still a relatively minor detail rather than a major scientific issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The phrase about kinamycin being duplicated \u201cowing to its location within the TIRs\u201d is understandable in context, but it could certainly be rephrased more clearly for readers less familiar with terminal inverted repeats. This is a minor clarity point with an exact textual anchor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The heading \u201cNAPSFs, identification\u201d is awkward, and \u201cIdentification of NAPSFs\u201d would read better. This is a tiny copyediting fix.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The method line around the E-value threshold is indeed awkwardly formatted in the reconstructed text, so the reviewer is flagging a real presentation problem. But it is only a minor typo/formatting issue.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "This is a generic request to split a long sentence for clarity. It is probably a fair writing suggestion, but the reviewer does not quote the sentence or explain what is hard to follow.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The figure legend wording \u201cSame legend than Figure 3\u201d is awkward, so this comment is plausibly flagging that wording. Even so, it is a negligible editorial point.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "This is another very small preposition change. It has no substantive bearing on the paper.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The manuscript does contain an awkwardly placed \u201calthough\u201d in an Extended Data legend, so the reviewer is flagging a real wording issue. But it is purely cosmetic.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The figure legends use the abbreviation \u201cATB\u201d for antibacterial activity/antibiotics without defining it clearly, so the reviewer\u2019s confusion is understandable. This is a minor but valid clarity issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "This is a capitalization nit in Figure 1. It is too trivial to matter in the review.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The bioassay panel does show a 72 h YEME halo, but the omics analysis stops at 48 h in YEME, so the reviewer\u2019s question is interpretable as asking why no 72 h YEME omics condition was included. Because the wording could also be read as overlooking the shown 72 h bioassay sample, experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper frames the work around metabolic differentiation mainly through bioassays and transcriptional activation of SMBGCs, not direct metabolomics, so the reviewer is right that the link to \u201creal\u201d metabolic output is only partially substantiated. That is a central interpretive issue and the item cites the relevant claim about SMBGC activation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript highlights only a couple of BGC/boundary examples despite identifying many SMBGCs, and it does not establish a broad model for BGC regulation from those examples. The reviewer accurately points to that limited support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "An orthogonal confirmation of the 3C-seq architecture claims is indeed absent, and requesting DNA-FISH or locus-specific 3C is a standard strengthening suggestion for a first study in this organism. The reviewer gives concrete examples of what would address the gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 2A\u2019s heatmap is captioned as normalized reads per gene, so the reviewer\u2019s confusion is understandable and the figure could be clearer. This is a minor presentation issue tied to a specific figure.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript uses the phrase \u201csignificantly expressed and/or regulated,\u201d which is compact and could benefit from clarification. This is a local wording issue rather than a substantive scientific flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper reports both a positive sense/antisense correlation and high antisense index in lowly expressed regions, then hints at regulation without much mechanistic synthesis. The reviewer correctly identifies that interpretive tension and asks for clarification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The manuscript links a sharp new boundary to the congocidine BGC but does not dissect whether that boundary sits within or between operons or how expression changes across it. Those are fair mechanistic clarifications on one of the paper\u2019s key examples.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is an accurate challenge to a simple transcription-only explanation: the manuscript itself notes a boundary in the lowly expressed stambomycin BGC and suggests other mechanisms may exist. That directly qualifies the proposed model.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "A formal differential interaction analysis between Hi-C/3C conditions is absent and could be useful, but the reviewer does not explain why the existing boundary and dispersion analyses are inadequate. The request is important but under-justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "A broader discussion connecting the results to eukaryotic chromosome-architecture literature and a named Rowley et al. paper would indeed add context. Whether that is a major improvement or just a nice-to-have discussion expansion is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This repeats a real concern from item 1: a metabolite-related interpretive claim seems stronger than the data support. But the reviewer does not quote the exact statement here, so a meta-reviewer would need extra work to complete the chain.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The paper\u2019s \u201ctranscriptional hub\u201d language is interpretive and not operationally defined, and the backing for that concept is limited to correlative boundary/transcription patterns. Requesting clarification of the term and its support is therefore justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer accurately points out two places where the transcription-driven boundary model is only partially supported: some boundaries occur without high transcription, and central boundaries disappear with only modest transcriptional decline. The item gives specific contradictions and concrete experimental ways to test the model.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

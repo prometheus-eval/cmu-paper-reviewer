@@ -1,0 +1,187 @@
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [overall, axis], mode: axis)
+================================================================================
+N rows total: 905
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.932  (723/776)
+  significance   0.638  (365/572)
+  evidence       0.890  (648/728)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 445
+  accuracy: 0.593
+  macro F1: 0.221
+  weighted F1: 0.542
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.717      0.876      0.789        275
+  correct_significant_insufficient                   0.077      0.500      0.133          2
+  correct_marginal_sufficient                        0.277      0.243      0.259         74
+  correct_marginal_insufficient                      0.000      0.000      0.000          4
+  correct_not_significant                            0.000      0.000      0.000         55
+  incorrect                                          0.190      0.114      0.143         35
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [overall, tenclass], mode: tenclass)
+================================================================================
+N rows total: 905
+N scored: 905 (unscorable: 0)
+10-class accuracy: 0.354
+Macro F1:          0.122
+Weighted F1:       0.309
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.408      0.800      0.541        275
+  correct_significant_insufficient                   0.000      0.000      0.000          2
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000         20
+  correct_marginal_sufficient                        0.102      0.122      0.111         74
+  correct_marginal_insufficient                      0.000      0.000      0.000          4
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000         13
+  correct_not_significant                            0.000      0.000      0.000         55
+  correct_disagree_on_significance                   0.467      0.238      0.316        298
+  incorrect                                          0.036      0.029      0.032         35
+  disagree_on_correctness                            0.413      0.147      0.217        129
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [human_reviewers, axis], mode: axis)
+================================================================================
+N rows total: 545
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.930  (426/458)
+  significance   0.610  (213/349)
+  evidence       0.830  (356/429)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 246
+  accuracy: 0.557
+  macro F1: 0.211
+  weighted F1: 0.551
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.815      0.783      0.799        152
+  correct_significant_insufficient                   0.077      1.000      0.143          1
+  correct_marginal_sufficient                        0.279      0.395      0.327         43
+  correct_marginal_insufficient                      0.000      0.000      0.000          2
+  correct_not_significant                            0.000      0.000      0.000         38
+  incorrect                                          0.000      0.000      0.000         10
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [human_reviewers, tenclass], mode: tenclass)
+================================================================================
+N rows total: 545
+N scored: 545 (unscorable: 0)
+10-class accuracy: 0.349
+Macro F1:          0.135
+Weighted F1:       0.339
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.453      0.704      0.552        152
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000         16
+  correct_marginal_sufficient                        0.102      0.209      0.137         43
+  correct_marginal_insufficient                      0.000      0.000      0.000          2
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000         10
+  correct_not_significant                            0.000      0.000      0.000         38
+  correct_disagree_on_significance                   0.487      0.312      0.380        186
+  incorrect                                          0.000      0.000      0.000         10
+  disagree_on_correctness                            0.552      0.184      0.276         87
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [ai_reviewers, axis], mode: axis)
+================================================================================
+N rows total: 360
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.934  (297/318)
+  significance   0.682  (152/223)
+  evidence       0.977  (292/299)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 199
+  accuracy: 0.638
+  macro F1: 0.185
+  weighted F1: 0.525
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.642      0.992      0.780        123
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_marginal_sufficient                        0.250      0.032      0.057         31
+  correct_marginal_insufficient                      0.000      0.000      0.000          2
+  correct_not_significant                            0.000      0.000      0.000         17
+  incorrect                                          1.000      0.160      0.276         25
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [ai_reviewers, tenclass], mode: tenclass)
+================================================================================
+N rows total: 360
+N scored: 360 (unscorable: 0)
+10-class accuracy: 0.361
+Macro F1:          0.089
+Weighted F1:       0.254
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.373      0.919      0.531        123
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000          4
+  correct_marginal_sufficient                        0.000      0.000      0.000         31
+  correct_marginal_insufficient                      0.000      0.000      0.000          2
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000          3
+  correct_not_significant                            0.000      0.000      0.000         17
+  correct_disagree_on_significance                   0.394      0.116      0.179        112
+  incorrect                                          1.000      0.040      0.077         25
+  disagree_on_correctness                            0.176      0.071      0.102         42
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [self_review, axis], mode: axis)
+================================================================================
+N rows total: 119
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.914  (96/105)
+  significance   0.769  (50/65)
+  evidence       0.990  (103/104)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 59
+  accuracy: 0.678
+  macro F1: 0.202
+  weighted F1: 0.568
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.684      1.000      0.812         39
+  correct_marginal_sufficient                        1.000      0.111      0.200          9
+  correct_marginal_insufficient                      0.000      0.000      0.000          0
+  correct_not_significant                            0.000      0.000      0.000          2
+  incorrect                                          0.000      0.000      0.000          9
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/anthropic/claude-opus-4-7 [self_review, tenclass], mode: tenclass)
+================================================================================
+N rows total: 119
+N scored: 119 (unscorable: 0)
+10-class accuracy: 0.361
+Macro F1:          0.103
+Weighted F1:       0.256
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.378      0.949      0.540         39
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000          0
+  correct_marginal_sufficient                        0.000      0.000      0.000          9
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000          1
+  correct_not_significant                            0.000      0.000      0.000          2
+  correct_disagree_on_significance                   0.417      0.111      0.175         45
+  incorrect                                          0.000      0.000      0.000          9
+  disagree_on_correctness                            0.200      0.071      0.105         14

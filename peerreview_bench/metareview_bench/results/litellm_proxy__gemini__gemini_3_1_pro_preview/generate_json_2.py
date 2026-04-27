@@ -1,0 +1,265 @@
+import json
+
+data = {
+  "paper_id": 6,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the raw neuroimaging data for Figure 2 is not provided in an open-access repository like neurovault.org, despite a possible data availability statement. Checking the manuscript, there are no links to raw data, so the factual claim is Correct. A lack of open data is a Significant issue because it limits reproducibility and future research. The evidence is Sufficient as the reviewer specifically points to the absence of the Figure 2 data. A devil's advocate might argue that the data availability statement quoted isn't in the provided text, but the core concern of missing open data remains true. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item merely reiterates the request made in Item 1, emphasizing the benefits of sharing the data for community adoption. While the factual premise is Correct, it does not add any new substantive criticism beyond what was already stated in Item 1. Therefore, it is Not Significant on its own, as the review would be just as effective if this redundant item were removed. The evidence is null. A devil's advocate could argue this is Marginally Significant as a concluding remark, but it is ultimately redundant. Experts would likely agree it is Not Significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": None,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that similar resolutions have been demonstrated at 7T (citing Feinberg et al.), contextualizing the novelty of the 11.7T resolution. This is factually Correct as 7T can achieve such resolutions albeit with longer scan times. The criticism is Significant because it clarifies the paper's actual contribution (shorter scan time at mesoscale resolution). The evidence is Sufficient, pointing to a specific reference. A devil's advocate might argue this is merely Marginally Significant because the paper already implies it, but adding explicit comparison improves the manuscript. Experts would likely agree it's Significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks to show images of all subjects to demonstrate robustness. The paper currently only shows images from a few subjects, making the claim Correct. This is Significant because demonstrating robustness across subjects is crucial for validating a new scanner. The evidence is Sufficient as it points to the absence of the full dataset of images. A devil's advocate might argue that showing all 20 is too much for a main text, but supplementary materials are suggested. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer suggests showing results of other contrasts like T1, DWI, or fMRI. The paper mentions T1 in the methods but doesn't show it, so the claim is Correct. While these additions would improve the paper, a devil's advocate would argue that for a first-in-human pilot study at 11.7T, expecting all these advanced contrasts is beyond the current scope. This makes its significance debatable. Evidence is Sufficient. Experts would likely disagree on whether this is a Significant requirement or just a nice-to-have.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests a comparison with 10.5T human imaging results. The paper cites 10.5T safety work but lacks direct imaging comparison. The core claim is Correct. This is a Significant point because 10.5T is the closest existing field strength. The evidence is Sufficient as it points to published findings at 10.5T. A devil's advocate could say they don't have a 10.5T scanner, but discussing published results is still valid. Experts would likely agree it's Significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims comparison with 3T/7T is biased because it's unclear if parameters were optimized, and says acquisition parameters haven't been provided. The paper actually says 'same protocol' was used. Thus, the reviewer's supporting claim that parameters weren't provided is Not Correct. However, the core point that using the same protocol biases the comparison (since TE/TR should be optimized for each B0) is valid. Because the core concern is Correct but the premise is flawed, a strict meta-reviewer might mark it Not Correct while a charitable one marks it Correct. Experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks for more detailed discussion on how much next steps will improve SNR. The text only briefly mentions future hardware improvements. This is Correct. A devil's advocate would argue this is Marginally Significant as it just asks for elaboration on a future work section, which doesn't change the current results. The evidence points to the brevity of the current discussion, which is Sufficient. Experts would likely disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer requests a clearer discussion on implications for neuroscience and clinical applications. The paper does have a concluding paragraph on this, making the criticism partially true as it could be expanded, so it is Correct. However, a devil's advocate would argue that the paper already discusses exploring biological mechanisms and diseases, so this is just a minor stylistic preference. The evidence is Requires More as it gives no specific examples. Experts would likely disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer points out that several references are ISMRM abstracts, which are not accessible to the average reader. Checking the references confirms this is Correct. This is Marginally Significant because it is a reference formatting issue that doesn't alter the scientific conclusions. The evidence is Sufficient as it identifies the type of reference. A devil's advocate would agree it's minor. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer asks for the meaning of the project name 'Iseult'. The manuscript does not define the acronym, making this Correct. This is a very minor detail that doesn't affect the understanding of the paper at all. A devil's advocate would say it should just be deleted from the review as trivial. Thus, it is Not Significant. Evidence is null.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": None,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks for a better description of state-of-the-art resolution compared to the new scanner. The paper lacks a detailed quantitative SOTA baseline. This is Correct and Significant for establishing the contribution. However, the reviewer provides no specific baselines or references themselves, so the evidence Requires More. A devil's advocate could argue it's sufficient as it points to an absence, but the lack of specifics makes it weak. Experts would agree it's insufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out previous works that achieved higher resolutions (giving specific DOIs at 9.4T) and asks to discuss them. The paper indeed does not discuss these. This is Correct and Significant, as it properly contextualizes the paper's claims. The evidence is Sufficient because the reviewer provides specific references and numbers. A devil's advocate might argue those are animal or ex vivo scans, but the discussion is still warranted. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer states it is unclear which exact conditions (TE/TR) were used in the 3/7/11.7T comparison, noting that using the same conditions affects contrast. The paper states 'same protocol' was used, but could be clearer on the exact TE/TR. The core concern about contrast matching is Correct and Significant. However, a devil's advocate would argue the paper already states they used the same protocol, so the reviewer's premise that it's 'unclear' is debatable. Experts would likely disagree on correctness due to this ambiguity.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer questions if the TE = 301ms on line 272 is correct. The text indeed lists TE = 301ms for a T2-weighted TSE, which is unusually long and possibly a typo (e.g., instead of 30ms or an effective TE). This is Correct. The issue is Marginally Significant as it is a minor typo or parameter clarification. The evidence is Sufficient as it points to the exact line and value. Experts would likely agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes the lack of a statistical power analysis for the safety measurements, given the N=20 sample size. The paper indeed does not provide a power analysis. This is Correct and Significant, as it questions whether the study could actually detect rare safety events. The evidence is Sufficient, pointing to the specific sample size and absence of analysis. A devil's advocate might argue N=20 is standard for pilot studies, but the criticism remains valid. Experts would agree it's significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the genotoxicity assessment lacks a 0T control group and uses only a single exposure, unlike prior cited work. Checking the text, the 0T group indeed did not undergo genotoxicity testing, and it was a single exposure. This is Correct. It is Significant because it affects the validity of the safety claims. The evidence is Sufficient, citing the text and prior work. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the SNR comparison is purely qualitative, lacks quantitative metrics, and is confounded by different subjects and coil configurations. The paper does not provide quantitative SNR maps for the in vivo comparison. This is Correct. It is a Significant issue because quantitative validation is standard. The evidence is Sufficient, pointing to the exact confounds in the paper. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer criticizes the short 1-week phone follow-up for safety, comparing it to a 10.5T study that had 2-4 weeks of repeat testing. The paper indeed states follow-up was 1-week phone calls. This is Correct. A devil's advocate could argue that for an initial feasibility scan, a 1-week follow-up is adequate, making its significance debatable. The evidence is Sufficient. Experts would likely disagree on whether this is Significant or beyond the scope.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the Methods section for imaging is missing and no sequence parameters are provided. This is factually Not Correct, as the manuscript contains a 'Data acquisition and processing' section detailing TR, TE, resolution, and flip angles. A devil's advocate might argue the reviewer missed it due to formatting, but factually against the provided paper, the claim is completely wrong. Significance and evidence are null. Experts would agree it is incorrect.",
+          "correctness": "Not Correct",
+          "significance": None,
+          "evidence": None,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the authors rely on qualitative statements for SNR and do not present quantitative homogeneity metrics. The paper does provide B1+ NRMSE values, meaning the claim about no homogeneity metrics is Not Correct. However, the broader point that SNR claims lack quantitative validation is Correct. Because the main point holds but a core supporting premise is factually flawed, a charitable expert might mark it Correct while a strict one marks it Not Correct. Experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that safety monitoring regarding SAR is insufficient, with no data shown on actual SAR levels or validation of the Virtual Observation Points model. The paper mentions these tools but provides no quantitative SAR data. This is Correct and Significant for high-field safety. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the provided code repository only contains scripts for the behavioral task, not the pTx pulse design or reconstruction. Checking the code directory confirms this is true. This is Correct and Significant, as the pTx implementation is the core technical contribution. The evidence is Sufficient, pointing directly to the code contents. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes using the 'same protocol' across 3T/7T/11.7T rather than protocols optimized for each field strength. The paper states they used the same protocol. This is Correct and Significant, as it impacts the fairness of the comparison. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues that the paper draws overly strong safety conclusions from a small (N=20), short-term protocol without a power analysis. The paper indeed makes broad claims like 'humans can safely tolerate' based on this cohort. This is Correct. A devil's advocate could argue that such language is standard for pilot studies and not actually 'overly strong', making the factual interpretation debatable. Thus, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out the SNR conclusion is not robust because it relies on different subjects and different transmit/receive configurations without quantitative SNR measurements. This accurately reflects the paper's methodology. The claim is Correct and Significant for validating the core benefit of 11.7T. The evidence is Sufficient, quoting the paper's methods. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the methodological reporting for SAR mitigation is insufficient, lacking actual SAR margins, hotspot validation, and robustness tests for the universal pulse. The paper lacks these details. This is Correct and Significant for safety verification. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the causal claim that bioeffects are absent is weakened by the non-randomized, fixed-order cohort design (0T first, then 11.7T) and limited blinding checks. The paper confirms this fixed order to minimize field ramps. This is Correct and Significant, as it introduces temporal confounding into the safety claims. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}
+
+out_file = '/Users/seungonekim/Documents/vscode/cmu-paper-reviewer/peerreview_bench/metareview_bench/results/litellm_proxy__gemini__gemini_3_1_pro_preview/litellm_proxy__gemini__gemini_3_1_pro_preview_paper6_metareview.json'
+with open(out_file, 'w') as f:
+    json.dump(data, f, indent=2)

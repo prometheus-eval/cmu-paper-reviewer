@@ -1,0 +1,294 @@
+{
+  "paper_id": 51,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests discussing side effects beyond 8 weeks, human vs rat translation, and thrombosis risks, which are absent from the text. This is factually correct. The point is significant because systemic injection of a hemostatic agent carries inherent risks that should be discussed. A devil's advocate could argue this is marginally significant as it is merely a request to expand the discussion section and does not affect the core results. This divergence of opinion is typical, leading to a prediction of disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the ROUT method needs more details and the acronym SECOND is not defined. The text cites SECOND but does not expand it, and ROUT is only mentioned with Q=5%. This is correct. The issue is a minor presentation detail that does not alter the paper's scientific merit, making it marginally significant. The evidence is sufficient as the reviewer directly names the missing details. Experts would agree this is a valid minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks if there are specific indicators of delayed wound healing in the free DEXSP group tissue, referencing a citation in the discussion. This is correct, as the paper attributes the poor outcome to delayed wound healing but does not show wound-specific markers beyond general neuroinflammation (NeuN, GFAP, etc.). Asking for specific indicators to support this claim is scientifically significant. A devil's advocate might argue it is just a clarification question, but providing evidence for a proposed mechanism is important. Experts would likely agree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that 'blood-brain barrier (BBB)' is repeatedly defined throughout the text. This is a very minor stylistic issue that does not affect readability or science, making it marginally significant. The evidence is sufficient for a meta-reviewer to verify by searching the text. Experts would agree it is a correct but minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly identifies that Reference 46 is broken (listed as '..._Longshun Li_09042024_clean, (n.d.)'). This is a formatting error and thus marginally significant. The evidence is straightforward as it points directly to the reference number. Experts would agree on this minor correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer notes that Figure 1's timeline lacks visual clarity that recordings continue during weeks 2-7, although the caption implies bi-weekly recordings. This is correct as the visual timeline jumps from week 1 to week 8 without an explicit recording marker in between. This is a minor presentation issue (marginally significant). The evidence is sufficient. Experts would agree this is a valid formatting nit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer requests scale bars for the electrode schematic and spike illustration in Figure 3A. The figure indeed lacks these scales. This is a minor presentation improvement and marginally significant. The evidence is specific and sufficient. Experts would agree it is a helpful minor suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims several figures are not referred to in the main text. Checking the text reveals that panels like Fig 2C, 3A, and 5A are indeed uncited. This is correct and a marginally significant formatting error. However, the reviewer does not specify which figures are missing, requiring the meta-reviewer to comb through all figures and text. A devil's advocate could say the point is clear, but strict experts would demand specific pointers. This makes the evidence insufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that figure order is inconsistent and out of sequence. Indeed, Figure 3E is discussed after 3F-I, and Figure 6C is discussed before 6B. This is factually correct. Like Item 1, this is a minor presentation issue (marginally significant), but the reviewer fails to identify which figures are out of sequence, forcing the meta-reviewer to verify everything from scratch. Thus, the evidence is insufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out that Figure 3D and Figures 3F-I display the exact same dataset, merely grouped differently. This is a minor presentation redundancy and is marginally significant. The reviewer explicitly points out the duplicate panels, making the evidence sufficient. Experts would agree it is a valid minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer requests that normalization strategies (e.g., choice of 600-650 um bin) be explicitly stated and justified in the Figure 5 legend. While the text briefly mentions it, the legend does lack this clarity. This is a minor presentation improvement (marginally significant). The reviewer provides clear pointers to Figure 5 and the specific bin, making evidence sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the sample size (n) is inconsistently reported and missing from figure legends. This is correct, as the legends lack 'n' values. Including 'n' in legends is a standard requirement for understanding the data, making it significant. A devil's advocate might argue it is marginal since 'n' is mentioned in the methods, but standard reporting guidelines generally require it in legends. Experts would agree it is a significant omission.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out that statistical annotations (asterisks) are not defined with corresponding p-values in the figure legends. This is correct; Figures 3 and 4 use asterisks without defining them in the legends. This is significant because readers cannot interpret the statistical significance without these definitions. The evidence is sufficient as it clearly points out a standard missing element. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer argues the term 'therapeutic' is inappropriate because increased neuron density lacks 'additional functional validation'. This is factually incorrect because the entire paper focuses on evaluating electrophysiology recording performance, which is a direct functional validation of the therapy for intracortical microelectrodes. A devil's advocate might argue 'therapeutic' implies disease cure, but in the context of neural implants, improved recording is the intended functional therapy. Experts would agree the reviewer's premise is flawed.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer suggests a gradual reduction dosing experiment to see if continuous dosing is necessary. This is factually correct as the paper only tests continuous 8-week dosing. While identifying this as a potential future study is insightful (significant), a devil's advocate would strongly argue that requiring a new dosing regimen experiment is well beyond the scope of this proof-of-concept study. This leads to a clear disagreement on significance among experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer asks for direct evidence of endothelial repair, noting that the paper relies on hemostatic properties for BBB sealing. The paper indeed lacks direct evidence of endothelial repair and uses IgG reduction as a proxy. This is significant because the mechanistic claims are central. A devil's advocate might argue that providing direct in vivo endothelial repair evidence is exceedingly difficult and beyond the paper's scope, making this critique marginally significant. Thus, experts would disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer correctly observes that the first few paragraphs of the Discussion repeat content from the Introduction (background on IMEs and DEX delivery). This redundancy is a minor writing structure issue, making it marginally significant. The evidence is sufficient as it points to the initial portion of the discussion. Experts would agree it is a valid minor critique.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer requests additional data on inflammatory markers in peripheral organs like the liver and spleen to strengthen systemic safety claims. The paper only tested blood markers. While safety profiling is important (significant), a devil's advocate would argue that extensive organ histology is beyond the scope of a neural engineering paper focused on brain implants. This creates a classic disagreement on the significance of requesting extensive new experiments.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies a paradox: the paper claims improved recording performance but reports a significantly lower SNR and higher noise for the SPPINDEX group. This is factually correct based on Figure 4 and the text. This is a highly significant point because SNR is a fundamental metric for recording quality, and its degradation contradicts the main claim. The reviewer provides excellent evidence by quoting the paper and a standard reference. Experts would agree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer states the paper's claim of BBB 'resealing' relies solely on IgG staining, which is indirect and cannot distinguish structural repair from reduced inflammation. They suggest tight junction proteins are needed. This is correct and highly significant, as it challenges a core mechanistic conclusion of the paper. The reviewer provides specific citations and logical reasoning, making evidence sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the intra-arterial administration route used has limited clinical translatability, yet this is not reflected in the abstract. This is correct; the paper acknowledges the limitation in the discussion but not the abstract. While accurate, a devil's advocate could argue that since the limitation is already explicitly discussed in the paper, forcing it into the abstract is merely a stylistic preference. This makes the significance debatable among experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out a typo where 'W1-4 SPPINDEX' is listed twice in the sample size description with different values (93 and 51), where one should clearly be W5-8. This is factually correct. Typographical errors are typically marginally significant as they do not alter the underlying science. The evidence is highly specific and sufficient. Experts would agree this is a valid minor correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer highlights a critical experimental design limitation: histology was only performed at the 8-week endpoint, yet the paper draws temporal mechanistic conclusions about weekly recording improvements. This is correct and highly significant, as a single time point cannot establish the timeline of tissue changes relative to recording improvements. The reviewer provides clear evidence from the text. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the SPPINDEX group has a significantly lower SNR and higher noise than the control, contradicting the claim of overall recording improvement. This correctly identifies a major tension in the paper's results. It is significant because signal quality is a core metric, and worsening it represents a trade-off. The evidence cites specific findings and p-values from the paper, which is sufficient. Experts would agree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the claim of 'targeted delivery' lacks direct experimental evidence like biodistribution studies, relying instead on downstream outcomes like IgG. The reviewer astutely notices an unused 'IVIS' folder in the provided code repository. This is factually correct and highly significant, as it exposes a missing evidentiary link for a central claim. The evidence is specific and sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer observes that the Free DEXSP group performed worse than the control and had significant weight loss, suggesting systemic toxicity. This is correct. The reviewer's point that this toxicity complicates interpreting the nanoparticle's targeted benefit is highly significant. The evidence is clearly supported by quoting the paper's own weight loss data. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the systemic nanoparticle treatment should have been compared to a local delivery method (e.g., DEX-coated electrodes) rather than just a failed systemic free drug approach. This is correct, as no local control is present. While establishing a stronger baseline is significant, a devil's advocate would argue that introducing an entirely different delivery modality as a control is an excessive demand for this study, leading to disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that the custom MATLAB software used for calculating the controversial electrophysiological metrics is missing from the code repository. This is correct, as only Python histology code is provided. Reproducibility of custom analysis pipelines is highly significant, especially given the SNR paradox highlighted earlier. The evidence is clear and sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer identifies a major statistical flaw: the paper treats individual channels as independent samples (e.g., N=107 channels) for hypothesis testing, ignoring that they are nested within a small number of animals (n=7 or 8). This pseudoreplication is factually correct based on the stated methods and sample sizes. It is highly significant as it can drastically inflate statistical significance. The reviewer provides excellent logical evidence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the Active Electrode Yield (AEY) denominator explicitly excludes channels 'without any detected active units throughout the entire study'. This post-hoc filtering is factually correct and biases between-group comparisons if treatments affect overall channel viability. This is a significant methodological flaw that inflates the primary metric. The evidence points to the exact definition in the text, making it sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer critiques the histology analysis for using multiple distance bins and potential subsamples without appropriate multiplicity correction or hierarchical modeling. This is correct, as the paper describes repeated ANOVAs per bin. This is significant because it inflates false positives in identifying localized spatial effects. The evidence from the methods section is sufficient to prove the point. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims the paper overstates its mechanistic conclusions about 'resealing' the BBB and 'targeted delivery', as the data (terminal IgG staining) does not directly demonstrate these mechanisms. This aligns with other reviewers and is factually correct. It is a significant flaw in the paper's narrative framing. The evidence directly dissects the authors' claims versus the provided data. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that the custom R scripts and MATLAB software needed to process the electrophysiology outcomes are missing from the repository, and the data readme is a placeholder. This is factually correct upon checking the repository. It is a highly significant reproducibility issue, especially given the complex statistical filtering and metric calculations. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "paper_id": 30,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 2,
+          "reasoning": "The paper does use 'two-component' as a search annotation and ends up with far more TCS hits than other categories, so the concern that this keyword is overly broad is understandable. However, the manuscript also explicitly treats TCS as a typical QS system, so experts could split on whether this is a valid criticism of the paper or a disagreement with the authors' scope/definition.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript offers a website and some code/data files, but it does not provide the full intermediate datasets or a machine-readable dump of the final QSHGM/network outputs, and Fig. 3B indeed contains predicted positives later grouped as QS-irrelevant. The bundled reproducibility concern therefore largely holds, even though one subpoint loosely conflates predicted positives with training positives.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Methods explicitly say Gram-negative validated proteins include synthases and receptors from SigMol, whereas Gram-positive validated proteins come only from Quorumpeps receptors, and the paper does not justify the asymmetry. That is a real methodological clarification need because it shapes the seed dataset.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The ML description leaves important gaps: the paper misuses 'ensemble classifiers,' does not clearly explain how predictions from the four models are combined, and does not justify using all four once RF performs best. Although the methods do disclose AAC frequencies as features, the overall complaint that the ML setup and possible confounds need clearer explanation is still valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Negative sample construction is described only broadly as proteins from several typical proteomes with QS-related components removed by cluster rules and keywords. Asking for clearer justification and a more explicit definition of what these negatives represent is therefore valid and materially relevant to the classifier training.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Figure 2F is only briefly described as a count distribution of QS entries across 818 microbes, so a reader could reasonably want more panel-specific annotation or caption detail. This is a valid clarity request, but experts may differ on whether it is a substantive improvement or just presentation polish.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper's interaction-network figures are central results, yet the caption for Figure 5 is very terse and the review identifies concrete ambiguities about what edges, arrows, and speaking/listening relationships mean. Clarifying those symbols would meaningfully improve interpretability of the main claims.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The manuscript describes predicted communication networks and shows them as figures, but it does not provide a downloadable machine-readable table or edge list for those calculated networks. Because the networks are a core output, providing them in tabular form would improve reproducibility and reuse.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The cited host-effect example is about Pseudomonas AHLs acting in a non-gut host context, so the reviewer is reasonable to question how relevant it is to a gut-focused introduction. Still, examples of general QS biology can also be used as motivation, so experts could plausibly disagree on whether this is a real flaw or just a scope preference.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The discussion phrase 'for the good of the population' is teleological evolutionary language and is easy to challenge scientifically even if the intended idea was population-level benefit. This is a real wording/conceptual issue, but it is a minor one.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Phrases like 'familial at the genus level' are awkward and can confuse the taxonomic point the authors are making, so the reviewer's reported confusion is credible. This is a small wording clarity issue rather than a substantive methodological flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper claims the communication network can illuminate dynamics, resilience, and organizational principles, but the manuscript mainly offers descriptive network construction plus brief discussion rather than a quantitative ecological model linking the network to dynamics. That makes the concern real, though experts could disagree on whether such modeling is essential for this paper versus an ambitious follow-up.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Figure 1 and its caption introduce many datasets and transitions, and the caption is dense enough that the workflow can reasonably be hard to follow without a clearer mapping of inputs, outputs, and filters. A summarizing table would help, though experts may split on whether this is a major methodological clarity issue or mainly a presentation improvement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This multi-part item correctly identifies several central ML issues: the paper reports four separate models while calling them 'ensemble classifiers,' leaves the aggregation and usage of those models unclear, gives limited accounting of negative-sample composition, uses a broad 'two-component' search term, and does not discuss synthase/receptor imbalance. The methods do mention AAC features, so one subpoint overstates what is missing, but the overall criticism is well grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The interaction-prediction section explains the examples only qualitatively, and the manuscript does not spell out a formal rule or data structure for inferring pairwise links from synthases, receptors, and languages. The reviewer is also right that the projected 40-node graph is complete by construction and therefore of limited interpretive value unless false positives and link meaning are discussed carefully.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

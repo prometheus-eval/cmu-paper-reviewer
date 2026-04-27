@@ -1,0 +1,31 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10.5}\selectfont
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lr}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+Papers & 78 \\
+Papers excluded & 4 (no fully-good human items) \\
+Total rubric items & 780 \\
+Rubric items per paper & 10.0 (range 1--36) \\
+\midrule
+AI reviewer models evaluated & 12 \\
+Evaluation axes & \\
+\quad Recall (similarity-based) & per-item coverage \\
+\quad Precision (meta-review-based) & per-axis quality \\
+\midrule
+Rubric item criteria & \\
+\quad Correctness & Correct \\
+\quad Significance & Significant \\
+\quad Evidence & Sufficient \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{\textsc{PeerReview Bench} statistics.}
+The benchmark evaluates AI reviewers against a rubric of 800 expert-validated ``fully good'' human review items (rated Correct, Significant, and Sufficient by the primary annotator) across 78 papers.
+Four papers with no fully-good items were excluded.
+Recall measures what fraction of rubric items an AI reviewer's output covers; precision measures the quality of the AI's own items via an AI meta-reviewer.
+}
+\label{tab:stats-peerreview-bench}
+\end{table}

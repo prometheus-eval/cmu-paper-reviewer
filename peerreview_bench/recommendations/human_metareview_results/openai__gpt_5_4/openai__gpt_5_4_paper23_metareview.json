@@ -1,0 +1,156 @@
+{
+  "paper_id": 23,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Figure 2 and Section 4.2 explain that receptor effects are modeled as changes in the synaptic decay times tau_e and tau_i, but the later mean-field and whole-brain equations expose these effects only implicitly through the fitted transfer functions and never clearly trace how the manipulated receptor-level parameters propagate across scales. Because that cross-scale mapping is the core methodological contribution and the reviewer points to the missing tau_e and tau_i appearance in the reported mean-field equations, the criticism is correct, important, and sufficiently grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The title, abstract, and introduction frame the work as evaluating the impact of pharmaceutical compounds such as ketamine and propofol, but the implemented examples amount to manually changing synaptic decay constants to mimic receptor-level effects rather than presenting a more explicit drug-action workflow. Asking the authors to clarify that scope is fair and potentially important, though the review item gives only a broad description of the mismatch rather than very specific textual support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript does provide some text for Figure 6, but the broader complaint that the higher-scale results are discussed only briefly, especially regarding how firing-rate behavior and the mean-field abstraction should be interpreted, is understandable. At the same time, the statement that Figure 6 is not described beyond the legend overstates the omission, so experts could plausibly disagree on correctness itself.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper emphasizes a bottom-up bridge from cellular manipulations to mean-field and whole-brain behavior, yet it never clearly explains how the manipulated synaptic times at the microscale enter the mean-field quantities beyond being hidden inside the fitted transfer functions; T is introduced separately with no explicit relation to tau_e or tau_i. That makes the criticism central and correct, but the review item itself is mostly a question and gives limited concrete support.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The study is presented and analyzed as a forward model, and the discussion only briefly mentions future clinical potential rather than how one might infer parameters from observed EEG or MEG recordings. Suggesting a short discussion of inverse use is valid, but it is more of a forward-looking extension than a substantive flaw in the current paper.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Figure 5 does evaluate functional organization through FC matrices and SC-FC correlation, so the item overstates what is missing if read literally. But the paper does not perform a richer benchmark such as empirical-versus-simulated FC dynamics or FCD analysis of the sort the reviewer cites, so a charitable reading makes this a real evaluation gap and an uncharitable reading makes it partly inaccurate.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper does state that the spiking network has 10,000 neurons, random p = 0.05 connectivity, and an 80/20 excitatory-inhibitory split, but the rationale for those design choices is only briefly asserted as representative of cortical circuits and is not really justified. Because some network description is present while the deeper rationale is sparse, the criticism is partly right and likely to split experts on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Section 2.6 is dense and relies heavily on prior work and fixed-point arguments, so the complaint that the emergence of UP-and-DOWN states and bistability is hard to follow is a fair readability criticism about a central section. The item names the exact section and the relevant prior paper, but it does not pinpoint the specific explanatory step that is missing, making evidence borderline across experts.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The results section repeatedly juxtaposes anesthesia and NREM-sleep mechanisms, especially in the UP-and-DOWN and PCI discussions, and a reader could reasonably find that presentation confusing. This is a genuine clarity issue, though experts may differ on whether reorganizing that discussion would materially strengthen the paper or is mainly a presentation preference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Figure 6A is visually busy, with per-seed scatter, paired-condition arrangement, violin densities, and boxplots all shown together, so the complaint that the PCI scatter presentation is hard to read is fair. The figure already includes boxplots and statistics, which makes the suggested remedy partly redundant, but the underlying readability criticism is still a valid minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The discussion gives only a brief comparison to prior modeling work and does not spell out in depth what this framework can infer that Luppi et al. or Deco et al. could not. However, the item overstates matters when it says those papers are referenced but not discussed, because the discussion does mention them explicitly, so correctness itself is somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Aside from Table 1 for transfer-function fit coefficients, the paper does not provide a consolidated simulation-parameter table, and the whole-brain propagation speed v_c is defined conceptually but no numerical value is reported in the manuscript. Because those omissions matter for reproducibility across the many modeled conditions, this is a correct, significant, and well-supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The repository includes a README and at least one parameter file, so the item is too strong if interpreted as saying such support is absent. Still, the code base is large and only partially documented, and the paper does not summarize all run-defining parameters clearly, so experts could plausibly split on whether the criticism is correct overall.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure 4 uses the abbreviation UD in the caption to denote the UP-and-DOWN condition, but that shorthand is not explicitly defined there. Asking for the abbreviation to be spelled out is a valid but minor clarity suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The text says each subject's FC was correlated with a reference SC and later that simulated FC was correlated with the same reference SC, but it never clearly states whether that SC is an average connectome, a single template, or a personalized matrix per participant. Because that choice affects how readers interpret the validation in Figure 5, the criticism is correct, important, and specific enough to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reconstructed markdown shows many displayed equations without visible numbers, but the prose later refers to Equation 5, Eq. 7, and Eq. 8, which strongly suggests that numbering existed in the original formatted paper and was lost in reconstruction. Given the instruction that OCR or layout errors are possible, this review item does not hold up against the likely paper source.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "In the PCI methods, the phrase significant vectors is used without immediately explaining what qualifies a vector as significant. Rephrasing or briefly defining that term would improve clarity, but it is only a minor wording issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "paper_id": 1,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper largely extends prior ingredients such as FermiNet-style orbitals, periodic distance features, and standard optimization machinery, so the reviewer's novelty concern is substantively fair. However, the comment does not point to any specific borrowed component or passage, so the support is thin.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The cited 2021 Communications Physics paper on neural-network quantum states for real solids is directly relevant prior work, and this paper does not mention it in the introduction or references. Adding it would materially improve the paper's context and novelty positioning.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The introduction says coupled-cluster and configuration-interaction methods \u201cface severe difficulty when applied to solid systems,\u201d but does not clarify whether this means unfavorable scaling, implementation complexity, basis issues, or something more fundamental. The clarification request is valid, though mainly presentational.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper builds a many-body ansatz from Bloch-like phase factors multiplied by collective orbitals, and it does not explicitly prove in the manuscript that this construction is exact rather than an approximation. Still, the reviewer's premise about Bloch functions only applying to one-electron states is somewhat oversimplified, so experts could differ on whether the criticism is fundamentally correct.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript uses modified KFAC and multi-GPU parallelization, and these ingredients are associated with prior FermiNet work rather than being newly introduced here. The paper later says it is built on open-source FermiNet and PyQMC, so the issue is mainly one of attribution clarity rather than a substantive methodological flaw.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper does include some k-point or twist information, especially for graphene in the supplement, but the coverage is incomplete and not consolidated clearly across systems. That makes the reviewer's broader reproducibility concern reasonable, while the absolute wording (\u201cThere are no information\u201d) is stronger than the paper strictly warrants.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This criticism does not hold as stated because the supplement explicitly defines correlation error with an equation. The definition is not very prominent in the main text, but it is present in the paper materials.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The manuscript and supplement use forms like \u201cccpvdz\u201d or \u201ccc-pvdz,\u201d whereas the standard basis-set name is conventionally written \u201ccc-pVDZ.\u201d This is a valid but minor nomenclature correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The supplement places table captions below the tables, so the reviewer's formatting observation is factually true. However, this is purely stylistic and does not affect understanding or the scientific content.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The figure caption refers to \u201cTZ-LDA basis\u201d without explaining the notation, so a reader could reasonably be unsure what basis was used. This is a legitimate clarity issue, but it is minor because the term concerns comparison data rather than the paper's core method.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The manuscript claims efficiency, multi-node GPU execution, and very large neural-network calculations, but it does not report concrete wall-clock costs or hardware usage for representative systems like LiH. Those details would materially strengthen the efficiency and practicality claims.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Supplementary Table 4 has values on the same scale as the per-atom H10 energies in Supplementary Table 3, but its caption only says the energies are in Hartree and does not clearly say they are per atom. The reviewer is pointing to a real but small clarity issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The observation is basically true for the reported energy tables: many listed uncertainties are written as \u201c(1),\u201d with a few exceptions such as Tables 6, 10, and 11. But the comment does not identify a concrete scientific or reporting problem beyond curiosity, so it is too minor to matter.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The main text reports quantities such as cohesive energies to three decimal places without discussing statistical uncertainty there, even though uncertainties are relegated to the supplement. Because the results are close to references and are presented as high-accuracy benchmarks, surfacing uncertainty more clearly in the main text would be substantively helpful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The paper uses finite k-point or twist sampling together with finite-size corrections, but it does not explicitly discuss the reviewer's \u0393-point exchange-divergence concern or cite the relevant literature they mention. Whether an additional correction is actually required here depends on method-specific details and field conventions, so correctness is genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This paper clearly builds on prior elements including FermiNet, periodic distance features, finite-size corrections, and existing software, and the manuscript does not sharply separate what is inherited from what is newly contributed. Because contribution framing is central here, this is an important and well-supported criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The abstract and introduction use broad language about outperforming other ab initio methods, but the paper's own results are more mixed: H10 is essentially comparable to LR-DMC and AFQMC, and for HEG the method is evaluated relative to BF-DMC reference data rather than clearly surpassing the best available benchmarks. The reviewer's concern is therefore well grounded.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does not provide direct efficiency data for the optimizer change or side-by-side comparisons that would justify claiming improvement over prior FermiNet solid-state work. The main criticism is valid and important, but the reviewer's stronger conclusion that this approach is less accurate than FermiNet relies on cross-paper inference rather than a clean like-for-like comparison.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript motivates long-range correlation in extended systems, yet the real-solid calculations are done on modest supercells and then improved with standard finite-size corrections, without a dedicated system-size convergence study. That makes the claim of probing long-range effectiveness weaker than the paper suggests, although some parts of the reviewer's argument rest on more interpretive judgments about what systems count as sufficiently metallic or state-of-the-art.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is a clear venue-fit opinion rather than a claim about a technical flaw. Given the reviewer's comparison to broader flagship papers and their view that the contribution is specialized, it is a reasonable but minor point to keep in the review.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "paper_id": 83,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer's main point challenges the authors' claim that the rigidity of the ZnO layer causes high dark current, arguing that because the OPD is ultraflexible, the rigidity of a single layer shouldn't be a concern. However, in flexible electronics, brittle inorganic layers like ZnO frequently crack under strain even on flexible substrates, leading to shunts. Thus, the reviewer's physical reasoning is factually flawed. I judge this as Not Correct. A charitable expert might view this as a simple request for more clarification rather than a definitive physics claim, while an uncharitable expert would dismiss it as technically naive. Therefore, I predict experts would disagree on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the paper does not specify the light intensity used for the rise and fall time measurements, and notes that response speed can drop at low light intensities. This is factually Correct as the text does not state the intensity. Addressing this would improve the paper's methodological rigor, making it Significant. The evidence is Sufficient because it points directly to the missing parameter and explains why it matters. However, since the measured response time (1 ms) is orders of magnitude faster than the required frequency (1 Hz), a skeptical expert might argue that even a large drop in speed wouldn't affect the application, making the issue only Marginally Significant. Thus, I predict disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the non-diode behavior in the ultraflexible device is attributed to ZnO roughness, but asks for a comparison with the glass device to isolate this variable. This is Correct, as the paper only provides AFM images for the flexible substrate. Providing this control would strengthen the authors' claims about the failure mechanism, making it Significant. The evidence is Sufficient as it references the specific claim and figure. A skeptical expert might argue that the provided AFM comparing bare ITO and ZnO is already enough to support the claim, making the additional control merely a 'nice-to-have' (Marginally Significant). Thus, I predict experts would disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that connecting solar cells to LEDs without regulation creates variable drive current, making the bio-signal unreliable, and asks for this to be stated in the manuscript and caption. The physics concern is Correct. However, the manuscript already explicitly acknowledges the need for an active voltage regulator and auxiliary battery for stable output. Because the paper already discusses this limitation in the text, an uncharitable expert would say the reviewer missed it and mark the item incorrect. A charitable expert would argue the reviewer's core point is valid and they just want it emphasized in the figure caption. This ambiguity leads to a prediction of disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly points out a massive discrepancy between the paper's claim of enabling 'long-term stable monitoring' and the actual demonstration of only 7 seconds of PPG measurement. This is factually Correct. It is Significant because claiming long-term monitoring is a core contribution that is unsupported by the experimental timeframe. The evidence is Sufficient, with explicit quotes contrasting the claims against the 7-second reality. No plausible counter-argument exists that 7 seconds equates to long-term monitoring in the context of wearable health devices, so experts would uniformly agree on these judgments.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the paper claims a 'more than three times' lifetime improvement compared to a cited 4-hour lifetime from reference [28], but reference [28] actually reports T50 lifetimes of 2 hours and 29 hours, not 4 hours. This is factually Correct. It is Significant because it invalidates a quantitative comparison that supports a core claim of the paper. The evidence is Sufficient, clearly quoting both the paper and the original reference to expose the discrepancy. Experts would readily verify this miscitation and agree on its significance and sufficiency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly observes that while the paper acknowledges 'large noise' and 'poor signal quality' in the ultraflexible PPG sensor, it provides no quantitative metrics like signal-to-noise ratio (SNR) to characterize it. This is Correct. It is Significant because without quantitative metrics, the practical utility of the sensor cannot be evaluated against any standard. The evidence is Sufficient, pointing directly to the paper's qualitative admissions of noise. Experts would agree that quantifying noise in a biosensor is essential, leading to consensus on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the absence of error bars, statistical analysis, sample sizes, and device-to-device variation for the reported performance data (e.g., lifetimes and efficiencies). This is Correct. It is Significant because organic device fabrication suffers from high variability, and single-device data undermines reproducibility. The evidence is Sufficient, identifying specific figures and claims lacking statistics. While some might argue proof-of-concept papers often show champion devices, the claims of 'reliability' make statistics vital here, so experts would likely agree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that the self-powered system was only demonstrated under 1-sun simulated sunlight, while indoor operation was merely calculated rather than experimentally verified. This is Correct. It is Significant because the practical relevance of a wearable self-powered biosensor heavily depends on ambient/indoor light operation, not just bright outdoor conditions. The evidence is Sufficient, quoting the relevant text showing it was calculated ('should work'). Experts would agree that relying purely on calculation for a core operational mode is a major limitation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the device was tested for 50 cycles at a 5 mm bending radius, which falls far short of established standards for 'ultraflexible' electronics (e.g., 1000 cycles at 100 µm in cited literature). This is Correct. It is Significant because claiming 'ultraflexible' implies a level of durability that the minimal testing does not support. The evidence is Sufficient, comparing the paper's specific testing parameters against state-of-the-art benchmarks. Experts would agree that the testing is inadequate for the terminology used.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly identifies that the device only operates under illumination and turns off in the dark, contradicting the claim of 'continuous bio-signal detection' since the battery is not integrated into the main demonstration. This is Correct. It is Significant because a 'continuous' monitor must function continuously, and ignoring the dark-operation gap misrepresents the system's capabilities. The evidence is Sufficient, quoting the paper's own admission. Experts would agree this is a major disconnect between claim and evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that indoor light operation is only claimed based on calculations ('should work') and not experimentally verified, despite the main demonstration requiring high-intensity simulated sunlight. This is Correct. It is Significant because indoor operation is a critical requirement for a practical wearable sensor, and theoretical calculations do not prove system-level viability. The evidence is Sufficient, highlighting the large gap between tested intensity and actual indoor lux. Experts would agree on the importance of experimental validation for this claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the paper admits to 'large noise' and 'poor signal quality' in the ultraflexible sensor but fails to quantify this with SNR or compare it to a reference. This is Correct. It is Significant because high noise fundamentally threatens the reliability of the bio-signal detection application. The evidence is Sufficient, quoting the paper's own admissions. Experts would unanimously agree that qualitative admission of poor signal is not enough and quantitative analysis is required.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies a glaring contradiction: the abstract claims improved stability 'without external encapsulation' and 'no passivation', but the Figure 2f caption and methods explicitly state the ultraflexible PLED used 'parylene encapsulation'. This is factually Correct. It is Significant because ambient air stability without encapsulation is the paper's central breakthrough claim; if parylene was used, the claim is false. The evidence is Sufficient, directly juxtaposing the contradictory quotes. Experts would agree this is a critical flaw requiring resolution.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer observes that the 'self-powered' and 'continuous monitoring' claims rely on an external solar simulator and benchtop oscilloscope, which fails to demonstrate autonomous operation in real conditions. This is Correct. It is Significant because a system cannot practically be called a self-powered wearable if it requires tethered laboratory infrastructure for illumination and readout. The evidence is Sufficient, citing the specific setup details. Experts would agree that system-level claims demand system-level demonstrations.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that lifetime metrics are used inconsistently (e.g., T70 vs half-luminance) and lack critical contextual parameters like initial luminance for the main ambient-air test. This is Correct. It is Significant because operational lifetime is highly dependent on initial luminance, and omitting it makes the stability claims uninterpretable and incomparable to prior work. The evidence is Sufficient, clearly quoting the ambiguous reporting. Experts would agree that rigorous metric definition is essential for stability claims.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that the 7-second PPG demonstration lacks validation against a reference standard (like an ECG) and provides no quantitative accuracy metrics. This is Correct. It is Significant because a 7-second trace without reference comparison cannot support claims of accurate, continuous bio-signal monitoring. The evidence is Sufficient, pointing out the single 77 bpm value and short duration. Experts would agree that proper validation is required to claim functional biosensing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that the paper relies on the boilerplate 'data available upon reasonable request' instead of providing direct access to raw traces, arguing this compromises reproducibility. This is Correct. While the reviewer claims this is a major flaw, many experts accept 'upon reasonable request' as standard practice and not inherently grounds for rejection, making its significance highly debatable. A strict open-science advocate would call it Significant, while traditional experts would call it Marginally Significant. Thus, I predict disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "paper_id": 12,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Figure 2 does omit EVPA vectors, so asking for clearer EVPA presentation is a real concern. The paper partly addresses this in the supplement, where it reconstructs uncalibrated EVPA and explains the missing absolute calibration. A skeptical expert could therefore say the issue is already addressed outside the main figure. I judge the item Correct and Significant with Sufficient evidence, but predict disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Not Correct because the paper already discusses alternative interpretations, including helical motion, restarted activity, and instability scenarios. It also explicitly says alternative scenarios cannot be fully ruled out. A charitable expert could still want the specific two-standing-shock idea discussed, but that is not the main claim here. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Correct because the Methods use J2-based kinematics when estimating conditions at J1, without making assumptions like small deflection or little deceleration very explicit. That weakens how transparent the shock and ISM calculations are. A skeptical expert could say these assumptions are standard and implicit, but the paper does not state them clearly where the estimates are made. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Not Correct because the supplied paper does not use the Birzan monochromatic relation the reviewer criticizes. Instead, it uses the Foschini radio-luminosity relations in the jet and ISM properties section. A charitable reading is that the reviewer saw another draft, but against the provided paper the factual premise fails. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is Not Correct because it refers to a different paper about bent jets in a cluster environment, not to the supplied blazar paper. None of the BCG, magnetic-arch, or double-scythe details appear here. A charitable explanation is that text from another review was inserted by mistake. Since the criticism is inapplicable to this paper, I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This is Not Correct because it again discusses a different paper involving a second eastern radio source and jet bending in a cluster. The supplied manuscript is about J0906+6930 and contains none of those objects or claims. A charitable reading is that this item was copied from another review, but that does not make it applicable here. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This is Correct in substance because the paper cites Zhang et al. 2017 for the radio SED peak, while Romani 2006 is plausibly the earlier primary source for that result. Fixing the attribution would improve the references, but it would not change the paper's scientific story. A skeptical expert could say the later citation is still acceptable, so the importance is modest. I therefore judge it Marginally Significant with Sufficient evidence and predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is Not Correct because the bibliography already lists the Coppejans paper as 2016, not 2017. The claimed citation-year error is therefore not present in the supplied source. A charitable defense is that another draft may have contained the mistake, but the current paper does not. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is Correct because it summarizes two real concerns: the EVPA treatment is not prominent in the main presentation, and the energetics argument is not as clear as it could be. Addressing those points would improve evaluation of the main claims. A skeptical expert could say the item mostly recaps earlier comments and gives limited fresh support on its own. I therefore judge it Significant but borderline on evidence, and predict correct_significant_disagree_on_evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Correct on the main point because J1's motion is only marginal, and the paper would be stronger if it framed that result more cautiously. However, the item is partly wrong in saying the confidence level is not given, since the paper states 1 sigma errors. One expert could focus on that factual slip while another focuses on the valid concern about significance and upper-limit style interpretation. I therefore label it Correct and Significant with Sufficient evidence, but predict disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is a borderline item. The reviewer is right that the positional-error model matters for the kinematic claims, but the paper does give a concrete justification based on beam and SNR statistics plus a systematic core-reference term from alternative core fits. A skeptical expert may therefore say the requested justification is already present, while a stricter expert may still find it too thin. I judge the concern Correct and Significant with Sufficient evidence, but predict disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Correct because several derived inferences, especially the environmental and jet-power ones, are not accompanied by a full uncertainty propagation. Fixing that would materially improve the paper's quantitative credibility. The prosecution case is that the comment is broad and the paper does propagate some errors for fitted quantities, so the criticism is not tightly targeted. I therefore judge it Significant but under-supported at the item level, and predict correct_significant_insufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Not Correct because the paper does not report the bulk Lorentz factor as only an upper limit greater than 3.3. It gives Gamma = 3.6 +/- 0.5 from delta and beta_app. A charitable reading is that low Gamma alone would not prove a weak jet, but the paper does not rely on Gamma alone anyway. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is Not Correct because the supplied paper does not infer jet power by extrapolating J1 or J2 from 15 GHz to 1.4 GHz with alpha = 0. Instead, it uses the 15 GHz core radio power together with Foschini relations. The reviewer's spectral-extrapolation concern would be reasonable in another setup, but it does not match this paper's actual calculation. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This is Not Correct because the paper does not use a Birzan-style L_jet to P_1.4GHz relation as the basis of the reported jet power. It instead uses Foschini relations and already notes the large scatter in those empirical scalings. A charitable reading is that the reviewer may be reacting to another manuscript version, but the criticism does not fit the provided source. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This is Not Correct because the paper reports density contrast > 9 and n_e >= 26.6 cm^-3 as limits, not the reviewer's quoted values around 65 cm^-3 and > 11. The complaint about over-precision therefore does not line up with the current text. A charitable expert might still want more caution around the limits, but the main factual premise is wrong. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is Not Correct because the paper already credits the earlier work when discussing the sharp jet bending, explicitly citing the prior high-resolution image. The claimed omission is therefore not present. A charitable reading is that the reviewer wanted even stronger acknowledgement, but the main criticism does not hold. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is Not Correct because I do not find the quoted statement about prominent X-ray emission with a strong disk contribution in the supplied paper. The paper discusses prominent disk emission from SED modeling, which is a different claim. A charitable reading is that the reviewer paraphrased another version or conflated disk and X-ray language, but against the provided text the criticism misses its target. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This is Correct because Figure 2 says its Stokes I contours are the same as Figure 1e, yet the Methods also say the polarization image was restored with a higher-resolution beam. That makes a contour mismatch plausible and potentially confusing in a key figure. A skeptical expert could still treat this as a minor display nit rather than a substantive issue. I therefore judge it Correct with Sufficient evidence and predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This is Not Correct because the current paper does not appear to base the Appendix H calculation on a J1 + J2 average flux of 21 mJy. It uses the 15 GHz core radio power, so the reviewer's numerical mismatch does not target the actual calculation in the supplied source. A charitable reading is that another draft may have used a J1 + J2 estimate, but that is not what this paper shows. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "This is Correct because the maximum-proper-motion section visibly contains equation-numbering and cross-reference problems, including duplicated numbering. Fixing that would improve readability, but it is a presentation issue rather than a challenge to the core results. A prosecution-style objection is that OCR may have introduced some noise, yet the section still plainly contains a reference mistake. I therefore judge it Marginally Significant with Sufficient evidence and predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Not Correct because the paper already mentions the z = 5.72 source TGSS J1530+1049 and cites Saxena et al. 2018 in discussing alternative young-radio-galaxy interpretations. The request to mention that object is therefore already satisfied. A charitable reading is that the reviewer wanted a longer discussion, but the main omission claim does not hold. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Not Correct because the introduction already says high-redshift blazars are useful probes owing to their Doppler-beamed brightness, and then adds that jet power scaling with black-hole mass makes them informative about black-hole evolution. That is not an inverted line of reasoning in any clear factual sense. A charitable expert could prefer the reviewer's wording as clearer exposition, but that is a stylistic preference rather than a verified defect. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Not Correct because the paper does not invoke a radio-loudness parameter at the cited point. It discusses radio-loud quasars and blazars as source classes. The criticism therefore targets terminology that is not actually being used as a scientific parameter in the text. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Not Correct because the paper already computes a variability-based Doppler factor from the OVRO 15 GHz light curve in the Doppler boosting section. The suggested addition is therefore already present. A charitable reading is that the reviewer prefers using Liodakis et al.'s value instead, but the omission claim itself does not hold. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is Not Correct because the supplied paper does not estimate jet power using Birzan cavity-power relations applied to a 15 GHz component. It already uses Foschini's 15 GHz radio-luminosity relations. A charitable defense is that this may refer to an earlier draft, but it is not factually correct against the provided paper. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This is Not Correct because the paper already revises the black-hole mass downward using a Doppler-beaming-corrected jetted-quasar scaling based on Pian et al. and obtains about 4.4 x 10^7 solar masses. That is the very recalculation the reviewer asks for. A charitable expert might still want Ly alpha specific refinements, but the main claim that the paper fails to revisit the mass is false. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Correct because the paper explicitly says absolute EVPA calibration was not performed, yet still invokes consistency with a shock-compressed magnetic-field model. Without an absolute EVPA reference, that physical interpretation is not well supported. A prosecution-style response would be that the vectors are only being described as orderly, not used for a precise field-angle measurement, but the paper still crosses the methodological boundary it states. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the paper presents two materially different Doppler-factor estimates, then uses only the brightness-temperature value for Gamma and theta without folding the alternative estimate into the uncertainty discussion. Addressing that would make the quantitative jet-parameter inference more robust. A skeptical expert could note that the paper does call the values consistent but marginally lower, yet that does not resolve the downstream dependence on the chosen delta. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Correct because J1's reported motion is only about 1.5 sigma from zero, so treating its negative sign as supportive evidence for a specific jet-ISM scenario is weak. The paper would be stronger if it emphasized stationarity or an upper-limit style interpretation instead. A prosecution-style response is that the paper says consistent with rather than demonstrates, but the reviewer is still right that the evidence is thin for that mechanistic inference. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Correct because the ISM-density estimate depends on empirical jet-power relations with very large acknowledged scatter, and the paper does not propagate that uncertainty into the quoted environmental constraint. That materially weakens how strongly the dense-medium conclusion can be stated. A skeptical expert could say the estimate is only intended as order-of-magnitude support, but the paper presents it as a meaningful lower limit in support of its preferred scenario. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Correct because Supplementary Table 5 defines mu(R) as the square root of squared component motions, which cannot be negative, yet J1 is reported with a negative mu(R). That is a real internal inconsistency in a key kinematics table. A prosecution-style reply is that the authors may have intended a signed radial-separation rate rather than the vector norm, but that is not what the footnote says. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the paper explicitly acknowledges missing absolute EVPA calibration but still uses the EVPA pattern as support for a shock-compressed magnetic-field interpretation. Without an absolute angle reference, that geometric interpretation is not secure. A skeptical expert could argue the paper is only offering a weak qualitative consistency statement, yet the reviewer is right that the calibration limits what can be inferred. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Correct in substance because J1's motion is only a marginal non-detection and the paper does use lower proper motion as part of its less-powerful and nascent-jet story. However, the item overstates the point when it suggests the Lorentz factor itself is derived from J1's non-detection, since the paper's Gamma estimate comes from J2-based beta_app plus delta. One expert could focus on that overstatement while another focuses on the valid overinterpretation concern. I therefore label it Correct and Significant with Sufficient evidence, but predict disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Correct because the feedback-transition claim is a large interpretive step from a single object's weak-jet evidence, and the paper itself acknowledges that alternative scenarios cannot be fully ruled out. Asking for more restraint or clearer framing would improve the paper's main narrative. A skeptical expert could say the paper already uses tentative language such as indicate and possible transition, so the complaint may partly be about tone rather than fact. I therefore label it Correct and Significant with Sufficient evidence, but predict disagreement on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Correct because the paper gives incompatible jet-to-Eddington ratios across the main text and Methods, and the arithmetic from the stated numbers does not reconcile transparently with either about 0.004 or about 0.02. Since jet weakness is central to the paper's interpretation, this inconsistency matters. A prosecution-style response is that the authors may have meant different beaming-corrected definitions of jet power, but the paper does not explain them clearly enough for a reader to verify that. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the kinematic interpretation rests on sparse multi-epoch component fits, J1 is only marginally non-stationary, and the paper itself admits the core is blended and model-dependent. Those factors make the sign and magnitude of the inferred motions less robust than the narrative suggests. A skeptical expert could note that the paper includes a systematic core-position term, but that does not remove the broader reference-point vulnerability across very different epochs. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Correct because the dense-medium inference is built from a simplified momentum-balance model with several poorly constrained inputs, and the paper does not show how uncertainty in jet power, beta, theta, or interaction geometry affects n_e. That limitation directly weakens one of the paper's main physical conclusions. A prosecution-style reply is that the calculation is intended as a rough plausibility argument, but the paper presents the resulting lower limit as stronger support than the uncertainty analysis warrants. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Correct because the paper explicitly says absolute EVPA calibration was not attempted, then immediately uses the EVPA pattern as support for a shock-compressed magnetic-field interpretation. That is a real methodological overreach for polarimetry. A skeptical expert could say the authors only claim qualitative consistency, but even that qualitative physical use of uncalibrated EVPA is not well supported. I therefore judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "paper_id": 50,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer requests mechanical durability tests, specifically for soldered chip/Cu interconnect regions under strain and after cyclic stretching. The paper presents mechanical tests of the patch (Fig. 3h force hysteresis to 30%, Fig. 3j max principal strain, Figs. S17-S18 stress-strain curves) but does not report cyclic stretching fatigue nor soldering-region-specific strain analysis, so the broader concern is valid. Devil's advocate: a skeptic might argue FEA (Fig. 1e, Fig. 3j) and hysteresis data partially cover durability, so experts could disagree on whether the issue is truly missing or just underemphasized. Still, the criticism about missing cyclic stretching data is substantively correct. The issue is significant because robustness under long-term cyclic use is central to the device's claim. Evidence is brief but precise (names soldering region and cyclic testing specifically), which some experts would accept as Sufficient while stricter experts would want a citation. Prediction: correct, significant, borderline evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for analysis of the hydrogel/metal electrode interface. The paper characterizes hydrogel/skin interface (Fig. 2f SEM on skin replica) and hydrogel bulk properties but does not present hydrogel-metal interface analysis. This is a real gap. Devil's advocate: a skeptic could argue the conductivity/impedance measurements implicitly characterize the interface. However, morphology/adhesion at the hydrogel-Cu junction is a distinct concern and affects long-term reliability. The criticism is significant — for a zwitterionic hydrogel on copper, the interface affects oxidation, contact resistance, and durability. Evidence is brief but specifies the exact missing content. This is a standard and verifiable absence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks whether the system can classify simultaneous motions (e.g., talking while walking, drinking while coughing). The paper actually addresses this partially: it mentions testing on 'three performing states to simulate movement artifacts from choking, chewing, and nodding' and 'motion artifacts (e.g., from drinking while coughing) were also accounted for'. So the paper does include some simultaneous-motion handling, but doesn't explicitly demonstrate separation/classification of truly concurrent distinct activities (e.g., talking + walking simultaneously). Devil's advocate for correctness: the paper addresses this, so the claim of missing demonstration is arguably wrong. But a charitable read says the paper only treats concurrent motions as 'artifacts' rather than as independently recovered signals. Experts would plausibly disagree on whether the reviewer's concern is already addressed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks how the VIA hole in Fig. S13 (LTCC antenna) was fabricated. I cannot access supplementary figures directly, but VIA fabrication for LTCC antennas is a real methodological detail that the paper's Methods section does not describe. This is a specific, substantive methodological question relevant to reproducibility. Devil's advocate: some experts may consider VIA fabrication as standard LTCC manufacturing not needing description, making it Marginally Significant. But for a reader trying to reproduce the antenna, this matters. Evidence is minimal — a single sentence pointing to a specific figure.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer states that the fabrication process shows the open pad of the electrode directed away from the skin (Fig. S14) and questions the device orientation. Without supplementary access, I can't verify this exact claim, but this is a specific, checkable observation tied to a specific figure. If correct, it's an important observation about the device setup. Devil's advocate: the observation may reflect a fabrication step rather than final orientation, or the reviewer might have misread the figure — experts could disagree on whether this is an actual error. Significance is moderate: if true, it indicates a fundamental issue; if the reviewer misread, it's nothing. Evidence consists of a specific figure reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks for explicit comparison (e.g., improved accuracy) with prior ML-based human activity/speech recognition work to highlight the advantage of dual sEMG+accelerometer integration. Paper includes Table 2 comparing laryngeal sensors but does not provide head-to-head accuracy comparisons with prior ML studies showing the dual-data advantage. Correct and significant — a comparison table/ablation would genuinely strengthen the contribution claim. Devil's advocate: the paper argues the advantage conceptually via frequency decoupling and has Table 2; a skeptic could say comparison is present. However, missing the actual ablation (accel-only vs sEMG-only vs combined) is a real gap. Evidence is specific (requests a comparison against prior studies).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues that the multi-disciplinary contributions are not clearly stated: the ML is a standard module without task-specific improvements, the circuits use standard chips, and the battery requires external wiring reducing compactness. These observations are largely correct — the ML is a standard CNN (2D-SFE described as conventional convolution+pooling), circuits use standard chips (atmega328p, ADXL345, BMD101 from Methods), and the device requires an external battery (Fig. S14 referenced in text). Devil's advocate: paper does claim innovations in hydrogel formulation and integration. So a charitable expert might see the claim 'no specific improvements' as overstatement. The battery/compactness point is real but debatable in significance. The criticism spans multiple issues, and its framing could be called too broad. Significance is genuine (asks to clarify contributions), though evidence is somewhat generic (cites only one external paper).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer criticizes that conclusions about clinical applications are limited by small testing sample size. This is a correct and widely-echoed concern — only 5 training + 2 test subjects, all healthy. Devil's advocate: paper frames itself as 'proof-of-concept', so perhaps sample size is acceptable for early work. But the reviewer's point about clinical inference from small n is standard and valid. Significant. Evidence is brief but the absence (clinical-scale validation) is easily verifiable from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the data analysis is limited due to sample size, activities are 'devised' (chosen) making classification easy, and rehabilitation requires tracking improvement over time. Correct — the paper does use pre-chosen labeled activities without patient progression tracking. Significant — tracking improvement is central to rehabilitation evaluation, a claim the paper makes. Devil's advocate: paper is proof-of-concept, not a longitudinal study. But the paper claims rehabilitation monitoring so this critique is apt. Evidence is qualitative but specific (points at the activity design and task simplicity).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer marks reproducibility as poor due to data size limitations. The main point is that sample size is too small and details are insufficient. This is correct and significant but the item is extremely short and generic. Devil's advocate: 'data size' isn't really a reproducibility issue in the technical sense (reproducibility = repeating the experiment with given methods), so this may be mis-framing. A charitable read: sample too small to generalize. Evidence is entirely absent.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer flags multiple domain terminology issues: 'genetic choking' is unclear, swallowing disorders are not only from cancer/surgery, 'post-surgical rehabilitation' section title is too narrow, and drinking water vs swallowing is confusing. These are all legitimate domain-expertise observations. The paper does use 'genetic choking' in the intro which is non-standard terminology. Correct — these terminological issues exist in the paper. Significant for clarity and accuracy, though they are presentation-level. Devil's advocate: some may consider these stylistic rather than substantive. But accuracy of medical terminology in a clinical-application paper is important. Evidence is specific (page/line references).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer states that 'suprasternal notch' is a specific anatomic location (above sternum) and that the sensor was not placed there. The paper does use the phrasing 'suprasternal throat' (abstract) and references the 'suprasternal notch' in the intro for ref 37. Looking at Fig. 1b (device on laryngeal skin), the device appears placed on the neck/larynx, not the sternal notch. This is a specific domain-anatomical correction and appears correct. Significant — misuse of anatomic terms affects clinical interpretation. Devil's advocate: the paper shifts between 'laryngeal skin' and 'suprasternal' terminology and may simply be using broader language. Experts could disagree on severity.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer recommends reviewing citations 22 and 24 as they are mischaracterized as suffering from low signal quality, motion artifacts, poor integration, and severe skin inflammation. Without direct access to cited papers, I can't independently verify each claim, but this is a specific, actionable critique from a domain expert. Devil's advocate: the paper's generalization may be partially justified for some older sEMG flexible sensors even if not for those specific refs. Significance: fair — misrepresenting cited work weakens the motivation. Evidence is specific (cites which refs).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer raises a major concern: the suprasternal/laryngeal location is not ideal for swallowing detection because larynx moves due to non-swallowing motions (e.g., chewing), and the established ideal location is the suprahyoid area. Recommends VFSS validation. This is a strong domain-expertise critique. Correct — larynx motion during non-swallow activities is a well-established issue in swallowing research. Highly significant — it challenges the validity of swallow detection. Evidence is domain-based (references intramuscular electrodes, surface electrodes, VFSS gold standard) — specific enough that a meta-reviewer could look it up.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that claims about post-surgical evaluation are made based on data from only healthy subjects without post-surgical ones. Paper does make such claims (page 10 line 233 referenced) and only tested healthy volunteers. Correct and significant. Devil's advocate: paper is proof-of-concept. But the claim extrapolates from healthy to post-surgical without justification, which is a real validity gap. Evidence is specific (points to page/line of claim and absence of patient data).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks how 8 rehabilitative levels were determined, noting no known 8-level severity ratings for swallowing/speech. The paper mentions 'pathological degree was sorted into eight levels (from the best state I to the worst state VIII) according to the rehabilitative conditions of three processes' but does not provide evidence-based justification or criteria. Correct — the paper doesn't establish clinical validity of its 8-level scheme. Significant — if this is to be a clinical tool, the severity scale needs grounding. Evidence is specific (cites exact page/line).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the title's 'in-sensor adaptive machine learning' contradicts the paper's cloud-based implementation. I can't see the paper title in preprint.md, but the reviewer quotes it consistently. The paper clearly uses cloud-based processing ('cloud analysis', 'processed on a cloud server', 'Ali-cloud'), not local in-sensor computing. Reference [72] (Moin et al.) is explicitly cited as demonstrating true in-sensor learning, so there's a mismatch. Correct. Devil's advocate: if the title actually uses 'adaptive' loosely (just meaning 'robust to new subjects'), the mismatch is semantic. But 'in-sensor' is a technical term with clear meaning. Significant — this is a fundamental mischaracterization of the system. Evidence is extensive with multiple quotes and reference to literature standard.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that clinical claims are made but validation was done only on healthy volunteers (n=7). This directly matches the paper's Methods (5 train + 2 test, all healthy). Correct and significant. Devil's advocate: paper is proof-of-concept and could be read as establishing feasibility not clinical validity. But claims like 'treatment evaluation of various diseases' overstate what healthy-subject validation can support. Evidence cites specific passages from abstract and results plus a systematic review on dysphagia screening standards.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes the reported HR of 19.2 bpm is physiologically impossible and likely swapped with RR of 50.4. This is correct — 19.2 bpm is far below normal resting HR even for severe bradycardia, while 50.4 breaths/min is too high for a normal RR (normal adult RR is 12-20/min). Based on the paper text 'the HR and RR of 19.2 and 50.4 times per minute', it's clear these values are swapped (typical normal HR~60-100, normal RR~12-20). Correct and significant — this is a factual error that undermines trust in the measurements. Evidence is precise and quantitative.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the simple 5/2 train-test split without leave-one-subject-out cross-validation is methodologically weak, and that random slicing of time-series can cause data leakage. The paper's Methods confirm: 'Continuous measurements from five participants were used as the training data and the measurements from another two volunteers... were used as testing data' and 'Randomly dividing each 2D data... into 100 sequences'. Correct and significant. Devil's advocate: for 7 subjects total, LOSO is feasible but not always strictly required. However, the critique is valid. Evidence includes direct quotes and references to methodological standards.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that the code imports modules (action_model, losses, read_action_data_10, plot_function) that are not provided, and the num_classes=10 + class_names_dict of 10 classes conflicts with the paper's 13-class claim. I verified this directly in action_training.py — the imports are indeed missing, num_classes=10, and the class dictionary has 10 entries (pinyin + vowels + hēshuĭ only). Correct and significant — this is a clear reproducibility failure. Evidence is precise with direct code quotes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Same core claim as claude-opus-4-5 Item 1: title claims in-sensor ML but implementation is cloud-based. Paper text confirms cloud-based processing throughout. Correct and significant. Evidence includes title quote, cloud-server quote, code showing PyTorch/CUDA usage (not on-device), and reference to Moin et al. [72] for what in-sensor actually means. Thorough and verifiable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the 800 Hz sampling claim contradicts the Arduino code which has delay(500) giving ~2 Hz, and 9600 baud further limits rate to <100 Hz. I verified: sketch_may06a.ino has 'delay(500)' in the loop and 'Serial.begin(9600)'. So the Arduino sketch provided does show ~2 Hz sampling. However, the Arduino sketch may be a demonstration/prototype, not the actual firmware used for data collection (the real device uses Atmega328p + BMD101 biological signal chip). Correct that the provided code contradicts the claim. Significant — this is a reproducibility concern. Devil's advocate: the Arduino sketch may not be the actual production firmware. Evidence is specific code lines.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the manuscript is missing the Methods section. This is FACTUALLY INCORRECT — the preprint.md does have a substantive Methods section (lines ~53-91) covering fabrication, circuit design, FEA, characterizations, ML algorithms, APP development, and human subject experiments. The reviewer's quote 'Methods header followed immediately by references' is wrong. The code-incomplete part is correct (I verified the imports are missing), but the main leading claim about Methods being missing is wrong. Devil's advocate: the reviewer may have had an OCR issue showing an empty Methods section in their version of the file. A charitable reading focuses on the code incompleteness part. This is borderline — experts may disagree on whether to count the Methods-missing claim as fatal to the item's correctness or just a side error.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the model is called 'adaptive' but the code shows standard supervised training with no online adaptation/transfer learning. Verified: action_training.py has a standard net.train()+optimizer.step() loop on a fixed dataset — no online updating, meta-learning, or domain adaptation visible. Correct — the 'adaptive' claim in the paper is not backed by an adaptive mechanism in the code. Significant — a central claim of the paper. Devil's advocate: 'adapt' in the paper may loosely mean 'generalize to new subjects', which the fully-connected layer allows by default. But the paper also claims adaptation to 'motion artifacts' implying robustness mechanism. Experts could disagree slightly. Evidence is direct code inspection.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes the code's 10-class dict doesn't match the paper's 13-class setup, specifically missing swallowing and coughing. Verified by direct inspection of action_training.py. Correct and significant — raises doubts about whether the provided code produced the paper's results. Overlaps with claude-opus-4-5 Item 5 but is a focused standalone observation. Evidence is precise (quotes the dict).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues clinical claims (post-surgical rehabilitation evaluation, 8-level pathological degree) are unvalidated against standards like VFSS/FEES and no patient pathology ground truth is provided. Correct — the paper uses 'gold standard' for clinical evaluation but only references activity lists, and its 8-level scheme is not tied to any validated clinical scale. Significant — clinical framing is central to the paper's significance claim. Evidence includes direct quotes from paper and external references to VFSS as the actual dysphagia gold standard. Strong domain-based argument. Overlaps with Human_3 Item 4 and Item 6.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques small dataset (5/2 subjects), unclear splitting with potential leakage from random windowing, missing uncertainty estimates. All verified against the paper. Correct and significant. Evidence is extensive with direct quotes and relevant references. Overlaps with claude-opus-4-5 Item 4 but more thoroughly argued regarding uncertainty quantification. Devil's advocate: paper framed as proof-of-concept may not require CIs, but the magnitude of claimed accuracy (98.2%) warrants uncertainty reporting.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues code is not reproducible: missing dependencies, 10 classes instead of 13, 50 epochs instead of 100. All verified directly in action_training.py (num_classes=10, epoches=50, missing imports). Correct and significant — fundamental reproducibility failure. Evidence is direct code quotes. Overlaps heavily with claude-opus-4-5 Item 5 and gemini Items 3/5 but is well-constructed on its own.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the paper's sentence 'highest power spectral density and the lowest signal-to-noise ratio (SNR)' to argue better signal quality inverts standard SNR conventions (higher SNR = better). The paper text does say this, and conventionally lowest SNR is worst not best. Correct — this is a clear contradiction with standard SNR definitions. Significant — SNR is used to justify a key hardware claim, so the ambiguity/error undermines the evidence. Devil's advocate: perhaps they meant noise-to-signal ratio (inverted) or 'lowest' refers to specific noise metric in Fig. 3g; some experts may read 'lowest SNR' as a typo not worth emphasizing. Evidence is a direct quote plus standard-definition reference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

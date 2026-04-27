@@ -66,10 +66,14 @@ async def submit_paper(
         raise HTTPException(status_code=400, detail="Email is required for queue mode.")
 
     if mode == "byok":
+        if not email:
+            raise HTTPException(status_code=400, detail="Email is required for BYOK mode.")
         if not user_mistral_api_key:
             raise HTTPException(status_code=400, detail="Mistral API key is required for BYOK mode.")
         if not user_litellm_api_key:
             raise HTTPException(status_code=400, detail="LiteLLM API key is required for BYOK mode.")
+        if not user_litellm_base_url:
+            raise HTTPException(status_code=400, detail="LiteLLM Base URL is required for BYOK mode.")
 
     # Validate optional files (guard against empty UploadFile objects)
     has_code = False

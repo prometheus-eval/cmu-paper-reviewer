@@ -1,0 +1,190 @@
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [overall, axis], mode: axis)
+================================================================================
+N rows total: 905
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.881  (684/776)
+  significance   0.565  (323/572)
+  evidence       0.843  (614/728)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 445
+  accuracy: 0.557
+  macro F1: 0.286
+  weighted F1: 0.529
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.712      0.782      0.745        275
+  correct_significant_insufficient                   0.111      0.500      0.182          2
+  correct_marginal_sufficient                        0.293      0.297      0.295         74
+  correct_marginal_insufficient                      0.333      0.250      0.286          4
+  correct_not_significant                            0.000      0.000      0.000         55
+  incorrect                                          0.176      0.257      0.209         35
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [overall, tenclass], mode: tenclass)
+================================================================================
+N rows total: 905
+N scored: 905 (unscorable: 0)
+10-class accuracy: 0.291
+Macro F1:          0.141
+Weighted F1:       0.253
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.385      0.658      0.486        275
+  correct_significant_insufficient                   0.100      0.500      0.167          2
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000         20
+  correct_marginal_sufficient                        0.145      0.270      0.189         74
+  correct_marginal_insufficient                      0.100      0.250      0.143          4
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000         13
+  correct_not_significant                            0.000      0.000      0.000         55
+  correct_disagree_on_significance                   0.441      0.151      0.225        298
+  incorrect                                          0.095      0.229      0.134         35
+  disagree_on_correctness                            0.092      0.054      0.068        129
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [human_reviewers, axis], mode: axis)
+================================================================================
+N rows total: 545
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.869  (398/458)
+  significance   0.519  (181/349)
+  evidence       0.781  (335/429)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 246
+  accuracy: 0.520
+  macro F1: 0.311
+  weighted F1: 0.533
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.836      0.671      0.745        152
+  correct_significant_insufficient                   0.111      1.000      0.200          1
+  correct_marginal_sufficient                        0.286      0.465      0.354         43
+  correct_marginal_insufficient                      0.333      0.500      0.400          2
+  correct_not_significant                            0.000      0.000      0.000         38
+  incorrect                                          0.108      0.400      0.170         10
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [human_reviewers, tenclass], mode: tenclass)
+================================================================================
+N rows total: 545
+N scored: 545 (unscorable: 0)
+10-class accuracy: 0.261
+Macro F1:          0.143
+Weighted F1:       0.255
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.436      0.513      0.471        152
+  correct_significant_insufficient                   0.100      1.000      0.182          1
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000         16
+  correct_marginal_sufficient                        0.134      0.419      0.203         43
+  correct_marginal_insufficient                      0.100      0.500      0.167          2
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000         10
+  correct_not_significant                            0.000      0.000      0.000         38
+  correct_disagree_on_significance                   0.481      0.204      0.287        186
+  incorrect                                          0.042      0.300      0.074         10
+  disagree_on_correctness                            0.064      0.034      0.045         87
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [ai_reviewers, axis], mode: axis)
+================================================================================
+N rows total: 360
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.899  (286/318)
+  significance   0.637  (142/223)
+  evidence       0.933  (279/299)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 199
+  accuracy: 0.603
+  macro F1: 0.186
+  weighted F1: 0.511
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.628      0.919      0.746        123
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_marginal_sufficient                        0.400      0.065      0.111         31
+  correct_marginal_insufficient                      0.000      0.000      0.000          2
+  correct_not_significant                            0.000      0.000      0.000         17
+  incorrect                                          0.357      0.200      0.256         25
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [ai_reviewers, tenclass], mode: tenclass)
+================================================================================
+N rows total: 360
+N scored: 360 (unscorable: 0)
+10-class accuracy: 0.336
+Macro F1:          0.109
+Weighted F1:       0.244
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.354      0.837      0.498        123
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000          4
+  correct_marginal_sufficient                        0.500      0.065      0.114         31
+  correct_marginal_insufficient                      0.000      0.000      0.000          2
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000          3
+  correct_not_significant                            0.000      0.000      0.000         17
+  correct_disagree_on_significance                   0.304      0.062      0.104        112
+  incorrect                                          0.385      0.200      0.263         25
+  disagree_on_correctness                            0.138      0.095      0.113         42
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [self_review, axis], mode: axis)
+================================================================================
+N rows total: 109
+
+Per-axis LABEL accuracy (scored on rows with consensus GT):
+  correctness    0.884  (84/95)
+  significance   0.625  (45/72)
+  evidence       0.867  (78/90)
+
+Reduced 6-class accuracy (GT restricted to classes reachable by axis mode):
+  N scored: 62
+  accuracy: 0.629
+  macro F1: 0.230
+  weighted F1: 0.575
+
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.680      0.850      0.756         40
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_marginal_sufficient                        0.333      0.125      0.182          8
+  correct_marginal_insufficient                      0.000      0.000      0.000          1
+  correct_not_significant                            0.000      0.000      0.000          3
+  incorrect                                          0.444      0.444      0.444          9
+
+
+================================================================================
+META-REVIEWER EVALUATION  (predictor: litellm_proxy/gemini/gemini-3.1-pro-preview [self_review, tenclass], mode: tenclass)
+================================================================================
+N rows total: 109
+N scored: 109 (unscorable: 0)
+10-class accuracy: 0.394
+Macro F1:          0.164
+Weighted F1:       0.331
+
+Per-class precision / recall / F1 (on classes actually observed):
+  class                                          precision     recall         f1    support
+  correct_significant_sufficient                     0.397      0.775      0.525         40
+  correct_significant_insufficient                   0.000      0.000      0.000          1
+  correct_significant_disagree_on_evidence           0.000      0.000      0.000          4
+  correct_marginal_sufficient                        1.000      0.125      0.222          8
+  correct_marginal_insufficient                      0.000      0.000      0.000          1
+  correct_marginal_disagree_on_evidence              0.000      0.000      0.000          1
+  correct_not_significant                            0.000      0.000      0.000          3
+  correct_disagree_on_significance                   0.500      0.143      0.222         28
+  incorrect                                          0.444      0.444      0.444          9
+  disagree_on_correctness                            0.231      0.214      0.222         14

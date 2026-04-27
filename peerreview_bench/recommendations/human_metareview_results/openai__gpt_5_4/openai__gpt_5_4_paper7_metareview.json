@@ -1,0 +1,284 @@
+{
+  "paper_id": 7,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer is right that the earlier paper [20] already reported a more precise Lamb-shift determination, while this manuscript measures a different transition with worse raw precision. The paper does note the new isolated-transition strategy and the first 2S-HFS extraction, but the justification for why this lower-precision follow-up is important is only briefly developed, so the criticism is plausible but borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript reports an extracted Lamb shift but never explicitly defines it in terms of the relevant level centroids or explains that definition in the presence of hyperfine structure. Asking for an explicit definition of this central quantity is therefore valid and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper gives the measured transition frequency and then states the Lamb shift and 2S-HFS values, but it does not clearly spell out how the Lamb shift is derived from the measured line and what hyperfine inputs are assumed. That omission is real and important, although the reviewer goes beyond the paper in speculating exactly which theoretical values were subtracted.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Figure 1 shows nominal transition frequencies for the level diagram, including 583 MHz, while the measured result is 580.6(68) MHz. Those values are consistent within uncertainty and the figure is schematic rather than a report of the fitted measurement, so this is not a real inconsistency.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The abstract phrase quoted by the reviewer does juxtapose the established muon g-2 anomaly with Lorentz and CPT violation in a somewhat awkward way. That wording concern is valid, but it is mainly an issue of framing rather than substance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper is relatively short and several experimental and analysis details are indeed only lightly described, so asking for a fuller methodological account is a valid concern. However, the reviewer supports that claim mostly with overall brevity and venue expectations rather than concrete missing steps.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This work clearly follows the authors' earlier PRL Lamb-shift result, and the novelty here depends on the isolated-transition strategy plus the first 2S-HFS extraction. The manuscript does explain those points, but only briefly, so the criticism that the novelty may be unclear is understandable while still being debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The notation 1047.2(25) MHz and 559.6(72) MHz is standard shorthand for uncertainties of 2.5 MHz and 7.2 MHz, respectively. The reviewer's claim that the decimal point is misplaced is therefore factually wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is essentially a stylistic preference about where broad motivation should sit. The abstract can reasonably mention muon discovery and g-2, so the point is too minor to matter even if one shares the reviewer's preference.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The first part of the introduction is indeed a long historical preamble before the spectroscopy story begins, so compressing it is a fair presentation suggestion. Whether that would count as a substantive improvement or just a stylistic cleanup is genuinely debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The manuscript highlights the first 2S-HFS determination but does not really explain why 2S-HFS is especially interesting relative to the already precise 1S-HFS program. Requesting that motivation is valid and would strengthen the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The introduction says future precision could probe the Barker-Glover effect, but it does not explain why observing that contribution would be a meaningful bound-state QED test. Asking for that explanation is valid and important for understanding the paper's forward-looking claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Symbols such as F and m_F appear in the title, Figure 1, and the experimental discussion without explicit definition in the prose. That notation clarification is valid but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper gives the average microwave powers and says they were monitored for stability, but it does not explain how those powers were chosen or quantify field uniformity across the muonium beam path. Those are real methodological omissions on a potentially systematic issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The wording an electrical field of the order of 250 V cm^-1 is indeed awkward for a single approximate value. This is a valid but purely stylistic nit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The figure labels use Lya while the text uses Lyα, so the notation is inconsistent exactly as the reviewer says. This is easy to verify and minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "This item proposes using waveform or pulse-height information to distinguish region-A backgrounds, but the manuscript does not indicate that such information is available or that it would separate those events from signal. The suggestion is therefore speculative rather than clearly grounded in the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Figure 3 and the accompanying explanation of region C do leave some ambiguity about which detector is responsible for the after-ringing pattern. Asking for that clarification is reasonable, though it is a minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The paper only says that power meters continuously monitored the transmission-line output power, without specifying the measurement method or instrumentation. That missing detail is a valid reproducibility concern for a central experimental parameter.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The reviewer's premise is wrong: in this setup the effective field or coupled power inside the transmission line can vary with frequency, and the paper explicitly states that the average power is frequency-dependent. So the objection to using a frequency-dependent correction factor does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The fit introduces a global frequency offset parameter f_offset, but the manuscript does not explain its physical origin or whether it is folded into the systematic uncertainty budget. Raising that omission is valid and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The results table gives reduced chi-square values, but no degrees of freedom or associated probability. The reviewer is right that fit quality cannot be interpreted properly without that context.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "A reduced chi-square near 2 may indicate model inadequacy, but it can also arise from underestimated uncertainties or limited statistics, especially without the degrees of freedom. Treating that number by itself as evidence that the fitting function is incomplete is therefore plausible but not compelled.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The paper says the TL-off point is included in the fit but not plotted, yet it does not explain how that point is used in the line-shape model or background estimation. That is a valid and important fitting clarification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The paper itself notes that uncertainty could arise from assuming similar Lyα and Lyβ detection efficiencies, so the reviewer is right to flag this assumption. Its importance is less clear because it mainly affects the ancillary 3S-to-2S population estimate rather than the headline transition measurement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The conclusion compares the muonium program to hydrogen spectroscopy only briefly, so a request for more concrete takeaways from that comparison is fair. Still, this is mainly a framing improvement rather than a substantive gap.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The conclusion mentions possible n=3 spectroscopy in muonium but does not spell out what specifically new insight such experiments would add. Asking for that specificity is valid but future-oriented and minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The introduction cites the Fermilab experimental result for the 4.2-sigma muon g-2 discrepancy but does not cite the theory prediction being compared against, and the wording about what was confirmed is loose. Asking for a theory reference and clearer phrasing is therefore valid but mostly introductory polish.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Saying that muonium is free from finite-size effects because it lacks internal hadronic structure is standard shorthand in this context. The reviewer's terminological objection is arguable, but the paper's wording is not clearly wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript does use many abbreviations in quick succession, so the readability complaint is plausible. But the item gives no concrete examples, and the importance of this issue could easily be judged as either a minor stylistic matter or too trivial to keep.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does call the hyperfine-resolved 2S-to-2P lines hyperfine transitions, and some readers might find that terminology loose. But that usage is common enough in spectroscopy that the reviewer's assertion that it is simply wrong is not unequivocal.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The results section reports chi-square values of 6.7 and 2.0 without degrees of freedom or tail probabilities, so the reviewer is right that readers cannot judge whether the fit quality is acceptable. This is a substantive and well-supported statistical reporting concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paragraph below Figure 4 says the measurement agrees with the theoretical value but does not cite the relevant theory paper at that point, even though the citation appears elsewhere. Asking for an immediate reference is valid but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "paper_id": 19,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does infer the driving mechanism qualitatively in Section 3 rather than by explicitly modelling alternative drivers: Section 2.3-2.4 forward-models only different polarisation types, while the discussion then argues from the inferred horizontal/oblique linear polarisation to favour steady flows and uses a violin-string analogy (preprint.md lines 108-110). So the reviewer's main point that this argument is largely conjectural and not directly demonstrated by dedicated calculations is substantively fair. However, the reviewer slightly overstates the case because the paper does cite prior literature in this discussion, so correctness is somewhat borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism is supported by the paper's scope: the study analyses a single decayless oscillation event from one loop bundle and nevertheless discusses broader implications for excitation mechanisms and coronal heating (Abstract; Section 3). The reviewer is right that one case limits generalisation, and factors such as loop geometry could affect polarisation. Addressing this would improve the paper's claims and framing. The item also gives enough support because the one-event limitation is explicit from the paper itself.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies a key interpretive assumption. In Section 2.2 the observed unfiltered hodogram has an axis ratio of 0.27, while after narrow-band filtering it becomes 0.11 (preprint.md lines 74-79), and Section 2.4 then attributes the residual width to instrumental or other noise and uses that to prefer horizontal/oblique linear polarisation (lines 97-99). Since this assumption influences both the inferred polarisation and the later mechanism discussion, asking the authors to justify why the fluctuations should be treated as noise is an important and well-supported criticism. The review item supplies detailed section pointers and numerical comparisons, so the evidence is sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is a correct follow-on concern about the paper's second main conclusion. The discussion links a stable horizontal/oblique linear polarisation to the self-oscillatory steady-flow scenario and argues against random footpoint forcing (preprint.md lines 108-110). If the polarisation interpretation were more elliptical than the authors conclude, that mechanism inference would indeed become less secure. The reviewer names the relevant section and cites Afanashev et al. 2020 as a concrete alternative context, so the point is both significant and sufficiently evidenced.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The event studied throughout the paper is explicitly on 2022-04-01 (preprint.md lines 65-66), and the visible figure timestamps are also on 2022-04-01, so the reviewer's proposed correction for a supplementary-panel date is plausible and likely right. However, the supplementary movie itself is not available in the provided source tree, so the exact typo cannot be checked directly from the paper materials on disk. That makes correctness somewhat uncertain across meta-reviewers. If correct, it is only a minor presentation fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer is fairly pointing out that the sentence in the introduction ('the ubiquity of decayless kink oscillations makes them an important process for the coronal energy balance') is stronger than the nuanced state of the literature. The paper presents only the supportive citation [29] at that point, while the reviewer cites specific opposing or cautionary papers and asks for brief acknowledgement of that debate. This is a legitimate related-work/contextualisation criticism and is supported with an exact quotation and named references. Its importance is somewhat borderline: it improves framing and balance, though it does not directly undermine the paper's analysis.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is a valid related-work correction. The paper makes a novelty-style claim that there has been only one prior stereoscopic attempt to estimate the polarisation plane for a large-amplitude decaying event, and the reviewer points to Aschwanden & Schrijver (2011) as another relevant study that should at least be acknowledged or used to soften the wording. Because the reviewer gives the quoted sentence and a concrete bibliographic pointer, the evidence is sufficient. The main uncertainty is how important this omission is: it affects historical framing more than the technical results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper text says the synthetic slit is 'near the loop apex' (preprint.md line 89), but Figure 5/6 labeling makes clear that the representative HRIEUV slit corresponds to Leg 2 and the AIA slit to Leg 1, albeit both are near the apex region. So the reviewer is correct that a short clarification would reduce possible reader confusion when comparing the sentence with the figures. This is a minor presentation issue rather than a substantive scientific problem, and the reviewer supports it with exact section/line and figure references.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

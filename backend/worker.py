@@ -166,7 +166,11 @@ def process_submission(submission: Submission):
                         review_settings["paper_date"] = paper_date
                         logger.info("[%s] Extracted paper date: %s", key, paper_date)
                     else:
-                        logger.info("[%s] Could not determine paper date.", key)
+                        # Default to today for unpublished papers — all references
+                        # will be tagged [BEFORE] since nothing post-dates "now"
+                        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                        review_settings["paper_date"] = today
+                        logger.info("[%s] Could not determine paper date; defaulting to today (%s).", key, today)
             except Exception:
                 logger.exception("[%s] Paper date extraction failed (non-critical).", key)
 
@@ -273,9 +277,14 @@ def cleanup_old_submissions():
     """
     cutoff = datetime.now(timezone.utc) - CLEANUP_MAX_AGE
     with SessionLocal() as session:
+        # Only count annotations where at least one rating field is non-null
         annotated_keys = set(
             row[0] for row in session.execute(
-                select(Annotation.key).distinct()
+                select(Annotation.key).where(
+                    (Annotation.correctness.isnot(None)) |
+                    (Annotation.significance.isnot(None)) |
+                    (Annotation.evidence_quality.isnot(None))
+                ).distinct()
             ).all()
         )
 
@@ -302,6 +311,10 @@ def cleanup_old_submissions():
             logger.info("[%s] Cleaned up old submission (age > %s).", sub.key, CLEANUP_MAX_AGE)
 
         if to_delete_keys:
+            # Delete all-null annotation rows for these keys too
+            session.execute(
+                delete(Annotation).where(Annotation.key.in_(to_delete_keys))
+            )
             session.execute(
                 delete(Submission).where(Submission.key.in_(to_delete_keys))
             )

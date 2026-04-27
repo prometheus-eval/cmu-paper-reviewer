@@ -1,0 +1,363 @@
+{
+  "paper_id": 80,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the bias factors S_i and C_j only apply to non-zero elements, and the model assumes zero counts are accurate (or at least doesn't apply the factors to them). This accurately reflects the paper's model which log-transforms only non-zero abundances. Since zero-inflation is a major issue in microbiome data, this is a significant limitation. The evidence is sufficient as it directly references the model's components. An expert might try to argue that zero inflation is a separate issue, but the critique remains valid. Thus, experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer states it is unclear how hypothesis testing for p-values and thresholding are conducted. The paper mentions cross-validation for thresholding and simply introduces p-values without detailing the test statistic or distribution. This is factually correct. It is a significant reproducibility issue. The evidence is sufficient as it points to specific missing methodological details. Experts would agree on this.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks how sensitive the method is to the choice of pseudo-counts. However, the paper explicitly avoids pseudo-counts by conditioning the log-transformation on non-zero abundances (M_{ij} = 1). The reviewer's premise that pseudo-counts were used is factually incorrect. Experts would easily verify this from the text and agree that the criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks if there is a theoretical guarantee of FDR. The paper explicitly states that controlling type I error or FDR is not its primary purpose and it lacks such a guarantee. While the observation is factually true, the paper already acknowledged this. A charitable expert might view this as a valid call for such a guarantee, while a skeptical expert would say the paper explicitly disclaimed it, making the critique moot. Thus, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks if the model is consistent with a compositional model that only uses C_j. The paper's model includes S_i for sampling fraction, which naturally cancels out in relative abundances. The question asks for clarification on this relationship. It is a valid, though minor, point for discussion. It is marginally significant. The evidence is weak as it's just a brief question. Experts might disagree on whether this is significant enough to mention.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer notes that the extension to multiple ecosystems is not clearly described. Indeed, the Methods section lacks a formal description of the multi-ecosystem model, and the simulation simply applies the single-ecosystem methodology to pairs. This is factually correct. It is significant because the paper claims to handle multiple ecosystems. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer critiques Supplementary Figure 2, pointing out missing axis labels and potential overfitting in the LOESS curve due to a lack of data points in certain regions. Since the paper uses this figure to motivate the existence of nonlinear relationships, the visual evidence is important. This is a significant critique. The evidence is sufficient as it relies on visual inspection of the figure. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer suggests providing an intuitive interpretation of the mathematical assumptions. The paper currently lists them purely mathematically. This is a valid presentation suggestion that would improve readability, making it marginally significant. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer is confused about the definition of an ecosystem in the context of the study and asks for clarification. The paper uses the term broadly without a strict operational definition for the real data. This is a valid point regarding clarity. It is marginally significant as it relates to presentation. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests providing explicit examples early in the paper to clarify terminology. This is a reasonable presentation suggestion that would help readers. It is marginally significant. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that SparCC's r=0.3 cutoff is conceptually similar to SECOM's p-value filtering with alpha. The paper criticizes SparCC's arbitrary cutoff while proposing its own heuristic filtering. This is a highly accurate and significant critique of the paper's argument. The evidence is sufficient as it compares the two approaches directly. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that SparCC's 0.3 cutoff was primarily for drawing edges for clarity and that SparCC actually adapts correlation estimation to reinforce sparsity. The paper misrepresents SparCC by claiming the cutoff is its sole sparsity mechanism. This is factually correct and significant for a fair comparison. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer suggests focusing the Discussion on comparisons with SparCC and SPIEC-EASI rather than Pearson/Spearman, since the latter are known to fail on compositional data. This is a valid structural suggestion for the discussion. It is marginally significant. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out a contradiction between the text's adjacent taxon description and an equation that implies a dense block of correlations among the first 50 taxa. This ambiguity in the simulation ground truth is a major reproducibility issue. The reviewer's observation is correct and significant. The evidence is sufficient as it highlights the exact contradiction. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests examining the joint distribution of Pearson and Distance correlations in the simulations to better support claims about distinguishing linear from nonlinear relationships. This is a very constructive suggestion that would strengthen the paper's claims. It is significant and the evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer questions the realism of the signal to noise assumption, especially for microbiome data. Assumption 0.2 explicitly requires a small noise-to-signal ratio, which is often violated in noisy microbiome datasets. This is a valid and significant critique of the methodology's applicability. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer suggests reorganizing the grid in Figure 1 for easier scanning. This is a minor presentation improvement. It is factually a valid suggestion, marginally significant, and sufficiently justified. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer argues that the LOESS curve in Supplementary Figure 2 appears overfit and may not genuinely represent a strong nonlinear relationship. As this figure motivates the entire investigation into nonlinear dependencies, its validity is crucial. This is a significant critique with sufficient visual evidence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer asks for an example to contextualize the claim that existing methods are not scale invariant across multiple ecosystems. This request for clarification is valid and would improve the paper's clarity. It is marginally significant with sufficient evidence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer suggests moving the Pearson results in Figure 2 to the supplement because their poor performance obscures the comparisons among other methods. This is a reasonable presentation suggestion. It is marginally significant and sufficiently justified. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer points out a missing detail in the legend of Supplementary Figure 5 regarding distance correlation. Correcting this improves clarity. This is a minor presentation issue, marginally significant, and sufficiently evidenced. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that SECOM is not packaged as an easily installable tool, but merely available as code. This limits its widespread usability. This is factually correct. Software usability is significant for bioinformatics methods. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the real data application only uses SECOM and does not compare it with any baseline methods. This is factually correct. Comparing performance on real data is standard practice, making this a significant omission. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that the Norwegian infant data section is purely descriptive and does not prove the method's superiority without baselines. This follows from Item 2 and is correct. It is significant because it limits the strength of the paper's conclusions. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer highlights a terminology error: the authors call Spearman correlation linear when it actually measures monotonic relationships. This is a fundamental statistical distinction, and the paper's parabola example fails precisely due to non-monotonicity, not just non-linearity. This is factually correct, highly significant, and supported by sufficient evidence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims the paper does not demonstrate nonlinear relationships at all in real data. The paper relies on non-zero distance correlations as proof. A charitable expert might argue the paper provided empirical examples of non-zero distance correlation, while a skeptical expert would agree with the reviewer that this is insufficient to claim biological demonstration. Hence, experts would likely disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer notes that the multiple ecosystems setting is only used in simulations and is poorly motivated, unlike existing tools like FlashWeave. The lack of a real data application or strong biological motivation for this specific setting makes it a significant limitation. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out a disconnect: the theory relies on sub-Gaussian assumptions, but simulations use Negative-Binomial distributions, which are heavy-tailed. This is factually correct and a significant theoretical gap, as the convergence guarantees may not apply. The evidence is sufficient, quoting both the lemma and the simulation setup. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that comparing SECOM against SparCC and proportionality using arbitrary cutoffs puts the baselines at a disadvantage in estimation accuracy metrics. This is a valid and significant critique of the benchmarking methodology, as SECOM's threshold is tuned. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the real data analysis uses small sample sizes but reports point estimates without confidence intervals or standard errors. This is factually correct. Given the high dimensionality, uncertainty quantification is crucial, making this a significant omission. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer accurately observes that distance correlation detects any dependence, not specifically nonlinear functional relationships. The paper's labeling of these simply as nonlinear relationships can be misleading. This is a significant point about interpreting the results. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes that the simulation for nonlinear correlation only uses quadratic relationships, limiting the generalizability of SECOM's performance to other complex ecological interactions. This is factually correct and a significant limitation of the evaluation. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that absolute abundances cannot be recovered from compositional data without external references, and the paper's bias correction implies an unstated assumption. Claiming inferences on absolute abundances is mathematically problematic. This is factually correct, highly significant, and well-evidenced. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer highlights that the small noise-to-signal ratio assumption is unrealistic for noisy, overdispersed microbiome data, and its violation leads to attenuation bias. This correctly identifies a vulnerability in the method's assumptions. It is a significant critique with sufficient evidence. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer astutely observes that compositional data inherently possesses dependence, which distance correlation will detect as a signal. Therefore, using distance correlation on normalized data will likely yield false positives. This is a brilliant, factually correct, and highly significant statistical critique. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out that the paper does not specify how the variance used in the weights w_j is estimated, which is critical for reproducibility. This is factually correct, as the formula leaves it ambiguous. It is significant for reproducibility, and the evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer challenges the paper's novelty claim that there are no measures in the literature for nonlinear relationships, pointing out that mutual information and other metrics are already established in microbiome networks. This is factually correct. It is a significant issue as it undermines the framing of the paper's contribution. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer finds a discrepancy between the text stating adjacent taxon correlation and an equation in the Supplementary Notes that specifies a dense block of perfect correlations. This ambiguity in the simulation ground truth is factually correct and a significant reproducibility and validity issue. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer identifies internal inconsistencies in the optimization methodology: dropping constraints without justification and using an invalid cross-validation criterion. These are factually correct and significant statistical methodological flaws. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that the method simply centers the data to eliminate taxon-specific efficiencies, which is not the same as explicitly estimating them as claimed in the introduction. This does not allow for true absolute abundance recovery without calibration controls. This is factually correct, significant, and sufficiently evidenced. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes the use of p-value filtering for sparsity without controlling for multiple testing, while simultaneously claiming to avoid inflated false correlations. This is factually correct and a significant statistical oversight, given the O(d^2) tests. The evidence is sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

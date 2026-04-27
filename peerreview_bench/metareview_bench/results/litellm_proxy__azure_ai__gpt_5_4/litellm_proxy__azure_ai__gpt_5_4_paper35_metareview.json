@@ -1,0 +1,195 @@
+{
+  "paper_id": 35,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Not Correct because Figure 2 does appear to contain a DrugVQA curve in the PPI panels, albeit as a very faint light-gray line, and DrugVQA is also shown in the Figure 2c bar plot. The reviewer’s underlying concern about visibility is understandable, but the literal claim that the curve cannot be found does not hold up against the figure itself. Devil’s advocate: a charitable expert could say the curve is effectively invisible in practice and so the complaint is really about poor figure readability rather than total absence; that defense is plausible. Because the factual reading is negative but the visibility issue is real enough to split experts, I predict disagreement on correctness. Thus the most likely collapsed label is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the paper does not clearly motivate why its procedure should be understood as variational EM rather than an alternating pseudo-labeling scheme, and Section 4.3 remains hard to connect to the later training objectives. The reviewer’s complaint is also clearly stated: the latent variables and the necessity of the EM framing are not convincingly explained. Devil’s advocate on correctness: a skeptical expert could note that the latent variables are the unobserved interaction labels and that Sections 4.3-4.6 do define E- and M-steps, but that defense does not fully resolve the reviewer’s core concern about justification. Devil’s advocate on significance: one could call this merely presentational, yet clarifying the methodological rationale would materially improve how readers assess the main contribution, so Significant is the better call. The reviewer gives enough pointers to the relevant section and objectives for verification, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Not Correct because the paper does include ablation-style comparisons, most notably MUSE-Joint in Figure 2c and Figure 3c, and the text explicitly contrasts MUSE with that ablation. So the specific premise that there is no ablation study in Sections 2.2 and 2.3 does not hold literally. Devil’s advocate: a charitable expert might read the complaint more broadly as saying the available ablations do not adequately isolate the claimed cross-scale benefits for every task, especially beyond the headline comparisons, and that defense is plausible. Because the literal claim is wrong but the broader support concern has some force, I expect experts to disagree on correctness rather than agree that the item is simply wrong. The most likely collapsed label is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because the derivation around the KL objective and the subsequent const manipulations are indeed problematic, and the supplementary derivation appears to drop or mishandle q-dependent terms. This matters because it bears directly on the paper’s theoretical framing of the E-step. Devil’s advocate on correctness: one could argue the paper only intends a heuristic wake-sleep-style approximation and is not claiming a rigorous derivation, but the written equations still support the reviewer’s core complaint. Devil’s advocate on significance: an expert could downplay this as a notation issue, yet fixing a derivation error in the method section would substantially strengthen the paper, so Significant is appropriate. The reviewer cites the relevant equations and the entropy/KL issue precisely enough for verification, so the evidence is Sufficient, giving correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct overall because the manuscript does contain noticeable grammatical problems, even though the reviewer’s specific example about structures information in the Section 2.2 title is not actually present in the provided paper. As a criticism, this is only Marginally Significant because correcting grammar would improve polish but not change the substance of the work. Devil’s advocate on correctness: a stricter expert could reject the item because its only concrete example is wrong, and that prosecution is plausible. Devil’s advocate on significance: it is unlikely to be upgraded, since this is clearly a minor writing nit, and the evidence from the item itself requires more because the cited example does not verify the broader claim. Given the tension between the true broader point and the false supporting example, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct because the abstract gives the high-level claim but does not crisply explain the relationship between the two scales or how they are linked by the model, so the reviewer’s confusion is understandable. This would improve the paper if fixed, but whether abstract-level vagueness counts as a substantive issue is somewhat debatable. Devil’s advocate on correctness: a skeptical expert could say the abstract already names atomic structure and molecular network scales plus mutual supervision, yet that does not make the summary especially clear. Devil’s advocate on significance: some experts will see abstract clarity as Significant because it frames the whole paper, while others will treat it as more limited presentation feedback. The reviewer points to the abstract and the exact source of confusion, so the evidence is Sufficient, and I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because Section 2.1 and the surrounding methods do not explain the EM analogy and the information flow between steps in a sufficiently transparent way; the notation also makes the mapping between models and steps hard to follow. The reviewer states the missing pieces clearly by asking what is input, output, updated, predicted, and shared across scales. Devil’s advocate on correctness: one could argue that Sections 2.1 and 4.3-4.6 do contain those ingredients in dispersed form, but the paper still leaves the overall procedure hard to reconstruct, so the core criticism stands. Devil’s advocate on significance: this is not merely stylistic, because clarifying the central algorithm would materially improve the paper’s evaluability. The item gives specific enough pointers to verify the problem, so the evidence is Sufficient, leading to correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because Figure 1 lacks a true legend or key for the color coding and the graphical symbols, which makes the framework figure harder to parse than it should be. Since Figure 1 is the main conceptual overview of MUSE, improving it would meaningfully help readers understand the method. Devil’s advocate on correctness: a skeptic could say some meanings are inferable from the caption and panel titles, but there is still no explicit legend or node/edge key, so that defense is weak. Devil’s advocate on significance: this is a presentation issue, yet it is attached to the core explanatory figure, so it is better viewed as Significant than merely minor. The reviewer identifies the exact figure and the missing visual elements, making the evidence Sufficient, so the prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct overall because the main paper gives only limited context for the datasets and mostly just names the evaluation metrics rather than explaining them for a broad audience, even though some dataset and metric information does appear later in Methods. So the literal no context wording overstates the case, but the broader concern about accessibility and exposition is valid. Devil’s advocate on correctness: a strict expert could point to Sections 4.1 and 4.12 and call the claim factually wrong, and that prosecution is plausible. Devil’s advocate on significance: if accepted as correct, some experts would view this as Significant for readability while others would see it as more audience-dependent. Because the truth of the item depends on whether one reads it literally or charitably, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the utilization-rate formula in Section 4.11 does not actually guarantee the claimed range [-1, 1], and the paper also leaves the construction of the single-scale comparison models under-specified. Both points directly affect the credibility and reproducibility of the imbalance analysis in Section 2.4. Devil’s advocate on correctness: one might appeal to typical metric values lying in [0,1], but even under that assumption the stated formula can exceed 1 whenever the multi-scale score is more than twice the single-scale score, so the criticism still holds. Devil’s advocate on significance: although this concerns an analysis section rather than the main benchmark tables, fixing the metric definition and methodology would materially improve the paper. The item quotes the exact formula and ambiguous methodological sentence, so the evidence is Sufficient, giving correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct and Significant because the paper presents a variational-EM-style ELBO derivation, but the implementation relies on hard pseudo-labeling and pseudo-edge augmentation, and the bridge between those two descriptions is not made clear. That mismatch matters for how readers should interpret the method’s theoretical claims. Devil’s advocate on correctness: a defender could argue the paper explicitly calls MUSE a variant or approximation of EM and so some heuristic departures are allowed, but the reviewer’s core point about the unclear connection between theory and implementation remains valid. Devil’s advocate on significance: this is central to the paper’s methodological framing, so it is more than a minor naming dispute. The item supports the claim with exact paper equations and a concrete code line, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because Figure 5c and the accompanying text indicate that performance peaks around a threshold near 0.3-0.4 and worsens above 0.4, whereas the released implementation uses a hard threshold of 0.7 for pseudo-labels. That is a concrete paper-code inconsistency with clear reproducibility implications. Devil’s advocate on correctness: one could speculate that the released code reflects a different experiment or default than the paper’s final setting, but absent any explanation the reviewer’s criticism stands. Devil’s advocate on significance: this is not a cosmetic hyperparameter nit, since the paper itself emphasizes threshold sensitivity and uses it to motivate the mutual-supervision story. The item points to the exact figure, paper sentence, and code line, so the evidence is Sufficient, leading to correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Not Correct because Figure 2c does appear to include error bars, so the review’s central premise that the bar plots are presented without error bars does not hold. It is true that the paper does not report formal significance tests, but that narrower complaint is not enough to rescue the item as written. Devil’s advocate: a charitable expert might say the error bars are small and easy to miss, and still agree with the broader concern that uncertainty is not highlighted strongly enough in the main figure; that defense is plausible. Because the literal factual claim is undermined by the figure while the broader reporting concern retains some force, I predict disagreement on correctness rather than unanimous rejection. The most likely collapsed label is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "I judge this item Correct because the supplementary table really does contain the anomalous entry 0.922 ± 0.08, whose precision and scale are suspicious relative to neighboring values, so clarification is warranted. The reviewer mislabels the associated task as DDI rather than DPI, but that is a peripheral detail rather than the main point. Devil’s advocate on correctness: a skeptic could say the value might simply reflect genuine instability rather than a typo, yet the reviewer only claims the entry is suspicious and inconsistent, which is fair. Devil’s advocate on significance: some experts will see this as a meaningful issue because it affects confidence in a reported result, while others will see it as a likely table typo and therefore minor. The exact table entry is quoted, so the evidence is Sufficient, and I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the PPI trainer explicitly generates pseudo-edges from self.test_edges and then concatenates those edges into the graph used for message passing before evaluating on the same test edges. That is a serious leakage problem for a link-prediction benchmark. Devil’s advocate on correctness: one could argue this is a transductive setup using unlabeled test structure rather than labels, but the code still conditions the model on the held-out edge list it is later asked to predict, so the critique remains valid. Devil’s advocate on significance: this directly affects the validity of the headline SHS27K claims and is therefore clearly Significant. The reviewer cites the relevant code path and the model forward function precisely enough to verify the issue, so the evidence is Sufficient, giving correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct because the released implementation behaves much more like iterative self-training or co-training with hard pseudo-labels than like a clean variational-EM optimization of a maintained variational distribution. The reviewer’s core complaint is about mischaracterization of the method, not just about one mislabeled line of code. Devil’s advocate on correctness: another expert could defend the paper by noting that it explicitly presents MUSE as a variant or approximation to EM, so some departure from textbook variational inference is expected; that defense is plausible. Devil’s advocate on significance: if accepted, the issue is Significant because it changes how the method’s theoretical claims should be interpreted. The reviewer quotes both the paper’s EM statement and the hard-threshold implementation, so the evidence is Sufficient, but I expect disagreement on correctness because the boundary between variant EM and just pseudo-labeling is genuinely debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct because the code does use _maximization for the structure-model update and _expectation for the network-model update, which is the opposite of the paper’s naming convention. That inconsistency is real and the reviewer identifies it clearly. Devil’s advocate on correctness: a defender could say this is only an internal naming mismatch and not a contradiction in the actual algorithm, but that does not negate the factual point. Devil’s advocate on significance: some experts may view the naming swap as materially harmful to interpretability and reproducibility, while others will see it as a minor implementation clarity issue. The paper quote and code snippet are enough to verify the mismatch, so the evidence is Sufficient; I lean Marginally Significant, with the collapsed prediction correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the supplementary table shows no validation split for SHS27K, the PPI code evaluates on test every epoch for checkpoint selection, and the same code also augments the graph with pseudo-edges derived from self.test_edges. Together these choices mean the reported SHS27K numbers are not a clean estimate of generalization. Devil’s advocate on correctness: one could argue the authors intended a transductive setting, but using the test split for both selection and graph augmentation still compromises the benchmark claim as presented. Devil’s advocate on significance: this goes straight to the validity of the paper’s strongest empirical claim, so it is unambiguously Significant. The item cites the exact supplementary row and relevant code lines, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct because the paper explicitly constructs BioSNAP negatives by random sampling from unobserved drug-protein pairs, and the reviewer is right that this can introduce false negatives and make the task easier or more benchmark-specific than it appears. That is a real limitation of the evaluation protocol. Devil’s advocate on correctness: a skeptical expert could argue that the paper follows a common benchmark convention and even includes unseen-protein and unseen-drug splits, so calling the conclusions not robust may overstate the problem; that prosecution is plausible. Devil’s advocate on significance: if accepted, the issue is Significant because it affects how much weight to place on the DPI headline metrics. The item points to the exact sampling statement and the near-saturated reported metrics, so the evidence is Sufficient, but because field norms differ on how damning this protocol is, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct and Significant because the code README explicitly promises CPU support, yet utils.py hard-fails when no NVIDIA GPU tooling is available, trainer_ppi.py requests two GPUs, and utils.py also contains a user-specific absolute path for split files. Those are concrete reproducibility barriers. Devil’s advocate on correctness: one might say the code could still be patched locally or that some issues only affect particular tasks, but that does not undo the direct contradiction between the repository claims and the released implementation. Devil’s advocate on significance: these are not cosmetic engineering nits, since they materially determine whether others can reproduce the experiments. The reviewer provides exact README and code snippets for each subclaim, so the evidence is Sufficient, giving correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

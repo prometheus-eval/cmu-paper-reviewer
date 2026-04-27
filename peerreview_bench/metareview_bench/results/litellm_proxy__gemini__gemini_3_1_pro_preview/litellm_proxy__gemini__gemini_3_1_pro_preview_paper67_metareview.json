@@ -1,0 +1,267 @@
+{
+  "paper_id": 67,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes that the characterization relies on a single device array with varying grating sizes, and calls for multiple devices to establish reproducibility. This is a standard and highly significant requirement for experimental device papers to prove reliability. The reviewer appeals directly to the paper's experimental setup, providing sufficient evidence. A devil's advocate might argue that the within-film variations are sufficient, but most experts would agree on the need for device-to-device reproducibility data.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly points out that the simulations lack device variation and the imaging workflow schematic lacks specific details like temperature data and grating response spectra. Incorporating these elements would significantly improve the realism of the simulations and the clarity of the methodology. The reviewer lists specific missing elements, providing sufficient evidence. A devil's advocate could argue that the schematic is merely conceptual, but the request for simulation variation is solid, making it generally significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly notes the conceptual similarity to the authors' previous work on tunable plasmonic resonances, arguing that the addition of photodetection is a minor enhancement without scalable arrays. This is a valid critique of the paper's novelty. The reviewer provides sufficient evidence by citing the specific prior publication. A devil's advocate would argue that achieving functional photodetection based on this principle is a major milestone in itself, not just a minor enhancement. Because the judgment of 'minor enhancement' is subjective, experts are likely to disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly observes that the claimed responsivity of 30 mA/W is much lower than state-of-the-art values (0.1-10 A/W) established a decade ago. Pointing this out is significant as it properly contextualizes the device's performance within the broader field. The reviewer provides sufficient evidence by citing three specific high-profile papers. A devil's advocate might argue that the device's true novelty is the zero-bias tunable operation rather than pure responsivity, but experts would still agree that a fair comparison to the state-of-the-art is necessary.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly notes the absence of standard photodetector characterizations, specifically detectivity and frequency dependence. These are fundamental metrics for evaluating photodetectors, making their omission a highly significant flaw in the paper. The reviewer clearly names the missing metrics, providing sufficient evidence. A devil's advocate cannot plausibly defend the omission of these basic metrics in a device paper, so experts would uniformly agree on correctness and significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer correctly highlights a contradiction between the authors' claim of simplified fabrication and their use of conductive AFM to write ferroelectric domains, which is notoriously slow. This is a significant observation because it challenges a core motivation and claimed advantage of the work. The reviewer appeals to the method described in the text, offering sufficient evidence. A devil's advocate might argue that 'simple' refers to the lack of lithography masks rather than speed, but the reviewer's practical point about AFM being time-consuming is undeniable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer questions how the authors decoupled the infrared response of the graphene plasmonic effect from the pyroelectric effect of the BFO substrate. This is a factually valid question, as verifying the exact source of the photocurrent is highly significant. The reviewer provides sufficient evidence by referencing the known properties of ferroelectric materials. A devil's advocate could argue that the authors already proved the origin is plasmonic because the resonant peak shifts when the domain width is rescaled, which wouldn't happen if it were purely a BFO substrate effect. Because of this, experts might disagree on whether the criticism is correct or already addressed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes the device's tunable range and asks if it can be extended, while comparing the responsivity to a prior simulation paper. This is a valid inquiry that could improve the discussion section. The reviewer provides sufficient evidence by citing the frequency range and a prior paper. A devil's advocate would argue that while suggesting future improvements is nice, it does not fundamentally fix a flaw in the current manuscript, making it only marginally significant. Experts are likely to disagree on whether such forward-looking questions rise to the level of significant criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks for clarification on why the single-channel imaging baseline is consistently around 60-70%. This is a correct observation of the data presented in Figure 4 and represents a valid request for more context regarding the baseline performance. Providing sufficient evidence by pointing to the specific results, the reviewer's point is clear. A devil's advocate could argue that the baseline performance is just an empirical fact of the simulation and doesn't strictly need deep explanation if the comparative gain is the main focus, leading to expert disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks for justification for the chosen 100-500 nm domain width range and whether it can be extended to the 3-5 um mid-IR range. This is a factually correct observation of the paper's parameters. The reviewer provides sufficient evidence by referencing the specific widths used. A devil's advocate would argue that asking authors to justify their chosen parameters is standard, but demanding extensions to other wavelengths is beyond the scope of the current work. Because it straddles the line between necessary justification and future work, experts might disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that Figure 3d's intention is unclear and claims scale bars are missing in Figure 2b,c. While the caption states there is a 5 nm scale bar, it may be illegible or omitted in the graphic, making the criticism practically correct. This is a marginally significant presentation issue. The reviewer provides sufficient evidence by pointing to specific figures. A devil's advocate would agree that fixing figure clarity is helpful, but since it doesn't affect the core scientific claims, it remains firmly marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer questions the authors' use of the term 'type-printing' to describe conductive AFM domain writing, arguing the analogy is a stretch. This is a correct subjective observation regarding terminology. It is only marginally significant as it deals with presentation and naming rather than scientific validity. The reviewer points to the specific analogy in the text, providing sufficient evidence. A devil's advocate might argue the terminology is misleading enough to be significant, but most would see it as a minor stylistic quibble.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the paper states downward domains dope graphene heavily while upward domains do not, and asks for a deeper explanation and references for why polarization affects doping. This is a valid and significant request, as it concerns the fundamental physical mechanism of the device. The reviewer provides sufficient evidence by quoting the specific claim. A devil's advocate might argue that the paper briefly mentions the 'electrostatic effect,' but providing a clearer physical explanation would objectively improve the manuscript.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that using an AFM probe to direct light for transmission measurements is uncommon and poorly explained in Figure 3c. This is a factually correct observation, and full details of the measurement scheme are significantly important for reproducibility. The reviewer provides sufficient evidence by pointing to the specific figure and text. A devil's advocate cannot plausibly argue against the need for clear measurement methodologies in an experimental paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly states that the photocurrent measurement methodology is unclear and lacks schematics. Given the importance of the photocurrent results, adding detailed methods is highly significant for reproducibility. The reviewer provides sufficient evidence by highlighting the missing details. A devil's advocate might argue that standard Keithley measurements don't need schematics, but the specific illumination and zero-bias setup in this novel device warrants better documentation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly observes that the 1 um scale bar in Figure 3a applies to the PFM images, leaving the optical image without a clear scale. This is a valid, though minor, presentation issue. The reviewer provides sufficient evidence by pointing to the specific figure and scale bar. A devil's advocate would agree it needs fixing but confirm it doesn't impact the scientific conclusions, making it marginally significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that the comparison between MCA and SCA uses different image resolutions (72x64 vs 144x192) and different CNN architectures. This is a highly significant methodological flaw, as it confounds the sensor type with resolution and network capacity, invalidating the comparative claims. The reviewer provides sufficient evidence by quoting the supplementary text and MATLAB code. A devil's advocate might argue that they equalized the total number of detectors, but the reviewer rightly points out that resolution fundamentally alters CNN performance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the imaging experiments are entirely simulated using a commercial camera and mathematical filters, contradicting the implication that the fabricated arrays were used for imaging. This is a highly significant point that clarifies a potentially misleading claim in the paper. The reviewer provides sufficient evidence by quoting the text and MATLAB code. A devil's advocate might argue the authors admit it's a simulation, but the disconnect between the fabricated devices and the simulated results is a crucial flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly points out that accuracy values are reported as single points without standard deviations, despite the code showing 100 Monte Carlo trials were run. Providing sufficient evidence by referencing the code and the abstract, the reviewer highlights a statistical reporting gap. A devil's advocate would argue that Figures 4c and 4e visually show shaded variance regions, making the omission of numerical error bars in the text a relatively minor presentation issue, leading to disagreement on whether this is significant or marginal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly and insightfully observes that the MCA edge enhancement might be an artifact of the Lorentzian filters applied during simulation, which act as mathematical bandpass filters, rather than an intrinsic property of the hardware. This is a highly significant criticism that directly challenges the mechanism behind the paper's core application claim. The reviewer provides sufficient evidence by analyzing the specific filter functions in the code. A devil's advocate might argue the filters accurately represent the physics, but the SCA data wasn't subjected to equivalent filtering, making the comparison unfair.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that the simulation code applies a Lorentzian filter directly to pixel intensity values, effectively treating intensity as wavelength. This is physically nonsensical and highly significant, as it means the 'multichannel' images are merely intensity-sliced artifacts, completely invalidating the simulation. The reviewer provides sufficient evidence by quoting the exact MATLAB code. A devil's advocate has no plausible defense for treating a scalar intensity as a spectral variable in a physical simulation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Building on Item 1, the reviewer correctly points out that comparing MCA to SCA is misleading because MCA data is artificially edge-enhanced through the flawed intensity-slicing simulation of broadband Melexis camera data. This is a highly significant point that invalidates the core performance comparison. The reviewer provides sufficient evidence by tracing the data source and filtering logic. A devil's advocate could not defend comparing a raw image to one that has undergone arbitrary non-linear intensity transformations disguised as spectral filtering.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly observes that the paper presents simulated imaging as an experimental demonstration, despite the fabricated devices only being single pixels or small arrays without readout circuits. Clarifying this is highly significant, as the manuscript's phrasing implies a full hardware realization that does not exist. The reviewer provides sufficient evidence by contrasting the abstract's claims with the methods section. A devil's advocate might say the authors disclosed the simulation, but presenting it as an experimental demonstration is undeniably misleading.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes that the 'type-printing' terminology is a rebranding of the established 'ferroelectric lithography' technique, exaggerating its originality. The reviewer provides sufficient evidence by citing a seminal 2004 paper on the exact method. A devil's advocate might argue that while the term is new, it's just a harmless analogy and thus only marginally significant. However, a stricter expert might consider the renaming of established techniques to claim novelty a significant scholarly issue, leading to disagreement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims the paper incorrectly attributes the zero-bias operation to the ferroelectric superdomain instead of the asymmetric metal contacts. However, the paper explicitly states they 'employed an asymmetric metal-doping scheme... operation at zero bias'. Thus, the reviewer's factual premise is incorrect. A devil's advocate might argue the abstract is misleading ('zero-bias operation driven by a ferroelectric superdomain'), making the reviewer's confusion understandable. This ambiguity in the paper's phrasing would lead experts to disagree on whether the reviewer's criticism should be considered correct or incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly argues that the paper's 'hardware-level' conclusions are unsupported because the imaging was simulated using data from an external commercial camera, ignoring real hardware factors. This is a highly significant criticism of the validity of the paper's core claims. The reviewer provides sufficient evidence by quoting the simulation methodology from the text. A devil's advocate might suggest the simulation is a valid first step, but claiming 'hardware-level' improvements based on it is a clear overreach.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly identifies multiple confounding factors in the MCA vs SCA comparison, including mismatched resolutions, different CNN architectures, and inconsistent reporting of training iterations. This is highly significant as it unravels the reliability of the learning results. The reviewer provides sufficient evidence by quoting the code and the contradictory texts. A devil's advocate cannot defend internal contradictions or confounded experimental designs, leading experts to unanimously agree on this criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer correctly observes that the provided code bundle contains Git LFS pointer files rather than actual datasets, preventing independent reproduction. This is a highly significant methodological failure, especially for a paper whose main application claims rely entirely on computational simulation and learning. The reviewer provides sufficient evidence by quoting the LFS pointer contents. A devil's advocate might argue that the data is available 'upon request,' but providing broken code bundles violates modern reproducibility standards.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly points out that key metrics, such as photoresponsivity and learning accuracies, are reported as single-point values without measures of variance, despite the text confirming that averaging and multiple trials were performed. This is a highly significant omission, particularly for the responsivity claim which lacks any visual or numerical error bars. The reviewer provides sufficient evidence by quoting the methodology and the code. A devil's advocate cannot defend the complete lack of statistics for the physical device metrics.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

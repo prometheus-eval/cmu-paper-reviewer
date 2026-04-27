@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10}\selectfont
+\begin{tabular}{l c c}
+\toprule
+\textbf{Metric} & \textbf{Value} & \textbf{95\% CI} \\
+\midrule
+Human items covered by 1 AI reviewer & 26.9\% & [21.3, 32.6] \\
+Human items covered by 3 AI reviewers & 46.3\% & [39.4, 53.9] \\
+Fully-good human items covered by 1 AI & 36.3\% & [29.6, 43.6] \\
+Fully-good human items covered by 3 AI & 59.2\% & [50.2, 69.1] \\
+\midrule
+AI items covered by $\geq$1 human reviewer & 74.0\% & [65.5, 84.1] \\
+\midrule
+Uncovered AI items (no human match) & 26.0\% & [15.9, 34.5] \\
+Uncovered AI items that are fully good & 48.1\% & [39.6, 56.6] \\
+Uncovered AI items that are correct & 81.8\% & [75.3, 87.9] \\
+\bottomrule
+\end{tabular}
+\caption{Coverage summary (per-reviewer-pair averaging). ``Covered'' means at least one H--A pair is classified as similar (near-paraphrase or convergent conclusion, ordinal $\geq$ 2). ``1 AI reviewer'' reports the mean coverage across all (human reviewer, AI reviewer) pairs within each paper, then averaged across papers. ``3 AI reviewers'' reports per-human-reviewer coverage by the union of 3 AI reviewers, averaged across human reviewers within each paper, then across papers. ``Uncovered'' AI items have no similar human counterpart. All values are Rogan-Gladen-corrected; 95\% CIs from 10{,}000-iteration paper-level bootstrap with resampled sensitivity/specificity.}
+\label{tab:coverage-summary}
+\end{table}

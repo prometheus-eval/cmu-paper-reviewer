@@ -1,0 +1,294 @@
+{
+  "paper_id": 51,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is that the paper studies systemic dosing safety only through 8 weeks and says little about longer-term, human-specific, or clotting-related risks, so the request for more translational safety discussion is Correct. Addressing that gap would materially improve how readers assess the practicality of systemic SPPINDEX, so I mark it Significant, and the evidence is Sufficient because the study scope and the missing discussion are easy to verify from the paper. Devil's advocate: this is a rat proof-of-concept study, so the authors cannot actually answer beyond-8-week or human-risk questions with data from this manuscript. That counterargument makes the importance somewhat debatable rather than the factual concern itself, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer correctly notes that the electrophysiology methods give only a terse reference to the ROUT method and use SECOND without defining it in the text. Those details affect reproducibility of the analysis workflow, so this is Significant, and the evidence is Sufficient because the reviewer names the exact sections and terms that are underspecified. Devil's advocate: an expert could infer ROUT from the GraphPad context and follow the citation for SECOND, but that still leaves the manuscript itself short on replication detail. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is that the paper speculates about delayed wound healing in the Free DEXSP group without presenting specific tissue indicators tied to that mechanism, and that is Correct. Clarifying whether any histological findings actually support that explanation would strengthen interpretation of a surprising result, so I mark it Significant, and the evidence is Sufficient because the reviewer points to the Free DEXSP finding and the discussion's Chen et al. explanation. Devil's advocate: the manuscript does report worse recording, high CD68 signal, and weight loss for Free DEXSP, so some experts may think enough context is already present. Even so, the request for direct supporting indicators is valid, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The criticism is factually correct because BBB is expanded multiple times across the manuscript. This is only a very minor style issue, so I mark it Not Significant and set evidence to null. Devil's advocate: repeated definitions can help readers who jump between sections, but that does not make the complaint false. I therefore predict correct_not_significant.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is Correct because reference 46 is visibly malformed and incomplete in the reference list. Fixing that would improve the paper only modestly, so it is Marginally Significant, and the evidence is Sufficient because the reviewer points to a specific bad reference entry. Devil's advocate: the broken reference does not affect the scientific claims, which is why I do not rate it as more important. I therefore predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer is correct that Figure 1B does not by itself make the continuing recording schedule across weeks 2-7 very clear, even though the methods explain the biweekly recordings. Because the study timeline is central to understanding the experimental design, I lean Significant, and the evidence is Sufficient because the figure can be checked directly. Devil's advocate: the timeline does show week labels and the text elsewhere resolves the ambiguity, so some experts may see this as only a presentation nit. That makes the importance borderline, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "A charitable reading of this comment is that Figure 3A lacks quantitative scale information for the waveform and would be clearer with better annotation, which is Correct, though the request for an electrode scale bar on a schematic is less compelling. I treat the issue as Marginally Significant because it is a figure-clarity refinement rather than a substantive scientific flaw, and the evidence is Sufficient since the reviewer identifies the exact panel. Devil's advocate: a stricter expert could say panel 3A is only schematic, already labels the axes with units, and therefore the criticism partly targets the wrong kind of figure. Because that prosecution is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Not Correct because every figure in the paper is explicitly cited in the main text: Figures 1 through 6 all appear in sequence in the relevant sections. Since the factual premise fails, significance and evidence are null. Devil's advocate: one might argue some figures are only briefly discussed, but they are still clearly referred to and connected to claims. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is also Not Correct because the figure order in the text is consistent: the manuscript cites Figures 1, 2, 3, 4, 5, and 6 in normal sequence, with no figure actually missing from the text. Because the core factual premise is wrong, significance and evidence are null. Devil's advocate: a reader could feel the visual flow is cluttered, but that is different from figures being out of order or omitted. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer is correct that Figure 3D and panels 3F-I are different presentations of the same phase-grouped active-electrode dataset, so a redundancy or merging question is fair. This is mainly a presentation-streamlining issue, so I mark it Marginally Significant, and the evidence is Sufficient because the exact panels are named. Devil's advocate: the two views serve different purposes, with 3D for between-group comparison and 3F-I for within-group decline, so some readers will find both useful. Even so, the overlap is real and the comment is valid, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The broader concern is Correct: while neuron-density normalization is partly described, the fluorescence normalization details and the rationale for the 600-650 µm reference bin are not fully spelled out in the Figure 5 legend itself. Because those normalization choices affect how readers interpret a central histology figure, I lean Significant, and the evidence is Sufficient since the reviewer points to a specific figure and an identifiable missing clarification. Devil's advocate: the methods section does explain the normalization scheme, and the legend already states the neuron-density normalization bin, so some experts may view this as mostly a caption-level improvement. That makes the importance debatable, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Correct because the paper does not consistently report experiment-specific n values in the figure legends, even though some group sizes appear elsewhere in the text. Clear figure-level sample sizes would improve interpretability and reproducibility, so I mark it Significant, and the evidence is Sufficient because the claimed absence is directly checkable across the legends. Devil's advocate: an expert could say the main group sizes and minimum histology counts are already present in the manuscript, so adding them to every legend is mostly formatting. Because that downgrading argument is plausible, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer is basically correct that the figure legends do not themselves decode every significance annotation or provide exact p-values, even though the statistics section defines the asterisk convention globally. This would improve readability but would not materially change the science, so I mark it Marginally Significant, with Sufficient evidence because the issue is directly verifiable from the figures and legends. Devil's advocate: many papers rely on a single global statistics definition rather than repeating it in every legend, so some readers may see the current presentation as acceptable. Still, as a clarity request the item is valid, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "A charitable reading is that the specific Figure 5 neuron-density result alone does not by itself prove a therapeutic effect, so the wording in that local context may feel somewhat strong. I therefore mark the concern Correct on balance, but only Marginally Significant because it is mostly a wording refinement, and the evidence is Sufficient since the reviewer points to the exact result being over-interpreted. Devil's advocate: the paper does include functional electrophysiology improvements elsewhere, so calling the overall treatment effect therapeutic is defensible and a stricter expert could reject the criticism. Because that prosecution is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is Correct because the manuscript tests weekly dosing for 8 weeks but does not address whether less frequent or tapered dosing could preserve benefit with fewer risks. That is a constructive limitation and optimization point for a systemic therapy paper, so I mark it Significant, and the evidence is Sufficient because the missing comparison is clearly specified. Devil's advocate: the current paper's aim is efficacy under one chosen regimen, not full dose optimization, so some experts might view this as future work rather than a present weakness. Even so, the missing dosing-schedule discussion is real and important, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer is correct that the paper would benefit from a fuller explanation of how hemostatic activity is supposed to relate to BBB sealing, and there is no direct evidence here of endothelial repair. Because mechanism is central to the paper's narrative, I mark this Significant, and the evidence is Sufficient because the reviewer points to a specific missing kind of support. Devil's advocate: the authors do present reduced IgG staining and frame BBB resealing mostly as a suggestion rather than a definitively proven mechanism in the results section. Even so, the request for direct mechanistic support or clearer discussion is valid, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This is Correct: the opening paragraphs of the Discussion substantially rehearse background and motivation already covered in the Introduction. The issue is mostly about concision rather than scientific content, so I mark it Marginally Significant, with Sufficient evidence because the reviewer identifies a specific section to compare. Devil's advocate: some repetition is normal when a Discussion reorients the reader before interpreting results. Even so, the redundancy is real and worth a light edit, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The point is Correct because the paper makes systemic-safety claims from a limited set of blood and weight measurements, and added peripheral-organ inflammatory markers would indeed strengthen that argument. I lean Significant because the treatment is systemic and safety is part of the paper's value proposition, while the evidence is Sufficient since the reviewer identifies exactly what additional support is absent. Devil's advocate: the manuscript already includes glucose, ALT, creatinine, and weight, so some experts may see peripheral inflammatory markers as nice-to-have rather than necessary. That makes the importance debatable, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper really does show a trade-off, with higher active-electrode yield but lower SNR versus TH, so a charitable reading of the criticism is Correct: the authors should explain that tension more carefully. Because that tension touches the paper's core performance claim, I mark it Significant, and the evidence is Sufficient because the reviewer quotes the exact SNR and noise statements. Devil's advocate: improved recording performance need not mean every metric improved, and the paper can reasonably prioritize yield and units per channel while noting that SNR stayed above 5. Since that prosecution is genuinely plausible, I predict disagree_on_correctness rather than full expert agreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This criticism is Correct because the manuscript uses reduced IgG staining as its only in-paper evidence related to BBB resealing, which is indirect and does not directly demonstrate structural barrier repair. That is mechanistically important to the paper's story, so I mark it Significant, and the evidence is Sufficient because the reviewer quotes the relevant passages and names concrete missing markers. Devil's advocate: the results section itself uses hedged language such as suggest and may facilitate, so one could argue the authors are not fully overclaiming there. But the abstract, discussion, and conclusion lean more strongly on BBB resealing, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer is correct that the study relies on intra-arterial catheter dosing, a route the authors themselves later call clinically limited, yet the abstract and conclusion present broad therapeutic promise with only modest qualification. I lean Significant because administration route is central to how translationally persuasive the work is, and the evidence is Sufficient through direct quotation of the paper's own limitation statement. Devil's advocate: this is still a preclinical proof-of-concept paper, so many experts would accept a nonclinical delivery route so long as the limitation is acknowledged somewhere, which it is. Because the factual concern is real but its importance is debatable, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is plainly Correct because the methods list 93 for W1-4 SPPINDEX and 51 for W1-4 SPPINDEX, which is an obvious duplicated phase label and likely a reporting error. It is only Marginally Significant because it is a local reproducibility and clarity issue rather than a major conceptual flaw, and the evidence is Sufficient from the exact quoted sentence. Devil's advocate: an expert can easily infer that the second value was meant to be W5-8 SPPINDEX, reducing the damage. Even so, it is an actual manuscript error, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is Correct: all histology is measured at the 8-week endpoint, so the paper cannot directly establish the temporal relationship between tissue changes and week-by-week electrophysiology improvements. Because the authors use those histology results to support mechanistic interpretation of the performance gains, I mark it Significant, and the evidence is Sufficient because the reviewer quotes both the endpoint-only methods and the causal interpretive language. Devil's advocate: endpoint histology can still provide useful correlational support for chronic outcomes even without intermediate timepoints. But that does not remove the temporal-causality limitation, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "As with the similar Claude item, a charitable reading is that the paper leaves an unresolved trade-off between improved yield and worsened SNR and noise, so the criticism is Correct in substance. That is Significant because it bears on how the headline recording-performance claim should be interpreted, and the evidence is Sufficient through the quoted SNR and noise results. Devil's advocate: a treatment can improve overall recording utility without improving every single quality metric, and the manuscript explicitly notes that SNR stayed above a high-quality threshold. Because that counterargument is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the manuscript claims targeted delivery using PIN was successfully achieved, but it does not present direct biodistribution or localization data within the paper itself. Since targeted delivery is part of the core mechanistic claim, I mark it Significant, and the evidence is Sufficient because the reviewer quotes the strong claim and identifies the missing direct support. Devil's advocate: the paper cites prior PIN work and uses downstream functional and histological outcomes as indirect support, so some readers may find the inference reasonable for a first efficacy study. Even so, the direct-evidence gap in this manuscript is real, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer is correct that Free DEXSP performing worse than TH is an important and not fully resolved aspect of the study, and the paper's explanation remains somewhat speculative. Because this surprising control behavior affects interpretation of why SPPINDEX helps, I mark it Significant, and the evidence is Sufficient because the reviewer points to the worse performance result and the accompanying weight-loss signal. Devil's advocate: the paper does acknowledge the finding, cites prior literature, and reports some supporting adverse-effect evidence, so it is not wholly unexplained. Still, asking for a stronger account or better control structure is valid, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The factual core is that the paper does not compare SPPINDEX against a local-delivery benchmark such as a drug-coated electrode, and that missing comparison could have strengthened evaluation, so I mark it Correct. Because local delivery is the obvious alternative strategy discussed by the authors themselves, I lean Significant, and the evidence is Sufficient since the reviewer names the absent comparator and the relevant prior work. Devil's advocate: the paper's stated scope is a systemic repeat-dosing strategy, not an exhaustive benchmark study, so a stricter expert could say the comparison is optional rather than required. Because that scope-based prosecution is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is Correct because the manuscript says custom MATLAB software was used for electrophysiology analysis, but the provided repository mainly contains histology code and lacks that electrophysiology pipeline. That is Significant for reproducibility of the paper's headline results, and the evidence is Sufficient because the reviewer cites the custom-software statement and the missing repository content. Devil's advocate: some derived spreadsheets are provided, so a reader can inspect some outputs even without the full code. Even so, independent reproduction of the analysis is still blocked, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The criticism is Correct because the electrophysiology statistics are described at the channel level even though treatment is assigned at the animal level and observations are repeated across time, making pseudoreplication a serious concern. This is Significant because the paper's central efficacy claim rests on those tests, and the evidence is Sufficient because the reviewer quotes the exact AEY definition and test choice and gives a clear statistical rationale. Devil's advocate: some neural-implant papers informally treat channels as recording units, and the paper does use a mixed-effects model for some derived metrics, so a more permissive expert might be less alarmed. Still, given the stated design and test descriptions, I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because AEY is explicitly defined with a denominator that excludes channels that are never active across the study, which uses outcome information to define the metric and can inflate apparent yield. Since AEY is the primary performance endpoint, this is Significant, and the evidence is Sufficient because the reviewer quotes the exact metric definition and its consequences. Devil's advocate: one could argue the authors are intentionally redefining the metric to count only viable channels rather than all hardware sites. Even so, the post hoc denominator choice changes interpretability and comparability, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer is correct that the histology analysis is under-specified with respect to experimental unit, nesting, and multiplicity across many distance bins. Because those histology results support the mechanistic narrative, I mark the issue Significant, and the evidence is Sufficient since the reviewer quotes the multiple-slice design, per-bin ANOVAs, and the added nonfunctional implants used to raise N. Devil's advocate: the authors may in fact have averaged subsamples before testing, but they do not say so clearly, which is exactly why the complaint is valid. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the manuscript presents strong mechanistic language about BBB resealing and targeted delivery without directly measuring BBB repair dynamics, nanoparticle localization, or local dexamethasone exposure. That is Significant since these mechanisms are central to the paper's claimed contribution, and the evidence is Sufficient because the reviewer quotes the exact overreaching passages and contrasts them with the limited data actually shown. Devil's advocate: some of the results text uses hedged phrasing such as suggest and may, which softens the problem. But the overall narrative still overstates what was directly demonstrated, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is Correct because the paper relies on custom R and MATLAB workflows for electrophysiology, yet those scripts are absent from the provided materials and the electrophysiology README is literally a placeholder. That is Significant for reproducibility of the primary quantitative claims, and the evidence is Sufficient because the reviewer cites both the manuscript's software statements and the repository's incomplete documentation. Devil's advocate: the repository does provide some derived data files and substantial histology code, so the reproducibility package is not empty. Even so, the core electrophysiology analysis remains nonreproducible from the released materials, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

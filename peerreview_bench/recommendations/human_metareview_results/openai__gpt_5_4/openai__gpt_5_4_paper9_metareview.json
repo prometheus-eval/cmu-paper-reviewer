@@ -1,0 +1,151 @@
+{
+  "paper_id": 9,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is a valid readability suggestion: the paper introduces the physics result first and places most experimental details in the later Methods, while only limited early signposting is given. Adding an earlier pointer to the later methodological detail could help readers, but it is mainly an organizational improvement rather than a substantive scientific issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper uses the phrase \u201cpersistence of matter\u201d in the introduction, and the reviewer is making a narrow wording suggestion rather than a factual complaint. That suggestion is understandable and defensible, but it is only a stylistic improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 1 is schematic and the caption only briefly says the quarks eventually form the final hadrons, so the reviewer\u2019s request for a clearer caption is reasonable. The concern is about presentation for non-expert readers, not about the scientific validity of the analysis.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper frequently contrasts collision data with simulation, so asking for the more precise term \u201ccollision data\u201d is a fair clarity suggestion. This is a minor terminology point and the reviewer gives a precise location for it.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This claim does not hold up: the paper already defines transverse momentum earlier in the main text and later explicitly states in the detector description that p_T is the transverse momentum. The complaint that this is the first use of p_T is therefore factually wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The Methods already state that the asymmetry measurement is conducted separately for Run 1 and Run 2, so that part of the reviewer\u2019s query is already answered. However, the paper does not report run-by-run fit-shape outcomes such as width comparability or their agreement with simulation, so a charitable reading sees a real request for additional robustness discussion; this mixed item is therefore borderline on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper already clearly states that it measures the CP asymmetry in the final-state decay \u039b_b^0\u2192pK^-\u03c0^+\u03c0^- and later discusses resonant substructure. The suggested replacement is also not factually accurate as the paper later discusses contributions beyond a simple \u201cb\u2192u or b\u2192s\u201d description, so the reviewer\u2019s core criticism does not cleanly match the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper later explicitly discusses an f_0(980)-related b\u2192s s\bar{s} contribution in the R(pK^-)R(\u03c0^+\u03c0^-) interpretation, while Figure 1 only shows one loop schematic. It is therefore understandable to want that possibility reflected in the diagram, but because Fig. 1 is presented as a simplified schematic rather than an exhaustive decomposition, experts could split on whether this is a real omission.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does account for detection, PID, and trigger asymmetry differences between signal and control channels, so the item is too strong if read literally as saying no correction attempt is made. Still, the broader concern about residual model dependence from different resonance compositions is plausible and not explicitly discussed, making this a genuinely borderline correctness case; the reviewer also does not provide enough specific grounding to complete that chain without extra work.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is a correct methodological concern: the paper claims 5.2\u03c3 significance and the Methods say the baseline significance is computed as a z-score using the total uncertainty, but it does not justify the Gaussian treatment of uncertainties. Because this bears directly on the headline observation claim, it is significant and the reviewer provides enough detail to verify the basis of the criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Table 1 uses generic resonance labels and mass windows, while only later sections mention some concrete resonances such as f_0(500), \u03c1(770), f_0(980), K* and K_1 states. Asking the paper to name at least a few resonances near Table 1 is therefore a valid request that would improve interpretability, though experts may differ on how important that improvement is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The Methods explain that charm backgrounds are vetoed through mass-peak exclusions and give D^0 as an example, but they do not enumerate the full set of charm resonances or modes being vetoed. That missing specification is a real reproducibility/detail issue, and the reviewer points precisely to what information is absent.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper reports separate Run 1 and Run 2 yield asymmetries and states only that subsample checks are consistent, without quantifying run-to-run compatibility. Since the reviewer cites the observed 1.5\u03c3 versus 0.4\u03c3 differences and asks for their statistical interpretation, this is a correct and well-supported robustness question about the main measurement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper explicitly says that in the simultaneous fit the same probability density function for each component is used for both baryon and antibaryon decays, with only the yields allowed to differ. That already answers the question about whether widths and other shape parameters are constrained to be identical, so the complaint is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper carefully describes background shapes but does not clearly state whether the individual background normalizations are freely floated or constrained in the fit. That omission matters for understanding and reproducing the mass-fit procedure, and the reviewer identifies the exact missing kind of information.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Extended Data Table 1 indeed shows a striking run dependence in the PID asymmetry difference uncertainty, with 0.141% for Run 1 versus 0.002% for Run 2, and the paper does not explain it. The concern is therefore factually grounded and precisely supported, but experts may differ on whether this unexplained table entry is a significant issue or a more limited clarification request.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Extended Data Table 2 shows the mass-fit systematic is larger for Run 2 than Run 1 even though other uncertainties generally shrink with the larger dataset, and the text gives no specific explanation for that inversion. This is a valid, table-grounded request for clarification, though experts could disagree about whether it is substantively important or mainly a minor robustness comment.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

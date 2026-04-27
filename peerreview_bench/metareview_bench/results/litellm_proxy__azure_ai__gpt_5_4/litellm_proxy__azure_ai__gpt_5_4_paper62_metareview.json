@@ -1,0 +1,411 @@
+{
+  "paper_id": 62,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The main point is correct: the paper discusses short implantable fibers and source counting, but it never estimates how the number of distinguishable fingerprints should scale with fiber length in the 5–15 mm regime the reviewer asks about. That missing capacity analysis would improve the paper, so I lean Significant, although a devil's advocate could say it is beyond a proof-of-concept optics study rather than strictly required here. Because the reviewer identifies a concrete absent analysis tied to the claimed use regime, the evidence is Sufficient. I therefore predict agreement on correctness but some disagreement on importance, giving correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is correct: the paper's supposedly more realistic validations still use fixed tissue, selective excitation, and no modeling of tissue scattering, labeling density, vascular changes, or motion, so the strong claim about long-term freely moving use is not experimentally supported. A devil's advocate could say the paper only claims a proof of concept, but that does not remove the real gap between the demonstrated conditions and the proposed in vivo use case, so the criticism is Significant. The reviewer points to the exact section and to specific missing factors, which makes the evidence Sufficient. I therefore expect both experts to agree on correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is correct in substance: Figure 1 itself is schematic and the paper does not report excitation power per unit area, even though some optical details such as filters and objectives appear in Supplementary Figure S01. A prosecution case exists because part of the requested information is already present in the supplement, so the reviewer slightly overstates the omission if read as meaning the details are nowhere in the paper. Still, clarifying the core setup in the main schematic would improve reproducibility, though some experts may treat that as a figure-level issue rather than a central methodological gap. Because the item points directly to Figure 1 and specific missing details, the evidence is Sufficient, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The criticism is correct: the paper demonstrates six beads and four selected neurons, but it does not systematically test how many simultaneously present sources can be resolved as density, overlap, and scattering increase. That limitation goes to the heart of the paper's proposed utility, so I mark it Significant, and the counterargument that this is future work is not very persuasive. The evidence is Sufficient because the reviewer identifies a specific missing experiment whose absence is easy to verify. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The core point is correct: the paper does not test demixing under more realistic near-synchronous group activity, so its throughput limits and overlap failure modes remain unclear. A devil's advocate could object that the reviewer proposes a very specific experiment design, but the underlying concern about unresolved throughput limits is still real and Significant. Because the item clearly identifies the absent stress test and why it matters for the 'high-throughput' claim, the evidence is Sufficient. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This item is correct: Figures 2 and 3 report demixing outcomes but the paper does not provide excitation intensity per source for those proof-of-principle DMD experiments. Missing excitation intensity is a methodological omission that would materially improve reproducibility, so I mark it Significant; the downgrade case is weak. The evidence is Sufficient because the reviewer points to specific figures and a concrete absent quantity. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The main criticism is correct in substance because the evaluation is largely based on correlation heatmaps and trace overlays, and stronger task-level accuracy analyses could make the demixing claim more convincing. A devil's advocate can say the existing GT-NMF and GT-GT correlation analyses are already informative for a proof of concept, so experts may differ on how important this additional metric really is. The reviewer points to Figure 2–3 g–h, so the evidence is Sufficient. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The item is correct: the paper discusses saturation only for the single-bead miniscope sensitivity experiment and does not analyze what multiple simultaneously bright sources would do to saturation across the field of view. That missing discussion affects how readers interpret the MiniDART's practical operating range, so I mark it Significant. Because the reviewer ties the concern to a specific discussion passage and a concrete unaddressed scenario, the evidence is Sufficient. I therefore expect correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is correct: the manuscript does not cite or discuss the Bianco et al. tapered-fiber work that is relevant to spatially resolved fiber photometry. A devil's advocate could say adding one related paper would not materially change the experiments, so some experts may treat the omission as less important than I do. Still, related-work context would improve the paper's positioning, and the reviewer's named citation makes the evidence Sufficient. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Under a charitable reading, this criticism is correct because the paper's radial-ring intuition does leave open a real ambiguity question for sources at similar radius, and Supplementary Figure S04 itself says symmetric cases need further investigation. Under a stricter reading, the reviewer overstates the problem by saying equidistant sources would all contribute to one ring, because the supplement argues that azimuth-dependent pattern details often still differ. I therefore keep my own label as Correct because the broader ambiguity concern is valid, but I think expert meta-reviewers could genuinely split on correctness itself. The issue is Significant and the evidence is Sufficient, so I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The main point is correct: the paper repeatedly claims to expand fiber photometry toward resolving neuronal activity, but the actual demonstrations remain benchtop beads, fixed slices with imposed activity, and single-bead miniscope sensitivity. A devil's advocate can note that the reviewer explicitly says the proposed in vivo experiment is not mandatory, yet that does not weaken the substantive criticism that the paper's biological implications outrun the data. Addressing this gap would substantially strengthen the paper, so the item is Significant, and the evidence is Sufficient because the absence of such experiments is straightforward to verify. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "This item is correct: the paper surveys multimode-fiber imaging literature but does not cite the Papadopoulos and Turtaev works the reviewer names. A devil's advocate could treat this as a narrower related-work preference, so I can see experts differing on whether the omission is highly important or merely contextual. Still, adding those precedents would improve the paper's positioning, and the reviewer provides exact references, so the evidence is Sufficient. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The criticism is correct in substance: the manuscript does not contain any real biological recording, and its current evidence does not justify strong neuroscience-facing conclusions about in vivo performance. A devil's advocate could say there is still novelty in applying this demixing idea to short multimode fibers and to the miniscope concept, but that does not negate the real gap between the data and the broader claims. Because addressing that gap would materially improve the paper, I mark the item Significant. The reviewer points to the lack of biology and to prior work for context, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is correct: the paper gives only a limited phenomenological explanation of the spatial signatures and does not really connect them to propagating modes or fiber physics in a developed way. A devil's advocate could note that the paper does offer a geometric interpretation of ring size and orientation, but that is still not the more thorough physics explanation the reviewer asks for. Such clarification would strengthen the paper's core mechanism story, so I judge it Significant. The evidence is Sufficient because the reviewer points to a specific explanatory gap visible in the manuscript, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The item is correct: Figure 3 still uses selective excitation of only four fixed neurons and does not reproduce widefield excitation, neuropil fluctuations, or multiplane activity that would matter in real biological use. A devil's advocate can say the authors intentionally framed this as a more realistic intermediate step rather than a full in vivo mimic, but the reviewer is still right that stronger realism is missing. Because this limitation goes directly to the paper's practical claims, it is Significant. The evidence is Sufficient since the reviewer names the exact figure and the missing ingredients, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This criticism is correct: the paper does not discuss the theoretical relation between its short-fiber fingerprints and the tapered-fiber far-field signatures in prior work such as Bianco et al., nor does it clearly articulate the comparative advantage. A devil's advocate could argue that the experimental configuration is different enough that an extensive comparison is optional, but the missing context still weakens the novelty positioning. Because addressing it would improve both theory and related-work framing, I mark it Significant. The reviewer gives a specific prior paper and a concrete conceptual comparison, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main point is correct: the manuscript never quantifies the resolution limit in terms of the maximum number of distinguishable signatures or the minimal radial and angular separation needed for distinct fingerprints. A devil's advocate could say such a capacity analysis is ambitious for a first proof of concept, but it would still materially strengthen the method and define its limits. The evidence is Sufficient because the reviewer identifies a concrete missing theoretical characterization. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This item is correct: the manuscript does not systematically discuss z-plane dependence at the sample, even though source distance from the fiber tip should affect field of view, brightness, and signature shape. A devil's advocate could say the authors implicitly work in a near-contact geometry, but that still does not answer the reviewer's basic question about z sensitivity. Clarifying or calibrating that dependence would meaningfully improve the paper, so I judge it Significant. The evidence is Sufficient because the reviewer points to a specific absent dimension of the method, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The criticism is correct because the paper never shows whether sources at different z positions can still be demixed, even though that is an obvious practical question once z dependence is raised. A devil's advocate might label this as a natural extension rather than a necessary experiment, but it would still sharpen the method's practical limits and therefore is Significant. The evidence is Sufficient because the reviewer specifies the exact missing experiment. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Charitably read, the reviewer's core concern is correct: the paper does not clarify how increasing source distance from the fiber tip changes field of view and whether the effective xy coverage can exceed the core diameter. Uncharitably read, the item attributes to the paper a claim that the field of view stays constant and equal to the fiber diameter at any z, which the manuscript never actually states; it only says the FoV is expected to be slightly larger than the core when the fiber is almost touching the sample. I therefore keep my own label as Correct because the omission is real, but I think independent experts could split on correctness depending on which reading they adopt. The issue is Significant and the evidence is Sufficient, so I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The item is correct: the manuscript mostly studies fluorescence entering the short fiber from very simple near-tip conditions and does not analyze how tissue scattering before the fiber tip would scramble the input field from deep sources. A devil's advocate could note that the authors do acknowledge higher background and lower signal in real tissue, but that is not the same as addressing pre-fiber scrambling and source indistinguishability at depth. Because this limitation matters directly for the intended biological use case, I mark it Significant. The evidence is Sufficient because the reviewer points to a concrete missing physical confound, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This criticism is correct: the figures show traces with arbitrary units, and the paper does not clearly report a biologically interpretable fluorescence scale, minimal detectable variation, or whether realistic baseline fluorescence was included in the synthetic activity. A devil's advocate could argue that the goal was proof-of-principle temporal recovery rather than calibrated deltaF/F measurement, but the missing realism still limits interpretation. Because adding that information would materially strengthen the biological relevance of the validation, I mark it Significant. The evidence is Sufficient because the reviewer points to exact figure features and a concrete ambiguity, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The item is correct because the package and manuscript do not provide raw fluorescence videos or movie supplements for the key experiments. This would be useful supplementary material but would not substantially change the scientific case, so I mark it Marginally Significant; the argument for upgrading it to a major issue is weak. The absence is easy to verify from the materials, so the evidence is Sufficient. I therefore predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The main point is correct: the manuscript's strongest biological conclusions outpace what is actually demonstrated, since many-neuron, multiplane, widefield, real-activity recordings are not shown. A devil's advocate could say the venue recommendation itself is subjective, but the substantive criticism about unsupported scope is still valid and Significant. The reviewer identifies the exact gap between claims and demonstrated conditions, so the evidence is Sufficient. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is correct in substance: either the paper should narrow its claims to an optics proof of concept or it needs substantially more realistic biological validation to support its current framing. A devil's advocate could say the paper already signals some limitations, but the overall biological feasibility messaging still goes beyond the evidence. Addressing that mismatch would materially improve the paper, so I mark it Significant. The reviewer gives a clear diagnosis of the claim-evidence gap, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The criticism is correct: Figure 4e visually suggests an implanted-mouse application even though the actual data in that figure are single-bead radial-displacement measurements, and similar biological-readiness suggestions appear elsewhere in the text. A devil's advocate could say the panel is clearly presented as a concept illustration, but it still nudges the reader toward a stronger level of validation than the data support. Because reducing that mismatch would improve the paper's honesty and clarity, I mark it Significant. The reviewer cites a specific figure example, so the evidence is Sufficient, and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The main point is correct: the paper labels time axes in arbitrary units rather than real time, and it does not clearly explain the implication for exposure time or temporal realism. A devil's advocate could say this is merely a reporting omission, but for a method aimed at neural activity readout, real timing information matters, so some experts will treat it as more important than others. The evidence is Sufficient because the reviewer points to a visible feature of the figures and code. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The item is correct in substance because Section 2.2 still imposes artificial temporal patterns onto fixed tissue, so its added biological realism is limited compared with truly recording activity. A devil's advocate can fairly respond that the slice does add realistic cell morphology, tissue background, and labeled-neuron geometry relative to bead phantoms, so the section is not pointless. That makes the importance of the criticism debatable even though the underlying concern is real, and I still judge it Significant because better justification or stronger data would improve the paper. The section-level pointer is enough to verify the claim, so the evidence is Sufficient and I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This criticism is correct: Section 2.3 demonstrates single-bead miniscope sensitivity, but that leaves open how much it really tells us about realistic multi-source imaging conditions. A devil's advocate could say the section has a clear and legitimate hardware purpose, namely showing that a low-cost miniscope can detect short-fiber fingerprints at all. Even so, the reviewer is right that the connection to realistic imaging remains weak, which is Significant for the paper's MiniDART claims. The evidence is Sufficient because the section's actual content is easy to inspect, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The main point is correct: the supposedly physiological scenarios avoid realistic background fluorescence, appear very clean, and do not report key acquisition quantities such as exposure times and illumination intensities for the DMD experiments. A devil's advocate could note that the paper does acknowledge higher background in real brain tissue, but it does not then test or model that confound in any serious way. Because this gap affects the core biological interpretation of the method, I mark it Significant. The reviewer gives several concrete missing factors, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is correct: the paper does not evaluate robustness to sample motion or to bending of the multimode fiber, despite arguing for use in freely moving settings where such perturbations matter. A devil's advocate could say the authors rely on short-fiber rigidity as a conceptual mitigation, but that is not an actual perturbation test. The issue is therefore Significant for the claimed application. The absence of such robustness experiments is straightforward to verify, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This item is correct because the manuscript does contain noticeable language awkwardness, especially in the discussion, and copyediting would improve readability. A devil's advocate could say the reviewer should have given concrete examples, and I agree that the support is thin enough that a stricter expert might want more specific pointers. The issue is only Marginally Significant, since it is a writing polish concern rather than a substantive scientific defect. I therefore label the evidence Requires More but predict borderline expert disagreement on that axis, yielding correct_marginal_disagree_on_evidence.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_disagree_on_evidence"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The criticism is correct: the quoted discussion language makes the proposed future improvements sound easy or obvious even though they are not demonstrated in the paper. A devil's advocate could say this is mainly a wording issue, not a methodological flaw, so experts may differ on whether it deserves substantial weight. I therefore treat it as Marginally Significant, while recognizing that some meta-reviewers may upgrade it because the phrasing contributes to overclaiming. The exact quotation provides Sufficient evidence, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This item is correct: the discussion spends a great deal of space on future improvements and speculative extensions, while spending less time on hard limitations of the target in vivo application. A devil's advocate could frame this as an organizational or stylistic preference because some limitations are mentioned, so the importance of the issue is somewhat debatable. I still think addressing it would materially improve the paper's balance and interpretability, and the evidence is Sufficient because the reviewer points to the discussion as a whole. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The main point is correct: Figure 4e can easily be read as implying implanted-mouse recording data when the paper actually shows only a concept illustration and benchtop single-bead measurements. A devil's advocate could say the panel is explicitly schematic, but the risk of over-implying evidence is still real. Whether this is a major issue or a presentational fix is debatable, though I lean Significant because it affects how readers interpret the paper's evidentiary scope. The evidence is Sufficient because the figure is directly inspectable, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is correct: all validations are ex vivo or fixed-tissue demonstrations with DMD-imposed activity, while the paper nonetheless makes strong statements about single-source resolution for implantable fibers and possible freely behaving use. A devil's advocate could say the authors are careful to present a proof of concept and a future MiniDART concept, but the abstract and discussion still overextend beyond the demonstrated regime. Because narrowing that gap would materially improve the paper, the issue is Significant. The reviewer quotes the relevant claims and contrasts them with the actual experiments, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The criticism is correct: the practical method depends strongly on NMF rank choice, and the paper does not deliver a validated automatic procedure for real cases where the number of active sources is unknown. A devil's advocate can note that the supplement does discuss a fidelity-curve heuristic for rough rank estimation, but that is not a robust, fully operational rank-selection method for deployment. Since this limitation affects source counting and real-world usability, I mark it Significant. The reviewer cites both the manuscript and the broader NMF literature, so the evidence is Sufficient, yielding correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct: the paper's use of stable 'fingerprints' is only demonstrated under static benchtop conditions, with no perturbation tests for bending, micromotion, or temperature drift relevant to in vivo use. A devil's advocate could point to the authors' argument that short fibers are more rigid, but that remains a hypothesis rather than an experimental validation. Because stability under perturbation is central to the claimed calibration-free advantage, the issue is Significant. The reviewer gives precise textual support and named perturbations, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The criticism is correct: the reported averages and standard deviations are within single experiments across sources, not across independent experimental replicates, and the manuscript does not show multiple datasets or repeated preparations. A devil's advocate could say this is acceptable for a first proof-of-principle demonstration, but it still leaves reproducibility and boundary conditions undercharacterized. Addressing that would substantially strengthen the paper, so I mark the issue Significant. The reviewer points to the exact reported statistics and their interpretation, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is correct: the paper extrapolates to freely behaving mice without testing the central failure mode for that setting, namely time-varying fiber perturbations that would make the spatial fingerprints nonstationary. A devil's advocate could say the fingerprints in short fibers are more structured than fully developed speckles and may be more stable, but the manuscript does not actually measure that stability. Because this gap directly affects the headline application claim, it is Significant. The reviewer quotes both the paper's claim and its own acknowledgment of perturbation sensitivity, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The criticism is correct: the manuscript does not provide a robust blind procedure for choosing NMF rank, and the provided code explicitly sets rank from known ground truth source counts. A devil's advocate can point to the supplement's fidelity-curve discussion, but that remains a rough heuristic rather than a validated automatic method for unknown neuronal populations. Since rank choice is central to both counting and demixing, the issue is Significant. The reviewer cites manuscript text and code behavior, making the evidence Sufficient, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct: the shared code depends on external .mat input data that are not included in the package, so an independent reader cannot run the main analysis out of the box. A devil's advocate could say the code still shows the analysis logic, but the reproducibility criticism remains valid because the key results cannot actually be regenerated from the provided materials alone. Reproducibility is a substantive issue for a methods paper, so I mark it Significant. The reviewer points to the README and the load calls, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The core factual claim is correct: the paper does not benchmark unconstrained NMF against alternative blind-source-separation or calcium-imaging analysis approaches such as ICA, PCA, or CNMF variants. A devil's advocate could say a proof-of-concept paper is not obliged to prove NMF's superiority over every alternative, so experts may differ on how important the missing comparison is. I still think such comparison would strengthen the methodological case, and the evidence is Sufficient because the absence is easy to verify. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is correct: the manuscript claims a calibration-free route to freely behaving use while never testing whether the spatial fingerprints remain stable under the perturbations that matter in that regime. A devil's advocate could note that the paper argues short fibers are more rigid and thus more practical than long fibers, but that is still an unvalidated premise rather than an empirical demonstration. Because this missing perturbation/stability evidence directly affects the headline application claim, I mark it Significant. The reviewer quotes the relevant claims and connects them to the untested assumption, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The criticism is correct in substance: the paper's quantitative evaluation is limited to within-experiment correlation-style summaries and qualitative figure comparisons, with no true replicate analysis and no systematic mapping of failure modes such as low-SNR edge cases. A devil's advocate can point out that the manuscript does include GT-GT versus GT-NMF off-diagonal analyses and explicitly discusses bead #6, so the evaluation is not nonexistent; however, the reviewer's broader complaint that it is still not rigorous enough for the paper's strongest conclusions remains valid. Because strengthening the evaluation would materially improve the central claim of source retrieval, I mark it Significant. The item cites specific reported statistics and omissions, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct: the paper's source-counting story depends on choosing NMF rank and matching components, yet the practical procedure is underdeveloped and the shared code uses ground-truth source counts to set rank in the proof-of-principle analysis. A devil's advocate could say the supplement offers some heuristics for rough rank selection, but that does not close the operational gap for blind use on real data. Since this limitation affects both validity and deployability of the method, the issue is Significant. The reviewer supports it with both paper text and code excerpts, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The criticism is correct: the shared computational package is not independently reproducible as given because it requires absent .mat datasets, manual path editing, and even includes an example script that calls a normalization function not defined in the shared tools module. A devil's advocate could say the main proof-of-principle script is more self-contained than the toy example, but the broader reproducibility problem remains real. Because reproducibility is a substantive methods issue, I mark it Significant. The reviewer provides direct README and code-file evidence, so the support is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

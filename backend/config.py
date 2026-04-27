@@ -47,7 +47,6 @@ class Settings(BaseSettings):
     worker_poll_interval: int = 10
     review_models: list[str] = [
         "litellm_proxy/azure_ai/gpt-5.4",
-        "litellm_proxy/gemini/gemini-3.1-pro-preview",
     ]
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}

@@ -1,7 +1,7 @@
 """
 Shared loader for the PeerReview Bench HuggingFace dataset.
 
-Top-level entry points (used by analysis/, meta_review/, similarity_check/):
+Top-level entry points (used by analysis/, metareview_bench/, similarity_check/):
 
     load_annotations(annotator_source='both')      -> expert_annotation config
     load_meta_reviewer()                            -> meta_reviewer config
@@ -335,7 +335,7 @@ def load_meta_reviewer() -> List[Dict[str, Any]]:
         raise RuntimeError(
             f"Could not load `meta_reviewer` config from {DATASET_REPO} "
             f"({type(e).__name__}: {e}).\n\n"
-            f"The meta_review pipeline is HuggingFace-only — there is no "
+            f"The metareview_bench pipeline is HuggingFace-only — there is no "
             f"local fallback. The dataset must have been pushed upstream "
             f"before running any analysis script."
         ) from e

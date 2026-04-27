@@ -1,0 +1,347 @@
+{
+  "paper_id": 12,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out the absence of EVPA on Figure 2 and notes that without it, the polarization interpretation is questionable. The paper's text explicitly confirms that absolute EVPA calibration was not attempted. The core concern holds, making it Correct. This is a Significant issue because it affects the main physical interpretation of the magnetic field. The evidence is Sufficient as it points to Figure 2 and the authors' own admission. Experts would agree on these labels.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests that alternative interpretations for the J1 shock and jet morphology should be mentioned, proposing a few options. The paper focuses heavily on the termination shock model. Raising alternative interpretations is a valid, Constructive scientific critique, making it Correct. It is Significant because it broadens the physical context of the main findings. The evidence is Sufficient as the reviewer provides specific alternative scenarios based on the paper's own data. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer observes that the authors use the transverse speed of J2 when evaluating the shock properties at J1, and that their argument around Eq 13/14 is circular. Checking the paper confirms that the calculations do indeed apply J2's speed to infer J1's properties. This is Correct. It is Significant because it affects the derived physical properties of the shock. The evidence is Sufficient as the reviewer explicitly traces the logic and equations used in the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer questions the use of a monochromatic scaling relation for jet luminosity when a bolometric one would be more appropriate for a radio-peaked SED, and points out a different black hole mass estimate in Ref 27 (the reviewer wrote 25 by mistake). The underlying physics argument is Correct and the paper indeed uses a monochromatic relation. This is Significant because it changes the derived jet efficiency. The evidence is Sufficient, pointing directly to the equations and reference numbers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer discusses the bending of jets to the north and south of a central AGN relative to a cluster wind, and mentions a 'magnetic boundary layer', 'double-skythe morphology', and the BCG MRC 0600-399. None of these entities or structures appear in this paper, which is about the high-z blazar J0906+6930. The reviewer appears to have pasted a review for a completely different paper. Therefore, this item is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks about a second smaller radio source to the east of the BCG (galaxy B in Figure 1) and its relation to MRC 0600-399. Just like Item 5, this refers to a completely different paper and has no relevance to the provided manuscript. The factual premise is wrong, so it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer notes that the reference used for the radio SED peak (Zhang et al. 2017) drew its data from Romani 2006, and suggests citing the original paper. The paper does cite Romani 2006 as Ref 15, but uses Zhang et al. (Ref 16) for the peak frequency. The reviewer's core point about the literature provenance is Correct. This is a minor citation correction, making it Marginally Significant. The evidence is Sufficient, pointing to specific papers.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer claims that the Coppejans reference should be 2016, not 2017. However, the bibliography in the provided paper file already lists the Coppejans reference as 2016, and there is no mention of 'Coppejans 2017' anywhere in the text. Since the reviewer is complaining about a typo that does not exist in the provided source files, the factual premise is false against the paper. Thus, it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is a brief summary of the reviewer's overall impression, reiterating the need for EVPA estimates and clearer energetic arguments. As a summary of valid points, it is factually Correct. However, as it just restates previous points and offers general praise, it does not add new constructive criticism to improve the paper, making it Not Significant. The prediction matches.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that confidence intervals (e.g., 68% or 90%) for the errors are not specified. Checking the paper, the level of confidence for the reported errors is indeed not explicitly defined in the tables or text. This is a valid, Correct observation. It is Significant because interpreting the significance of the proper motion heavily depends on the confidence level of the errors. The evidence is Sufficient. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims that the paper says the positional errors are 10% and 5% of the FWHM for J1 and J2, respectively. A search of the paper reveals no such statement; instead, the paper provides a detailed formula for positional error based on SNR and beam size, and lists the calculated errors in Supplementary Tables. Since the reviewer's factual claim contradicts the provided paper, it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that measurement errors are not adequately propagated to derived quantities, citing proper motion as an example. While the paper DOES propagate proper motion errors to the Lorentz factor, it fails to propagate them to other key derived quantities like jet power and ISM density. Thus, the broader concern is Correct and Significant. However, because the reviewer's specific example (proper motion) was actually propagated correctly in the text, the evidence provided is weak and requires the meta-reviewer to locate the actual unpropagated quantities. Thus, Requires More.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims the bulk Lorentz factor is reported as '>3.3, only an upper limit'. However, the paper explicitly reports it as a measurement with error bars: 'Gamma = 3.6 +/- 0.5'. The reviewer's premise that it is reported as an upper limit is factually wrong against the text. Therefore, it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims that the authors assume a spectral index of 0 between 1.4 GHz and 15 GHz specifically for J1 and/or J2 to infer jet power. Checking the paper, the jet power is inferred from the monochromatic luminosity of the CORE, not J1/J2, and the alpha=0 assumption is explicitly stated for the core based on a spectral turnover. The reviewer's factual premise is false, making the item Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out that the empirical relation used to derive jet power has large uncertainties that need to be considered. The paper actually acknowledges this large scatter in the text, but does not formally propagate this uncertainty into the final jet power or ISM density bounds. The core concern (unpropagated large scatter) is Correct and Significant. The evidence is Sufficient as it references the specific calculation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer complains that the reported ISM density of '~65 cm^-3' is too precise and should be a limit. However, the provided paper explicitly reports the density as a limit ('n_e >= 26.6 cm^-3'). Since the paper already presents it as a limit and does not use the number 65, the reviewer's claim is factually false against the current version of the paper. Thus, Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer states that previous work showing the jet bending (Zhang et al. 2017) needs to be recognized where the paper mentions the >90 degree jet bending. However, the paper explicitly cites Zhang et al. 2017 (Ref 16) in the exact same sentence that introduces the jet bending. The reviewer is factually wrong, so this is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer quotes the text as saying 'a prominent X-ray emission (with a strong contribution from the disk)'. A search of the paper shows this phrase does not exist; the paper actually says 'A prominent disk emission is inferred from the modelling of the spectral energy distribution...'. Since the quote is fabricated or refers to an older draft, it is Not Correct against the provided files.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notices that the contours in Figure 1-e and Figure 2 are slightly different, even though the text (caption of Fig 2) claims they represent the same Stokes I intensity as Figure 1 panel e. This points out a valid internal inconsistency between the figures. It is Correct. It is a minor presentation issue, so Marginally Significant. The evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer claims that the authors used an average flux of 21 mJy for J1+J2 to infer parameters in the Methods section. However, the paper derives its parameters using the core flux density, not J1+J2, and the value '21 mJy' does not appear anywhere in the text. The factual premise is completely false, making it Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer claims the text says 'Employing equation (7) which reduces to...' above equation (8). A search of the paper reveals no such text. The reviewer is quoting something that is absent from the provided source files. Therefore, this is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests mentioning a recently detected jetted AGN at z=5.72 by Saxena et al. (2018). However, the provided paper explicitly cites Saxena et al. 2018 (Ref 28) and discusses TGSS J1530+1049 at z=5.72 exactly as the reviewer requested. Since the reviewer is asking for something that is already adequately present in the paper, the claim is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques a specific line of reasoning ('As jetted quasars seem to harbour heavier black holes...'), quoting it from 'page 1, row 19'. This quote is nowhere to be found in the provided paper. Instead, the paper's introduction uses the exact logic the reviewer suggests (Doppler-beamed emission makes them bright). Thus, the reviewer's premise is factually false against the current text. Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims that 'radio loudness' is a meaningless parameter and shouldn't be cited. A search of the provided manuscript confirms that 'radio loudness' is never mentioned. The reviewer is complaining about a feature that does not exist in the current source files. Therefore, it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests calculating the Doppler factor from radio variability, perhaps citing Liodakis et al. However, the paper already includes a detailed calculation of the Doppler factor from radio variability, explicitly computing T_B,var and finding delta_var = 4.8. Since the paper already does exactly what the reviewer asks, the criticism is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer criticizes the use of a relationship by Birzan et al. (2008) for jet power and suggests using Foschini (2014) instead. The provided paper does not use or cite Birzan et al. 2008; it already uses Foschini 2014 (Ref 59) to calculate the jet luminosity, exactly as the reviewer recommends. The reviewer's premise is factually false against the current paper, making it Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer criticizes the paper for using an old black hole mass estimate of ~10^9 M_Sun and suggests recalculating it using scaling relations that account for Doppler boosting, which would yield a much smaller mass. The provided paper already does exactly this, explicitly rejecting the old 4.2x10^9 mass and recalculating it to 4.4x10^7 M_Sun using Doppler-corrected relations. The claim is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly notes that the authors infer a shock-compressed magnetic field model based on the EVPA pattern, despite acknowledging that absolute EVPA calibration was not performed. Without this calibration, the absolute orientation of the magnetic field is unknown, making the physical inference unsupported. This is a very standard and Correct physics argument. It is Significant as it challenges a core interpretation of the polarization data. The evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer observes that the paper derives two different Doppler factors (6.1 and 4.8) but only uses the higher one for downstream calculations without propagating the ~27% discrepancy into the uncertainties. Checking the paper confirms this is exactly what happens. This is Correct and Significant because the choice of Doppler factor affects the derived Lorentz factor and the jet's physical characterization. The evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that the negative proper motion of J1 (-0.006 +/- 0.004 mas/yr) has low statistical significance (1.5 sigma) and shouldn't be strongly interpreted as physical inward motion or primary evidence for jet-ISM interaction. The paper does indeed use this low-significance result as key evidence. The reviewer's statistical argument is Correct and Significant for the robustness of the kinematics. The evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer critiques the ISM density estimate, noting that the jet luminosity calculation relies on empirical relations with huge scatter (factor of 100), yet this massive uncertainty is not propagated to the final density limit. The text confirms that while the scatter is acknowledged, the final density is presented as a firm lower bound without error bars. This is Correct, Significant, and supported by Sufficient evidence quoting the exact equations.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes an internal inconsistency: the proper motion mu(R) for J1 is reported as a negative value (-0.006), but the table's footnote defines it as the Euclidean norm (square root of sum of squares), which must be strictly non-negative. This is mathematically Correct. It is Significant because it indicates an error in data reporting or calculation. The evidence is Sufficient as it quotes the exact table entry and footnote.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that interpreting the uncalibrated EVPA as a shock-compressed magnetic field is baseless because the absolute orientation is unknown. This is the exact same valid physical critique raised by other reviewers. It is Correct, Significant (addresses the main polarization claim), and supported by Sufficient evidence quoting the paper and standard VLBI practices.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims that the authors use the 1.5 sigma non-detection of J1's proper motion to derive the low Lorentz factor. However, the paper explicitly derives the Lorentz factor from the 2.5c proper motion of component J2, not J1. The reviewer's factual premise is objectively false against the text. Therefore, it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the conclusion in the abstract about a 'transition from an accretion radiative power to a jet mechanical power' is highly speculative given it is based on a single object, and alternative explanations (like a misaligned jet) are not ruled out. This is a standard, valid scientific critique of an overgeneralized conclusion. It is Correct, Significant, and Sufficiently supported by the paper's own limited scope. Experts would generally agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer thoroughly dissects the paper's jet/Eddington luminosity ratio, demonstrating that the stated value (~0.004 or ~0.02) is mathematically irreconcilable with the actual jet and Eddington luminosities reported in the text (which yield either ~4.9 or ~0.0038 depending on the chosen L_jet). This is a Correct and highly Significant catch of a major internal inconsistency. The evidence is Sufficient, clearly walking through the math.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer critiques the robustness of the parsec-scale kinematics, noting the low significance of J1's motion and the assumption of a stationary core despite explicit text admitting core blending and structural variability. The logic is flawless and correctly maps to the paper's stated methodology and data. It is Correct, Significant (questions the reliability of derived parameters), and Sufficiently evidenced.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that the inference of a dense ambient medium is highly model-dependent and uses uncertain, internally inconsistent inputs (like L_jet) without propagating those uncertainties to the final lower bound on density. This is a Correct and precise critique of the error analysis. It is Significant because the dense medium is a central conclusion, and the evidence provided is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer criticizes the EVPA-based physical interpretation of a shock-compressed magnetic field, noting that without absolute calibration, the EVPA is subject to an arbitrary global rotation, rendering orientation-dependent claims unsupported. This is Correct, Significant, and Sufficiently evidenced, perfectly echoing the physics-based concerns of other reviewers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

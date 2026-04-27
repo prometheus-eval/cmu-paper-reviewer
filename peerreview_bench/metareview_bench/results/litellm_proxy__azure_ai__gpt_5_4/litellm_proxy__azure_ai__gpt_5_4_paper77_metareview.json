@@ -1,0 +1,206 @@
+{
+  "paper_id": 77,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper never tests a benzene pi-component and does not discuss whether the cyclopropyl series might also undergo competing ring-enlargement or 1,2-migration pathways, so the item is understandable as a request for broader scope and mechanistic discussion. I judge it Significant because resolving those questions would materially sharpen both the substrate scope and the mechanistic picture. The prosecution is that the reviewer bundles two speculative extensions and the paper is not obligated to explore every possibility; that pushback is plausible for importance, but it does not make the core concern false. The evidence is borderline but ultimately Sufficient because the criticism points to specific absences that can be checked against the reported scope and mechanism, although some experts would want a tighter citation. I therefore predict correct_significant_disagree_on_evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the SI really contains the typo wittig regent, so this is a factual and clearly stated correction. It is Marginally Significant because fixing it improves polish and professionalism but not the chemistry or conclusions. A devil's-advocate downgrade to Not Significant is possible, but keeping one concrete typo correction in a review is still reasonable. The evidence is Sufficient because the reviewer names the exact erroneous phrase. I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the nucleophile-capture chemistry is shown only for cyclopropyl substrates, so asking whether direct capture is possible from a quaternary propargylic center is a fair missing-scope and mechanistic probe. I lean Significant because answering it would clarify whether ring strain is essential or whether the reaction generalizes beyond cyclopropane ring opening. The prosecution is that this reads more like a future direction than a flaw in the present manuscript, and that counterargument is plausible. The evidence is Sufficient under the benchmark's rule for specific absences, since a meta-reviewer can verify that only the cyclopropyl series is studied for the alpha-C-C cleavage manifold. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: Figure 4a and the text show loss of the original deuterium label, but the paper only concludes that intramolecular 1,2-hydride shift is not involved and does not explain where the deuterium ultimately goes. I judge it Significant because that missing interpretation weakens the mechanistic discussion centered on the labeling study. A skeptic could say the key conclusion is simply that a 1,2-hydride shift is excluded, so the exact fate of D is secondary; that downgrade is possible but not very persuasive because the labeling result is the main mechanistic evidence presented. The evidence is Sufficient because the reviewer points to a specific deuterated experiment that can be checked in Figure 4 and the corresponding text. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper does not report a diastereomeric ratio for the substrate-3 series, and although the SI includes an X-ray report for 3a, it does not clearly state whether the substrates are single diastereomers or how broadly that assignment applies. I lean Significant because substrate stereochemistry affects interpretation of later stereochemical claims and reproducibility. The prosecution on correctness is plausible in part: 3a's X-ray data do provide some configurational confirmation, so the reviewer slightly overstates what is missing, but the absence of explicit dr reporting keeps the broader concern valid. On significance, some experts would still treat this as a characterization detail rather than a central flaw. The evidence is Sufficient because the missing dr and configuration reporting for substrate 3 is directly checkable in the paper and SI, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Not Correct: the main premise that using NaOAc should generate NaOH as a side product is not supported by the mechanism or stoichiometry described here, where acetate is incorporated as the nucleophile into product 4a. A charitable reading is that the reviewer is really worried about the effect of acetate/basic conditions on yield and wonders whether AcOH could also work, but that softer concern is not what the item actually asserts. Because the factual premise is wrong, significance and evidence are null. I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the DDQ transformation in Figure 3b is only briefly rationalized, so asking for a fuller explanation of the observed chemoselectivity is a fair criticism. I treat it as Significant because this is the only discussion of why oxidation gives 4a-2 rather than the anticipated cycloazine, so better explanation would improve the synthetic interpretation. The prosecution is genuinely plausible here: the manuscript does already say the selectivity may arise from stabilization of a tertiary radical adjacent to phenyl and oxygen, so some experts may judge the issue already addressed. The evidence is Sufficient because the reviewer points to a specific DDQ result in Figure 3b and its thin explanation in the text. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the manuscript infers that water in the medium is the proton donor, but the standard procedure does not specify any deliberate water content or how much adventitious water is tolerated. I lean Significant because that missing detail matters for both mechanistic interpretation and reproducibility of a protonation-dependent cascade. The prosecution is that the reaction may simply rely on trace ambient moisture and not require controlled water amounts, which makes the practical importance debatable. The evidence is Sufficient because the reviewer identifies a concrete missing procedural detail tied to the D2O-control conclusion. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: the scope demonstrates heteroaromatic pi-components such as thiophene, benzofuran, and indole, but it does not test a benzene analogue, so the request to investigate that limitation is grounded in the paper. I lean Significant because a benzene example would clarify whether the method extends beyond more activated heteroaromatics. The prosecution is that this is an extra scope experiment rather than a defect in the demonstrated chemistry, so some experts would downgrade its importance. The evidence is Sufficient because the absence of a benzene example is directly verifiable from the reported scope. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Correct: Figure 4a is labeled as a deuterated experiment of substrate 1a', and the reviewer is fairly pointing out that this is really a reaction using a deuterated substrate rather than a generic deuterium experiment. I judge it Marginally Significant because it is a wording and labeling cleanup that improves precision but not the substance of the mechanistic result. A devil's-advocate downgrade to Not Significant is possible, but the requested change is still concrete and useful rather than pure noise. The evidence is Sufficient because the reviewer names the exact figure label. I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper presents 8pi electrocyclization and metal-carbene formation as central features, yet the mechanistic evidence is limited to labeling controls and a plausible scheme, with no computational comparison or other discriminating support against alternatives. I judge this Significant because the mechanism is part of the paper's headline contribution, not a peripheral aside. The prosecution is that DFT is not mandatory in every synthetic methodology paper and the authors sometimes hedge with words like speculated and plausible, but that does not remove the under-support of the mechanistic claims as written in the abstract and conclusion. The evidence is Sufficient because the reviewer quotes the key mechanistic passages and identifies the specific missing support. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the manuscript invokes an 8pi electrocyclization but never discusses the stereochemical implications of that pericyclic step or relates the proposal to any expected conrotatory behavior. I judge it Significant because such analysis would strengthen the credibility of the mechanistic assignment. The prosecution is plausible, though: later protonation and isomerization steps may erase or obscure stereochemical information, so the reviewer's Woodward-Hoffmann framing may overstate what the observed products can actually diagnose. The evidence is Sufficient because the reviewer cites the exact mechanistic claim and the absence of corresponding stereochemical discussion. I therefore predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Not Correct: Figure 2 shows the pharmaceuticals acting as complex nucleophiles in the reported transformation itself, so they are being derivatized at a late stage rather than pre-installed on the substrate before the key step. A charitable defense is that some experts use a narrower definition of late-stage functionalization and might dislike calling this conjugation-style derivatization LSF, but the review item's core factual premise about what the paper does is wrong. Because the main factual claim fails, significance and evidence are null. I predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the deuterated-substrate and D2O experiments address hydrogen-source and protonation issues, but they do not directly distinguish the proposed 8pi electrocyclization from other possible cyclization pathways. I judge it Significant because the paper's central mechanistic narrative depends on more than just ruling out a 1,2-hydride shift. The prosecution is that the authors only claim a plausible catalytic cycle rather than definitive proof, but the abstract and conclusion elevate the mechanistic proposal enough that the criticism still lands. The evidence is Sufficient because the reviewer points to the exact experiments and explains what mechanistic question they do and do not answer. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Correct: the paper clearly reports opposite catalyst preferences for the two divergent pathways, but explains that reversal only with a vague reference to subtle differences in reactivity. I judge this Significant because understanding why CuTc favors alpha-C-H cleavage whereas Ag3PO4 favors alpha-C-C cleavage would materially strengthen the mechanistic story and practical use of the method. The prosecution is that a synthetic methodology paper can report empirically optimized conditions without fully explaining them, yet that defense is not very persuasive here because catalyst-controlled divergence is one of the paper's main claims. The evidence is Sufficient because the reviewer cites the exact catalyst and result passages from both sections. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the SI table of substrate identities and the later characterization entries for 1d and 1f do not match, creating real ambiguity about which compounds were prepared. I judge this Significant because these inconsistencies directly affect reproducibility and the ability to trust the scope table. The prosecution is weak: this could be a transcription mistake rather than a chemistry mistake, but even as a documentation error it remains a substantive problem. The evidence is Sufficient because the reviewer gives the exact conflicting assignments for 1d and 1f. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the paper makes a strong mechanistic claim about 8pi electrocyclization but does not provide computational or kinetic evidence that specifically validates that pathway over alternatives. I judge this Significant because the mechanism is advertised as a key feature of the work. The prosecution is that the reviewer's aside about what 8pi electrocyclizations typically yield is somewhat overgeneralized, but the main criticism, insufficient support for the specific 8pi assignment, still holds. The evidence is Sufficient because the reviewer quotes the mechanistic claims and the limited deuterium experiments used in support. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the paper uses alpha-C-H bond cleavage and alpha-C-C bond cleavage as umbrella labels even though the mechanistic proposal itself describes more specific steps such as deprotonation and cyclopropane ring opening with nucleophilic substitution. I lean Marginally Significant because this is chiefly a terminology and clarity issue, but it still affects how readers interpret the core mechanism from the abstract and title. The prosecution is that the current labels are concise shorthand commonly tolerated in synthetic papers, so some experts will see this as a stylistic nit while others will see it as a meaningful mechanistic clarification. The evidence is Sufficient because the reviewer quotes the relevant phrases and the more detailed mechanistic description they allegedly obscure. I therefore predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Correct: the paper uses the deuterated-substrate and D2O experiments to support a detailed 8pi-electrocyclization to metal-carbene to bond-cleavage narrative, but those experiments do not uniquely validate those specific intermediates and steps. I judge it Significant because the mechanism is framed as a central conceptual contribution. The prosecution is that the authors sometimes hedge their mechanism as speculated or plausible, yet that hedge is undercut by the abstract and conclusion, which present the sequence as a key characteristic. The evidence is Sufficient because the reviewer cites the exact mechanistic claims, the actual isotope experiments, and the missing discriminatory data types. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Correct: the abstract claims stereo-controlled late-stage modification, but the paper reports only yields and standard characterization for 4t to 4x, not dr or er or an explicit stereochemical assignment for the late-stage examples. I judge this Significant because stereochemical control is a substantive performance claim, especially in medicinal-chemistry-oriented late-stage derivatization. The prosecution is that some stereochemistry may simply be inherited from chiral starting pharmaceuticals or implied by drawn structures, but that is not enough to substantiate a stated stereocontrol conclusion. The evidence is Sufficient because the reviewer points to the exact claim and the absence of stereochemical outcome reporting in the paper and SI. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Correct: the main text and Methods use CuTc, whereas the SI general procedure and gram-scale procedure use CuTe, so the catalyst identity is genuinely inconsistent. I judge it Significant because catalyst identity is core experimental information for reproducing the paper's highest-yielding transformation. The prosecution is weak: this may just be a typographical error, but even then the ambiguity materially affects replication until corrected. The evidence is Sufficient because the reviewer quotes the inconsistent passages directly. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Correct: the provided checkCIF reports for at least 2z and 3a explicitly say structure factors were not supplied, so the crystallographic evidence cannot be fully validated from the materials given. I judge this Significant because the paper uses X-ray structures as anchors for assigning key scaffolds and related products by analogy. The prosecution is that the structures may still be valid and the missing factors could exist in a separate deposition not reproduced here, but the reviewer only claims that the evidence as provided is incomplete, and that is true. The evidence is Sufficient because the reviewer cites the exact checkCIF message and the structural role those exemplars play in the manuscript. I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

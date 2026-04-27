@@ -1,0 +1,71 @@
+{
+  "paper_id": 69,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's transposon-based predictability claim is central, yet the manuscript reports only selected superfamily correlations and limited genotype-level detail in the narrative. Requesting fuller occupancy summaries and broader correlation reporting is therefore a valid substantive concern, but the reviewer does not identify exact omitted analyses or figures, so the support is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The quoted phrase about the \"frequency of occurrence of fruit number\" is awkwardly written, and the paper later defines fruit number as silique count rather than seed amount. The reviewer's core point is a small wording clarification, supported by the exact quoted text.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript's statement that DEG counts can be \"predicted\" by transposon abundance comes from regression/correlation analyses, so asking for the safer word \"correlate\" is a fair phrasing refinement. This is a valid but mainly presentational point, and the reviewer quotes the exact sentence at issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript already explains the seven-generation design: two pre-experimental generations were used to remove seed collection/storage effects, followed by the ancestral generation and four offspring generations assessed in Test I and Test II. Because that rationale is stated explicitly in Fig. 1 and the Methods, this criticism does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "As written, this item assumes that F1-F4 seeds were pooled together for Test II, but the paper says the four offspring generations were grown together, not pooled together. A charitable reader could interpret this as a request for more detail on Test II seed handling, but the stated premise is shaky enough that correctness is genuinely debatable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Because the paper's main interpretation centers on transposons as mediators of stress-induced heritable change and evolutionary novelty, asking for a broader discussion of transposons in evolution is a legitimate substantive suggestion. The manuscript already touches this theme, but the reviewer gives no specific missing references or precise gap, so the evidentiary support is weak.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript makes a central mechanistic claim about stress-induced heritable variation being mediated by transposable elements, yet it does not cite any of the specific papers listed here on stress-triggered transposon activation and heritable phenotypic variation. Adding these named references would materially strengthen the paper's context, and the reviewer provides exact citations that make the point easy to verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

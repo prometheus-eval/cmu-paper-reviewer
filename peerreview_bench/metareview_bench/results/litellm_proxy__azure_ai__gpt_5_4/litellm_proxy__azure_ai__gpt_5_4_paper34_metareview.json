@@ -1,0 +1,227 @@
+{
+  "paper_id": 34,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Not Correct because the paper and supplement explicitly include a series resistance term (R1) in the impedance fits, so a Nyquist plot from ion-blocking pellet measurements need not start at the origin. The offset in Figure 4c therefore does not by itself show that the impedance analysis is wrong. A charitable expert could still read the item as mainly flagging unresolved grain-boundary or contact contributions in low-density pellets, which is a real concern elsewhere in the review. Because that broader reading is plausible even though the explicit origin-based argument is flawed, I predict disagreement_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Correct because the paper's bridge-between-theory-and-experiment claim does depend on the conductivity comparison, and that comparison is weaker than the manuscript language suggests. However, the item is written mostly as an acceptance recommendation ('I cannot recommend') rather than as concrete, actionable feedback, so I mark its significance as Not Significant as written. A devil's-advocate expert could reasonably upgrade the importance because the underlying concern about the key claim is substantive and central to the paper. That makes disagreement on significance more likely than disagreement on the basic factual premise, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct and Significant because the simulations are for bulk crystal transport while the experiments extract total pellet conductivity, and the supplement shows low pellet compacity plus composition-dependent equivalent circuits. Discussing grain boundaries, separating arcs at lower temperature, and comparing microstructures would materially strengthen the theory-experiment link. A devil's-advocate expert might say the paper already labels the measured quantity as total conductivity and only seeks qualitative agreement, but that does not remove the confound. The reviewer identifies the missing factors and why they matter, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct and Significant because the paper explicitly states that only Na ions hop while Si/P/O are fixed, so any coupling to polyanion rotations is outside the model. Since the discussion extends the framework to other mixed-polyanion sulfides, asking the authors to state that limitation would genuinely improve the scope claims. A skeptic could argue that the reviewer does not show paddle-wheel physics is actually active in NASICON itself, but the item is framed as a limitation question rather than a false assertion about the present results. The fixed-framework assumption is specifically identified, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I lean Correct because the paper parameterizes migration barriers from static DFT/NEB calculations and then compares transport across 373-573 K, so a discussion of temperature transferability and Arrhenius assumptions would be useful, especially near the phase transition. The concern targets a real modeling limitation rather than a made-up omission. Still, a skeptical expert could say this is standard practice in lattice kMC and that the paper does not directly compare raw 0 K NEB barriers to experiment without finite-temperature kMC rates. Because that prosecution is plausible, I expect disagreement on correctness despite the item's substantive importance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "I judge this item Correct and Significant because the paper uses 1500 K-generated disordered structures for kMC, reports only Le Bail fits experimentally, and still makes a strong phase-purity claim. Asking for discussion of cooling and ordering effects plus fuller structural refinement would materially improve both the experimental validation and the comparison to the simulations. A devil's-advocate expert could say high-temperature disorder is part of the authors' intended synthesis picture and that Le Bail is enough for lattice constants, but that does not resolve Na-site occupancy or impurity quantification. The item points to the synthetic temperature choice, the fitting method, and the impurity or phase-purity issue, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is Correct and Significant because the paper does not provide the full structural parameters or symmetry of the quenched models used for diffusion calculations, even though phase symmetry and Na-site occupancies are central to the NASICON transport story. Adding those details would improve reproducibility and help readers interpret the model relative to the monoclinic-rhombohedral transition. A skeptic could say the main text already gives enough high-level model information, but the specific model structures are still not recoverable from the paper alone. The reviewer clearly identifies the missing information, so the evidence is Sufficient and I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "I judge this item Correct and Significant because the paper's mechanistic explanation relies partly on larger Si-rich migration units, yet it does not actually show a quantitative window-size analysis. Providing that geometric correlation would make the mechanistic argument more convincing, not just cosmetically different. A devil's-advocate expert might say the longer Si-O bond argument is already enough qualitatively, but a direct window metric would still strengthen the paper. The missing analysis is precisely identified, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This item is Correct because the abstract reports the headline conductivity without stating the temperature, even though the measurements span 323-623 K and the manuscript itself shows phase-dependent Arrhenius behavior. Clarifying the temperature would materially improve how readers interpret the performance claim, while the separate objection to calling the conductivity high is more debatable. A devil's-advocate expert could downgrade this to a presentation nit because the temperature can be inferred later in the paper and high is somewhat subjective. Because the fact is clear but the importance is debatable, I predict correct_disagree_on_significance; the cited abstract omission makes the evidence Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "I lean Correct because the local discussion near the end does emphasize Si-for-P substitution as the driver of conductivity, and a reminder about the coupled change in Na stoichiometry and carrier concentration would make that passage more balanced. However, the broader manuscript already discusses vacancies, carrier concentration, and the x ~ 2.4 optimum extensively, so a skeptical expert could say the paper has already covered this point. That makes the factual premise borderline: the omission is real locally but not globally. Because both readings are plausible, I predict disagreement_on_correctness; if accepted, the issue is only Marginally Significant and the evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Correct because calling 0.1 versus 0.2 S/cm excellent agreement is arguably overstated; the reviewer is accurately pointing out a factor-of-two gap in the quoted numbers. The issue is real, but fixing it would mostly temper the rhetoric rather than change the underlying result. A devil's-advocate expert could still see the agreement as excellent by solid-electrolyte standards given the spread in experimental conductivities and the bulk-versus-pellet mismatch. That makes significance debatable, so I predict correct_disagree_on_significance; the numerical evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Not Correct because the paper only states a convergence threshold of 0.29 GPa for the optimized endpoint structures, and the reviewer's claim that it normally should be 0.05 GPa or less is presented as a universal rule without support. Whether 0.29 GPa is too loose here depends on domain conventions and the broader DFT setup, not on an obvious factual error from the paper alone. A charitable expert could still view the stress tolerance as worryingly high and therefore see the concern as valid. Because that defense is plausible even though the item overstates the standard, I predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct and Significant because the paper explicitly labels the kMC output as bulk conductivity while the supplement says the experiments extract total conductivity from porous pellets and fit them with composition-dependent circuits. Low compacity values and non-separated grain-boundary or contact contributions make a direct quantitative comparison methodologically shaky. A devil's-advocate expert could say the authors only claimed broad agreement, but the text does say the measured value is in excellent agreement with the computed one. The reviewer points to the relevant quotes, Table S6 compacity, and the fitting procedure, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct and Significant because the experimental section explicitly reports a monoclinic-to-rhombohedral transition for x = 2.0 and x = 2.4 around 433 K, while the computational setup uses a single high-temperature lattice picture with frozen framework atoms. That mismatch is especially problematic at 373 K, where the experimental samples are below the transition yet the model still uses the same transport network. A devil's-advocate expert could argue that the authors mainly seek qualitative composition trends and that the high-temperature structure may approximate the disorder, but the phase mismatch remains a serious caveat. The item cites the relevant structural and Arrhenius passages precisely, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I see a real concern here, so I lean Correct: the paper uses a fixed attempt frequency that directly sets absolute rates, and it does not provide a sensitivity analysis for how that choice affects conductivity. However, the item overstates the problem by saying the paper gives no justification or acknowledgment; the supplement explicitly defines the kMC rate expression and states that v* is taken as 5 x 10^12 Hz. A skeptical expert could therefore call the criticism factually wrong, while a charitable expert would focus on the missing uncertainty or sensitivity treatment. Because both readings are plausible, I predict disagree_on_correctness; if accepted, the issue is Significant and the evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct because the paper computes transport across 11 compositions but experimentally validates only three, all in the high-conductivity regime. Broader experimental coverage would strengthen the full composition-property map, especially since the paper itself emphasizes large variability across prior reports. A devil's-advocate expert could still downgrade the importance because the authors supplement their three measurements with literature comparisons at the low-conductivity end and do not need to synthesize every composition to make the main trend credible. The factual premise is clear and well supported by the quoted composition counts, so I predict correct_disagree_on_significance; the evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "I judge this item Not Correct because the paper's averaged transport figures show the peak conductivity near x ~ 2.4, and the reviewer's code-based counterclaim appears to rely on selective run outputs rather than the averaged 50-configuration results reported in the paper. The snippet in the review is not enough to establish that the published trend is contradicted rather than that one structure or one run behaves differently. A charitable expert could still worry about reproducibility if the shared code is hard to reconcile with the paper, but the specific factual claim that the model actually peaks at x = 1.8 does not hold up from the paper evidence. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I judge this item Not Correct because the paper's reported theoretical conductivity is an averaged publication result, whereas the reviewer's quoted code output is just a specific run value and does not by itself show the paper misreported the model. The paper and supplement clearly present conductivities near the optimum on the order claimed in the manuscript, so a single lower code output is not enough to falsify the published statement. A charitable expert could still see a reproducibility concern in the shared code package, but that is weaker than the review's assertion of a direct two-order-of-magnitude contradiction. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is Not Correct because the abstract says the highest conductivity was achieved in the studied compositions, not that 0.1 S/cm is a record for all NASICON literature. The reviewer treats highest ionic conductivity as a universal record claim, which is not what the sentence actually says. A charitable expert might still think the wording could be misread or better qualified by temperature, but the specific factual criticism against the paper's claim does not hold. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Not Correct because the paper's simulation-time claim refers to the overall published kMC campaign, and the supplement shows total simulated times varying strongly with composition and temperature, reaching the millisecond regime or beyond for slower-diffusing cases. The reviewer's extrapolation from one reported run configuration or one output example does not refute that broader statement. A charitable expert could still note that some individual high-temperature runs are only in the microsecond range, but that is not inconsistent with the paper's aggregate claim. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This item is Correct and Significant because the paper itself calls the kMC result a bulk conductivity and the experimental section says it extracts total ionic conductivity from sintered pellets. With 69-77% compacity and composition-dependent circuit models, the experimental values are not clean bulk references for a direct numerical validation of the simulations. A devil's-advocate expert could say the authors only aim for approximate agreement, but the prose goes further and presents the agreement as a strong bridge between theory and experiment. The reviewer quotes the relevant paper text and pellet table, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is Correct and Significant because the experiments explicitly span a monoclinic-to-rhombohedral transition while the computational model uses a fixed lattice and event network with a frozen host framework. That means the low-temperature mechanistic comparison, especially around 373 K for x = 2.0 and 2.4, is structurally mismatched to the experimental state. A devil's-advocate expert could argue that a single-lattice kMC may still capture broad trends, but it cannot fully justify temperature-dependent mechanism claims across the phase boundary. The paper and code passages are specific enough to verify this directly, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "I judge this item Correct because the abstract gives a headline conductivity value without a temperature qualifier, even though the measurements are highly temperature dependent and the paper discusses a phase transition near 433 K. Adding the temperature would materially improve interpretability of the main performance claim. A devil's-advocate expert could still downgrade this as a presentation issue because the temperature context appears later in the paper and the criticism does not challenge the underlying data. Since the fact is clear but the importance is debatable, I predict correct_disagree_on_significance; the evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is Correct and Significant because the paper makes a strong detectability conclusion (cannot be used to identify) while supporting it mostly with a qualitative statement that a one-order-of-magnitude dip is within the error. The paper mentions a grey confidence band but does not define that uncertainty carefully enough to justify such a broad negative inference, especially one extended beyond NASICON. A devil's-advocate expert could say the authors are only offering a practical caution rather than a formal impossibility theorem, but the written conclusion is still stronger than the quantified support. The review item points to the exact claim and the missing uncertainty treatment, so the evidence is Sufficient; I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "paper_id": 48,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Fig. 3 shows delayed, heterogeneous FoxP2 responses, and the paper only offers a thin schematic explanation of input pathways in Fig. 7 rather than really discussing that mechanism. Because some discussion exists but does not address the latency/heterogeneity well, the concern is valid overall but borderline enough that experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points to concrete readability problems across Figs. 1\u20136: tiny or inconsistent fonts, crowded layouts, unreadable screenshot-style panels in Fig. 3, and bar plots in Fig. 1 that hide the raw data. Those issues are plainly visible and materially hinder understanding of key results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript does mix forms like s/sec, 20 Hz/20Hz, and inconsistent figure-callout punctuation and spacing. That is a real but mainly editorial issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "CGRP appears before it is expanded in the main text/abstract. That is a valid terminology nit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The introduction describes ventilation as increasing during an apnea, but apnea is cessation of airflow; the paper is really talking about increased respiratory effort. That is a genuine scientific wording problem, though some experts may view it as only a wording fix rather than a major issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Fig. 1 uses SEM bar charts despite very small n, so asking to show the individual points is a valid transparency improvement. Some experts will see this as an important presentation fix, while others will see it as more of a stylistic preference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer flags a missing figure number/callout, and the manuscript does contain several callout inconsistencies and omissions. This is a credible minor correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Fig. 2 really does use small, busy, inconsistently formatted axes and fonts, making the main time-course plots harder to read. Because these figures carry central results, this is an important presentation problem.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer identifies repeated figure-callout punctuation/spacing inconsistencies. That is real but editorial.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The traces in Fig. 4 are labeled Minute Volume even though the paper otherwise treats MV as minute ventilation. That labeling should be corrected.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer flags a missing P= in a statistics statement. This is a minor but valid reporting/copy-edit issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The manuscript contains the referenced spelling problem also noted by another reviewer. This is a minor typo.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The sentence about individual-cell activity peaks belongs with the cell-activity panel rather than Fig. 3f, which plots summed respiratory traces. The reviewer\u2019s callout correction is valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "CTb is used in the main text before its expansion appears in the figure legend. Adding the definition in the narrative would improve readability.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper repeatedly claims PB FoxP2 neurons are required for the normal CO2 ventilatory response, but ArchT mainly affects VT and MV and has little effect on RR, so the necessity claim is stronger than the loss-of-function data directly support. The reviewer is right about the overstatement even if ablation is one possible rather than strictly mandatory experiment.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The abstract/discussion assert that activating CGRP neurons has little respiratory effect, but this paper provides no respiratory CGRP-activation data and does not clearly substantiate that premise internally. Since the claimed double dissociation leans on that premise, the criticism is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "FoxP2 photostimulation caused arousal in 70% of trials, so the study does not support a perfectly clean respiration-only interpretation; at minimum that weakens the double-dissociation claim. The reviewer directly grounds this in the reported arousal result and in the absence of direct CGRP/FoxP2 latency comparisons.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer reports missing supplemental material, and in the supplied paper package there is no supplementary directory at all. A complaint that key supplementary figures are unavailable is therefore well founded and important for evaluation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper pools FoxP2 neurons across PBcl, lateral crescent, and KF despite acknowledging heterogeneous FoxP2 populations and functions. That specificity concern is substantive because it affects what the manipulations actually show.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The authors validate the FoxP2-Cre line qualitatively with phrases like nearly all and eutopic, but they do not report counts or proportions of reporter-positive versus FoxP2-immunoreactive cells. Because all downstream experiments rely on that specificity, the concern is correct and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "For the claimed FoxP2/CGRP overlap, the paper uses Calca mRNA plus a FoxP2 Cre-reporter, which does not directly establish adult coexpression in the same way a true Foxp2/Calca or FoxP2/CGRP co-label would. That is a legitimate identity/interpretation issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript does not functionally separate PBcl/lateral crescent from KF FoxP2 neurons even though the reviewer plausibly argues these groups may differ. The concern is real, but the item leans more on broad field context than on tightly specific support inside the review text.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The calcium responses are delayed by about 10 s, and the paper does not really explain whether this is expected or mechanistically informative. That is a valid interpretive gap, but the reviewer offers only a broad expectation rather than a tightly supported standard.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper explicitly claims extensive medullary projections while citing prior Foxp2 PB anatomy papers, so asking the authors to reconcile their interpretation with those cited studies is reasonable. The reviewer names the discrepancy and points to the relevant lines and cited literature.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The methods sentence says staining was absent when the primary antibodies were omitted; as written, that is internally awkward/nonsensical and should be corrected. This is a valid minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "A probability of error of less than 0.05 was considered significant is not a correct description of p-values or alpha. The reviewer is right that this statistics sentence should be rephrased.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The abstract phrase second group of non-CGRP neurons is grammatically confusing and can mislead readers about what is being counted as the first group. This is a real clarity issue but mostly editorial.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The abstract says FoxP2 has recently been found in this region, but the manuscript itself cites FoxP2 work there dating back to 2008. The reviewer is correct that recently is misleading.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "References 18 and 22 are conference abstracts, so the factual premise is correct. Whether they must be removed is mainly a citation-quality preference, making this a minor but supported point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The manuscript uses multiple naming variants for the reporter line, so the consistency complaint is valid. This is editorial rather than substantive.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The reviewer flags the same spelling issue identified elsewhere. This is a minor but valid typo correction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The manuscript says some placements were included and others excluded based on targeting, but it does not give a clear quantitative criterion or a full placement summary for successful versus missed cases. Because the claimed causal effect depends on targeting specificity, this is an important and well-supported concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The ArchT experiments are described only broadly as ventral LPB targeting, and the paper does not provide a fuller per-case distribution plot despite the anatomical heterogeneity under study. That concern is real, though some experts may view it as mainly a supplemental presentation issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "Complaints about the word intersecting and similar wording tweaks are stylistic rather than substantive. The point is valid but minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "Calling Cre-negative littermate controls wildtype littermates is standard usage in mouse papers and is not factually wrong here. This criticism does not really hold up against the manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The manuscript uses the odd spelling Fox-P2, so the typo complaint is valid. This is a minor editorial issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The paper uses immune-staining, which is nonstandard compared with immunostaining. The reviewer\u2019s underlying wording/typo complaint is valid though minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The methods phrase using square grids is indeed unclear from the paper alone and would benefit from clarification. This is a minor methods-clarity point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The schematic/caption speaks as if KF FoxP2 neurons project to phrenic motor neurons, but the current paper does not directly demonstrate that and the cited support is indirect. The concern is reasonable, though experts could differ on whether the existing citations already make the statement acceptable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The FISH description/results switch between Calca mRNA, CGRP peptide, FoxP2 protein, and FoxP2 reporter labeling in a way that can blur what was actually measured. That terminology/identity criticism is correct and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "As with item 4, the reviewer notes that Supplementary Fig. 3 was unavailable, and the supplied paper package lacks supplementary files. This is a valid and important evaluation issue.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "Fig. 1 uses bar graphs with tiny n, so asking for individual data points is a reasonable improvement. Some experts will see this as important transparency and others as mostly figure style.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "Figs. 4 and 6 clearly use opaque white shapes to mark fiber tracts, and those shapes do obscure underlying tissue. The reviewer\u2019s suggested graphical fix is minor but well supported.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "The complaint about over-contrasted axonal images in Fig. 5 is subjective, but the panels do look heavily thresholded/contrasty and the criticism is understandable. It is a minor presentation issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper argues for functional separation between CGRP and FoxP2 populations but does not directly compare their effects on breathing and arousal within the same study. That missing comparison is a real and important limitation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper states FoxP2 neurons are wake/REM active, yet the causal experiments are analyzed only in NREM and the manuscript does not show whether the same cells drive breathing similarly in wake/REM. That makes the sleep-specific interpretation incomplete.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks for EMG/FoxP2 and RR/FoxP2 correlation analyses to support suggested relationships, but the paper does not provide them. This is a reasonable substantive request, though the item gives less direct support than some other critiques.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper shows some KF overlap material but does not directly demonstrate the same non-overlap/segregation for the PBcl/PBel populations central to the paper\u2019s claims. That is a meaningful cell-identity gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Fig. 5 shows descending projections into the preB\u00f6tC region, but the paper never tests whether those projections are functionally responsible for the respiratory effects. This is a valid and important missing-mechanism point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer correctly identifies a mismatch: activation mainly increases RR, whereas inhibition mainly reduces VT/MV, yet the paper argues necessity for the CO2 ventilatory response. The sufficiency/necessity logic around VT is genuinely under-supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper discusses CGRP neurons as having little respiratory effect, and the reviewer offers specific external literature suggesting a more complicated picture. That is a valid literature-context clarification, though it is more contextual than central to this paper\u2019s own experiments.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper\u2019s claim that the relevant neurons are non-CGRP is not decisively established for all targeted populations by the data shown here, especially given the KF overlap acknowledged elsewhere. This is a real cell-identity concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "FoxP2-L10 is used before it is clearly defined. This is a minor but valid terminology/editing issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Fig. 2b is explicitly presented as AAV-GCaMP expression co-labeled with FoxP2 immunostaining, so the claim that specificity is shown only in the reporter mouse and not the AAV experiment is not accurate.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "From Fig. 2b alone, it is hard to infer what region contributes the majority of the fiber-photometry signal, so this complaint is too speculative to verify cleanly. Some experts might sympathize, but correctness is genuinely debatable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The paper speculates that FoxP2 activity during NREM-to-wake transitions may contribute to the respiratory increase at arousal, but it shows only limited illustrative material and no dedicated RR-versus-dF/F transition analysis. The reviewer\u2019s request is therefore justified and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The request to clarify that the analyzed CO2 trials were sleep trials and to compare with awake-state CO2 responses is fair, because the paper\u2019s causal/state claims hinge on sleep state but the awake comparison is missing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Fig. 2h-i look like time-course curves, while the methods describe analysis over selected sets of breaths; the mapping between those descriptions is not obvious from the paper. This is a valid clarity issue in a key result.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "As with item 3, the paper does not supply the suggested analysis connecting EMG and FoxP2 activity despite discussing that relationship. The concern is real, but the support in the review item itself is relatively light.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The quoted Results sentence goes beyond the shown analysis by speculating about active movement and anticipatory ventilation. The reviewer is right that this is too interpretive for the Results section as written.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The paper claims the synchronized oscillation pattern is absent during NREM baseline, but the figures shown do not make that comparison very transparent and the suggested summary plots/awake comparison would strengthen the claim. This is a valid substantive presentation concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The manuscript only analyzes optogenetic effects in NREM, so asking about wake/REM effects is a fair limitation to point out. The item is important but mostly framed as a missing extra analysis/experiment rather than a tightly demonstrated contradiction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "Because FoxP2 stimulation also causes arousal, the paper does not fully establish how distinct that effect is from CGRP-driven arousal. This is a real concern, though the item is less fully supported than the stronger version made elsewhere in the reviews.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The paper includes included/excluded targeting statements but not a fuller placement summary figure. Given the importance of localization, the request is valid and well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The paper makes time-course claims from coarse pre-/pre-arousal/post-arousal breath bins, so the reviewer is correct that a higher-resolution RR-versus-time plot would better support those claims. This would materially improve interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The reviewer points out that the claimed different time course under 2% CO2 is not convincingly illustrated by the current plotting and specifically compares the two relevant panels. That is a concrete and important critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The paper identifies projections to the preB\u00f6tC region but does not test them functionally; asking for pathway-specific activation is a valid important addition.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The notation PBZ is indeed less conventional than preB\u00f6tC/PBC. This is a minor terminology preference.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The paper does not examine inhibitory effects in wake or REM, so the reviewer is correct that the state specificity of inhibition remains unclear. This is an important limitation, but the item is framed with limited supporting detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "If the sentence refers to latency to arousal, Fig. 6i is the relevant panel and should be cited. This is a valid small callout fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "The scale-bar complaint is hard to verify from the figure because the panels are at different sizes and magnifications; the reviewer\u2019s seem mislabeled is plausible but not clearly established. Correctness is therefore borderline.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "The paper claims a specific role in CO2 response during sleep, but without awake-state causal data it cannot show that the role is sleep-specific rather than general. That limitation is real and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "This item is just a speculative alternative hypothesis without a clear, checkable criticism tied to the paper, so it is too vague to verify as a valid review point.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "In the discussion, the manuscript groups together preB\u00f6tC stimulation literature in a way that can blur inhibitory versus excitatory neuron findings, and the reviewer cites concrete contrary literature. This is a substantive literature/interpretation correction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "The paper pools PBcl and KF FoxP2 neurons across imaging and optogenetic manipulations without clearly telling the reader which subgroup predominated, despite likely functional differences. That is an important and well-supported specificity concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 32,
+          "reasoning": "Across the main figures the typography and color conventions are visibly inconsistent, including the CO2 and dF/F color swaps the reviewer mentions. This is a valid but mostly presentational issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 33,
+          "reasoning": "The paper uses PBL/LPB/PBel/PBcl terminology somewhat inconsistently, which makes the anatomy harder to follow in a paper where anatomical specificity matters. This is a real issue, though experts may vary on how important it is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    }
+  ]
+}

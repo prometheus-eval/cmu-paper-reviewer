@@ -1,0 +1,180 @@
+{
+  "paper_id": 46,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper states that 13,766 previously synthesized polymers were used to generate fragments for the 100 million hypothetical PSMILES strings, but it does not identify where those previously synthesized polymers came from. Listing the source collection would improve provenance and reproducibility. The reviewer's claim is therefore accurate and points to a meaningful missing detail directly tied to a specific statement in Figure 1c and the Data Sets section.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript says SentencePiece is pretrained on the 100 million hypothetical PSMILES strings and that its tokens are frequent patterns, but it does not report the vocabulary size, token distribution, or a richer set of token examples. That omission is real, though whether such tokenizer statistics are substantively important is debatable because they are more interpretive than necessary for reproducing the main results. The reviewer gives enough specificity by naming the tokenizer and exactly what information is missing.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper explicitly states that the property data contain about 28,061 homopolymer points and 7,456 copolymer points, so the reviewer is right that copolymers are much less represented. The paper does not separately benchmark homopolymer versus copolymer predictive performance, even though Supplementary Figures S9-S14 only show mixed parity plots with color-coded frequencies. Asking for split performance analysis would materially improve understanding of model behavior on a smaller and potentially harder subset.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The concern targets a plausible limitation: the paper does not explain how copolymer sequence patterns such as random versus alternating arrangements are represented, and the methods instead describe composition-weighted sums of comonomer fingerprints for copolymers. However, the reviewer's specific factual premise about simply concatenating monomer SMILES with periods is not supported by the manuscript itself. Because the underlying limitation concern is reasonable but the stated representation mechanism appears speculative, experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper notes that fingerprint computation scales nearly linearly with the number of PSMILES strings, and that statement is indeed unsurprising for independent per-polymer computations. Still, objecting that there is 'no need' to emphasize linear scaling is mostly a stylistic complaint about presentation emphasis rather than a substantive flaw in the paper. This is a real opinion about exposition, but it is too minor to keep as a meaningful review point.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "This criticism does not hold up. Figure 4a is explicitly labeled as reporting cross-validation validation-set R^2 values, and Figure 4b separately reports the meta learner's test-set R^2 values. The methods likewise describe validation data for cross-validation models and a distinct held-out split for the meta learners. So the paper is not simply mistaking validation for test evaluation, even if the evaluation protocol is somewhat unusual.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper shows that polyBERT and PG have very similar predictive accuracy and discusses qualitative fingerprint properties such as sparsity, dimensionality, and UMAP structure, but it does not analyze whether the two descriptors carry complementary information. The suggested combined-descriptor or similarity-matrix comparisons would help clarify whether polyBERT is merely a faster surrogate for PG or captures different structure-property information. The reviewer grounds this in the paper's own near-equal benchmark accuracy, so the concern is well supported, though some experts may rate its importance differently.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper explains that 100 million hypothetical PSMILES strings were generated and that 80 million were used for pretraining with 20 million for validation, but it gives no justification for why 100 million was chosen or whether a smaller corpus would suffice. A scaling or data-efficiency discussion would help readers understand whether the pretraining setup is overprovisioned or essential. That is a real gap, although some meta-reviewers may see it as a useful future-analysis suggestion rather than a core weakness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Table 1 clearly mixes experimental and DFT sources across different properties and shows very uneven dataset sizes, while Figure 4b reports uniformly high meta-learner R^2 values. The manuscript does not really unpack how performance depends on dataset size or source beyond presenting the aggregate table and scores. Asking for more discussion of how data provenance and quantity affect prediction quality is therefore an accurate and constructive criticism, and the reviewer cites the relevant table and figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript does contain the typo 'originallydro' in the discussion sentence about Transformer-based models originally developed for NLP. This is an authentic but minor proofreading issue. The reviewer provides a concrete example, which is enough to verify the point directly.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does argue that polyBERT's major advantage over PG is speed while accuracy is similar, and asking for practical screening-scale context or for including training time would be constructive. But the reviewer's support is partly muddled: the timing numbers come from Figure 3, not Figure 4, and the paper already reports 31 hours for polyBERT pretraining while not giving PG training time. Because the core fairness concern is reasonable but the factual framing is somewhat off and partially already addressed, expert meta-reviewers could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper discusses Transformers for molecules and compares them against graph-based neural networks, but it does not discuss pretrained GNN approaches even though such work exists. Adding that context would improve the related-work framing around representation learning alternatives. The reviewer supports the criticism with several concrete references, making the claim easy to verify and well justified.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The manuscript identifies polyBERT as DeBERTa-based but offers essentially no rationale for choosing DeBERTa over other BERT-family encoders. Requesting such motivation is valid, but it is more about architectural exposition than a demonstrable methodological flaw. Because explaining the backbone choice could be seen as either useful context or unnecessary detail, significance is plausibly debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper states that BRICS recombination yields chemically valid hypothetical polymers that mostly have never been synthesized before, but it does not analyze whether some generated polymers are unrealistic in a practical materials sense or whether that affects training quality. The reviewer is therefore pointing to a legitimate limitation of the data-generation procedure. However, the item is posed as a broad question and does not itself provide much evidence beyond naming BRICS, so additional reasoning would be needed to fully establish the impact.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper introduces canonicalized PSMILES because raw PSMILES are non-unique and polyBERT fingerprints depend on how strings are written, but it does not discuss whether non-canonical variants could be exploited as data augmentation. That suggestion is compatible with the methods and could be a useful future direction, though it is not central to evaluating the current study. The reviewer's point is easy to verify from the canonicalization section.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The manuscript uses PSMILES throughout and does not discuss alternative polymer representations such as BigSMILES. Suggesting that the authors comment on why they chose PSMILES instead of an existing sequence representation is therefore a fair contextual request, but it is mostly a related-work/design-choice note rather than a substantive deficiency. The named BigSMILES citation makes the suggestion straightforward to verify.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Supplementary Figure S2 shows selector vectors grouped by property category, and the main text says multitask learning exploits hidden correlations, but the paper does not analyze whether training across categories or using explicit inter-property correlation analysis would help. Since that could change how the multitask setup is designed, this is a real and constructive methodological question. The reviewer points to the exact supplemental figure and the category-based selector design, which is enough evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper reports results for a single pretraining scale of 100 million PSMILES and one DeBERTa-based model configuration, without any scaling study for data size or model size. Asking whether performance improves with more pretraining data or larger models identifies a genuine unexplored question. Still, some experts would view this as an expected future-work direction rather than an important omission for the current paper, so significance is arguable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure 4c and the supplement report distribution summaries for predictions over 100 million hypothetical polymers, but the manuscript does not present exemplar high-performing candidate polymers or design insights derived from those predictions. Showing such cases would strengthen the practical polymer-design claim. The reviewer's point is directly grounded in the paper's own large-scale screening results and therefore well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper states 'The validation F1-score is > 99,' which is almost certainly a formatting error for a fraction or percentage such as 0.99 or 99%. The intended meaning is clear from the next sentence saying masked tokens are found in almost all cases, so the reviewer's typo diagnosis is sound. This is a minor presentation issue, and the quoted phrase is enough evidence to verify it immediately.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,532 @@
+{
+  "paper_id": 16,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The supplement and reporting summary state that there were 20 participants, but neither the main paper nor the supplement reports a power analysis or sample-size justification. That omission is clear and matters for methodological transparency.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Neither the main paper nor the supplement mentions eye tracking or gaze monitoring, even though fixation stability is relevant in binocular-rivalry paradigms. The reviewer is clearly pointing to a missing methodological description.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The supplement says the fMRI GLM used an event-related BOLD regressor plus confounds and session effects, but the exact regressor structure and count are not presented clearly, especially in the main paper. This is a real methods-clarity issue, though the review item gives only a broad assertion rather than a precise pointer.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper reports many contrasts and some thresholding details, but multiple-comparison handling is not foregrounded consistently across sections. Asking for clearer emphasis is valid and important, but the item does not identify the exact places where details are missing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The HMM and GC sections move between trial-level and group-level claims, and clearer separation would help interpretation. That is a genuine substantive clarity concern, but the item is broad and does not point to a specific passage.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Charitably, this asks for a clearer justification of a whole-brain-first versus ROI-first DMN strategy. But the paper already constrains later HMM analyses to DMN and V1 ROIs selected from prior contrasts, so the premise is partly wrong and experts could plausibly split on whether the criticism is applicable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The main paper is technically dense and keeps detailed methods in the supplement; a brief main-text methods overview would noticeably improve readability. The issue is real, though experts could disagree on whether it is a substantive weakness or mainly a presentation preference.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Figure 2 gives an interaction-style result showing differential involvement of DMN and visual regions, but it does not by itself unpack whether the pattern is driven by greater BR-related activation or greater RPL-related suppression in each region. A direction-specific follow-up would materially sharpen interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is a coherent suggestion to test whether other DMN nodes mediate or condition the PCU→V1 relationship, but it asks for an additional mechanistic analysis beyond what is needed to verify the paper's current claims. The point is real, while its importance is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Tracing V1-linked cortical modulations would help support the paper's “diversion of the visual processing pathway” interpretation, but it is somewhat beyond the core evidence currently offered. The suggestion is valid, yet experts could differ on how essential it is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The discussion strongly centers the DMN while other large-scale networks are only briefly acknowledged, so a short clarification of whether DMN is the only plausible perturbation source would better contextualize the claim. That issue is real, but its importance is arguable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The abstract uses “causal effect” without clarifying there that causality is operationalized as Granger causality. That is a legitimate terminology clarification, but it is a minor one.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The “FMRI activation study” heading can read as if it introduces a separate study, and “over- lapped” is an actual typo in the text. These are real but minor presentation issues.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Figure 2 materials use acronyms such as ICN, BM, and FPCN without fully expanding all of them in the figure context. This is a straightforward readability nit with explicit examples.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "HMM is used in the main paper before it is defined there; its fuller definition appears in the supplement. That is a minor but valid clarity problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "“pair-wise” and “clock-wise” do appear in the Figure 5 legend and are minor wording or formatting nits. The reviewer gives exact locations.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The cortical-region labels on the circular bundle plots in Figure 5 are indeed small enough to be hard to read. This is a valid but minor presentation complaint.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The phrase “focused into” appears in the text and is awkward English. This is a trivial but genuine copyediting issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The same subsection title appears twice around the PCU-V1 phase-coherence and Granger-causality section. That duplication is real and minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The main text uses GC without a clean first introduction of the abbreviation in the narrative, even though the full term Granger Causality appears. Providing the acronym explicitly is a minor valid fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The paper often points readers to supplementary results without always telling them in the main text what those results show. For such a complex manuscript, fuller in-text summaries would improve understanding, but the item itself is broad rather than tightly evidenced.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "This is a tiny capitalization and style correction in a parenthetical phrase. It is valid but purely minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The quoted phrase “the interaction of them” does appear and is awkward English. The suggested replacement is a minor but valid edit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The discussion spends noticeable space on SPL-centered literature even though the paper's own highlighted mechanistic link is PCU–V1. That mismatch is real and could matter for interpretation, though its importance is somewhat subjective.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "“on the group level” appears multiple times and “at the group level” would be better idiomatic English. This is a minor valid wording fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The notation “400-200 ms” or “[-400-200] ms” is genuinely ambiguous and can be misread as a 600 ms span rather than a window from −400 to −200 ms. This is a small but real clarity problem.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "The supplement describes censoring volumes with >3 mm displacement but does not discuss rotations in the way the reviewer suggests. Depending on how one interprets the motion metric used, this is either a helpful wording refinement or based on an incorrect assumption, so correctness is borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "“on Python” appears in the supplement and is awkward usage; “in Python” would be clearer. This is a minor but real copyedit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "The supplement uses “PCu” while the main text predominantly uses “PCU”, so there is a genuine inconsistency in acronym capitalization. Minor but valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "The cited supplementary brain figures do lack explicit region labels on the brains, and the color-scale text is small. That is a concrete presentation problem with specific figure references, though it is minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "The main text points readers to “Supplementary Table 1” for peak coordinates, but the coordinate table in the supplement is Table 2, and the uneven numbers of coordinates per ROI are not explained. That is a real reproducibility and consistency issue with precise pointers.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript is technically dense, several abbreviations such as ICN, BM, and ECG are indeed left unexplained at first use, and many analysis tools receive little intuitive explanation. Because this affects basic readability of the whole paper and the reviewer gives concrete examples, the concern is important and well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper repeatedly uses causal language around Granger-causal analyses and even speaks of locating the “neuronal cause” of perceptual change. Asking the authors to temper “causal effects” language is a correct and important conceptual criticism with a clear pointer.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "A higher-level roadmap would genuinely help readers follow the long analysis chain; sFig. 1 exists, but it is not the kind of simple purpose-oriented overview the reviewer asks for. The suggestion is concrete and would materially improve comprehension.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The study runs many separate analyses and reports local FWE, FDR, or permutation controls, but it does not really discuss the broader multiplicity limitation across the whole analytic pipeline. That is a legitimate concern, though the reviewer does not identify exact test families or omissions.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper does switch between BR/RPL and endogenous/exogenous wording for the same contrast, so standardizing terminology would aid readability. This is valid but relatively minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper aligns neural data to report times, and the reviewer gives a concrete literature-based argument that reversal timing and response jitter deserve deeper discussion. That bears directly on the paper's pre-reversal interpretation and is backed by specific prior work, making it important and well supported.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The quoted masking and priming sentence follows a resting-state discussion and is indeed conceptually abrupt. The reviewer pinpoints the sentence and explains why the logic is unclear, though experts could differ on how consequential this introductory clarification is.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Suggesting the classic Blake review when introducing binocular rivalry is a straightforward minor related-work addition. The point is valid and specifically referenced.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The cited sentence is awkward, RSS is used without expansion, and AIC is named without much intuitive explanation. These are real clarity problems with exact locations and examples, though experts may differ on whether they are merely stylistic or materially helpful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper reuses publicly available data from prior publications but only mentions this rather briefly; it does not sharply state what is new here versus the earlier study. That distinction is important, and the reviewer gives a concrete location.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Figure 1 relies heavily on red and green and includes extra shape markers in panel d that could plausibly confuse readers. This is a valid accessibility and presentation point, but a minor one.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Figure 2 materials use FPCN and ICN without fully defining them in the figure context. This is a minor but clearly correct readability point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The sentence on page 8 explicitly says EEG helped “locate the neural cause” of perceptual change, which overstates what these data can show. That is a central interpretive issue and the reviewer cites the exact wording.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "BM14 is visible on the circular plot, while the adjacent legend text does not list or explain BM14. This is a specific minor presentation inconsistency.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The paper does explain that the [-400, -200] ms window was chosen because GFP differences peaked there after cluster testing, so saying the selection logic is unclear does not hold up against the text.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The quoted methods sentence describes windows “before every perceptual transition,” but the actual anchoring event is the participant’s report. A charitable reading treats this as a legitimate precision concern; a stricter reading says the paper is just using report time as an operational proxy, so correctness is borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The rationale for fixing four HMM states partly appeals to the four conditions, yet the states are not one-to-one with conditions and can recur within each condition, exactly as the reviewer notes. This is a substantive methodological concern and the reviewer quotes the relevant justification.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The Figure 4 legend sentence about averaging signals from significant peak voxels within ROIs is genuinely hard to parse, especially given the spatial and temporal ROI structure. Clarifying it would help readers understand a core method, and the reviewer gives the exact sentence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The paper could define more explicitly what counts as a mixed versus dominant “transition” in temporal terms. The concern is plausible and relevant, but its importance relative to the rest of the paper is somewhat debatable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The reviewer disputes the paper's suggestion that stronger PCU→V1 effects could reflect an intrinsic attention mechanism that would predict faster reversals. That complaint is thoughtful and grounded in domain knowledge, but whether the paper's speculation is truly inappropriate is open to expert disagreement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "Figure 6 and its caption already state that the GC effect size was approximated by the improvement of model evidence (dBIC), so the claim that dBIC is undefined is not supported by the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "This is essentially a stylistic rephrasing request to make the factorial-design sentence a bit clearer about grouping red and green dominant percepts. It is a valid but minor wording suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "The alleged “formeda” typo does not appear in the paper text provided here, so this complaint does not verify against the source.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "Likewise, the cited “greenpercept” typo is not present in the paper source, so the claim does not hold up on verification.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "The Figure 1 caption indeed says “generate alternating percept” where plural “percepts” is intended. This is a minor but valid copyedit.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "“over- lapped” appears in the main text and is an obvious formatting typo. Minor but valid.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 27,
+          "reasoning": "The manuscript uses a URL for the HMM resource and toolbox, and adding the corresponding paper citation would make the method pointer more scholarly and self-contained. That is a valid but minor reference-formatting suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 28,
+          "reasoning": "The PCU-V1 phase-coherence and Granger-causality subsection title appears twice. This is a clear minor duplication.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 29,
+          "reasoning": "The specific “onthe” typo cited by the reviewer is not present in the paper text available here, so this item does not verify.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 30,
+          "reasoning": "The cited “fMRIactivation” typo is likewise not present in the paper source, so this complaint is not supported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 31,
+          "reasoning": "“There are some formatting problems with reference 36” is too vague, and no concrete problem is evident in the reference list from the provided source. The complaint therefore does not verify.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer accurately describes a long inferential chain: response-locked EEG difference, source reconstruction with fMRI priors, a four-state HMM, focus on State 4, then alpha coherence, then PCU→V1 Granger causality whose behavioural relation is only group-level and state-dependent. That makes the complaint about selective multi-step interpretation both correct and important, and the item provides enough specifics to verify it.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper is indeed anchored to button reports, and response lag raises a real concern about whether pre-report signals are truly pre-switch. But the item's stronger timing assumption and its conclusion that the effect is therefore post-switch are not established from this paper alone, so correctness itself is genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

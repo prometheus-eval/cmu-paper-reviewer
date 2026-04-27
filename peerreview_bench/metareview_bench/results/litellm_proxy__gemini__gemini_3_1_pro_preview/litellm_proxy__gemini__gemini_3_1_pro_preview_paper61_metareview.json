@@ -1,0 +1,491 @@
+{
+  "paper_id": 61,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out a minor grammatical issue in the title ('challenge' vs 'challenges'). Verified against the paper, the title indeed has this wording. It's a stylistic wording suggestion. Devil's advocate for significance: Is it more than marginal? It's just a grammatical fix in the title. Unlikely to be considered Significant. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests using 'air pollution' instead of just 'pollution' throughout the text. Verified that the paper uses 'PM2.5 pollution'. This is a minor stylistic preference. Devil's advocate: could it be significant? No, 'PM2.5 pollution' is clear enough in context. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer dislikes the acronym DAPP (deaths attributable to PM2.5 pollution). Verified that the paper introduces this acronym. This is a stylistic preference. Devil's advocate: could it be significant? Acronyms are common and defining it once is standard. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests briefly stating what the scenarios represent in the abstract. However, the abstract explicitly names the scenarios: '(sustainable development (SSP1-2.6), business as usual (SSP2-4.5), and fossil fuel development (SSP5-8.5))' immediately after mentioning them. A strict reader might find the criticism factually flawed since the paper does state them. A charitable reader might argue they want even more context or that the initial mention is abrupt. Thus, experts would likely disagree on correctness.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer notes an inconsistency in the abstract: it states DAPP will decrease, but then says population aging is driving an 'increase' in DAPP. Verified that the abstract has this exact phrasing, which is confusing. Devil's advocate for significance: Some might see abstract clarity as just a presentation issue (Marginal), while others see it as critical for the main finding (Significant). I'll predict disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks whether lines 47-51 in the Introduction refer to China or globally. The text uses a general statement without specifying geography until later in the paragraph. It's a valid minor clarity point. Devil's advocate: could it be significant? It's just the opening hook. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests emphasizing that RCPs represent greenhouse gas concentration trajectories. Verified that the paper explicitly states: 'RCPs are multi-model global scenarios of greenhouse gases'. Thus, the reviewer's premise that this needs emphasis is borderline factually flawed since it is already explicitly stated. Experts would disagree on correctness.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer suggests adding 'on' to the phrase 'impact of population aging in China' to make it 'impact of population aging on DAPP in China'. Verified the text has this missing word. It's a valid minor typo fix. Devil's advocate: could it be significant? No, it's just a missing preposition. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer notes an incomplete sentence in the Results. Verified that the sentence 'In addition, it is worth noting that between 2020 and 2035, except for the central and eastern regions where DAPP was projected to be higher...' is indeed a fragment. Devil's advocate for significance: Some experts might view a broken sentence in a key results paragraph as Significant, but others view grammar as inherently Marginal. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notes confusing grammar in a sentence. Verified the sentence is very broken ('in each province the DAPP reduction in the two provinces is...'). It's a clear grammatical error. Devil's advocate: like the previous item, mostly a presentation/typo issue. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer notes that a sentence stating population aging affects the 'increase in DAPP' is confusing because DAPP decreases overall in some scenarios. This mirrors the abstract critique. Devil's advocate for significance: Is it Significant or Marginal? Clarifying the main driver phrasing is borderline. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer asks for a brief explanation of how to read/interpret Figure 3. The figure is a complex multi-variable plot. Clarifying a main figure is helpful. Devil's advocate: Some experts might say the figure is self-explanatory enough, leading to disagreement on significance or evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer notes that Wang et al is mentioned in the discussion but wasn't introduced earlier, and asks for a comparison. Verified Wang et al is not in the intro. Asking for comparison with key related work is significant. Devil's advocate: it's perfectly normal to introduce papers in the discussion. Thus, experts might disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The reviewer points out that a paragraph promises to discuss 'two aspects' but uses 'First' and 'Third' without a 'Second'. Verified this is true. It's a structural typo. Devil's advocate: missing a point or misnumbering is a minor formatting issue. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The reviewer asks for a brief description and reference for the KAYA model in the main text. The paper delegates this entirely to the supplement. Devil's advocate for significance: Some experts might think it's fine to leave it in the supplement, making this Marginal or causing disagreement. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The reviewer asks what point is being made in a long discussion paragraph (3.2). This is a subjective critique of writing clarity. Devil's advocate: The paragraph compares regions, but some might find it rambling. Experts might disagree on significance. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The reviewer notes that recommendations about basic pension plans seem outside the scope of an air pollution paper. Verified the text suggests perfecting pension plans. Devil's advocate: socioeconomic factors are discussed, so some might find it in scope. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "The reviewer asks for clarification on what 'necessary measures to adjust the population structure' means. Verified the phrase is in the text and is vague. Clarifying a policy recommendation is helpful. Devil's advocate: It's a broad concluding remark, so it might be seen as marginally significant. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The reviewer asks for more detail on how CMIP6 estimates PM2.5 levels. The paper provides the empirical formula linking components to PM2.5, but references CMIP6 for the components themselves. Explaining the internal workings of CMIP6 is out of scope. A strict meta-reviewer would find this an invalid request. Prediction is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The reviewer asks to comment on the basis for the formula from Chowdhury et al. The formula is a core part of the exposure calculation, so justifying its basis is significant. Devil's advocate: They cite the papers, so some might say that's enough. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer suggests providing a brief methods summary before the results. The paper presents Results before Methods. Devil's advocate for significance: Journal formats often dictate this structure. Experts might disagree on whether rearranging or summarizing is necessary. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer finds Figure 3 unclear and suggests using bar charts instead. It is a subjective suggestion for data visualization. Devil's advocate: The current figure might be acceptable to some. Experts often disagree on the significance of formatting choices. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out the confusing phrasing that aging is 'the main contributor to the increase in DAPP' when total DAPP actually decreases, suggesting better wording. Verified this phrasing is used. Devil's advocate: Is it Significant or Marginal? Clarifying the main finding is generally Significant. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer finds Figure 6 too complex and suggests simplifying it. This is a subjective data visualization point. Devil's advocate: It's just a presentation issue, some might see it as Marginal, others Significant. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer suggests moving Figure 4 to the supplement. This is a subjective editorial suggestion. Devil's advocate: Moving a figure is a minor structural change. It does not alter the science. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer questions using specific milestone years (2017, 2025, 2035) instead of 5-year intervals. Verified the paper uses these years. Devil's advocate for correctness: Using milestone years is very standard in SSP projections. A strict reviewer might say this criticism is invalid as it goes against convention. Prediction is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer notes the paper does not discuss potential limitations. Verified there is no dedicated limitations section or discussion. Devil's advocate: Discussing limitations is standard scientific practice, so its absence is universally recognized as Significant. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer points out Figure 5 shows the proportion of deaths by disease, but the actual change in absolute DAPP by cause is not reported. Verified this is true. Devil's advocate: The paper already has many figures, omitting one breakdown might be seen as a minor issue by some. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer suggests providing an overview of findings from previous assessments in the introduction, rather than just their methodological shortcomings. Verified the intro focuses on shortcomings. Devil's advocate: The intro is already long, and focusing on gaps is standard. Experts might disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer suggests using 'older adults' instead of 'elderly' to align with current terminology norms. Verified the paper uses 'elderly'. Devil's advocate: This is purely a stylistic terminology update. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer notes that Figure 2's bars are too small to see in a printed version. This is a minor formatting/visual issue. Devil's advocate: It's purely aesthetic and doesn't change the substance. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the abstract numbers (31.9 to 178.8 thousand decrease) are inconsistent with the results section. The results section splits the decrease into two time periods. The sum of these periods matches the abstract numbers closely. A charitable reader would note the results section doesn't explicitly state the totals, making it confusing. A strict reader would say the reviewer's claim is factually flawed. Prediction is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the first sentence ('PM2.5 has increased dramatically') is a sweeping statement that only applies to certain locations. Verified the sentence is unqualified. Devil's advocate for significance: It's a standard broad opening hook. Many might consider this Marginal. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims it would be adequate to include references on the health effect of PM2.5 on the elderly. However, the introduction explicitly cites multiple studies (refs 6-8) regarding this exact topic. Thus, the reviewer's claim that references are missing is factually incorrect.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the phrase 'climate change (e.g., transformation and diffusion of air pollution)' is vague and asks which parameters are meant. Verified the phrase is vague. Devil's advocate: It's just a passing example in the introduction. Prediction is correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks which driving factors are considered and says their decomposition should be discussed in the results. However, the Results section has an entire subsection ('2.3 Driving factors of DAPP') and a figure dedicated to this decomposition. The reviewer's premise is completely factually flawed.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer asks if the decreasing trend in disease mortality could be outshined by population aging. This exact dynamic (aging offsetting mortality decrease) is the central finding explicitly stated throughout the paper. The reviewer is asking a question that the paper already answers prominently. Thus, the premise is flawed.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests discussing meteorological conditions like heat waves and their synergic effects with PM2.5 on the elderly. The paper does not cover this. It's a valid scientific suggestion for a missing mechanism. Devil's advocate: Adding this might be out of scope. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer notes that figure legends are incomplete and lack information needed to understand them. Verified that the legends are quite brief. Devil's advocate: Some experts might find them sufficient, leading to disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer points out that Figure 3 presents DAPP changes alongside its driving factors, making it confusing. Verified that the figure plots the outcome alongside the decomposed components. Clarifying the visualization is significant. Devil's advocate: Disagreement on significance is likely for figure critiques.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer notes the KAYA model needs a reference in the discussion. Verified there is no reference in the main text. Devil's advocate: The paper delegates this to the supplement. Experts might disagree on whether a main text reference is strictly required.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer notes that recommending indoor activities to avoid pollution ignores indoor pollution sources like solid cooking fuels. This is a strong scientific point that nuances a policy recommendation. Devil's advocate: Few would argue against this. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the paper uses incorrect labels like 'SSP3-7.5' instead of 'SSP3-7.0'. Verified that the typo 'SSP3-7.5' appears in the text. The reviewer claims this raises concerns about correct scenarios. Devil's advocate: It is clearly a typo, as SSP3-7.0 is used elsewhere. Experts might see this as Marginally Significant rather than a deep methodological issue. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out the paper does not explain how the GBD forecasting model (national level) was downscaled to provincial-level mortality forecasts. Verified that the paper cites Foreman et al but omits the downscaling details. This is a major methodological omission. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the paper only validates DAPP estimates through national-level Pearson correlations, ignoring provincial validation. The paper cites comparisons with Yin et al, which has provincial data, but the explicit scale of the validation is ambiguous. Devil's advocate: The paper might have done provincial correlation in the supplementary. Thus, experts might disagree on correctness based on supplementary assumptions.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the methodology for combining uncertainties from different sources just uses upper and lower bounds rather than proper propagation. Verified the text explicitly states the bounds were determined by combining the individual bounds. This is statistically incorrect. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer claims the paper does not discuss or correct for the systematic underestimation of PM2.5 by CMIP6 models. Verified that the paper explicitly includes a calibration equation (Equation 5) to correct for this exact underestimation against baseline observations. The reviewer's claim is completely factually wrong.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer critiques the use of 1 degree CMIP6 data for future projections, arguing it's too coarse compared to the 0.1 degree historical data. Verified the text states these resolutions. Devil's advocate: Downscaling CMIP6 is difficult, so using raw data might be an acceptable limitation. Experts might disagree on the severity of this issue. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the paper fails to describe how national-level forecasts from Foreman et al were applied to provincial-level baselines. Similar to claude item 2, this is a valid critique of a missing critical methodological step. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the paper inaccurately ignores studies like Geng et al 2021 that considered multiple drivers. The paper's claim of novelty is about 'future' scenario setting, whereas Geng 2021 is a historical decomposition. The reviewer conflates the two. A charitable reader might say the intro is too broad, but a strict reader recognizes the temporal distinction. Prediction is disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": "null",
+          "evidence": "null",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the study focuses exclusively on PM2.5 and neglects ozone. The paper clearly defines its scope as PM2.5. Demanding the inclusion of ozone is expanding the scope significantly. Devil's advocate: Is this a flaw or just a scope choice? Experts frequently disagree on whether expanding scope is a valid criticism. Prediction is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that using GEMM instead of the chosen GBD method might yield higher estimates, suggesting a sensitivity analysis. Verified the paper acknowledges GEMM yields higher estimates but relies on GBD. It's a valid methodological suggestion. Devil's advocate: GBD is standard, so some might find the current approach adequate. Prediction is correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the PM2.5 reconstruction formula omits nitrate, a major component of PM2.5 in China. Verified that Formula 3 omits nitrate. This is a critical chemical omission that could bias the exposure estimates. Devil's advocate: Hard to argue against including a major chemical component. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer states the methodology for projecting disease mortality lacks operational details (coefficients, drivers). Verified that Equations 6-8 are generic and lack parameter values or specific driver definitions. This prevents reproducibility. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that using Pearson correlation to validate historical DAPP against other studies is methodologically inadequate because it ignores absolute bias. Verified the paper uses Pearson correlation. This is a valid statistical critique. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer critiques using a t-distribution confidence interval for an ensemble of CMIP6 models. Verified the paper explicitly assumes t-distribution. The reviewer correctly notes CMIP6 models are not independent random draws. Prediction is correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out inconsistent reporting of magnitudes and confidence intervals, specifically '658(608-656)' where the estimate is outside the bounds, and conflicting values in the conclusion. The reviewer slightly misreads one sentence, but the core critique of internal inconsistency and copy-paste errors is completely valid and verifiable. Devil's advocate: The misreading might lead some to say it's not correct, hence disagreement. Prediction is disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

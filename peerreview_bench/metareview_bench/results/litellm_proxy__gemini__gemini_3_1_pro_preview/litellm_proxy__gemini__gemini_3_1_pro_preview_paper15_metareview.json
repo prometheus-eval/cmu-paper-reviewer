@@ -1,0 +1,267 @@
+{
+  "paper_id": 15,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the 19-31h band used for circadian rhythms is wider than standard (20-26h) and asks for justification for this and the 36h rolling window. The core claim about the parameters used is factually accurate against the paper. This is a methodological point that genuinely improves the clarity of the analysis choices. I judge this as Correct, Significant, and Sufficient. A devil's advocate could argue that justifying a frequency band is a minor presentation detail that does not change the results, suggesting Marginally Significant. This indicates plausible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests using 'daily' or 'diurnal' instead of 'circadian' because the patients are subject to environmental time cues. This is factually true and a standard semantic distinction in chronobiology. I judge this as Correct. However, changing this term is purely stylistic and does not affect the scientific interpretation of the findings, making it Marginally Significant. The reviewer provides sufficient evidence by explaining the definition of circadian. Experts would likely agree this is a valid but minor terminological point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks for clarification on two statements in the discussion that seem contradictory: finding no evidence of rhythms causing seizures versus literature suggesting disrupted rhythms exacerbate disease symptoms. The reviewer correctly quotes the paper's claims. Clarifying this distinction between causing versus exacerbating seizures genuinely improves the discussion's clarity. I judge this as Correct, Significant, and Sufficient. A devil's advocate might argue this is merely a minor phrasing issue and is Marginally Significant, so expert disagreement on significance is plausible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that labeling the seizure onset zone as 'pathological tissue' might be an overgeneralization and suggests 'epileptic foci' instead. This correctly reflects the paper's terminology and makes a valid semantic argument. I judge this as Correct. As the reviewer notes, it does not change the interpretation of the results, making it Marginally Significant. The evidence is sufficient as the reviewer explains why perilesional areas could also be pathological. Experts would agree this is a valid minor point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that the supplementary data includes analyses on sex and age, and suggests adding a sentence to the main text indicating these were considered. This is factually accurate; the main text mentions some supplementary analyses but not explicitly sex and age. I judge this as Correct. Adding a sentence improves the main text's completeness but is a minor presentational issue, making it Marginally Significant. The evidence is sufficient. Experts would agree it is a minor constructive point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes a lack of detailed characterization of the patient cohort, such as specific epilepsy etiologies (TLE, genetic) and anti-epileptic medications. This is factually correct, as Table 1 only provides broad demographic data. Adding this clinical context is important for interpreting EEG studies in epilepsy, as medications can affect rhythms. I judge this as Correct and Significant, with Sufficient evidence pointing out the missing details. Experts would agree this information is necessary to assess generalizability.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests checking if seizures are inherently circadian and specifically analyzing the post-ictal period due to electrical silencing. While the paper lumps post-ictal into a 'peri-ictal' window, it does not isolate post-ictal silencing, making the core methodological suggestion valid. I judge this as Correct. Separating post-ictal effects could genuinely alter the interpretation of the rolling window AUC, making it Significant. However, since the paper did analyze peri-ictal periods broadly, some experts might view a separate post-ictal analysis as only Marginally Significant, leading to disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks if the authors have done statistical analysis to check if the diminished rhythms can be predictive of the seizure foci. The paper explicitly uses the Area Under the Curve (AUC) metric specifically to quantify how well rhythm power discriminates/predicts pathological tissue (seizure foci). Thus, the reviewer is asking for an analysis that is the core of the paper. I judge this as Not Correct. A devil's advocate might argue the reviewer meant out-of-sample predictive modeling (like a machine learning classifier) rather than in-sample AUC, making the critique plausible to a charitable reader. This justifies predicting disagreement on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out a minor grammatical issue in the introduction, suggesting 'have been reported' instead of 'are reported'. The quote is factually present in the paper. I judge this as Correct. It is a trivial grammatical correction that does not affect scientific substance, making it Marginally Significant. The evidence is sufficient. Experts would agree on this minor judgment.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer argues that the discussion's claim linking rhythm strength to 'healthy functioning of brain tissue' is too strong of an inference from the results. The quote is present in the paper. Given the study's scope (comparing SOZ to non-SOZ in epilepsy), the general claim about 'healthy functioning' is indeed debatable. I judge this as Correct. Toning down a major conclusion is Significant. However, a devil's advocate might say the inference is reasonable since non-SOZ tissue is healthier than SOZ tissue, making the requested change Marginally Significant. This suggests disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer notes that a sentence in the discussion regarding 'resection of diminished rhythms' is confusing and suggests a rephrase. The sentence is factually in the text and the phrasing is indeed slightly clunky (resecting regions, not rhythms). I judge this as Correct. It is a phrasing issue that marginally improves clarity but does not change the core substance, so it is Marginally Significant. Evidence is sufficient. Experts would agree it is a minor stylistic fix.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes the use of the AUC method as crude and suggests using established circadian methods like amplitude/phase fitting or wavelet transforms. This is factually accurate regarding the paper's methods. I judge this as Correct. Using more sophisticated time-series analysis methods could genuinely improve the robustness of the findings, making it Significant. The reviewer provides sufficient evidence by referencing standard field practices and a specific paper. Experts would agree this is a strong methodological point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for detailed patient characterization (seizure phenotype, entrainment, sleep-wake rhythms) and questions the 19-31 hour circadian band for entrained patients. This correctly identifies missing clinical context and methodological parameters. I judge this as Correct. Providing this context and justifying the wide band is crucial for interpreting chronobiological results in humans, making it Significant. The evidence is sufficient as it points directly to the missing information. Experts would agree this is a valid and important critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer suggests comparing bins with seizure activity versus bins without seizure activity to demonstrate internal consistency. However, the authors explicitly performed this exact comparison using peri-ictal versus inter-ictal periods (shown in Figure 4), finding no difference. The reviewer's premise that this approach is missing is factually wrong. I judge this as Not Correct. A devil's advocate could argue the reviewer meant something more specific (e.g., 24-hour bins instead of rolling windows), but the core request was demonstrably fulfilled in the paper. Experts would confidently reject this item.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer recommends specifying the term 'rhythms' as 'rhythms of [EEG band power]' in the title and throughout the paper, and suggests expanding the introduction. These are valid points about clarity and literature framing. I judge this as Correct. However, these are largely presentational and stylistic adjustments that do not alter the paper's scientific validity, making them Marginally Significant. The evidence is sufficient. Experts would agree this is a minor constructive suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer observes an edge effect and amplitude loss over time in Figure 1a, questioning if this is a technical artifact (loss of connectivity) or representative of the cohort. This is a factually accurate observation of the provided figure. Ensuring that the diminished rhythms are not merely artifacts of signal degradation is crucial for the paper's validity. I judge this as Correct and Significant. The evidence is sufficient as the reviewer points to specific days in the figure. Experts would agree this is a highly relevant methodological question.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the paper performs multiple statistical tests across rhythm periods and EEG frequency bands (e.g., in Table S2.1) without applying multiple comparison corrections, inflating the risk of false positives. This correctly identifies the statistical methodology used in the paper. I judge this as Correct. Failing to correct for ~30-60 tests is a major statistical flaw that can invalidate the significance claims, making it Significant. The reviewer quotes specific p-values and references standard statistical practices, providing Sufficient evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes the study lacks a healthy control group, comparing only SOZ to non-SOZ tissue within epilepsy patients, which makes it hard to distinguish true pathology-specific features from generalized epileptic network effects. This correctly describes the study design and its limitations. I judge this as Correct. Acknowledging and addressing this limitation is crucial for interpreting what 'diminished rhythms' actually means relative to a healthy brain, making it Significant. The evidence is Sufficient, citing the paper's own limitations.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer observes that the study does not control for confounding factors like anti-epileptic drug tapering and hospital environment effects, which can differentially affect rhythms. This correctly reflects the paper's methodology and limitations section. I judge this as Correct. Since these are primary drivers of chronobiological disruption, failing to account for them significantly threatens the study's validity. The criticism is therefore Significant. The evidence is Sufficient, with appropriate literature cited.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the reported median AUC of 0.62 represents only a modest discriminatory ability, contrary to the paper's emphasis on statistical significance. This correctly reflects the reported AUC values. Discussing the clinical or practical relevance of a modest effect size improves the paper's scientific rigor. I judge this as Correct and Significant. However, some experts might view an AUC of 0.62 as a standard or acceptable effect size in noisy biological data, and thus consider discussing it merely Marginally Significant. Therefore, I predict disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly states that the study fails to account for the confounding effects of anti-seizure medications, which are known to alter EEG spectra and circadian rhythms. This is factually accurate, as the paper does not control for medication load or tapering. I judge this as Correct. Because medications can differentially impact pathological tissue, this is a major unaddressed confounder that threatens the validity of the claims, making it Significant. The reviewer provides sufficient evidence by citing relevant literature.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer suggests the diminished circadian rhythm in delta power might just reflect disrupted local sleep architecture (e.g., reduced sleep spindles/slow waves in the SOZ) rather than a primary clock dysfunction. This correctly reflects the biological interpretation of delta power rhythms. I judge this as Correct. Disentangling sleep homeostasis from the circadian pacemaker is a fundamental issue in chronobiology that affects the paper's core scientific interpretation, making it Significant. The evidence is Sufficient, quoting the paper's admission of not investigating sleep.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer notes that the minimum recording duration of 2 days captures only two circadian cycles, which is statistically insufficient to reliably estimate rhythms or avoid edge effects. This is factually true based on the paper's stated range of 2-21 days. I judge this as Correct. Extracting long rhythms from very short time series is a critical methodological flaw that can lead to false rhythmicity, making the criticism Significant. The evidence is Sufficient, referencing chronobiology guidelines.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that comparing SOZ to non-SOZ tissue within the same patient is flawed because the 'healthy' tissue is part of an epileptic network and exposed to the same systemic factors. This correctly describes the study design limitations. I judge this as Correct. It fundamentally challenges the assumption that non-SOZ tissue represents 'healthy functioning,' which is a central theme of the paper. This makes the criticism Significant. The evidence is Sufficient, citing relevant functional network literature.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out that imputing missing data with added Gaussian noise and then applying a band-pass filter on short segments introduces ringing artifacts and synthetic variability. This accurately reflects the preprocessing steps described in the supplementary material and code. I judge this as Correct. Imputing with noise before filtering can severely distort low-frequency rhythm estimates, introducing critical methodological artifacts. The criticism is therefore Significant. The evidence is Sufficient, referencing the specific code and supplementary text.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer highlights a critical inconsistency regarding missing data imputation: the main text claims imputed data were not used, while Supplement S1 states imputed segments with added Gaussian noise were the final values used. Furthermore, zero-phase filtering spreads this stochastic noise into non-missing segments. This is a factually correct and precise reading of the paper and code. I judge this as Correct. This methodological flaw fundamentally compromises the estimated rhythm power and reproducibility, making it highly Significant. The evidence is Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer criticizes the lack of specification for the hypothesis tests used to claim AUC distributions exceed 0.5, and the absence of multiple comparisons correction across the numerous rhythm/band tests. This accurately reflects the statistical reporting in the paper and supplement. I judge this as Correct. Under-specified tests and uncorrected p-values for dozens of comparisons threaten the statistical validity of the core findings, making the issue Significant. The evidence is Sufficient, quoting the paper's p-values and referencing standard statistical practices.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that using a paired t-test on overlapping 36-hour rolling-window AUCs is invalid due to severe temporal autocorrelation, undermining the claim that diminishment is independent of seizure occurrence. This is factually correct regarding the methods used. I judge this as Correct. Violating independence assumptions makes the statistical test meaningless and risks false negatives, making the criticism highly Significant. The evidence is Sufficient, identifying the exact methodological flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer points out inconsistencies between the main text claiming a likelihood-ratio test (LRT) and the supplement presenting Wald tests, as well as an apparent error in the code using df=2 for adding a single fixed effect. This correctly identifies discrepancies in the reported methods and the provided code. I judge this as Correct. Using the wrong degrees of freedom and inconsistent test reporting undermines the reliability of the mixed-effects results, making the criticism Significant. The evidence is Sufficient, citing both the text and code.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

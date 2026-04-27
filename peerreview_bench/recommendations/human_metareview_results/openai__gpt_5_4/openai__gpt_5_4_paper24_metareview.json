@@ -1,0 +1,236 @@
+{
+  "paper_id": 24,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does not test visual memory in these patients; it infers a possible link from prior literature and explicitly phrases the claim as a suggestion or implication. The reviewer's core point—that the visual-memory interpretation and surgery implications are somewhat speculative and should be stated more cautiously—is supported by the abstract and discussion, which move from physiologic occipital MI findings to possible visual memory consolidation and improved epileptogenic-zone localization without direct patient-level behavioral validation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is a presentation complaint about the iEEG figures. Figure 2 indeed places slope, p-value, t-value, and DF text inside each panel rather than in a separate table. The criticism is understandable and factually grounded, but it is mainly a stylistic preference about figure formatting rather than a substantive methodological issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Figure 2 uses common linear axes across lobes, and many points in several panels are compressed near zero, making visual assessment difficult. The reviewer’s proposal of log scaling is a subjective visualization suggestion rather than a factual necessity, but the underlying criticism that the current scaling hinders discernment in many subplots is valid from the figure itself. Whether this is merely a presentation nit or meaningfully improves interpretability is debatable.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The age distribution is highly skewed toward younger patients, with only a few adults above 20 years, and Figure 2 shows those older observations as isolated far-right points. Asking for a sensitivity analysis without these few older patients is a reasonable robustness concern, especially because some conclusions emphasize developmental shape across childhood. However, the paper explicitly studies ages 1.0 to 41.5 years, so the request is not compelled by a demonstrated flaw, and the reviewer provides no concrete evidence that those points drive the results.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper states a 1000 Hz sampling rate and discusses ancillary analyses for HFO >=150 Hz and >=250 Hz. A 1000 Hz sampling rate does not preclude frequencies above 250 Hz in general; by Nyquist it can represent up to roughly 500 Hz. The paper also does not build its main conclusions on observed fast-ripple results, instead reporting that >=150 Hz and >=250 Hz events were too infrequent for meaningful regression fits. So the reviewer's premise that all text on >250 Hz is unfounded because the data cannot support it is too strong and factually wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper cites Zweiphenning et al. 2022a in the introduction as support for the efficacy of HFO-guided resection being non-inferior to conventional spike-guided resection. The cited HFO trial actually concluded that HFO-guided tailoring was not non-inferior overall and challenged the clinical value of HFOs, especially in temporal lobe epilepsy. Thus the reviewer is right that the current summary is wrong, though the item gives only a broad pointer to the reference rather than specifying the exact misstatement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper already includes several recent HFO references and a 2022 trial, so saying older reviews 'must' be removed is not justified by the manuscript itself. Recommending an additional 2021 review and noting that the surgical value of different HFO types remains debated is reasonable, but the stronger prescription to replace existing reviews is a matter of preference rather than a factually supported deficiency. Because the main criticism is framed around replacing the current review coverage, it does not hold up cleanly as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The abstract contains explicit clinical and mechanistic conclusions, while the manuscript ends with limitations rather than a concise concluding paragraph. The reviewer’s request for a clearer concluding statement at the end is reasonable and would improve reader take-away, especially since the paper makes clinically relevant claims in the abstract and discussion. This is a real but primarily organizational issue, and the review item points clearly to the abstract-versus-manuscript mismatch.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript is readable, but the reviewer’s concern about stronger structure is understandable: the introduction contains some method-like detail, and the paper mixes motivation, method previews, and results-oriented framing in places. This is a subjective writing criticism, and under the rubric such readability concerns are usually treated as correct unless the writing is objectively clear. It is constructive but mostly about presentation.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is a generic style suggestion about shortening sentences and removing redundant phrases. The manuscript does contain some long, dense sentences, so the point is plausible, but the reviewer gives only vague examples and no precise location where the prose materially impairs understanding. It is a minor writing preference rather than a substantive issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The abstract says 'intracranial EEG' without specifying the recording modality, whereas the methods make clear that the implanted electrodes were subdural disk electrodes. Because the introduction mentions subdural and/or depth electrodes generically, explicitly clarifying that this dataset uses subdural recordings would better set scope and avoid overgeneralization. This is a valid clarity point with direct support from the abstract and methods.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper repeatedly uses 'patient and epilepsy profiles' but does not define 'epilepsy profiles' as a named construct. From the methods, the modeled epilepsy-related covariates are SOZ location, MRI-visible lesion presence, hemisphere, and antiseizure medications, so the wording is somewhat loose. The reviewer’s request for clearer definition is justified because the phrase appears in the abstract, introduction, and results without an explicit term definition.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The quoted introduction passage indeed reads like a methods preview: it describes visualization of 140 white matter pathways, the MI criterion, and the dynamic tractography technique, rather than motivating why that extra analysis matters. That placement issue is easy to verify from the introduction text. Reframing this material toward rationale rather than method would improve the paper’s organization and reader guidance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The methods state a 1000 Hz sample rate and the paper later notes that analyses of HFO >=150 and >=250 Hz were only ancillary because such events were infrequent. Saying 1000 Hz is 'low to recognize HFOs>250 Hz' is debatable: such sampling can still represent frequencies up to about 500 Hz, though some experts might still view it as suboptimal for robust characterization near the upper band. Because the reviewer’s premise can be read either as a strict impossibility claim or a softer adequacy concern, correctness itself is borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper says it studied a consecutive series of 114 patients meeting eligibility criteria, but it does not report the larger starting pool from which those 114 emerged. The reviewer is correct that 114 appears to be the post-selection cohort and that reporting the source population or screening flow would improve transparency. This is a substantive reporting issue, though the reviewer does not cite Figure S1 or any exact omission beyond the general concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The manuscript reports 8,251 included nonepileptic electrode sites and says they were artifact-free and outside SOZ, spike zone, and MRI-visible lesions, but it does not quantify how many candidate channels were discarded for each reason. The reviewer’s request for pre- versus post-exclusion channel counts is therefore valid and helpful for reproducibility and sample characterization. The missing-information claim is directly verifiable from the methods text.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper explicitly applies FDR correction across 18 comparisons, and the reviewer questions whether that correction scope is appropriate given dependence among measures while suggesting the issue should be discussed. This is not a clear factual error in the paper because using FDR under dependent tests is often acceptable; the reviewer is raising a debatable statistical preference rather than identifying a definite mistake. Experts could disagree on whether this counts as a correct criticism versus an unsupported methodological opinion.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper repeatedly claims the atlas could improve age-appropriate localization of the epileptogenic zone, yet all primary analyses are restricted to nonepileptic channels and the study does not directly test improved EZN delineation. The reviewer is therefore correct that the clinical EZN-improvement claim is not directly supported by analyses of pathological channels. The additional complaint about lack of evidence for the visual-memory interpretation is also supported because the manuscript infers that link from literature rather than direct neurocognitive measurement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is phrased as a suggestion for additional comparisons between physiological and pathological occipital MI and with neuropsychological evaluations. Such analyses are not present, so the implied missing-comparison point is valid and would help test the paper’s translational and cognitive claims. The evidence is weaker because the reviewer does not point to a specific claim-location or explain why these additions are necessary beyond general interest.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper interprets developmental enhancement of occipital MI as potentially relevant to visual memory consolidation, but it presents no patient-level visual memory data or impairment analysis. The reviewer's statement that more data are needed to support that hypothesis is therefore accurate and directly tied to a key interpretive claim in the abstract and discussion. Even though the comment is short, it clearly identifies the missing evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The methods say slow-wave sleep epochs were identified by visual assessment and cite prior work, but they do not define the sleep stage using a standard such as N3, specify night timing, or describe detailed staging procedures. Given that the study hinges on slow-wave sleep physiology, the reviewer is correct that better definition of the sleep criterion and staging method would improve methodological clarity. The item also gives a concrete external standard (AASM), making the justification specific.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item mostly asks open-ended speculative questions about dreams, spindles, and consciousness rather than identifying a concrete flaw in the submitted paper. The manuscript is about slow-wave sleep HFO/MI development, and the reviewer does not establish that omission of dream or spindle discussion is a genuine deficiency for the paper’s stated goals. As a criticism, it is too conjectural and not clearly targeted enough to verify.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The broader complaint that some regions may behave differently and could merit finer-grained analysis is plausible, especially because the study aggregates by major lobes. However, the specific hippocampus example is inapplicable here because the dataset uses subdural electrodes and does not sample mesial structures like the hippocampus. Since the item mixes a valid general granularity concern with an invalid concrete example, correctness is genuinely ambiguous.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper uses subdural recordings and explicitly acknowledges limited spatial sampling, including lack of thalamic and some medial/inferior cortical coverage. Given those limitations, describing the product as a 'whole brain level' or 'global atlas' can overstate comprehensiveness, especially for mesial temporal memory-relevant regions. This is a valid scope criticism with direct support from the methods and limitations sections.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper does mention ancillary analysis of HFO >=150 Hz and >=250 Hz in the methods, results, and discussion, stating that regression models could not meaningfully fit these sparse events. So if the reviewer means those analyses are entirely absent, that is false. A charitable reading is that the analyses were not sufficiently shown, but as written the statement 'I could not find' targets absence and does not hold up against the text.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "This is a straightforward related-work suggestion: the paper discusses physiological occipital high-frequency activity independent of epileptogenicity, and the reviewer recommends another potentially relevant citation. Adding it might modestly improve context, but omission of this single reference does not materially weaken the paper. The item is valid yet minor.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The manuscript repeatedly uses phrases like 'enhanced MI' or 'physiologically enhanced MI' to mean higher MI values, but it does not always pause to define that wording explicitly for readers. The reviewer's request for clarification is therefore a reasonable clarity comment, though the intended meaning is inferable from context. This is a minor terminology issue rather than a substantive defect.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    }
+  ]
+}

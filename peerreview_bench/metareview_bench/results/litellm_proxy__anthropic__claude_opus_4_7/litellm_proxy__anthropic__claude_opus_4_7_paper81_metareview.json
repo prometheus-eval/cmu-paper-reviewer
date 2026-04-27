@@ -1,0 +1,198 @@
+{
+  "paper_id": 81,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer complains about heat sink/silicon substrate and heat spreading from a diode — but this paper is about PEDOT:PSS OECTs for impedance biosensing of single cells, not about a diode/LED on silicon. The paper contains no discussion of heat sinks, diodes, or heat spreading. The core premise of the item does not map onto the paper at all. Devil's advocate: could a charitable expert find any relevance? No — the subject matter is entirely unrelated (OECT biosensor vs. silicon-based LED). Both experts would agree this item is factually incorrect relative to the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks the authors to specify limits on current injection and output power of 'the LED'. The paper under review contains no LED; it is about OECT impedance sensors using PEDOT:PSS channels. The premise is factually wrong against the paper. Devil's advocate: could any charitable interpretation map this onto the paper (e.g., current compliance of the OECT)? The item explicitly references LEDs, so this remapping is implausible. Experts would agree this is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks for temperature-dependent light emission/EQE measurements. This paper does not measure light emission or EQE; it measures ionic/electronic currents in an OECT biosensor. The item cannot apply. Devil's advocate: temperature effects could be relevant to OECT operation in principle, but the reviewer specifically mentions 'light emission/EQE' which is irrelevant. Experts would uniformly mark incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer suggests structure modifications to achieve higher optical output powers. The paper has no optical output component. The criticism is about a different paper entirely. Devil's advocate: no plausible charitable reading connects this to an OECT biosensor paper. Experts agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks about reproducibility of 'silicon filament formation' across LED structures on multiple chips. The paper does not discuss silicon filaments; it discusses PEDOT:PSS channels patterned via photolithography. The premise is wrong. Devil's advocate: while device-to-device reproducibility is a generally relevant question for any fabrication paper, the reviewer's specific framing about silicon filaments is inapplicable. Experts would agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer quotes a passage about vertical pn junctions with top metal contact being replaced by n-poly-Si to reduce shadowing, and references 'the work on the smallest CMOS emitters'. This paper is about OECT biosensors with PEDOT:PSS channels and does not discuss pn junctions, CMOS emitters, or n-poly-Si contacts. The reviewer appears to be reviewing a different paper. Devil's advocate: no charitable reading maps this onto the OECT paper. Experts agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks about applications of an LED emitting at 1100 nm. The paper under review is not about an LED and mentions no 1100 nm emission. The claim is inapplicable. Devil's advocate: no reasonable mapping to the OECT paper. Experts agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks if the wavelength is tunable. No wavelength emission is discussed in this OECT impedance sensor paper — it discusses frequency tuning of the gate voltage modulation. The premise does not apply. Devil's advocate: one could stretch this to ask about frequency tunability, but the reviewer specifically uses 'wavelength'. Experts agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks about the position control of Si filaments (sub-100 nm) and device performance implications. The paper does not discuss silicon filaments; the device fabrication uses PEDOT:PSS channels patterned by photolithography (not filament formation). The item refers to a different paper. Experts agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer asks whether 'this micro-LED' could be modulated fast. The paper does not describe a micro-LED. The premise does not apply to this paper. Devil's advocate: modulation bandwidth for OECTs is a relevant topic (cutoff frequency), but the reviewer specifically says 'micro-LED', which is not what the paper is about. Experts agree: incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer claims the 20.2 dB gain is based on a single T98G cell with error bars from temporal replicates rather than biological replicates. Verified against the paper: Figure 3a shows 'a single T98G cell' and the Figure 3 caption states 'Error bars are obtained by averaging between n=4 measurements acquired at different time.' The main point is factually correct. Significance is high — headline performance claims backed by a single-cell run with technical-replicate error bars is a core reproducibility concern that would substantially strengthen the paper if addressed. Evidence is sufficient: the reviewer quotes specific passages, figure caption, and cites a relevant methodology reference. Devil's advocate on correctness: one could argue there's the AFM microparticle model experiment providing reproducibility over multiple cycles/devices, but the headline 20.2 dB claim does come from a single cell event. Devil's advocate on significance: this is clearly a significant issue. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer notes that a 50 µm dielectric microparticle doesn't match the size of T98G cells (15-35 µm) and lacks biological complexity (membrane capacitance, focal adhesion). Verified: the paper does use a 50 µm particle and frames it as 'in first order approximation a similar response is expected when a biological cell adheres'. T98G cells are indeed smaller than 50 µm. The critique that the bead is a passive dielectric barrier while cells have capacitive membranes is physically accurate. Significance is high — the surrogate is the central methodological pillar of the quantitative model. Evidence is sufficient: quoted passages + domain-specific references (Hempel et al. for cell-based validation). Devil's advocate on correctness: the paper does later do an in-vitro cell experiment to bridge this gap, so the surrogate claim is validated empirically in at least one case. Still, the concern about model-to-biology transferability is valid. Significance — a skeptical expert might call this less critical because the paper later shows in-vitro validation. Both axes are close to firm.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that fOECT being fit per sensor introduces arbitrary flexibility. Verified: the paper explicitly states 'fOECT was not assumed as constant in this experiment, but its value was set for each sensor in order to best fit the experimental data with the model.' The main claim is factually correct. Significance is high — per-device free-parameter fitting weakens the paper's claim of a 'quantitative' model providing predictive guidelines. Evidence is sufficient: direct quote + external reference showing physical interpretations exist. Devil's advocate: one could argue that fitting one dimensionless parameter per device is still a modest degree of freedom compared to the multi-parameter fit quality; but the reviewer's concern that this undermines the 'predictive' claim is valid. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues that the paper focuses cell sensing analysis primarily at 625 Hz and omits multi-frequency analysis for extracting cell parameters (Rb, α, Cm). Verified: the paper does emphasize 625 Hz in Figure 3b, but Figure 3c,d do present full frequency spectra and frequency-dependent sensitivity/gain. So the paper does provide multi-frequency data, though it does not perform ECIS-style parameter decomposition. The claim 'focuses primarily at a single frequency' is partially correct for the headline but understates the multi-frequency data shown. Significance is debatable — some experts would say multi-frequency parameter extraction is out-of-scope for a paper whose contribution is a quantitative gain model; others would say it's essential. Evidence is sufficient (specific quotes + ECIS reference). Devil's advocate on significance: a reasonable expert could view this as going beyond the paper's stated scope (quantitative amplification model) rather than a core deficiency, making it Marginally Significant. This looks like a case where experts would disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues that the dielectric microparticle surrogate fails to capture frequency-dependent cell impedance (membrane capacitance, beta-dispersion, etc.). Verified: the paper relies on 'in first order approximation a similar response is expected' and does not model membrane capacitance. The frequency range covers 10 Hz to 10^5 Hz where cell-membrane effects become relevant. Main point is factually correct and the physics argument (cell = conductive cytoplasm + capacitive membrane) is standard. Significance high — this concerns the validity of the quantitative model's applicability to actual cells. Evidence sufficient: quoted text + referenced cytometry paper. Devil's advocate: the paper does run an in-vitro cell experiment, so the model is empirically tested. Still, the theoretical concern is clear. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer claims the Bernards model uses a DC-derived constant transconductance and ignores the intrinsic frequency dependence of gm. Verified: the paper does use gm,AC^lin = -W/L µp cv t VD,DC (DC-style expressions) and attributes high-frequency rolloff to circuit elements (Cch, Zel) rather than intrinsic gm rolloff. The technical claim is correct. However, the paper's overall model (equation 1 and the equivalent circuit) does capture frequency-dependent response through circuit analysis and matches the experimental data well. The reviewer's framing that the model 'fails to accurately capture the dynamic response' is debatable given the good agreement with data. Significance is borderline — if the model empirically fits, the theoretical gap may not matter for the paper's claims. Devil's advocate: an ion-transport-limited intrinsic gm rolloff could be a real concern in some regimes, but within the tested frequency range the model appears adequate. This is a case where experts would likely disagree on significance (Significant vs Marginally Significant). Evidence sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues sample size is too small (potentially one cell) without statistics on cell-to-cell/device-to-device variability. Verified: the paper shows 'a single T98G cell' in Figure 3a, and averaging is across time points for one experimental run. Main point correct. Significance high — this is a core reproducibility concern. Evidence sufficient: quotes Figure 3a and the averaging description. Devil's advocate: the AFM microparticle experiment may provide some device-level statistics (three geometries measured), but for the in-vitro cell claim, only one cell is reported. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the gate-current partition factor fOECT is fitted per device, undermining claims that the model 'correctly predicts'. Verified against the paper — the paper explicitly states fOECT is 'set for each sensor in order to best fit the experimental data with the model.' Main point correct. Significance high — this directly affects whether the model is predictive or merely descriptive. Evidence sufficient: direct quotes + a specific reference to a prior work that directly measures gate current. Devil's advocate: one could defend the paper by noting fOECT variation is small (near 0.5) and doesn't affect the geometry/frequency trends. But the reviewer's concern about predictive generalization is well-founded. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues that the microparticle surrogate doesn't capture cell-specific mechanisms (membrane capacitance, paracellular pathways). Verified — the paper frames the bead as a first-order surrogate but does not validate equivalence to cell electrical elements. Main point correct. Significance high — the surrogate is central to the quantitative model claim. Evidence sufficient: specific quotes from paper + ECIS reference showing frequency-dependent membrane capacitive pathways + Rivnay cell-impedance reference. Devil's advocate: the paper's later in-vitro single-cell experiment partly bridges this gap; the surrogate is explicitly labeled as 'first order approximation'. Still, the surrogate's central role in the quantitative optimization argument makes the concern significant. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that 20.2 ± 0.9 dB is backed by technical/temporal replicates rather than biological replicates. Verified: Figure 3 caption states 'n=4 measurements acquired at different time.' The main claim is correct and rigorously supported with NIH definitions of biological vs technical replicates. Significance high — directly affects the headline quantitative performance claim. Evidence sufficient: quotes + NIH reference. Devil's advocate: one could argue that for an engineering demonstration of a novel sensor, even a single-cell proof-of-concept with temporal stability is valuable; but the paper presents 20.2 dB as a characterized performance metric with uncertainty bounds, which does imply statistical meaning. Experts agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the paper claims improved 'noise pickup and digitization' without any noise spectra or SNR analysis. Verified: the conclusion text does include 'facilitates measurement conditions regarding noise pickup and digitization', yet the paper presents no noise density measurements, no gate-referred voltage noise, and no SNR comparisons. Main point correct. Significance high — claiming SNR-type benefits without quantifying noise is a standard methodological gap in OECT amplification literature, and addressing it would materially strengthen the paper. Evidence sufficient: direct quote + multiple specific references (Stoop, Wang, Rivnay) showing how noise is quantified in the field. Devil's advocate: gain at signal frequency does not automatically improve SNR, and the reviewer is correct that this needs noise characterization. Experts agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

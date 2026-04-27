@@ -1,0 +1,161 @@
+{
+  "agreement_table": [
+    {
+      "metric": "correctness",
+      "n": 568,
+      "percent_agreement": 0.846830985915493,
+      "kappa": 0.12463685963296256,
+      "kappa_label": "slight",
+      "ac1": 0.8146801548832282,
+      "ac1_label": "almost perfect",
+      "reviewer_type": "Human"
+    },
+    {
+      "metric": "correctness",
+      "n": 340,
+      "percent_agreement": 0.8764705882352941,
+      "kappa": 0.4724007980492131,
+      "kappa_label": "moderate",
+      "ac1": 0.8387388201282862,
+      "ac1_label": "almost perfect",
+      "reviewer_type": "AI"
+    },
+    {
+      "metric": "significance",
+      "n": 470,
+      "percent_agreement": 0.6021276595744681,
+      "kappa": 0.3418352828408394,
+      "kappa_label": "fair",
+      "ac1": 0.43052543083968187,
+      "ac1_label": "moderate",
+      "reviewer_type": "Human"
+    },
+    {
+      "metric": "significance",
+      "n": 273,
+      "percent_agreement": 0.5934065934065934,
+      "kappa": 0.21830985915492962,
+      "kappa_label": "fair",
+      "ac1": 0.45159889244801565,
+      "ac1_label": "moderate",
+      "reviewer_type": "AI"
+    },
+    {
+      "metric": "evidence",
+      "n": 353,
+      "percent_agreement": 0.8385269121813032,
+      "kappa": 0.06173933317789693,
+      "kappa_label": "slight",
+      "ac1": 0.8061121737580281,
+      "ac1_label": "almost perfect",
+      "reviewer_type": "Human"
+    },
+    {
+      "metric": "evidence",
+      "n": 230,
+      "percent_agreement": 0.9434782608695652,
+      "kappa": 0.2884340790099952,
+      "kappa_label": "fair",
+      "ac1": 0.9386169306412375,
+      "ac1_label": "almost perfect",
+      "reviewer_type": "AI"
+    },
+    {
+      "metric": "correctness",
+      "n": 908,
+      "percent_agreement": 0.8579295154185022,
+      "kappa": 0.2813635025031903,
+      "kappa_label": "fair",
+      "ac1": 0.8231052628796968,
+      "ac1_label": "almost perfect",
+      "reviewer_type": "All",
+      "_combined": true
+    },
+    {
+      "metric": "significance",
+      "n": 743,
+      "percent_agreement": 0.5989232839838493,
+      "kappa": 0.3055268910963136,
+      "kappa_label": "fair",
+      "ac1": 0.4369247455799544,
+      "ac1_label": "moderate",
+      "reviewer_type": "All",
+      "_combined": true
+    },
+    {
+      "metric": "evidence",
+      "n": 583,
+      "percent_agreement": 0.8799313893653516,
+      "kappa": 0.11750713606089436,
+      "kappa_label": "slight",
+      "ac1": 0.8614002615089407,
+      "ac1_label": "almost perfect",
+      "reviewer_type": "All",
+      "_combined": true
+    }
+  ],
+  "meta_reviewer_label_distribution": [
+    {
+      "id": 1,
+      "label": "correct_significant_sufficient",
+      "count": 277,
+      "pct": 0.30506607929515417
+    },
+    {
+      "id": 2,
+      "label": "correct_significant_insufficient",
+      "count": 2,
+      "pct": 0.0022026431718061676
+    },
+    {
+      "id": 3,
+      "label": "correct_significant_disagree_on_evidence",
+      "count": 20,
+      "pct": 0.022026431718061675
+    },
+    {
+      "id": 4,
+      "label": "correct_marginal_sufficient",
+      "count": 74,
+      "pct": 0.08149779735682819
+    },
+    {
+      "id": 5,
+      "label": "correct_marginal_insufficient",
+      "count": 4,
+      "pct": 0.004405286343612335
+    },
+    {
+      "id": 6,
+      "label": "correct_marginal_disagree_on_evidence",
+      "count": 13,
+      "pct": 0.014317180616740088
+    },
+    {
+      "id": 7,
+      "label": "correct_not_significant",
+      "count": 55,
+      "pct": 0.0605726872246696
+    },
+    {
+      "id": 8,
+      "label": "correct_disagree_on_significance",
+      "count": 298,
+      "pct": 0.32819383259911894
+    },
+    {
+      "id": 9,
+      "label": "incorrect",
+      "count": 36,
+      "pct": 0.039647577092511016
+    },
+    {
+      "id": 10,
+      "label": "disagree_on_correctness",
+      "count": 129,
+      "pct": 0.1420704845814978
+    }
+  ],
+  "n_overlap_items": 908,
+  "n_overlap_papers": 27
+}

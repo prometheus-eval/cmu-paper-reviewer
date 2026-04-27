@@ -1,0 +1,172 @@
+{
+  "paper_id": 26,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The methods explicitly assume homogeneous local coupling with a single γ_hom while only long-range connectivity is heterogeneous at the VEP-region level. The reviewer is therefore right that this is a strong simplifying assumption for epilepsy modeling, and the item points closely enough to the relevant model structure to verify it.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The stimulation examples target regions already hypothesized to be epileptogenic from prior seizure/resection evidence, and the discussion itself notes that stimulation could force seizures in non-epileptogenic tissue. Requesting an unrelated-site control is therefore a valid and important missing-control critique.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper gives only synthetic scalp-EEG/TI demonstrations and frames non-invasive use as a future direction, so concern about whether surface EEG alone can support accurate parameter estimation is understandable. But the item is phrased speculatively and the manuscript does already include some scalp-EEG-only synthetic results, so experts could plausibly disagree on whether this is a correct criticism or an out-of-scope question.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The model keeps local coupling homogeneous across the cortex, and the discussion itself says that introducing regional variations could improve the pipeline. Suggesting ROI-specific y_hom is therefore a plausible substantive extension, but the reviewer does not provide much support that this particular change would improve accuracy in the present study.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Figure 1 is visually dense, and the subpanels the reviewer names have very small axis text at the displayed scale. This is a real but presentation-level issue, and the reviewer identifies the exact subfigures affected.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The early text mentions local and global seizure propagation before the paper later explains the homogeneous local versus heterogeneous long-range coupling distinction in detail. That makes the reviewer’s line-level clarity complaint fair, though it is only a minor writing improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "This is a straightforward wording suggestion for a specific phrase that could read more naturally. The point is valid but purely stylistic, and the item precisely identifies the text at issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The claim concerns bold formatting in the Figure 7 caption, which likely depends on the final typeset PDF; the reconstructed markdown/caption text available here does not preserve that typography. The underlying formatting issue may be real, but it is not cleanly recoverable from the accessible source, so experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript states that the cortex was parcellated with the VEP atlas and cites the code/reference, but it gives little rationale for choosing this atlas over alternatives or discussing its limitations. Because atlas choice affects connectome construction and downstream modeling, this is a valid and important criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Beyond pointing to prior work and code, the manuscript gives only limited in-paper explanation of the VEP atlas and how it fits into the implemented pipeline. Asking for more detail is constructive for reproducibility and reader understanding, but the reviewer does not specify which missing elements matter most.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper uses a single atlas and does not analyze whether stimulation/EZN results are robust to alternative atlas choices or boundary definitions. Asking for discussion of atlas sensitivity is therefore a valid substantive concern, and the item is specific enough about what robustness is missing.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper explicitly introduces m(t) as a phenomenological accumulation variable and also notes that the precise biophysical mechanism is not known. The reviewer is therefore right that the link from m(t) to fast dynamics and underlying biophysics remains unclear, and clarifying that would materially strengthen the model interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The phrase 'considering only geometric features of the cortical surface' is not unpacked immediately where it first appears, although later methods do clarify local coupling via geodesic distance on the cortical mesh and forward models via orientation and distance. Because the clarity concern is plausible but the paper does eventually specify the geometry, experts could disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Section 4.4 already says that the SEEG stimulus is a clinician-chosen biphasic signal applied through a neighboring sensor pair with specified frequency, amplitude, and pulse-width ranges. The reviewer's claim that the stimulus itself is not mentioned therefore does not hold.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The paper personalizes not only the connectome but also the stimulation field: SimNIBS is run on each patient's MRI and patient-specific electrode pairs are optimized or selected for the target. Even so, the manuscript's explanation of how stimulation personalization relates to virtual-brain personalization is somewhat scattered, so the clarification request is fair and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The paper does use a uniform noninformative prior, but the reviewer's stronger premise that a healthy-region prior is basically incompatible with seizure modeling is overstated. Still, a charitable reader could interpret the item as asking for better justification or robustness to alternative priors, so experts could plausibly split on correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Epileptogenic values are the paper's central inferred quantity, yet the manuscript mostly labels them as 'higher value indicates higher probability of seizure' without really explaining how they are calculated or mapped from model parameters in this paper. Asking for that definition is therefore valid and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The stimulation pipeline is validated only on synthetic seizures with assumed ground truth and limited clinical anchoring, not by quantitative comparison to real stimulation recordings or explicit accuracy against clinically observed seizure onset. The reviewer is right that the clinical ground-truth story is unclear and important.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper validates the stimulation pipeline on synthetic seizures generated by the model and compares identified regions mainly to hypothesized or resected EZs, but it does not experimentally validate simulated SEEG/TI stimulation against real stimulation recordings. The suggested empirical comparisons target a central limitation and are clearly stated.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

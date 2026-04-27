@@ -1,0 +1,267 @@
+{
+  "paper_id": 67,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer correctly identifies that the paper presents characterization of only one device array (with 100–500 nm stripes). The call for testing >10 additional devices to quantify size, spectral-range and responsivity variability is a substantive methodology concern: statistical device-to-device reproducibility is central to supporting claims of a 'printable' array technology. Devil's advocate: one could argue each cell in the 6-channel array provides some variability data, so 'only one array' is slightly uncharitable. Still, the broader concern about reproducibility across devices holds. Significance is clearly high because it would meaningfully strengthen the paper. Evidence is sufficient because the absence is directly verifiable from the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer raises a bundle of related concerns: simulation should include device variation, the imaging workflow schematic lacks key details (camera temperature data, per-grating photoresponse spectra), and the simulation code/data should be uploaded. All three are defensible: the simulation in Sec. S5 uses commercial-camera frames with idealized filters, and the data policy is 'upon request'. Devil's advocate: the item mixes several requests somewhat loosely. However, the main point (more transparent simulation tied to real device statistics) is clear and correct. Significance: addressing these would materially improve reproducibility and credibility. Evidence: the reviewer points to specific missing elements that a meta-reviewer can verify.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims the concept of ferroelectric-controlled graphene plasmonic tuning largely recapitulates the authors' own earlier Adv. Mater. Interfaces 2022 paper, with this work adding only tunable spectral photodetection. This is a novelty/significance critique. I cannot independently verify the exact content of the cited 2022 paper, but the concern (limited incremental advance for a Nature Communications-scope venue) is a judgment call on which experts often differ. Devil's advocate: the present work's integration of zero-bias operation, device arrays, and meta-imaging demonstration plausibly extends the prior simulation/concept work to a full device demonstration, which a charitable expert would view as non-trivial. Significance: real but debatable. Evidence is a specific reference, so sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer mentions Fig. 3d (likely Fig. 3e in the published figure) which shows a responsivity comparison chart including 'this work' at ~30 mA/W. The reviewer correctly notes that there are many graphene photodetectors with much higher responsivity (0.1–10 A/W) and provides three specific references. Adding state-of-the-art comparison data would improve the benchmarking. Devil's advocate: the paper's chart focuses on room-temperature, zero-bias or metal-semiconductor-metal structures in a specific spectral range; some of the cited papers are not mid-IR zero-bias devices, so the comparison's scope could be justified. Still, the underlying concern about including stronger modern comparisons is valid. Evidence: three specific citations named.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly notes that the paper characterizes the device primarily by responsivity; detectivity (D*), noise-equivalent power, and frequency/speed response are not reported. These are standard metrics for photodetectors. Devil's advocate: one could argue these are supplementary details for a proof-of-concept device paper, but for claims comparable to conventional graphene devices, omitting detectivity/speed is a real gap. Significance is high because adding them would meaningfully strengthen the paper's performance claims. Evidence: the reviewer identifies specific missing metrics that a meta-reviewer can verify by scanning the main text and Methods.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper argues type-printing simplifies fabrication, yet the domain writing is done serially with a conductive-AFM tip at +/-12 V, which is inherently slow. The reviewer's domain-knowledge-based claim (conductive AFM writing is time-consuming) is factually correct for large-area patterning. Devil's advocate: the authors cite their prior water-printing technique (ref. 27) that could scale up, so the longer-term claim of scalability is partly defensible. However, the reviewer's targeted criticism is about the demonstrated method in this paper, not the long-term vision, and that is clearly correct. Significance: this challenges one of the paper's selling points. Evidence: appeal to domain knowledge is specific enough (named technique).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks whether the spectral response is truly from graphene plasmonic resonance versus a thermoelectric or pyroelectric effect of the ferroelectric BFO film. This is a legitimate concern because BFO does have pyroelectric/photovoltaic responses and the paper does not present an experiment (e.g., control with unpatterned graphene, or BFO-only reference) explicitly decoupling the two contributions. Devil's advocate: the paper does appeal to plasmonic simulation agreement with the tuning trend vs domain width, which partially addresses the question. Still, the ask for an explicit separation is constructive and substantive. Evidence: identifies specific unaddressed physics. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer notes the demonstrated tuning is only within 1084–1292 cm^-1 and asks about extending the IR range and improving responsivity relative to the authors' previous simulation paper. The factual premise (narrow tuning range shown) is correct. Devil's advocate: these are forward-looking 'what about' questions; whether they are essential for the paper is debatable. Still, they would clearly improve the paper if addressed. Evidence: cites a specific paper and specific numbers from the manuscript.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer asks why the single-channel recognition accuracy plateaus near ~60% (at low epochs; it actually rises to ~93% at 100 epochs for gesture and ~70% for finger recognition). The observation about low-epoch SCA accuracy is correct. Devil's advocate: the paper does discuss that SCA reaches higher accuracy with enough epochs, so the question has a partial answer. Yet asking the authors to explain the origin of poor early-epoch SCA performance is a reasonable probe. Significance: marginal-to-significant — addressing this would clarify the claimed advantage of MCA. Evidence: refers to specific results; sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer asks why 100–500 nm was chosen for BFO polarization width and whether the range can be extended to the 3–5 μm spectral range. The factual claim is accurate (paper uses 100–500 nm). Devil's advocate: the choice is implicitly motivated by achieving resonances in the 8–10 μm band where human thermal radiation peaks, which the paper does discuss. So a charitable expert might view the motivation as already explained. Still, asking for a justified choice and feasibility of reaching 3–5 μm is constructive. Evidence: refers directly to the paper. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer flags that Fig. 3d (or 3e) doesn't clearly emphasize the highest responsivity of the device array, and that scale bars in Fig. 2b,c are missing. On Fig. 2b,c, scale bars appear as white lines but their numerical labels are not shown on the figure panels (only in the caption). On Fig. 3e, the intent is indeed ambiguous. Devil's advocate: both are presentation nits that don't affect the core scientific claims. They are correct observations but minor. Significance: Marginally Significant (presentation fixes). Evidence: specific pointers.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer questions whether 'type-printing' is a standard term or the authors' invention, noting the movable-type analogy feels like a stretch. The terminology is indeed non-standard — the underlying process is conductive-AFM ferroelectric domain writing. Devil's advocate: naming a known technique with evocative language is a common paper-writing practice and not scientifically wrong; it is a stylistic concern. Significance: Marginally Significant — branding doesn't change the science. Evidence: the reviewer cites the manuscript section; sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks why downward-polarized BFO domains heavily dope graphene while upward domains do not. The paper does attribute this to ferroelectric polarization but its mechanism explanation (surface-bound charge transfer) is quite brief. Devil's advocate: the paper cites refs. 19, 20 for the tunability and invokes well-known ferroelectric gating physics, so a charitable expert could view the explanation as adequate via references. Still, improving clarity here is constructive. Evidence: refers to specific claim in the paper. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer points out the infrared transmission measurement uses an AFM probe to guide light, which is unusual, and the paper does not fully explain how the measurements were performed (Fig. 3c). The Methods section describes FT-IR microscopy with 10 μm spot resolution, but the reviewer's concern that the AFM-probe-guided measurement scheme is under-specified is reasonable. Devil's advocate: a careful reader can piece it together from Methods and the inset of Fig. 3c; so an expert might argue the description is adequate. Evidence: specific figure reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer says the photocurrent measurement methodology lacks sufficient detail to reproduce (no schematics, insufficient description). The Methods section does briefly describe the Keithley analyzer and tunable laser setup, but it lacks a setup schematic and details like laser spot size, polarization, modulation etc. Devil's advocate: the description names the instruments and conditions, so a charitable expert may view it as sufficient for a Methods section. Still, adding a schematic and more detail would help reproducibility. Evidence: identifies specific absence. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer notes the 1 μm scale bar in Fig. 3a might only apply to PFM images and asks about the optical image scale. This is a real presentation ambiguity — Fig. 3a shows multiple panels and the scale bar applicability is not perfectly clear from the figure/caption. Devil's advocate: expert readers often assume a scale bar applies to the nearest panel; and captions resolve it in many papers. Significance: Marginally Significant (presentation clarity). Evidence: specific figure reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer documents (with direct quotes and code line numbers) that the MCA vs SCA comparison uses different input resolutions (144×192 vs 72×64), different convolution kernel sizes (5×5 vs 3×3), different filter counts (20 vs 12), and different max-pooling strides. I verified these in CNN_Sensor_1.m. The comparison confounds detector-type with CNN architecture and input resolution. Devil's advocate: the authors argue they equalize total detector count, and matched CNNs to input sizes — a charitable expert might see this as design choice. Still, the lack of a controlled ablation is a real methodological weakness. Significance: high. Evidence: precise code quotes and section pointers. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer correctly observes that the imaging demonstration is a simulation using commercial-camera temperature data filtered mathematically, not actual photodetector-array imaging. This is explicitly stated in the paper and confirmed by MCA_Sensor.m. Devil's advocate: one could argue this is a standard feasibility simulation in proof-of-concept papers, not intended as a hardware demo. Still, the abstract/intro framing ('imaging capability of the fabricated array') is stronger than the simulation-based evidence warrants. Significance: high — addresses central claim of the paper. Evidence: direct quotes + code. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer correctly notes that accuracy numbers (98.1%, 98.2%) are reported as single values in the paper despite the code running M=100 Monte Carlo trials; no standard deviations or confidence intervals are given in the text. I verified M=100 in the code. Devil's advocate: Fig. 4c/e show shaded bands that may represent variance (the reviewer acknowledges this), so a charitable expert might view the graphs as conveying variance. Still, no numerical uncertainty appears in the text/captions. Significance: genuine methodological concern. Evidence: code quotes are precise. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues the observed 'edge enhancement' in MCA may be due to the Lorentzian-filter summation in MCA_Sensor.m rather than the multichannel detector physics. I verified the filters and summation are applied only on the MCA path. This creates a confounded comparison: SCA is raw camera data while MCA is processed. Devil's advocate: the Lorentzian filters are intended to model the six channels' spectral selectivity — they are a physical simulation, not an arbitrary enhancement. However, since the input is a single broadband temperature image, applying intensity-dependent Lorentzians does produce a non-linear transformation that can enhance features. The reviewer's core concern is valid. Significance: directly challenges a key claim. Evidence: precise code quotes. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer demonstrates via code analysis that MCA_Sensor.m applies Lorentzian functions to pixel-intensity values (not to wavelengths), which is physically inconsistent with how a spectral response should operate. I verified this directly: filter_Lorenz_k(x, B, delta_x) uses pixel value x as the independent variable. The six 'channels' are therefore intensity bins, not wavelength bins. Devil's advocate: the authors might argue that for thermal imaging under Planck's law, pixel intensity correlates with temperature which correlates with emission spectrum, so an intensity-based filter approximates a spectral filter. But the paper does not make this argument, and detector response should not depend on pixel intensity in the linear regime. The core concern — that the 'multichannel spectral imaging' simulation is not a valid spectral simulation — is correct. Significance: high. Evidence: code + external IRISIM reference. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer claims the MCA and SCA comparison is between the raw image and a nonlinear-processed version of itself. This matches what the code does: Im_Sensor is the sum of six Lorentzian-filtered sub-sampled versions of the same broadband image. Devil's advocate: the authors intend this as a simulation of multichannel sensor output; whether it counts as genuine 'multichannel' depends on the physical interpretation of the filters (see Item 1). If one accepts the authors' interpretation (despite its weaknesses), the processing is not arbitrary. Still, the lower-resolution MCA outperforming the higher-resolution SCA, combined with the processing step, is a legitimate methodological red flag. Evidence: direct quote plus code-based reasoning. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer correctly identifies that the imaging system was never physically built; all imaging results in Fig. 4 are from simulation using a commercial camera. The paper acknowledges this ('we used the OPENZYNQ open-source project ... to simulate the process'). Devil's advocate: the paper does present this as simulation in Methods, so the framing is not outright dishonest — but the abstract and much of the narrative strongly imply hardware-level demonstration. Significance: high — central claim interpretation. Evidence: direct quotes from the paper. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer argues 'type-printing' is a repackaging of known ferroelectric lithography (conductive-AFM domain writing), citing Kalinin et al. 2004. The technique itself is indeed well-established; the naming is new. Devil's advocate: the authors add the two-step integration with graphene transfer and rescalable width control, which, combined with the printing analogy, is not unreasonable as branding. Significance: this is a novelty/naming concern — addressing it (toning down originality claims) would improve honesty but wouldn't change the science. Marginally Significant vs Significant is debatable. Evidence: cites specific foundational paper. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer claims the paper 'attributes the zero-bias operation to the ferroelectric superdomain' when actually the asymmetric Pd/Ti contacts are the likely source. However, reading the paper carefully, the authors explicitly state: 'we employed an asymmetric metal-doping scheme to disrupt the symmetric built-in electric field profile' for zero-bias operation, and credit ref. 30 for this mechanism. So the paper does attribute zero-bias to asymmetric contacts, not the ferroelectric superdomain. Devil's advocate for reviewer: the paper's narrative often emphasizes the ferroelectric role, and zero-bias is listed as a benefit under the MCA concept. A charitable reading of the reviewer is that the decoupling of contact vs superdomain contributions is not clearly separated. Uncharitable reading: the reviewer mischaracterizes the paper. This is genuinely ambiguous.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Reviewer correctly notes the imaging results are a simulation fed by a commercial Melexis camera, not from the fabricated array. Verified directly from the paper text. Devil's advocate: this is a proof-of-concept simulation, which many device papers use. Still, the claim that the improvements occur 'at the hardware level' is stronger than the evidence supports. Significance: high — central to the paper's claims. Evidence: direct quotes, specific to the Methods and SI. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Reviewer identifies: (a) different image resolutions between SCA and MCA, and (b) an internal inconsistency where the main text says 3,600 iterations/epoch while the Fig. 4 caption says 1,000 iterations/epoch. I verified both claims directly in preprint.md (lines 145 and 153). This is a clear internal inconsistency and a clear confound. Devil's advocate: the two different iteration counts might correspond to different experiments (gesture vs curled finger), though the wording suggests both refer to the same epoch schedule. Either way, the ambiguity should be resolved. Significance: high — reproducibility and speed claims. Evidence: direct paper quotes. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer correctly documents that the data-availability policy is 'upon request' and that the provided code bundle's .mat data files are Git LFS pointer files rather than real data. I confirmed both by inspecting the .mat files (ASCII pointer content visible). This blocks direct reproduction. Devil's advocate: Git LFS is a known solution and users familiar with it can fetch the objects. However, the archive does not include a stable DOI-backed data deposit, and the pointer files do mean the provided bundle is incomplete as shipped. Significance: high — reproducibility is central to modern expectations. Evidence: direct file inspection matches the claim. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Reviewer notes the responsivity (~30 mA/W averaged over 12 points) and learning accuracies (98.1%, 98.2%) are reported without uncertainty estimates, despite M=100 Monte Carlo trials existing in the code. Both the averaging for photocurrents and the Monte Carlo structure are confirmed in the paper and code. Devil's advocate: the shaded regions in Fig. 4c/e may represent the Monte Carlo spread, so the information partially exists in graphical form, just not in text. Still, numerical uncertainty reporting is absent and is standard practice. Significance: high — quantitative reliability. Evidence: precise code and text quotes. Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

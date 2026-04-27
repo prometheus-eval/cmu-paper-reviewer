@@ -1,0 +1,30 @@
+\begin{table*}[t!]
+\fontsize{7}{9}\selectfont
+\centering
+\resizebox{\textwidth}{!}{\begin{tabular}{lcccccccccccc}
+\toprule
+\multicolumn{1}{c}{\multirow{2}{*}{\textbf{Meta-Reviewer}}}
+& \multicolumn{3}{c}{\textsc{All Reviews}}
+& \multicolumn{3}{c}{\textsc{Human Reviews}}
+& \multicolumn{3}{c}{\textsc{AI Reviews}}
+& \multicolumn{3}{c}{\textsc{Self Review}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13}
+& Corr. & Sig. & Evid. & Corr. & Sig. & Evid. & Corr. & Sig. & Evid. & Corr. & Sig. & Evid. \\
+\midrule
+\textsc{Random Baseline} & 50.0\% & 33.3\% & 50.0\% & 50.0\% & 33.3\% & 50.0\% & 50.0\% & 33.3\% & 50.0\% & 50.0\% & 33.3\% & 50.0\% \\
+\textsc{Human (secondary annotator)} & 85.8\% & 59.9\% & 88.0\% & 84.7\% & 60.2\% & 83.9\% & 87.6\% & 59.3\% & 94.3\% & --- & --- & --- \\
+\midrule
+\textsc{Claude-Opus-4.7} & 87.9\% & 56.7\% & 85.6\% & 87.7\% & 55.8\% & 79.4\% & 88.2\% & 58.2\% & 94.9\% & 85.7\% & 55.4\% & 97.6\% \\
+\textsc{GPT-5.4} & 82.0\% & 56.9\% & 85.3\% & 80.0\% & 55.3\% & 80.7\% & 85.3\% & 59.4\% & 91.8\% & 90.0\% & 52.5\% & 93.1\% \\
+\textsc{Gemini-3.1-Pro} & 81.5\% & 54.0\% & 87.4\% & 79.4\% & 51.8\% & 82.6\% & 84.7\% & 57.3\% & 94.2\% & 82.9\% & 65.5\% & 90.9\% \\
+\bottomrule
+\end{tabular}}
+\caption{\textbf{Meta-reviewer accuracy on the 908-item benchmark (vs.\ primary annotator).}
+Each row is a meta-reviewer model; columns show per-axis accuracy across four review subsets:
+all items, human review items only, AI review items only, and ``self review\'\' where the meta-reviewer
+judges items from its own model family (e.g., GPT-5.4 judging GPT-5.2 reviews).
+Random baseline assumes uniform prediction over label categories (2 for correctness/evidence, 3 for significance).
+The human baseline treats the secondary expert annotator as the ``meta-reviewer'' and the primary as ground truth, representing the ceiling of human inter-annotator agreement.
+``Self review'' is not applicable (---) for the human baseline.}
+\label{tab:metareview-accuracy}
+\end{table*}

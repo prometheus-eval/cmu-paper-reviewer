@@ -1,0 +1,223 @@
+{
+  "paper_id": 8,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper cites many landmark exotic-hadron observations but does omit Belle's 2013 Zc(3900) paper, which is a reasonable related-work addition. That would improve completeness, but only marginally changes the paper.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer is pointing out that the blanket introductory sentence is overstated: some exotics such as X(3872) also have radiative decays, and sub-MeV widths exist, so the wording is at least imprecise. However, some experts may read the sentence as meaning exotics have strong decays rather than only strong decays, making correctness borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The disputed phrase is explicitly conditioned on the large-heavy-quark-mass limit. Within that stated theoretical limit, saying the state should be bound is the intended claim, so replacing it with the weaker could be bound is not a factually justified criticism.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper refers generically to pseudoscalar and vector beauty mesons without naming them, so asking to spell out the specific mesons would improve readability. This is a valid but minor presentation suggestion.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper already says charge-conjugate decays are implied and later reports that results are consistent when the data are split by candidate charge. So the claim that the opposite-charge distribution should be mentioned explicitly is already substantially addressed in the text.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The paper uses an unbinned two-dimensional fit for the D0 candidates and then an unbinned fit to the weighted D0D0pi spectrum. The reviewer's statement that only a binned maximum-likelihood fit is possible does not follow from the analysis described.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The manuscript explicitly motivates the P-wave choice by the expected J^P = 1+ assignment and later treats S- and D-wave options as corresponding to different quantum-number assumptions. The reviewer's assertion that an S-wave would still naturally fit the same J^P assumption conflicts with the paper's stated model setup.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Here the detector resolution is modeled as the sum of two Gaussians with a common mean, so quoting the root-mean-square of that resolution function is effectively quoting its standard deviation. The criticism that RMS is not equivalent here does not hold up against the model actually described.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The main fit uses a background shape built from a two-body phase-space factor times a polynomial, which indeed vanishes below the D*+D0 threshold. Since genuine three-body D0D0pi combinations could populate that region, it is reasonable to question this baseline modeling choice even though the Methods later study a three-body alternative as a systematic.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper fits signal and background incoherently and does not discuss possible interference with nonresonant D0D0pi production, so the omission itself is real and potentially important near threshold. But the reviewer does not provide enough support for the stronger claim that this would significantly alter the quoted significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The paper briefly says dedicated studies were performed to exclude D0-D0bar oscillation effects, but it does not explain how. Asking for that methodological detail is a fair request, though some experts may feel the existing statement already addresses the point well enough.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The final claim that observing Tcc further supports a stable bbud tetraquark goes beyond what this paper directly demonstrates. The reviewer is right that this concluding sentence is speculative relative to the evidence presented here.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The request for the D0 mass resolution is reasonable because the selection uses a very wide plus/minus 65 MeV window. However, the reviewer's supporting comparison to the 400 keV value confuses the D0D0pi mass resolution with the D0-candidate mass resolution, so experts could differ on whether the item is correct overall.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "This item is too vague to identify a concrete factual criticism, and the nearby text already explains the purpose of the kinematic-fit quality requirement as suppressing combinatorial and secondary backgrounds. So the complaint does not hold up as stated.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The paper explicitly reports dedicated checks showing the signal is not caused by kaon or pion misidentification. Therefore the claim that bachelor-pion misidentification is not mentioned is factually wrong.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The manuscript explains how non-D0 background is statistically subtracted, but it never quantifies how large that background is before subtraction. Because the credibility of the sPlot-based subtraction depends in part on that contamination level, the request for at least a rough size estimate is valid and useful.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The Methods section already explains this point explicitly: imperfect modeling refers to a data-simulation difference in detector resolution, and a 1.05 correction factor is applied and cross-checked. So the claimed lack of explicitness is not really supported by the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "This is just an open-ended alternative modeling suggestion without a concrete claim that the paper's chosen product form is wrong or inadequate. Because the criticism is too underspecified to verify against the manuscript, it is not correct as a review item.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "Because the D0 masses are constrained, it is plausible that the soft pion momentum scale is especially important for the near-threshold mass measurement, and the paper only discusses momentum-scale systematics in generic detector terms. Still, the reviewer does not provide enough support for the stronger claim that pion-track quality is the key missing detail.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "For symmetric plus and minus variations around a nominal calibration, taking half the difference between the two shifted results is a standard way to estimate the one-sided shift size. The reviewer's claim that the full difference should be used is therefore not factually justified.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The provided paper source does not contain the claimed typo, so this item cannot be verified from the manuscript. Under the paper-as-source-of-truth rule, the criticism does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The opening paragraph is long and dense, and it compresses broad QCD motivation, constituent-quark-model history, and molecular interpretations into a single block. A request to rewrite it for clarity is therefore a valid and constructive criticism of an important part of the paper's presentation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper uses pseudorapidity without defining it, so the underlying observation is true. But whether such a standard detector term needs definition for this audience is debatable, making the importance of the point borderline.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is only a fragment and does not state a clear, checkable criticism. Because the intended problem cannot be determined from the text provided, it is not correct as a review item.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer directly targets the paper's final speculative sentence about a stable bbud tetraquark, which is not established by the results in this manuscript. That is a well-supported and important claim-strength criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The selection says same-charge track pairs must have opening angle inconsistent with zero, but it never states the quantitative requirement or operational definition. Asking the authors to define that cut is a valid reproducibility-oriented criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

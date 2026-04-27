@@ -1,0 +1,103 @@
+{
+  "paper_id": 32,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper optimizes only ASI, ∆ASI, and Q and does not discuss why these three targets were chosen together or how their inter-correlation affects the separate GPR models and downstream ranking. That underlying concern is real, but the reviewer gives no concrete support for the claimed correlation or its impact.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Section 2.2 says ring membership is added to distinguish atoms beyond coordination, but the manuscript does not clearly demonstrate what this extra descriptor buys relative to the earlier scheme. Because some qualitative rationale is present, experts could plausibly split on whether this omission is real or already sufficiently addressed.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Only 28 measured additive systems are used for training, and validation is limited to six selected candidates within the same additive family, so broader generalization to other electrolyte-additive systems is not established. The phrase about “local optimal solutions” is imprecise, but the main small-data scalability concern is valid.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper chooses GPR and cites it as suitable for low-dimensional small-data problems, but it does not compare against other regressors or show that GPR is best for this dataset. Since model choice is central to the ML claim, this is a substantive and easy-to-verify criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript reports parity plots and cross-validation MAEs but does not provide training-loss or convergence curves for the GP fitting procedure. Asking for convergence diagnostics is valid, though many experts would treat it as a secondary diagnostic/presentation issue rather than a core methodological gap.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The concern about only 28 training examples and the lack of comparison to other ML algorithms is reasonable, but the review also claims a fixed train-test split despite the paper describing 10-fold cross-validation with rotating test folds. Because the item mixes a valid small-data robustness concern with a faulty premise and an unmotivated preference for 5-fold CV, correctness is genuinely borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The descriptor construction is described, but the rationale for the chosen feature set and the interpretability of the learned model could be clearer, so the request for stronger feature-analysis discussion is directionally valid. However, the reviewer does not identify a specific unclear step, and the paper already includes feature-performance Spearman correlations rather than SHAP/LIME.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does not perform Bayesian active learning; it does a one-shot screening of 125 untested binary combinations and experimentally checks six top candidates, so the review's “128 sets” framing is inaccurate. Still, a charitable expert could read this as a forward-looking suggestion for a stronger closed-loop optimization strategy rather than a factual criticism of what is reported.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The manuscript explicitly motivates ML as a way to avoid months of costly battery-cycling experiments across a much larger chemistry space, so the claim that the rationale for using ML is unclear does not hold up. The item also misstates the scale as 128 experiments and asks the paper to guarantee that the global best additive was included, which is outside the paper's stated scope.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper predicts performance for 125 untested additive pairs but never analyzes whether those candidates lie in an interpolation or extrapolation regime relative to the 28 measured systems. A train-versus-candidate space visualization would therefore be a constructive and directly relevant addition, despite the reviewer's minor count error.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The study is specifically scoped to LiNi0.5Mn1.5O4/graphite cells and does not claim transfer across different LNMO compositions, so demanding experimental validation on other cathode chemistries is outside the target of the manuscript. That makes the criticism inapplicable as a judgment of what this paper is missing.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    }
+  ]
+}

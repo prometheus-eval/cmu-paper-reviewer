@@ -1,0 +1,374 @@
+{
+  "paper_id": 33,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Item has two parts: (a) absence of literature cross-validation of ML predictions (valid - paper never cross-checks predicted conductivities against literature measurements for tested ILs); (b) the 4 chosen ILs are all old/commercial imidazolium systems rather than unconventional combinations. Both claims hold up. This is Significant (would substantively strengthen validation) and Sufficient (reviewer points to the specific choice of 4 commercial ILs). Devil's advocate: one could argue commercial ILs are a pragmatic first proof of concept, so the second sub-criticism could be downgraded to marginal by a charitable reader, but the primary validation complaint is clearly significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Summarizes Item 1's core point: no cross-reference between predicted and measured properties. The paper indeed lacks such validation. Significant (addresses validation of the ML workflow's outputs). Evidence is a pointer to absence — standard Sufficient. Devil's advocate: a strict expert could call this too vague because no specific database is named (e.g., ILThermo). That critique may be raised but the core absence is verifiable from the paper, so borderline toward Sufficient. Expert agreement likely.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Reviewer argues interaction energies should be negative per Eq. 4 but Supplementary Table 1 shows positive values, and scales look unexpected. This is a technically well-founded chemistry concern: for a stable ion pair, E_pair - E_+ - E_- should indeed be negative. Fig 3c shows values 0-70 kJ/mol (positive), confirming the concern. Significant (affects the validity of a screening filter). Sufficient (reviewer points to specific numbers/figure). Devil's advocate: a charitable reader could note that the authors may have reported magnitudes rather than signed energies, but that would itself require clarification — the reviewer is right to flag it.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Asks why LiFSI + C3mpyrFSI is used for ion exchange rather than a matched Li salt with the anion of the IPE. This is a legitimate methodological rationale question — the paper does not explain this choice. Significant because it affects interpretation of the IPE composition and transport results. Sufficient (reviewer cites specific rows in Methods). Devil's advocate: a charitable reader could argue this is minor clarification rather than methodological flaw, but it is still a helpful request. Experts may disagree on significance level: some would call it a clarification (marginal), others a genuine methodology concern (significant).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Reviewer asks for a clearer novelty statement comparing against existing ML and ionogel work. Correct as a subjective reading (the manuscript does not strongly differentiate itself). Significant (would help readers evaluate contribution). Devil's advocate on evidence: no specific prior works are cited to justify the overlap claim, so an expert might call this Requires More. Another expert would accept the pointer to the missing discussion as Sufficient. Borderline evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Claims multiple grammatical/syntactical errors. Confirmed — the paper has many typos (e.g., 'gyometric', 'algotihrm', 'seperately', 'overlaped'). Correct and Marginally Significant (language polish, not substance). Sufficient because the claim is verifiable by reading. Devil's advocate: one could argue this is too general and not Sufficient without a list, but it is obviously supported.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "IoLiTec vs IoLiTech - paper indeed writes 'IoLiTech'. Correct. Marginally Significant (typo). Sufficient. Clear-cut.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Reviewer claims 'full cell' should be 'fuel cell'. This is factually wrong in battery literature — 'full cell' is the correct technical term for a complete battery (as opposed to half cell / symmetric cell), and the paper's context (Li|IPEs|LiFePO4 full cells) is unambiguously about batteries, not fuel cells. The reviewer is misreading the paper. Devil's advocate: could there be a charitable reading where the term is indeed ambiguous? No — the paper explicitly talks about LiFePO4 cathode batteries. This is clearly Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Reviewer argues IL abbreviations like C2mimTFO should follow bracket conventions ([Emim][OTf]). Correct in that the field often uses bracketed abbreviations, though both styles appear in literature. Marginally Significant (nomenclature consistency — useful but not substantive). Sufficient. Devil's advocate: an expert could argue both styles are acceptable and this is stylistic preference only, placing it at Not Significant. Possible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Figure 4 embedded photos are very small and show only circular outlines with tiny scale bars — confirmed visually. Correct, Marginally Significant (figure readability; not substantive), Sufficient. Devil's advocate: one could argue clearer photos would help readers assess film quality (a Significant issue), but the photos are inset decorations, so marginal is more defensible. Possible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Wording nit: 'large population of ion pairs' should be 'IL candidates'. This is a minor wording preference; the paper's phrasing is understandable. Correct, Marginally Significant (stylistic), Sufficient. Devil's advocate: some experts would consider this Not Significant and suggest removal.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "Abbreviation 'ML' used before defined. Confirmed — the paper introduces 'ML has been widely discussed' in one paragraph before 'machine learning (ML) workflow'. Correct, Marginally Significant (minor presentation), Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "Typo 'gyometric' → 'geometric'. Confirmed. Correct, Marginally Significant (typo), Sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "Paper claims 'mechanically strong' films but reports no tensile test. Correct (no tensile-stress data is given in the manuscript). Significant — mechanical strength is one of the paper's highlighted properties and quantitative support would substantively improve the claim. Sufficient (points to a specific absence). Devil's advocate: a charitable reader could note that prior references show PBDT's strength and treat this as marginal, possible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "ML methodology in Methods is very thin — just one paragraph pointing to GitHub. Correct and Significant (reproducibility is a core scientific requirement). Sufficient (points to specific inadequacy).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "QC methods are thinly described (just mentions SCF / 6-311+g** with Psikit). Correct and Significant (reproducibility). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "Reviewer asks for purity/water content of ILs (critical for Li metal batteries) and flags 'Canrd' spelling. Water content is especially important for Li-metal batteries. Correct — the manuscript lists suppliers but doesn't state purity/water of the four main ILs from IoLiTech. Significant for water content. Sufficient (specific Methods rows cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "Asks for electrode thickness/diameters. Paper states '5 mm diameter Li-metal electrodes' and 'Li-metal foil with thickness of 180 µm' in Materials/Methods, but does not specify LiFePO4 electrode thickness, Cu foil thickness, or IPE-matching dimensions. Partially present. Correct (broader concern stands — some details are missing). Marginally Significant (methodology detail; not load-bearing for main claims). Sufficient. Devil's advocate: an expert could argue that enough information is present and this is Not Correct since key dimensions ARE stated, or upgrade to Significant for full reproducibility.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Claims few details on ML model development and no train/test split. Confirmed: GCN code uses only 80/20 train/val split with no held-out test; SVM/RF/XGB use 5-fold CV but no independent test set, as shown in code. The paper also acknowledges overfitting concerns. Correct, Significant (validation rigor directly affects screening credibility), Sufficient (reviewer ties concern to manuscript's own overfitting statement).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Asks how RDKit descriptors were reduced to 60 and whether cation/anion used different descriptors. Paper does not describe the feature selection process. Correct (the methods indeed omit this). Significant (reproducibility + understanding feature set). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Asks for justification of basis set and level of theory. Paper states '6-311+G**' with SCF but no rationale/benchmarking. Correct. Significant (QC reproducibility and accuracy assessment). Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Asks why σ≥5 mS/cm and ECW>3.5 V thresholds were chosen. The paper does not justify these thresholds. Correct. Significant (thresholds drive the recommendation list). Sufficient (specific criteria cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Flags that output properties like conductivity and ECW are listed as features. Paper states: 'key features used for the hierarchical clustering include the computed ECW and the top 10 factors obtained from the XGBoosting model for conductivity classification'. Using the computed ECW as a feature for a clustering meant to find high-ECW ILs is indeed circular/confusing. Correct, Significant (methodological soundness), Sufficient (direct citation possible).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Says Figure 3a does not show the claimed correlation between anion sphericity and phase. Figure 3a actually plots radius-of-gyration vs heavy-atom MW (not sphericity). Scatter shows considerable overlap between solid and liquid points. Correct (paper's interpretation is loose). Significant (affects a main rule claim). Sufficient (figure is specifically cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "Asks how top 10 features were selected. Paper doesn't specify (e.g., XGB importance ranking details, stability across folds). Correct, Significant (methodology/reproducibility), Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Argues 20 ILs is too few for validating interaction-energy based classification; recommends ≥20%. Reasonable: paper validates with 20 from each class (40 total) but the sample is small relative to 2356 ILs. Correct, Significant (statistical robustness). Sufficient (direct number cited). Devil's advocate: some experts could argue 20 per class is reasonable for a demonstration — possible disagreement on significance, but most reviewers would still call it significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Questions choice of hydrophilic ILs for Li-ion batteries (water contamination risk). This is a legitimate concern: LMBs must avoid water. Paper does not explain why hydrophilic ILs were chosen or how water contamination was excluded. Correct, Significant (materials rationale + reliability), Sufficient (paper explicitly calls them hydrophilic).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "Asks for PBDT rationale. The paper only cites prior work for PBDT's role. A clearer rationale connecting ML results to PBDT choice would help. Correct (rationale is terse). Significant (central material choice). Sufficient. Devil's advocate: the paper does cite prior papers establishing PBDT; a charitable reader could argue the rationale is adequately present and downgrade to marginal. Borderline significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "Asks for captioning, units, temperature, and direct comparison to NIST ILThermo for Supplementary Table 2. Correct (such comparisons are not shown; the code references ILThermo but the paper does not present prediction-vs-measurement for the recommended list). Significant (validation against a public database would substantially strengthen the screening). Sufficient (names specific missing content and a specific database).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Table 1 labels accuracy as R² for binary classification tasks. Confirmed: header reads R² and footnote says '5-fold cross-validation accuracy'. These are distinct metrics. Correct, Significant (terminology affects interpretation of model quality), Sufficient (direct table citation). Devil's advocate: a charitable reader might call this a minor labeling oversight (marginal), but mislabeling a core evaluation metric in a table is typically considered significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Claims ECW computation shows severe errors (MAE 1.58 V, R²=-5.53) relative to experiment. Verified: ECW_valid.csv in the supplied code shows systematic overestimation (e.g., C2mimBF4 experimental 3.6 V vs computed 8.62 V). Paper itself acknowledges overestimation for BF4. Correct, Significant (the 3.5 V threshold is a decisive screening gate), Sufficient (specific numbers cited from author's own file).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Only 4 of 40 recommended ILs tested (10%); 1 of 4 (DemaTFO) failed. Confirmed from paper. Correct, Significant (scale of validation matters for claiming ML screening works), Sufficient. Devil's advocate: an expert could argue the point of the paper was experimental demonstration for a subset, not exhaustive validation, so significance is debatable — but addressing it would still improve the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Paper reports only accuracy-type metrics; no precision/recall/F1/confusion matrix. Confirmed — Table 1 is the sole reporting. Correct, Significant (especially given class imbalance concerns in IL datasets), Sufficient (points to specific absence, cites standards).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "GCN uses a single 80/20 split, not cross-validation. Confirmed from the code (lines ~962-972). Paper reports GCN accuracy without distinguishing methodology from other models. Correct, Significant (methodological inconsistency affects comparability), Sufficient (code cited directly).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Claims no independent test set; validation used for monitoring and final reporting. Confirmed from code — 80/20 train/val, final accuracy reported on same val set used each epoch, with no held-out test. Correct, Significant (generalization estimate is biased; a core ML validity concern), Sufficient (specific code quoted, external best-practice reference given).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "GCN uses MSELoss for binary classification and has no sigmoid at output. Both confirmed in code (torch.nn.MSELoss(); Linear(4,1) without subsequent sigmoid; yhat.round() used downstream). This is a genuine methodological flaw for classification. Correct, Significant (affects GCN correctness and reported accuracy), Sufficient (code cited directly).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "Highlights massive discrepancies between computed and experimental ECW using specific CSV entries. Confirmed from ECW_valid.csv (C2mimBF4: exp 3.6 V vs 8.62 V). Correct, Significant (ECW threshold is a main screening gate), Sufficient (specific data, paper's own file cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Claims ensemble is not actually ensemble because the loop saves all three models to the same filename '_xgb_model.sav'. Confirmed from code — filename is hard-coded inside the loop, so SVM and RF get overwritten by XGB. This is a genuine implementation bug that contradicts the paper's 'ensemble learning' claim. Correct, Significant (undermines the methodological claim), Sufficient (code directly cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Argues dataset (~300 labeled ILs) is too small for GCN to outperform simpler baselines. Correct in that the labeled dataset is small relative to typical GCN usage. Significant (justifies choice of GCN). Sufficient (specific 13% figure is quoted from the paper). Devil's advocate: Table 1 shows GCN (0.83) is comparable to SVM (0.80), which could be interpreted as demonstrating feasibility; a charitable reader might call this Marginally Significant since GCN is not claimed to be dramatically superior. Possible disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "Identifies that temperature normalization uses a linear scaling σ ∝ T (multiplying by 25/T_measured) and also imputes missing temperatures to 25°C. Confirmed from code lines 263–272. Conductivity/viscosity of ILs are well-known to follow Arrhenius/VFT, not linear, so this is a genuinely unphysical normalization. Correct, Significant (corrupts the RT labels and feeds directly into threshold-based classification), Sufficient (code cited, external VFT reference cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "Compound claim: metric mislabeling (R² for classification) AND data-leakage pattern (scaler fit on full training set before CV, no nested CV despite GridSearch). Both verified in code (lines 1092, 1169, 1150ff). Correct, Significant (affects reported performance and screening credibility), Sufficient (direct code citations + scikit-learn documentation reference).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "ECW used as decisive threshold despite overestimation. Paper itself acknowledges BF4 overestimation. No calibration or uncertainty bounds. Correct, Significant (the 3.5 V cut defines the recommendation list), Sufficient (paper passages + external reference cited).",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "CE > 100% with attribution to 'thermal fluctuation' lacks uncertainty quantification. Correct — paper acknowledges 100.1–100.2% CE and does not report error bars or measurement-precision analysis. Significant (CE is a headline metric supporting high-reversibility claims, which require precision to be defensible). Sufficient (direct quotes + general standard reference). Devil's advocate: a charitable reader may treat the elevated CE as a minor presentation issue, downgrading significance; but the issue clearly weakens support for a headline claim, so Significant is defensible.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

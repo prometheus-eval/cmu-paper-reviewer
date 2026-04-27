@@ -123,8 +123,8 @@ python evaluate.py ../outputs/similarity_check/llm_judge_4way_anthropic__claude-
 
 - **Routing**: every LLM model goes through the CMU LiteLLM proxy
   (`litellm_proxy/...`), which shares the same `litellm_client.py` used
-  by `meta_review/`. Adding a new model only requires an entry in
-  `meta_review/model_config.py`.
+  by `metareview_bench/`. Adding a new model only requires an entry in
+  `metareview_bench/model_config.py`.
 - **Thinking mode**: `reasoning_effort="high"` is set for every model.
   LiteLLM maps this to `thinking_level="high"` for Gemini 3.1 Pro,
   reasoning at max effort for Azure GPT-5, and adaptive thinking for
@@ -135,12 +135,12 @@ python evaluate.py ../outputs/similarity_check/llm_judge_4way_anthropic__claude-
   All three supported models have ≥ 1M-token context, and the longest
   paper in the dataset is ~26K tokens, so truncation is never needed.
 - **Max output**: `max_tokens` defaults to the catalog-reported
-  `max_output_tokens` from `meta_review/model_config.py`.
+  `max_output_tokens` from `metareview_bench/model_config.py`.
 - **Temperature**: fixed at 1.0 — Anthropic extended thinking requires
   `temperature == 1`, Gemini 3 prefers 1.0 for reasoning quality, and
   Azure GPT-5 accepts any value but defaults to 1.0.
 - **Images**: if either review item in a pair contains a figure/table
-  reference (regex from `meta_review/image_mapping.find_figure_references`),
+  reference (regex from `metareview_bench/image_mapping.find_figure_references`),
   the matching images from that paper's `images_list.json` are attached
   as vision-API content blocks. Images bytes are resolved via the
   `submitted_papers` HF config.

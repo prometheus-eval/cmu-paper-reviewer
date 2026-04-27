@@ -1,0 +1,32 @@
+\begin{table}[t]
+\centering
+\fontsize{8}{10.5}\selectfont
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lr}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+Papers & 27 \\
+Total review items & 908 \\
+\quad Human items & 568 \\
+\quad AI items & 340 \\
+\midrule
+Ground truth labels & 10-class \\
+Annotation axes in cascade & 3 \\
+\quad Correctness & binary \\
+\quad Significance & 3-level (cascade from correctness) \\
+\quad Evidence sufficiency & binary (cascade from correctness) \\
+\midrule
+Label distribution (top 3) & \\
+\quad Correct + disagree on significance & 298 (32.8\%) \\
+\quad Correct + significant + sufficient & 277 (30.5\%) \\
+\quad Disagree on correctness & 129 (14.2\%) \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{\textsc{Meta-Reviewer Bench} statistics.}
+Each of 908 review items from 27 dual-annotated papers carries a 10-class ground truth label encoding both the annotation cascade outcome (correctness $\to$ significance $\to$ evidence) and inter-annotator agreement.
+Used to validate the AI meta-reviewer (GPT-5.4 agent) that powers the precision evaluation in \textsc{PeerReview Bench}.
+Human--AI meta-reviewer agreement (82.3\% correctness) closely matches human--human agreement (85.4\%).
+}
+\label{tab:stats-metareview-bench}
+\end{table}

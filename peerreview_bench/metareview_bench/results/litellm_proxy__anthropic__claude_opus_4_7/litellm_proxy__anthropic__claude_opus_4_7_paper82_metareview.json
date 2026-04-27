@@ -1,0 +1,411 @@
+{
+  "paper_id": 82,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks for more emphasis on monitoring cell adhesion and state-of-the-art in cell adhesion monitoring. However, this paper is about a sub-wavelength Si LED integrated in a CMOS platform, not about cell adhesion monitoring. The reviewer has clearly reviewed a different paper, so the factual premise of the criticism (that this paper is about cell adhesion monitoring) is wrong against this paper. A charitable reading cannot rescue this since the topic is entirely different. Experts would agree the item is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks about OECT biosensors and monitoring single cell adhesion in the introduction. This paper is about a Si LED for holographic microscopy—OECTs and cell adhesion are entirely unrelated to this paper. The reviewer is reviewing a different paper. The criticism's factual premise is wrong against this paper. Experts would agree the item is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks about gate leakage of 'the OECT' and IG vs Vg curves in Figure 1 along with transfer characteristics. This paper does not contain an OECT; it presents a Si LED. Figure 1 in this paper shows schematics, emission micrographs, and spectra — not transistor transfer characteristics. The criticism is about a different paper. Experts would agree it is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer quotes text about 'proportionality constant p' being 'independent on the sensor configuration (OECT vs microelectrode)' and microelectrode impedance spectra. This quoted passage does not exist in the Si LED paper. The reviewer is reviewing a different paper about OECT/microelectrode biosensors. Experts would agree it is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer quotes a passage about 'factor fOECT in eqn. 1' that does not appear in this paper. This paper has no OECT and no such equation. The reviewer is evaluating a completely different manuscript. The criticism is not correct against the paper on disk.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer claims Figure 2 does not report error bars. However, Figure 2 in this paper does contain error bars (the caption explicitly states 'The error bars are from the 95% confident interval of the corresponding fitting parameters' and 'The error bars are from the error propagation considering the PSF measurement error'). Moreover, the reviewer's context (repeatability/reproducibility 'of the platform') is framed for an OECT biosensor platform that this paper does not describe. The main point is incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks about single-cell adhesion monitoring and whether a single cell was deposited on the OECT channel. This is from a different paper—the Si LED paper has no cells or OECT channels. The criticism is not correct against this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer references 'nanophase network of organic semiconductors and polyelectrolytes' and suggests discussing doping agents like DMSO, PEG. This paper is about a Si LED in a CMOS platform; there is no discussion of organic semiconductors, polyelectrolytes, or DMSO/PEG. The reviewer has reviewed a different paper. The main point is not correct against this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer comments on sensitivity with minimal active sensing area coverage by a microparticle or single cell, W/L ratio, etc. None of this applies to the Si LED paper; there is no discussion of W/L ratios of OECT channels, microparticles, or cell coverage. Criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer proposes control experiments with OECT channels not covered by cells, or cells adjacent, citing T98G cells. These concepts are entirely absent from the Si LED paper; criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks about trypsin treatment effects on the OECT/microelectrode. This is about a biosensor paper; the Si LED paper has no trypsin or OECT. Criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer complains that derivation of Eqns. 3 and 4 is not obvious from two AC current contributions. No such equations exist in the Si LED paper. Criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer discusses derivation of Eqn. 5 and wanting frequency ω dependence visible. This Si LED paper does not contain such equations. Criticism not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer asks about Figure 3b arrow for trypsin treatment timepoint. The Si LED paper's Figure 3 is about holography — no trypsin, no such arrow. Criticism is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer flags a typo 'mixed ionic and electronically' to be corrected. This phrase does not appear in the Si LED paper. Criticism does not apply to this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer flags 'this properties combination' phrase to be corrected. The phrase does not appear in this paper; criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer recommends defining the transfer function 'I_DS as a function of V_G'. This paper is about a Si LED, not a transistor's I-V transfer characteristics. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer comments on Figure 1b contacts of a microelectrode being short-circuited. This paper has no microelectrode in Figure 1b; it shows an LED and reference emitter schematic. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The reviewer asks for Figure 1e to show current amplitudes as normalized relative changes to compare OECT and microelectrode. Figure 1e in this paper shows emission spectra for LED vs reference emitter, not current amplitudes from OECT/microelectrode. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The reviewer recommends removing parentheses around values like (0.059±0.002) nA/Ω. This value does not appear in this paper and the stylistic suggestion is for a different paper. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "The reviewer suggests 'Figure 1e' should be 'Figure 1f' on page 7 line 1. This concerns a specific internal inconsistency in a different paper — the Si LED paper does not have such a reference at page 7 line 1. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The reviewer suggests using '×' instead of '*' for multiplication citing 'p*∂d' as an example. This notation does not appear in the Si LED paper. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_3",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks how single cell detection was confirmed with 1000 cells/cm³ on an OECT array. This paper has no cells or OECT array — it is about a Si LED. Criticism does not apply to this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer discusses normalized responses for OECT vs microelectrode comparison in Figure 1e. The Si LED paper's Figure 1e shows emission spectra, not OECT/microelectrode amplitudes. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer asks how cantilever effects on current output during electrical measurements were eliminated. This paper does not use a cantilever. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer asks how the optimum frequency (1.17 kHz) was determined. This frequency and the accompanying OECT/microelectrode context are not present in the Si LED paper. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer disputes the physical interpretation of electrolyte impedance changes due to microsphere proximity, citing quoted text about Zel. This content is not in the Si LED paper (no electrolyte, no microsphere approach measurement). Criticism does not apply to this paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer discusses a proportionality constant p and OECT size universality. The Si LED paper has no such proportionality constant p nor OECT devices. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer suggests a correction: 'Accordingly, the sensitivity is given by the slope of the approach curves shown in Figure 1e' should be 1f. This sentence is not in the Si LED paper. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks for IV characteristics of three devices with different channel dimensions in SI. The Si LED paper does not describe devices with different channel dimensions. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer discusses Figure 2d sensitivity curves for 100x100 and 50x50 devices overlapping at high frequency. Figure 2d of the Si LED paper shows a 2D Gaussian fit of emission pattern, not sensitivity curves. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The reviewer asks why 200x50 device geometry was selected and about sensitivity comparisons for different microelectrode dimensions. The Si LED paper is not about that device geometry parameter sweep. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer objects to 'water gated transistors' terminology preferring 'electrolyte gated transistor'. The Si LED paper does not use either term. Criticism does not apply.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer criticizes that the paper relies on gate oxide breakdown as its operational mechanism but does not adequately address long-term reliability, citing the ~25% degradation after ~10^5 cycles in Supp S6. The paper does describe the breakdown mechanism and reports this degradation, but does not provide accelerated lifetime testing or standard LED reliability metrics. The main point is correct and verified against the paper. Significance is clearly high since this is central to the paper's practical CMOS-integration claim. Evidence is specific quotes and quantitative numbers — sufficient. A skeptical reader might argue the paper does briefly acknowledge the issue in robustness discussion, but the broader concern about inadequate reliability analysis still stands. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out only 5 devices are characterized with ±20% variation, undermining reproducibility claims. Paper Supp S5 does report this per the paper's statements. The main point is correct. Significance: a reviewer-flagged insufficient sample size and stochastic breakdown location directly affects the 'robustness/reproducibility' CMOS-compatibility claim, so this is Significant. Evidence is specific with quotes and numbers — Sufficient. Devil's advocate: one could argue the paper addresses variance qualitatively and this is secondary to core device physics claims — but the broader reproducibility concern is real. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the sub-wavelength emission area claim relies on Gaussian PSF deconvolution that becomes numerically unstable when deconvolved size approaches PSF width, given PSF ~784 nm vs emission ~330-350 nm deconvolved. Paper confirms this methodology and PSF. Main point is correct, technically sound. Significance: this directly concerns the headline 'sub-wavelength' claim, so it's Significant. Evidence is specific, with numerical propagation — Sufficient. Devil's advocate: the paper does report error bars that propagate PSF uncertainty, which partially addresses this; an expert might downgrade to Marginal. But the concern about Gaussian assumption validity (not explicitly tested) is legitimate. Experts likely agree it is Significant + Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes the holography demo uses only 20 μm beads without quantitative resolution metrics or USAF resolution targets. The paper indeed uses 20μm beads and states resolution is '~20μm' without a calibrated test target. The main point is correct. However, the reviewer includes a quoted passage attributing 'Gerchberg-Saxton algorithm with finite support constraint' to the paper's method — but the paper uses the angular spectrum method (GS is mentioned only as future work). This is a peripheral misattribution that does not invalidate the main critique (absence of quantitative resolution characterization). Significance is real — quantitative resolution metrics would strengthen the demonstration. Evidence for the core point is sufficient (paper clearly lacks a USAF target/MTF). Devil's advocate: the misquoted algorithm could cause a strict reader to mark Not Correct, raising some disagreement on correctness. I predict disagreement mostly on correctness due to the quote error.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the stability claim is contradicted by the 25% drop after 10^5 cycles, and cites LED industry reliability standards (IES LM-80) as context. The main point is correct: the paper's 'stable' IV claim in the main text is in tension with the 25% degradation in Supp S6. Significance is clear (device reliability is central). Evidence is specific quotes and named industry standard — sufficient. A devil's advocate might note the paper does acknowledge degradation and provides some caveat, but the broader concern (inadequate reliability demonstration) is legitimate. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the paper's 'high intensity' comparison is misleading because it hides very low EQE (1.4×10^-8) and picowatt-level total power. The paper's abstract and conclusion emphasize 'comparable intensity' with larger emitters but do not highlight the EQE penalty as a limitation. Main point is correct. Significance is high (framing of the key benchmark). Evidence is specific (quotes, reference comparisons with Green's Si LEDs). A devil's advocate might argue that intensity per area is a fair metric for a sub-wavelength source and the paper does report EQE transparently, so an expert might mark the significance marginally. But the interpretive concern is constructive. I predict agreement on Correct/Significant/Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the term 'LED' is misleading since the device relies on destructive gate oxide breakdown (antifuse-like). The main point has factual basis — the paper does explicitly describe hard gate-oxide breakdown forming a Si filament, not a pristine pn junction. The paper does call it an 'LED'. This terminological critique is defensible but debatable. Significance: a charitable reviewer might mark Significant (clarifies device mechanism for readers), a stricter reviewer could mark Marginally Significant (labeling nuance). Evidence is well-quoted and referenced — Sufficient. Devil's advocate on significance is strong here. I predict disagreement on significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Item 4 in the review file is empty — no content is provided. With no actual criticism to judge, there is no main point that can be correct against the paper. Experts would agree the item is not correct (has no substance).",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Item 5 is also empty in the review file. No criticism is provided to judge. Experts would agree it is not correct/applicable.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer argues the device's reliance on intentional hard gate-oxide breakdown is fundamentally a reliability concern that is inadequately characterized (no standard reliability metrics, stochastic breakdown location, 25% degradation after 10^5 cycles, no longer-term or environmental stress tests). Quoted content from paper and supplement supports this. The main point is correct and verified. Significance is high — this concerns the central CMOS-compatibility claim. Evidence is specific with quotes, numbers, and named references. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer argues the paper claims high spatial coherence but provides no quantitative coherence measurement (fringe visibility, mutual coherence, etc.), relying on a qualitative single-hologram ring observation. Furthermore the 150-190 nm spectral FWHM is broad, and temporal vs spatial coherence are conflated. The paper does indeed only qualitatively justify coherence. Main point is correct. Significance is high since holography is a headline application. Evidence is specific (quotes, cited reference on lensfree holography practice). Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues the sub-wavelength area claim relies on a Gaussian PSF/emission FWHM-subtraction that is not validated (real PSF is Airy-like, measured spot is close to PSF width, no calibration with known sub-resolution objects). The paper indeed uses Eq. S2 (quadrature subtraction) as described. Main point is correct. Significance is high — central to the 'sub-wavelength' claim. Evidence is specific with quotes and referenced microscopy standards. Experts likely agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer argues the EQE reported excludes background emission (paper explicitly states so in caption), which is not comparable to standard EQE and may bias the 'no droop' conclusion. The paper does state 'EQE only accounts for the emission of the spot while the background is neglected'. Main point is correct. Significance: the droop/EQE claim is a key performance statement, so it is Significant. Evidence is specific (quoted caption, explicit reference to standard EQE definition). Devil's advocate: the paper is transparent in labeling this as spot-EQE, so a strict expert might call it Marginally Significant (it's about framing/clarity), but the concern that droop conclusion may be biased is substantive. I predict agreement on Significant + Sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Item 5 in the review file is empty — no content is provided. With no criticism to judge, there is nothing that can be correct against the paper. Experts would agree.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    }
+  ]
+}

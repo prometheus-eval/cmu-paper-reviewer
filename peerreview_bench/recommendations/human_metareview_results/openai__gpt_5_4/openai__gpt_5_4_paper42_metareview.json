@@ -1,0 +1,263 @@
+{
+  "paper_id": 42,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper's Data availability and Code Availability sections say the habitat suitability models and code are available only upon request, so the reviewer correctly identifies a real reproducibility and openness problem.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "I could not verify a specific missing \"and\" in the extracted Introduction text, so the claimed grammatical defect is too line-specific to confirm from the paper source as provided.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The chimpanzee-behavior example is indeed a one-off justification for the HFP threshold in a paper about terrestrial mammals, so calling it tangential is reasonable, but removing it would only slightly streamline the introduction.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The sentence contrasts the main classification based on the initial and final Red List categories with a sensitivity test based on the second-last and last categories, and that wording is easy to stumble over; asking for clarification is fair for an important robustness claim.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This criticism is factually wrong for this paper because the reported variable importance is the MIR metric defined as I_n/I_max, so the bars are scaled relative to the maximum and are not required to sum to 1.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "Table 2 gives terse definitions such as \"average Euclidean distance within patches\" and \"within the area of unsuitable habitat\" without explicitly saying the averaging is over all pixels, so the reviewer is right that the variable descriptions are unclear on a core method detail.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The text says the trend was \"reversed to an increased probability of low-risk transitions\" without explaining the inversion until the figure caption, so the reviewer correctly flags unclear wording in a key results statement.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "Even though the caption says the low-risk case is obtained by inverting the plot, the static 3D surface is hard to read and the inversion logic is still not very intuitive, so the reviewer's clarity criticism is valid for a central figure.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The paper reports sensitivity and specificity in the Results but does not immediately explain their difference there; only later in the Discussion does it say the model is better at classifying low-risk than high-risk transitions. The reviewer therefore points to a real local clarity gap.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "This is a real textual error: the sentence compares Fig. 4a and Fig. 4b but says \"low-quality matrix\" twice, whereas the second reference should be to the high-quality matrix model.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "The reviewer is correctly highlighting a reproducibility problem: the paper does not openly provide the underlying per-species values or code needed to independently audit Fig. 4, especially the HFP-matrix quantities used to define the groups.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 12,
+          "reasoning": "The Results sentence can be read more clearly as comparing low-risk versus high-risk species separately within each matrix-quality group, but that comparison structure is not spelled out very explicitly, so the reviewer's confusion is understandable.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 13,
+          "reasoning": "The paper attributes the model-performance difference to class imbalance and gives the group counts, but it does not justify why that imbalance is enough to explain the performance gap. Asking for the reasoning and clearer quantification is a valid criticism of the interpretation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 14,
+          "reasoning": "As with Item 1, the paper states that code is available only upon request and does not provide a public repository for analysis materials, so the reviewer correctly flags a substantive reproducibility limitation.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 15,
+          "reasoning": "The Discussion suddenly refers to low-quality matrix \"in terms of plant biomass,\" which is a new framing not introduced earlier in the manuscript. Asking for earlier signposting or explanation is a valid but relatively minor contextual improvement.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 16,
+          "reasoning": "The phrase \"helps confirms\" is plainly ungrammatical and should be corrected to \"helps confirm\" or simply \"confirms,\" so this is a valid but minor copy-editing point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 17,
+          "reasoning": "The paper does discuss novelty elsewhere, but the paragraph centered on prior extinction-risk studies could foreground the improvement over previous research more clearly. This is a minor presentational suggestion rather than a substantive omission, and the reviewer gives only a general impression rather than concrete support.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 18,
+          "reasoning": "In context, the discussion sentence clearly says that fragmentation of suitable habitat was more important than change in HFP within suitable habitat and proportion of suitable habitat, so the complaint that it is unclear \"for what\" does not hold up.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 19,
+          "reasoning": "The conservation statement is somewhat broad, although the surrounding discussion does provide examples such as land-sparing and land-sharing. Asking either for more concrete conservation implications or for trimming the vague claim is a fair but minor revision point.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 20,
+          "reasoning": "The Methods say the habitat models used \"expert information\" together with spatial habitat variables, but they do not explain how that expert information was operationalized. That is a real reproducibility gap in a core input to the study.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 21,
+          "reasoning": "The paper defines high, medium, and unsuitable habitat, but the rules for assigning those levels are mostly deferred to the cited habitat-suitability models. Asking for a clearer explanation of how the levels were determined is therefore justified for a central method component.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 22,
+          "reasoning": "The phrase \"largest neighbor\" is indeed unclear in raster terms; because all pixels share the same size, the text presumably means the neighboring region/class with greatest extent rather than a larger pixel. Clarification would help, but this is a relatively minor methods wording issue.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 23,
+          "reasoning": "Given the stated patch-isolation definition as average distance of matrix pixels to the nearest edge, the direction of the metric is at least counterintuitive and may indeed be reversed as the reviewer suggests. The concern is reasonable and important, but the cited prior method could lead experts to differ on whether the paper is actually wrong.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 24,
+          "reasoning": "The sensitivity-testing sentence about alternative habitat-suitability combinations is dense and hard to parse, so the reviewer correctly flags a real clarity problem in the Methods.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 25,
+          "reasoning": "This is only a stylistic rewrite preference about how to begin the sentence, not a substantive criticism of the science or clarity. The review would not be meaningfully improved by keeping it.",
+          "correctness": "Correct",
+          "significance": "Not Significant",
+          "evidence": null,
+          "prediction_of_expert_judgments": "correct_not_significant"
+        },
+        {
+          "item_number": 26,
+          "reasoning": "The paper says range size was excluded to \"avoid potential circularity\" but does not explain the circularity mechanism. Requesting that logic to be spelled out is a valid and useful methodological criticism.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The Methods make clear that habitat suitability models are used, but they do not very plainly separate the underlying species range representation from the suitability layers placed within it. Because matrix quality is computed within species' ranges, asking for clearer definition of the range is a valid major methods point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper reports very unequal counts for low- versus high-quality matrix groups and mentions realm as a predictor, but it does not analyze whether matrix-quality groups are confounded with geography or habitat type. That is a real interpretive concern, though the reviewer does not provide evidence that such confounding actually occurs.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_insufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The study operationalizes matrix quality with human footprint but does not explicitly model structural contrast between suitable and unsuitable habitat, so the reviewer raises a genuine possible omission. However, the support is mostly ecological intuition rather than a concrete paper-specific demonstration, making the evidence borderline.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This appears to be a request for the paper to spell out what prior smaller-scale evidence it is referring to. That is a reasonable but minor literature-context clarification, and the review item provides only a terse prompt rather than a fully supported argument.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "correct_marginal_insufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The manuscript already states that the habitat suitability models were built at 300 m resolution and the human-footprint maps are at 1 km resolution, so the information requested is present in the paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    }
+  ]
+}

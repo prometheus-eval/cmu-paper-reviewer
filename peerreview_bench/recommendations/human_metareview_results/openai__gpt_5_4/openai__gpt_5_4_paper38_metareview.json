@@ -1,0 +1,79 @@
+{
+  "paper_id": 38,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This paper is about automated characterization of perovskite semiconductors from high-throughput experiments. It does not present an EHR model, does not mention Enformer, and has no model-naming conflict of the kind described, so the item is plainly about a different manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The manuscript studies optical band gap and degradation measurements for printed perovskite samples; it contains no protected health information, visit dates, seasons, or temporal EHR features. Because the criticism is completely inapplicable to the paper, it is not correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "There are no diagnosis codes, clinical records, or ICD-10 variables anywhere in the paper. Questioning why the authors only used ICD-10 codes therefore does not match the actual manuscript.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does not study pancreatic cancer and does not report Jaccard scores in supplementary tables as the main discriminative metric. Instead it reports materials-characterization metrics such as band-gap agreement and degradation precision-recall AUC, so this criticism is directed at another paper.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "Nothing in the manuscript involves MIMIC-IV, VA cohorts, or any cross-cohort clinical comparison. Since the paper is a materials-science autocharacterization study, the claimed missing results are not actually part of this work.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The introduction is indeed fairly dense and verbose, and the reviewer supports that complaint with a direct quote from lines 54-56. Even if the specific objection to the word 'intractable' is debatable, the main point about readability in a key section is clear and valid, and improving it would materially help readers follow the paper.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly argues that exhaustive search of the cited eight-component space would require 7 × 10^12 samples and therefore 'only small regions of this search space can be explored experimentally with current methods' (lines 56-58). The reviewer is right that this inference is overstated, since sparse sampling across many regions is also possible, and the quoted transition does blur the paper's motivation. Clarifying that argument would improve the introduction.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper does use linear regressions in its Tauc-curve fitting procedure and reports a regression fit in Figure 5, but the reviewer's stated requirement to show the data are 'not fat-tailed' is not a standard or necessary precondition for regression applicability here. A charitable reader could reinterpret this as a generic request for stronger regression diagnostics, so experts might split, but as written the statistical premise is shaky.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    }
+  ]
+}

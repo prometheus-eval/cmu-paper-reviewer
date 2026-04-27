@@ -1,0 +1,246 @@
+{
+  "paper_id": 27,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does compare epilepsy cohorts with Parkinson's disease and argues LoWS are more frequent or more readily distinguished there, but it does not compare against healthy mesial-temporal recordings and its wording shifts between \"not strictly specific to epilepsy\" and \"activated in epilepsy.\" That makes the concern about overclaiming the epilepsy-specific or homeostatic framing factually valid. A skeptical expert could defend the manuscript by saying \"activated in epilepsy\" just means observed in epileptic patients rather than exclusive to epilepsy. Even so, I judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Not Correct in its main factual claim because keeping the top 10% of candidate waves does not by itself force an absolute LoWS rate to be low; the observed rate still depends on how many candidate events exist and on whether the pipeline is comparable across states or datasets. The broader concern that the percentile threshold influences rate estimates is reasonable, and a charitable expert could therefore treat the item as overstated rather than simply wrong. Because that defense is plausible, I expect experts to disagree on correctness. I therefore label it Not Correct with null downstream axes and predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The valid core of this item is that the epilepsy recordings are from temporal-lobe structures, so broad conclusions should be scoped accordingly. The extra MNI or sleep-stage remarks seem to refer to other material not present in the supplied preprint, but they do not erase the main scope concern. A skeptical expert could ask for a more explicit quotation of the overbroad claim before treating the evidence as fully sufficient. I judge the item Correct and Significant, treat the evidence as sufficient but borderline, and predict correct_significant_disagree_on_evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_disagree_on_evidence"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "Read charitably, this item asks for the acquisition or preprocessing high-pass setting relevant to slow-wave detection, and the paper does not clearly report that outside the detection bandpass description. That is a real reproducibility and validity concern because aggressive high-pass filtering can distort slow activity. A skeptical expert could say the manuscript already gives a 0.5-4 Hz detection filter, so the complaint is ambiguous unless one infers the reviewer means acquisition filtering or a separate preprocessing stage. Because both readings are plausible, I judge the issue Correct and Significant with Requires More evidence, but predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The paper claims a wakefulness phenomenon but does not explain how wake state was verified beyond patients performing the task; there is no direct assessment or uncertainty discussion. That makes the reviewer's request factually valid and important for interpreting the headline claim. A skeptical expert could argue that active task performance already strongly implies wakefulness, but it does not resolve possible drowsiness or local-sleep confounds. I therefore judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "If \"reference\" is read as the EEG reference montage, the criticism is valid: the supplied preprint does not clearly state the reference used for these recordings. That omission would matter for reproducibility and waveform interpretation. A skeptical expert could object that the item is too terse and context-dependent to be fully clear on its own, which makes correctness itself somewhat debatable. My best judgment is Correct and Significant with Requires More evidence, but I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Requires More",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The methods do create a 1 s refractory period for automatic IED detection and then allow visual curation plus manual addition of missed IEDs, so asking what role the refractory ultimately plays is fair. The issue is mainly one of methods clarity: the refractory is not literally meaningless, but the final event set may not obey it after manual edits. A skeptical expert could therefore downgrade this to a minor clarification rather than a substantive flaw. I judge it Correct with Sufficient evidence, set significance to Marginally Significant, and predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "This is Correct because a null correlation or other negative check can at best show that most detected LoWS are unlikely to be mislabeled IEDs; it cannot prove that zero mislabeled events remain. The paper's several verification steps are useful, but the reviewer is right that the logic should be phrased more cautiously. A skeptical expert could reply that the manuscript uses multiple converging checks rather than a single absence-of-correlation argument, yet the requested caveat still stands. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reported pre-IED changes in LoWS slope and amplitude are modest, and the paper does not present a negative-control analysis showing that similar trends would disappear for randomly placed pseudo-events or global drifts. That makes the request for an additional control factually valid and constructively important. A skeptical expert could say the concurrent HG-before-IED analysis already provides some specificity, but it does not fully rule out slow recording-time confounds. I therefore judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 10,
+          "reasoning": "The paper itself acknowledges that the reported rates of change may appear small, so asking for clearer discussion of their practical significance is fair. This would improve interpretation, but it is more about contextualizing effect size than fixing a methodological error. A skeptical expert could still upgrade it because the homeostasis claim depends on those effect magnitudes being meaningful. I therefore judge the item Correct with Sufficient evidence, label it Marginally Significant, and predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 11,
+          "reasoning": "This is Correct because the reported HG coefficient is in log units per second and is not very intuitive, so asking for a more interpretable scale and discussion of functional impact is reasonable. The main issue is interpretability of effect magnitude, not whether the underlying analysis exists. A skeptical expert could call this Significant because the paper's protective interpretation depends on the size of the HG effect, while another could see it as mainly presentation. I judge it Marginally Significant with Sufficient evidence and predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The paper does use mixed framing: it says LoWS are \"not strictly specific to epilepsy\" and can occur outside clearly epileptic tissue, yet also casts them as key components of \"epilepsy homeostasis.\" That makes the reviewer's request for more careful discussion of what exactly is being claimed both accurate and central. A skeptical expert could say the two statements are compatible if a physiological process is recruited more strongly in epilepsy, but the manuscript does not articulate that distinction clearly enough. I therefore judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the paper makes mechanistic, relatively durable negative-feedback and homeostatic claims, yet offers little explicit discussion of how brief LoWS would produce longer-lasting changes in excitability. Raising an alternative mechanism such as transient hypersynchronization is a constructive request for conceptual clarification. A skeptical expert could say mechanistic experiments are outside scope, but the reviewer explicitly asks only for discussion, not new experiments. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The request is substantively valid: reporting sample sizes consistently and stating the patient-level grouping or random-effects structure clearly would make the statistics easier to evaluate. The paper often gives n in the text and notes subject-specific intercepts for some mixed models, but that reporting is not fully consistent or fully explicit across analyses. A skeptical expert could therefore downgrade this to mostly presentation or reporting rather than a major scientific issue. I judge it Correct and Significant with Sufficient evidence, and predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer is right that the manuscript repeatedly moves from observational associations to directional language like \"reduce,\" \"negative feed-back,\" and \"homeostatic function.\" The analyses are mixed models on naturally observed recordings, not interventions, so the causal phrasing is stronger than the design can strictly support. A skeptical expert could defend the paper by saying the authors present a mechanistic hypothesis supported by convergent temporal associations, not definitive causation. Even so, I judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the Parkinson comparator differs in disease state, recording modality, and brain region, all of which confound claims that epilepsy LoWS are biologically distinct from non-epileptic wake slow waves. The paper itself partially concedes this limitation in the Discussion, which supports the reviewer's point. A skeptical expert could say the comparison is still the best available non-epileptic dataset and thus useful as suggestive evidence. But the criticism remains central, so I judge it Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The paper's LoWS-versus-RT analysis is observational and does not control for general arousal, vigilance, or time-on-task factors that could influence both reaction time and slow-wave incidence. That makes the confounding concern factually valid. A skeptical expert could note that the reviewer's specific confounds are proposed rather than demonstrated, but the absence of those controls is easy to verify from the manuscript. Because the cognitive-impairment claim is a headline interpretation, I judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Correct because a cross-patient negative correlation between LoWS rate and IED rate does not uniquely support a protective or homeostatic account; alternative causal stories and detection-related artifacts remain plausible. The paper interprets that correlation as supportive evidence in the Discussion, so the reviewer is challenging a real inferential step. A skeptical expert could say the authors treat the correlation as one piece of a broader pattern rather than sole proof. Even so, I judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The manuscript does provide many checks against LoWS being mislabeled IEDs, so this criticism is not an obvious slam dunk. Still, the reviewer is substantively right that the paper cannot completely exclude pathological or spike-missed IED-related transients, especially given imperfect IED detection and incomplete visual inspection of all slow waves. A skeptical expert could therefore defend the paper as sufficiently convincing overall, while a stricter one could find the distinction not fully established. I judge the item Correct, Significant, and Sufficient, but predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This is Correct because the provided MATLAB materials are plainly incomplete for reproducing the central separation between LoWS and IEDs. The slow-wave script explicitly omits the no-IED-before condition, the post-processing pruning code is absent, and the IED pipeline relies on manual visual confirmation without reproducible tooling. A skeptical expert could say the code is illustrative rather than meant as an exact turnkey release, but that does not solve the reproducibility gap. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The strongest valid core of this item is that the manuscript presents the epilepsy-homeostasis interpretation as a beneficial functional account without causal evidence strong enough to rule out more conventional pathological interpretations. The reviewer overstates matters somewhat by asserting a definitive rebranding of known pathological phenomena, but the complaint about overinterpretation of benefit or homeostasis is real. A skeptical expert could defend the paper by noting the authors explicitly frame this as a hypothesis supported by several correlations, not a completed mechanistic proof. Even so, I judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is Not Correct because the paper does not define LoWS by high slope and down-state in a circular way that automatically excludes the Parkinson events; those features are used later for characterization, while detection is based on the same waveform algorithm across datasets. The broader complaint about interpretive bias toward physiology rather than pathology is arguable, but it is not the main concrete claim made here. A charitable expert could still sympathize with the pathology-framing concern, yet the stated factual premise about the definition does not hold up against the methods. I therefore predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is Correct because the LoWS pipeline removes candidate slow waves within 1 s after detected IEDs, which can mechanically depress observed LoWS counts in subjects with more IEDs unless effective analyzable time is adjusted. The paper then interprets a negative LoWS-IED rate correlation as supportive of protection and introduces a corrected rate defined by multiplying LoWS rate by IED rate, which is not a principled censoring correction. A skeptical expert could argue the exclusion window may be too small to fully explain the correlation, but the artifact concern is still real and directly relevant. I therefore judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer is right that the manuscript's strongest \"LoWS reduce excitability\" and \"negative feedback\" language outruns what can be established from correlational mixed models on observational clinical recordings. The additional model-specification criticism is also substantive: omitting a baseline-HG main effect while interpreting interactions causally makes the inference less robust. A skeptical expert could say the paper presents suggestive mechanistic evidence rather than proof, but the wording in the abstract and results is still too strong for the design. I therefore judge the item Correct, Significant, and Sufficient, and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This is Correct because the manuscript's \"people without epilepsy\" comparator is an unmatched Parkinson's disease neocortical ECoG cohort, not healthy mesial-temporal controls. Differences in pathology, recording modality, and sampled region all confound the claim that the observed separation is specifically about epilepsy. A skeptical expert could say the comparison is still informative because healthy intracortical temporal-lobe data are unavailable, but that only makes it suggestive rather than definitive. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The paper does repeatedly use p-values and significant-language across many outcomes while also stating that multiple-comparisons correction is unnecessary under its estimation-statistics framing. That makes the reviewer's concern about multiplicity and overall statistical reliability a real one. A skeptical expert could still defend the manuscript by noting that it reports effect sizes, performs some Bonferroni-Holm checks, and that reasonable statisticians do disagree about how strongly to police multiplicity in this setting. Because that counterargument is plausible, I judge the item Correct, Significant, and Sufficient but predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This is Correct because the provided code release is plainly incomplete for end-to-end reproduction: core scripts contain undefined inputs, placeholders, missing environment context, and no full analysis pipeline for figures or statistics. That matters because the paper's central claims depend on event detection and downstream processing choices that cannot be independently audited from the supplied materials. A skeptical expert could say clinical data constraints limit what can be shared, but that does not excuse the lack of runnable code and parameterization. I therefore judge the item Significant with Sufficient evidence and predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

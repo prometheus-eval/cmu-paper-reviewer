@@ -1,0 +1,246 @@
+{
+  "paper_id": 37,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer asks about the reproducibility of the methods for the 'same samples'. However, this paper is about deep learning on electronic health records (EHRs), not physical or biological samples. This suggests the reviewer has uploaded a review for a completely different paper (likely in materials science). The claim is factually incorrect as it does not apply to this paper. A devil's advocate could argue 'samples' refers to data samples, but in the context of Item 2, it clearly means physical samples. The experts would agree it is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer criticizes the analysis of 'inhomogeneous deposition of the film' and 'coffee ring'. This confirms the reviewer is evaluating a completely different manuscript (likely in materials science or thin films), not an EHR predictive modeling paper. The criticism is entirely inapplicable to the paper. There is no plausible devil's advocate defense. Experts would firmly agree this is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This review item is completely empty. It fails to state any factual claim or main point, making it impossible to evaluate against the paper. Since a criticism must be clearly stated to be Correct, this item is Not Correct. Experts would agree that an empty item cannot be considered correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This review item is completely empty. It fails to state any factual claim or main point, making it impossible to evaluate against the paper. Since a criticism must be clearly stated to be Correct, this item is Not Correct. Experts would agree that an empty item cannot be considered correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This review item is completely empty. It fails to state any factual claim or main point, making it impossible to evaluate against the paper. Since a criticism must be clearly stated to be Correct, this item is Not Correct. Experts would agree that an empty item cannot be considered correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer questions the claim that an 8.45% PPV 'minimizes' resource cost and intrusion, pointing out that 91.55% of interventions would still be for false positives. This correctly interprets the paper's numbers. Questioning the practical clinical utility of the model's performance is a substantive point, making it Significant. The reviewer provides specific numbers as evidence. A devil's advocate might argue this is only Marginally Significant because it's largely arguing over the semantics of the word 'minimize' based on a citation. Because it's borderline between a substantive clinical critique and a semantic quibble, experts would likely disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer asks for clarification on what the ICD codes represent in the VA setting (billing vs. clinical problem list), which is not fully detailed in the paper. Understanding the data generating process is crucial for interpreting the model's predictions, making this Significant. The reviewer provides sufficient evidence by pointing to this absence. A devil's advocate might argue the paper does mention codes are ordered by priority, but the broader concern about whether they are administrative or clinical remains valid. Experts would likely agree this is a correct and significant point.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer questions generalizability to MIMIC by asking about the self-harm prediction task in MIMIC. However, the paper explicitly states MIMIC was only used for the DOAP task, not for the self-harm prediction task. Thus, the reviewer's specific criticism conflates the two tasks. A devil's advocate could argue the reviewer's broader point (MIMIC vs VA populations are very different) is true, but the specific questions they ask are factually inapplicable to the experiments performed. Because of this mix of true premise and false specific application, experts would likely disagree on whether the item as a whole is Correct or Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly quotes the paper's absolute PPV improvement (7.14% to 8.67%) and questions if this modest absolute gain is clinically significant. This is factually accurate against Table 3. Questioning whether small absolute improvements translate to real-world clinical utility is a major, constructive point, making it Significant. The reviewer cites the exact numbers from the table as evidence. A devil's advocate would struggle to downgrade this, as interpreting clinical impact is a core aspect of such papers. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer correctly observes that predicting ICD codes one visit prior may not be clinically useful for pancreatic cancer, as billing codes are poor proxies for early detection and visit intervals vary. This challenges the clinical utility of the problem formulation, making it Significant. The reviewer builds a strong logical derivation from the paper's stated premises. A devil's advocate might argue the paper is just an exploratory proxy, but the reviewer's criticism of the clinical claim is valid. Experts would agree this is a well-supported, significant concern.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The reviewer points out an awkward sentence in lines 69-70 and suggests rephrasing. The sentence exists in the text as quoted. Because it is purely a stylistic preference about wording that does not affect the substance or scientific claims of the paper, it is Marginally Significant. The exact quote serves as sufficient evidence. A devil's advocate might argue it is Not Significant, but grammatical/stylistic corrections are standardly accepted as marginally helpful. Experts would agree it is correct, marginal, and sufficiently evidenced.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer notes that the word 'uncommon' in line 75 is missing a noun and suggests adding 'predictions'. The quote is accurate. This is a minor grammatical correction that improves readability but does not change the paper's scientific meaning, so it is Marginally Significant. The quote and line number provide sufficient evidence. A devil's advocate could argue it is Not Significant, but fixing missing words is generally considered marginally helpful. Experts would agree on these labels.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer asks what 'Exam to educational institution' in Figure 1 means. The figure indeed contains this text as an artificial ICD code example. Because it is just an illustrative, artificial example, clarifying it does not materially improve the paper's substance, making it Marginally Significant. The reviewer points directly to the figure. A devil's advocate could argue this is Not Significant because it's clearly labeled as an artificial example and any reader can look it up, so it adds no real value to the review. This makes it borderline, so experts would likely disagree on significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "The reviewer points out a typo ('pateint' instead of 'patient') in Figure 3. The typo is indeed present in the figure. Because it is a trivial spelling error that does not hinder understanding, it is Marginally Significant. Pointing to the specific figure and typo provides sufficient evidence. A devil's advocate might argue that a single typo in a figure is so trivial it should be Not Significant, while others might find fixing figure typos helpful. Given this common variance, experts would likely disagree on its significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer notes that the external validation (MIMIC-IV) only evaluated the DOAP task and not the primary clinical prediction tasks (cancer/self-harm). This is factually correct based on the paper's descriptions. Pointing out that generalizability claims are unsupported for the main downstream tasks is a major methodological critique, making it Significant. The reviewer quotes the paper directly as evidence. A devil's advocate would not dispute this, as external validation of primary tasks is a cornerstone of clinical ML. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer points out that the ablation studies for the model's key components (visit masking, date embedding) were only performed on the DOAP task (using Jaccard similarity) and not on the primary clinical tasks. This is factually accurate. Understanding if the proposed architectural innovations actually help the downstream tasks is critical, so this is Significant. The reviewer provides specific quotes as evidence. A devil's advocate might argue DOAP is the pretraining task, but the reviewer's concern about downstream performance remains valid. Experts would agree.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer claims that the 'dataset.py' file is missing from the code repository, rendering it non-executable. Inspection of the 'code/' directory and 'main_bart.py' confirms this file is missing despite being imported. Reproducibility and executable code are highly important, making this a Significant concern. The reviewer points to specific lines in the training script. A devil's advocate has no grounds to argue, as the code is objectively broken. Experts would agree on correctness, significance, and evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer correctly notes the absolute AUPRC improvement for pancreatic cancer is small (1.62 points) and questions its clinical utility. However, the reviewer incorrectly claims the confidence intervals overlap (they do not: 80.53-81.69 vs 81.81-83.65). Because the main point—that the absolute gain is modest and clinical significance is debatable—still holds, the item is Correct. A devil's advocate would argue that the factual error regarding the confidence intervals invalidates the claim, making it Not Correct. Due to this mix of a valid core point but a flawed supporting detail, experts would disagree on correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The reviewer points out a naming collision with DeepMind's 'Enformer', a well-known genomics model. This is factually correct. Naming collisions can cause confusion in literature searches but do not affect the scientific validity or substance of this paper, so it is Marginally Significant. The reviewer provides a citation to the DeepMind paper. A devil's advocate might argue that naming collisions in AI are a major issue and should be Significant, but it's typically seen as a presentational/administrative issue. Experts would likely agree it's Marginally Significant.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer points out that the name 'Enformer' is already used by a major DeepMind genomics paper. This is factually accurate. While it causes confusion in the literature, it does not threaten the validity of the paper's experiments or conclusions, making it a Marginally Significant issue. The reviewer cites the specific Nature Methods paper as evidence. A devil's advocate might argue it is Not Significant because people can distinguish domains, but naming collisions are generally considered at least marginally problematic. Experts would agree on these labels.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer identifies that the 'date embedding' code in 'icdmodelbart.py' expects a single 'datetime.datetime' object, which will crash when fed batched tensors during training. Inspection of the code verifies this assertion. Since this indicates the provided code is functionally broken and differs from what was used for experiments, it is a Significant reproducibility issue. The reviewer quotes the specific class and function. A devil's advocate cannot dispute a clear runtime error in the released code. Experts would agree on all axes.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer argues that predicting all diseases of a future visit is just the 'Next Visit Prediction' task (like Doctor AI) and not a 'novel pretraining objective'. The paper does claim it as a 'new pretraining objective' in the context of transformers. A charitable reading of the paper is that using it for pretraining is novel; a charitable reading of the reviewer is that the task itself is old. Because both interpretations have merit, experts would disagree on whether the reviewer's criticism of the novelty claim is factually Correct.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer claims the paper compares its model only to a 'generic BERT' and fails to compare against models pretrained on large-scale EHR. However, the paper explicitly states its BERT baseline was pretrained on the VHA cohort, making it an in-domain, large-scale EHR BERT (essentially a replication of Med-BERT on their data). Thus, the reviewer's core factual premise is wrong. A devil's advocate might argue they should have used official Med-BERT weights, but the claim that it's a 'generic BERT' is factually false. Experts would agree this is Not Correct.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer calculates that the pancreatic cancer cohort has a roughly 47% case prevalence (10,287 cases, 11,522 controls), which doesn't reflect real-world prevalence, and similarly for self-harm. Because AUPRC and PPV are highly sensitive to class imbalance, this artificial prevalence makes the metrics uninterpretable for clinical deployment. This correctly relies on the numbers in the paper. It is Significant because it challenges the core evaluation metrics. The reviewer points to the exact case/control numbers. Experts would agree this is a correct and significant methodological flaw.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer criticizes the use of a one-sided Student's t-test over just 5 random seeds to claim p<0.001 superiority. This is factually accurate based on the implementation details. This is a Significant statistical flaw, as n=5 is too small for valid t-test assumptions in ML benchmarking, especially without multiple testing correction. The reviewer quotes the paper's statistical methodology directly. A devil's advocate might argue t-tests are common, but the tiny sample size makes the p-values unreliable. Experts would agree this is correct and significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer points out that the provided code (calc_overlap_bart) computes AUROC batch-by-batch and averages the results, rather than computing it over the full evaluation set. Inspection of 'trainer.py' confirms this exact logic. Averaging batch AUROCs is mathematically incorrect and invalidates the reported metrics, making this a Significant issue. The reviewer provides the exact code snippet as evidence. A devil's advocate could not defend mathematically flawed aggregation logic. Experts would agree on correctness, significance, and evidence.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The reviewer notes that 'dataset.py' is missing from the code repository, preventing reproduction of the training and evaluation pipelines. This accurately reflects the contents of the 'code/' directory. Missing crucial data processing code is a major barrier to reproducibility, so this is Significant. The reviewer quotes the exact import statement that fails. A devil's advocate has no counterargument since the code literally cannot run. Experts would uniformly agree this is correct and significant.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}

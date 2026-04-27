@@ -1,0 +1,246 @@
+{
+  "paper_id": 37,
+  "reviewers": [
+    {
+      "reviewer_id": "Human_1",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The most charitable reading is that the reviewer is asking for reproducibility information and saying it is not adequately shared. That broader concern has some basis because the manuscript gives only limited implementation detail and the released code is incomplete, but the wording, especially 'for the same samples,' is too unclear to identify a precise factual criticism. A skeptical expert could therefore reject the item as too vague, while a charitable expert could accept it as a real reproducibility concern. I mark it Not Correct because the claim is not clearly stated enough to verify, skip significance and evidence, and predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "This item is not about the paper at all. It discusses thin-film deposition, coffee-ring degradation, and inhomogeneous aging, whereas the manuscript is about transformer models for longitudinal EHR prediction. A devil's-advocate defense is not plausible because no film or degradation experiment appears anywhere in the paper. I therefore mark it Not Correct and predict both experts would label it incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is blank and does not state any criticism. Because there is no identifiable factual claim, I cannot verify a main point against the paper. A charitable reading still does not recover a specific concern from empty content. I therefore mark it Not Correct and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This item is blank and does not state any criticism. Because there is no identifiable factual claim, I cannot verify a main point against the paper. A charitable reading still does not recover a specific concern from empty content. I therefore mark it Not Correct and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "This item is blank and does not state any criticism. Because there is no identifiable factual claim, I cannot verify a main point against the paper. A charitable reading still does not recover a specific concern from empty content. I therefore mark it Not Correct and predict incorrect.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "incorrect"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "Human_2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "The reviewer's main point is that the paper overstates the practical meaning of the self-harm PPV result: the manuscript argues that 8.45% PPV supports feasibility and says higher PPV minimizes unnecessary intervention burden, but it does not fully contextualize how many false positives would remain. That criticism is substantively valid and would meaningfully improve the paper, so I mark it Correct and Significant; the item also cites the exact PPV claim, so the evidence is Sufficient. Devil's advocate: the paper does cite an external 1.7% threshold and only argues feasibility rather than claiming perfect clinical usefulness, so a stricter expert could defend the authors. Because that defense is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper says it predicts diagnostic ICD-10 codes from the VHA Clinical Data Warehouse, but it never explains what those codes represent operationally, such as billing codes, problem-list entries, or some other documentation target. That is a correct and significant concern because it affects how readers interpret label validity and the clinical meaning of the prediction task. The evidence is sufficient because the reviewer identifies a specific absence that can be checked directly in the manuscript. Devil's advocate: the authors might argue that ICD codes are a standard EHR proxy and prior work uses them too, but that does not really answer the request for clarification, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer is right that the external evaluation spans a large domain shift: the paper's main data are VHA records, while MIMIC-IV is an ICU cohort from a different hospital system. That is Significant because it bears directly on the generalizability story, and the evidence is Sufficient because the item points to the concrete VA-versus-MIMIC population mismatch. Devil's advocate: the ICU/self-harm example misreads the paper, since the external MIMIC experiment is DOAP rather than the PTSD self-harm task. I still view that example as peripheral to a valid main concern, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "This is a correct request to contextualize whether the self-harm PPV improvement from 7.14% to 8.67% has meaningful practical impact. Addressing that point would improve the paper because the manuscript makes clinical feasibility claims but does not translate the absolute gain into resource or workflow implications. The evidence is sufficient because the reviewer cites the exact Table 3 numbers being questioned. Devil's advocate: some experts may feel the observed gain speaks for itself, but the need for clinical interpretation is still clear, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "The main criticism is correct: for pancreatic cancer, the paper predicts future assignment of the first C25 code, which is not necessarily identical to clinically useful early disease detection, and the manuscript gives little help on how visit timing affects that interpretation. That is Significant because it concerns the meaning and utility of one of the paper's two flagship downstream tasks. The evidence is sufficient because the reviewer grounds the point in the paper's cohort definition and in the stated next-visit prediction setup. Devil's advocate: the authors follow prior work and use standard EHR-code proxies, but that does not remove the interpretability concern, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 6,
+          "reasoning": "The sentence quoted is indeed awkwardly phrased. Fixing it would improve readability a little, but it is a wording issue rather than a substantive methodological problem, so I mark it Marginally Significant. The evidence is sufficient because the reviewer points to the exact sentence. Devil's advocate: one could say the meaning is still understandable, but the item remains a valid minor edit, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 7,
+          "reasoning": "The reviewer correctly flags an incomplete or unclear phrase in the discussion of uncommon predictions. This is a minor clarity issue rather than a substantive scientific problem, so it is Marginally Significant. The evidence is sufficient because the item points to the exact line and the missing wording. Devil's advocate: readers can probably infer the intended meaning from context, but it is still a valid minor correction, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        },
+        {
+          "item_number": 8,
+          "reasoning": "The reviewer is correctly flagging an unexplained label in Figure 1: the figure literally contains the phrase 'Exam to Educational Institution.' That point is verifiable from the figure itself, so the evidence is Sufficient. Fixing it would improve figure readability, but only modestly because Figure 1 is illustrative rather than central to the empirical claims. I therefore mark it Correct and Marginally Significant, while predicting correct_disagree_on_significance because some experts would treat it as too trivial to matter.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 9,
+          "reasoning": "Figure 3 does contain the awkward phrase 'Actual disease patient had,' so the reviewer's correction is factually grounded. This is only a presentation nit, but it is still the sort of typo-level issue worth keeping as a minor comment, so I mark it Marginally Significant. The evidence is sufficient because the reviewer points to the exact figure text. Devil's advocate: the intended meaning is obvious, yet the criticism remains a valid minor edit, so I predict correct_marginal_sufficient.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_marginal_sufficient"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "claude-opus-4-5",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This criticism is correct: the paper's external validation on MIMIC-IV is limited to the DOAP task, while the two headline clinical tasks are only evaluated on VHA data. That matters for the generalizability claim, so the item is Significant, and the evidence is Sufficient because it cites the exact external-validation passage and cohort size. Devil's advocate: the paper also reports an internal unseen-facility test, which partly supports generalizability, but it does not answer the lack of external validation for the main downstream tasks. I therefore predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly presents ablations for visit masking, encoder-decoder architecture, and date embedding only in the DOAP setting, not for pancreatic cancer or PTSD self-harm. That is a correct and significant limitation because the paper's practical claims rest on those downstream clinical tasks, and component effects need not transfer from DOAP to binary classification. The evidence is sufficient because the reviewer quotes the ablation claims and points to what is missing. Devil's advocate: authors might argue DOAP is the pretraining objective and thus the natural place for ablation, but downstream ablation would still materially strengthen the paper, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct: main_bart.py imports a dataset module that is not present in the released code directory, so the repository is incomplete and not runnable as provided. That is Significant because it directly affects reproducibility of the paper's empirical claims. The evidence is sufficient because the reviewer cites the missing import and explains why dataset preparation is essential. Devil's advocate: one could imagine an accidental packaging omission rather than a methodological flaw, but the reproducibility criticism still stands, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The core criticism is that the pancreatic-cancer gain over BERT is modest and not clinically contextualized, which is valid because Table 2 shows only 82.73 versus 81.11 AUPRC and the manuscript does not translate that into clinical impact. That makes the item Significant, and the cited numbers make the evidence Sufficient. Devil's advocate: the review also says the gain is a 2% absolute improvement with overlapping confidence intervals, but the actual absolute gain is 1.62 points and the reported confidence intervals do not overlap, so a stricter expert could discount the whole item. Because the item mixes a valid main concern with incorrect supporting details, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 5,
+          "reasoning": "It is factually correct that the paper calls its model 'Enformer,' which collides with the well-known genomics model name, and the code README also uses a different internal name, 'TransformEHR.' That makes the criticism verifiable and the evidence Sufficient. The importance is debatable: renaming would reduce confusion, but it would not change the methods or results, so I mark it Marginally Significant. Because some experts would view naming confusion as a real scholarly issue and others as a minor branding nit, I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gemini-3.0-pro-preview",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This is factually correct: the manuscript introduces a model named 'Enformer,' which is the same name as an already prominent biomedical transformer model, and the paper does not acknowledge that collision. The evidence is Sufficient because the reviewer cites the paper's naming and the prior Enformer reference. I view the issue as Marginally Significant because it concerns scholarly clarity rather than the substance of the experiments. Some experts would still downgrade it further or upgrade it as a notable confusion risk, so I predict correct_disagree_on_significance.",
+          "correctness": "Correct",
+          "significance": "Marginally Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_disagree_on_significance"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The reviewer is correct that the released date-embedding code appears functionally broken: DateYearMonthDayEmbedding.forward asserts a single datetime input and then calls embed_year on an integer year, while the encoder passes batched visit_ids tensors into self.embed_visitids. That is Significant because date embedding is presented as one of the model's distinguishing components, so broken code undermines reproducibility. The evidence is Sufficient because the reviewer quotes the exact code and the failure mechanism can be verified from the repository. Devil's advocate: the buggy path may not have been used in the released fine-tuning command, but as provided the claimed feature is still not reproducible, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "The reviewer's central point is that next-visit prediction itself is not new in EHR modeling, so the paper's broad novelty language around predicting all diseases of a future visit is overstated. I therefore mark the item Correct and Significant, and the evidence is Sufficient because it cites the paper's novelty claim and names concrete prior work like Doctor AI. Devil's advocate: the authors could reasonably defend novelty as applying specifically to the use of this objective as a pretraining objective in a transformer encoder-decoder setting, not as the first ever next-visit prediction task. Because that narrower defense is plausible, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The item overstates the baseline problem by calling the comparison model only a generic or vanilla BERT. In fact, the paper says the baseline BERT was pretrained on the same VHA cohort and positions it as a fair comparison to prior medical BERT-style models, so the main criticism is not cleanly accurate. A charitable defense exists because the paper does not directly benchmark named systems like Med-BERT or BEHRT, and some experts might still want those explicit comparisons. I therefore mark the item Not Correct overall, skip significance and evidence, and predict disagree_on_correctness.",
+          "correctness": "Not Correct",
+          "significance": null,
+          "evidence": null,
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        }
+      ]
+    },
+    {
+      "reviewer_id": "gpt-5.2",
+      "items": [
+        {
+          "item_number": 1,
+          "reasoning": "This criticism is correct: the cohort descriptions for the two downstream tasks create real interpretability problems for PR-based metrics, because pancreatic cancer is evaluated in an apparently enriched case-control cohort and the self-harm counts are hard to reconcile with the stated 1.9% rate. That is Significant because the paper's headline claims rely on AUPRC and PPV, which depend on prevalence and clear cohort definitions. The evidence is Sufficient because the reviewer cites the exact counts, prevalence statement, and explains the metric implications. Devil's advocate: supplementary material might resolve some of the ambiguity, but in the provided paper files the concern stands, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 2,
+          "reasoning": "The paper explicitly says all models were finetuned with five random seeds and that superiority was tested with a one-sided Student's t-test, while saying nothing about multiplicity correction. It is therefore reasonable to judge the statistical support as methodologically weak, and addressing that would materially improve the paper, so I mark the item Correct and Significant; the evidence is Sufficient because it quotes the exact methods text. Devil's advocate: some experts will regard seed-based t-tests as imperfect but still acceptable common practice in ML papers, rather than a factual flaw. Because the criticism depends partly on methodological norms, I predict disagree_on_correctness.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "disagree_on_correctness"
+        },
+        {
+          "item_number": 3,
+          "reasoning": "This item is correct: the released trainer computes AUROC-like quantities inside each batch via calc_overlap_bart and then averages them over batches into metrics['map'], which is not equivalent to a proper dataset-level AUROC calculation. That is Significant because incorrect or mislabeled evaluation code undermines reproducibility and trust in reported metrics. The evidence is Sufficient because the reviewer quotes the exact functions and aggregation logic from the repository. Devil's advocate: this path may correspond more directly to the ICD-code prediction setup than to every headline number in the paper, but the code-level criticism itself is still clear and valid, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        },
+        {
+          "item_number": 4,
+          "reasoning": "The main point is correct: the released repository is not sufficient to reproduce the paper's claims because it depends on a missing dataset module and does not provide a complete runnable task pipeline for the headline results. That is Significant because the paper's contribution is empirical and reproducibility depends on full data preparation and evaluation code. The evidence is Sufficient because the reviewer cites the missing import and ties it directly to task setup and metric verification. Devil's advocate: the code does contain a binary-classification head, so some downstream machinery exists, but without the missing dataset components the reproducibility criticism still stands, so I predict correct_significant_sufficient.",
+          "correctness": "Correct",
+          "significance": "Significant",
+          "evidence": "Sufficient",
+          "prediction_of_expert_judgments": "correct_significant_sufficient"
+        }
+      ]
+    }
+  ]
+}
