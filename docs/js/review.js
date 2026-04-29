@@ -812,9 +812,10 @@ function showAnnotationModal(key, items, currentIndex) {
 
           <div class="annotation-group">
             <div class="annotation-group-label">Is the action item helpful in improving this paper?</div>
+            <div class="annotation-hint">Evaluate whether the concrete action item suggested by the AI reviewer is practical and would genuinely help improve the paper if followed.</div>
             <div class="annotation-buttons" data-field="action_item_quality">
               <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_executable' ? 'selected' : ''}" data-value="helpful_executable">Helpful and executable</button>
-              <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_needs_modification' ? 'selected' : ''}" data-value="helpful_needs_modification">Helpful but needs modification</button>
+              <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_needs_modification' ? 'selected' : ''}" data-value="helpful_needs_modification">Helpful but is not executable</button>
               <button class="annotation-btn ${annotationState.action_item_quality === 'not_helpful' ? 'selected' : ''}" data-value="not_helpful">Not helpful</button>
             </div>
           </div>
@@ -827,6 +828,7 @@ function showAnnotationModal(key, items, currentIndex) {
 
           <div class="debate-trigger">
             <button class="btn btn-secondary btn-sm debate-btn" id="debate-btn" disabled>I want to debate with AI about this (Beta \u{1F9EA})</button>
+            <div class="annotation-hint" style="margin-top:0.4rem;">You can debate with AI about this item if you provide your opinions about this review item. Please fill in all the buttons and text form above.</div>
           </div>
 
           <div class="modal-actions">
@@ -988,7 +990,7 @@ function renderSingleAnnotationModal(key, item) {
           <div class="annotation-group-label">Is the action item helpful in improving this paper?</div>
           <div class="annotation-buttons" data-field="action_item_quality">
             <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_executable' ? 'selected' : ''}" data-value="helpful_executable">Helpful and executable</button>
-            <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_needs_modification' ? 'selected' : ''}" data-value="helpful_needs_modification">Helpful but needs modification</button>
+            <button class="annotation-btn ${annotationState.action_item_quality === 'helpful_needs_modification' ? 'selected' : ''}" data-value="helpful_needs_modification">Helpful but is not executable</button>
             <button class="annotation-btn ${annotationState.action_item_quality === 'not_helpful' ? 'selected' : ''}" data-value="not_helpful">Not helpful</button>
           </div>
         </div>
