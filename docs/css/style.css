@@ -2087,6 +2087,236 @@ footer p {
   text-decoration-color: var(--gray-400);
 }
 
+/* --- Expert Annotation Study page --- */
+.study-section {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-200, #e5e5e5);
+}
+
+.study-section h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-note {
+  color: var(--gray-400);
+  font-style: italic;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.86rem;
+}
+
+.compare-table th,
+.compare-table td {
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--gray-200, #e5e5e5);
+  vertical-align: top;
+}
+
+.compare-table thead th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--gray-300, #d1d5db);
+}
+
+.compare-table th[scope="row"] {
+  font-weight: 600;
+  color: var(--gray-600, #4b5563);
+  white-space: nowrap;
+}
+
+.compare-table .cmu-col {
+  color: var(--cmu-red);
+}
+
+.compare-table td.own {
+  background: rgba(196, 18, 48, 0.045);
+  font-weight: 500;
+}
+
+.compare-note {
+  font-size: 0.72rem;
+  color: var(--gray-400);
+  margin-top: 0.55rem;
+}
+
+.study-section ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.study-section li {
+  margin-bottom: 0.5rem;
+}
+
+.paper-figure {
+  margin-top: 1.9rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--gray-200, #e5e5e5);
+}
+
+.paper-figure .fig-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--cmu-red);
+  margin-bottom: 0.65rem;
+}
+
+.paper-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-200, #e5e5e5);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.paper-figure .fig-summary {
+  font-size: 0.9rem;
+  color: var(--gray-600, #4b5563);
+  margin-top: 0.8rem;
+}
+
+/* Recreated data table (Table 3) */
+.data-table td {
+  text-align: right;
+}
+.data-table th[scope="row"] {
+  text-align: left;
+}
+.data-table thead th {
+  text-align: right;
+}
+.data-table thead th:first-child {
+  text-align: left;
+}
+.data-table td.hi {
+  color: var(--cmu-red);
+  font-weight: 600;
+}
+
+/* --- Rotating affiliation logos --- */
+.affiliations {
+  margin: 1.75rem auto 0;
+  max-width: 760px;          /* ~6 logos visible at a time */
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.affil-caption {
+  color: var(--gray-400);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.affil-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: affil-scroll 70s linear infinite;
+}
+
+.affiliations:hover .affil-track {
+  animation-play-state: paused;
+}
+
+.affil {
+  flex: 0 0 auto;
+}
+
+.affil img {
+  height: 36px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.55;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.affil img:hover {
+  filter: none;
+  opacity: 1;
+}
+
+@keyframes affil-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }   /* list is duplicated, so 50% = one full set */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .affil-track { animation: none; }
+}
+
+/* --- Citation box --- */
+.cite-box {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.cite-box .cite-prompt {
+  text-align: center;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.bibtex-wrap {
+  position: relative;
+}
+
+.bibtex-wrap pre {
+  background: var(--gray-50, #f7f7f8);
+  border: 1px solid var(--gray-200, #e5e5e5);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.bibtex-wrap code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--gray-700, #374151);
+  white-space: pre;
+}
+
+.copy-bibtex {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  font-size: 0.72rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--gray-300, #d1d5db);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--gray-600, #4b5563);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.copy-bibtex:hover {
+  background: var(--cmu-red);
+  border-color: var(--cmu-red);
+  color: #fff;
+}
+
 /* --- Inline lookup form --- */
 .inline-form {
   display: flex;

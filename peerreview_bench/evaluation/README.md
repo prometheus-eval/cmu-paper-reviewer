@@ -134,9 +134,9 @@ These represent the important issues that a competent reviewer should catch.
 - Primary annotator labels only (matching the paper's Table 5)
 
 For each rubric item, we check whether ANY of the AI reviewer's items is
-"similar" to it using the 4-way LLM similarity judge (same prompt as
-`similarity_check/expert_annotation_similarity/`). The two "similar"
-classes are:
+"similar" to it using the 4-way LLM similarity judge (prompt + LLM call
+helpers vendored in `judges/similarity_prompts.py` and
+`judges/similarity_llm.py`). The two "similar" classes are:
 - "same subject, same argument, same evidence" (near-paraphrase)
 - "same subject, same argument, different evidence" (convergent conclusion)
 
@@ -144,8 +144,8 @@ classes are:
 
 ### Precision: quality of AI reviewer items
 
-Each AI review item is judged by an LLM meta-reviewer (axis mode, same
-prompt as `metareview_bench/expert_annotation_meta_review/`) for:
+Each AI review item is judged by an LLM meta-reviewer (axis mode, using the
+dimension definitions vendored in `judges/precision_prompts.py`) for:
 - Correctness (Correct / Not Correct)
 - Significance (Significant / Marginally Significant / Not Significant)
 - Evidence (Sufficient / Requires More)
@@ -172,6 +172,7 @@ Reported when both metrics are available:
 | `evaluate_precision.py` | Computes precision via LLM meta-reviewer |
 | `evaluate.py` | Unified entry point: runs the full pipeline or individual steps |
 | `run_evaluation.sh` | Shell wrapper with common configurations |
+| `judges/` | Self-contained judge prompts + LLM-call helpers (recall similarity judge, precision dimension definitions, per-model token budgets) |
 
 ## BYOJ: Bring Your Own JSON
 

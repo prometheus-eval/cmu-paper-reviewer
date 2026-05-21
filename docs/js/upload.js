@@ -503,10 +503,37 @@ function showRateLimitPopup(message) {
   });
 }
 
+// --- Upload size limits (mirror backend config) ---
+const MB = 1024 * 1024;
+const MAX_PDF_MB = 30;
+const MAX_CODE_ZIP_MB = 50;
+
+function checkUploadSizes() {
+  const tooBig = (file, mb) => file && file.size > mb * MB;
+  if (tooBig(selectedFile, MAX_PDF_MB)) {
+    return `Manuscript PDF is ${(selectedFile.size / MB).toFixed(1)} MB, exceeding the ${MAX_PDF_MB} MB limit.`;
+  }
+  const supp = suppInput.files[0];
+  if (tooBig(supp, MAX_PDF_MB)) {
+    return `Supplementary PDF is ${(supp.size / MB).toFixed(1)} MB, exceeding the ${MAX_PDF_MB} MB limit.`;
+  }
+  const code = codeInput.files[0];
+  if (tooBig(code, MAX_CODE_ZIP_MB)) {
+    return `Code archive is ${(code.size / MB).toFixed(1)} MB, exceeding the ${MAX_CODE_ZIP_MB} MB limit.`;
+  }
+  return null;
+}
+
 // --- Form submission ---
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (!selectedFile) return;
+
+  const sizeError = checkUploadSizes();
+  if (sizeError) {
+    showMessage("error", `<strong>Error:</strong> ${sizeError}`);
+    return;
+  }
 
   const mode = modeInput.value;
   submitBtn.disabled = true;

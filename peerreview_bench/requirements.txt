@@ -1,0 +1,12 @@
+# PeerReview Bench evaluation harness
+
+# Core: data loading + LLM judges (recall similarity judge, precision meta-review)
+litellm>=1.80
+datasets>=2.16
+huggingface_hub>=0.20
+numpy>=1.24
+tqdm>=4.65
+
+# Agent-based review generation (generate_reviews.py) and the agent meta-review
+# judge mode. Reuses backend/reviewer_prompt.py from the repository root.
+openhands-ai==1.1.0

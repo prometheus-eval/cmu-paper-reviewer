@@ -18,12 +18,17 @@ scripts/deploy_.sh
 scripts/download_annotation_.sh
 .DS_Store
 downloaded_papers/*
+
+# Archived internal research tree (kept locally, never tracked)
+peerreview_bench_internal/
+
+# Generated / downloaded data in the public eval harness
 peerreview_bench/api_key/
-peerreview_bench/outputs/
 peerreview_bench/papers/
+peerreview_bench/outputs/
 peerreview_bench/**/agent_trajectories/
 peerreview_bench/**/*_trajectory/
 peerreview_bench/**/conversations/
-peerreview_bench/metareview_bench/results_v*/
-peerreview_bench/openhands/
-peerreview_bench/update_hf_drop_three_papers.py
+**/__pycache__/
+
+peerreview_bench_internal/

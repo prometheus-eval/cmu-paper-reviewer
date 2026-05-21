@@ -37,29 +37,26 @@ os.environ.setdefault('HF_HUB_ETAG_TIMEOUT', '120')
 
 _HERE = Path(__file__).resolve().parent
 _BENCH_DIR = _HERE.parent
-_EA_SIM_DIR = _BENCH_DIR / 'similarity_check' / 'expert_annotation_similarity'
 
-for p in (_HERE, _BENCH_DIR, _EA_SIM_DIR, _EA_SIM_DIR / 'baselines',
-          _BENCH_DIR / 'metareview_bench'):
+for p in (_HERE, _BENCH_DIR):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
 from build_rubric import build_rubric_with_texts  # noqa: E402
 from parse_review import load_review_items  # noqa: E402
 
-# Reuse the 4-way similarity prompt and LLM call machinery from
-# expert_annotation_similarity
-from prompts import (  # noqa: E402
+# Reuse the 4-way similarity prompt and LLM call machinery (vendored in judges/)
+from judges.similarity_prompts import (  # noqa: E402
     FOURWAY_SYSTEM_PROMPT,
     FOURWAY_USER_PROMPT_TEMPLATE,
     fourway_to_binary,
 )
-from llm_classifier import (  # noqa: E402
+from judges.similarity_llm import (  # noqa: E402
     _call_llm_with_reasoning,
     build_reasoning_kwargs,
     extract_4way_answer,
 )
-from model_config import get_max_output_tokens  # noqa: E402
+from judges.model_config import get_max_output_tokens  # noqa: E402
 
 try:
     from tqdm import tqdm
@@ -316,6 +313,61 @@ def main():
     if args.limit:
         paper_ids = paper_ids[:args.limit]
 
+    # Per-paper resume cache: saves each paper's scored result and reuses
+    # it on re-runs. Cache key is (rubric items × AI items) — if either
+    # changes, or any pair has a missing/errored parsed_binary, the cache
+    # is rejected and the paper is rescored.
+    reviewer_short = (args.model_name or 'byoj').split('/')[-1]
+    judge_short = args.similarity_model.split('/')[-1]
+    cache_root_name = f'reviewer_{reviewer_short}_similarity_{judge_short}_recall_cache'
+    if args.output:
+        cache_root = args.output.parent / cache_root_name
+    else:
+        cache_root = _BENCH_DIR / 'outputs' / 'eval' / cache_root_name
+
+    def _rubric_signature(items: List[Dict[str, Any]]) -> List[List[Any]]:
+        return [[it.get('reviewer_id'), it.get('item_number')] for it in items]
+
+    def _ai_signature(items: List[Dict[str, Any]]) -> List[Any]:
+        return [it.get('item_number') for it in items]
+
+    def _try_load_cached(pid: int, rubric_items: List[Dict[str, Any]],
+                        ai_items: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+        cache_file = cache_root / f'paper{pid}' / 'recall.json'
+        if not cache_file.exists():
+            return None
+        try:
+            cached = json.loads(cache_file.read_text(encoding='utf-8'))
+        except Exception:
+            return None
+        if cached.get('rubric_signature') != _rubric_signature(rubric_items):
+            return None
+        if cached.get('ai_signature') != _ai_signature(ai_items):
+            return None
+        expected = len(rubric_items) * len(ai_items)
+        pairs = cached.get('pair_details', [])
+        if len(pairs) != expected:
+            return None
+        if any(p.get('parsed_binary') is None for p in pairs):
+            return None
+        # Valid: strip cache-only keys before returning so the result is
+        # shaped exactly like compute_paper_recall's output.
+        result = {k: v for k, v in cached.items()
+                 if k not in ('rubric_signature', 'ai_signature')}
+        return result
+
+    def _save_cache(result: Dict[str, Any], pid: int,
+                   rubric_items: List[Dict[str, Any]],
+                   ai_items: List[Dict[str, Any]]) -> None:
+        cache_file = cache_root / f'paper{pid}' / 'recall.json'
+        cache_file.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            **result,
+            'rubric_signature': _rubric_signature(rubric_items),
+            'ai_signature': _ai_signature(ai_items),
+        }
+        cache_file.write_text(json.dumps(payload, indent=2, default=str))
+
     all_results: List[Dict[str, Any]] = []
     total_covered = 0
     total_rubric_items = 0
@@ -329,6 +381,17 @@ def main():
         ai_items = load_review_items(paper_dir, model_name=args.model_name)
         if not ai_items:
             print(f'  [{i+1}/{len(paper_ids)}] paper{pid}: no AI review items found, skipping')
+            continue
+
+        # Resume from cache if available
+        cached = _try_load_cached(pid, rubric_items, ai_items)
+        if cached is not None:
+            all_results.append(cached)
+            total_covered += cached['n_covered']
+            total_rubric_items += cached['n_rubric']
+            print(f'  [{i+1}/{len(paper_ids)}] paper{pid}: cached '
+                  f'recall={cached["recall"]:.2%} '
+                  f'({cached["n_covered"]}/{cached["n_rubric"]})')
             continue
 
         paper_content = paper_content_by_id.get(pid, '')
@@ -352,6 +415,7 @@ def main():
         all_results.append(result)
         total_covered += result['n_covered']
         total_rubric_items += result['n_rubric']
+        _save_cache(result, pid, rubric_items, ai_items)
 
         print(f' recall={result["recall"]:.2%} '
               f'({result["n_covered"]}/{result["n_rubric"]})')

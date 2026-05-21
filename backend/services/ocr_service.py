@@ -18,8 +18,20 @@ logger = logging.getLogger(__name__)
 
 
 class OCRService:
-    def __init__(self, api_key: str | None = None):
-        self.client = Mistral(api_key=api_key or settings.mistral_api_key)
+    def __init__(
+        self,
+        api_key: str | None = None,
+        base_url: str | None = None,
+        model: str | None = None,
+    ):
+        # Defaults route through the LiteLLM proxy (same credentials as the
+        # review agent). BYOK callers pass the submitter's own Mistral key,
+        # the public Mistral base URL, and the public OCR model.
+        self.client = Mistral(
+            api_key=api_key or settings.litellm_api_key,
+            server_url=base_url or settings.litellm_base_url,
+        )
+        self.model = model or settings.ocr_model
 
     @staticmethod
     def _encode_pdf(pdf_path: str | Path) -> str:
@@ -35,7 +47,7 @@ class OCRService:
         base64_pdf = self._encode_pdf(pdf_path)
 
         ocr_response = self.client.ocr.process(
-            model="mistral-ocr-latest",
+            model=self.model,
             document={
                 "type": "document_url",
                 "document_url": f"data:application/pdf;base64,{base64_pdf}",

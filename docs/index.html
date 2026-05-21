@@ -3,7 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CMU Paper Reviewer — Submit</title>
+  <title>CMU Paper Reviewer — AI Peer Review for Scientific Papers</title>
+  <meta name="description" content="Upload your scientific paper and get expert-level AI peer review on its most critical issues, grounded in the literature and your code. Built by the Prometheus team at CMU.">
+  <link rel="canonical" href="https://prometheus-eval.github.io/cmu-paper-reviewer/">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#c41230">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CMU Paper Reviewer">
+  <meta property="og:title" content="CMU Paper Reviewer — AI Peer Review for Scientific Papers">
+  <meta property="og:description" content="Upload your scientific paper and get expert-level AI peer review on its most critical issues, grounded in the literature and your code.">
+  <meta property="og:url" content="https://prometheus-eval.github.io/cmu-paper-reviewer/">
+  <meta property="og:image" content="https://prometheus-eval.github.io/cmu-paper-reviewer/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CMU Paper Reviewer — AI Peer Review for Scientific Papers">
+  <meta name="twitter:description" content="Upload your scientific paper and get expert-level AI peer review on its most critical issues, grounded in the literature and your code.">
+  <meta name="twitter:image" content="https://prometheus-eval.github.io/cmu-paper-reviewer/images/og-image.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,6 +40,7 @@
     <nav>
       <a href="index.html" class="active">Submit</a>
       <a href="review.html">View Review</a>
+      <a href="expert-annotation-study.html">Expert Annotation Study</a>
     </nav>
   </header>
 
@@ -81,6 +106,7 @@
           <p>Drag & drop a PDF here, or <strong>click to browse</strong></p>
           <input type="file" id="file-input" accept=".pdf">
         </div>
+        <div class="field-hint">Limits — manuscript & supplementary: up to 50 pages / 30&nbsp;MB each; code: up to 50&nbsp;MB (.zip).</div>
 
         <!-- Optional uploads -->
         <div class="optional-uploads">
@@ -201,9 +227,33 @@
       <img class="footer-logo" src="images/openhands-logo.png" alt="OpenHands">
     </div>
     <p>Built by <a href="https://github.com/prometheus-eval" class="footer-link">Prometheus team</a> at <a href="https://www.lti.cs.cmu.edu/" class="footer-link">Carnegie Mellon University</a> and backed by <a href="https://github.com/OpenHands/software-agent-sdk/" class="footer-link">software-agent-sdk</a> from <a href="https://openhands.dev/" class="footer-link">OpenHands</a></p>
+
+    <!-- Rotating affiliation logos (built from the list in js/affiliations.js) -->
+    <div class="affil-caption">In collaboration with researchers from</div>
+    <div class="affiliations">
+      <div class="affil-track" id="affil-track"></div>
+    </div>
+
+    <!-- Paper citation -->
+    <div class="cite-box">
+      <p class="cite-prompt">If you find our platform useful, please consider reading and citing <a href="https://arxiv.org/abs/2605.20668" class="footer-link" target="_blank" rel="noopener">our paper</a>.</p>
+      <div class="bibtex-wrap">
+        <button class="copy-bibtex" id="copy-bibtex-btn" type="button">Copy</button>
+        <pre><code id="bibtex-content">@misc{kim2026limitsopportunitiesaireviewers,
+      title={On the limits and opportunities of AI reviewers: Reviewing the reviews of Nature-family papers with 45 expert scientists},
+      author={Seungone Kim and Dongkeun Yoon and Kiril Gashteovski and Juyoung Suk and Jinheon Baek and Pranjal Aggarwal and Ian Wu and Viktor Zaverkin and Spase Petkoski and Daniel R. Schrider and Ilija Dukovski and Francesco Santini and Biljana Mitreska and Yong Jeong and Kyeongha Kwon and Young Min Sim and Dragana Manasova and Arthur Porto and Biljana Mojsoska and Makoto Takamoto and Marko Shuntov and Ruoqi Liu and Hyunjoo Jenny Lee and Niyazi Ulas Dinç and Yehhyun Jo and Sunkyu Han and Chungwoo Lee and Huishan Li and Esther H. R. Tsai and Ergun Simsek and Khushboo Shafi and Yeonseung Chung and Jihye Park and Aleksandar Shulevski and Henrik Christiansen and Yoosang Son and Elly Knight and Amanda Montoya and Jeongyoun Ahn and Christian Langkammer and Heera Moon and Changwon Yoon and Nikola Stikov and Mooseok Jang and Edward Choi and Junhan Kim and Yeon Sik Jung and Woo Youn Kim and Jae Kyoung Kim and Ishraq Md Anjum and Hyun Uk Kim and Drew Bridges and Carolin Lawrence and Xiang Yue and Alice Oh and Akari Asai and Sean Welleck and Graham Neubig},
+      year={2026},
+      eprint={2605.20668},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2605.20668},
+}</code></pre>
+      </div>
+    </div>
   </footer>
 
   <script src="js/config.js"></script>
   <script src="js/upload.js"></script>
+  <script src="js/affiliations.js"></script>
 </body>
 </html>

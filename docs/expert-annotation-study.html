@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expert Annotation Study — CMU Paper Reviewer</title>
+  <meta name="description" content="45 expert scientists evaluated AI-generated reviews of Nature-family papers, comparing AI reviewers with human reviewers on significance, correctness, and coverage.">
+  <link rel="canonical" href="https://prometheus-eval.github.io/cmu-paper-reviewer/expert-annotation-study.html">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta name="theme-color" content="#c41230">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CMU Paper Reviewer">
+  <meta property="og:title" content="Expert Annotation Study — CMU Paper Reviewer">
+  <meta property="og:description" content="45 expert scientists evaluated AI-generated reviews of Nature-family papers, comparing AI reviewers with human reviewers.">
+  <meta property="og:url" content="https://prometheus-eval.github.io/cmu-paper-reviewer/expert-annotation-study.html">
+  <meta property="og:image" content="https://prometheus-eval.github.io/cmu-paper-reviewer/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Expert Annotation Study — CMU Paper Reviewer">
+  <meta name="twitter:description" content="45 expert scientists evaluated AI-generated reviews of Nature-family papers, comparing AI reviewers with human reviewers.">
+  <meta name="twitter:image" content="https://prometheus-eval.github.io/cmu-paper-reviewer/images/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img class="header-logo" src="images/cmu-lti-logo.png" alt="CMU LTI">
+    <h1>CMU Paper Reviewer</h1>
+    <nav>
+      <a href="index.html">Submit</a>
+      <a href="review.html">View Review</a>
+      <a href="expert-annotation-study.html" class="active">Expert Annotation Study</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>Expert Annotation Study</h2>
+      <p>How 45 expert scientists evaluated AI-generated reviews of Nature-family papers.</p>
+    </div>
+
+    <div class="card">
+      <section class="study-section" style="border-top:none;margin-top:0;padding-top:0;">
+        <p>
+          In <a href="https://arxiv.org/abs/2605.20668" class="footer-link" target="_blank" rel="noopener">our study</a>,
+          45 expert scientists meta-reviewed AI-generated reviews of Nature-family papers, judging each review
+          item — from three frontier LLM agents and from the papers' official human reviewers — against the
+          official human reviews for significance, correctness, and evidence.
+        </p>
+
+        <figure class="paper-figure">
+          <div class="fig-label">Figure 1 · Motivation</div>
+          <img src="images/paper-fig1.png" alt="Figure 1: motivation for the expert annotation study">
+          <p class="fig-summary">
+            Earlier work judged AI reviews with shallow proxies — overall score correlation and accept/reject
+            agreement — which never reveal whether an AI's criticisms are actually useful or whether they overlap
+            with what humans flagged. We instead had expert scientists judge every individual review item.
+          </p>
+        </figure>
+
+        <figure class="paper-figure">
+          <div class="fig-label">Table 9 · Platform comparison</div>
+          <img src="images/paper-table9.png" alt="Table 9: comparison of AI reviewer platforms on PeerReview Bench">
+          <p class="fig-summary">
+            On PeerReview Bench (78 papers), CMU Paper Reviewer reaches higher precision than the other public
+            platforms — 95.5% vs 59.8% (Stanford Agentic Reviewer) and 57.6% (OpenAIReview) — while producing
+            fewer review items (4.7 vs 11.1 and 18.6). Allowed up to 15 items, its best configuration reaches the
+            highest F1 (58.6%).
+          </p>
+        </figure>
+
+        <figure class="paper-figure">
+          <div class="fig-label">Table 5 · Reviews vs. humans</div>
+          <img src="images/paper-table5.png" alt="Table 5: win-rate of AI reviews against human references">
+          <p class="fig-summary">
+            Judged on the full review, GPT-5.2 matches or exceeds the <em>top-rated</em> human reviewer on 48.6%
+            of papers, and the lowest-rated human on 73.4%. Claude Opus 4.5 (32.1%) and Gemini 3 Pro (30.3%) trail
+            against the top human.
+          </p>
+        </figure>
+
+        <figure class="paper-figure">
+          <div class="fig-label">Table 3 · Significance vs. correctness</div>
+          <table class="compare-table data-table">
+            <thead>
+              <tr>
+                <th>Reviewer</th>
+                <th>Correctness&nbsp;%</th>
+                <th>Significance&nbsp;(0–2)</th>
+                <th>Evidence&nbsp;%</th>
+                <th>Items</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Top-Rated Human</th><td>92.3</td><td>1.39</td><td>92.2</td><td>1,139</td></tr>
+              <tr><th scope="row">Lowest-Rated Human</th><td>79.1</td><td>1.30</td><td>89.7</td><td>833</td></tr>
+              <tr><th scope="row">GPT-5.2</th><td>86.2</td><td class="hi">1.61</td><td>97.1</td><td>442</td></tr>
+              <tr><th scope="row">Claude Opus 4.5</th><td>83.7</td><td class="hi">1.53</td><td>96.5</td><td>475</td></tr>
+              <tr><th scope="row">Gemini 3 Pro</th><td>81.9</td><td class="hi">1.56</td><td>89.5</td><td>460</td></tr>
+            </tbody>
+          </table>
+          <p class="fig-summary">
+            Per review item, AI reviewers raise <strong>more significant issues</strong> than even the top-rated
+            human (significance 1.5–1.6 vs 1.39, p&lt;.001) but are <strong>factually correct slightly less
+            often</strong> (82–86% vs 92%). Their evidence quality is on par with or above humans. Point estimates
+            shown; 95% CIs and effect sizes are in the paper.
+          </p>
+        </figure>
+
+        <figure class="paper-figure">
+          <div class="fig-label">Figure 4 · Reviewer overlap</div>
+          <img src="images/paper-fig4.png" alt="Figure 4: overlap between human and AI reviewers">
+          <p class="fig-summary">
+            AI reviewers overlap with one another far more than humans do. A panel of three AI reviewers covers
+            most of the human reviewers' targets, but only about half of their specific criticisms — broadening
+            coverage without fully reproducing human judgment.
+          </p>
+        </figure>
+
+        <p style="margin-top:1.5rem;">
+          Together: today's AI reviewers raise more issues and rival human reviewers on many papers, but their
+          lower correctness and field-context gaps mean they are best used to <strong>augment, not replace</strong>
+          expert review. Read the full study in
+          <a href="https://arxiv.org/abs/2605.20668" class="footer-link" target="_blank" rel="noopener">our paper</a>.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logos">
+      <img class="footer-logo" src="images/prometheus-eval.png" alt="Prometheus" style="height:64px;">
+      <img class="footer-logo" src="images/cmu-lti-logo.png" alt="CMU LTI">
+      <img class="footer-logo" src="images/openhands-logo.png" alt="OpenHands">
+    </div>
+    <p>Built by <a href="https://github.com/prometheus-eval" class="footer-link">Prometheus team</a> at <a href="https://www.lti.cs.cmu.edu/" class="footer-link">Carnegie Mellon University</a> and backed by <a href="https://github.com/OpenHands/software-agent-sdk/" class="footer-link">software-agent-sdk</a> from <a href="https://openhands.dev/" class="footer-link">OpenHands</a></p>
+  </footer>
+
+  <script src="js/config.js"></script>
+</body>
+</html>

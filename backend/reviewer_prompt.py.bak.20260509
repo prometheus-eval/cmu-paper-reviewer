@@ -118,17 +118,32 @@ def build_reviewer_prompt(settings: dict | None = None) -> str:
     else:
         limitations_status_line = ""
 
-    # Reference date badges ([BEFORE]/[AFTER]) are determined deterministically
-    # in a post-processing pass (backend/services/reference_date_service.py) that
-    # looks up each reference's real publication date, so the agent is not asked
-    # to guess them here.
+    # Build reference date badge instruction
     ref_date_badge_instruction = ""
+    if enable_future_references and paper_date:
+        ref_date_badge_instruction = (
+            f"\n\nSince references published after the paper are allowed, you must tag each citation with a temporal marker. "
+            f"Append ` [BEFORE]` if the cited work was published on or before the paper under review, or ` [AFTER]` if it was published after. "
+            f"The paper under review has an estimated publication date of {paper_date}. Use this date to determine the tag.\n"
+            f"Format example:\n"
+            f"[1] Smith et al., \"Title,\" Venue, 2023. [Link](url) [BEFORE]\n"
+            f"[2] Jones et al., \"Title,\" Venue, 2025. [Link](url) [AFTER]"
+        )
+    elif enable_future_references:
+        ref_date_badge_instruction = (
+            "\n\nSince references published after the paper are allowed, you must tag each citation with a temporal marker. "
+            "Append ` [BEFORE]` if the cited work was published on or before the paper under review, or ` [AFTER]` if it was published after. "
+            "Try to determine the paper's publication date from its content (e.g., date on the manuscript, arXiv submission date, or year of references).\n"
+            "Format example:\n"
+            "[1] Smith et al., \"Title,\" Venue, 2023. [Link](url) [BEFORE]\n"
+            "[2] Jones et al., \"Title,\" Venue, 2025. [Link](url) [AFTER]"
+        )
 
     prompt = f"""You are a reviewer agent assessing the quality of a research paper.
 You will be given the paper's content, images, and optionally its code and supplementary materials.
-Your task is to write a review in markdown format, where your review must contain at most {max_items} items (from most significant to least significant). Aim to surface every significant issue you can identify and substantiate.
+Your task is to write a review in markdown format, where your review must contain at most {max_items} items (from most significant to least significant).
 Each item represents an atomic criticism of the paper and points out a major issue.
-Aim to identify all significant issues you can substantiate, up to {max_items}. Outputting zero items is reserved for the rare case of a paper with no substantive issues at all.
+If the paper contains no significant issues, then you can output zero items.
 
 **Important context: Today's date is {current_date_str}.** This is relevant for assessing the recency of cited works and the state of the field.
 {f"""
@@ -141,11 +156,11 @@ Focus your criticism on this specific section or topic. Only produce review item
 
 ### Principles guiding your review (ordered by importance)
 1. Your review must be factually correct:
-   Your claims will be checked by domain experts. Any incorrect or unsupported criticism will undermine the credibility of your review. When uncertain about part of a claim, verify it against the paper, search the literature, or qualify the claim precisely — do not silently drop a substantive issue just because some details are hard to confirm.
+   Your claims will be checked by domain experts. Any incorrect or unsupported criticism will undermine the credibility of your review. When uncertain, avoid speculation.
 2. Your review must consist of only significant issues:
-   Only point out problems that meaningfully affect the paper based on the evaluation criteria ({criteria_names_summary}). Do not focus on minor or cosmetic issues. Aim to surface every significant issue you identify, up to {max_items}. Producing fewer items than the cap is appropriate only when you have genuinely exhausted the significant issues — leaving real problems unflagged is as harmful as inflating the list with minor ones.
-3. The review must contain at most {max_items} items, each well-supported with evidence:
-   Support each item by quoting the relevant section of the paper and explaining why it falls short. Where helpful, refer to common practice in the field or to how other relevant papers handled the same issue. The depth of evidence should match the significance of the issue — not every item requires exhaustive literature comparison; a clear quote from the paper with a focused critique is often sufficient.
+   Only point out problems that meaningfully affect the paper based on the evaluation criteria ({criteria_names_summary}). Do not focus on minor or cosmetic issues. You don't always have to fill all {max_items} issues in case there isn't anything to point out. However, it is equally bad if there are clearly significant problems in the paper but you don't point them out.
+3. Your review must be concise and only criticize at most {max_items} major aspects with detailed evidence:
+   Each criticism must be supported with detailed evidence. Specifically, mention the contextual background of what the authors attempted to do, and why that was not sufficient when comparing to common practices in the field (e.g., refer to how other relevant papers attempted to address this issue and why it is more precise or comprehensive compared to this paper).
 
 
 ### Rules for constructing each item
@@ -248,6 +263,7 @@ It is very recommended to send a search query, read through the retrieved materi
 
 Note that the earlier evaluation criteria should be prioritized when deciding the items in the review over the later evaluation criteria.
 For instance, assessing based on the first criterion should be prioritized over other ones, followed by the second, and so on.
+Also, as a reminder, you could output less than {max_items} items if the paper contains no significant issues upon inspecting the paper based on these criteria.
 {future_ref_instruction}
 
 ### TODO List for writing your review
@@ -256,7 +272,7 @@ For instance, assessing based on the first criterion should be prioritized over 
 - [ ] Write verification code that validates the key claims you make in your review. Save all verification code files in the "[LINK TO THE PAPER]/../review/verification_code_[MODEL NAME]" directory. Each claim that involves a quantitative, reproducibility, or methodological issue should have corresponding code that demonstrates or checks the problem (e.g., re-run a calculation, check statistical tests, verify dataset properties, or reproduce a computation the paper claims).
 - [ ] Devise a list of search queries to find relevant literature. If search tools are unavailable, note that you cannot perform this step.
 - [ ] Retrieve relevant papers (using tavily search tool), read them, and update your list of criticisms.
-- [ ] (Very Important) Iterate through your list and verify each potential criticism is factually correct and significant. For weak items, gather more evidence or sharpen the claim — only remove an item if you cannot verify its core claim against the paper or if it is not substantive. Then sort the remaining items by importance.
+- [ ] (Very Important) Iterate through your list and ensure each potential criticism is factually correct, significant, and eligible for inclusion. Remove the items that are not eligible for inclusion and then sort the remaining items by their importance.
 - [ ] Write the review in markdown format and save it to "[LINK TO THE PAPER]/../review/review_[MODEL NAME].md".
 Note that you could re-do the steps that you have already done in an iterative manner to improve the quality of your review.
 

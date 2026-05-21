@@ -4,6 +4,7 @@ import json
 import shutil
 import zipfile
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, Request, UploadFile
 from sqlalchemy import func, select
@@ -16,6 +17,54 @@ from backend.schemas import ProgressEvent, ProgressResponse, StatusResponse, Sub
 from backend.services.storage_service import code_dir, find_trajectory_events, supplementary_dir, upload_path
 
 router = APIRouter(prefix="/api", tags=["submissions"])
+
+_MB = 1024 * 1024
+
+
+def _pdf_page_count(upload: UploadFile) -> int:
+    """Count pages of an uploaded PDF, leaving the stream rewound for saving."""
+    from pypdf import PdfReader
+
+    upload.file.seek(0)
+    try:
+        return len(PdfReader(upload.file).pages)
+    except Exception:
+        raise HTTPException(
+            status_code=400,
+            detail="Could not read the PDF — please ensure it is a valid, non-encrypted PDF.",
+        )
+    finally:
+        upload.file.seek(0)
+
+
+def _validate_zip_archive(upload: UploadFile) -> None:
+    """Guard a code .zip against oversized contents and zip-slip before saving."""
+    upload.file.seek(0)
+    try:
+        with zipfile.ZipFile(upload.file) as zf:
+            infos = zf.infolist()
+            if len(infos) > settings.max_code_files:
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Code archive has too many files (limit {settings.max_code_files}).",
+                )
+            total = 0
+            for info in infos:
+                if Path(info.filename).is_absolute() or ".." in Path(info.filename).parts:
+                    raise HTTPException(
+                        status_code=400, detail="Code archive contains unsafe file paths."
+                    )
+                total += info.file_size
+                if total > settings.max_code_uncompressed_mb * _MB:
+                    raise HTTPException(
+                        status_code=400,
+                        detail=f"Code archive exceeds the {settings.max_code_uncompressed_mb} MB "
+                               f"uncompressed size limit.",
+                    )
+    except zipfile.BadZipFile:
+        raise HTTPException(status_code=400, detail="Invalid or corrupted zip file.")
+    finally:
+        upload.file.seek(0)
 
 
 @router.post("/submit", response_model=SubmitResponse)
@@ -57,6 +106,19 @@ async def submit_paper(
     if not file.filename or not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are accepted.")
 
+    if file.size and file.size > settings.max_pdf_mb * _MB:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Manuscript PDF exceeds the {settings.max_pdf_mb} MB size limit.",
+        )
+    manuscript_pages = _pdf_page_count(file)
+    if manuscript_pages > settings.max_manuscript_pages:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Manuscript has {manuscript_pages} pages, exceeding the "
+                   f"{settings.max_manuscript_pages}-page limit.",
+        )
+
     # Validate mode
     if mode not in ("queue", "byok"):
         raise HTTPException(status_code=400, detail="Invalid mode. Must be 'queue' or 'byok'.")
@@ -80,12 +142,30 @@ async def submit_paper(
     if code_file is not None and code_file.filename and code_file.size and code_file.size > 0:
         if not code_file.filename.lower().endswith(".zip"):
             raise HTTPException(status_code=400, detail="Code must be a .zip file.")
+        if code_file.size > settings.max_code_zip_mb * _MB:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Code archive exceeds the {settings.max_code_zip_mb} MB size limit.",
+            )
+        _validate_zip_archive(code_file)
         has_code = True
 
     has_supplementary = False
     if supplementary_file is not None and supplementary_file.filename and supplementary_file.size and supplementary_file.size > 0:
         if not supplementary_file.filename.lower().endswith(".pdf"):
             raise HTTPException(status_code=400, detail="Supplementary materials must be a PDF file.")
+        if supplementary_file.size > settings.max_pdf_mb * _MB:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Supplementary PDF exceeds the {settings.max_pdf_mb} MB size limit.",
+            )
+        supp_pages = _pdf_page_count(supplementary_file)
+        if supp_pages > settings.max_supplementary_pages:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Supplementary PDF has {supp_pages} pages, exceeding the "
+                       f"{settings.max_supplementary_pages}-page limit.",
+            )
         has_supplementary = True
 
     key = generate_key()

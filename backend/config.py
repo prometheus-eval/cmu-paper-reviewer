@@ -2,15 +2,24 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    # Mistral OCR
+    # Deprecated: server-funded OCR now routes through the LiteLLM proxy.
+    # Kept so existing .env files with MISTRAL_API_KEY still validate.
     mistral_api_key: str = ""
 
     # Tavily
     tavily_api_key: str = ""
 
-    # LiteLLM — used for the review agent (routes to Claude via proxy)
+    # LiteLLM — used for the review agent and the server-funded OCR (routes
+    # through the proxy)
     litellm_api_key: str = ""
     litellm_base_url: str = "https://cmu.litellm.ai"
+
+    # OCR
+    # Server-funded (queue mode): routes through the LiteLLM proxy above.
+    ocr_model: str = "azure_ai/mistral-document-ai-2512"
+    # BYOK mode: submitter's own Mistral key against the public Mistral API.
+    mistral_base_url: str = "https://api.mistral.ai"
+    byok_ocr_model: str = "mistral-ocr-latest"
 
     # Admin
     admin_api_key: str = ""
@@ -42,6 +51,14 @@ class Settings(BaseSettings):
 
     # Rate limiting
     max_submissions_per_ip_per_day: int = 3
+
+    # Submission size limits
+    max_manuscript_pages: int = 50          # main PDF page cap
+    max_supplementary_pages: int = 50        # supplementary PDF page cap
+    max_pdf_mb: int = 30                     # per-PDF upload size cap
+    max_code_zip_mb: int = 50                # code .zip upload size cap
+    max_code_uncompressed_mb: int = 500      # anti-zip-bomb: total uncompressed
+    max_code_files: int = 10000              # anti-zip-bomb: entry count
 
     # Worker
     worker_poll_interval: int = 10

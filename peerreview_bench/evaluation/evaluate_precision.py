@@ -34,14 +34,18 @@ os.environ.setdefault('HF_HUB_ETAG_TIMEOUT', '120')
 
 _HERE = Path(__file__).resolve().parent
 _BENCH_DIR = _HERE.parent
-_EA_META_DIR = _BENCH_DIR / 'metareview_bench' / 'expert_annotation_meta_review'
 
-for p in (_HERE, _BENCH_DIR, _EA_META_DIR, _BENCH_DIR / 'metareview_bench'):
+for p in (_HERE, _BENCH_DIR):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
 from parse_review import load_review_items  # noqa: E402
-from prompts import _DIMENSION_DEFINITIONS  # noqa: E402
+from judges.precision_prompts import _DIMENSION_DEFINITIONS  # noqa: E402
+from judges.model_config import get_max_output_tokens  # noqa: E402
+
+# Anthropic requires `thinking.budget_tokens < max_tokens`. Mirror the headroom
+# used by `similarity_check/.../llm_classifier.build_reasoning_kwargs`.
+_ANTHROPIC_RESPONSE_HEADROOM = 4096
 
 
 def _is_fully_good(pred: Dict[str, Any]) -> bool:
@@ -195,15 +199,18 @@ def run_precision_agent_on_paper(
         n_items=len(ai_items),
     )
 
+    thinking_budget = max(1024, get_max_output_tokens(model_name) - _ANTHROPIC_RESPONSE_HEADROOM)
     llm = LLM(
         model=model_name,
         base_url=base_url,
         api_key=api_key,
         reasoning_effort='high',
-        extended_thinking_budget=200000,
+        extended_thinking_budget=thinking_budget,
         temperature=1.0,
+        top_p=None,  # Anthropic forbids temperature+top_p together w/ thinking
         drop_params=True,
         timeout=600,
+        prompt_cache_retention='1h',  # Anthropic only accepts '5m' or '1h'
     )
     condenser = LLMSummarizingCondenser(
         llm=llm.model_copy(update={'usage_id': 'condenser'}),
@@ -329,22 +336,19 @@ def main():
         else:
             args.judge_model = 'openai/gpt-5.4'
 
-    # Find papers with AI reviews, excluding empty-rubric papers
+    # Iterate over the HF rubric paper set (post-drop: excludes the 3
+    # Nature-licensed papers AND empty-rubric papers, leaving 78). This
+    # mirrors evaluate_recall.py so precision and recall score the same set.
     paper_root = args.paper_root.resolve()
 
     from build_rubric import build_rubric  # noqa: E402
-    _rubric, dropped = build_rubric()
-    dropped_set = set(dropped)
+    rubric, _dropped = build_rubric()
 
     paper_ids = []
-    for pd in sorted(paper_root.glob('paper*'), key=lambda p: int(p.name.replace('paper', '')) if p.name.replace('paper', '').isdigit() else 0):
-        try:
-            pid = int(pd.name.replace('paper', ''))
-        except ValueError:
+    for pid in sorted(rubric.keys()):
+        pd = paper_root / f'paper{pid}'
+        if not pd.is_dir():
             continue
-        if pid in dropped_set:
-            continue
-        # Check if review items exist
         ai_items = load_review_items(pd, model_name=args.model_name if not args.byoj else None)
         if ai_items:
             paper_ids.append(pid)
@@ -352,7 +356,8 @@ def main():
     if args.limit:
         paper_ids = paper_ids[:args.limit]
 
-    print(f'Found {len(paper_ids)} papers with AI review items')
+    print(f'Found {len(paper_ids)} papers with AI review items '
+          f'(of {len(rubric)} in rubric)')
     print(f'  Judge model: {args.judge_model}')
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -450,6 +455,7 @@ def main():
     print(f'Total AI items: {n_total}')
     print(f'Fully good: {n_good}')
     print(f'Precision: {precision:.2%}')
+
     print(f'Elapsed: {time.time() - t0:.0f}s')
 
     if all_per_item:

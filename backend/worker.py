@@ -147,7 +147,16 @@ def process_submission(submission: Submission):
         # Step 1: OCR
         logger.info("[%s] Starting OCR... (mode=%s)", key, submission.mode.value)
         update_status(key, SubmissionStatus.ocr)
-        ocr = OCRService(api_key=submission.user_mistral_api_key if is_byok else None)
+        if is_byok:
+            # BYOK: submitter's own Mistral key against the public Mistral API.
+            ocr = OCRService(
+                api_key=submission.user_mistral_api_key,
+                base_url=settings.mistral_base_url,
+                model=settings.byok_ocr_model,
+            )
+        else:
+            # Queue mode: route through the LiteLLM proxy (server-funded).
+            ocr = OCRService()
         ocr.process_pdf(str(pdf_file), key)
         logger.info("[%s] OCR complete.", key)
 
@@ -206,6 +215,19 @@ def process_submission(submission: Submission):
                     logger.info("[%s] Retrying with a different model...", key)
                 else:
                     logger.error("[%s] All %d review attempts produced invalid output.", key, max_attempts)
+
+        # Step 2.9: Ground reference dates and tag citations [BEFORE]/[AFTER].
+        # Only relevant when future references are allowed (otherwise they are
+        # filtered out during review and no badges are shown).
+        if review_settings.get("enable_future_references", True):
+            try:
+                from backend.services.reference_date_service import tag_review_dates
+                eff_tavily = (
+                    submission.user_tavily_api_key if is_byok else settings.tavily_api_key
+                )
+                tag_review_dates(key, eff_tavily, filename=submission.filename)
+            except Exception:
+                logger.exception("[%s] Reference date tagging failed (non-critical).", key)
 
         # Step 3: Generate PDF
         logger.info("[%s] Generating PDF...", key)

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prometheus-eval.github.io/cmu-paper-reviewer/sitemap.xml

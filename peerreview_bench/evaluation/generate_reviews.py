@@ -76,6 +76,11 @@ _patch_tavily_exclude_domains()
 # Reuse the backend's reviewer prompt builder
 from reviewer_prompt import build_reviewer_prompt, get_default_settings  # noqa: E402
 from parse_review import parse_review_file  # noqa: E402
+from judges.model_config import get_max_output_tokens  # noqa: E402
+
+# Anthropic requires `thinking.budget_tokens < max_tokens`. Mirror the headroom
+# used by `similarity_check/.../llm_classifier.build_reasoning_kwargs`.
+_ANTHROPIC_RESPONSE_HEADROOM = 4096
 
 
 def _extract_paper_id(paper_dir: Path) -> int:
@@ -102,6 +107,7 @@ def generate_review_for_paper(
     api_key: str,
     base_url: str,
     max_iterations: int = 5000,
+    review_tag: Optional[str] = None,
 ) -> Optional[Path]:
     """Run the OpenHands agent reviewer on one paper.
 
@@ -119,7 +125,7 @@ def generate_review_for_paper(
     reviews_dir = paper_dir / 'reviews'
     reviews_dir.mkdir(parents=True, exist_ok=True)
 
-    model_short = model_name.split('/')[-1]
+    model_short = review_tag or model_name.split('/')[-1]
     review_path = reviews_dir / f'review_{model_short}.md'
 
     link_to_paper = str(preprint_dir)
@@ -204,15 +210,18 @@ def generate_review_for_paper(
         hidden_files.append((hidden, item))
 
     # OpenHands setup (matching backend/review_service.py)
+    thinking_budget = max(1024, get_max_output_tokens(model_name) - _ANTHROPIC_RESPONSE_HEADROOM)
     llm = LLM(
         model=model_name,
         base_url=base_url,
         api_key=api_key,
         timeout=600,  # 10 min (default 300s times out on large papers)
         reasoning_effort='high',
-        extended_thinking_budget=200000,
+        extended_thinking_budget=thinking_budget,
         temperature=1.0,  # required by Anthropic extended thinking
+        top_p=None,  # Anthropic forbids temperature+top_p together w/ thinking
         drop_params=True,  # silently drop unsupported params per provider
+        prompt_cache_retention='1h',  # Anthropic only accepts '5m' or '1h'
     )
     condenser = LLMSummarizingCondenser(
         llm=llm.model_copy(update={'usage_id': 'condenser'}),
@@ -229,7 +238,8 @@ def generate_review_for_paper(
         condenser=condenser,
     )
 
-    readable_id = f'{model_name.replace("/", "_")}_{paper_dir.name}'.replace('.', '_').replace('-', '_')
+    tag_part = f'_{review_tag}' if review_tag else ''
+    readable_id = f'{model_name.replace("/", "_")}{tag_part}_{paper_dir.name}'.replace('.', '_').replace('-', '_')
     conv_uuid = uuid.uuid5(uuid.NAMESPACE_DNS, readable_id)
 
     conversation = Conversation(
@@ -276,6 +286,7 @@ def generate_reviews(
     api_key: Optional[str] = None,
     base_url: Optional[str] = None,
     max_iterations: int = 5000,
+    review_tag: Optional[str] = None,
 ):
     """Generate reviews for all papers in paper_root."""
     import time
@@ -326,11 +337,13 @@ def generate_reviews(
     if limit:
         paper_dirs = paper_dirs[:limit]
 
-    model_short = model_name.split('/')[-1]
+    model_short = review_tag or model_name.split('/')[-1]
 
     print(f'Generating reviews for {len(paper_dirs)} papers')
     print(f'  (skipped {len(dropped_set)} papers with empty rubric: {sorted(dropped_set)})')
     print(f'  model: {model_name}')
+    if review_tag:
+        print(f'  review_tag: {review_tag} (output files use this slug)')
     print(f'  max_items: {max_items}')
     print(f'  criteria: {criteria_preset}')
 
@@ -399,6 +412,7 @@ def generate_reviews(
                     api_key=api_key,
                     base_url=base_url,
                     max_iterations=max_iterations,
+                    review_tag=review_tag,
                 )
                 elapsed = time.time() - t0
 
@@ -427,6 +441,12 @@ def main():
                         help='Root dir with paper{N}/ subdirectories')
     parser.add_argument('--max-items', type=int, default=5,
                         help='Max review items per paper (default 5)')
+    parser.add_argument('--review-tag', type=str, default=None,
+                        help='Override the slug used in output filenames '
+                             '(review_<tag>.md, <tag>_trajectory/, '
+                             'verification_code_<tag>/). Lets multiple runs '
+                             'with the same model coexist (e.g. different '
+                             '--max-items). Defaults to model basename.')
     parser.add_argument('--criteria-preset', type=str, default='nature',
                         choices=('nature', 'neurips'),
                         help='Evaluation criteria preset')
@@ -448,6 +468,7 @@ def main():
         skip_existing=args.skip_existing,
         max_iterations=args.max_iterations,
         base_url=args.base_url,
+        review_tag=args.review_tag,
     )
 
 
