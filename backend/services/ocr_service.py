@@ -1,11 +1,20 @@
-"""OCR service refactored from ocr.py — uses Mistral OCR to extract text from PDFs."""
+"""OCR service refactored from ocr.py — uses Mistral OCR to extract text from PDFs.
+
+Large PDFs are split into page-chunks before OCR: the Azure mistral-document-ai
+deployment on the LiteLLM proxy rejects documents over 30 pages, so a 93-page
+manuscript is processed as 30 + 30 + 30 + 3 and the per-chunk markdown/images
+are stitched back together. Image IDs (``img-0``, ``img-1`` …) restart in every
+chunk, so chunked output namespaces them (``c1-img-0`` …) to avoid collisions.
+"""
 
 import base64
+import io
 import json
 import logging
 from pathlib import Path
 
 from mistralai import Mistral
+from pypdf import PdfReader, PdfWriter
 
 from backend.config import settings
 from backend.services.storage_service import (
@@ -38,37 +47,53 @@ class OCRService:
         with open(pdf_path, "rb") as f:
             return base64.b64encode(f.read()).decode("utf-8")
 
-    def process_pdf(self, pdf_path: str | Path, key: str) -> str:
-        """Run Mistral OCR on a PDF and save the results.
+    @staticmethod
+    def _split_pdf(pdf_path: str | Path, pages_per_chunk: int) -> list[bytes]:
+        """Split a PDF into chunks of at most ``pages_per_chunk`` pages.
 
-        Returns the extracted markdown text.
+        Returns a list of PDF byte blobs. A PDF that already fits in one chunk
+        is returned as a single blob (its original bytes, re-serialized).
         """
-        logger.info("Starting OCR for key=%s, file=%s", key, pdf_path)
-        base64_pdf = self._encode_pdf(pdf_path)
+        reader = PdfReader(str(pdf_path))
+        n = len(reader.pages)
+        chunks: list[bytes] = []
+        for start in range(0, n, pages_per_chunk):
+            writer = PdfWriter()
+            for i in range(start, min(start + pages_per_chunk, n)):
+                writer.add_page(reader.pages[i])
+            buf = io.BytesIO()
+            writer.write(buf)
+            chunks.append(buf.getvalue())
+        return chunks
 
-        ocr_response = self.client.ocr.process(
+    def _ocr_chunk(self, pdf_b64: str):
+        return self.client.ocr.process(
             model=self.model,
             document={
                 "type": "document_url",
-                "document_url": f"data:application/pdf;base64,{base64_pdf}",
+                "document_url": f"data:application/pdf;base64,{pdf_b64}",
             },
             table_format="html",
             include_image_base64=True,
         )
 
-        # Combine all page texts
-        full_text_parts: list[str] = []
-        all_images: list[dict] = []
+    def _collect(self, ocr_response, key: str, id_prefix: str = "") -> tuple[list[str], list[dict]]:
+        """Pull markdown + images out of one OCR response.
+
+        ``id_prefix`` namespaces image IDs for multi-chunk runs; it is "" for
+        single-chunk runs, preserving the original (unprefixed) behavior.
+        """
+        text_parts: list[str] = []
+        images: list[dict] = []
 
         for page in ocr_response.pages:
-            full_text_parts.append(page.markdown)
+            page_md = page.markdown
 
-            # Save embedded images
             if page.images:
                 for img in page.images:
-                    img_stem = Path(img.id).stem
-
-                    # Decode and save image if base64 present
+                    # Namespace per chunk (c0-, c1-, …) so IDs from different
+                    # chunks (Mistral restarts img-0 each response) don't collide.
+                    img_stem = Path(f"{id_prefix}{img.id}").stem
                     img_filename = f"{img_stem}.png"  # default
                     if img.image_base64:
                         img_b64 = img.image_base64
@@ -82,14 +107,61 @@ class OCRService:
                         img_path = images_dir(key) / img_filename
                         img_path.write_bytes(img_bytes)
 
-                    img_data = {
+                    # Point the markdown reference at the actual saved filename
+                    # (correct extension + per-chunk namespace), so refs resolve.
+                    page_md = page_md.replace(img.id, img_filename)
+
+                    images.append({
                         "id": img_filename,
                         "top_left_x": img.top_left_x,
                         "top_left_y": img.top_left_y,
                         "bottom_right_x": img.bottom_right_x,
                         "bottom_right_y": img.bottom_right_y,
-                    }
-                    all_images.append(img_data)
+                    })
+
+            text_parts.append(page_md)
+
+        return text_parts, images
+
+    def process_pdf(self, pdf_path: str | Path, key: str) -> str:
+        """Run Mistral OCR on a PDF and save the results.
+
+        Returns the extracted markdown text. PDFs longer than
+        ``settings.ocr_max_pages_per_request`` are split into chunks and
+        processed sequentially.
+        """
+        logger.info("Starting OCR for key=%s, file=%s", key, pdf_path)
+
+        chunk_size = settings.ocr_max_pages_per_request
+        chunks = self._split_pdf(pdf_path, chunk_size)
+
+        full_text_parts: list[str] = []
+        all_images: list[dict] = []
+        total_pages = 0
+
+        if len(chunks) == 1:
+            # Single chunk: OCR the original file bytes directly (unchanged path).
+            ocr_response = self._ocr_chunk(self._encode_pdf(pdf_path))
+            parts, images = self._collect(ocr_response, key, id_prefix="")
+            full_text_parts.extend(parts)
+            all_images.extend(images)
+            total_pages = len(ocr_response.pages)
+        else:
+            logger.info(
+                "Key=%s: PDF split into %d chunks of up to %d pages",
+                key, len(chunks), chunk_size,
+            )
+            for idx, chunk_bytes in enumerate(chunks):
+                chunk_b64 = base64.b64encode(chunk_bytes).decode("utf-8")
+                ocr_response = self._ocr_chunk(chunk_b64)
+                parts, images = self._collect(ocr_response, key, id_prefix=f"c{idx}-")
+                full_text_parts.extend(parts)
+                all_images.extend(images)
+                total_pages += len(ocr_response.pages)
+                logger.info(
+                    "Key=%s: OCR'd chunk %d/%d (%d pages)",
+                    key, idx + 1, len(chunks), len(ocr_response.pages),
+                )
 
         full_text = "\n\n".join(full_text_parts)
 
@@ -102,5 +174,5 @@ class OCRService:
                 json.dumps(all_images, indent=2), encoding="utf-8"
             )
 
-        logger.info("OCR complete for key=%s, pages=%d", key, len(ocr_response.pages))
+        logger.info("OCR complete for key=%s, pages=%d", key, total_pages)
         return full_text

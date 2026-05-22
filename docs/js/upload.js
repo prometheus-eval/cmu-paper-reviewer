@@ -505,7 +505,7 @@ function showRateLimitPopup(message) {
 
 // --- Upload size limits (mirror backend config) ---
 const MB = 1024 * 1024;
-const MAX_PDF_MB = 30;
+const MAX_PDF_MB = 50;
 const MAX_CODE_ZIP_MB = 50;
 
 function checkUploadSizes() {

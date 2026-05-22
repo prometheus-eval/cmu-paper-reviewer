@@ -53,12 +53,17 @@ class Settings(BaseSettings):
     max_submissions_per_ip_per_day: int = 3
 
     # Submission size limits
-    max_manuscript_pages: int = 50          # main PDF page cap
+    max_manuscript_pages: int = 100         # main PDF page cap
     max_supplementary_pages: int = 50        # supplementary PDF page cap
-    max_pdf_mb: int = 30                     # per-PDF upload size cap
+    max_pdf_mb: int = 50                     # per-PDF upload size cap
     max_code_zip_mb: int = 50                # code .zip upload size cap
     max_code_uncompressed_mb: int = 500      # anti-zip-bomb: total uncompressed
     max_code_files: int = 10000              # anti-zip-bomb: entry count
+
+    # OCR: the Azure mistral-document-ai deployment on the LiteLLM proxy
+    # rejects documents over 30 pages, so larger PDFs are split into chunks
+    # of this many pages and OCR'd sequentially, then stitched back together.
+    ocr_max_pages_per_request: int = 30
 
     # Worker
     worker_poll_interval: int = 10
