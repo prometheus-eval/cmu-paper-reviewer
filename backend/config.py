@@ -63,7 +63,7 @@ class Settings(BaseSettings):
     # Worker
     worker_poll_interval: int = 10
     review_models: list[str] = [
-        "litellm_proxy/azure_ai/gpt-5.4",
+        "litellm_proxy/azure_ai/gpt-5.5",
     ]
 
     model_config = {"env_file": ".env", "env_file_encoding": "utf-8"}

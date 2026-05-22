@@ -36,7 +36,7 @@ class ReviewService:
 
     def _build_llm(self) -> LLM:
         # Disable Claude/Anthropic-specific params that non-Claude models
-        # (e.g. Azure AI GPT-5.4, Gemini) don't support.
+        # (e.g. Azure AI GPT-5.5, Gemini) don't support.
         is_claude = "claude" in self.model_name.lower()
 
         return LLM(
