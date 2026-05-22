@@ -48,7 +48,13 @@ class ReviewService:
             caching_prompt=is_claude,
             reasoning_effort="high" if is_claude else None,
             extended_thinking_budget=200000 if is_claude else None,
-            enable_encrypted_reasoning=is_claude,
+            # Pass reasoning back as encrypted content rather than by ID. The
+            # GPT-5 family on the Azure Responses API is stateless (store=false),
+            # so a follow-up turn that references a prior reasoning item by ID
+            # fails with `invalid_request_error / param: input` ("Item rs_... not
+            # found"). Sending the encrypted reasoning item inline avoids that.
+            # Safe for Claude too (validated for gpt-5.4 and gpt-5.5).
+            enable_encrypted_reasoning=True,
         )
 
     def _build_mcp_config(self) -> dict:
