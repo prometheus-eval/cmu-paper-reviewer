@@ -64,6 +64,10 @@ class Settings(BaseSettings):
     # rejects documents over 30 pages, so larger PDFs are split into chunks
     # of this many pages and OCR'd sequentially, then stitched back together.
     ocr_max_pages_per_request: int = 30
+    # Chunks are OCR'd concurrently (each call is network-bound). Capped to
+    # bound peak memory, since each in-flight chunk holds its page images'
+    # base64 in memory.
+    ocr_max_concurrent_chunks: int = 3
 
     # Worker
     worker_poll_interval: int = 10

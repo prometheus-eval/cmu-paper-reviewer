@@ -11,6 +11,7 @@ import base64
 import io
 import json
 import logging
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from mistralai import Mistral
@@ -128,7 +129,8 @@ class OCRService:
 
         Returns the extracted markdown text. PDFs longer than
         ``settings.ocr_max_pages_per_request`` are split into chunks and
-        processed sequentially.
+        OCR'd concurrently (up to ``settings.ocr_max_concurrent_chunks`` at
+        once), then stitched back together in page order.
         """
         logger.info("Starting OCR for key=%s, file=%s", key, pdf_path)
 
@@ -147,21 +149,34 @@ class OCRService:
             all_images.extend(images)
             total_pages = len(ocr_response.pages)
         else:
+            cap = min(settings.ocr_max_concurrent_chunks, len(chunks))
             logger.info(
-                "Key=%s: PDF split into %d chunks of up to %d pages",
-                key, len(chunks), chunk_size,
+                "Key=%s: PDF split into %d chunks of up to %d pages "
+                "(OCR'ing up to %d concurrently)",
+                key, len(chunks), chunk_size, cap,
             )
-            for idx, chunk_bytes in enumerate(chunks):
+
+            def _ocr_one(item: tuple[int, bytes]):
+                idx, chunk_bytes = item
                 chunk_b64 = base64.b64encode(chunk_bytes).decode("utf-8")
                 ocr_response = self._ocr_chunk(chunk_b64)
+                # _collect writes images under per-chunk-namespaced filenames
+                # (c{idx}-…), so concurrent chunks never write the same file.
                 parts, images = self._collect(ocr_response, key, id_prefix=f"c{idx}-")
-                full_text_parts.extend(parts)
-                all_images.extend(images)
-                total_pages += len(ocr_response.pages)
                 logger.info(
                     "Key=%s: OCR'd chunk %d/%d (%d pages)",
                     key, idx + 1, len(chunks), len(ocr_response.pages),
                 )
+                return parts, images, len(ocr_response.pages)
+
+            # ThreadPoolExecutor.map yields results in input (page) order even
+            # though the OCR calls run concurrently, so the merged markdown stays
+            # ordered. An exception in any chunk propagates out and fails OCR.
+            with ThreadPoolExecutor(max_workers=cap) as ex:
+                for parts, images, n_pages in ex.map(_ocr_one, list(enumerate(chunks))):
+                    full_text_parts.extend(parts)
+                    all_images.extend(images)
+                    total_pages += n_pages
 
         full_text = "\n\n".join(full_text_parts)
 
