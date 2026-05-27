@@ -1,3 +1,6 @@
+import json
+
+from pydantic import Field
 from pydantic_settings import BaseSettings
 
 
@@ -37,17 +40,33 @@ class Settings(BaseSettings):
     # Data directory
     data_dir: str = "./data"
 
-    # CORS
-    cors_origins: list[str] = [
-        "http://localhost:5500",
-        "http://localhost:8000",
-        "http://localhost:3000",
-        "http://127.0.0.1:5500",
-        "http://127.0.0.1:8000",
-        "https://prometheus-eval.github.io",
-        "http://35.231.39.20",
-        "https://cmu-paper-reviewer.duckdns.org",
-    ]
+    # CORS. Localhost dev origins are always allowed. Production origins (the
+    # deployed frontend, backend host, custom domains) are supplied per-
+    # deployment via the CORS_ORIGINS env var as a comma-separated list, e.g.
+    #   CORS_ORIGINS=https://prometheus-eval.github.io,https://your-domain.org
+    # so deployment-specific hosts stay out of the source tree.
+    cors_origins_extra: str = Field("", alias="CORS_ORIGINS")
+
+    @property
+    def cors_origins(self) -> list[str]:
+        defaults = [
+            "http://localhost:5500",
+            "http://localhost:8000",
+            "http://localhost:3000",
+            "http://127.0.0.1:5500",
+            "http://127.0.0.1:8000",
+        ]
+        raw = self.cors_origins_extra.strip()
+        if not raw:
+            extra = []
+        elif raw.startswith("["):
+            # Backwards-compatible: older .env files store a JSON array.
+            extra = [str(o).strip() for o in json.loads(raw)]
+        else:
+            extra = [o.strip() for o in raw.split(",") if o.strip()]
+        # De-duplicate while preserving order (env may repeat a localhost default).
+        seen = set()
+        return [o for o in defaults + extra if o and not (o in seen or seen.add(o))]
 
     # Rate limiting
     max_submissions_per_ip_per_day: int = 3

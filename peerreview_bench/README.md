@@ -62,13 +62,10 @@ the BYOJ JSON format, configurable parameters, and cost estimates.
 ## Citation
 
 ```bibtex
-@misc{kim2026limitsopportunitiesaireviewers,
-  title  = {On the limits and opportunities of AI reviewers: Reviewing the reviews of Nature-family papers with 45 expert scientists},
-  author = {Seungone Kim and others},
-  year   = {2026},
-  eprint = {2605.20668},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CL},
-  url    = {https://arxiv.org/abs/2605.20668}
+@article{kim2026limits,
+  title={On the limits and opportunities of AI reviewers: Reviewing the reviews of Nature-family papers with 45 expert scientists},
+  author={Kim, Seungone and Yoon, Dongkeun and Gashteovski, Kiril and Suk, Juyoung and Baek, Jinheon and Aggarwal, Pranjal and Wu, Ian and Zaverkin, Viktor and Petkoski, Spase and Schrider, Daniel R and others},
+  journal={arXiv preprint arXiv:2605.20668},
+  year={2026}
 }
 ```

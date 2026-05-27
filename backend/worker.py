@@ -260,34 +260,19 @@ CLEANUP_MAX_AGE = timedelta(hours=24)
 
 
 def _cleanup_annotated(sub):
-    """For annotated submissions, delete uploaded PDF and non-essential files.
+    """For annotated submissions, delete only the redundant uploaded PDF.
 
-    Keeps: OCR'd markdown, images, images_list.json, review markdown/PDF,
-           annotations JSON.
-    Deletes: uploaded PDF, code, supplementary, verification code, trajectory.
+    The uploaded PDF is dropped because the OCR'd markdown already captures
+    its content. Everything else is retained for research use: OCR markdown,
+    images, images_list.json, review markdown/PDF, annotations JSON, the
+    uploaded code and supplementary materials, and the agent's verification
+    code and trajectory.
     """
-    # Delete uploaded PDF
+    # Delete uploaded PDF (redundant with the OCR'd markdown)
     upload_f = upload_path(sub.key, sub.filename)
     if upload_f.exists():
         upload_f.unlink(missing_ok=True)
         logger.info("[%s] Deleted uploaded PDF to save space.", sub.key)
-
-    # Delete code directory
-    code_d = review_dir(sub.key) / "preprint" / "code"
-    if code_d.exists():
-        shutil.rmtree(code_d, ignore_errors=True)
-
-    # Delete supplementary directory
-    supp_d = review_dir(sub.key) / "preprint" / "supplementary"
-    if supp_d.exists():
-        shutil.rmtree(supp_d, ignore_errors=True)
-
-    # Delete verification code and trajectory directories
-    review_out = review_dir(sub.key) / "review"
-    if review_out.exists():
-        for child in review_out.iterdir():
-            if child.is_dir():
-                shutil.rmtree(child, ignore_errors=True)
 
 
 def cleanup_old_submissions():

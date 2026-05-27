@@ -1,0 +1,26 @@
+# CMU Paper Reviewer
+
+> An AI peer-review system that reads a scientific manuscript and returns feedback on its five most critical issues. The reviewer is an agent that reads the paper (and any attached code/supplementary material), searches the literature, and writes a structured review. Built by the Prometheus team at Carnegie Mellon University, backed by the software-agent-sdk from OpenHands.
+
+Anyone can submit a manuscript through the website (3 free reviews per day, or unlimited with your own API keys). The system and its evaluation benchmark are open source for research use.
+
+## Use the service
+
+- [Upload page](https://prometheus-eval.github.io/cmu-paper-reviewer/): Submit a manuscript (plus optional code or supplementary PDF) and get an AI peer review of its most critical issues.
+- [View review page](https://prometheus-eval.github.io/cmu-paper-reviewer/review.html): Retrieve a completed review using the submission key from your upload.
+
+## Documentation
+
+- [README](https://github.com/prometheus-eval/cmu-paper-reviewer/blob/main/README.md): Project overview, architecture, how to run the reviewer locally, and how to experiment with it.
+- [PeerReview Bench](https://github.com/prometheus-eval/cmu-paper-reviewer/blob/main/peerreview_bench/README.md): Benchmark for evaluating AI reviewers on real scientific papers via recall (coverage of expert-validated issues) and precision (quality of generated items). Includes a quickstart and a bring-your-own-judge format.
+- [Evaluation harness details](https://github.com/prometheus-eval/cmu-paper-reviewer/blob/main/peerreview_bench/evaluation/README.md): Full evaluation pipeline, configurable parameters, and cost estimates.
+
+## Research
+
+- [Paper: On the limits and opportunities of AI reviewers (arXiv:2605.20668)](https://arxiv.org/abs/2605.20668): Study of AI reviewers on Nature-family papers with 45 expert scientists; the research behind this system.
+- [Expert annotation study](https://prometheus-eval.github.io/cmu-paper-reviewer/expert-annotation-study.html): How 45 expert scientists compared AI and human reviews on correctness, significance, and sufficiency of evidence.
+- [PeerReview Bench dataset (Hugging Face)](https://huggingface.co/datasets/prometheus-eval/peerreview-bench): Papers and expert-validated human review items used by the benchmark.
+
+## Contact
+
+- Email seungone@cmu.edu for deployment inquiries (e.g., conference or journal organizers).

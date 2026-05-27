@@ -1643,6 +1643,38 @@ input::placeholder {
   border-color: var(--cmu-red);
 }
 
+.feedback-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.25rem;
+  border-radius: var(--radius);
+  background: var(--cmu-red-light);
+  border: 1px solid rgba(196, 18, 48, 0.2);
+}
+
+.feedback-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.feedback-banner-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--cmu-red);
+}
+
+.feedback-banner-sub {
+  font-size: 0.82rem;
+  color: var(--gray-600);
+  line-height: 1.45;
+}
+
 .chevron {
   width: 20px;
   height: 20px;
