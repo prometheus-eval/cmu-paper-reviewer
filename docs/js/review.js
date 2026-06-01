@@ -782,6 +782,41 @@ function showAnnotationModal(key, items, currentIndex) {
       };
     }
 
+    // Build a compact preview of the Concrete Action Item so reviewers can see
+    // what they are rating in the "Is the action item helpful" question below.
+    let actionPreviewHtml = "";
+    if (item.actionItem) {
+      const ai = item.actionItem;
+      const isWriting = ai.actionType && ai.actionType.toLowerCase().includes("fix the writing");
+      const badgeText = isWriting ? "Fix the writing" : "Add new implementation";
+      let inner = "";
+      if (isWriting) {
+        if (ai.originalText && ai.suggestedText) {
+          inner += `<div style="margin-top:0.5rem;"><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;font-size:0.85rem;color:var(--gray-600);text-decoration:line-through;">${renderInlineMarkdown(ai.originalText)}</div><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;margin-top:0.3rem;font-size:0.85rem;color:var(--gray-800);">${renderInlineMarkdown(ai.suggestedText)}</div></div>`;
+        }
+        if (ai.newParagraph) {
+          inner += `<div style="margin-top:0.5rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ai.newParagraph)}</div>`;
+        }
+        if (ai.location) {
+          inner += `<div style="margin-top:0.4rem;font-size:0.82rem;color:var(--gray-600);"><strong>Location:</strong> ${escapeHtml(ai.location)}</div>`;
+        }
+      } else {
+        if (ai.description) {
+          inner += `<div style="margin-top:0.5rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ai.description)}</div>`;
+        }
+        if (ai.keyCodeChanges) {
+          inner += `<pre style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;margin-top:0.4rem;font-size:0.78rem;overflow-x:auto;"><code>${escapeHtml(ai.keyCodeChanges)}</code></pre>`;
+        }
+        if (ai.filesModified) {
+          inner += `<div style="margin-top:0.4rem;font-size:0.82rem;color:var(--gray-600);"><strong>Files modified:</strong> ${escapeHtml(ai.filesModified)}</div>`;
+        }
+        if (ai.runCommand) {
+          inner += `<pre style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;margin-top:0.4rem;font-size:0.78rem;overflow-x:auto;"><code>${escapeHtml(ai.runCommand)}</code></pre>`;
+        }
+      }
+      actionPreviewHtml = `<div style="margin-top:0.75rem;border-top:1px solid rgba(196,18,48,0.15);padding-top:0.6rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray-500);">Concrete Action Item</span> <span style="font-size:0.7rem;font-weight:600;color:var(--cmu-red);">(${escapeHtml(badgeText)})</span>${inner}</div>`;
+    }
+
     annotationModalRoot.innerHTML = `
       <div class="modal-overlay" id="annotation-overlay">
         <div class="modal">
@@ -792,6 +827,7 @@ function showAnnotationModal(key, items, currentIndex) {
             <strong>${escapeHtml(item.title)}</strong>
             ${item.mainCriticism ? `<div style="margin-top:0.5rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--cmu-red);">Main Point of Criticism</span><br>${renderInlineMarkdown(item.mainCriticism)}</div>` : ""}
             ${item.evidence.length > 0 ? `<div style="margin-top:0.75rem;border-top:1px solid rgba(196,18,48,0.15);padding-top:0.6rem;"><span style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:var(--gray-500);">Evidence</span>${item.evidence.map((ev, j) => `<div style="margin-top:0.5rem;"><div style="background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:0.5rem 0.7rem;font-style:italic;font-size:0.85rem;color:var(--gray-600);">${renderInlineMarkdown(ev.quote)}</div>${ev.comment ? `<div style="border-left:2px solid var(--gray-300);margin-left:0.75rem;margin-top:0.3rem;padding:0.3rem 0.6rem;font-size:0.85rem;color:var(--gray-700);">${renderInlineMarkdown(ev.comment)}</div>` : ""}</div>`).join("")}</div>` : ""}
+            ${actionPreviewHtml}
           </div>
 
           <div class="annotation-group">
