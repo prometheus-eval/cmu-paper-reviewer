@@ -507,8 +507,12 @@ function renderStructuredReview(parsed, key) {
       <div class="feedback-banner-text">
         <span class="feedback-banner-title">💬 Your feedback shapes a better reviewer.</span>
         <span class="feedback-banner-sub">Rating these items takes about a minute, and your judgments directly help us improve the quality of reviews for everyone.</span>
+        <span class="feedback-banner-sub">We are planning a follow-up research project analyzing user feedback on AI reviews. If you submit feedback on more than 50 items (e.g., 5 items × 10 papers), you are eligible to be involved as a co-author on this project. If you are interested, please email <a href="mailto:cmu.reviewer.system@gmail.com">cmu.reviewer.system@gmail.com</a> with links to the reviews you provided feedback on.</span>
       </div>
-      <button class="btn btn-primary btn-sm" id="feedback-banner-btn" style="margin-top:0;white-space:nowrap;">Give feedback</button>
+      <div class="feedback-banner-actions">
+        <button class="btn btn-primary btn-sm" id="feedback-banner-btn" style="margin-top:0;white-space:nowrap;">Provide feedback on AI reviews</button>
+        <a class="btn btn-secondary btn-sm" id="coauthor-request-btn" style="margin-top:0;white-space:nowrap;" href="mailto:cmu.reviewer.system@gmail.com?subject=Co-authorship%20request&body=Hi%2C%20I%20would%20like%20to%20be%20considered%20for%20co-authorship.%20Below%20are%20the%20links%20to%20the%20reviews%20I%20provided%20feedback%20on%3A%0A%0A">Request for co-authorship</a>
+      </div>
     </div>`;
   reviewItems.innerHTML = feedbackBannerHtml + itemsHtml;
   document.getElementById("feedback-banner-btn")?.addEventListener("click", () => {

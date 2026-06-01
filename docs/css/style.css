@@ -1675,6 +1675,19 @@ input::placeholder {
   line-height: 1.45;
 }
 
+.feedback-banner-sub a {
+  color: var(--cmu-red);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.feedback-banner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .chevron {
   width: 20px;
   height: 20px;
@@ -2347,6 +2360,28 @@ footer p {
   background: var(--cmu-red);
   border-color: var(--cmu-red);
   color: #fff;
+}
+
+.irb-box {
+  max-width: 720px;
+  margin: 1.25rem auto 0;
+  text-align: center;
+}
+
+.irb-box .irb-text {
+  color: var(--gray-500);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.irb-box .irb-text + .irb-text {
+  margin-top: 0.35rem;
+}
+
+.irb-box .irb-label {
+  font-weight: 600;
+  color: var(--gray-600, #4b5563);
 }
 
 /* --- Inline lookup form --- */
