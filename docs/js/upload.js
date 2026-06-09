@@ -524,8 +524,47 @@ function checkUploadSizes() {
   return null;
 }
 
+// --- Consent gate: require explicit consent to data collection before every submission ---
+function showConsentModal(onConsent) {
+  const modalRoot = document.getElementById("criteria-modal-root");
+  modalRoot.innerHTML = `
+    <div class="modal-overlay" id="consent-overlay">
+      <div class="modal" style="max-width:560px;">
+        <h3>Consent to data collection</h3>
+        <p style="color:var(--gray-700);font-size:0.93rem;line-height:1.65;margin-bottom:1.1rem;">
+          By using our service, you agree that your manuscripts, reviews, and feedback may be used in a public dataset for future AI reviewer research and development, and that you will not submit any sensitive or confidential information.
+        </p>
+        <div style="background:var(--cmu-red-light);border-left:3px solid var(--cmu-red);border-radius:0 var(--radius) var(--radius) 0;padding:0.85rem 1rem;">
+          <p style="font-weight:700;color:var(--gray-900);font-size:0.92rem;margin-bottom:0.5rem;">Your feedback shapes a better reviewer.</p>
+          <p style="color:var(--gray-700);font-size:0.88rem;line-height:1.6;margin-bottom:0.6rem;">
+            Rating these items takes about a minute, and your judgments directly help us improve the quality of reviews for everyone.
+          </p>
+          <p style="color:var(--gray-700);font-size:0.88rem;line-height:1.6;margin:0;">
+            We are planning a follow-up research project analyzing user feedback on AI reviews. If you submit feedback on more than 50 items (e.g., 5 items &times; 10 papers), you are eligible to be involved as a co-author on this project. If you are interested, please email <a href="mailto:cmu.reviewer.system@gmail.com">cmu.reviewer.system@gmail.com</a> with links to the reviews you provided feedback on.
+          </p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary btn-sm" id="consent-optout">Opt-out</button>
+          <button class="btn btn-primary btn-sm" id="consent-ok" style="margin-top:0;">Ok to use my submission</button>
+        </div>
+      </div>
+    </div>`;
+
+  const close = () => { modalRoot.innerHTML = ""; };
+
+  document.getElementById("consent-ok").addEventListener("click", () => {
+    close();
+    onConsent();
+  });
+  document.getElementById("consent-optout").addEventListener("click", close);
+  // Clicking the dimmed background cancels (same as opting out); consent itself requires the explicit button.
+  document.getElementById("consent-overlay").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) close();
+  });
+}
+
 // --- Form submission ---
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (!selectedFile) return;
 
@@ -535,6 +574,12 @@ form.addEventListener("submit", async (e) => {
     return;
   }
 
+  // Require explicit consent to data collection before uploading.
+  showConsentModal(performUpload);
+});
+
+// Performs the actual upload once the user has consented.
+async function performUpload() {
   const mode = modeInput.value;
   submitBtn.disabled = true;
   submitBtn.textContent = "Uploading...";
@@ -621,4 +666,4 @@ form.addEventListener("submit", async (e) => {
     submitBtn.disabled = false;
     submitBtn.textContent = "Submit Paper";
   }
-});
+}
