@@ -7,6 +7,10 @@ pydantic>=2.0.0
 pydantic-settings>=2.0.0
 mistralai>=1.0.0,<2.0.0
 openhands-ai==1.7.0
+# openhands-sdk 1.19.1 (pinned by openhands-ai) passes rollout_entrypoint to
+# lmnr's observe(); that kwarg was removed in lmnr>=0.7.53, breaking the worker
+# at import. Keep lmnr pinned to the last compatible release.
+lmnr==0.7.50
 litellm==1.83.0
 tavily-python==0.7.23
 mcp==1.26.0
