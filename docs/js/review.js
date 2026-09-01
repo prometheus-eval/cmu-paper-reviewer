@@ -80,7 +80,9 @@ async function checkStatus(key) {
 
     if (data.status === "completed") {
       await fetchReview(key);
-    } else if (data.status !== "failed") {
+    } else if (data.status !== "failed" || isRetryableFailure(data)) {
+      // Retryable failures (capacity/budget) are requeued server-side, so
+      // keep polling — the status will flip back to pending.
       startPolling(key);
     }
   } catch (err) {
@@ -111,7 +113,21 @@ function renderStatus(data) {
     </div>`;
 
   if (data.status === "failed" && data.error_message) {
-    if (data.error_message.includes("[OUT_OF_BUDGET]")) {
+    if (data.error_message.includes("[NO_CAPACITY]")) {
+      html += `
+        <div class="message error" style="text-align:center;padding:1.5rem;">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">&#8987;</div>
+          <strong>The AI service is temporarily at capacity or unavailable.</strong>
+          <p style="margin-top:0.75rem;font-size:0.88rem;">Your submission has been saved and will be retried automatically. You can keep this page open or check back later with the same link.</p>
+        </div>`;
+    } else if (data.error_message.includes("[RETRIES_EXHAUSTED]")) {
+      html += `
+        <div class="message error" style="text-align:center;padding:1.5rem;">
+          <div style="font-size:1.5rem;margin-bottom:0.5rem;">&#9888;</div>
+          <strong>The AI model stayed at capacity despite several automatic retries.</strong>
+          <p style="margin-top:0.75rem;font-size:0.88rem;">Please resubmit your paper later — we're sorry for the inconvenience.</p>
+        </div>`;
+    } else if (data.error_message.includes("[OUT_OF_BUDGET]")) {
       html += `
         <div class="message error" style="text-align:center;padding:1.5rem;">
           <div style="font-size:1.5rem;margin-bottom:0.5rem;">&#9888;</div>
@@ -127,11 +143,20 @@ function renderStatus(data) {
     }
   }
 
-  if (data.status !== "completed" && data.status !== "failed") {
+  if ((data.status !== "completed" && data.status !== "failed") || isRetryableFailure(data)) {
     html += `<div class="message info" style="margin-top:0.5rem;"><span class="spinner"></span> Auto-refreshing every 30 seconds...</div>`;
   }
 
   statusArea.innerHTML = html;
+}
+
+function isRetryableFailure(data) {
+  return (
+    data.status === "failed" &&
+    !!data.error_message &&
+    (data.error_message.includes("[NO_CAPACITY]") ||
+      data.error_message.includes("[OUT_OF_BUDGET]"))
+  );
 }
 
 // =========================================================

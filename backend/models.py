@@ -50,6 +50,7 @@ class Submission(Base):
     client_ip: Mapped[str | None] = mapped_column(String(45), nullable=True)  # IPv4 or IPv6
     review_settings: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON
     review_model_used: Mapped[str | None] = mapped_column(Text, nullable=True)
+    retry_count: Mapped[int] = mapped_column(Integer, default=0)  # automatic requeues after capacity/budget failures
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

@@ -97,9 +97,23 @@ BUDGET_ERROR_KEYWORDS = [
     "over budget",
     "out of budget",
     "insufficient budget",
-    "rate_limit_error",
     "insufficient_quota",
     "exceeded your current quota",
+]
+
+# Transient provider-side errors (429s, 503s, proxy outages). Distinct from
+# budget errors: these resolve on their own, so submissions are requeued
+# automatically.
+CAPACITY_ERROR_KEYWORDS = [
+    "throttling_error",
+    "no_capacity",
+    "rate_limit_error",
+    "ratelimiterror",
+    "too many requests",
+    # Proxy down/suspended (e.g. Render "Service Suspended" page → 503)
+    "serviceunavailableerror",
+    "service unavailable",
+    "service has been suspended",
 ]
 
 
@@ -107,6 +121,31 @@ def _is_budget_error(error_text: str) -> bool:
     """Check if an error message indicates a budget/quota issue."""
     lower = error_text.lower()
     return any(kw.lower() in lower for kw in BUDGET_ERROR_KEYWORDS)
+
+
+def _is_capacity_error(error_text: str) -> bool:
+    """Check if an error message indicates a transient 429/throttling issue."""
+    lower = error_text.lower()
+    return any(kw in lower for kw in CAPACITY_ERROR_KEYWORDS)
+
+
+_CAPACITY_RETRY_BACKOFFS = [30, 120]  # seconds between in-process retries on 429s
+
+
+def _run_review_with_backoff(reviewer: ReviewService, key: str):
+    """Run a review, retrying in-process on transient capacity errors (429/throttling).
+
+    Non-capacity errors are re-raised immediately; the last capacity error is
+    re-raised after all backoffs are exhausted (the requeue loop takes over then).
+    """
+    for delay in _CAPACITY_RETRY_BACKOFFS + [None]:
+        try:
+            return reviewer.run_review(key)
+        except Exception:
+            if delay is None or not _is_capacity_error(traceback.format_exc()):
+                raise
+            logger.warning("[%s] Capacity/throttling error from LLM — retrying in %ds...", key, delay)
+            time.sleep(delay)
 
 
 def _validate_review(key: str) -> bool:
@@ -145,20 +184,25 @@ def process_submission(submission: Submission):
                 logger.exception("[%s] 'Review started' email failed (non-critical).", key)
 
         # Step 1: OCR
-        logger.info("[%s] Starting OCR... (mode=%s)", key, submission.mode.value)
-        update_status(key, SubmissionStatus.ocr)
-        if is_byok:
-            # BYOK: submitter's own Mistral key against the public Mistral API.
-            ocr = OCRService(
-                api_key=submission.user_mistral_api_key,
-                base_url=settings.mistral_base_url,
-                model=settings.byok_ocr_model,
-            )
+        from backend.services.storage_service import preprint_md_path as _pmp
+        if _pmp(key).exists():
+            # Requeued submission — OCR output is already on disk; don't re-pay for OCR.
+            logger.info("[%s] OCR output already exists — skipping OCR.", key)
         else:
-            # Queue mode: route through the LiteLLM proxy (server-funded).
-            ocr = OCRService()
-        ocr.process_pdf(str(pdf_file), key)
-        logger.info("[%s] OCR complete.", key)
+            logger.info("[%s] Starting OCR... (mode=%s)", key, submission.mode.value)
+            update_status(key, SubmissionStatus.ocr)
+            if is_byok:
+                # BYOK: submitter's own Mistral key against the public Mistral API.
+                ocr = OCRService(
+                    api_key=submission.user_mistral_api_key,
+                    base_url=settings.mistral_base_url,
+                    model=settings.byok_ocr_model,
+                )
+            else:
+                # Queue mode: route through the LiteLLM proxy (server-funded).
+                ocr = OCRService()
+            ocr.process_pdf(str(pdf_file), key)
+            logger.info("[%s] OCR complete.", key)
 
         # Step 1.5: Extract paper date (for reference filtering)
         if review_settings is None:
@@ -196,7 +240,7 @@ def process_submission(submission: Submission):
                 tavily_api_key=submission.user_tavily_api_key if is_byok else None,
                 review_settings=review_settings,
             )
-            review_path, model_used = reviewer.run_review(key)
+            review_path, model_used = _run_review_with_backoff(reviewer, key)
             store_model_used(key, model_used)
             logger.info("[%s] Review attempt %d complete. Model: %s", key, attempt, model_used)
 
@@ -328,6 +372,57 @@ def cleanup_old_submissions():
             session.commit()
 
 
+MAX_AUTO_RETRIES = 12  # × ~10-min requeue cadence ≈ 2 hours of coverage
+
+RETRYABLE_ERROR_MARKERS = [
+    "[NO_CAPACITY]",
+    "[OUT_OF_BUDGET]",
+    # Legacy failures recorded before tagging existed:
+    "no_capacity",
+    "throttling_error",
+]
+
+
+def requeue_retryable_failures():
+    """Reset queue-mode submissions that failed on capacity/budget errors back to
+    'pending' so the worker retries them, up to MAX_AUTO_RETRIES attempts.
+
+    Only queue mode is eligible: BYOK submissions have their API keys cleared
+    after processing, so they cannot be re-run.
+    """
+    cutoff = datetime.now(timezone.utc) - CLEANUP_MAX_AGE
+    with SessionLocal() as session:
+        failed = session.execute(
+            select(Submission).where(
+                Submission.status == SubmissionStatus.failed,
+                Submission.mode == SubmissionMode.queue,
+                Submission.created_at >= cutoff,
+            )
+        ).scalars().all()
+        changed = False
+        for sub in failed:
+            err = sub.error_message or ""
+            if not any(marker in err for marker in RETRYABLE_ERROR_MARKERS):
+                continue
+            if (sub.retry_count or 0) >= MAX_AUTO_RETRIES:
+                sub.error_message = (
+                    "[RETRIES_EXHAUSTED] The AI service stayed at capacity through "
+                    f"{MAX_AUTO_RETRIES} automatic retries. Please resubmit later."
+                )
+                changed = True
+                logger.warning("[%s] Retryable failure exceeded %d retries — giving up.",
+                               sub.key, MAX_AUTO_RETRIES)
+                continue
+            sub.retry_count = (sub.retry_count or 0) + 1
+            sub.status = SubmissionStatus.pending
+            sub.error_message = None
+            changed = True
+            logger.info("[%s] Requeued after capacity/budget failure (retry %d/%d).",
+                        sub.key, sub.retry_count, MAX_AUTO_RETRIES)
+        if changed:
+            session.commit()
+
+
 def recover_stuck_submissions():
     """Reset submissions stuck in 'ocr' or 'reviewing' back to 'pending'."""
     with SessionLocal() as session:
@@ -357,6 +452,7 @@ def _migrate_add_columns():
         "client_ip": "VARCHAR(45)",
         "review_settings": "TEXT",
         "review_model_used": "TEXT",
+        "retry_count": "INTEGER DEFAULT 0",
     }
     for col, col_type in new_cols.items():
         if col not in existing:
@@ -383,15 +479,18 @@ def main():
     except Exception:
         logger.warning("Column migration failed (table may not exist yet)", exc_info=True)
 
-    # On startup, recover any submissions stuck from a previous crash
+    # On startup, recover any submissions stuck from a previous crash and
+    # requeue any capacity/budget failures right away.
     recover_stuck_submissions()
+    requeue_retryable_failures()
 
     logger.info("Worker started. Polling every %ds...", settings.worker_poll_interval)
     last_cleanup = time.time()
     while True:
-        # Run cleanup every 10 minutes
+        # Run cleanup + requeue every 10 minutes
         if time.time() - last_cleanup > 600:
             cleanup_old_submissions()
+            requeue_retryable_failures()
             last_cleanup = time.time()
 
         submission = get_next_pending()
@@ -402,7 +501,17 @@ def main():
             except Exception:
                 tb = traceback.format_exc()
                 logger.error("[%s] Processing failed:\n%s", submission.key, tb)
-                if _is_budget_error(tb):
+                if _is_capacity_error(tb):
+                    # Transient 429/no-capacity — tag it so requeue_retryable_failures
+                    # picks it up and the frontend shows a friendly message.
+                    logger.warning("[%s] Model at capacity — marking for automatic retry.", submission.key)
+                    update_status(
+                        submission.key,
+                        SubmissionStatus.failed,
+                        error="[NO_CAPACITY] The AI service is temporarily at capacity or unavailable. "
+                              "Your submission has been saved and will be retried automatically.",
+                    )
+                elif _is_budget_error(tb):
                     # Budget error — mark as failed with a recognizable tag so the
                     # frontend can show a friendly message, then pause before retrying.
                     logger.warning("[%s] Budget exceeded — marking as budget_exhausted.", submission.key)

@@ -19,6 +19,7 @@ async def init_db():
         for stmt in [
             "ALTER TABLE annotations ADD COLUMN free_text TEXT",
             "ALTER TABLE annotations ADD COLUMN action_item_quality VARCHAR(40)",
+            "ALTER TABLE submissions ADD COLUMN retry_count INTEGER DEFAULT 0",
         ]:
             try:
                 await conn.execute(text(stmt))
