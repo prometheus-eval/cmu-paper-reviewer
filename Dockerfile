@@ -5,6 +5,13 @@ WORKDIR /build
 COPY requirements.txt .
 RUN python -m venv /opt/venv \
     && /opt/venv/bin/pip install --no-cache-dir -r requirements.txt
+# openhands-sdk 1.19.1 (pinned by openhands-ai) passes rollout_entrypoint to
+# lmnr's observe(); that kwarg was removed in lmnr>=0.7.53, which crashes the
+# worker at import. Old lmnr can't be resolved normally (it exact-pins otel
+# versions that conflict with the rest of the tree), but the runtime combo of
+# lmnr 0.7.52 over the newer otel packages is verified working in prod — so
+# force it in with --no-deps after the main resolution.
+RUN /opt/venv/bin/pip install --no-cache-dir --no-deps lmnr==0.7.52
 
 # Stage 2: Runtime
 FROM python:3.12-slim

@@ -7,11 +7,9 @@ pydantic>=2.0.0
 pydantic-settings>=2.0.0
 mistralai>=1.0.0,<2.0.0
 openhands-ai==1.7.0
-# openhands-sdk 1.19.1 (pinned by openhands-ai) passes rollout_entrypoint to
-# lmnr's observe(); that kwarg was removed in lmnr>=0.7.53, breaking the worker
-# at import. Keep lmnr pinned to the last compatible release (0.7.50 conflicts
-# with the resolved opentelemetry-instrumentation version; 0.7.52 co-resolves).
-lmnr==0.7.52
+# NOTE: lmnr is intentionally NOT pinned here — old lmnr's exact opentelemetry
+# pins make strict resolution impossible alongside the other deps. It is
+# force-installed with --no-deps in the Dockerfile instead (see comment there).
 litellm==1.83.0
 tavily-python==0.7.23
 mcp==1.26.0
